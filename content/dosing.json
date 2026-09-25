@@ -1,0 +1,238 @@
+{
+ "title": "Doses and formulations",
+ "intro": "A plain-language guide to the medicines used for gender-affirming hormone therapy in Australia: what each one is, what forms it comes in, the ranges Australian prescribers work within, and the blood tests that go with them. It is background reading, not a prescription.",
+ "sections": [
+  {
+   "h": "Start here: the dose is yours, and only your prescriber sets it",
+   "body": [
+    "Every number on this page is a typical range that Australian prescribers work within. None of it is a recommendation for you.",
+    "Two people on the same medicine can be on very different doses and both be right. It depends on your goals, your blood results, your other health conditions, your age, and what your body does with the medicine.",
+    "Guidance is explicit that doses are individualised, and that some people \u2014 including many non-binary people \u2014 deliberately aim for partial effects on a lower dose. Low dose is not no dose, and it is a legitimate goal to raise with your prescriber [1][2]."
+   ],
+   "list": [
+    "Only a prescriber can set your dose, and only a prescriber should change it",
+    "Never start, stop, increase or skip a dose on your own",
+    "If your dose is not working for you, that is a conversation \u2014 not a change to make at home",
+    "Your pharmacist can talk it through with you for free, without an appointment"
+   ],
+   "note": "If you are reading this to work out whether your own dose is right, the answer is not on this page. Take the question to your prescriber or your pharmacist."
+  },
+  {
+   "h": "Oestrogen (estradiol)",
+   "body": [
+    "Estradiol is the oestrogen used in feminising hormone therapy in Australia. It is the same hormone a body makes naturally, given as a medicine.",
+    "It comes as tablets, skin patches and skin gel. Which one suits you is a clinical decision, not just a preference.",
+    "Patches and gel avoid the first pass through the liver, so they are preferred where the risk of blood clots is higher [1].",
+    "Ethinylestradiol, the oestrogen in the combined pill, is not used for gender affirmation. The high doses used until 1989 were linked to more clots [1].",
+    "Estradiol injections and implants are not available as registered products here. Compounded versions exist, but they are not tested for potency, efficacy, safety or quality control, and Australian guidance advises caution [1]."
+   ],
+   "list": [
+    "Tablets \u2014 estradiol valerate (Progynova) or estradiol (Zumenon), usually 2-6 mg daily, often split into two doses and sometimes titrated to 8 mg [1][3]",
+    "Tablets under the tongue \u2014 changes how the medicine is absorbed, so only do this if your prescriber has told you to [4]",
+    "Patches \u2014 Estradot or Estraderm MX, changed twice a week. Australian guidance usually starts around 25-50 micrograms per 24 hours and builds up; the position statement describes 100-150 micrograms per 24 hours as a usual maintenance range, which may mean wearing more than one patch at a time [1][3]",
+    "Gel \u2014 once daily, measured in pumps or sachets. The Equinox guide describes one to three pumps, each delivering 0.75 mg of estradiol [3]",
+    "Monitoring \u2014 oestradiol and total testosterone, rechecked six to eight weeks after any change [1][3]"
+   ],
+   "note": "Estradiol tablets and patches are on the PBS with no restriction attached, so the usual co-payment applies. Sandrena gel sachets are listed too; not every gel product is [7].",
+   "svg": "<svg aria-labelledby=\"fig101t\" aria-describedby=\"fig101d\" role=\"img\" viewBox=\"0 0 640 292\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Public Sans, sans-serif\"><title id=\"fig101t\">The three forms of estradiol used in Australia and how often each one is used</title><desc id=\"fig101d\">Three columns compare estradiol patches, tablets and gel: how each is taken, how often, and the usual strengths. Patches are changed twice a week, tablets are taken daily, and gel is applied daily to the skin.</desc><rect x=\"0\" y=\"0\" width=\"640\" height=\"292\" fill=\"#FFFFFF\"/><text x=\"4\" y=\"22\" font-size=\"16\" font-weight=\"600\" fill=\"#10181F\">Estradiol comes in three forms</text><rect x=\"4\" y=\"44\" width=\"196\" height=\"206\" rx=\"10\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><rect x=\"75\" y=\"72\" width=\"54\" height=\"28\" rx=\"14\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><line x1=\"102\" y1=\"72\" x2=\"102\" y2=\"100\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"102\" y=\"138\" font-size=\"17\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#10181F\">Tablet</text><rect x=\"40\" y=\"152\" width=\"124\" height=\"28\" rx=\"14\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"1\"/><text x=\"102\" y=\"171\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#0B5D7A\">Every day</text><text x=\"102\" y=\"204\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">Swallowed with water.</text><text x=\"102\" y=\"222\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">Under the tongue only if</text><text x=\"102\" y=\"240\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">your prescriber says so.</text><rect x=\"220\" y=\"44\" width=\"196\" height=\"206\" rx=\"10\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><rect x=\"288\" y=\"68\" width=\"60\" height=\"42\" rx=\"9\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><rect x=\"300\" y=\"79\" width=\"36\" height=\"20\" rx=\"5\" fill=\"#FFFFFF\" stroke=\"#0B5D7A\" stroke-width=\"1.5\"/><text x=\"318\" y=\"138\" font-size=\"17\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#10181F\">Patch</text><rect x=\"256\" y=\"152\" width=\"124\" height=\"28\" rx=\"14\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"1\"/><text x=\"318\" y=\"171\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#0B5D7A\">Twice a week</text><text x=\"318\" y=\"204\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">Two set days each week.</text><text x=\"318\" y=\"222\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">Lower abdomen, hip or</text><text x=\"318\" y=\"240\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">buttock. Rotate the spot.</text><rect x=\"436\" y=\"44\" width=\"196\" height=\"206\" rx=\"10\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><rect x=\"516\" y=\"74\" width=\"36\" height=\"40\" rx=\"6\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><rect x=\"527\" y=\"62\" width=\"14\" height=\"14\" rx=\"3\" fill=\"#FFFFFF\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"534\" y=\"138\" font-size=\"17\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#10181F\">Gel</text><rect x=\"472\" y=\"152\" width=\"124\" height=\"28\" rx=\"14\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"1\"/><text x=\"534\" y=\"171\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#0B5D7A\">Every day</text><text x=\"534\" y=\"204\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">Measured in pumps or</text><text x=\"534\" y=\"222\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">sachets. Rub in, let it dry,</text><text x=\"534\" y=\"240\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">then cover with clothing.</text><text x=\"4\" y=\"276\" font-size=\"13\" fill=\"#4A5966\">Your prescriber chooses the form and the dose. Only they can change it.</text></svg>",
+   "svgCaption": "The three forms of estradiol available in Australia and how often each is used. Drawn from the Australian position statement on hormonal management and the Equinox prescribing guide [1][3]."
+  },
+  {
+   "h": "Androgen blockers (anti-androgens)",
+   "body": [
+    "These medicines lower the effect of testosterone. Oestrogen on its own does not usually suppress testosterone enough, so a blocker is often added.",
+    "Two are used in Australia: spironolactone and cyproterone acetate. There is no good head-to-head evidence that one is better than the other, so the choice comes down to your health history and how you tolerate it [1].",
+    "The advice is to use the lowest effective dose of cyproterone. The Australian product information reports meningioma with long-term use at doses of 25 mg a day and above, with the risk rising as the total dose taken over the years adds up. If a meningioma is diagnosed, cyproterone must be stopped permanently. Prolactinoma has also been reported [1][16].",
+    "After an orchidectomy a blocker is no longer needed. Oestrogen is usually paused around the time of surgery because of clot risk, so plan that with your surgeon and prescriber [1]."
+   ],
+   "list": [
+    "Spironolactone (Spiractin and generics) - a daily tablet, usually 25-100 mg, and up to 200 mg daily in the Australian position statement [1][3]",
+    "Spironolactone monitoring \u2014 it is also a diuretic, so blood tests check electrolytes and kidney function, along with your blood pressure [3]",
+    "Cyproterone acetate (Androcur, Anterone, Cyproterone Sandoz) - a stronger blocker, and a progestogen in its own right. Typical Australian doses are 12.5-25 mg daily [1][3]",
+    "Cyproterone, lower still \u2014 some prescribers reduce to 12.5 mg two or three times a week once testosterone is suppressed [3]",
+    "Cyproterone monitoring \u2014 blood tests usually include liver function [3]",
+    "Finasteride and dutasteride are used far less often, and mainly for scalp hair rather than as general blockers [4]"
+   ],
+   "note": "Spironolactone and potassium interact. Tell your pharmacist about any potassium supplements, salt substitutes or blood pressure medicines before you start."
+  },
+  {
+   "h": "Progestogens",
+   "body": [
+    "A separate group of hormones that some people take alongside oestrogen. The one most used in Australia is micronised progesterone (Prometrium).",
+    "The evidence for whether progestogens add anything to breast development or mood is limited, which is why practice varies between prescribers. It is a reasonable thing to ask about.",
+    "They are also used the other way around. If periods continue on testosterone and cause distress, the options include raising the testosterone dose, an oral progestogen, or a progestogen-releasing IUD [1]."
+   ],
+   "list": [
+    "Micronised progesterone (Prometrium) - 100 mg daily, usually taken at night [3]",
+    "Progesterone levels are not routinely checked [3]"
+   ]
+  },
+  {
+   "h": "Testosterone",
+   "body": [
+    "Testosterone is the medicine used in masculinising hormone therapy. In Australia it comes as a long-acting intramuscular injection, a daily gel, a daily cream, and shorter-acting injections [5].",
+    "The gels and cream suit a daily routine, or a dose adjusted in smaller steps. The long-acting injection is given by a clinician every few months.",
+    "Testosterone implants (pellets) are used by a small number of people. They last several months, but they are not PBS-subsidised and can only be made by a compounding pharmacy [5].",
+    "On the PBS, every testosterone product needs an Authority prescription. Your prescriber arranges that before you get to the pharmacy [6][10]."
+   ],
+   "list": [
+    "Testosterone undecanoate (Reandron 1000, and newer brands including Gonadron and Rejunon 1000) - 1,000 mg in 4 mL, deep intramuscular. A second dose about six weeks after the first, then one every 10 to 14 weeks [1][3][11]",
+    "Testosterone 1% gel (Testogel) - a metered pump delivering 12.5 mg per press, or 5 g sachets, applied daily. Typical use is one to four pumps daily, or one sachet [3][10]",
+    "Testosterone 2% gel (Testavan), 23 mg per press, and 5% cream (AndroForte 5), typically 1-2 mL daily [3][10]",
+    "Shorter-acting esters \u2014 testosterone enantate (Primoteston Depot) and Sustanon, usually 125-250 mg every two weeks. Primoteston Depot was removed from the PBS in February 2018 at the sponsor's request and is now a private prescription; Sustanon is not PBS-subsidised either [10][13]",
+    "Monitoring \u2014 trough total testosterone and haematocrit; see the blood tests section below [1][3]"
+   ],
+   "note": "Testosterone can harm a developing pregnancy and does not reliably stop ovulation. If pregnancy is possible for you, contraception is worth a specific conversation with your prescriber \u2014 do not assume testosterone covers it [1].",
+   "svg": "<svg aria-labelledby=\"fig102t\" aria-describedby=\"fig102d\" role=\"img\" viewBox=\"0 0 640 296\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Public Sans, sans-serif\"><title id=\"fig102t\">How often each form of testosterone is given, compared over fourteen weeks</title><desc id=\"fig102d\">A timeline over fourteen weeks comparing dosing intervals: the long-acting undecanoate injection roughly every ten to twelve weeks, the shorter-acting esters every two weeks, and daily gel or cream.</desc><rect x=\"0\" y=\"0\" width=\"640\" height=\"296\" fill=\"#FFFFFF\"/><text x=\"4\" y=\"22\" font-size=\"16\" font-weight=\"600\" fill=\"#10181F\">How often each form is given</text><text x=\"4\" y=\"62\" font-size=\"14\" font-weight=\"600\" fill=\"#10181F\">Gel or cream</text><text x=\"4\" y=\"80\" font-size=\"13\" fill=\"#4A5966\">every day</text><rect x=\"150\" y=\"54\" width=\"470\" height=\"22\" rx=\"11\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"1.5\"/><circle cx=\"150.0\" cy=\"65\" r=\"3\" fill=\"#0B5D7A\"/><circle cx=\"183.6\" cy=\"65\" r=\"3\" fill=\"#0B5D7A\"/><circle cx=\"217.1\" cy=\"65\" r=\"3\" fill=\"#0B5D7A\"/><circle cx=\"250.7\" cy=\"65\" r=\"3\" fill=\"#0B5D7A\"/><circle cx=\"284.3\" cy=\"65\" r=\"3\" fill=\"#0B5D7A\"/><circle cx=\"317.9\" cy=\"65\" r=\"3\" fill=\"#0B5D7A\"/><circle cx=\"351.4\" cy=\"65\" r=\"3\" fill=\"#0B5D7A\"/><circle cx=\"385.0\" cy=\"65\" r=\"3\" fill=\"#0B5D7A\"/><circle cx=\"418.6\" cy=\"65\" r=\"3\" fill=\"#0B5D7A\"/><circle cx=\"452.1\" cy=\"65\" r=\"3\" fill=\"#0B5D7A\"/><circle cx=\"485.7\" cy=\"65\" r=\"3\" fill=\"#0B5D7A\"/><circle cx=\"519.3\" cy=\"65\" r=\"3\" fill=\"#0B5D7A\"/><circle cx=\"552.9\" cy=\"65\" r=\"3\" fill=\"#0B5D7A\"/><circle cx=\"586.4\" cy=\"65\" r=\"3\" fill=\"#0B5D7A\"/><circle cx=\"620.0\" cy=\"65\" r=\"3\" fill=\"#0B5D7A\"/><text x=\"385\" y=\"98\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">applied at about the same time each day</text><text x=\"4\" y=\"132\" font-size=\"14\" font-weight=\"600\" fill=\"#10181F\">Ester injection</text><text x=\"4\" y=\"150\" font-size=\"13\" fill=\"#4A5966\">about fortnightly</text><line x1=\"150\" y1=\"136\" x2=\"620\" y2=\"136\" stroke=\"#DCE3E8\" stroke-width=\"2\"/><circle cx=\"150.0\" cy=\"136\" r=\"8\" fill=\"#0B5D7A\"/><circle cx=\"217.1\" cy=\"136\" r=\"8\" fill=\"#0B5D7A\"/><circle cx=\"284.3\" cy=\"136\" r=\"8\" fill=\"#0B5D7A\"/><circle cx=\"351.4\" cy=\"136\" r=\"8\" fill=\"#0B5D7A\"/><circle cx=\"418.6\" cy=\"136\" r=\"8\" fill=\"#0B5D7A\"/><circle cx=\"485.7\" cy=\"136\" r=\"8\" fill=\"#0B5D7A\"/><circle cx=\"552.9\" cy=\"136\" r=\"8\" fill=\"#0B5D7A\"/><circle cx=\"620.0\" cy=\"136\" r=\"8\" fill=\"#0B5D7A\"/><text x=\"385\" y=\"168\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">enantate or Sustanon, usually a private prescription</text><text x=\"4\" y=\"206\" font-size=\"14\" font-weight=\"600\" fill=\"#10181F\">Undecanoate</text><text x=\"4\" y=\"224\" font-size=\"13\" fill=\"#4A5966\">every 10-14 weeks</text><line x1=\"150\" y1=\"210\" x2=\"620\" y2=\"210\" stroke=\"#DCE3E8\" stroke-width=\"2\"/><rect x=\"485.7\" y=\"198\" width=\"134.3\" height=\"24\" rx=\"12\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"1.5\"/><circle cx=\"150.0\" cy=\"210\" r=\"8\" fill=\"#0B5D7A\"/><circle cx=\"552.9\" cy=\"210\" r=\"8\" fill=\"#0B5D7A\"/><text x=\"385\" y=\"242\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">next dose due somewhere in the shaded window</text><line x1=\"150\" y1=\"262\" x2=\"620\" y2=\"262\" stroke=\"#4A5966\" stroke-width=\"1.5\"/><line x1=\"150.0\" y1=\"262\" x2=\"150.0\" y2=\"268\" stroke=\"#4A5966\" stroke-width=\"1.5\"/><text x=\"150.0\" y=\"286\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">0</text><line x1=\"217.1\" y1=\"262\" x2=\"217.1\" y2=\"268\" stroke=\"#4A5966\" stroke-width=\"1.5\"/><text x=\"217.1\" y=\"286\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">2</text><line x1=\"284.3\" y1=\"262\" x2=\"284.3\" y2=\"268\" stroke=\"#4A5966\" stroke-width=\"1.5\"/><text x=\"284.3\" y=\"286\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">4</text><line x1=\"351.4\" y1=\"262\" x2=\"351.4\" y2=\"268\" stroke=\"#4A5966\" stroke-width=\"1.5\"/><text x=\"351.4\" y=\"286\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">6</text><line x1=\"418.6\" y1=\"262\" x2=\"418.6\" y2=\"268\" stroke=\"#4A5966\" stroke-width=\"1.5\"/><text x=\"418.6\" y=\"286\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">8</text><line x1=\"485.7\" y1=\"262\" x2=\"485.7\" y2=\"268\" stroke=\"#4A5966\" stroke-width=\"1.5\"/><text x=\"485.7\" y=\"286\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">10</text><line x1=\"552.9\" y1=\"262\" x2=\"552.9\" y2=\"268\" stroke=\"#4A5966\" stroke-width=\"1.5\"/><text x=\"552.9\" y=\"286\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">12</text><line x1=\"620.0\" y1=\"262\" x2=\"620.0\" y2=\"268\" stroke=\"#4A5966\" stroke-width=\"1.5\"/><text x=\"620.0\" y=\"286\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">14</text><text x=\"4\" y=\"286\" font-size=\"13\" fill=\"#4A5966\">weeks after a dose</text></svg>",
+   "svgCaption": "How often each form of testosterone is given, compared over fourteen weeks. Intervals from the Australian position statement, the Equinox prescribing guide and the Reandron consumer medicine information [1][3][11]."
+  },
+  {
+   "h": "Puberty blockers (GnRH analogues)",
+   "body": [
+    "These medicines pause puberty by switching off the signal from the brain that drives it. They are given as an implant or a depot injection, always under specialist care.",
+    "In Australia they are goserelin (Zoladex) or leuprorelin (Lucrin, Eligard), repeated every one to three months.",
+    "They are not PBS-subsidised for puberty suppression. SA Health's model of care notes that a young person who cannot get them through a hospital faces a cost of several thousand dollars a year on a private prescription [8].",
+    "Access to goserelin is changing. The 3.6 mg implant leaves the PBS on 1 November 2026, and the sponsor has set up the Zoladex Continuity Program to keep supplying it at no cost to eligible patients, arranged through prescribers [9]. The medicine continues; the paperwork changes. If this affects you or your child, ask your prescriber and your pharmacist well before the next dose is due."
+   ]
+  },
+  {
+   "h": "Blood tests and reviews",
+   "body": [
+    "Blood tests are not something you pass or fail. They tell your prescriber whether the dose is doing what you both want, and whether anything needs watching.",
+    "For feminising therapy, Australian guidance suggests a trough oestradiol of about 250-600 pmol/L, with total testosterone below 2 nmol/L [1][3].",
+    "For masculinising therapy, the usual target is a trough total testosterone of 10-15 nmol/L [1][3][13]. Testosterone also thickens the blood, so haematocrit is checked; above about 0.50 the dose or the interval is usually reviewed [1][3].",
+    "Reviews cover more than levels: blood pressure, weight, smoking, and how you are going in yourself \u2014 mood, energy, sleep, and whether the changes match what you hoped for [1][2].",
+    "Screening follows the organs you have, not your gender and not your hormones [1][2]. If you have a cervix, screening is still due every five years, and collecting your own swab is an option that many people find far easier than a speculum examination [15]. The same logic applies to breast or chest tissue, and to prostate tissue, which genital surgery does not remove [2]."
+   ],
+   "list": [
+    "Feminising \u2014 oestradiol and total testosterone; electrolytes and kidney function if you take spironolactone; liver function if you take cyproterone [1][3]",
+    "Masculinising \u2014 total testosterone, and a full blood count for haematocrit; liver function and lipids as your prescriber decides [1][3]",
+    "Either therapy \u2014 blood pressure and weight at each review; glucose or HbA1c and lipids periodically, particularly if you have other risk factors [1][2]",
+    "Puberty blockers \u2014 bone health is monitored, because blockers pause the bone strengthening that puberty normally provides [1][2]",
+    "Before starting \u2014 baseline bloods, and a conversation about fertility and about contraception if pregnancy is possible, since neither testosterone nor oestrogen is reliable contraception [1][2]",
+    "Sexual health \u2014 STI and blood-borne virus testing as relevant to you, the same as for anyone [2]",
+    "Timing \u2014 review roughly every three months through the first year, then every six to twelve months, indefinitely. After a dose change, levels are rechecked six to eight weeks later rather than straight away [1][2][3]"
+   ],
+   "svg": "<svg aria-labelledby=\"fig103t\" aria-describedby=\"fig103d\" role=\"img\" viewBox=\"0 0 640 262\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Public Sans, sans-serif\"><title id=\"fig103t\">The usual rhythm of blood tests and reviews in the first year and afterwards</title><desc id=\"fig103d\">A timeline showing reviews and blood tests at three, six and twelve months after starting, then at least yearly once the dose is steady.</desc><rect x=\"0\" y=\"0\" width=\"640\" height=\"262\" fill=\"#FFFFFF\"/><text x=\"4\" y=\"22\" font-size=\"16\" font-weight=\"600\" fill=\"#10181F\">The usual rhythm of reviews</text><line x1=\"70\" y1=\"108\" x2=\"550\" y2=\"108\" stroke=\"#0B5D7A\" stroke-width=\"3\"/><line x1=\"550\" y1=\"108\" x2=\"612\" y2=\"108\" stroke=\"#0B5D7A\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><polygon points=\"612,100 630,108 612,116\" fill=\"#0B5D7A\"/><circle cx=\"70\" cy=\"108\" r=\"11\" fill=\"#FFFFFF\" stroke=\"#0B5D7A\" stroke-width=\"3\"/><text x=\"70\" y=\"82\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#10181F\">Start</text><text x=\"70\" y=\"140\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">baseline bloods</text><circle cx=\"190\" cy=\"108\" r=\"11\" fill=\"#FFFFFF\" stroke=\"#0B5D7A\" stroke-width=\"3\"/><text x=\"190\" y=\"82\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#10181F\">3 months</text><text x=\"190\" y=\"140\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">review</text><circle cx=\"310\" cy=\"108\" r=\"11\" fill=\"#FFFFFF\" stroke=\"#0B5D7A\" stroke-width=\"3\"/><text x=\"310\" y=\"82\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#10181F\">6 months</text><text x=\"310\" y=\"140\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">review</text><circle cx=\"430\" cy=\"108\" r=\"11\" fill=\"#FFFFFF\" stroke=\"#0B5D7A\" stroke-width=\"3\"/><text x=\"430\" y=\"82\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#10181F\">9 months</text><text x=\"430\" y=\"140\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">review</text><circle cx=\"550\" cy=\"108\" r=\"11\" fill=\"#FFFFFF\" stroke=\"#0B5D7A\" stroke-width=\"3\"/><text x=\"550\" y=\"82\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#10181F\">12 months</text><text x=\"550\" y=\"140\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">review</text><text x=\"636\" y=\"166\" font-size=\"13\" text-anchor=\"end\" fill=\"#4A5966\">then every</text><text x=\"636\" y=\"184\" font-size=\"13\" text-anchor=\"end\" fill=\"#4A5966\">6-12 months</text><rect x=\"4\" y=\"206\" width=\"632\" height=\"50\" rx=\"8\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><text x=\"18\" y=\"229\" font-size=\"13\" fill=\"#4A5966\">Reviews carry on indefinitely, not just in the first year. After a dose change,</text><text x=\"18\" y=\"247\" font-size=\"13\" fill=\"#4A5966\">levels are usually rechecked six to eight weeks later, not straight away.</text></svg>",
+   "svgCaption": "The usual schedule of reviews and blood tests, from the Australian position statement, WPATH Standards of Care version 8 and the Equinox prescribing guide [1][2][3].",
+   "note": "Screening and monitoring are easy to lose track of when you move between services. Ask your GP to keep a written list of what is due and when, and ask for a copy yourself."
+  },
+  {
+   "h": "Getting the timing of the blood test right",
+   "body": [
+    "When the sample is taken matters as much as what is measured. Most targets in the guidelines are trough levels \u2014 the lowest point, just before the next dose is due [1][3].",
+    "A sample drawn at the wrong point can look far too high or too low when nothing is wrong, and lead to a dose change you did not need.",
+    "For gel, your prescriber will usually want the sample in the morning before you apply that day's dose, after at least a week of steady use [3]. For the long-acting injection, the test is booked close to the end of the interval rather than soon after the injection."
+   ],
+   "note": "Ask for the required timing to be written on your pathology form, and tell the collection centre when your last dose was. It takes ten seconds and it saves repeat tests.",
+   "svg": "<svg aria-labelledby=\"fig104t\" aria-describedby=\"fig104d\" role=\"img\" viewBox=\"0 0 640 296\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Public Sans, sans-serif\"><title id=\"fig104t\">Where in the dosing cycle a trough blood level is taken</title><desc id=\"fig104d\">A curve showing hormone levels rising after a dose and falling before the next one. The trough is the lowest point, just before the next dose is due, which is when the blood sample is usually taken.</desc><rect x=\"0\" y=\"0\" width=\"640\" height=\"296\" fill=\"#FFFFFF\"/><text x=\"4\" y=\"22\" font-size=\"16\" font-weight=\"600\" fill=\"#10181F\">Why the timing of the blood test matters</text><line x1=\"70\" y1=\"206\" x2=\"620\" y2=\"206\" stroke=\"#4A5966\" stroke-width=\"1.5\"/><line x1=\"70\" y1=\"206\" x2=\"70\" y2=\"48\" stroke=\"#4A5966\" stroke-width=\"1.5\"/><text x=\"-140\" y=\"20\" transform=\"rotate(-90)\" font-size=\"13\" fill=\"#4A5966\">Hormone level</text><text x=\"345\" y=\"228\" font-size=\"13\" text-anchor=\"middle\" fill=\"#4A5966\">time since the dose</text><path d=\"M100,206 C128,86 158,74 192,78 C300,96 420,150 542,182\" fill=\"none\" stroke=\"#0B5D7A\" stroke-width=\"3\"/><line x1=\"100\" y1=\"206\" x2=\"100\" y2=\"60\" stroke=\"#DCE3E8\" stroke-width=\"2\" stroke-dasharray=\"5 5\"/><circle cx=\"100\" cy=\"206\" r=\"7\" fill=\"#0B5D7A\"/><text x=\"108\" y=\"52\" font-size=\"13\" fill=\"#4A5966\">dose given</text><line x1=\"542\" y1=\"206\" x2=\"542\" y2=\"96\" stroke=\"#1F6B43\" stroke-width=\"2\" stroke-dasharray=\"5 5\"/><circle cx=\"542\" cy=\"182\" r=\"9\" fill=\"#FFFFFF\" stroke=\"#1F6B43\" stroke-width=\"3\"/><text x=\"636\" y=\"78\" font-size=\"14\" font-weight=\"600\" text-anchor=\"end\" fill=\"#1F6B43\">trough level</text><text x=\"636\" y=\"96\" font-size=\"13\" text-anchor=\"end\" fill=\"#4A5966\">taken just before the next dose</text><line x1=\"596\" y1=\"206\" x2=\"596\" y2=\"140\" stroke=\"#DCE3E8\" stroke-width=\"2\" stroke-dasharray=\"5 5\"/><text x=\"614\" y=\"132\" font-size=\"13\" text-anchor=\"end\" fill=\"#4A5966\">next dose due</text><text x=\"4\" y=\"262\" font-size=\"13\" fill=\"#4A5966\">A sample drawn at the wrong point can look wrong when nothing is wrong.</text><text x=\"4\" y=\"284\" font-size=\"13\" fill=\"#4A5966\">Ask for the right timing to be written on your pathology form.</text></svg>",
+   "svgCaption": "Where a trough level sits in a dosing cycle, and why the timing of the sample changes the result. Based on the trough-level targets in the Australian position statement and the Equinox prescribing guide [1][3]."
+  },
+  {
+   "h": "If your medicine is hard to get",
+   "body": [
+    "Shortages happen, and estradiol patches have been the long-running one. The 25, 50, 75 and 100 microgram Estradot patches are still in short supply, with supply expected to return by the end of December 2026 [12].",
+    "The TGA has approved substitution for these patches, so where it is appropriate your pharmacist can supply a different brand or strength that delivers the same amount of estradiol per day, without a new prescription. That approval runs to 28 February 2027 [14].",
+    "Ask your pharmacist what is available and whether the product they can get is PBS-subsidised. Bring it up before you run out, not on your last day of supply.",
+    "International guidance is explicit that established hormone therapy should be continued rather than stopped, including through periods when your mental health is poor, unless there is a medical reason to stop [2]. Continuity is part of the treatment."
+   ]
+  },
+  {
+   "h": "Other medicines used alongside hormone therapy",
+   "body": [
+    "Hormone therapy changes more than the things people are aiming for, and some of those changes have treatments of their own. Acne, scalp hair loss, periods that keep coming and vaginal dryness are the common ones [17][13].",
+    "None of these is automatic, and none is hormone therapy. They are ordinary medicines, prescribed for the same reasons anyone else would be prescribed them [17].",
+    "Each has its own page in the Medicines A\u2013Z with doses, side effects and cost."
+   ],
+   "svg": "<svg viewBox=\"0 0 400 462\" width=\"100%\" role=\"img\" aria-labelledby=\"fig6t\" aria-describedby=\"fig6d\" xmlns=\"http://www.w3.org/2000/svg\"><title id=\"fig6t\">Other medicines used alongside hormone therapy</title><desc id=\"fig6d\">Four rows pair a common effect of hormone therapy with the medicines used for it: acne, scalp hair loss, periods continuing, and vaginal dryness.</desc><text x=\"0\" y=\"18\" font-family=\"Public Sans, sans-serif\" font-size=\"17\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"700\">What else might be prescribed</text><text x=\"0\" y=\"38\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">These treat effects of hormone therapy. They are not</text><text x=\"0\" y=\"56\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">hormone therapy themselves, and none is automatic.</text><text x=\"0\" y=\"84\" font-family=\"Public Sans, sans-serif\" font-size=\"11.5\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"700\">THE EFFECT</text><text x=\"140\" y=\"84\" font-family=\"Public Sans, sans-serif\" font-size=\"11.5\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"700\">WHAT MAY BE OFFERED</text><rect x=\"0\" y=\"96\" width=\"400\" height=\"68\" rx=\"12\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\"/><rect x=\"0\" y=\"96\" width=\"5\" height=\"68\" rx=\"2.5\" fill=\"#0B5D7A\"/><text x=\"16\" y=\"122\" font-family=\"Public Sans, sans-serif\" font-size=\"14.5\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"700\">Acne</text><text x=\"140\" y=\"122\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">Topical retinoid with benzoyl</text><text x=\"140\" y=\"139\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">peroxide; doxycycline;</text><text x=\"140\" y=\"156\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">isotretinoin for severe acne</text><rect x=\"0\" y=\"174\" width=\"400\" height=\"68\" rx=\"12\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\"/><rect x=\"0\" y=\"174\" width=\"5\" height=\"68\" rx=\"2.5\" fill=\"#0B5D7A\"/><text x=\"16\" y=\"200\" font-family=\"Public Sans, sans-serif\" font-size=\"14.5\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"700\">Scalp hair</text><text x=\"16\" y=\"217\" font-family=\"Public Sans, sans-serif\" font-size=\"14.5\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"700\">loss</text><text x=\"140\" y=\"200\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">Topical minoxidil; finasteride</text><text x=\"140\" y=\"217\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">in some cases</text><rect x=\"0\" y=\"252\" width=\"400\" height=\"68\" rx=\"12\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\"/><rect x=\"0\" y=\"252\" width=\"5\" height=\"68\" rx=\"2.5\" fill=\"#0B5D7A\"/><text x=\"16\" y=\"278\" font-family=\"Public Sans, sans-serif\" font-size=\"14.5\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"700\">Periods still</text><text x=\"16\" y=\"295\" font-family=\"Public Sans, sans-serif\" font-size=\"14.5\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"700\">coming</text><text x=\"140\" y=\"278\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">Norethisterone;</text><text x=\"140\" y=\"295\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">medroxyprogesterone; a hormonal</text><text x=\"140\" y=\"312\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">IUD</text><rect x=\"0\" y=\"330\" width=\"400\" height=\"68\" rx=\"12\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\"/><rect x=\"0\" y=\"330\" width=\"5\" height=\"68\" rx=\"2.5\" fill=\"#0B5D7A\"/><text x=\"16\" y=\"356\" font-family=\"Public Sans, sans-serif\" font-size=\"14.5\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"700\">Vaginal</text><text x=\"16\" y=\"373\" font-family=\"Public Sans, sans-serif\" font-size=\"14.5\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"700\">dryness</text><text x=\"140\" y=\"356\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">Low-dose vaginal oestrogen</text><text x=\"0\" y=\"436\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">Ask your prescriber which, if any, is right for you.</text></svg>",
+   "svgCaption": "The effects of hormone therapy that are commonly treated, and the medicines Australian guidance names for each. Based on the Australian position statement, AusPATH standards of care and RACGP guidance."
+  }
+ ],
+ "references": [
+  {
+   "n": 1,
+   "text": "Cheung AS, Wynne K, Erasmus J, Murray S, Zajac JD. Position statement on the hormonal management of adult transgender and gender diverse individuals. Med J Aust. 2019;211(3):127-33. Accessed 24 September 2026.",
+   "url": "https://www.mja.com.au/journal/2019/211/3/position-statement-hormonal-management-adult-transgender-and-gender-diverse"
+  },
+  {
+   "n": 2,
+   "text": "Coleman E, Radix AE, Bouman WP, et al. Standards of Care for the Health of Transgender and Gender Diverse People, Version 8. Int J Transgend Health. 2022;23(Suppl 1):S1-259.",
+   "url": "https://doi.org/10.1080/26895269.2022.2100644"
+  },
+  {
+   "n": 3,
+   "text": "Cundill P, Wong P, Cheung A. Hormone therapy prescribing guide for general practitioners working with trans, gender diverse and non-binary patients, version 3.0. Equinox Gender Diverse Health Centre, Thorne Harbour Health; August 2020 (AusPATH-endorsed). Accessed 24 September 2026.",
+   "url": "https://equinox.org.au/wp-content/uploads/2021/07/ht-prescribing-guideline-v3-aug-2020.pdf"
+  },
+  {
+   "n": 4,
+   "text": "TransHub (ACON). Hormones \u2014 Feminising. Sydney: ACON. Accessed 24 September 2026.",
+   "url": "https://www.transhub.org.au/medical/hormones-feminising/"
+  },
+  {
+   "n": 5,
+   "text": "TransHub (ACON). Hormones \u2014 Masculinising. Sydney: ACON. Accessed 24 September 2026.",
+   "url": "https://www.transhub.org.au/medical/hormones-masculinising/"
+  },
+  {
+   "n": 6,
+   "text": "Pharmaceutical Benefits Scheme. Testosterone undecanoate 1 g/4 mL injection, PBS item 10205D (Authority Required). Accessed 24 September 2026.",
+   "url": "https://www.pbs.gov.au/medicine/item/10205D"
+  },
+  {
+   "n": 7,
+   "text": "Pharmaceutical Benefits Scheme. Estradiol PBS listings \u2014 tablets (Progynova, Zumenon), patches (Estradot, Estraderm MX) and Sandrena gel. Accessed 24 September 2026.",
+   "url": "https://www.pbs.gov.au/medicine/item/1663M-1664N-8125P-8126Q-8140K-8274L-8286D-8311K-8312L-8485N-8486P-8761D-8762E-8763F-8764G-8765H"
+  },
+  {
+   "n": 8,
+   "text": "SA Health. State-wide Gender Diversity Model of Care, version 1.2. Adelaide: Department for Health and Wellbeing, Government of South Australia; July 2023. Accessed 24 September 2026.",
+   "url": "https://www.sahealth.sa.gov.au/wps/wcm/connect/d70c3a24-a054-4f6a-b56c-17152faa9d5c/Model+of+care_Gender+Diversity_Jul2023_FINAL_FOR+PUBLICATION.pdf?MOD=AJPERES"
+  },
+  {
+   "n": 9,
+   "text": "Pharmaceutical Benefits Scheme. Update on access to goserelin 3.6 mg implant (Zoladex Implant). Canberra: Department of Health, Disability and Ageing; 16 July 2026. Accessed 24 September 2026.",
+   "url": "https://www.pbs.gov.au/news/2026/07/update-on-access-to-goserelin-3-6-mg-implant-zoladex-implant"
+  },
+  {
+   "n": 10,
+   "text": "Pharmaceutical Benefits Scheme. Testosterone gel and cream PBS listings \u2014 Testogel 1%, Testavan 2%, AndroForte 5 (Authority Required). Accessed 24 September 2026.",
+   "url": "https://www.pbs.gov.au/medicine/item/10378F-10380H-11740X-13924W-13983Y-14025E-14563L-8830R"
+  },
+  {
+   "n": 11,
+   "text": "Reandron 1000 (testosterone undecanoate 1000 mg/4 mL) consumer medicine information. Accessed 24 September 2026.",
+   "url": "https://mydr.com.au/medicines/reandron-1000/"
+  },
+  {
+   "n": 12,
+   "text": "Therapeutic Goods Administration. About the shortage of transdermal HRT patches. Canberra: TGA. Accessed 24 September 2026.",
+   "url": "https://www.tga.gov.au/safety/shortages-and-supply-disruptions/medicine-shortages/major-or-ongoing-medicine-shortages/about-shortage-transdermal-hrt-patches"
+  },
+  {
+   "n": 13,
+   "text": "Cundill P. Hormone therapy for trans and gender diverse patients in the general practice setting. Aust J Gen Pract. 2020;49(7):385-90. Accessed 24 September 2026.",
+   "url": "https://www1.racgp.org.au/getattachment/d0c29d2a-ee67-4ef0-a125-65c2694f3cb2/Hormone-therapy-for-trans-and-gender-diverse-patie.aspx"
+  },
+  {
+   "n": 14,
+   "text": "Therapeutic Goods Administration. Substitution approval extended for HRT patch shortages (Serious Scarcity Substitution Instrument, in force to 28 February 2027). Canberra: TGA. Accessed 24 September 2026.",
+   "url": "https://www.tga.gov.au/safety/shortages-and-supply-disruptions/medicine-shortages/medicine-shortage-alerts/substitution-approval-extended-hrt-patch-shortages"
+  },
+  {
+   "n": 15,
+   "text": "Australian Centre for the Prevention of Cervical Cancer. Cervical screening for trans and gender diverse people. Canberra: Department of Health, Disability and Ageing; 2025. Accessed 24 September 2026.",
+   "url": "https://www.health.gov.au/sites/default/files/2025-06/cervical-screening-for-trans-and-gender-diverse-people.pdf"
+  },
+  {
+   "n": 16,
+   "text": "Androcur (cyproterone acetate) Australian Product Information and Consumer Medicine Information. Accessed September 2026.",
+   "url": "https://www.safetyandquality.gov.au/medicine-finder/androcur-tablets"
+  },
+  {
+   "n": 17,
+   "text": "AusPATH. Australian Standards of Care and Treatment Guidelines for Trans and Gender Diverse People. Published 30 April 2026.",
+   "url": "https://auspath.org.au/standards-of-care/"
+  }
+ ]
+}

@@ -1,0 +1,429 @@
+{
+ "generatedAt": "10 Sep 2026",
+ "source": "seed",
+ "medicines": [
+  {
+   "id": "premarin",
+   "brand": "Premarin",
+   "strengthLabel": "Conjugated equine estrogens",
+   "category": "estrogen",
+   "status": "unverified",
+   "statusLabel": "Not independently confirmed",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "A TGA shortage-database entry for conjugated estrogens appears to exist but its content couldn't be fetched this session \u2014 check directly before relying on this.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/conjugated-estrogens",
+   "sourceLabel": "TGA shortage record (unverified)",
+   "genericName": "Conjugated estrogens",
+   "form": "oral tablet",
+   "brands": [
+    "Premarin"
+   ]
+  },
+  {
+   "id": "androcur",
+   "brand": "Androcur",
+   "strengthLabel": "Cyproterone acetate 50 mg / 100 mg",
+   "category": "anti-androgen",
+   "status": "unverified",
+   "statusLabel": "No shortage found \u2014 ARTG listing active",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "Distinct from Cyprostat (below), which has been discontinued \u2014 Androcur's own ARTG listings remain active with no shortage notice found.",
+   "sourceUrl": "https://www.tga.gov.au/resources/artg/156920",
+   "sourceLabel": "TGA ARTG record",
+   "genericName": "Cyproterone acetate",
+   "form": "oral tablet",
+   "brands": [
+    "Androcur"
+   ]
+  },
+  {
+   "id": "cyprostat",
+   "brand": "Cyprostat",
+   "strengthLabel": "Cyproterone acetate 50 mg / 100 mg",
+   "category": "anti-androgen",
+   "status": "discontinued",
+   "statusLabel": "Discontinued (ARTG cancelled)",
+   "since": "sponsor cancellation",
+   "expectedReturn": "not returning",
+   "mechanism": "Cancelled under Section 30(1)(c) of the Therapeutic Goods Act",
+   "note": "Permanently withdrawn by the sponsor \u2014 this is a discontinuation, not a temporary shortage. Patients on Cyprostat need an alternative brand or agent.",
+   "sourceUrl": "https://www.tga.gov.au/resources/cancellations-by-sponsors/cyprostat-cyproterone-acetate-100mg-tablet-blister-pack-cancelled-under-section-301c-act",
+   "sourceLabel": "TGA cancellation notice",
+   "genericName": "Cyproterone acetate",
+   "form": "oral tablet",
+   "brands": [
+    "Cyprostat"
+   ]
+  },
+  {
+   "id": "duphaston",
+   "brand": "Duphaston",
+   "strengthLabel": "Dydrogesterone tablets",
+   "category": "progestogen",
+   "status": "unverified",
+   "statusLabel": "No shortage record found",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No TGA/PBS shortage notice located this session.",
+   "sourceUrl": "https://www.tga.gov.au/safety/shortages-and-supply-disruptions/medicine-shortages",
+   "sourceLabel": "TGA shortages hub",
+   "genericName": "Dydrogesterone",
+   "form": "oral tablet",
+   "brands": [
+    "Duphaston"
+   ]
+  },
+  {
+   "id": "estraderm-mx-100",
+   "brand": "Estraderm MX 100",
+   "strengthLabel": "100 mcg/24h patch",
+   "category": "estrogen",
+   "status": "limited",
+   "statusLabel": "Shortage \u2014 dates unconfirmed",
+   "since": "reported ongoing",
+   "expectedReturn": "check TGA",
+   "mechanism": "Covered by the same SSSI extension to 2027",
+   "note": "Juno Pharmaceuticals. Exact current return-to-supply date not independently confirmed \u2014 verify at the source link.",
+   "sourceUrl": "https://www.tga.gov.au/safety/shortages-and-supply-disruptions/medicine-shortages/medicine-shortage-alerts/substitution-approval-extended-hrt-patch-shortages",
+   "sourceLabel": "TGA SSSI alert",
+   "genericName": "Estradiol",
+   "form": "transdermal patch",
+   "brands": [
+    "Estraderm MX"
+   ]
+  },
+  {
+   "id": "estradot-100",
+   "brand": "Estradot 100",
+   "strengthLabel": "100 mcg/24h patch",
+   "category": "estrogen",
+   "status": "shortage",
+   "statusLabel": "Current shortage",
+   "since": "17 Jan 2024",
+   "expectedReturn": "about Dec 2026",
+   "mechanism": "SSSI substitution approved (extended to 2027)",
+   "note": "Sandoz manufacturing constraint.",
+   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/estradiol",
+   "sourceLabel": "TGA shortage record",
+   "genericName": "Estradiol",
+   "form": "transdermal patch",
+   "brands": [
+    "Estradot"
+   ]
+  },
+  {
+   "id": "estradot-25",
+   "brand": "Estradot 25",
+   "strengthLabel": "25 mcg/24h patch",
+   "category": "estrogen",
+   "status": "shortage",
+   "statusLabel": "Current shortage",
+   "since": "4 Aug 2023",
+   "expectedReturn": "about Dec 2026",
+   "mechanism": "SSSI substitution approved (extended to 2027)",
+   "note": "Sandoz manufacturing constraint. Overseas alternatives (Estramon, Sandoz US Estradiol Transdermal System) approved under the SSSI \u2014 check whether a new script is needed for the specific alternative supplied.",
+   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/estradiol",
+   "sourceLabel": "TGA shortage record",
+   "genericName": "Estradiol",
+   "form": "transdermal patch",
+   "brands": [
+    "Estradot"
+   ]
+  },
+  {
+   "id": "estradot-50",
+   "brand": "Estradot 50",
+   "strengthLabel": "50 mcg/24h patch",
+   "category": "estrogen",
+   "status": "shortage",
+   "statusLabel": "Current shortage",
+   "since": "27 Oct 2023",
+   "expectedReturn": "about Dec 2026",
+   "mechanism": "SSSI substitution approved (extended to 2027)",
+   "note": "Most commonly prescribed strength \u2014 reported as the hardest to source.",
+   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/estradiol",
+   "sourceLabel": "TGA shortage record",
+   "genericName": "Estradiol",
+   "form": "transdermal patch",
+   "brands": [
+    "Estradot"
+   ]
+  },
+  {
+   "id": "estradot-75",
+   "brand": "Estradot 75",
+   "strengthLabel": "75 mcg/24h patch",
+   "category": "estrogen",
+   "status": "shortage",
+   "statusLabel": "Current shortage",
+   "since": "28 Nov 2023",
+   "expectedReturn": "about Dec 2026",
+   "mechanism": "SSSI substitution approved (extended to 2027)",
+   "note": "Sandoz manufacturing constraint.",
+   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/estradiol",
+   "sourceLabel": "TGA shortage record",
+   "genericName": "Estradiol",
+   "form": "transdermal patch",
+   "brands": [
+    "Estradot"
+   ]
+  },
+  {
+   "id": "estrogel",
+   "brand": "Estrogel / Sandrena",
+   "strengthLabel": "Estradiol gel",
+   "category": "estrogen",
+   "status": "unverified",
+   "statusLabel": "No shortage record found",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No TGA/PBS shortage notice located \u2014 treat as unconfirmed rather than confirmed clear.",
+   "sourceUrl": "https://www.tga.gov.au/resources/artg/301620",
+   "sourceLabel": "TGA ARTG record",
+   "genericName": "Estradiol",
+   "form": "transdermal gel",
+   "brands": [
+    "Estrogel",
+    "Sandrena"
+   ]
+  },
+  {
+   "id": "estalis-50-140",
+   "brand": "Estalis Continuous 50/140",
+   "strengthLabel": "620 mcg estradiol + 2.7 mg NETA patch",
+   "category": "estrogen",
+   "status": "limited",
+   "statusLabel": "Shortage \u2014 last reported Apr 2025",
+   "since": "reported ongoing",
+   "expectedReturn": "check TGA",
+   "mechanism": "Overseas alternative (Estalis, Canada, Medsurge Healthcare) PBS-listed, a-flagged",
+   "note": "Combined estrogen/progestogen patch. Status not re-verified since the last PBS notice.",
+   "sourceUrl": "https://www.pbs.gov.au/browse/medicine-shortages",
+   "sourceLabel": "PBS shortage notices",
+   "genericName": "Estradiol + norethisterone acetate",
+   "form": "transdermal patch",
+   "brands": [
+    "Estalis Continuous"
+   ]
+  },
+  {
+   "id": "estalis-50-250",
+   "brand": "Estalis Continuous 50/250",
+   "strengthLabel": "510 mcg estradiol + 4.8 mg NETA patch",
+   "category": "estrogen",
+   "status": "limited",
+   "statusLabel": "Shortage \u2014 last reported Apr 2025",
+   "since": "reported ongoing",
+   "expectedReturn": "check TGA",
+   "mechanism": "Overseas alternative (Estalis, Canada, Medsurge Healthcare) PBS-listed, a-flagged",
+   "note": "Combined estrogen/progestogen patch. Status not re-verified since the last PBS notice.",
+   "sourceUrl": "https://www.pbs.gov.au/browse/medicine-shortages",
+   "sourceLabel": "PBS shortage notices",
+   "genericName": "Estradiol + norethisterone acetate",
+   "form": "transdermal patch",
+   "brands": [
+    "Estalis Continuous"
+   ]
+  },
+  {
+   "id": "progynova",
+   "brand": "Progynova",
+   "strengthLabel": "Estradiol valerate tablets, multiple strengths",
+   "category": "estrogen",
+   "status": "limited",
+   "statusLabel": "SSSI in effect \u2014 current status unconfirmed",
+   "since": "\u2014",
+   "expectedReturn": "check TGA",
+   "mechanism": "Dedicated Serious Scarcity Substitution Instrument published by the TGA",
+   "note": "A substitution instrument exists specifically for Progynova across multiple strengths, confirming a real shortage history \u2014 whether it's still active today wasn't independently re-verified this session.",
+   "sourceUrl": "https://www.tga.gov.au/news/safety-alerts/substitution-instrument-address-shortage-progynova-estradiol-valerate-tablets-multiple-strengths",
+   "sourceLabel": "TGA substitution instrument",
+   "genericName": "Estradiol valerate",
+   "form": "oral tablet",
+   "brands": [
+    "Progynova"
+   ]
+  },
+  {
+   "id": "zoladex",
+   "brand": "Zoladex 3.6mg",
+   "strengthLabel": "Goserelin monthly implant",
+   "category": "gnrh-analogue",
+   "status": "delisting",
+   "statusLabel": "PBS delisting from Nov 2026",
+   "since": "announced Jul 2026",
+   "expectedReturn": "access change, not a manufacturing shortage",
+   "mechanism": "PBS funding/access change, per TGA/PBS and AstraZeneca notices",
+   "note": "Directly relevant to TGD patients using low-dose Zoladex for puberty suppression or as an anti-androgen adjunct. This is a funding/access change, not a supply shortage \u2014 worth flagging distinctly. Exact scope (full withdrawal vs PBS-listing-only) wasn't independently confirmed \u2014 verify before advising patients.",
+   "sourceUrl": "https://www.pbs.gov.au/news/2026/07/update-on-access-to-goserelin-3-6-mg-implant-zoladex-implant",
+   "sourceLabel": "PBS access update",
+   "genericName": "Goserelin",
+   "form": "subcutaneous implant",
+   "brands": [
+    "Zoladex"
+   ]
+  },
+  {
+   "id": "eligard",
+   "brand": "Eligard",
+   "strengthLabel": "Leuprorelin acetate 7.5 mg modified release injection, pre-filled syringe",
+   "category": "gnrh-analogue",
+   "status": "unverified",
+   "statusLabel": "No current AU shortage evidence found",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "ARTG 97449 is the Eligard 7.5 mg pre-filled syringe, not Lucrin Depot \u2014 Lucrin Depot is registered separately (7.5 mg is ARTG 114302). Only an older New Zealand notice and an undated headline turned up for leuprorelin, so no current Australian shortage is confirmed for either brand.",
+   "sourceUrl": "https://www.tga.gov.au/resources/artg/97449",
+   "sourceLabel": "TGA ARTG 97449 \u2014 Eligard 7.5 mg",
+   "genericName": "Leuprorelin",
+   "form": "subcutaneous depot injection",
+   "brands": [
+    "Eligard"
+   ]
+  },
+  {
+   "id": "provera",
+   "brand": "Provera / Depo-Provera",
+   "strengthLabel": "Medroxyprogesterone acetate, tablets & injection",
+   "category": "progestogen",
+   "status": "unverified",
+   "statusLabel": "No shortage record found",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No Australia-specific TGA shortage notice found this session.",
+   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/medroxyprogesterone",
+   "sourceLabel": "TGA shortage search (unverified)",
+   "genericName": "Medroxyprogesterone acetate",
+   "form": "oral tablet; depot injection",
+   "brands": [
+    "Provera",
+    "Depo-Provera",
+    "Depo-Ralovera"
+   ]
+  },
+  {
+   "id": "primolut-n",
+   "brand": "Primolut N",
+   "strengthLabel": "Norethisterone 5 mg tablets",
+   "category": "progestogen",
+   "status": "unverified",
+   "statusLabel": "No shortage record found for this brand",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "Related norethisterone-containing oral contraceptives (Brevinor, Norimin) have a confirmed TGA shortage notice, but nothing shortage-specific surfaced for Primolut N itself.",
+   "sourceUrl": "https://www.tga.gov.au/news/medicine-shortages/shortage-brevinor-and-norimin-ethinylestradiolnorethisterone",
+   "sourceLabel": "TGA (related product notice)",
+   "genericName": "Norethisterone",
+   "form": "oral tablet",
+   "brands": [
+    "Primolut N"
+   ]
+  },
+  {
+   "id": "prometrium",
+   "brand": "Prometrium (micronised progesterone)",
+   "strengthLabel": "Oral capsules",
+   "category": "progestogen",
+   "status": "unverified",
+   "statusLabel": "Possible shortage \u2014 unconfirmed",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "TGA has registered an additional supplier, Progesterone-Teva \u2014 often a sign of an existing shortage of the primary brand \u2014 but this isn't independently confirmed.",
+   "sourceUrl": "https://www.tga.gov.au/resources/prescription-medicines-registrations/progesterone-teva-teva-pharma-australia-pty-ltd",
+   "sourceLabel": "TGA product registration",
+   "genericName": "Progesterone (micronised)",
+   "form": "oral capsule",
+   "brands": [
+    "Prometrium",
+    "Progesterone-Teva"
+   ]
+  },
+  {
+   "id": "spironolactone",
+   "brand": "Spironolactone",
+   "strengthLabel": "25 mg tablets (also higher strengths)",
+   "category": "anti-androgen",
+   "status": "unverified",
+   "statusLabel": "Historical shortage measure \u2014 current status unconfirmed",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "Section 19A approval for an overseas alternative previously existed, now lapsed",
+   "note": "Unclear whether the lapse means the shortage resolved or the approval simply expired \u2014 verify before relying on this.",
+   "sourceUrl": "https://www.tga.gov.au/resources/section-19a-approvals/approval-lapsed-spironolactone-tablets-usp-25mg-oxford-pharmaceuticals-usa",
+   "sourceLabel": "TGA Section 19A record",
+   "genericName": "Spironolactone",
+   "form": "oral tablet",
+   "brands": [
+    "Spiractin",
+    "generic spironolactone"
+   ]
+  },
+  {
+   "id": "androforte",
+   "brand": "AndroForte 5",
+   "strengthLabel": "5% (50 mg/mL) cream",
+   "category": "testosterone",
+   "status": "in_supply",
+   "statusLabel": "Not in shortage",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "No substitution instrument in effect",
+   "note": "Lawley Pharmaceuticals. No active TGA shortage record at last check.",
+   "sourceUrl": "https://www.tga.gov.au/resources/artg/123764",
+   "sourceLabel": "TGA product record",
+   "genericName": "Testosterone",
+   "form": "cream",
+   "brands": [
+    "AndroForte 5"
+   ]
+  },
+  {
+   "id": "testogel",
+   "brand": "Testogel",
+   "strengthLabel": "1% gel (sachets and metered pump)",
+   "category": "testosterone",
+   "status": "in_supply",
+   "statusLabel": "Full supply",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "No substitution instrument in effect",
+   "note": "Manufacturer confirmed full supply as of last check.",
+   "sourceUrl": "https://ajp.com.au/news/testogel-in-full-supply-says-manufacturer/",
+   "sourceLabel": "Australian Journal of Pharmacy",
+   "genericName": "Testosterone",
+   "form": "transdermal gel",
+   "brands": [
+    "Testogel"
+   ]
+  },
+  {
+   "id": "reandron",
+   "brand": "Reandron 1000",
+   "strengthLabel": "1000 mg/4 mL injection",
+   "category": "testosterone",
+   "status": "in_supply",
+   "statusLabel": "Not in shortage",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "No substitution instrument in effect",
+   "note": "No active TGA shortage record at last check.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA Medicine Shortage Reports",
+   "genericName": "Testosterone undecanoate",
+   "form": "intramuscular depot injection",
+   "brands": [
+    "Reandron 1000"
+   ]
+  }
+ ]
+}
