@@ -1,0 +1,51 @@
+name: Refresh site data
+
+on:
+  schedule:
+    - cron: "0 19 * * *"
+    - cron: "30 19 1 * *"
+  workflow_dispatch:
+
+permissions: {contents: write, issues: write}
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install requests beautifulsoup4
+
+      - name: Supply data (daily)
+        run: python scraper/refresh.py
+
+      - name: Costs and PBS figures (monthly)
+        if: github.event.schedule == '30 19 1 * *' || github.event_name == 'workflow_dispatch'
+        run: python scraper/costs.py
+
+      - name: Check the data still matches the content pages
+        run: python scraper/check.py
+
+      - name: Rebuild the site
+        run: python build.py
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name "site-bot"
+          git config user.email "actions@github.com"
+          if git diff --quiet; then echo "No change."; else
+            git add -A && git commit -m "Refresh data ($(date -u +%Y-%m-%d))" && git push
+          fi
+
+      - name: Open an issue if a refresh broke
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const {data: open} = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "scraper"});
+            if (open.length) return;
+            await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo,
+              title: "Data refresh failed - site figures are going stale", labels: ["scraper"],
+              body: "A scheduled refresh failed, so the site is serving its last good data. Usual cause: the TGA or PBS changed their page layout. The site degrades rather than breaking - nothing is overwritten with bad data."});
