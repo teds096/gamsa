@@ -9,16 +9,18 @@ so the site keeps serving the last verified numbers.
 import json, pathlib, re, sys
 import requests
 
-URL = "https://www.pbs.gov.au/info/healthpro/explanatory-notes/front/fee"
+URL = "https://www.pbs.gov.au/healthpro/explanatory-notes/front/fee"
 R = pathlib.Path(__file__).parent.parent
 COSTS = R / "content" / "costs.json"
 
-# (key, regex against page text, plausible range)
-FIELDS = [
-    ("general_copay",  r"general patient[^$]{0,120}\$(\d{2}\.\d{2})",      (20, 60)),
-    ("conc_copay",     r"concession[^$]{0,120}\$(\d{1,2}\.\d{2})",         (5, 20)),
-    ("sn_general",     r"[Ss]afety [Nn]et[^$]{0,200}\$(1,\d{3}\.\d{2})",   (1000, 3000)),
-    ("sn_conc",        r"[Ss]afety [Nn]et[^$]{0,400}\$(\d{3}\.\d{2})",     (150, 600)),
+# Each figure is picked from the dollar amounts on the page by the band it must
+# fall in, rather than by proximity to a word — the page reorders its wording
+# often enough that "nearest match" picked up the wrong co-payment.
+BANDS = [
+    ("general_copay", 20, 60),      # general patient co-payment
+    ("conc_copay",    5, 15),       # concessional co-payment
+    ("sn_general",    1000, 3000),  # general Safety Net threshold
+    ("sn_conc",       150, 600),    # concessional Safety Net threshold
 ]
 
 def money(s):
@@ -26,23 +28,29 @@ def money(s):
 
 def main():
     try:
-        page = requests.get(URL, timeout=30, headers={"User-Agent": "gam-au/1.0"}).text
+        page = requests.get(URL, timeout=30, headers={"User-Agent": "gamsa/1.0"}).text
     except Exception as exc:
         print(f"FAIL: could not fetch {URL}: {exc}", file=sys.stderr)
         return 1
     text = re.sub(r"<[^>]+>", " ", page)
+    amounts = [(money(a), a) for a in re.findall(r"\$(\d{1,3}(?:,\d{3})?\.\d{2})", text)]
+    if not amounts:
+        print("FAIL: no dollar figures found on the PBS fees page.", file=sys.stderr)
+        return 1
 
     found = {}
-    for key, pattern, (lo, hi) in FIELDS:
-        m = re.search(pattern, text)
-        if not m:
-            print(f"FAIL: could not find {key} on the PBS fees page — layout has probably changed.", file=sys.stderr)
+    for key, lo, hi in BANDS:
+        hits = sorted({v for v, _ in amounts if lo <= v <= hi})
+        if not hits:
+            print(f"FAIL: no candidate for {key} in ${lo}-${hi} — the page layout has probably changed.",
+                  file=sys.stderr)
             return 1
-        val = money(m.group(1))
-        if not (lo <= val <= hi):
-            print(f"FAIL: {key} parsed as ${val}, outside the plausible range ${lo}-${hi}.", file=sys.stderr)
+        if len(hits) > 1:
+            print(f"FAIL: {key} is ambiguous, found {hits} in ${lo}-${hi}. Check the page by hand.",
+                  file=sys.stderr)
             return 1
-        found[key] = m.group(1)
+        found[key] = f"{hits[0]:,.2f}"
+    print("Parsed:", found)
 
     raw = COSTS.read_text()
     # Replace the previous figures wherever they appear in the prose.

@@ -89,13 +89,13 @@
   .med:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(11,93,122,.10);border-color:var(--brand);}
   .callout{border-left:4px solid var(--brand);}
   .clear-box,form.rep,.rep-item,.note{border-radius:14px;}
-  .note{border-left:4px solid var(--amber);}
+  .note{border-left:4px solid #4E7C91;}
   #q,.f input,.f select{border-radius:12px;}
   nav.main a:hover{text-decoration:underline;text-underline-offset:4px;}
   .block h2{margin-bottom:10px;}
   .block ul{margin:4px 0 14px;padding-left:22px;}
   .block li{margin-bottom:7px;}
-  .note{margin-top:12px;background:var(--amber-soft);border-left:3px solid var(--amber);
+  .note{margin-top:12px;background:#EEF4F7;border-left:3px solid #4E7C91;
     border-radius:0 8px 8px 0;padding:12px 15px;font-size:15.5px;color:var(--ink);}
   figure{margin:16px 0 4px;padding:14px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);}
   figure svg{display:block;width:100%;height:auto;}
@@ -304,11 +304,28 @@
   .totop{margin-top:22px;}
   .totop a{display:inline-block;padding:10px 0;font-size:14.5px;text-decoration:none;color:var(--ink-2);}
   .totop a:hover{color:var(--brand);text-decoration:underline;}
-  .banner{background:var(--amber-soft);border:1px solid var(--amber);border-left-width:4px;
+  .banner{background:#EEF4F7;border:1px solid #4E7C91;border-left-width:4px;
     border-radius:12px;padding:12px 16px;font-size:15px;color:var(--ink);margin-bottom:16px;}
   @media (max-width:560px){
     .chips{flex-wrap:nowrap;overflow-x:auto;}
   }
+
+  @media (max-width:860px){
+    nav.main a{font-size:14px;padding:9px 7px;}
+    .logo{font-size:15px;}
+  }
+  @media (max-width:560px){
+    .hero{padding:28px 20px 30px;border-radius:14px;}
+    .page-head{padding:20px 18px 22px;border-radius:14px;}
+    .mgrid{grid-template-columns:1fr;}
+    .onthis ol{grid-template-columns:1fr;}
+    .med-top{flex-direction:column;align-items:flex-start;gap:8px;}
+    .tag{align-self:flex-start;}
+    .quick a{width:100%;text-align:center;}
+    figure{padding:10px;}
+    .refs{padding:16px 16px;}
+  }
+  .med-name,.mcard .mn{overflow-wrap:anywhere;}
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 70'%3E%3Crect width='70' height='70' rx='20' fill='%230B5D7A'/%3E%3Crect x='12' y='28.5' width='46' height='13' rx='6.5' fill='%23fff'/%3E%3Crect x='28.5' y='12' width='13' height='46' rx='6.5' fill='%23BFE3DA'/%3E%3C/svg%3E">
 
@@ -317,7 +334,6 @@
 <div class="gov">
   <div class="wrap gov-in">
     <span>Independent health information · South Australia</span>
-    <span class="gov-r">Maintained by a registered pharmacist</span>
   </div>
 </div>
 
@@ -393,7 +409,7 @@
       <div class="hero-in">
         <p class="eyebrow">GAMSA</p>
         <h1 tabindex="-1">Gender-Affirming Medicines South Australia</h1>
-        <p class="lede">What your medicine is, how to use it, what it costs, and whether it is in stock — for trans and gender diverse people in South Australia, and the people who support them.</p>
+        <p class="lede">Straight answers about hormone therapy and the medicines that go with it: what each one does, what it costs, how to use it, and whether your pharmacy can actually get it. Written in Adelaide, for South Australia.</p>
       </div>
     </div>
 
@@ -410,11 +426,11 @@
       </a>
       <a class="tile" href="#/medicines" data-link>
         <span class="t">Medicines A&ndash;Z</span>
-        <span class="d">An in-depth page for each medicine: how it works, how it is used, what it costs, side effects and monitoring.</span>
+        <span class="d">One page per medicine: how it works, doses used here, side effects, monitoring, cost and current supply.</span>
       </a>
       <a class="tile" href="#/doses" data-link>
         <span class="t">Doses and formulations</span>
-        <span class="d">What each medicine is, the forms it comes in, and the ranges prescribers work within.</span>
+        <span class="d">The forms each hormone comes in, and the dose ranges Australian prescribers work within.</span>
       </a>
       <a class="tile" href="#/using" data-link>
         <span class="t">Using your medicine</span>
@@ -458,6 +474,8 @@
       <form class="rep" id="repForm">
         <div class="row">
           <div class="f"><label for="rMed">Medicine or brand</label><input id="rMed" required autocomplete="off" placeholder="Estradot 50"></div>
+          <div class="f"><label for="rPharm">Pharmacy (optional)</label>
+            <input id="rPharm" type="text" maxlength="60" autocomplete="off" placeholder="e.g. Chemist on Prospect Rd"></div>
           <div class="f"><label for="rLoc">Suburb or postcode</label><input id="rLoc" required autocomplete="off" placeholder="Norwood 5067"></div>
         </div>
         <div class="row">
@@ -527,7 +545,7 @@
   MEDINFO.medicines.forEach(function(m){
     BY_ID[m.id]=m; (m.supplyIds||[]).forEach(function(sid){SUPPLY2MED[sid]=m.id;});
   });
-  var REVIEWED = "25 Sep 2026";
+  var REVIEWED = "26 Sep 2026";
   var SMOOTH = !(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   var API = (window.SITE_CONFIG && window.SITE_CONFIG.api) || "";
 
@@ -563,15 +581,17 @@
   function renderContent(id, c){
     var el = document.getElementById(id), v = id.replace("v-",""), seen = {};
     function C(t){return linkMeds(cite(esc(t), v), seen);}
+    function newSection(){ seen = {}; }
     el.innerHTML =
       '<div class="page-head"><p class="kicker">Overview guide</p><h1 tabindex="-1">'+esc(c.title)+'</h1><p class="lede">'+C(c.intro)+
-      '</p><p class="stamp">Clinical content reviewed '+REVIEWED+' by a registered pharmacist.</p></div>'+
+      '</p></div>'+
       '<p class="quick"><a href="#/medicines">Looking for one medicine? See the A\u2013Z \u2192</a></p>'+
       '<nav class="onthis" aria-label="On this page"><h2>On this page</h2><ol>'+
         c.sections.map(function(s,i){
           return '<li><a href="#sec-'+v+'-'+i+'">'+esc(s.h)+'</a></li>';}).join("")+
       '</ol></nav>'+
       c.sections.map(function(s,i){
+        newSection();
         return '<section class="block" id="sec-'+v+'-'+i+'" tabindex="-1"><h2>'+esc(s.h)+'</h2>'+
           (s.body||[]).map(function(p){return '<p>'+C(p)+'</p>';}).join("")+
           (s.list&&s.list.length?'<ul>'+s.list.map(function(li){return '<li>'+C(li)+'</li>';}).join("")+'</ul>':'')+
@@ -694,6 +714,7 @@
     btn.disabled=true;btn.textContent="Sending…";
     fetch(API+"/reports",{method:"POST",headers:{"Content-Type":"application/json"},
       body:JSON.stringify({channel:"patient",medicine:document.getElementById("rMed").value.trim(),
+        pharmacy:document.getElementById("rPharm").value.trim(),
         region:document.getElementById("rLoc").value.trim(),status:document.getElementById("rStat").value,
         note:document.getElementById("rNote").value.trim(),createdAt:new Date().toISOString()})})
       .then(function(r){if(!r.ok)throw 0;hint.textContent="Thanks — that's now visible to others.";
@@ -743,7 +764,7 @@
         '<span class="mg">'+esc(m.generic)+'</span>'+
         ((m.brands||[]).length?'<span class="mb">Sold as '+esc(m.brands.join(", "))+'</span>':'')+
         '<span class="row2">'+medTag(m)+'<span class="cat">'+esc(CATLBL[m.category]||m.category)+'</span></span></a>';}).join("");
-    mempty.style.display=list.length?"none":"block";
+    mempty.style.display=(!list.length && (t||mfilter!=="all"))?"block":"none";
     mcount.textContent=list.length+" medicines listed.";
   }
   mq.addEventListener("input",renderMedIndex);
@@ -767,12 +788,25 @@
     "spironolactone":[[5,"dosing",6]],
     "micronised-progesterone":[[5,"dosing",6]],
     "estradiol-gel":[[1,"dosing",1]],
-    "gnrh-analogues":[[5,"dosing",6]]
+    "gnrh-analogues":[[5,"dosing",6]],
+    "estalis-patches":[[1,"administration",1]],
+    "kliogest-kliovance":[[1,"dosing",1]],
+    "trisequens":[[1,"dosing",1]],
+    "femoston":[[1,"dosing",1]],
+    "angeliq":[[1,"dosing",1]],
+    "vaginal-oestrogen":[[5,"dosing",6]],
+    "norethisterone":[[5,"dosing",6]],
+    "medroxyprogesterone-acetate":[[5,"dosing",6]],
+    "levonorgestrel-iud":[[5,"dosing",6]],
+    "isotretinoin":[[5,"dosing",6]],
+    "doxycycline":[[5,"dosing",6]],
+    "finasteride":[[5,"dosing",6]],
+    "minoxidil-topical":[[5,"dosing",6]],
+    "topical-retinoid-bpo":[[5,"dosing",6]]
   };
   var ADJ_FIG=[0,"dosing",(CONTENT.dosing.sections.length-1)];
   function figsFor(medId, sectionIndex){
     var want=(FIGS[medId]||[]).filter(function(f){return f[0]===sectionIndex;});
-    if((BY_ID[medId]||{}).category==="adjunct" && sectionIndex===ADJ_FIG[0]) want=want.concat([ADJ_FIG]);
     return want.map(function(f){
       var sec=(CONTENT[f[1]]||{sections:[]}).sections[f[2]];
       if(!sec||!sec.svg) return "";
@@ -795,7 +829,8 @@
     var m=BY_ID[id]; if(!m) return false;
     CURRENT_MED=m.name;
     var r=supplyFor(m), st=r?(ST[r.status]||ST.unverified):null;
-    function C(t){return cite(esc(t), "med-"+m.id);}
+    var seen={}; seen[m.id]=1;
+    function C(t){return linkMeds(cite(esc(t), "med-"+m.id), seen);}
     document.getElementById("v-med").innerHTML =
       '<a class="backlink" href="#/medicines">\u2190 Back to all medicines</a>'+
       '<div class="page-head"><h1 tabindex="-1">'+esc(m.name)+'</h1>'+
@@ -811,6 +846,7 @@
         ((m.links||[]).length?'<li><a href="#sec-med-links">Links and resources</a></li>':'')+
         '</ol></nav>'+
       m.sections.map(function(s,i){
+        seen = {}; seen[m.id]=1;
         return '<section class="block" id="sec-med-'+i+'" tabindex="-1"><h2>'+esc(s.h)+'</h2>'+
           (s.body||[]).map(function(x){return '<p>'+C(x)+'</p>';}).join("")+
           (s.list&&s.list.length?'<ul>'+s.list.map(function(li){return '<li>'+C(li)+'</li>';}).join("")+'</ul>':'')+
@@ -849,8 +885,8 @@
     var mid=SUPPLY2MED[(r.medicineId||"")]||medIdFor(r.medicine);
     var inner='<span class="nm">'+esc(r.medicine)+'</span>'+
       '<span>'+esc(SLBL[r.status]||r.status)+'</span>'+
-      '<span class="who">'+esc(r.region||"")+' \u00b7 '+esc(ago(r.createdAt))+
-      (r.note?' \u00b7 '+esc(r.note):'')+'</span>';
+      '<span class="who">'+esc([r.pharmacy,r.region].filter(Boolean).join(", "))+
+      ' \u00b7 '+esc(ago(r.createdAt))+(r.note?' \u00b7 '+esc(r.note):'')+'</span>';
     return '<li>'+(mid?'<a class="row" href="#/med/'+esc(mid)+'">'+inner+'</a>'
                       :'<span class="row">'+inner+'</span>')+'</li>';
   }
@@ -905,7 +941,7 @@
         var head=mid?'<a href="#/med/'+esc(mid)+'">'+esc(label)+'</a>':esc(label);
         return '<section class="sgroup ticker"><h2>'+head+'</h2><ul>'+
           groups[k].map(rowHTML).join("")+'</ul></section>';}).join("");
-    sempty.style.display=list.length?"none":"block";
+    sempty.style.display=(!list.length && t)?"block":"none";
     scount.textContent=list.length+" sightings listed.";
   }
   sq.addEventListener("input",renderSightings);
