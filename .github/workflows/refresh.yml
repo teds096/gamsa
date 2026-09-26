@@ -21,6 +21,8 @@ jobs:
         run: python scraper/refresh.py
 
       - name: Costs and PBS figures (monthly)
+        continue-on-error: true
+        id: costs
         if: github.event.schedule == '30 19 1 * *' || github.event_name == 'workflow_dispatch'
         run: python scraper/costs.py
 
