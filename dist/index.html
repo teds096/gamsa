@@ -1003,6 +1003,18 @@
     var navKey = (h==="/med") ? "/medicines" : h;
     nav.querySelectorAll("a").forEach(function(a){
       a.setAttribute("aria-current", a.getAttribute("href")==="#"+navKey?"page":"false");});
+    // leaving a page clears its search and filters, so it opens fresh next time
+    if(qEl && qEl.value){ qEl.value=""; term=""; }
+    if(filter!=="all"){ filter="all";
+      document.querySelectorAll(".chips .chip[data-f]").forEach(function(c){
+        c.setAttribute("aria-pressed", c.dataset.f==="all"?"true":"false");}); }
+    renderMeds();
+    if(mq && mq.value){ mq.value=""; }
+    if(mfilter!=="all"){ mfilter="all";
+      document.querySelectorAll("#mchips .chip").forEach(function(c){
+        c.setAttribute("aria-pressed", c.dataset.mf==="all"?"true":"false");}); }
+    renderMedIndex();
+    if(sq && sq.value){ sq.value=""; }
     if(h==="/sightings") renderSightings();
     if(h==="/supply") renderHomeTicker();
     setCite();
