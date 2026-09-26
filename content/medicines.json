@@ -633,10 +633,7 @@
    "id": "micronised-progesterone",
    "name": "Micronised progesterone",
    "generic": "Progesterone (micronised)",
-   "brands": [
-    "Prometrium",
-    "Utrogestan"
-   ],
+   "brands": ["Prometrium", "Utrogestan", "Progesterone-Teva"],
    "category": "progestogen",
    "forms": "Prometrium: soft capsules, 100 mg and 200 mg. Utrogestan: soft capsules, 200 mg, 300 mg and 400 mg, registered in Australia for vaginal use",
    "supplyIds": [
