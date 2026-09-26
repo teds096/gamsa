@@ -6,7 +6,7 @@ KEEP = ("id","genericName","brand","brands","form","strengthLabel","category","s
 meds = json.loads((R/"data/medicines.json").read_text())
 payload = {"generatedAt": meds["generatedAt"],
            "medicines": [{k:m[k] for k in KEEP if k in m} for m in meds["medicines"]]}
-content = {k: json.loads((R/f"content/{k}.json").read_text()) for k in ("dosing","administration","costs")}
+content = {k: json.loads((R/f"content/{k}.json").read_text()) for k in ("dosing","administration","costs","easyread")}
 medinfo = json.loads((R/"content/medicines.json").read_text())
 html = (R/"template.html").read_text() \
     .replace("__MEDS__", json.dumps(payload, separators=(",",":"))) \
