@@ -282,5 +282,11 @@
       "text": "Pharmaceutical Benefits Scheme. Progesterone 100 mg capsule, 30, PBS item 14730G — General Schedule, no restrictions; brands Prometrium, Progesterone ADVZ 100 and PROGESTERONE-APX; 60-day item 14733K (Restricted Benefit). Accessed 25 September 2026.",
       "url": "https://www.pbs.gov.au/medicine/item/14730G"
     }
-  ]
+  ],
+  "pbsFigures": {
+    "general_copay": "25.00",
+    "conc_copay": "7.70",
+    "sn_general": "1,748.20",
+    "sn_conc": "277.20"
+  }
 }
