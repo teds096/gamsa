@@ -41,7 +41,7 @@ jobs:
           fi
 
       - name: Open an issue if a refresh broke
-        if: failure()
+        if: failure() || steps.costs.outcome == 'failure'
         uses: actions/github-script@v7
         with:
           script: |
