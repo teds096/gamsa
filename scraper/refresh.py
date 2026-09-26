@@ -132,8 +132,19 @@ def main():
         )
         return 1
 
+    # Start from what the site already shows, so curated entries survive a refresh,
+    # then layer the hand-maintained file over it.
+    existing = []
+    if OUT.exists():
+        try:
+            existing = json.loads(OUT.read_text()).get("medicines", [])
+        except Exception:
+            existing = []
     manual = json.loads(MANUAL.read_text()) if MANUAL.exists() else []
-    by_id = {m["id"]: m for m in manual}
+    by_id = {m["id"]: m for m in existing}
+    for m in manual:
+        by_id[m["id"]] = {**by_id.get(m["id"], {}), **m}
+    curated = list(by_id.values())
 
     # Match each scraped row onto a curated entry where we can, so the ids the site
     # links to (content/medicines.json supplyIds) stay stable. Scraped status wins;
@@ -141,7 +152,7 @@ def main():
     def curated_match(row):
         text = " ".join([row.get("brand", ""), row.get("genericName", "")]).lower()
         best = None
-        for m in manual:
+        for m in curated:
             names = [m.get("brand", "")] + list(m.get("brands", []))
             for n in names:
                 n = (n or "").strip().lower()
