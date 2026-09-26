@@ -1,6 +1,7 @@
 {
- "generatedAt": "10 Sep 2026",
- "source": "seed",
+ "generatedAt": "26 Sep 2026",
+ "source": "TGA medicine shortage records + manually maintained entries",
+ "scrapedCount": 5,
  "medicines": [
   {
    "id": "premarin",
@@ -102,76 +103,80 @@
    "brand": "Estradot 100",
    "strengthLabel": "100 mcg/24h patch",
    "category": "estrogen",
-   "status": "shortage",
-   "statusLabel": "Current shortage",
-   "since": "17 Jan 2024",
-   "expectedReturn": "about Dec 2026",
+   "status": "limited",
+   "statusLabel": "Limited availability",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
    "mechanism": "SSSI substitution approved (extended to 2027)",
-   "note": "Sandoz manufacturing constraint.",
+   "note": "Automatically pulled from the TGA shortage record.",
    "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/estradiol",
    "sourceLabel": "TGA shortage record",
    "genericName": "Estradiol",
    "form": "transdermal patch",
    "brands": [
     "Estradot"
-   ]
+   ],
+   "lastVerified": "2026-09-26"
   },
   {
    "id": "estradot-25",
    "brand": "Estradot 25",
    "strengthLabel": "25 mcg/24h patch",
    "category": "estrogen",
-   "status": "shortage",
-   "statusLabel": "Current shortage",
-   "since": "4 Aug 2023",
-   "expectedReturn": "about Dec 2026",
+   "status": "limited",
+   "statusLabel": "Limited availability",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
    "mechanism": "SSSI substitution approved (extended to 2027)",
-   "note": "Sandoz manufacturing constraint. Overseas alternatives (Estramon, Sandoz US Estradiol Transdermal System) approved under the SSSI \u2014 check whether a new script is needed for the specific alternative supplied.",
+   "note": "Automatically pulled from the TGA shortage record.",
    "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/estradiol",
    "sourceLabel": "TGA shortage record",
    "genericName": "Estradiol",
    "form": "transdermal patch",
    "brands": [
     "Estradot"
-   ]
+   ],
+   "lastVerified": "2026-09-26"
   },
   {
    "id": "estradot-50",
    "brand": "Estradot 50",
    "strengthLabel": "50 mcg/24h patch",
    "category": "estrogen",
-   "status": "shortage",
-   "statusLabel": "Current shortage",
-   "since": "27 Oct 2023",
-   "expectedReturn": "about Dec 2026",
+   "status": "limited",
+   "statusLabel": "Limited availability",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
    "mechanism": "SSSI substitution approved (extended to 2027)",
-   "note": "Most commonly prescribed strength \u2014 reported as the hardest to source.",
+   "note": "Automatically pulled from the TGA shortage record.",
    "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/estradiol",
    "sourceLabel": "TGA shortage record",
    "genericName": "Estradiol",
    "form": "transdermal patch",
    "brands": [
     "Estradot"
-   ]
+   ],
+   "lastVerified": "2026-09-26"
   },
   {
    "id": "estradot-75",
    "brand": "Estradot 75",
    "strengthLabel": "75 mcg/24h patch",
    "category": "estrogen",
-   "status": "shortage",
-   "statusLabel": "Current shortage",
-   "since": "28 Nov 2023",
-   "expectedReturn": "about Dec 2026",
+   "status": "limited",
+   "statusLabel": "Limited availability",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
    "mechanism": "SSSI substitution approved (extended to 2027)",
-   "note": "Sandoz manufacturing constraint.",
+   "note": "Automatically pulled from the TGA shortage record.",
    "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/estradiol",
    "sourceLabel": "TGA shortage record",
    "genericName": "Estradiol",
    "form": "transdermal patch",
    "brands": [
     "Estradot"
-   ]
+   ],
+   "lastVerified": "2026-09-26"
   },
   {
    "id": "estrogel",
@@ -255,19 +260,20 @@
    "brand": "Zoladex 3.6mg",
    "strengthLabel": "Goserelin monthly implant",
    "category": "gnrh-analogue",
-   "status": "delisting",
-   "statusLabel": "PBS delisting from Nov 2026",
-   "since": "announced Jul 2026",
-   "expectedReturn": "access change, not a manufacturing shortage",
+   "status": "in_supply",
+   "statusLabel": "Available",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
    "mechanism": "PBS funding/access change, per TGA/PBS and AstraZeneca notices",
-   "note": "Directly relevant to TGD patients using low-dose Zoladex for puberty suppression or as an anti-androgen adjunct. This is a funding/access change, not a supply shortage \u2014 worth flagging distinctly. Exact scope (full withdrawal vs PBS-listing-only) wasn't independently confirmed \u2014 verify before advising patients.",
-   "sourceUrl": "https://www.pbs.gov.au/news/2026/07/update-on-access-to-goserelin-3-6-mg-implant-zoladex-implant",
-   "sourceLabel": "PBS access update",
+   "note": "Automatically pulled from the TGA shortage record.",
+   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/goserelin",
+   "sourceLabel": "TGA shortage record",
    "genericName": "Goserelin",
    "form": "subcutaneous implant",
    "brands": [
     "Zoladex"
-   ]
+   ],
+   "lastVerified": "2026-09-26"
   },
   {
    "id": "eligard",
@@ -285,6 +291,26 @@
    "genericName": "Leuprorelin",
    "form": "subcutaneous depot injection",
    "brands": [
+    "Eligard"
+   ]
+  },
+  {
+   "id": "lucrin",
+   "brand": "Lucrin / Eligard",
+   "strengthLabel": "Leuprorelin, various formulations",
+   "category": "gnrh-analogue",
+   "status": "unverified",
+   "statusLabel": "No current AU shortage evidence found",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "Only an older New Zealand notice and an undated headline turned up \u2014 nothing confirming a current Australian shortage.",
+   "sourceUrl": "https://www.tga.gov.au/resources/artg/97449",
+   "sourceLabel": "TGA ARTG record",
+   "genericName": "Leuprorelin",
+   "form": "depot injection",
+   "brands": [
+    "Lucrin Depot",
     "Eligard"
    ]
   },
