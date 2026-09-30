@@ -1,5 +1,5 @@
 {
- "generatedAt": "29 Sep 2026",
+ "generatedAt": "30 Sep 2026",
  "source": "TGA medicine shortage records + manually maintained entries",
  "scrapedCount": 5,
  "medicines": [
@@ -116,7 +116,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-09-29"
+   "lastVerified": "2026-09-30"
   },
   {
    "id": "estradot-25",
@@ -136,7 +136,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-09-29"
+   "lastVerified": "2026-09-30"
   },
   {
    "id": "estradot-50",
@@ -156,7 +156,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-09-29"
+   "lastVerified": "2026-09-30"
   },
   {
    "id": "estradot-75",
@@ -176,7 +176,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-09-29"
+   "lastVerified": "2026-09-30"
   },
   {
    "id": "estrogel",
@@ -273,7 +273,7 @@
    "brands": [
     "Zoladex"
    ],
-   "lastVerified": "2026-09-29"
+   "lastVerified": "2026-09-30"
   },
   {
    "id": "eligard",
