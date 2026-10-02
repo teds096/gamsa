@@ -1,0 +1,616 @@
+{
+ "checkedAt": "1 Oct 2026",
+ "rows": [
+  {
+   "brand": "Aldactone",
+   "product": "spironolactone 25 mg tablet, 100",
+   "packs": "1",
+   "units": "100",
+   "repeats": "5",
+   "premium": "7.33",
+   "benchmark": [
+    "Spiractin 25",
+    "Spironolactone Viatris 25"
+   ]
+  },
+  {
+   "brand": "Aldactone",
+   "product": "spironolactone 25 mg tablet, 100",
+   "packs": "2",
+   "units": "200",
+   "repeats": "5",
+   "premium": "14.66",
+   "benchmark": [
+    "Spiractin 25",
+    "Spironolactone Viatris 25"
+   ]
+  },
+  {
+   "brand": "Aldactone",
+   "product": "spironolactone 100 mg tablet, 100",
+   "packs": "1",
+   "units": "100",
+   "repeats": "5",
+   "premium": "7.28",
+   "benchmark": [
+    "Spiractin 100",
+    "Spironolactone Viatris 100"
+   ]
+  },
+  {
+   "brand": "Aldactone",
+   "product": "spironolactone 100 mg tablet, 100",
+   "packs": "2",
+   "units": "200",
+   "repeats": "5",
+   "premium": "14.56",
+   "benchmark": [
+    "Spiractin 100",
+    "Spironolactone Viatris 100"
+   ]
+  },
+  {
+   "brand": "Androcur",
+   "product": "cyproterone acetate 50 mg tablet, 50",
+   "packs": "2",
+   "units": "100",
+   "repeats": "5",
+   "premium": "1.90",
+   "benchmark": [
+    "ANTERONE 50",
+    "Cyproterone Sandoz"
+   ]
+  },
+  {
+   "brand": "Androcur",
+   "product": "cyproterone acetate 50 mg tablet, 50",
+   "packs": "4",
+   "units": "200",
+   "repeats": "5",
+   "premium": "4.00",
+   "benchmark": [
+    "ANTERONE 50",
+    "Cyproterone Sandoz"
+   ]
+  },
+  {
+   "brand": "Androcur-100",
+   "product": "cyproterone acetate 100 mg tablet, 50",
+   "packs": "1",
+   "units": "50",
+   "repeats": "5",
+   "premium": "1.17",
+   "benchmark": [
+    "ANTERONE 100",
+    "Cyproterone Sandoz"
+   ]
+  },
+  {
+   "brand": "Androcur-100",
+   "product": "cyproterone acetate 100 mg tablet, 50",
+   "packs": "2",
+   "units": "100",
+   "repeats": "5",
+   "premium": "2.34",
+   "benchmark": [
+    "ANTERONE 100",
+    "Cyproterone Sandoz"
+   ]
+  }
+ ],
+ "listings": {
+  "checked": [
+   "10146B",
+   "10203B",
+   "10205D",
+   "10378F",
+   "10380H",
+   "11740X",
+   "11921K",
+   "14023C",
+   "14160G",
+   "14719Q",
+   "14730G",
+   "14733K",
+   "14741W",
+   "1663M",
+   "1664N",
+   "2339D",
+   "2707L",
+   "2913H",
+   "2993M",
+   "4233T",
+   "8244X",
+   "8274L",
+   "8286D",
+   "8311K",
+   "8425K",
+   "8633J",
+   "8761D",
+   "8762E",
+   "8830R",
+   "8954G"
+  ],
+  "missing": []
+ },
+ "items": {
+  "10146B": {
+   "name": "ESTRADIOL (&) ESTRADIOL + DYDROGESTERONE",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$24.77",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Femoston 1/10",
+     "sub": false
+    }
+   ]
+  },
+  "10203B": {
+   "name": "ESTRADIOL",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$30.42",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Estro-Pess",
+     "sub": true
+    },
+    {
+     "name": "Vagifem Low",
+     "sub": true
+    }
+   ]
+  },
+  "10205D": {
+   "name": "TESTOSTERONE UNDECANOATE",
+   "schedule": "General Schedule",
+   "authority": "Authority Required",
+   "dpmq": "$92.91",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Gonadron",
+     "sub": true
+    },
+    {
+     "name": "REJUNON 1000",
+     "sub": true
+    },
+    {
+     "name": "Reandron 1000",
+     "sub": true
+    },
+    {
+     "name": "Testosterone ADVZ 1000",
+     "sub": true
+    }
+   ]
+  },
+  "10378F": {
+   "name": "TESTOSTERONE",
+   "schedule": "General Schedule",
+   "authority": "Authority Required",
+   "dpmq": "$105.62",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "AndroForte 5",
+     "sub": false
+    }
+   ]
+  },
+  "10380H": {
+   "name": "TESTOSTERONE",
+   "schedule": "General Schedule",
+   "authority": "Authority Required",
+   "dpmq": "$77.90",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Testogel",
+     "sub": false
+    }
+   ]
+  },
+  "11740X": {
+   "name": "TESTOSTERONE",
+   "schedule": "General Schedule",
+   "authority": "Authority Required",
+   "dpmq": "$83.19",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Testavan",
+     "sub": false
+    }
+   ]
+  },
+  "11921K": {
+   "name": "ISOTRETINOIN",
+   "schedule": "General Schedule",
+   "authority": "Authority Required (STREAMLINED)",
+   "dpmq": "$62.83",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Oratane",
+     "sub": false
+    }
+   ]
+  },
+  "14023C": {
+   "name": "CYPROTERONE",
+   "schedule": "General Schedule",
+   "authority": "Restricted Benefit",
+   "dpmq": "$134.44",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "ANTERONE 50",
+     "sub": true
+    },
+    {
+     "name": "Cyproterone Sandoz",
+     "sub": true
+    },
+    {
+     "name": "Androcur",
+     "sub": true
+    }
+   ]
+  },
+  "14160G": {
+   "name": "MEDROXYPROGESTERONE",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$28.07",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Depo-Provera",
+     "sub": false
+    }
+   ]
+  },
+  "14719Q": {
+   "name": "ESTRADIOL",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$36.43",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Estrogel",
+     "sub": false
+    }
+   ]
+  },
+  "14730G": {
+   "name": "PROGESTERONE",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$43.51",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "PROGESTERONE-APX",
+     "sub": true
+    },
+    {
+     "name": "Progesterone ADVZ 100",
+     "sub": true
+    },
+    {
+     "name": "Prometrium",
+     "sub": true
+    }
+   ]
+  },
+  "14733K": {
+   "name": "PROGESTERONE",
+   "schedule": "General Schedule",
+   "authority": "Restricted Benefit",
+   "dpmq": "$72.66",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "PROGESTERONE-APX",
+     "sub": true
+    },
+    {
+     "name": "Progesterone ADVZ 100",
+     "sub": true
+    },
+    {
+     "name": "Prometrium",
+     "sub": true
+    }
+   ]
+  },
+  "14741W": {
+   "name": "ESTRADIOL",
+   "schedule": "General Schedule",
+   "authority": "Restricted Benefit",
+   "dpmq": "$58.50",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Estrogel",
+     "sub": false
+    }
+   ]
+  },
+  "1663M": {
+   "name": "ESTRADIOL",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$17.51",
+   "general": "$21.84",
+   "brands": [
+    {
+     "name": "Progynova",
+     "sub": false
+    }
+   ]
+  },
+  "1664N": {
+   "name": "ESTRADIOL",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$18.74",
+   "general": "$23.07",
+   "brands": [
+    {
+     "name": "Progynova",
+     "sub": false
+    }
+   ]
+  },
+  "2339D": {
+   "name": "SPIRONOLACTONE",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$18.10",
+   "general": "$22.43",
+   "brands": [
+    {
+     "name": "Spironolactone Viatris 25",
+     "sub": true
+    },
+    {
+     "name": "Aldactone",
+     "sub": true
+    },
+    {
+     "name": "Spiractin 25",
+     "sub": true
+    }
+   ]
+  },
+  "2707L": {
+   "name": "DOXYCYCLINE",
+   "schedule": "General Schedule",
+   "authority": "Restricted Benefit",
+   "dpmq": "",
+   "general": "",
+   "brands": [
+    {
+     "name": "Doryx",
+     "sub": true
+    },
+    {
+     "name": "Mayne Pharma Doxycycline",
+     "sub": true
+    }
+   ]
+  },
+  "2913H": {
+   "name": "LEVONORGESTREL",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$21.83",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Microlut 28",
+     "sub": true
+    },
+    {
+     "name": "Mirolesa",
+     "sub": true
+    }
+   ]
+  },
+  "2993M": {
+   "name": "NORETHISTERONE",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$35.91",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Primolut N",
+     "sub": false
+    }
+   ]
+  },
+  "4233T": {
+   "name": "FINASTERIDE",
+   "schedule": "Repatriation Pharmaceutical Benefits",
+   "authority": "Authority Required",
+   "dpmq": "",
+   "general": "",
+   "brands": [
+    {
+     "name": "APO-Finasteride",
+     "sub": true
+    },
+    {
+     "name": "Finasta",
+     "sub": true
+    },
+    {
+     "name": "Finasteride-GA 5",
+     "sub": true
+    },
+    {
+     "name": "Finasteride GH 5",
+     "sub": true
+    },
+    {
+     "name": "Finasteride Mylan 5",
+     "sub": true
+    },
+    {
+     "name": "Finide",
+     "sub": true
+    },
+    {
+     "name": "Finnacar",
+     "sub": true
+    },
+    {
+     "name": "Pharmacor Finasteride 5",
+     "sub": true
+    },
+    {
+     "name": "Proscar",
+     "sub": true
+    }
+   ]
+  },
+  "8244X": {
+   "name": "ESTRADIOL (&) ESTRADIOL + DYDROGESTERONE",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$24.77",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Femoston 2/10",
+     "sub": false
+    }
+   ]
+  },
+  "8274L": {
+   "name": "ESTRADIOL",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$20.38",
+   "general": "$24.71",
+   "brands": [
+    {
+     "name": "Zumenon",
+     "sub": false
+    }
+   ]
+  },
+  "8286D": {
+   "name": "ESTRADIOL",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$26.17",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Sandrena",
+     "sub": false
+    }
+   ]
+  },
+  "8311K": {
+   "name": "ESTRADIOL",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$25.54",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Estraderm MX 25",
+     "sub": false
+    }
+   ]
+  },
+  "8425K": {
+   "name": "ESTRADIOL (&) ESTRADIOL + NORETHISTERONE ACETATE",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$44.91",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Estalis sequi 50/140",
+     "sub": false
+    }
+   ]
+  },
+  "8633J": {
+   "name": "LEVONORGESTREL",
+   "schedule": "General Schedule",
+   "authority": "Restricted Benefit",
+   "dpmq": "$187.14",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Mirena",
+     "sub": false
+    }
+   ]
+  },
+  "8761D": {
+   "name": "ESTRADIOL",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$31.35",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Estradot 25",
+     "sub": true
+    }
+   ]
+  },
+  "8762E": {
+   "name": "ESTRADIOL",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$30.67",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Estradot 37.5",
+     "sub": false
+    }
+   ]
+  },
+  "8830R": {
+   "name": "TESTOSTERONE",
+   "schedule": "General Schedule",
+   "authority": "Authority Required",
+   "dpmq": "$77.90",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Testogel",
+     "sub": false
+    }
+   ]
+  },
+  "8954G": {
+   "name": "ADAPALENE + BENZOYL PEROXIDE",
+   "schedule": "General Schedule",
+   "authority": "Restricted Benefit",
+   "dpmq": "$30.62",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Epiduo",
+     "sub": false
+    }
+   ]
+  }
+ }
+}

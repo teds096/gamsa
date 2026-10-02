@@ -1,0 +1,203 @@
+{
+  "title": "Working with your pharmacy",
+  "intro": "Practical guidance for getting the most out of your pharmacy: what to bring to an appointment, what to do if you run out without a prescription, how to talk with your pharmacist, getting your medicine if you live outside Adelaide, and making sure it is labelled with the name you use.",
+  "sections": [
+    {
+      "h": "Guides you can print or take to an appointment",
+      "body": [
+        "Australian and manufacturer sources you can read or take to an appointment. They are general information, not instructions for your dose.",
+        "Every product you are dispensed also comes with a Consumer Medicine Information leaflet. If yours went missing, your pharmacist can print another one.",
+        "If you have the long-acting testosterone injection, there is also a [training package for the clinicians who give it](/medicines/testosterone-undecanoate#sec-med-9) — a procedure, a competency checklist and an adverse event form — that you can pass on to your clinic."
+      ],
+      "list": [
+        "Royal Children's Hospital Melbourne — illustrated oestrogen patch information sheet [1]",
+        "Besins Healthcare Australia — Testogel patient information booklet [2]",
+        "Reandron 1000 consumer medicine information, and the product's Australian registration details [3][4]",
+        "SA Health — Long Acting Intramuscular Injections brochure, on the side-of-hip site [5]",
+        "Estradot consumer medicine information, via the Australian Commission on Safety and Quality in Health Care medicine finder [6]",
+        "Testogel consumer medicine information, same source [7]",
+        "TransHub (ACON) — Hormones: Masculinising, and Hormones: Feminising [8][9]",
+        "Fenway Health — transgender health injection guide, the one TransHub links to [10]",
+        "NSW Health community sharps management, and Diabetes Australia's safe sharps pages [11][12]",
+        "Return Unwanted Medicines (returnmed.com.au) [13]"
+      ]
+    },
+    {
+      "h": "If you run out and have no script",
+      "body": [
+        "The PBS Continued Dispensing rules that let a pharmacist supply one emergency PBS quantity cover a defined list of medicines. Hormones are not on that list, so that route usually does not apply [14].",
+        "South Australia has its own provision instead. A pharmacist here can make a limited emergency supply of a prescription medicine you have been taking, where getting a prescription is not practical [15]. It is at the pharmacist's discretion, it is not free, and it is a bridge to a script rather than a substitute for one.",
+        "Take the empty box or a dispensing label if you have one, and your prescriber's name. Ring ahead rather than arriving at closing time, and go to the pharmacy that usually dispenses for you, because your history is already there."
+      ],
+      "list": [
+        "Keep the dispensing label or box — it is the fastest proof of what you take",
+        "Ask for a repeat before the last one, not after",
+        "Injectables held in a clinic fridge are worth checking on early, since they are ordered in"
+      ]
+    },
+    {
+      "h": "What to tell the pharmacist, and what to avoid",
+      "body": [
+        "Tell any pharmacist what hormones you take, including ones bought privately, before you buy anything over the counter.",
+        "Spironolactone raises potassium. Anti-inflammatories such as ibuprofen and naproxen, potassium-based salt substitutes, potassium supplements, and some antibiotics can push it higher again. Ask before you buy any of these.",
+        "Cyproterone affects the liver and can raise prolactin, so liver tests are part of routine monitoring.",
+        "Testosterone is not a contraceptive. Pregnancy remains possible even when periods have stopped, and testosterone must not be taken in pregnancy.",
+        "Needles and syringes are available from participating South Australian pharmacies, which also take back full sharps containers [16]."
+      ],
+      "note": "Bring a list, or a photo of your labels, to any new pharmacy — it is the fastest way for them to see everything you take. It is not a prescription, so you will still need a valid script for anything they dispense."
+    },
+    {
+      "h": "If you live outside Adelaide",
+      "body": [
+        "Order early. Regional and rural pharmacies usually keep less stock, and a medicine ordered in from a wholesaler can take a few extra days to arrive — longer for less common products, and longer again during a shortage.",
+        "Electronic prescriptions help. An e-script, or an Active Script List held by a pharmacy you choose, lets you send your prescription to any pharmacy in Australia, including one that posts medicines to you. [How electronic prescriptions work](https://www.digitalhealth.gov.au/initiatives-and-programs/electronic-prescriptions) [18].",
+        "Some products must stay cold until they are dispensed. Eligard, for example, is kept refrigerated at the pharmacy, so a regional pharmacy may need extra time to have it delivered with the cold chain intact.",
+        "Many prescribers of gender-affirming hormone therapy consult by telehealth, which can save a long trip, and the prescription can be sent to you electronically.",
+        "Help with travel. If you live more than 100 km from the nearest relevant specialist, South Australia's Patient Assistance Transport Scheme can subsidise your travel and accommodation for specialist appointments — in 2025–26, 33.6 cents a kilometre by private car and $110 a night for accommodation. It covers specialist appointments, not visits to a GP or a pharmacy. [PATS: how to apply](https://www.pats.sa.gov.au/) [19]."
+      ]
+    },
+    {
+      "h": "For Aboriginal and Torres Strait Islander people",
+      "body": [
+        "Aboriginal and Torres Strait Islander peoples are many nations, each with its own language and culture, and gender diversity has been part of those cultures since long before colonisation. Some Aboriginal and Torres Strait Islander trans and gender diverse people use the words Sistergirl and Brotherboy. These are community identities with their own cultural meaning, not simply translations of trans woman or trans man, and not everyone uses them. The right word is always the one a person uses for themselves, and it is fine to ask respectfully.",
+        "Aboriginal Community Controlled Health Services are run by and for community, and offer GP care in a culturally safe setting. In Adelaide, [Nunkuwarrin Yunti](https://nunku.org.au/our-services/physical/general-clinic/) runs a general clinic [20], and the [Aboriginal Health Council of South Australia](https://ahcsa.org.au/) lists member services across the state [21]. You can also take a mainstream prescription to any pharmacy; nothing about where a script comes from changes how it is dispensed.",
+        "If cost is a barrier, ask about the Closing the Gap PBS Co-payment Program. A GP at an Aboriginal health service, or any PBS prescriber, can register you, and it lowers or removes the co-payment on PBS medicines. The costs guide explains [how Closing the Gap works](#/costs#sec-costs-3).",
+        "Information written by and for Aboriginal and Torres Strait Islander people about gender-affirming medicines is still limited. [TransHub's Trans Mob page](https://www.transhub.org.au/social/trans-mob/) connects to Sistergirl and Brotherboy community networks [22], and [Indigenous HealthInfoNet](https://healthinfonet.ecu.edu.au/learn/population-groups/lgbtqisb/) gathers research and resources for LGBTQISB Aboriginal and Torres Strait Islander people [23].",
+        "This section is short because reliable, community-authored information is still scarce, not because it matters less. If you know of a resource that should be here, please send it through the feedback page."
+      ]
+    },
+    {
+      "h": "Getting your name right on the label",
+      "body": [
+        "The name printed on a dispensing label comes from the pharmacy's own software, not from the prescription. That means a pharmacy can record the name you use, even when it differs from the one on your Medicare card or your script.",
+        "Ask at the counter when you hand the prescription in: say which name you want on the label, and that your legal name may still appear on the script itself. Most dispensing systems have a field for a preferred or known-as name, and once it is set it carries across to future labels.",
+        "If you want the name on your Medicare record changed as well, that is a separate process through Services Australia [17].",
+        "Not every pharmacist knows where that field sits in their particular software, and the answer differs between systems. A pharmacist who is willing to ring their software support to find out is worth keeping. Using the same pharmacy each time means you only have to have this conversation once."
+      ],
+      "list": [
+        "Ask when you hand in the script, not after the label is printed",
+        "Say the name you want used, and how you want to be addressed at the counter",
+        "If the pharmacist is unsure how, ask whether they can check with their software support",
+        "Once it is set, it stays set for that pharmacy"
+      ],
+      "note": "A pharmacy can put your name on the label. A prescription still has to carry the name held by Medicare for PBS claiming, so the two may not match, and that is normal."
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "text": "The Royal Children's Hospital Melbourne. Oestrogen patch information sheet, version 1. Accessed 24 September 2026.",
+      "url": "https://www.rch.org.au/uploadedFiles/Main/Content/fertility/Oestrogen%20Patch%20Information%20Sheet%20Version%201.pdf"
+    },
+    {
+      "n": 2,
+      "text": "Besins Healthcare Australia. Treating hypogonadism with Testogel: patient information. Accessed 24 September 2026.",
+      "url": "https://besins-healthcare.com.au/wp-content/uploads/2020/12/Testogel-Patient-Information.pdf"
+    },
+    {
+      "n": 3,
+      "text": "Reandron 1000 (testosterone undecanoate 1000 mg/4 mL) consumer medicine information. Accessed 24 September 2026.",
+      "url": "https://mydr.com.au/medicines/reandron-1000/"
+    },
+    {
+      "n": 4,
+      "text": "Therapeutic Goods Administration. Australian Register of Therapeutic Goods entry 213942: REANDRON 1000 testosterone undecanoate 1000 mg in 4 mL oily solution for injection vial. Canberra: TGA.",
+      "url": "https://www.tga.gov.au/resources/artg/213942"
+    },
+    {
+      "n": 5,
+      "text": "SA Health. Long Acting Intramuscular Injections (ventrogluteal site) brochure. Adelaide: Government of South Australia. Accessed 24 September 2026.",
+      "url": "https://www.sahealth.sa.gov.au/wps/wcm/connect/e185e690-bc60-402f-b264-5ed189fd0390/Long+Acting+Intramuscular+Injections+Brochure+%281%29.pdf?MOD=AJPERES"
+    },
+    {
+      "n": 6,
+      "text": "Australian Commission on Safety and Quality in Health Care. Medicine finder: Estradot transdermal patch (consumer medicine information). Accessed 24 September 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/estradot-transdermal-patch"
+    },
+    {
+      "n": 7,
+      "text": "Australian Commission on Safety and Quality in Health Care. Medicine finder: Testogel (consumer medicine information). Accessed 24 September 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/testogel"
+    },
+    {
+      "n": 8,
+      "text": "TransHub (ACON). Hormones — Masculinising. Sydney: ACON. Accessed 24 September 2026.",
+      "url": "https://www.transhub.org.au/medical/hormones-masculinising/"
+    },
+    {
+      "n": 9,
+      "text": "TransHub (ACON). Hormones — Feminising. Sydney: ACON. Accessed 24 September 2026.",
+      "url": "https://www.transhub.org.au/medical/hormones-feminising/"
+    },
+    {
+      "n": 10,
+      "text": "Fenway Health. Transgender health: injection guide. Boston: Fenway Health. Accessed 24 September 2026.",
+      "url": "https://fenwayhealth.org/wp-content/uploads/2015/07/COM-1880-trans-health_injection-guide_small_v2.pdf"
+    },
+    {
+      "n": 11,
+      "text": "NSW Health. Community sharps management. Accessed 24 September 2026.",
+      "url": "https://www.health.nsw.gov.au/community-sharps/Pages/default.aspx"
+    },
+    {
+      "n": 12,
+      "text": "Diabetes Australia. Safe disposal of sharps. Accessed 24 September 2026.",
+      "url": "https://www.diabetesaustralia.com.au/resources/safe-sharps/"
+    },
+    {
+      "n": 13,
+      "text": "Return Unwanted Medicines (National Return and Disposal of Unwanted Medicines Program). Accessed 24 September 2026.",
+      "url": "https://returnmed.com.au/"
+    },
+    {
+      "n": 14,
+      "text": "Services Australia / PBS. Continued Dispensing arrangements. Accessed September 2026.",
+      "url": "https://www.pbs.gov.au/general/continued-dispensing"
+    },
+    {
+      "n": 15,
+      "text": "Pharmaceutical Society of Australia. SA Government extends emergency dispensing for pharmacists. Accessed September 2026.",
+      "url": "https://www.psa.org.au/sa-government-extends-emergency-dispensing-for-pharmacists/"
+    },
+    {
+      "n": 16,
+      "text": "Pharmacy Guild of Australia (SA Branch). Clean Needle Pharmacy Program. Accessed September 2026.",
+      "url": "https://www.guild.org.au/guild-branches/sa/clean-needle-pharmacy-program"
+    },
+    {
+      "n": 17,
+      "text": "Services Australia. How you update your name, date of birth or gender for Medicare. Accessed September 2026.",
+      "url": "https://www.servicesaustralia.gov.au/how-you-update-your-name-date-birth-or-gender-for-medicare"
+    },
+    {
+      "n": 18,
+      "text": "Australian Digital Health Agency. Electronic prescriptions. Accessed 1 October 2026.",
+      "url": "https://www.digitalhealth.gov.au/initiatives-and-programs/electronic-prescriptions"
+    },
+    {
+      "n": 19,
+      "text": "SA Health. Patient Assistance Transport Scheme (PATS) — about the scheme. Accessed 1 October 2026.",
+      "url": "https://www.pats.sa.gov.au/about/"
+    },
+    {
+      "n": 20,
+      "text": "Nunkuwarrin Yunti of South Australia. General clinic. Accessed 1 October 2026.",
+      "url": "https://nunku.org.au/our-services/physical/general-clinic/"
+    },
+    {
+      "n": 21,
+      "text": "Aboriginal Health Council of South Australia. Member services and locations. Accessed 1 October 2026.",
+      "url": "https://ahcsa.org.au/members/locations/nunkuwarrin-yunti-of-south-australia-inc"
+    },
+    {
+      "n": 22,
+      "text": "ACON TransHub. Trans Mob. Accessed 1 October 2026.",
+      "url": "https://www.transhub.org.au/social/trans-mob/"
+    },
+    {
+      "n": 23,
+      "text": "Indigenous HealthInfoNet. LGBTQISB population group resources. Accessed 1 October 2026.",
+      "url": "https://healthinfonet.ecu.edu.au/learn/population-groups/lgbtqisb/"
+    }
+  ]
+}

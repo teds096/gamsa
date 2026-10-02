@@ -90,6 +90,7 @@ def main():
 
     changed = []
     for key, new in found.items():
+        if key == "checkedAt": continue
         old = prev.get(key)
         if old is None:
             print(f"FAIL: pbsFigures is missing {key}.", file=sys.stderr)
@@ -104,6 +105,7 @@ def main():
         changed.append(f"{key}: ${old} -> ${new}")
 
     data = json.loads(raw)          # must still be valid JSON
+    found["checkedAt"] = __import__("time").strftime("%-d %b %Y")
     data["pbsFigures"] = found
     COSTS.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
 

@@ -1,7 +1,7 @@
 <title>Gender-Affirming Medicines South Australia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Atkinson+Hyperlegible:wght@700&display=swap" rel="stylesheet">
 <style>
   :root{
     color-scheme:light;
@@ -25,7 +25,9 @@
   h1,h2,h3{margin:0;letter-spacing:-0.015em;text-wrap:balance;line-height:1.25;}
   h1{font-size:clamp(26px,5.2vw,36px);font-weight:700;}
   h2{font-size:clamp(20px,3.6vw,25px);font-weight:700;}
-  h3{font-size:17px;font-weight:600;}
+  h3,h2.h3{font-size:17px;font-weight:600;}
+  .fig-open{position:absolute;top:8px;right:8px;z-index:2;font:inherit;font-size:13px;font-weight:600;padding:5px 10px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--brand);cursor:pointer;}
+  .fig-open:hover,.fig-open:focus-visible{background:var(--brand);color:#fff;outline-offset:2px;}
   p{margin:0 0 14px;}
   p:last-child{margin-bottom:0;}
   a{color:var(--brand);text-underline-offset:2px;}
@@ -97,7 +99,7 @@
   .block li{margin-bottom:7px;}
   .note{margin-top:12px;background:#EEF4F7;border-left:3px solid #4E7C91;
     border-radius:0 8px 8px 0;padding:12px 15px;font-size:15.5px;color:var(--ink);}
-  figure{margin:16px 0 4px;padding:14px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);}
+  figure{position:relative;margin:16px 0 4px;padding:14px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);}
   figure svg{display:block;width:100%;height:auto;}
   figcaption{margin-top:10px;font-size:13.5px;color:var(--ink-2);line-height:1.5;}
   sup a{text-decoration:none;font-weight:600;padding:0 1px;}
@@ -164,6 +166,10 @@
   .gov-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:8px;letter-spacing:.01em;}
   .gov-r{color:#CFE3EC;}
   @media (max-width:560px){.gov-r{display:none;}}
+  @media (max-width:760px),(pointer:coarse){
+    .a11y-btn{padding:10px 18px 10px 14px;font-size:17px;min-height:44px;}
+    .a11y-act{padding:9px 14px;min-height:40px;}
+  }
   .foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;}
   .foot-grid h3{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);margin-bottom:10px;}
   .foot-grid p{font-size:14px;color:var(--ink-2);margin-bottom:10px;}
@@ -232,7 +238,7 @@
   /* a discontinued medicine is not the same as a temporary shortage */
   .t-stop{background:var(--red);color:#fff;}
   /* the live data earns the top of the page */
-  .tiles .tile:first-child{grid-column:1/-1;}
+  
   .tiles .tile:first-child .t{font-size:20px;}
   /* diagrams stay legible on a narrow screen */
   figure{overflow-x:auto;}
@@ -343,7 +349,9 @@
   .hero-in{max-width:none;}
   .page-head .lede{max-width:none;}
   .block p,.block li{max-width:none;}
-  .tiles{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+  .tiles{grid-template-columns:repeat(3,1fr);}
+  @media (max-width:860px){.tiles{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.tiles{grid-template-columns:1fr;}}
   .mgrid{grid-template-columns:repeat(auto-fill,minmax(270px,1fr));}
   figure{max-width:640px;}
 
@@ -352,19 +360,23 @@
 
   /* ================= accessibility toolkit ================= */
   .a11y{position:relative;}
-  .a11y-btn{font:inherit;font-size:15px;font-weight:700;color:#0B5D7A;background:#fff;
-    border:2px solid #fff;border-radius:999px;padding:7px 16px;cursor:pointer;
-    display:inline-flex;align-items:center;gap:8px;line-height:1.3;
+  /* Accessibility control: yellow on the teal strip. Chosen for low vision —
+     near-black text on #FFE57A is 14.3:1, the pill is 5.9:1 against the strip,
+     and yellow against blue-teal stays distinct for red-green colour blindness. */
+  .a11y-btn{font:inherit;font-family:"Atkinson Hyperlegible","Public Sans",Verdana,sans-serif;
+    font-size:17px;font-weight:700;letter-spacing:.02em;color:#10181F;background:#FFE57A;
+    border:2px solid #FFE57A;border-radius:999px;padding:8px 18px 8px 14px;cursor:pointer;
+    display:inline-flex;align-items:center;gap:9px;line-height:1.3;
     box-shadow:0 1px 4px rgba(0,0,0,.25);}
-  .a11y-btn:hover{background:#BFE3DA;border-color:#BFE3DA;}
-  .a11y-btn[aria-expanded="true"]{background:#BFE3DA;border-color:#BFE3DA;}
-  .a11y-btn:focus-visible{outline:2px solid #fff;outline-offset:2px;}
+  .a11y-btn svg{width:22px;height:22px;flex:none;}
+  .a11y-btn:hover,.a11y-btn[aria-expanded="true"]{background:#FFF3C4;border-color:#FFF3C4;}
+  .a11y-btn:focus-visible{outline:3px solid #fff;outline-offset:3px;box-shadow:0 0 0 6px #10181F;}
   .a11y-btn svg{flex:none;}
   .a11y-panel{position:absolute;right:0;top:calc(100% + 8px);z-index:40;width:320px;max-width:calc(100vw - 32px);
     background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:var(--r);
     box-shadow:var(--shadow);padding:14px;text-align:left;}
   .a11y-panel[hidden]{display:none;}
-  .a11y-panel h2{margin:0 0 4px;font-size:15px;}
+  .a11y-panel .a11y-title{margin:0 0 4px;font-size:15px;font-weight:700;}
   .a11y-panel p.a11y-lede{margin:0 0 12px;font-size:13px;color:var(--ink-2);}
   .a11y-row{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line-2);}
   .a11y-row:first-of-type{border-top:0;}
@@ -456,11 +468,11 @@
       transparent 70%,var(--line) 70%,var(--line) 80%,transparent 80%);}
   @media (max-width:560px){.lb-lens{width:170px;height:170px;}}
   /* ================= Easy Read booklet ================= */
-  #v-easy{max-width:52rem;margin:0 auto;padding-bottom:40px;}
+  #v-easy,#v-easy-guide{max-width:52rem;margin:0 auto;padding-bottom:40px;}
   .er-cover{padding:36px 0 28px;border-bottom:4px solid var(--brand);margin-bottom:8px;}
   .er-kick{margin:0 0 10px;font-size:15px;font-weight:700;letter-spacing:.08em;
     text-transform:uppercase;color:var(--brand);}
-  #v-easy h1{margin:0 0 8px;font-size:clamp(30px,5vw,42px);line-height:1.2;color:var(--brand);}
+  #v-easy h1,#v-easy-guide h1{margin:0 0 8px;font-size:clamp(30px,5vw,42px);line-height:1.2;color:var(--brand);}
   .er-sub{margin:0;font-size:20px;color:var(--ink);}
   .er-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:22px;}
   .er-print{font:inherit;font-size:16px;font-weight:700;cursor:pointer;color:#fff;
@@ -468,39 +480,88 @@
   .er-print:hover{background:var(--brand-2);}
   .er-back{font-size:16px;font-weight:600;}
   .er-sec{margin-top:40px;}
-  #v-easy h2{font-size:26px;line-height:1.25;color:var(--brand);margin:0 0 18px;
+  #v-easy h2,#v-easy-guide h2{font-size:26px;line-height:1.25;color:var(--brand);margin:0 0 18px;
     padding-bottom:10px;border-bottom:2px solid var(--line);}
-  .er-row{display:grid;grid-template-columns:120px 1fr;gap:26px;align-items:start;
-    margin:0 0 30px;page-break-inside:avoid;break-inside:avoid;}
+  .er-row{display:grid;grid-template-columns:120px 1fr;gap:26px;align-items:center;
+    margin:0 0 14px;padding:16px 18px;border-radius:14px;page-break-inside:avoid;break-inside:avoid;}
+  .er-row:nth-child(even){background:var(--panel);}
   .er-ic{display:flex;justify-content:center;padding-top:2px;}
-  .er-icon{width:96px;height:96px;}
-  .er-tx p{margin:0 0 12px;font-size:20px;line-height:1.55;max-width:34em;}
+  .er-icon{width:100px;height:100px;}
+  .er-tx p{margin:0 0 12px;font-size:1.3em;line-height:1.6;max-width:30em;}
   .er-tx p:last-child{margin-bottom:0;}
   .er-tx ul{margin:4px 0 12px;padding-left:24px;}
-  .er-tx li{font-size:20px;line-height:1.55;margin-bottom:8px;}
+  .er-tx li{font-size:1.3em;line-height:1.6;margin-bottom:10px;}
   .er-tx b{color:var(--brand);}
   .er-words{margin:0;}
-  .er-words dt{font-size:20px;font-weight:700;color:var(--brand);margin-top:18px;}
-  .er-words dd{margin:4px 0 0;font-size:19px;line-height:1.55;max-width:38em;}
+  .er-words dt{font-size:1.3em;font-weight:700;color:var(--brand);margin-top:20px;padding-top:14px;border-top:1px solid var(--line-2);}
+  .er-words dd{margin:4px 0 0;font-size:1.15em;line-height:1.6;max-width:30em;}
   @media (max-width:640px){
     .er-row{grid-template-columns:74px 1fr;gap:16px;}
     .er-icon{width:66px;height:66px;}
-    .er-tx p,.er-tx li{font-size:18px;}
+    .er-tx p,.er-tx li{font-size:1.15em;}
   }
   @media print{
     @page{size:A4;margin:18mm 16mm 22mm;}
     body{font-size:12pt;background:#fff;}
     header,footer,.totop-fab,.tts-bar,.a11y,.er-actions,.lb,.lb-scrim,.skip{display:none !important;}
     .view[hidden]{display:none !important;}
-    #v-easy{max-width:none;}
+    #v-easy,#v-easy-guide{max-width:none;}
     .er-cover{page-break-after:always;padding-top:0;}
     .er-sec{page-break-before:always;margin-top:0;}
     .er-sec:first-of-type{page-break-before:avoid;}
-    #v-easy h1{font-size:28pt;} #v-easy h2{font-size:18pt;}
+    #v-easy h1,#v-easy-guide h1{font-size:28pt;} #v-easy h2,#v-easy-guide h2{font-size:18pt;}
     .er-tx p,.er-tx li,.er-words dd{font-size:13pt;line-height:1.5;}
     .er-icon{width:24mm;height:24mm;}
-    .er-row{grid-template-columns:30mm 1fr;gap:10mm;}
+    .er-row{grid-template-columns:30mm 1fr;gap:10mm;padding:5mm 4mm;}
+    .er-row:nth-child(even){background:#F3F5F7;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
   }
+  /* home banner: the logo's cross as a faint motif */
+  .hero{position:relative;overflow:hidden;
+    background:linear-gradient(160deg,#08485E 0%,#0B5D7A 62%,#136182 100%) !important;}
+  .hero-in{position:relative;}
+  .hero-motif{position:absolute;right:-60px;bottom:-70px;width:340px;height:340px;opacity:.13;pointer-events:none;}
+  .hero-motif-2{position:absolute;right:250px;top:-54px;width:150px;height:150px;opacity:.07;pointer-events:none;transform:rotate(12deg);}
+  .hero .eyebrow{display:inline-flex;align-items:center;gap:8px;}
+  .hero .eyebrow::before{content:"";width:18px;height:18px;border-radius:5px;flex:none;
+    background:linear-gradient(#fff,#fff) center/10px 3px no-repeat,linear-gradient(#BFE3DA,#BFE3DA) center/3px 10px no-repeat,rgba(255,255,255,.14);}
+  .hero h1::after{content:"";display:block;width:56px;height:4px;border-radius:2px;background:#BFE3DA;margin-top:16px;}
+  @media (max-width:560px){.hero-motif-2{display:none;}}
+  /* phones: give the motif its own space below the text so it never sits behind words */
+  @media (max-width:560px){.hero{padding-bottom:104px !important;}.hero-motif{width:170px;height:170px;right:-38px;bottom:-66px;opacity:.14;}}
+  .f textarea{font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1px solid var(--line);
+    border-radius:9px;padding:11px 12px;width:100%;resize:vertical;}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+  #fbStatus.ok{color:var(--green);font-weight:600;} #fbStatus.err{color:var(--red);font-weight:600;}
+  /* hosted pages: until the script has drawn the page, keep the footer out of view so
+     nothing jumps when the content arrives (protects CLS) */
+  html[data-routing="path"]:not(.ready) footer{visibility:hidden;}
+  html[data-routing="path"]:not(.ready) #main{min-height:100vh;}
+  .block .pro{border-left:4px solid var(--amber);background:var(--amber-soft);padding:14px 18px;border-radius:0 12px 12px 0;}
+  .block .pro h2{margin-top:0;}
+  a.dl{display:inline-block;font-weight:600;padding:8px 14px;border:1px solid var(--line);border-radius:999px;
+    background:#fff;text-decoration:none;margin:2px 0;}
+  a.dl::before{content:"\2193  ";}
+  a.dl:hover{background:var(--brand-soft);}
+  .er-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin:26px 0 10px;}
+  .er-card{display:flex;gap:14px;align-items:center;padding:16px;border:1px solid var(--line);border-radius:14px;
+    background:#fff;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);}
+  .er-card:hover{border-color:var(--brand);background:var(--brand-soft);}
+  .er-card .er-icon{width:56px;height:56px;flex:none;}
+  .er-card b{display:block;font-size:19px;color:var(--brand);} .er-card span span{display:block;font-size:15px;color:var(--ink-2);margin-top:3px;}
+  .er-tx-note{font-size:18px;} .er-foot{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);}
+  @media print{.er-list,.er-foot{display:none;}}
+  body.dys .er-kick{text-transform:none;letter-spacing:.02em;}
+  .er-tx b{text-decoration:underline;text-decoration-color:#BFE3DA;text-decoration-thickness:3px;text-underline-offset:3px;}
+  .er-listen{font:inherit;font-size:16px;font-weight:700;cursor:pointer;color:var(--brand);background:#fff;
+    border:2px solid var(--brand);border-radius:999px;padding:9px 18px;display:inline-flex;align-items:center;gap:8px;}
+  .er-listen[aria-pressed="true"]{background:var(--brand);color:#fff;}
+  .er-help{display:grid;grid-template-columns:120px 1fr;gap:26px;align-items:center;padding:16px 18px;border-radius:14px;
+    background:var(--brand-soft);margin:8px 0 26px;}
+  .er-help p{margin:0 0 8px;font-size:1.15em;line-height:1.6;} .er-help p:last-child{margin:0;}
+  @media (max-width:640px){.er-help{grid-template-columns:74px 1fr;gap:16px;}}
+  @media print{.er-listen{display:none;}}
+  .prem{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;}
+  .prem-h{margin:0 0 8px;font-weight:700;color:var(--brand);} .prem ul{margin:0;padding-left:20px;} .prem li{margin-bottom:6px;}
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 70'%3E%3Crect width='70' height='70' rx='20' fill='%230B5D7A'/%3E%3Crect x='12' y='28.5' width='46' height='13' rx='6.5' fill='%23fff'/%3E%3Crect x='28.5' y='12' width='13' height='46' rx='6.5' fill='%23BFE3DA'/%3E%3C/svg%3E">
 
@@ -511,11 +572,11 @@
     <span>Independent health information · South Australia</span>
     <div class="a11y">
       <button class="a11y-btn" id="a11yBtn" type="button" aria-expanded="false" aria-controls="a11yPanel">
-        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><circle cx="12" cy="4" r="2"/><path d="M3 8.5h18v2h-6v11h-2.2l-.8-6-.8 6H9v-11H3z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="6.6" r="1.9" fill="currentColor"/><path d="M6.2 9.6c3.9 1 7.7 1 11.6 0l.4 1.9c-1.6.4-3 .7-4.4.8v2.6l1.9 4.6-1.9.8-1.8-4.3-1.8 4.3-1.9-.8 1.9-4.6v-2.6c-1.4-.1-2.8-.4-4.4-.8z" fill="currentColor"/></svg>
         Accessibility
       </button>
       <div class="a11y-panel" id="a11yPanel" role="group" aria-labelledby="a11yTitle" hidden>
-        <h2 id="a11yTitle">Reading options</h2>
+        <p id="a11yTitle" class="a11y-title">Reading options</p>
         <p class="a11y-lede">These change how this site looks and sounds for you only. Nothing is sent anywhere.</p>
         <div class="a11y-row">
           <div class="t"><b>Read this page aloud</b><span>Your device reads the page out. Pause or stop any time.</span></div>
@@ -530,7 +591,7 @@
           <button class="a11y-act" id="easyBtn" type="button" aria-pressed="false">Turn on</button>
         </div>
         <div class="a11y-row">
-          <div class="t"><b>Easy Read guide</b><span>The key information in short sentences with pictures. Print it or save it as a PDF.</span></div>
+          <div class="t"><b>Easy Read guides</b><span>Short guides in easy words with pictures. Each one prints or saves as a PDF.</span></div>
           <a class="a11y-act" id="erLink" href="#/easy" data-link>Open</a>
         </div>
         <p class="a11y-note">Your choices are remembered on this device.</p>
@@ -552,6 +613,7 @@
       <a href="#/medicines" data-link>Medicines</a>
       <a href="#/doses" data-link>Doses guide</a>
       <a href="#/using" data-link>How-to-use guide</a>
+      <a href="#/pharmacy" data-link>Pharmacy guide</a>
       <a href="#/costs" data-link>Costs guide</a>
     </nav>
   </div>
@@ -608,6 +670,8 @@
   <!-- HOME -->
   <div class="view" id="v-home">
     <div class="hero">
+      <svg class="hero-motif" viewBox="0 0 70 70" aria-hidden="true" focusable="false"><rect x="12" y="28.5" width="46" height="13" rx="6.5" fill="#FFFFFF"/><rect x="28.5" y="12" width="13" height="46" rx="6.5" fill="#BFE3DA"/></svg>
+      <svg class="hero-motif-2" viewBox="0 0 70 70" aria-hidden="true" focusable="false"><rect x="12" y="28.5" width="46" height="13" rx="6.5" fill="#BFE3DA"/><rect x="28.5" y="12" width="13" height="46" rx="6.5" fill="#FFFFFF"/></svg>
       <div class="hero-in">
         <p class="eyebrow">GAMSA</p>
         <h1 tabindex="-1">Gender-Affirming Medicines South Australia</h1>
@@ -618,7 +682,7 @@
     <div class="tiles">
       <a class="tile" href="#/supply" data-link>
         <span class="t">Supply &amp; shortages</span>
-        <span class="d">Which medicines are hard to get right now, and what to do about it.</span>
+        <span class="d">Which medicines are hard to get right now, what to do about it, and what pharmacists report in stock.</span>
         <span class="live">Updated daily</span>
       </a>
       <a class="tile" href="#/costs" data-link>
@@ -638,10 +702,14 @@
         <span class="t">Using your medicine</span>
         <span class="d">Patches, gels, injections and tablets — how to use them, store them and dispose of them.</span>
       </a>
+      <a class="tile" href="#/pharmacy" data-link>
+        <span class="t">Working with your pharmacy</span>
+        <span class="d">What to bring, what to do if you run out, and getting your name right on the label.</span>
+      </a>
     </div>
 
     <div class="callout">
-      <h3>Looking for a prescriber?</h3>
+      <h2 class="h3">Looking for a prescriber?</h2>
       <p>The <a href="https://transhealthsa.com/directory/" target="_blank" rel="noopener">Trans Health SA directory</a> lists GPs, clinics and services across South Australia. Your pharmacist can also tell you which local prescribers regularly dispense gender-affirming therapy.</p>
     </div>
   </div>
@@ -667,7 +735,15 @@
     </div>
 
     <ul class="plain" id="affected" aria-live="polite"></ul>
-    <div class="clear-box" id="clearBox"><h3>No supply problems reported</h3><ul id="clear"></ul></div>
+    <div class="clear-box" id="clearBox"><h2 class="h3">No supply problems reported</h2><ul id="clear"></ul></div>
+
+    <div class="sight" id="prPanel">
+      <h2>Pharmacy stock reports</h2>
+      <p class="muted small" style="margin-top:8px;max-width:60ch;">What registered pharmacists say is on their shelves right now, checked against the AHPRA register before publishing. The official data above tells you about Australia; this tells you about particular pharmacies.</p>
+      <div id="prPanelList" class="ticker" hidden></div>
+      <p class="muted small" role="status" aria-live="polite" id="prPanelStatus" style="margin:8px 0 0"></p>
+      <p class="quick" style="margin-top:12px;"><a class="btn" href="#/pharmacy-reports" data-link>See all pharmacy stock reports</a> &nbsp; <a href="#/pharmacy-reports#prForm" data-link>Pharmacists: post a report &rarr;</a></p>
+    </div>
 
     <div class="sight">
       <h2>Seen it in stock, or missed out?</h2>
@@ -690,14 +766,16 @@
           </div>
           <div class="f"><label for="rNote">Anything useful to add (optional)</label><input id="rNote" maxlength="140" autocomplete="off" placeholder="Ordering more in for Thursday"></div>
         </div>
+        <div class="hp" aria-hidden="true"><label for="rSite">Leave this empty</label><input id="rSite" tabindex="-1" autocomplete="off"></div>
+        <div id="rpTurnstile"></div>
         <button class="btn" id="repBtn" type="submit">Share this</button>
-        <p class="hint" id="repHint" role="status" aria-live="polite">Anonymous. No account, no personal details.</p>
+        <p class="hint" id="repHint" role="status" aria-live="polite">Anonymous. No account, no personal details, and please don't put a person's name in the note.</p>
       </form>
       <div class="feed" id="feed"></div>
     </div>
 
     <div class="callout" style="margin-top:30px;">
-      <h3>If your medicine is affected</h3>
+      <h2 class="h3">If your medicine is affected</h2>
       <p>Start with your pharmacist — they can check other suppliers, order it in, and for the oestrogen patches can often supply an approved alternative without a new prescription. Filling your script a few days early, rather than on the last day, gives everyone room to move.</p>
     </div>
   </div>
@@ -705,8 +783,72 @@
   <!-- CONTENT PAGES -->
   <div class="view" id="v-doses"></div>
   <div class="view" id="v-using"></div>
+  <div class="view" id="v-pharmacy"></div>
   <div class="view" id="v-costs"></div>
   <div class="view" id="v-easy"></div>
+  <div class="view" id="v-easy-guide"></div>
+  <div class="view" id="v-pharmacy-reports">
+    <a class="backlink" href="#/supply">&larr; Back to supply &amp; shortages</a>
+    <div class="page-head">
+      <h1 tabindex="-1">Pharmacy stock reports</h1>
+      <p class="lede">Stock reports posted by registered pharmacists, newest first. Each pharmacist's registration number is checked against the AHPRA register before their first report is published; after that their reports appear straight away.</p>
+    </div>
+    <div id="prGroups"></div>
+    <p class="muted small" role="status" aria-live="polite" id="prStatus" style="margin:0 0 18px;"></p>
+    <h2>Post a report</h2>
+    <p class="muted">For pharmacists and pharmacy staff posting on a pharmacist's behalf. Your registration number is stored but never shown; the pharmacy name and suburb are public.</p>
+    <form class="rep" id="prForm" novalidate>
+      <div class="row">
+        <div class="f"><label for="prAhpra">AHPRA registration number</label><input id="prAhpra" required autocomplete="off" placeholder="PHA0001234567" maxlength="13" pattern="PHA\d{10}" style="text-transform:uppercase"></div>
+        <div class="f"><label for="prName">Pharmacist name</label><input id="prName" required maxlength="80" autocomplete="name"></div>
+      </div>
+      <div class="row">
+        <div class="f"><label for="prPharm">Pharmacy</label><input id="prPharm" required maxlength="80" autocomplete="organization" placeholder="e.g. Norwood Day &amp; Night Pharmacy"></div>
+        <div class="f"><label for="prLoc">Suburb or postcode</label><input id="prLoc" required maxlength="40" autocomplete="off" placeholder="Norwood 5067"></div>
+      </div>
+      <div class="row">
+        <div class="f"><label for="prMed">Medicine or brand</label><input id="prMed" required maxlength="80" autocomplete="off" placeholder="Estradot 50" list="prMedList"><datalist id="prMedList"></datalist></div>
+        <div class="f"><label for="prStat">Stock position</label>
+          <select id="prStat">
+            <option value="in_stock">In stock now</option>
+            <option value="low">Low — a few packs left</option>
+            <option value="order">None in stock, but can order within a few days</option>
+            <option value="none">None, and unable to order</option>
+          </select></div>
+      </div>
+      <div class="f"><label for="prNote">Note (optional)</label><input id="prNote" maxlength="200" autocomplete="off" placeholder="e.g. 3 boxes, holding one for a regular"></div>
+      <div class="f"><label for="prEmail">Work email (optional &mdash; only used if there is a question about your registration)</label><input id="prEmail" type="email" maxlength="200" autocomplete="email"></div>
+      <div class="hp" aria-hidden="true"><label for="prSite">Leave this empty</label><input id="prSite" tabindex="-1" autocomplete="off"></div>
+      <p class="muted small" style="margin:0;">By posting you confirm you are a registered pharmacist, or are posting with one's permission, and that the report is accurate at the time of posting. Reports expire after 14 days.</p>
+      <div id="prTurnstile"></div>
+      <div><button class="btn" type="submit" id="prSend">Post report</button></div>
+      <p class="muted small" role="status" aria-live="polite" id="prMsg" style="margin:0;"></p>
+    </form>
+  </div>
+  <div class="view" id="v-feedback">
+    <div class="page-head">
+      <h1 tabindex="-1">Send feedback</h1>
+      <p class="lede">Spotted something wrong, out of date or missing? Tell me here. Every message is read, and corrections are made as quickly as possible.</p>
+    </div>
+    <form class="rep" id="fbForm" novalidate>
+      <div class="f"><label for="fbTopic">What is it about?</label>
+        <select id="fbTopic">
+          <option value="wrong">Something is wrong or out of date</option>
+          <option value="missing">Something is missing</option>
+          <option value="access">An accessibility problem</option>
+          <option value="other">Something else</option>
+        </select></div>
+      <div class="f"><label for="fbMsg">Your message</label>
+        <textarea id="fbMsg" rows="6" maxlength="4000" required></textarea></div>
+      <div class="f"><label for="fbEmail">Email (optional &mdash; only if you would like a reply)</label>
+        <input id="fbEmail" type="email" maxlength="200" autocomplete="email"></div>
+      <div class="hp" aria-hidden="true"><label for="fbSite">Leave this empty</label><input id="fbSite" tabindex="-1" autocomplete="off"></div>
+      <p class="muted small" style="margin:0;">Please do not include personal health details. Messages are stored privately and never shared, and no tracking cookies are used.</p>
+      <div id="fbTurnstile"></div>
+      <div><button class="btn" type="submit" id="fbSend">Send feedback</button></div>
+      <p class="muted small" role="status" aria-live="polite" id="fbStatus" style="margin:0;"></p>
+    </form>
+  </div>
 
 </main>
 
@@ -714,27 +856,30 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <h3>Sections</h2>
+        <h2 class="h3">Sections</h2>
         <ul class="sitemap" role="list">
           <li><a href="#/" data-link>Home</a></li>
           <li><a href="#/supply" data-link>Shortages &mdash; what is hard to get now</a></li>
           <li><a href="#/medicines" data-link>Medicines A&ndash;Z &mdash; an in-depth page for each medicine</a></li>
           <li><a href="#/sightings" data-link>Patient sightings &mdash; what people have seen in stock</a></li>
+          <li><a href="#/pharmacy-reports" data-link>Pharmacy stock reports &mdash; posted by registered pharmacists</a></li>
           <li><a href="#/doses" data-link>Doses guide &mdash; what each medicine is, and the usual ranges</a></li>
           <li><a href="#/using" data-link>How-to-use guide &mdash; patches, gels, injections, tablets</a></li>
+          <li><a href="#/pharmacy" data-link>Pharmacy guide &mdash; what to bring, what to ask, running out</a></li>
           <li><a href="#/costs" data-link>Costs guide &mdash; what you pay, and the PBS</a></li>
         </ul>
       </div>
       <div>
-        <h3>About this site</h3>
+        <h2 class="h3">About this site</h2>
         <p>GAMSA publishes independent, referenced medicines information for trans and gender diverse people in South Australia. It is not affiliated with any clinic, pharmacy or manufacturer, and carries no advertising or sponsorship.</p>
-        <p>Supply information is refreshed daily from the Therapeutic Goods Administration. Cost information is refreshed monthly from the Pharmaceutical Benefits Scheme. Clinical content is written and reviewed by hand, and every claim is referenced on the page it appears.</p>
+        <p>Supply information is refreshed daily from the Therapeutic Goods Administration. PBS co-payment and Safety Net figures are checked monthly against the Pharmaceutical Benefits Scheme. Clinical content is written and reviewed by hand, and every claim is referenced on the page it appears.</p>
+        <p><a href="#/feedback" data-link>Send feedback or report a mistake</a></p>
         <p class="rev" id="rev"></p>
       </div>
       </div>
       <div class="foot-legal">
       <p><strong>This is health information, not medical advice.</strong> It cannot replace your prescriber or pharmacist, who know your history. Never change how you take a medicine based on this site alone. In an emergency call 000.</p>
-      <p>Built and maintained by a registered pharmacist in Adelaide. An independent, non-commercial project, offered freely to South Australians.</p>
+      <p>Built and maintained by Theodore South, BPharm (Hons), a registered pharmacist in Adelaide. An independent, non-commercial project, offered freely to South Australians.</p>
       </div>
     </div>
   </div>
@@ -773,46 +918,141 @@
 (function(){
   "use strict";
   var DATA = __MEDS__, CONTENT = __CONTENT__, MEDINFO = __MEDINFO__;
+  var PREMIUMS = __PREMIUMS__;
   var BY_ID = {}, SUPPLY2MED = {}, RECENT = [], CURRENT_MED = "";
   MEDINFO.medicines.forEach(function(m){
     BY_ID[m.id]=m; (m.supplyIds||[]).forEach(function(sid){SUPPLY2MED[sid]=m.id;});
   });
   var REVIEWED = "26 Sep 2026";
   var SMOOTH = !(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
-  var API = (window.SITE_CONFIG && window.SITE_CONFIG.api) || "";
+  var API = document.documentElement.getAttribute("data-routing")==="path" ? "/api" : "";
 
   function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){
     return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];});}
+  /* internal links in content: [text](#/route) — only same-site hash routes */
+  function ilink(t){
+    return String(t)
+      .replace(/\[([^\]\d][^\]]*)\]\((#\/[a-z0-9\/-]*(?:#[a-z0-9-]+)?)\)/g,'<a href="$2">$1</a>')
+      .replace(/\[([^\]\d][^\]]*)\]\((\/clinicians\/[a-z0-9-]+\.(?:pdf|zip))\)/g,'<a href="$2" class="dl" download>$1</a>')
+      .replace(/\[([^\]\d][^\]]*)\]\((https:\/\/[^\s)]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>')
+      .replace(/\[([^\]\d][^\]]*)\]\((\/medicines\/[a-z0-9-]+(?:#[a-z0-9-]+)?)\)/g, function(_,txt,href){
+        return '<a href="'+(PATHMODE?href:"#"+href.replace(/^\/medicines\//,"/med/"))+'">'+txt+'</a>'; });
+  }
   function cite(t,v){var p=v?v+"-":"";return String(t).replace(/\s*\[(\d+)\]/g,
     '<sup><a href="#ref-'+p+'$1" aria-label="Reference $1">[$1]</a></sup>');}
 
 
   /* link the first mention of each medicine in the guides to its page */
-  var TERMS=[];
+  var TERMS=[], _tc={};
   MEDINFO.medicines.forEach(function(m){
-    var names=[m.generic].concat(m.brands||[]).filter(Boolean);
-    names.forEach(function(n){TERMS.push({id:m.id,t:n});});
+    [m.generic].concat(m.brands||[]).filter(Boolean).forEach(function(n){ _tc[n]=(_tc[n]||0)+1; TERMS.push({id:m.id,t:n}); });
   });
+  TERMS=TERMS.filter(function(x){ return _tc[x.t]===1; });   // skip names shared by two medicines (e.g. "Testosterone")
   TERMS.sort(function(a,b){return b.t.length-a.t.length;});
   function linkMeds(html, seen){
-    return html.split(/(<[^>]+>)/).map(function(part){
-      if(part.charAt(0)==="<") return part;
-      TERMS.forEach(function(term){
-        if(seen[term.id]) return;
-        var re=new RegExp("\\b("+term.t.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")\\b");
-        if(re.test(part)){
-          seen[term.id]=1;
-          part=part.replace(re,'<a href="#/med/'+term.id+'">$1</a>');
-        }
-      });
-      return part;
-    }).join("");
+    TERMS.forEach(function(term){
+      if(seen[term.id]) return;
+      var re=new RegExp("\\b("+term.t.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")\\b");
+      var parts=html.split(/(<[^>]+>)/), depth=0;
+      for(var i=0;i<parts.length;i++){
+        var p=parts[i];
+        if(p.charAt(0)==="<"){ if(/^<a[\s>]/i.test(p)) depth++; else if(/^<\/a>/i.test(p)) depth--; continue; }
+        if(depth>0 || !re.test(p)) continue;
+        seen[term.id]=1; parts[i]=p.replace(re,'<a href="#/med/'+term.id+'">$1</a>'); html=parts.join(""); return;
+      }
+    });
+    return html;
   }
 
   /* ---------- content pages ---------- */
+  function pbsBlock(sec){
+    var items=(PREMIUMS&&PREMIUMS.items)||{}, codes=[], seenC={};
+    (sec.body||[]).concat([sec.note||""]).forEach(function(t){
+      (String(t).match(/\b\d{4,5}[A-Z]\b/g)||[]).forEach(function(c){ if(!seenC[c]&&items[c]){ seenC[c]=1; codes.push(c); } });
+    });
+    if(!codes.length) return '';
+    return '<div class="prem"><p class="prem-h">On the PBS list, checked '+esc(PREMIUMS.checkedAt)+'</p><ul>'+codes.map(function(c){
+      var it=items[c], subs=it.brands.filter(function(b){return b.sub;}).map(function(b){return b.name;}),
+          nosub=it.brands.filter(function(b){return !b.sub;}).map(function(b){return b.name;});
+      return '<li><b>Item '+esc(c)+'</b> \u2014 '+esc(it.schedule||'')+(it.authority?', '+esc(it.authority):'')+
+        (it.general?'. General patient charge '+esc(it.general)+' (dispensed price '+esc(it.dpmq)+')':'')+'.'+
+        (subs.length?' Brands your pharmacist may swap between: '+esc(subs.join(', '))+'.':'')+
+        (nosub.length?' Listed but not marked as substitutable: '+esc(nosub.join(', '))+'.':'')+'</li>';
+    }).join('')+'</ul><p class="muted small" style="margin:8px 0 0">On a private script, expect roughly the dispensed price plus the pharmacy\u2019s mark-up; the <a href="#/costs#sec-costs-8" data-link>costs guide</a> has reader-reported prices and a form to add yours.</p><div class="paid-med" data-med="'+esc(sec.__med||'')+'"></div><p class="muted small" style="margin:8px 0 0">\u201cMay swap\u201d means the PBS marks these brands as equivalent, so a pharmacist can give you any of them unless your prescriber has written that substitution is not permitted.</p></div>';
+  }
+  function medCodes(m){
+    var sec=(m.sections||[]).filter(function(s){return s.h==="Cost and PBS";})[0]; if(!sec) return [];
+    var out=[],seen={};
+    (sec.body||[]).concat([sec.note||""]).forEach(function(t){
+      (String(t).match(/\b\d{4,5}[A-Z]\b/g)||[]).forEach(function(c){ if(!seen[c]){seen[c]=1; out.push(c);} });
+    });
+    return out;
+  }
+  function niceDate(s){ var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(s||""); if(!m) return s||""; return (+m[3])+" "+["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][+m[2]-1]+" "+m[1]; }
+  function dollars(c){ return "$"+(c/100).toFixed(2); }
+  var PAID=null, PAID_WAIT=[];
+  function loadPaid(cb){
+    if(PAID){ cb(PAID); return; }
+    PAID_WAIT.push(cb); if(PAID_WAIT.length>1) return;
+    var done=function(d){ PAID=d||{summary:[]}; PAID_WAIT.forEach(function(f){f(PAID);}); PAID_WAIT=[]; };
+    if(!PATHMODE){ done(null); return; }
+    fetch("/api/prices",{cache:"no-store"}).then(function(r){return r.ok?r.json():null;}).then(done).catch(function(){done(null);});
+  }
+  function paidRows(medId){
+    return ((PAID&&PAID.summary)||[]).filter(function(r){return !medId||r.medicine===medId;});
+  }
+  function paidHtml(rows, withName){
+    if(!rows.length) return '';
+    var names={}; (MEDINFO.medicines||[]).forEach(function(m){names[m.id]=m.name;});
+    return '<ul>'+rows.map(function(r){
+      return '<li>'+(withName?'<b>'+esc(names[r.medicine]||r.medicine)+'</b>, ':'')+(r.kind==="pbs"?"PBS script":"private script")+': typically '+dollars(r.median)+
+        ' (range '+dollars(r.low)+' to '+dollars(r.high)+', '+r.n+' reports, latest '+esc(r.latest)+')</li>';
+    }).join('')+'</ul>';
+  }
+  function fillPaid(el, medId, withName){
+    loadPaid(function(){
+      var rows=paidRows(medId);
+      el.innerHTML = rows.length ? paidHtml(rows, withName)
+        : '<p class="muted small" style="margin:0">No reports yet'+(PAID&&PAID.days?' in the last '+PAID.days+' days':'')+'. Figures appear once three or more people have reported the same medicine.</p>';
+    });
+  }
+  function priceBlock(){
+    var items=(PREMIUMS&&PREMIUMS.items)||{}, rows=[];
+    (MEDINFO.medicines||[]).forEach(function(m){
+      var parts=[];
+      medCodes(m).forEach(function(c){ var it=items[c]; if(it&&it.dpmq) parts.push(esc(it.brands.map(function(b){return b.name;}).join(" / "))+' (item '+esc(c)+') '+esc(it.dpmq)); });
+      if(parts.length) rows.push('<li><b>'+esc(m.name)+'</b>: '+parts.join('; ')+'</li>');
+    });
+    var opts=(MEDINFO.medicines||[]).map(function(m){return '<option value="'+esc(m.id)+'">'+esc(m.name)+'</option>';}).join('');
+    return '<div class="prem" id="paidBox"><p class="prem-h">What readers report paying</p><div id="paidList"></div></div>'+
+      '<div class="prem"><p class="prem-h">PBS dispensed prices, checked '+esc(PREMIUMS.checkedAt)+'</p><ul>'+rows.join('')+'</ul>'+
+      '<p class="muted small" style="margin:8px 0 0">The dispensed price is what the PBS pays the pharmacy in total for one script. On a private script the pharmacy sets its own price, usually about this figure plus a mark-up, so treat it as a floor, not a quote.</p></div>'+
+      '<form class="rep" id="pxForm" novalidate style="margin-top:14px"><h2 class="h3" style="margin:0 0 6px">Report what you paid</h2>'+
+      '<p class="muted small" style="margin:0 0 8px">Nothing identifying is stored: just the medicine, the amount, whether it was PBS or private, and optionally your state and the kind of pharmacy.</p>'+
+      '<div class="f"><label for="pxMed">Medicine</label><select id="pxMed">'+opts+'</select></div>'+
+      '<div class="f"><label for="pxKind">Script</label><select id="pxKind"><option value="private">Private (full price)</option><option value="pbs">PBS (subsidised)</option></select></div>'+
+      '<div class="f"><label for="pxAmt">Amount paid for one script, in dollars</label><input id="pxAmt" type="number" inputmode="decimal" min="1" max="5000" step="0.01" required></div>'+
+      '<div class="f"><label for="pxState">State or territory (optional)</label><select id="pxState"><option value="">Prefer not to say</option><option>SA</option><option>VIC</option><option>NSW</option><option>QLD</option><option>WA</option><option>TAS</option><option>NT</option><option>ACT</option></select></div>'+
+      '<div class="f"><label for="pxPh">Kind of pharmacy (optional)</label><select id="pxPh"><option value="">Prefer not to say</option><option value="chain">Discount chain</option><option value="independent">Independent or local</option><option value="online">Online</option></select></div>'+
+      '<div class="hp" aria-hidden="true"><label for="pxSite">Leave this empty</label><input id="pxSite" tabindex="-1" autocomplete="off"></div>'+
+      '<div id="pxTurnstile"></div><div><button class="btn" type="submit" id="pxSend">Send price report</button></div>'+
+      '<p class="muted small" role="status" aria-live="polite" id="pxStatus" style="margin:0"></p></form>';
+  }
+  function premiumList(){
+    var rows=(PREMIUMS&&PREMIUMS.rows)||[];
+    if(!rows.length) return '<p class="muted">No premium-priced brands are listed for these medicines at the moment.</p>';
+    var by={}, order=[];
+    rows.forEach(function(r){ var k=r.brand+" — "+r.product; if(!by[k]){by[k]=[];order.push(k);} by[k].push(r); });
+    return '<div class="prem"><p class="prem-h">Brands with a premium on the PBS list, checked '+esc(PREMIUMS.checkedAt)+'</p><ul>'+
+      order.map(function(k){
+        var rs=by[k], r0=rs[0];
+        var amounts=rs.map(function(r){ return '$'+r.premium+(rs.length>1?' for '+r.packs+(r.packs==="1"?' pack':' packs'):''); }).join(', ');
+        return '<li><b>'+esc(r0.brand)+'</b> ('+esc(r0.product)+'): '+amounts+'. No premium: '+esc(r0.benchmark.join(', '))+'.</li>';
+      }).join('')+'</ul></div>';
+  }
   function renderContent(id, c){
     var el = document.getElementById(id), v = id.replace("v-",""), seen = {};
-    function C(t){return linkMeds(cite(esc(t), v), seen);}
+    function C(t){return linkMeds(cite(ilink(esc(t)), v), seen);}
     function newSection(){ seen = {}; }
     el.innerHTML =
       '<div class="page-head"><p class="kicker">Overview guide</p><h1 tabindex="-1">'+esc(c.title)+'</h1><p class="lede">'+C(c.intro)+
@@ -825,6 +1065,7 @@
       c.sections.map(function(s,i){
         newSection();
         return '<section class="block" id="sec-'+v+'-'+i+'" tabindex="-1"><h2>'+esc(s.h)+'</h2>'+
+          (s.premiums ? premiumList() : '')+(s.prices ? priceBlock() : '')+
           (s.body||[]).map(function(p){return '<p>'+C(p)+'</p>';}).join("")+
           (s.list&&s.list.length?'<ul>'+s.list.map(function(li){return '<li>'+C(li)+'</li>';}).join("")+'</ul>':'')+
           (s.svg?'<figure>'+s.svg+(s.svgCaption?'<figcaption>'+C(s.svgCaption)+'</figcaption>':'')+'</figure>':'')+
@@ -834,15 +1075,286 @@
       '<div class="refs"><h2>References</h2><ol>'+
         c.references.map(function(r){
           var host=r.url?r.url.replace(/^https?:\/\/(www\.)?/,"").split("/")[0]:"";
+          if(r.url&&r.url.charAt(0)==="/") return '<li id="ref-'+v+'-'+r.n+'" tabindex="-1">'+esc(r.text)+' <a href="'+esc(r.url)+'" class="dl" download>Download (PDF)</a></li>';
           return '<li id="ref-'+v+'-'+r.n+'" tabindex="-1">'+esc(r.text)+
             (r.url?' <a href="'+esc(r.url)+'" target="_blank" rel="noopener">View on '+esc(host)+
               '<span class="sr-only"> (opens in a new tab)</span></a>':'')+'</li>';
         }).join("")+
       '</ol></div>';
   }
-  renderContent("v-doses", CONTENT.dosing);
-  renderContent("v-using", CONTENT.administration);
-  renderContent("v-costs", CONTENT.costs);
+  /* the long guides are built the first time they are opened, not at start-up,
+     which keeps the first paint quick on slow phones */
+  /* ================= Easy Read booklet ================= */
+  var ICONS={
+    people:'<circle cx="26" cy="44" r="14"/><path d="M4 102c0-15 10-26 22-26s22 11 22 26z" /><circle cx="94" cy="44" r="14"/><path d="M72 102c0-15 10-26 22-26s22 11 22 26z"/><circle cx="60" cy="32" r="17" fill="#0B5D7A"/><path d="M33 102c0-18 12-31 27-31s27 13 27 31z" fill="#0B5D7A"/>',
+    book:'<g fill="none" stroke="#0B5D7A" stroke-width="7" stroke-linejoin="round"><path d="M14 26h36c6 0 10 4 10 10v62c0-6-4-10-10-10H14z"/><path d="M106 26H70c-6 0-10 4-10 10v62c0-6 4-10 10-10h36z"/></g><path d="M60 36v62" stroke="#0B5D7A" stroke-width="7"/>',
+    bold:'<text x="60" y="50" font-size="32" font-weight="800" text-anchor="middle">Bold</text><text x="60" y="92" font-size="24" font-weight="300" text-anchor="middle">Not bold</text>',
+    web:'<rect x="10" y="22" width="100" height="66" rx="8"/><rect x="18" y="34" width="84" height="44" rx="4" fill="#fff"/><path d="M44 100h32l6 12H38z"/>',
+    help:'<circle cx="42" cy="32" r="14"/><path d="M18 100c0-15 11-25 24-25s24 10 24 25z"/><rect x="62" y="44" width="46" height="34" rx="6"/><rect x="68" y="52" width="34" height="5" rx="2.5" fill="#fff"/><rect x="68" y="63" width="24" height="5" rx="2.5" fill="#fff"/>',
+    pills:'<g transform="rotate(-35 44 46)"><rect x="8" y="30" width="72" height="34" rx="17"/><rect x="42" y="33" width="35" height="28" rx="14" fill="#BFE3DA"/></g><circle cx="82" cy="84" r="26"/><rect x="58" y="80" width="48" height="8" rx="4" fill="#fff"/>',
+    question:'<circle cx="60" cy="60" r="46"/><path d="M52 74c0-12 16-13 16-24a8 8 0 10-16 0" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/><circle cx="60" cy="90" r="6" fill="#fff"/>',
+    warn:'<path d="M60 14l50 88H10z"/><rect x="54" y="46" width="12" height="32" rx="6" fill="#fff"/><circle cx="60" cy="88" r="7" fill="#fff"/>',
+    doc:'<rect x="24" y="12" width="72" height="96" rx="8"/><rect x="36" y="32" width="48" height="7" rx="3.5" fill="#fff"/><rect x="36" y="50" width="48" height="7" rx="3.5" fill="#fff"/><rect x="36" y="68" width="30" height="7" rx="3.5" fill="#fff"/>',
+    pharmacy:'<rect x="12" y="34" width="96" height="70" rx="8"/><rect x="52" y="50" width="16" height="44" rx="4" fill="#fff"/><rect x="38" y="64" width="44" height="16" rx="4" fill="#fff"/><path d="M12 34l12-20h72l12 20z"/>',
+    person:'<circle cx="60" cy="34" r="18"/><path d="M22 106c0-21 17-36 38-36s38 15 38 36z"/>',
+    nametag:'<rect x="14" y="30" width="92" height="62" rx="8"/><rect x="26" y="46" width="40" height="8" rx="4" fill="#fff"/><rect x="26" y="62" width="60" height="8" rx="4" fill="#fff"/><rect x="50" y="14" width="20" height="18" rx="4"/>',
+    speak:'<path d="M12 24h96v56H56L30 102V80H12z"/><circle cx="42" cy="52" r="6" fill="#fff"/><circle cx="60" cy="52" r="6" fill="#fff"/><circle cx="78" cy="52" r="6" fill="#fff"/>',
+    clock:'<circle cx="60" cy="60" r="46"/><path d="M60 32v30l20 12" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>',
+    swap:'<path d="M18 44h64V28l24 24-24 24V60H18z"/><path d="M102 92H38v16L14 84l24-24v16h64z"/>',
+    money:'<rect x="10" y="30" width="100" height="62" rx="8"/><circle cx="60" cy="61" r="18" fill="#fff"/><rect x="56" y="48" width="8" height="26" rx="4"/>',
+    card:'<rect x="10" y="30" width="100" height="62" rx="8"/><rect x="10" y="44" width="100" height="14"/><rect x="22" y="70" width="34" height="8" rx="4" fill="#fff"/>',
+    shield:'<path d="M60 10l44 16v34c0 28-19 46-44 54-25-8-44-26-44-54V26z"/><path d="M40 62l14 14 28-28" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>',
+    calendar:'<rect x="12" y="24" width="96" height="84" rx="8"/><rect x="12" y="24" width="96" height="22"/><rect x="30" y="12" width="10" height="22" rx="5"/><rect x="80" y="12" width="10" height="22" rx="5"/><circle cx="42" cy="68" r="7" fill="#fff"/><circle cx="60" cy="68" r="7" fill="#fff"/><circle cx="78" cy="68" r="7" fill="#fff"/><circle cx="42" cy="88" r="7" fill="#fff"/>',
+    patch:'<rect x="20" y="30" width="80" height="60" rx="14"/><rect x="34" y="44" width="52" height="32" rx="8" fill="#fff"/>',
+    phone:'<rect x="34" y="8" width="52" height="104" rx="12"/><rect x="42" y="24" width="36" height="68" rx="4" fill="#fff"/><circle cx="60" cy="101" r="5" fill="#fff"/>'
+  };
+  function icon(name){
+    var d=ICONS[name]||ICONS.question;
+    return '<svg class="er-icon" viewBox="0 0 120 120" aria-hidden="true" focusable="false" fill="#0B5D7A">'+d+'</svg>';
+  }
+  function erText(t){
+    return esc(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+  }
+  function erBlocks(blocks){
+    return blocks.map(function(b){
+      var body=b.lines.map(function(l){
+        return /^- /.test(l) ? '<li>'+erText(l.slice(2))+'</li>' : '<p>'+erText(l)+'</p>';
+      });
+      var out="", inUl=false;
+      body.forEach(function(x){
+        if(x.indexOf("<li>")===0){ if(!inUl){ out+="<ul>"; inUl=true; } out+=x; }
+        else { if(inUl){ out+="</ul>"; inUl=false; } out+=x; }
+      });
+      if(inUl) out+="</ul>";
+      return '<div class="er-row"><div class="er-ic">'+icon(b.icon)+'</div><div class="er-tx">'+out+'</div></div>';
+    }).join("");
+  }
+  function erActions(){
+    return '<div class="er-actions">'+
+      '<button type="button" class="er-listen" aria-pressed="false">\u25B6 Listen to this guide</button>'+
+      '<button type="button" class="er-print">Print or save as PDF</button>'+
+      '<a class="er-back" href="#/easy" data-link>All Easy Read guides</a>'+
+      '<a class="er-back" href="#/" data-link>Main website</a></div>';
+  }
+  var ER_ICON={start:"book",getting:"pharmacy",shortage:"warn",cost:"money","patches-gel":"patch",injections:"doc",tablets:"pills",doses:"question",help:"phone"};
+  /* index of guides */
+  function renderEasyRead(){
+    var D=CONTENT.easyread;
+    document.getElementById("v-easy").innerHTML =
+      '<div class="er-cover"><p class="er-kick">'+esc(D.kicker)+'</p><h1>'+esc(D.title)+'</h1>'+
+      '<p class="er-sub">Short guides in easy to read words, with pictures. Pick the one you need.</p></div>'+
+      '<div class="er-list">'+D.guides.map(function(g){
+        return '<a class="er-card" href="#/easy/'+esc(g.id)+'">'+icon(ER_ICON[g.id]||"book")+
+          '<span><b>'+esc(g.title)+'</b><span>'+esc(g.subtitle)+'</span></span></a>';
+      }).join("")+'</div>'+
+      '<section class="er-sec"><h2>Word list</h2><p class="er-tx-note">Words written in <b>bold</b> in the guides are explained here.</p><dl class="er-words">'+
+      D.wordlist.map(function(w){ return '<dt>'+esc(w.w)+'</dt><dd>'+esc(w.d)+'</dd>'; }).join("")+'</dl></section>';
+  }
+  var CURRENT_GUIDE="";
+  function renderEasyGuide(id){
+    var D=CONTENT.easyread, g=null;
+    D.guides.forEach(function(x){ if(x.id===id) g=x; });
+    if(!g) return false;
+    CURRENT_GUIDE=g.title;
+    var h=['<div class="er-cover"><p class="er-kick">'+esc(D.kicker)+'</p><h1>'+esc(g.title)+'</h1><p class="er-sub">'+esc(g.subtitle)+'</p>'+erActions()+'</div>',
+      '<div class="er-help"><div class="er-ic">'+icon("help")+'</div><div><p>You can ask someone to help you read this guide.</p>'+
+      '<p>You can press <b>Listen to this guide</b> to hear it read out.</p>'+
+      '<p>If you need an interpreter, ring TIS National on <b>131 450</b>. It is free.</p></div></div>'];
+    g.sections.forEach(function(sec){ h.push('<section class="er-sec"><h2>'+esc(sec.h)+'</h2>'+erBlocks(sec.blocks)+'</section>'); });
+    var words=D.wordlist.filter(function(w){
+      var re=new RegExp("\\*\\*"+w.w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"[a-z]*\\*\\*","i");
+      return g.sections.some(function(sec){ return sec.blocks.some(function(b){ return b.lines.some(function(l){ return re.test(l); }); }); });
+    });
+    if(words.length) h.push('<section class="er-sec"><h2>Word list</h2><dl class="er-words">'+words.map(function(w){ return '<dt>'+esc(w.w)+'</dt><dd>'+esc(w.d)+'</dd>'; }).join("")+'</dl></section>');
+    h.push('<div class="er-actions er-foot">'+erActions()+'</div>');
+    var el=document.getElementById("v-easy-guide"); el.innerHTML=h.join("");
+    el.querySelectorAll(".er-print").forEach(function(bt){ bt.addEventListener("click", function(){ window.print(); }); });
+    el.querySelectorAll(".er-listen").forEach(function(bt){ bt.addEventListener("click", function(){
+      var on=bt.getAttribute("aria-pressed")==="true";
+      document.getElementById("ttsBtn").click();
+      el.querySelectorAll(".er-listen").forEach(function(x){ x.setAttribute("aria-pressed", on?"false":"true"); x.textContent = on ? "\u25B6 Listen to this guide" : "\u25A0 Stop listening"; });
+    }); });
+    return true;
+  }
+
+  /* ================= feedback ================= */
+  var TURNSTILE_SITEKEY="__TURNSTILE_SITEKEY__", fbWidget=null, fbLoaded=false, fbFrom="/";
+  var fbForm=document.getElementById("fbForm"), fbStatus=document.getElementById("fbStatus");
+  function fbSay(t,cls){ fbStatus.textContent=t; fbStatus.className="muted small "+(cls||""); }
+  function fbPrepare(){
+    if(!TURNSTILE_SITEKEY || /^__/.test(TURNSTILE_SITEKEY)){
+      fbSay("Feedback is not switched on yet. It will be soon."); document.getElementById("fbSend").disabled=true; return; }
+    if(fbLoaded) return; fbLoaded=true;
+    window.gamsaTurnstile=function(){
+      fbWidget=window.turnstile.render("#fbTurnstile",{sitekey:TURNSTILE_SITEKEY,size:"flexible",theme:"light"}); };
+    var sc=document.createElement("script");
+    sc.src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=gamsaTurnstile&render=explicit";
+    sc.async=true; document.head.appendChild(sc);
+  }
+  fbForm.addEventListener("submit",function(e){
+    e.preventDefault();
+    var msg=document.getElementById("fbMsg").value.trim();
+    if(msg.length<5){ fbSay("Please write a little more so the problem can be found.","err"); document.getElementById("fbMsg").focus(); return; }
+    var token=(window.turnstile && fbWidget!==null) ? window.turnstile.getResponse(fbWidget) : "";
+    if(!token){ fbSay("Please complete the check above the button.","err"); return; }
+    var btn=document.getElementById("fbSend"); btn.disabled=true; fbSay("Sending\u2026");
+    fetch("/api/feedback",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({
+      topic:document.getElementById("fbTopic").value, message:msg,
+      email:document.getElementById("fbEmail").value.trim(), page:fbFrom,
+      website:document.getElementById("fbSite").value, token:token})})
+    .then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function(){ fbForm.reset(); fbSay("Thank you \u2014 your feedback has been sent.","ok"); })
+    .catch(function(){ fbSay("Sorry, that did not send. Please try again in a moment.","err"); })
+    .then(function(){ btn.disabled=false; if(window.turnstile && fbWidget!==null) window.turnstile.reset(fbWidget); });
+  });
+
+  /* ================= price reports ================= */
+  var pxWidget=null;
+  function tsLoad(cb){
+    if(!TURNSTILE_SITEKEY || /^__/.test(TURNSTILE_SITEKEY)) return cb(false);
+    if(window.turnstile) return cb(true);
+    var prev=window.gamsaTurnstile; window.gamsaTurnstile=function(){ if(prev) prev(); cb(true); };
+    if(!document.querySelector('script[src*="turnstile"]')){ var sc=document.createElement("script");
+      sc.src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=gamsaTurnstile&render=explicit"; sc.async=true; document.head.appendChild(sc); }
+  }
+  function pxPrepare(){
+    var f=document.getElementById("pxForm"); if(!f||f.__wired) return; f.__wired=true;
+    var st=document.getElementById("pxStatus"), say=function(t,c){ st.textContent=t; st.className="muted small "+(c||""); };
+    fillPaid(document.getElementById("paidList"), null, true);
+    tsLoad(function(ok){
+      if(!ok){ say("Price reports are not switched on yet."); document.getElementById("pxSend").disabled=true; return; }
+      if(pxWidget===null) pxWidget=window.turnstile.render("#pxTurnstile",{sitekey:TURNSTILE_SITEKEY,size:"flexible",theme:"light"});
+    });
+    f.addEventListener("submit",function(e){
+      e.preventDefault();
+      var amt=parseFloat(document.getElementById("pxAmt").value);
+      if(!(amt>=1&&amt<=5000)){ say("Please enter the amount you paid, in dollars.","err"); document.getElementById("pxAmt").focus(); return; }
+      var token=(window.turnstile&&pxWidget!==null)?window.turnstile.getResponse(pxWidget):"";
+      if(!token){ say("Please complete the check above the button.","err"); return; }
+      var btn=document.getElementById("pxSend"); btn.disabled=true; say("Sending\u2026");
+      fetch("/api/prices",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({
+        medicine:document.getElementById("pxMed").value, kind:document.getElementById("pxKind").value, amount:amt,
+        state:document.getElementById("pxState").value, pharmacy:document.getElementById("pxPh").value,
+        website:document.getElementById("pxSite").value, token:token})})
+      .then(function(r){ return r.ok?r.json():Promise.reject(r.status); })
+      .then(function(){ f.reset(); PAID=null; fillPaid(document.getElementById("paidList"), null, true); say("Thank you \u2014 your report has been added.","ok"); })
+      .catch(function(){ say("Sorry, that did not send. Please try again in a moment.","err"); })
+      .then(function(){ btn.disabled=false; if(window.turnstile&&pxWidget!==null) window.turnstile.reset(pxWidget); });
+    });
+  }
+  function pxFillMed(){
+    var el=document.querySelector("#v-med .paid-med"); if(!el||el.__done) return; el.__done=true;
+    loadPaid(function(){ var rows=paidRows(el.getAttribute("data-med")); if(rows.length) el.innerHTML='<p class="prem-h" style="margin-top:8px">What readers report paying</p>'+paidHtml(rows,false); });
+  }
+
+  /* ================= pharmacy stock reports ================= */
+  var prForm=document.getElementById("prForm"), prMsg=document.getElementById("prMsg"),
+      prGroups=document.getElementById("prGroups"), prStatus=document.getElementById("prStatus"),
+      prWidget=null, prLoaded=false;
+  var PR_LABEL={in_stock:["t-green","In stock"],low:["t-amber","Low stock"],order:["t-amber","Can order"],none:["t-red","None"]};
+  function prSay(t,cls){ prMsg.textContent=t; prMsg.className="muted small "+(cls||""); }
+  function prOpen(){
+    prLoad();
+    if(!document.getElementById("prMedList").children.length)
+      document.getElementById("prMedList").innerHTML=MEDINFO.medicines.map(function(m){ return '<option value="'+esc(m.name)+'">'; }).join("");
+    if(!TURNSTILE_SITEKEY || /^__/.test(TURNSTILE_SITEKEY)){
+      prSay("Posting is not switched on yet."); document.getElementById("prSend").disabled=true; return; }
+    if(prLoaded) return; prLoaded=true;
+    var ready=function(){ prWidget=window.turnstile.render("#prTurnstile",{sitekey:TURNSTILE_SITEKEY,size:"flexible",theme:"light"}); };
+    if(window.turnstile){ ready(); return; }
+    window.gamsaTurnstilePR=ready;
+    var sc=document.createElement("script");
+    sc.src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=gamsaTurnstilePR&render=explicit";
+    sc.async=true; document.head.appendChild(sc);
+  }
+  var PR_CACHE=null;
+  function prFetch(cb){
+    if(PR_CACHE){ cb(PR_CACHE); return; }
+    if(!PATHMODE){ cb(null); return; }
+    fetch("/api/pharmacy",{cache:"no-store"}).then(function(r){ return r.ok?r.json():null; }).then(function(d){ PR_CACHE=(d&&d.reports)||[]; cb(PR_CACHE); }).catch(function(){ cb(null); });
+  }
+  function prRow(r, withMed){
+    var L=PR_LABEL[r.status]||["t-grey",r.status], mid=medIdFor(r.medicine);
+    return '<li class="rep-item"><span class="tag '+L[0]+'">'+esc(L[1])+'</span> '+(withMed?(mid?'<a href="#/med/'+esc(mid)+'">'+esc(r.medicine)+'</a>':esc(r.medicine))+' ':'<span class="nm">'+esc(r.medicine)+'</span> ')+
+      '<span><strong>'+esc(r.pharmacy)+'</strong>, '+esc(r.suburb)+(r.note?' \u2014 '+esc(r.note):'')+'</span>'+
+      '<span class="muted small">'+esc(niceDate(r.created))+' \u00b7 registered pharmacist</span></li>';
+  }
+  function prMed(m){
+    var el=document.getElementById("medPr"); if(!el) return;
+    prFetch(function(list){
+      var rows=(list||[]).filter(function(r){ return medIdFor(r.medicine)===m.id; }).slice(0,5);
+      if(!rows.length){ el.hidden=true; return; }
+      el.hidden=false;
+      el.innerHTML='<h2>Pharmacy stock reports \u2014 '+esc(m.generic)+'</h2><ul>'+rows.map(function(r){return prRow(r,false);}).join("")+'</ul>'+
+        '<p class="hint" style="margin-top:10px;">Posted by registered pharmacists, checked against the AHPRA register.</p>'+
+        '<p class="quick" style="margin-top:12px;"><a href="#/pharmacy-reports">All pharmacy stock reports \u2192</a></p>';
+    });
+  }
+  function prPanel(){
+    var box=document.getElementById("prPanelList"), st=document.getElementById("prPanelStatus"); if(!box||box.__done) return; box.__done=true;
+    if(!PATHMODE){ st.textContent="Reports load on the hosted site."; return; }
+    prFetch(function(list){
+      if(list===null){ st.textContent="Reports could not be loaded right now."; return; }
+      if(!list.length){ st.textContent="No reports in the last 14 days. Pharmacists can post the first one."; return; }
+      box.hidden=false;
+      box.innerHTML='<ul>'+list.slice(0,6).map(function(r){return prRow(r,true);}).join("")+'</ul>';
+      st.textContent=list.length+" reports in the last 14 days"+(list.length>6?", newest six shown.":".");
+    });
+  }
+  function prLoad(){
+    if(location.protocol==="file:"){ prStatus.textContent="Reports load on the hosted site."; return; }
+    prStatus.textContent="Loading reports\u2026";
+    fetch("/api/pharmacy",{cache:"no-store"}).then(function(r){ return r.ok?r.json():null; })
+    .then(function(d){
+      var list=(d&&d.reports)||[];
+      if(!list.length){ prGroups.innerHTML=""; prStatus.textContent="No reports in the last 14 days."; return; }
+      var groups={}, order=[];
+      list.forEach(function(r){ var k=r.medicine; if(!groups[k]){groups[k]=[];order.push(k);} groups[k].push(r); });
+      prGroups.innerHTML=order.map(function(k){
+        var mid=medIdFor(k);
+        return '<section class="sgroup ticker"><h2>'+(mid?'<a href="#/med/'+esc(mid)+'">'+esc(k)+'</a>':esc(k))+'</h2><ul>'+
+          groups[k].map(function(r){
+            var L=PR_LABEL[r.status]||["t-grey",r.status];
+            return '<li class="rep-item"><span class="tag '+L[0]+'">'+esc(L[1])+'</span> <strong>'+esc(r.pharmacy)+'</strong>, '+esc(r.suburb)+
+              (r.note?' \u2014 '+esc(r.note):'')+'<br><span class="muted small">'+esc(r.created.slice(0,10))+' \u00b7 posted by a registered pharmacist</span></li>';
+          }).join("")+'</ul></section>'; }).join("");
+      prStatus.textContent=list.length+" reports in the last 14 days.";
+    }).catch(function(){ prStatus.textContent="Reports could not be loaded right now."; });
+  }
+  prForm.addEventListener("submit",function(e){
+    e.preventDefault();
+    var ahpra=document.getElementById("prAhpra").value.trim().toUpperCase();
+    if(!/^PHA\d{10}$/.test(ahpra)){ prSay("A pharmacist registration number looks like PHA followed by 10 digits.","err"); document.getElementById("prAhpra").focus(); return; }
+    var need=["prName","prPharm","prLoc","prMed"];
+    for(var i=0;i<need.length;i++){ if(!document.getElementById(need[i]).value.trim()){ document.getElementById(need[i]).focus(); prSay("Please fill in every field except the note and email.","err"); return; } }
+    var token=(window.turnstile && prWidget!==null) ? window.turnstile.getResponse(prWidget) : "";
+    if(!token){ prSay("Please complete the check above the button.","err"); return; }
+    var btn=document.getElementById("prSend"); btn.disabled=true; prSay("Sending\u2026");
+    fetch("/api/pharmacy",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({
+      ahpra:ahpra, name:document.getElementById("prName").value.trim(), pharmacy:document.getElementById("prPharm").value.trim(),
+      suburb:document.getElementById("prLoc").value.trim(), medicine:document.getElementById("prMed").value.trim(),
+      status:document.getElementById("prStat").value, note:document.getElementById("prNote").value.trim(),
+      email:document.getElementById("prEmail").value.trim(), website:document.getElementById("prSite").value, token:token})})
+    .then(function(r){ return r.json().then(function(j){ return {ok:r.ok, j:j}; }); })
+    .then(function(x){
+      if(!x.ok) throw x.j;
+      prForm.reset();
+      prSay(x.j.published ? "Thank you \u2014 your report is live." :
+        "Thank you. Because this is the first report from your registration number, it will appear once the number has been checked against the AHPRA register, usually within a day.","ok");
+      if(x.j.published) prLoad();
+    })
+    .catch(function(j){ prSay((j&&j.error==="blocked")?"Posting from this registration number has been paused. Use the feedback page if you think that is a mistake.":"Sorry, that did not send. Please try again in a moment.","err"); })
+    .then(function(){ btn.disabled=false; if(window.turnstile && prWidget!==null) window.turnstile.reset(prWidget); });
+  });
+
+  var LAZY = {
+    "v-doses":    function(){ renderContent("v-doses", CONTENT.dosing); },
+    "v-using":    function(){ renderContent("v-using", CONTENT.administration); },
+    "v-pharmacy": function(){ renderContent("v-pharmacy", CONTENT.pharmacy); },
+    "v-costs":    function(){ renderContent("v-costs", CONTENT.costs); },
+    "v-easy":     function(){ renderEasyRead(); }
+  };
+  function ensureRendered(id){ if(LAZY[id]){ LAZY[id](); delete LAZY[id]; } }
 
   /* ---------- supply ---------- */
   var ST = {
@@ -873,10 +1385,9 @@
       var s=ST[m.status]||ST.unverified;
       var names=(m.brands||[]).slice();
       var page=BY_ID[SUPPLY2MED[m.id]||""];
-      if(page) (page.brands||[]).forEach(function(x){ if(names.indexOf(x)===-1) names.push(x); });
+      if(!names.length && page) names=(page.brands||[]).slice();
       var b=names.join(", ");
-      return '<li class="med"'+(SUPPLY2MED[m.id]?' data-href="#/med/'+esc(SUPPLY2MED[m.id])+
-        '" tabindex="0" role="link"':'')+
+      return '<li class="med"'+(SUPPLY2MED[m.id]?' data-href="#/med/'+esc(SUPPLY2MED[m.id])+'"':'')+
         '><div class="med-top"><div>'+
         '<div class="med-name">'+(SUPPLY2MED[m.id]
           ?'<a href="#/med/'+esc(SUPPLY2MED[m.id])+'">'+esc(m.genericName||m.brand)+'</a>'
@@ -896,7 +1407,7 @@
     }).join("");
     boxEl.hidden = clear.length===0;
   }
-  function cardGo(card){ if(card) location.hash=card.getAttribute("data-href"); }
+  function cardGo(card){ if(card) go(card.getAttribute("data-href").replace(/^#/,"")); }
   aEl.addEventListener("click",function(e){
     if(e.target.closest("a")) return;
     cardGo(e.target.closest(".med[data-href]"));
@@ -926,7 +1437,7 @@
     fetch(API+"/reports",{cache:"no-store"}).then(function(r){return r.ok?r.json():null;})
       .then(function(d){
         var rs=(d&&d.reports||[]).filter(function(r){return r.channel==="patient";}).slice(0,12);
-        RECENT=rs; if(window.renderHomeTicker){renderHomeTicker();}
+        RECENT=rs; renderHomeTicker(); if(TICKER_MED) renderTicker(TICKER_MED);
         feed.innerHTML = rs.map(function(r){
           return '<div class="rep-item"><div class="rep-top"><span>'+esc(r.medicine)+'</span>'+
             '<span>'+esc(SLBL[r.status]||r.status)+'</span></div>'+
@@ -938,24 +1449,35 @@
   form.addEventListener("submit",function(e){
     e.preventDefault();
     if(!API){hint.textContent="Sharing opens as soon as the reporting service is switched on.";hint.className="hint err";return;}
+    var rpToken=(window.turnstile && rpWidget!==null) ? window.turnstile.getResponse(rpWidget) : "";
+    if(!rpToken){hint.textContent="Please complete the check above the button.";hint.className="hint err";return;}
     btn.disabled=true;btn.textContent="Sending…";
     fetch(API+"/reports",{method:"POST",headers:{"Content-Type":"application/json"},
       body:JSON.stringify({channel:"patient",medicine:document.getElementById("rMed").value.trim(),
         pharmacy:document.getElementById("rPharm").value.trim(),
         region:document.getElementById("rLoc").value.trim(),status:document.getElementById("rStat").value,
-        note:document.getElementById("rNote").value.trim(),createdAt:new Date().toISOString()})})
+        note:document.getElementById("rNote").value.trim(),website:document.getElementById("rSite").value,token:rpToken})})
       .then(function(r){if(!r.ok)throw 0;hint.textContent="Thanks — that's now visible to others.";
         hint.className="hint ok";form.reset();loadFeed();})
       .catch(function(){hint.textContent="Couldn't send that just now. Please try again shortly.";hint.className="hint err";})
-      .then(function(){btn.disabled=false;btn.textContent="Share this";});
+      .then(function(){btn.disabled=false;btn.textContent="Share this";if(window.turnstile&&rpWidget!==null)window.turnstile.reset(rpWidget);});
   });
+  var rpWidget=null, rpPrepared=false;
+  function rpPrepare(){
+    if(rpPrepared) return; rpPrepared=true;
+    if(!API){ hint.textContent="Sharing opens as soon as the reporting service is switched on."; btn.disabled=true; return; }
+    tsLoad(function(ok){
+      if(!ok){ hint.textContent="Sharing is not switched on yet."; btn.disabled=true; return; }
+      if(rpWidget===null) rpWidget=window.turnstile.render("#rpTurnstile",{sitekey:TURNSTILE_SITEKEY,size:"flexible",theme:"light"});
+    });
+  }
   loadFeed();
 
   /* ---------- review stamp ---------- */
   var MON=["January","February","March","April","May","June","July","August","September","October","November","December"];
   function setCite(){
     document.getElementById("rev").textContent =
-      "Supply data last checked "+DATA.generatedAt+" \u2014 refreshed daily from TGA records.";
+      "Supply data checked "+DATA.generatedAt+" (daily, from TGA records). PBS prices, premiums and listings checked "+PREMIUMS.checkedAt+" (monthly).";
   }
 
 
@@ -1057,7 +1579,7 @@
     CURRENT_MED=m.name;
     var r=supplyFor(m), st=r?(ST[r.status]||ST.unverified):null;
     var seen={}; seen[m.id]=1;
-    function C(t){return linkMeds(cite(esc(t), "med-"+m.id), seen);}
+    function C(t){return linkMeds(cite(ilink(esc(t)), "med-"+m.id), seen);}
     document.getElementById("v-med").innerHTML =
       '<a class="backlink" href="#/medicines">\u2190 Back to all medicines</a>'+
       '<div class="page-head"><h1 tabindex="-1">'+esc(m.name)+'</h1>'+
@@ -1066,6 +1588,7 @@
         (st?'<p class="statusline"><span class="tag '+st.c+'">'+esc(st.l)+'</span>'+
             '<a href="#/supply">See supply detail</a></p>':'')+
       '</div>'+
+      '<div class="ticker" id="medPr" hidden></div>'+
       '<div class="ticker" id="medTicker" hidden></div>'+
       '<nav class="onthis" aria-label="On this page"><h2>On this page</h2><ol>'+
         m.sections.map(function(s,i){
@@ -1074,8 +1597,9 @@
         '</ol></nav>'+
       m.sections.map(function(s,i){
         seen = {}; seen[m.id]=1;
-        return '<section class="block" id="sec-med-'+i+'" tabindex="-1"><h2>'+esc(s.h)+'</h2>'+
+        return '<section class="block'+(s.pro?' pro':'')+'" id="sec-med-'+i+'" tabindex="-1"><h2>'+esc(s.h)+'</h2>'+
           (s.body||[]).map(function(x){return '<p>'+C(x)+'</p>';}).join("")+
+          (s.h==="Cost and PBS" ? (s.__med=m.id, pbsBlock(s)) : '')+
           (s.list&&s.list.length?'<ul>'+s.list.map(function(li){return '<li>'+C(li)+'</li>';}).join("")+'</ul>':'')+
           figsFor(m.id, i)+
           '</section>';}).join("")+
@@ -1096,7 +1620,7 @@
               '<span class="sr-only"> (opens in a new tab)</span></a>':'')+'</li>';}).join("")+
         '</ol></div>':'')+
       '<p class="totop"><a href="#main" data-top>\u2191 Back to top</a></p>';
-    renderTicker(m);
+    renderTicker(m); prMed(m);
     return true;
   }
 
@@ -1104,7 +1628,7 @@
   function tickerItems(medId){
     return RECENT.filter(function(r){
       if(!medId) return true;
-      return SUPPLY2MED[(r.medicineId||"")]===medId ||
+      return SUPPLY2MED[(r.medicineId||"")]===medId || medIdFor(r.medicine)===medId ||
         (r.medicine||"").toLowerCase().indexOf((BY_ID[medId]||{}).generic.toLowerCase())!==-1;
     }).slice(0,5);
   }
@@ -1132,9 +1656,11 @@
       '<p class="hint" style="margin-top:10px;">'+
       (DEMO?'Example entries, shown while the reporting service is being switched on.':
             'Reported by patients, not verified.')+'</p>'+
-      '<p class="quick" style="margin-top:12px;"><a href="#/sightings">See all sightings \u2192</a></p>';
+      '<p class="quick" style="margin-top:12px;"><a href="#/sightings">See all sightings \u2192</a> &nbsp; <a href="#/pharmacy-reports">Pharmacy stock reports \u2192</a></p>';
   }
+  var TICKER_MED=null;
   function renderTicker(m){
+    TICKER_MED=m||TICKER_MED;
     var el=document.getElementById("medTicker");
     if(!el) return;
     seedDemo();
@@ -1183,22 +1709,73 @@
   }
 
   /* ---------- routing ---------- */
-  var VIEWS={"/":"v-home","/supply":"v-supply","/medicines":"v-medicines","/med":"v-med","/sightings":"v-sightings","/doses":"v-doses","/using":"v-using","/costs":"v-costs","/easy":"v-easy"};
+  var VIEWS={"/":"v-home","/supply":"v-supply","/medicines":"v-medicines","/med":"v-med","/sightings":"v-sightings","/doses":"v-doses","/using":"v-using","/pharmacy":"v-pharmacy","/costs":"v-costs","/easy":"v-easy","/easy-guide":"v-easy-guide","/feedback":"v-feedback","/pharmacy-reports":"v-pharmacy-reports"};
   var nav=document.getElementById("nav"), navbtn=document.getElementById("navbtn");
-  var TITLES={"/":"Home","/supply":"Supply & shortages","/doses":"Doses and formulations",
-    "/using":"How to use your medicine","/costs":"Costs and the PBS","/easy":"Easy Read guide","/medicines":"Medicines A\u2013Z","/med":"Medicine","/sightings":"Patient sightings"};
+  /* Routing. The hosted site uses real paths (/costs, /medicines/<id>) so each page
+     can be indexed; the single-file preview keeps #/ hash routes. */
+  var PATHMODE = document.documentElement.getAttribute("data-routing")==="path";
+  function toPath(r){ return r.replace(/^\/med\//,"/medicines/"); }
+  function fromPath(p){ p=(p||"/").replace(/\/+$/,"")||"/";
+    var m=p.match(/^\/medicines\/([a-z0-9-]+)$/); return m?"/med/"+m[1]:p; }
+  function curRoute(){ return PATHMODE ? fromPath(location.pathname) : (location.hash.replace(/^#/,"")||"/"); }
+  function go(r, anc){
+    var tail = anc ? "#"+anc : "";
+    if(!PATHMODE){ location.hash=r+tail; return; }
+    history.pushState(null,"",toPath(r)+tail); window.dispatchEvent(new Event("gamsa:route"));
+  }
+  /* a route may carry a section anchor: #/costs#sec-costs-3 or /costs#sec-costs-3 */
+  function curAnchor(){
+    var hh=location.hash.slice(1);
+    if(PATHMODE) return /^\//.test(hh) ? "" : hh;
+    var i=hh.indexOf("#",1); return i>-1 ? hh.slice(i+1) : "";
+  }
+  function onNav(fn){
+    if(PATHMODE){ window.addEventListener("gamsa:route",fn); window.addEventListener("popstate",fn); }
+    else window.addEventListener("hashchange",fn);
+  }
+  function fixLinks(root){
+    if(!PATHMODE) return;
+    (root||document).querySelectorAll('a[href^="#/"]').forEach(function(a){
+      a.setAttribute("href", toPath(a.getAttribute("href").slice(1))); });
+  }
+  if(PATHMODE){
+    if(/^#\//.test(location.hash)) history.replaceState(null,"",toPath(location.hash.slice(1)));
+    new MutationObserver(function(ms){ ms.forEach(function(m){
+      m.addedNodes.forEach(function(n){ if(n.nodeType===1){
+        if(n.matches && n.matches('a[href^="#/"]')) n.setAttribute("href", toPath(n.getAttribute("href").slice(1)));
+        fixLinks(n); } }); }); }).observe(document.body,{childList:true,subtree:true});
+    fixLinks(document);
+    document.addEventListener("click",function(e){
+      if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey) return;
+      var a=e.target.closest("a[href]"); if(!a||a.target) return;
+      var h=a.getAttribute("href");
+      if(h.charAt(0)!=="/"||h.charAt(1)==="/") return;
+      e.preventDefault();
+      var r=fromPath(h.split("#")[0]), anc=h.split("#")[1]||"";
+      if(r!==curRoute()) go(r, anc);
+      else if(anc){ var el=document.getElementById(anc); if(el){ history.pushState(null,"",h); el.scrollIntoView(); el.focus({preventScroll:true}); } }
+    });
+  }
+  var lastRoute=null;
+  var TITLES={"/":"Gender-Affirming Medicines South Australia","/supply":"Supply & shortages","/doses":"Doses and formulations",
+    "/using":"How to use your medicine","/pharmacy":"Working with your pharmacy","/costs":"Costs and the PBS","/easy":"Easy Read guides","/easy-guide":"Easy Read","/feedback":"Send feedback","/pharmacy-reports":"Pharmacy stock reports","/medicines":"Medicines A\u2013Z","/med":"Medicine","/sightings":"Patient sightings"};
   function route(){
-    var h=location.hash.replace(/^#/,"")||"/";
+    var h=curRoute(), anchor=curAnchor();
+    if(!PATHMODE){ var ai=h.indexOf("#"); if(ai>-1) h=h.slice(0,ai); }
+    if(PATHMODE && h===lastRoute) return;   /* in-page #ref links: let the browser scroll */
+    lastRoute=h;
     if(h.indexOf("/med/")===0){ if(renderMedPage(h.slice(5))) h="/med"; else h="/medicines"; }
+    if(h.indexOf("/easy/")===0){ if(renderEasyGuide(h.slice(6))) h="/easy-guide"; else h="/easy"; }
     if(!VIEWS[h]){ if(/^(ref|sec)-/.test(h)){ var t=document.getElementById(h);
         if(t){ t.focus({preventScroll:true});
           t.scrollIntoView({behavior:SMOOTH?"smooth":"auto",block:"start"}); }
         return; } h="/"; }
+    ensureRendered(VIEWS[h]);
     Object.keys(VIEWS).forEach(function(k){
       document.getElementById(VIEWS[k]).classList.toggle("on",k===h);});
     var navKey = (h==="/med") ? "/medicines" : h;
     nav.querySelectorAll("a").forEach(function(a){
-      a.setAttribute("aria-current", a.getAttribute("href")==="#"+navKey?"page":"false");});
+      a.setAttribute("aria-current", a.getAttribute("href")===(PATHMODE?toPath(navKey):"#"+navKey)?"page":"false");});
     // leaving a page clears its search and filters, so it opens fresh next time
     if(qEl && qEl.value){ qEl.value=""; term=""; }
     if(filter!=="all"){ filter="all";
@@ -1211,11 +1788,17 @@
         c.setAttribute("aria-pressed", c.dataset.mf==="all"?"true":"false");}); }
     renderMedIndex();
     if(sq && sq.value){ sq.value=""; }
+    if(h==="/feedback") fbPrepare(); else fbFrom = PATHMODE ? toPath(h) : "#"+h;
+    if(h==="/costs") pxPrepare(); else if(h==="/med") pxFillMed();
+    if(h==="/pharmacy-reports") prOpen();
+    if(h==="/supply") prPanel();
     if(h==="/sightings") renderSightings();
-    if(h==="/supply") renderHomeTicker();
+    if(h==="/supply"){ renderHomeTicker(); rpPrepare(); }
     setCite();
-    document.title = (h==="/med"?(CURRENT_MED||"Medicine"):TITLES[h]) + " \u2014 GAMSA";
+    document.title = (h==="/med"?((CURRENT_MED||"Medicine")+": doses, cost and supply"):h==="/easy-guide"?(CURRENT_GUIDE+" (Easy Read)"):TITLES[h]) + " \u2014 GAMSA";
     nav.classList.remove("open");navbtn.setAttribute("aria-expanded","false");
+    var target = anchor ? document.getElementById(anchor) : null;
+    if(target){ target.scrollIntoView(); target.focus({preventScroll:true}); return; }
     window.scrollTo(0,0);
     if(started){ var hh=document.getElementById(VIEWS[h]).querySelector("h1");
       if(hh){ hh.setAttribute("tabindex","-1"); hh.focus({preventScroll:true}); } }
@@ -1237,81 +1820,11 @@
   });
   fabToggle();
   var started=false;
-  window.addEventListener("hashchange",route);
+  onNav(route);
   route();
   started=true;
+  document.documentElement.classList.add("ready");
 
-
-  /* ================= Easy Read booklet ================= */
-  var ICONS={
-    people:'<circle cx="26" cy="44" r="14"/><path d="M4 102c0-15 10-26 22-26s22 11 22 26z" /><circle cx="94" cy="44" r="14"/><path d="M72 102c0-15 10-26 22-26s22 11 22 26z"/><circle cx="60" cy="32" r="17" fill="#0B5D7A"/><path d="M33 102c0-18 12-31 27-31s27 13 27 31z" fill="#0B5D7A"/>',
-    book:'<g fill="none" stroke="#0B5D7A" stroke-width="7" stroke-linejoin="round"><path d="M14 26h36c6 0 10 4 10 10v62c0-6-4-10-10-10H14z"/><path d="M106 26H70c-6 0-10 4-10 10v62c0-6 4-10 10-10h36z"/></g><path d="M60 36v62" stroke="#0B5D7A" stroke-width="7"/>',
-    bold:'<text x="60" y="50" font-size="32" font-weight="800" text-anchor="middle">Bold</text><text x="60" y="92" font-size="24" font-weight="300" text-anchor="middle">Not bold</text>',
-    web:'<rect x="10" y="22" width="100" height="66" rx="8"/><rect x="18" y="34" width="84" height="44" rx="4" fill="#fff"/><path d="M44 100h32l6 12H38z"/>',
-    help:'<circle cx="42" cy="32" r="14"/><path d="M18 100c0-15 11-25 24-25s24 10 24 25z"/><rect x="62" y="44" width="46" height="34" rx="6"/><rect x="68" y="52" width="34" height="5" rx="2.5" fill="#fff"/><rect x="68" y="63" width="24" height="5" rx="2.5" fill="#fff"/>',
-    pills:'<g transform="rotate(-35 44 46)"><rect x="8" y="30" width="72" height="34" rx="17"/><rect x="42" y="33" width="35" height="28" rx="14" fill="#BFE3DA"/></g><circle cx="82" cy="84" r="26"/><rect x="58" y="80" width="48" height="8" rx="4" fill="#fff"/>',
-    question:'<circle cx="60" cy="60" r="46"/><path d="M52 74c0-12 16-13 16-24a8 8 0 10-16 0" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/><circle cx="60" cy="90" r="6" fill="#fff"/>',
-    warn:'<path d="M60 14l50 88H10z"/><rect x="54" y="46" width="12" height="32" rx="6" fill="#fff"/><circle cx="60" cy="88" r="7" fill="#fff"/>',
-    doc:'<rect x="24" y="12" width="72" height="96" rx="8"/><rect x="36" y="32" width="48" height="7" rx="3.5" fill="#fff"/><rect x="36" y="50" width="48" height="7" rx="3.5" fill="#fff"/><rect x="36" y="68" width="30" height="7" rx="3.5" fill="#fff"/>',
-    pharmacy:'<rect x="12" y="34" width="96" height="70" rx="8"/><rect x="52" y="50" width="16" height="44" rx="4" fill="#fff"/><rect x="38" y="64" width="44" height="16" rx="4" fill="#fff"/><path d="M12 34l12-20h72l12 20z"/>',
-    person:'<circle cx="60" cy="34" r="18"/><path d="M22 106c0-21 17-36 38-36s38 15 38 36z"/>',
-    nametag:'<rect x="14" y="30" width="92" height="62" rx="8"/><rect x="26" y="46" width="40" height="8" rx="4" fill="#fff"/><rect x="26" y="62" width="60" height="8" rx="4" fill="#fff"/><rect x="50" y="14" width="20" height="18" rx="4"/>',
-    speak:'<path d="M12 24h96v56H56L30 102V80H12z"/><circle cx="42" cy="52" r="6" fill="#fff"/><circle cx="60" cy="52" r="6" fill="#fff"/><circle cx="78" cy="52" r="6" fill="#fff"/>',
-    clock:'<circle cx="60" cy="60" r="46"/><path d="M60 32v30l20 12" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>',
-    swap:'<path d="M18 44h64V28l24 24-24 24V60H18z"/><path d="M102 92H38v16L14 84l24-24v16h64z"/>',
-    money:'<rect x="10" y="30" width="100" height="62" rx="8"/><circle cx="60" cy="61" r="18" fill="#fff"/><rect x="56" y="48" width="8" height="26" rx="4"/>',
-    card:'<rect x="10" y="30" width="100" height="62" rx="8"/><rect x="10" y="44" width="100" height="14"/><rect x="22" y="70" width="34" height="8" rx="4" fill="#fff"/>',
-    shield:'<path d="M60 10l44 16v34c0 28-19 46-44 54-25-8-44-26-44-54V26z"/><path d="M40 62l14 14 28-28" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>',
-    calendar:'<rect x="12" y="24" width="96" height="84" rx="8"/><rect x="12" y="24" width="96" height="22"/><rect x="30" y="12" width="10" height="22" rx="5"/><rect x="80" y="12" width="10" height="22" rx="5"/><circle cx="42" cy="68" r="7" fill="#fff"/><circle cx="60" cy="68" r="7" fill="#fff"/><circle cx="78" cy="68" r="7" fill="#fff"/><circle cx="42" cy="88" r="7" fill="#fff"/>',
-    patch:'<rect x="20" y="30" width="80" height="60" rx="14"/><rect x="34" y="44" width="52" height="32" rx="8" fill="#fff"/>',
-    phone:'<rect x="34" y="8" width="52" height="104" rx="12"/><rect x="42" y="24" width="36" height="68" rx="4" fill="#fff"/><circle cx="60" cy="101" r="5" fill="#fff"/>'
-  };
-  function icon(name){
-    var d=ICONS[name]||ICONS.question;
-    return '<svg class="er-icon" viewBox="0 0 120 120" role="img" aria-hidden="true" fill="#0B5D7A">'+d+'</svg>';
-  }
-  function erText(t){
-    return esc(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
-  }
-  function renderEasyRead(){
-    var D=CONTENT.easyread, h=[];
-    h.push('<div class="er-cover">'+
-      '<p class="er-kick">'+esc(D.kicker)+'</p>'+
-      '<h1>'+esc(D.title)+'</h1>'+
-      '<p class="er-sub">'+esc(D.subtitle)+'</p>'+
-      '<div class="er-actions">'+
-        '<button type="button" class="er-print" id="erPrint">Print or save as PDF</button>'+
-        '<a class="er-back" href="#/" data-link>Back to the main website</a>'+
-      '</div></div>');
-    D.sections.forEach(function(sec, si){
-      h.push('<section class="er-sec"><h2 id="er-'+si+'">'+esc(sec.h)+'</h2>');
-      if(sec.wordlist){
-        h.push('<dl class="er-words">');
-        sec.blocks.forEach(function(b){
-          h.push('<dt>'+esc(b.w)+'</dt><dd>'+esc(b.d)+'</dd>');
-        });
-        h.push('</dl>');
-      } else {
-        sec.blocks.forEach(function(b){
-          var body=b.lines.map(function(l){
-            return /^- /.test(l) ? '<li>'+erText(l.slice(2))+'</li>' : '<p>'+erText(l)+'</p>';
-          });
-          var out="", inUl=false;
-          body.forEach(function(x){
-            if(x.indexOf("<li>")===0){ if(!inUl){ out+="<ul>"; inUl=true; } out+=x; }
-            else { if(inUl){ out+="</ul>"; inUl=false; } out+=x; }
-          });
-          if(inUl) out+="</ul>";
-          h.push('<div class="er-row"><div class="er-ic">'+icon(b.icon)+'</div><div class="er-tx">'+out+'</div></div>');
-        });
-      }
-      h.push('</section>');
-    });
-    document.getElementById("v-easy").innerHTML=h.join("");
-    var pb=document.getElementById("erPrint");
-    if(pb) pb.addEventListener("click", function(){ window.print(); });
-  }
-  renderEasyRead();
 
   /* ================= accessibility toolkit ================= */
   var LS = {
@@ -1511,6 +2024,7 @@
     highlight(null);
     ttsBar.hidden=true;
     ttsBtn.setAttribute("aria-pressed","false"); ttsBtn.textContent="Read aloud";
+    document.querySelectorAll(".er-listen").forEach(function(x){ x.setAttribute("aria-pressed","false"); x.textContent="\u25B6 Listen to this guide"; });
   }
   ttsBtn.addEventListener("click", function(){ reading?ttsEnd():ttsStart(); });
   ttsStop.addEventListener("click", function(){ ttsEnd(); });
@@ -1527,7 +2041,7 @@
   }
   ttsPrev.addEventListener("click", function(){ jump(-1); });
   ttsNext.addEventListener("click", function(){ jump(1); });
-  window.addEventListener("hashchange", function(){ if(reading) ttsEnd(); });
+  onNav(function(){ if(reading) ttsEnd(); });
   window.addEventListener("beforeunload", function(){ try{ synth.cancel(); }catch(e){} });
 
   /* ================= figure window ================= */
@@ -1691,21 +2205,19 @@
       var f=figs[i];
       if(f.dataset.zoomReady) continue;
       f.dataset.zoomReady="1";
-      f.setAttribute("tabindex","0");
-      f.setAttribute("role","button");
       var t=f.querySelector("svg title");
-      f.setAttribute("aria-label","Open this diagram in a window you can move and magnify"+(t?": "+t.textContent:""));
-      f.addEventListener("keydown", function(ev){
-        if(ev.key==="Enter"||ev.key===" "){ ev.preventDefault(); lbOpen(ev.currentTarget); }
-      });
+      var ob=document.createElement("button"); ob.type="button"; ob.className="fig-open";
+      ob.textContent="Enlarge"; ob.setAttribute("aria-label","Open this diagram in a window you can move and magnify"+(t?": "+t.textContent:""));
+      ob.addEventListener("click",function(ev){ ev.stopPropagation(); lbOpen(f); });
+      f.insertBefore(ob, f.firstChild);
       var cap=f.querySelector("figcaption");
       var hint=document.createElement("span");
       hint.className="figzoom-hint";
-      hint.textContent="Select the diagram to open it in a window you can move, zoom and magnify.";
+      hint.textContent="Select the diagram, or the Enlarge button, to open it in a window you can move, zoom and magnify.";
       (cap||f).appendChild(hint);
     }
   }
   markFigures();
-  window.addEventListener("hashchange", function(){ setTimeout(markFigures, 0); });
+  onNav(function(){ setTimeout(markFigures, 0); });
 })();
 </script>

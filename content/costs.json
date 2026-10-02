@@ -16,7 +16,7 @@
         "From 1 January 2026, the maximum PBS co-payment is $25.00 per prescription for general patients and $7.70 for people with a concession card [1][2][3].",
         "The general co-payment came down from $31.60 to $25.00, and will be adjusted in line with the consumer price index each year after that. The concession co-payment is frozen at $7.70 until 1 January 2030 [2].",
         "Pharmacies can no longer discount the general co-payment: the allowable discount for general patients is nil. For concession patients an allowable discount of up to $0.60 applies [3].",
-        "Concession cards that count include the Pensioner Concession Card, the Health Care Card, the Low Income Health Care Card, the Commonwealth Seniors Health Card and DVA cards [20]. If you are on a low income and do not have one, check your eligibility with Services Australia — it makes the single biggest difference to what you pay."
+        "Concession cards that count include the Pensioner Concession Card, the Health Care Card, the Low Income Health Care Card, the Commonwealth Seniors Health Card and DVA cards [18]. If you are on a low income and do not have one, check your eligibility with Services Australia — it makes the single biggest difference to what you pay."
       ],
       "list": [
         "General patient: up to $25.00 per PBS prescription",
@@ -41,6 +41,17 @@
       "svgCaption": "How prescriptions accumulate towards the two 2026 Safety Net thresholds, and what happens once you pass one. Thresholds and rules from the PBS fees page and PBS explanatory note 1.5 on the Safety Net Scheme [1][3][16]. The fill shown is illustrative, not a real total."
     },
     {
+      "h": "Closing the Gap: lower costs for Aboriginal and Torres Strait Islander people",
+      "body": [
+        "Closing the Gap is the national agreement between Australian governments and Aboriginal and Torres Strait Islander peak bodies to close the gap in health and life expectancy. One part of it is a PBS program, running since 2010, that makes prescription medicines cheaper for Aboriginal and Torres Strait Islander people [25].",
+        "If you are Aboriginal or Torres Strait Islander, the Closing the Gap PBS Co-payment Program lowers what you pay for PBS medicines, or removes the cost entirely [25].",
+        "People who would normally pay the general co-payment pay the concessional amount instead — $7.70 rather than $25.00 — and people with a concession card pay nothing [25].",
+        "It covers every medicine listed on the PBS, which includes the PBS-listed hormone medicines on this site. It does not cover private prescriptions, and brand premiums still apply [25].",
+        "Registration is a one-off, and you cannot do it yourself. Your GP or another PBS prescriber, or an Aboriginal Health Practitioner, registers you with Services Australia. You need to be enrolled in Medicare, and your prescriber needs to judge that cost could get in the way of you taking your medicine [25].",
+        "Once you are registered, it applies at any pharmacy. Your pharmacist can see it in their dispensing system, so you do not need anything written on each prescription. [Services Australia: Closing the Gap PBS co-payment](https://www.servicesaustralia.gov.au/closing-gap-pbs-co-payment-program)"
+      ]
+    },
+    {
       "h": "60-day prescriptions",
       "body": [
         "Many PBS medicines for ongoing conditions can be prescribed as a 60-day supply: two months of medicine for one co-payment, and half as many trips to the pharmacy [4].",
@@ -53,9 +64,9 @@
       "body": [
         "This is the part that surprises people most, because it does not follow a tidy pattern.",
         "Estradiol tablets and patches are ordinary General Schedule listings with no restriction attached, so any prescriber can write them and you pay the standard co-payment. The listings cover estradiol valerate tablets (Progynova), estradiol tablets (Zumenon), patches including Estradot and Estraderm MX, and Sandrena gel sachets [5][7].",
-        "Both registered estradiol gels are listed too. Estrogel — estradiol 0.06%, 750 micrograms per actuation, 64 actuations in a pump pack — is a General Schedule listing with no restrictions, item 14719Q, one pack with five repeats [23]. Listings still change several times a year, so check the current price with your pharmacist rather than assuming [5][23].",
-        "Micronised progesterone 100 mg capsules are also on the General Schedule with no restrictions — progesterone 100 mg capsule, 30, item 14730G, one pack with five repeats. Several brands share that item, including Prometrium, Progesterone ADVZ 100 and PROGESTERONE-APX, so you can ask your pharmacist for one without a brand premium [24].",
-        "The 60-day versions of the gel and the capsules — items 14741W and 14733K, two packs for one co-payment — are written as restricted benefits, but the restriction is only the standard wording about your condition being stable enough for a two-month supply. It is not a restriction on who may have the medicine [23][24].",
+        "Both registered estradiol gels are listed too. Estrogel — estradiol 0.06%, 750 micrograms per actuation, 64 actuations in a pump pack — is a General Schedule listing with no restrictions, item 14719Q, one pack with five repeats [21]. Listings still change several times a year, so check the current price with your pharmacist rather than assuming [5][21].",
+        "Micronised progesterone 100 mg capsules are also on the General Schedule with no restrictions — progesterone 100 mg capsule, 30, item 14730G, one pack with five repeats. Several brands share that item, including Prometrium, Progesterone ADVZ 100 and PROGESTERONE-APX, so you can ask your pharmacist for one without a brand premium [22].",
+        "The 60-day versions of the gel and the capsules — items 14741W and 14733K, two packs for one co-payment — are written as restricted benefits, but the restriction is only the standard wording about your condition being stable enough for a two-month supply. It is not a restriction on who may have the medicine [21][22].",
         "Spironolactone is PBS-listed with no restriction [9]. Cyproterone acetate 50 mg tablets are listed as a restricted benefit, where the restriction is about the quantity dispensed rather than who may have the medicine [8].",
         "Testosterone is different. All the main testosterone products are PBS-listed but need an Authority prescription: the long-acting undecanoate injection, Testogel 1%, Testavan 2% and AndroForte 5 cream [6][10]. Primoteston Depot was deleted from the PBS in February 2018 at the sponsor's request, and Sustanon is not PBS-subsidised, so both are private prescriptions [10][11].",
         "GnRH analogues used for puberty suppression are not PBS-subsidised for that purpose. SA Health's model of care describes a cost of several thousand dollars a year for a young person who has to buy them privately [12].",
@@ -73,10 +84,10 @@
     {
       "h": "Getting testosterone on the PBS: the Authority pathway",
       "body": [
-        "There is no PBS listing for gender affirmation. Every PBS testosterone item is listed for androgen deficiency, and each one needs an Authority prescription [22].",
-        "The restriction requires that you are treated by, in consultation with, or waiting on an appointment with a specialist endocrinologist, urologist, paediatric endocrinologist or a Fellow of the Australasian Chapter of Sexual Health Medicine. The specialist's name goes on the authority application. Once that is in place, a GP or nurse practitioner can write the PBS script [22][21].",
+        "There is no PBS listing for gender affirmation. Every PBS testosterone item is listed for androgen deficiency, and each one needs an Authority prescription [20].",
+        "The restriction requires that you are treated by, in consultation with, or waiting on an appointment with a specialist endocrinologist, urologist, paediatric endocrinologist or a Fellow of the Australasian Chapter of Sexual Health Medicine. The specialist's name goes on the authority application. Once that is in place, a GP or nurse practitioner can write the PBS script [20][19].",
         "This is the single biggest lever on what you pay. The same vial can cost a PBS co-payment or well over a hundred dollars, decided entirely by whether the paperwork is in place.",
-        "Oestradiol, spironolactone and cyproterone are General Schedule items and need no authority [22]."
+        "Oestradiol, spironolactone and cyproterone are General Schedule items and need no authority [20]."
       ],
       "list": [
         "Ask your prescriber: is this script being written as a PBS Authority item?",
@@ -105,25 +116,18 @@
         "A private prescription is a valid prescription for a medicine the PBS does not subsidise in your situation. You pay the pharmacy's full price.",
         "Medicines end up private for several reasons: the product is not PBS-listed; it is listed but not for the way you are using it; it is compounded; or it is imported to cover a shortage and not covered by a subsidy arrangement.",
         "That last one catches people out. During the estradiol patch shortages, some substitute and overseas-registered products were PBS-listed and could be swapped at the pharmacy without a new prescription, while others were not subsidised the same way or needed a new script [14].",
-        "Private prices vary between pharmacies and do not count towards the Safety Net [16]. It is entirely reasonable to ring around, and to ask whether a PBS-subsidised alternative exists.",
-        "Some indicative prices, for scale. These are single retailer listings checked in September 2026, not a quote — chains, independents and rural pharmacies differ, and some add a dispensing fee. Where we could not verify a published price, we say so rather than guess."
+        "Private prices vary between pharmacies and do not count towards the Safety Net [16]. It is entirely reasonable to ring around, and to ask whether a PBS-subsidised alternative exists."
       ],
-      "list": [
-        "Primoteston Depot (testosterone enantate) 250 mg/1 mL pre-filled syringe — listed at $21.99 by one national chain in September 2026 [18]",
-        "Sustanon 250 (testosterone esters) 250 mg/1 mL ampoule — listed at $29.99 by the same chain in September 2026 [19]",
-        "Compounded testosterone or oestradiol implants — no published price. Compounding pharmacies quote individually; ask before you commit",
-        "GnRH analogues bought privately for puberty suppression — no published price; SA Health describes a cost of several thousand dollars a year [12]",
-        "Imported or substitute estradiol patches during a shortage — depends on the product and the arrangement in force at the time; ask your pharmacist [14]"
-      ],
-      "note": "Always ask, before the medicine is dispensed: is this PBS or private, what will it cost me, and is there a subsidised alternative?"
+      "note": "Always ask, before the medicine is dispensed: is this PBS or private, what will it cost me, and is there a subsidised alternative?",
+      "prices": true
     },
     {
       "h": "Brands and generics: what is actually different",
       "body": [
         "Most medicines used in gender-affirming care are sold under more than one name. Estradiol tablets are sold as Progynova and as Zumenon; spironolactone as Aldactone, Spiractin and Spironolactone Viatris. These are not different medicines. They are different brands of the same one.",
-        "A generic brand contains the same active ingredient, at the same strength, in the same form, and the company has to prove to the Therapeutic Goods Administration that your body absorbs it the same way — the same amount of drug, over the same period — before it can be sold at all [25].",
-        "What can legitimately differ is everything around the active ingredient: the inactive ingredients that bind, colour or flavour it, and the size, shape, colour and packaging of the tablet [25]. That is why a brand swap can look alarming even when nothing about the dose has changed. If you have an allergy or an intolerance, mention it, because the inactive ingredients are where the difference sits [25].",
-        "Your pharmacist can usually swap one brand for another without ringing your prescriber. PBS brands that may be swapped are marked as equivalent on the PBS list, and the swap is allowed unless your prescriber has written “brand substitution not permitted” on the script [26]. If that box is ticked, there will be a reason — ask what it is.",
+        "A generic brand contains the same active ingredient, at the same strength, in the same form, and the company has to prove to the Therapeutic Goods Administration that your body absorbs it the same way — the same amount of drug, over the same period — before it can be sold at all [23].",
+        "What can legitimately differ is everything around the active ingredient: the inactive ingredients that bind, colour or flavour it, and the size, shape, colour and packaging of the tablet [23]. That is why a brand swap can look alarming even when nothing about the dose has changed. If you have an allergy or an intolerance, mention it, because the inactive ingredients are where the difference sits [23].",
+        "Your pharmacist can usually swap one brand for another without ringing your prescriber. PBS brands that may be swapped are marked as equivalent on the PBS list, and the swap is allowed unless your prescriber has written “brand substitution not permitted” on the script [24]. If that box is ticked, there will be a reason — ask what it is.",
         "Brand swapping is also how shortages get managed. When one brand is unavailable, another brand of the same medicine is very often still on the shelf, so it is worth asking rather than assuming you have to go without.",
         "Two places where it is worth slowing down. Patches are the first: Estradot and Estraderm MX are not simply two brands of one product — they differ in size, adhesive and wear time, and are not interchangeable in the way tablets are. The second is your own experience. If a particular brand's adhesive has never stayed on you, or a particular tablet has reliably upset your stomach, that is clinical information. Say so, and ask for the brand that worked.",
         "The cost side is simpler than it looks. Whichever brand you are given, you pay the same PBS co-payment — unless the brand you have chosen carries a brand premium, which is the next section."
@@ -136,7 +140,7 @@
       ],
       "note": "If you are ever handed a box you do not recognise, it is reasonable to ask the pharmacist to confirm it is the same medicine as last time. That is a normal question and a good one.",
       "svg": "<svg aria-labelledby=\"fig120t\" aria-describedby=\"fig120d\" role=\"img\" viewBox=\"0 0 600 300\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Public Sans, sans-serif\"><title id=\"fig120t\">What is the same and what may differ between a brand-name medicine and its generic</title><desc id=\"fig120d\">Two boxes side by side. Both share the same active ingredient, strength, form and absorption. The items that may differ between them are the inactive ingredients, the tablet colour and shape, the packaging and the name.</desc><rect x=\"0\" y=\"0\" width=\"600\" height=\"300\" fill=\"#FFFFFF\"/><text x=\"4\" y=\"22\" font-size=\"16\" font-weight=\"600\" fill=\"#10181F\">Two brands, one medicine</text><rect x=\"4\" y=\"40\" width=\"286\" height=\"96\" rx=\"10\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"20\" y=\"66\" font-size=\"13\" font-weight=\"600\" fill=\"#0B5D7A\">Original brand</text><text x=\"20\" y=\"90\" font-size=\"13\" fill=\"#10181F\">estradiol 2 mg tablet</text><text x=\"20\" y=\"112\" font-size=\"13\" fill=\"#4A5966\">white, round, foil strip</text><rect x=\"310\" y=\"40\" width=\"286\" height=\"96\" rx=\"10\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"326\" y=\"66\" font-size=\"13\" font-weight=\"600\" fill=\"#0B5D7A\">Generic brand</text><text x=\"326\" y=\"90\" font-size=\"13\" fill=\"#10181F\">estradiol 2 mg tablet</text><text x=\"326\" y=\"112\" font-size=\"13\" fill=\"#4A5966\">blue, oval, blister pack</text><rect x=\"4\" y=\"150\" width=\"286\" height=\"142\" rx=\"10\" fill=\"#E6F3EB\" stroke=\"#1F6B43\" stroke-width=\"2\"/><text x=\"20\" y=\"176\" font-size=\"13\" font-weight=\"600\" fill=\"#1F6B43\">Must be the same</text><text x=\"20\" y=\"202\" font-size=\"13\" fill=\"#10181F\">active ingredient</text><text x=\"20\" y=\"224\" font-size=\"13\" fill=\"#10181F\">strength and form</text><text x=\"20\" y=\"246\" font-size=\"13\" fill=\"#10181F\">how much reaches your blood</text><text x=\"20\" y=\"268\" font-size=\"13\" fill=\"#10181F\">how quickly it gets there</text><rect x=\"310\" y=\"150\" width=\"286\" height=\"142\" rx=\"10\" fill=\"#FDF1DC\" stroke=\"#8A5B08\" stroke-width=\"2\"/><text x=\"326\" y=\"176\" font-size=\"13\" font-weight=\"600\" fill=\"#8A5B08\">May differ</text><text x=\"326\" y=\"202\" font-size=\"13\" fill=\"#10181F\">inactive ingredients</text><text x=\"326\" y=\"224\" font-size=\"13\" fill=\"#10181F\">colour, shape and size</text><text x=\"326\" y=\"246\" font-size=\"13\" fill=\"#10181F\">packaging and the name</text><text x=\"326\" y=\"268\" font-size=\"13\" fill=\"#10181F\">price, if a premium applies</text></svg>",
-      "svgCaption": "What a generic brand has to match, and what it is allowed to change. From the TGA generic prescription medicines fact sheet [25]."
+      "svgCaption": "What a generic brand has to match, and what it is allowed to change. From the TGA generic prescription medicines fact sheet [23]."
     },
     {
       "h": "Brand premiums, and how to avoid paying one",
@@ -144,26 +148,25 @@
         "Where several brands of the same medicine exist, the PBS subsidises up to the price of the cheapest one. That price is the benchmark.",
         "If you choose a dearer brand, you pay the difference yourself as a brand premium, on top of your co-payment. Brand premiums do not count towards the Safety Net, and you still pay them after you have passed it [16].",
         "To avoid one, ask your pharmacist for a brand with no premium. Swapping brands of the same medicine is normal and safe, and for most medicines the pharmacist can do it without ringing your prescriber.",
-        "Two of the medicines used in gender-affirming care carried premiums on the PBS list in September 2026 [17].",
-        "Spironolactone: Aldactone carries a premium, roughly $7 to $15 a pack depending on strength and quantity. Spiractin and Spironolactone Viatris are benchmark-priced, so there is no premium on them [17].",
-        "Cyproterone acetate: Androcur carries a premium of about $1.90 on the 50 mg pack and about $1.17 on Androcur-100. Anterone and Cyproterone Sandoz are the benchmark brands [17].",
+        "The list below is taken from the PBS brand premium schedule for the medicines on this site, and is checked automatically on the first of each month [17].",
         "One caution with patches: if a particular brand's adhesive has not stayed on you before, say so. That is a clinical reason to prefer a brand, and worth raising even if the alternative carries a premium."
       ],
-      "note": "Brand premiums change whenever prices are reset, which happens several times a year. The amounts above were checked in September 2026 — your pharmacy screen is always the current answer [17].",
-      "svg": "<svg aria-labelledby=\"fig108t\" aria-describedby=\"fig108d\" role=\"img\" viewBox=\"0 0 600 330\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Public Sans, sans-serif\"><title id=\"fig108t\">How a brand premium is added on top of the PBS co-payment and does not count towards the Safety Net</title><desc id=\"fig108d\">A stacked bar showing the standard co-payment plus an extra brand premium, with a note that the premium never counts towards the Safety Net.</desc><rect x=\"0\" y=\"0\" width=\"600\" height=\"330\" fill=\"#FFFFFF\"/><text x=\"4\" y=\"22\" font-size=\"16\" font-weight=\"600\" fill=\"#10181F\">What a brand premium adds</text><text x=\"4\" y=\"82\" font-size=\"13\" font-weight=\"600\" fill=\"#10181F\">Cheapest brand</text><rect x=\"180\" y=\"62\" width=\"240\" height=\"34\" rx=\"6\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"300\" y=\"85\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#0B5D7A\">your co-payment</text><text x=\"432\" y=\"85\" font-size=\"13\" fill=\"#1F6B43\">counts to the Safety Net</text><text x=\"4\" y=\"162\" font-size=\"13\" font-weight=\"600\" fill=\"#10181F\">Dearer brand</text><rect x=\"180\" y=\"142\" width=\"240\" height=\"34\" rx=\"6\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"300\" y=\"165\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#0B5D7A\">your co-payment</text><rect x=\"420\" y=\"142\" width=\"110\" height=\"34\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#8A5B08\" stroke-width=\"2\"/><text x=\"475\" y=\"165\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#8A5B08\">premium</text><line x1=\"475\" y1=\"180\" x2=\"475\" y2=\"198\" stroke=\"#8A5B08\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><text x=\"596\" y=\"204\" font-size=\"13\" text-anchor=\"end\" fill=\"#8A5B08\">does not count to the Safety Net</text><rect x=\"4\" y=\"222\" width=\"592\" height=\"100\" rx=\"10\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><text x=\"20\" y=\"246\" font-size=\"13\" fill=\"#10181F\">Your pharmacist can nearly always offer a brand with no premium. Just ask.</text><text x=\"20\" y=\"272\" font-size=\"13\" fill=\"#4A5966\">On the PBS list in September 2026, Aldactone and Androcur carry a premium.</text><text x=\"20\" y=\"292\" font-size=\"13\" fill=\"#4A5966\">Estradiol tablets, estradiol patches and the testosterone products do not.</text><text x=\"20\" y=\"312\" font-size=\"13\" fill=\"#4A5966\">Premiums change, so check the price with your pharmacy.</text></svg>",
-      "svgCaption": "How a brand premium sits on top of the co-payment, and why it never counts towards the Safety Net. From the PBS brand premium listings and PBS explanatory note 1.5 [16][17]."
+      "note": "Brand premiums change whenever PBS prices are reset, which happens several times a year. Your pharmacy screen is always the current answer [17].",
+      "svg": "<svg aria-labelledby=\"fig108t\" aria-describedby=\"fig108d\" role=\"img\" viewBox=\"0 0 600 330\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Public Sans, sans-serif\"><title id=\"fig108t\">How a brand premium is added on top of the PBS co-payment and does not count towards the Safety Net</title><desc id=\"fig108d\">A stacked bar showing the standard co-payment plus an extra brand premium, with a note that the premium never counts towards the Safety Net.</desc><rect x=\"0\" y=\"0\" width=\"600\" height=\"330\" fill=\"#FFFFFF\"/><text x=\"4\" y=\"22\" font-size=\"16\" font-weight=\"600\" fill=\"#10181F\">What a brand premium adds</text><text x=\"4\" y=\"82\" font-size=\"13\" font-weight=\"600\" fill=\"#10181F\">Cheapest brand</text><rect x=\"180\" y=\"62\" width=\"240\" height=\"34\" rx=\"6\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"300\" y=\"85\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#0B5D7A\">your co-payment</text><text x=\"432\" y=\"85\" font-size=\"13\" fill=\"#1F6B43\">counts to the Safety Net</text><text x=\"4\" y=\"162\" font-size=\"13\" font-weight=\"600\" fill=\"#10181F\">Dearer brand</text><rect x=\"180\" y=\"142\" width=\"240\" height=\"34\" rx=\"6\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"300\" y=\"165\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#0B5D7A\">your co-payment</text><rect x=\"420\" y=\"142\" width=\"110\" height=\"34\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#8A5B08\" stroke-width=\"2\"/><text x=\"475\" y=\"165\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#8A5B08\">premium</text><line x1=\"475\" y1=\"180\" x2=\"475\" y2=\"198\" stroke=\"#8A5B08\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><text x=\"596\" y=\"204\" font-size=\"13\" text-anchor=\"end\" fill=\"#8A5B08\">does not count to the Safety Net</text><rect x=\"4\" y=\"222\" width=\"592\" height=\"100\" rx=\"10\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><text x=\"20\" y=\"246\" font-size=\"13\" fill=\"#10181F\">Your pharmacist can nearly always offer a brand with no premium. Just ask.</text><text x=\"20\" y=\"272\" font-size=\"13\" fill=\"#4A5966\">Some brands carry a premium; the list on this page is checked monthly.</text><text x=\"20\" y=\"292\" font-size=\"13\" fill=\"#4A5966\">Benchmark brands of the same medicine have no premium at all.</text><text x=\"20\" y=\"312\" font-size=\"13\" fill=\"#4A5966\">Premiums change, so check the price with your pharmacy.</text></svg>",
+      "svgCaption": "How a brand premium sits on top of the co-payment, and why it never counts towards the Safety Net. From the PBS brand premium listings and PBS explanatory note 1.5 [16][17].",
+      "premiums": true
     },
     {
       "h": "If cost is a barrier",
       "body": [
         "Cost is a real barrier to gender-affirming care in Australia, not a personal failing. Several things are worth trying, and your pharmacist can help with most of them.",
-        "Check whether you are eligible for a concession card through Services Australia [20]. Moving from $25.00 to $7.70 a script, and from a $1,748.20 Safety Net threshold to $277.20, changes the arithmetic completely [1].",
+        "Check whether you are eligible for a concession card through Services Australia [18]. Moving from $25.00 to $7.70 a script, and from a $1,748.20 Safety Net threshold to $277.20, changes the arithmetic completely [1].",
         "If you are Aboriginal or Torres Strait Islander, ask your prescriber about the Closing the Gap PBS Co-payment Program. Eligible patients pay the concession rate instead of the general one, or nothing at all if they already hold a concession card. Your prescriber registers you once, and the reduction applies at pharmacies approved for the program — most community pharmacies are, but it is worth asking [15].",
         "Keep your prescriptions at one pharmacy and ask them to track your Safety Net total — or for a Prescription Record Form if you have used more than one pharmacy this year [16].",
         "And if you are about to skip doses or stop because you cannot afford the script, tell your pharmacist. Stopping is the outcome everyone wants to avoid, and there is usually something that can be done."
       ],
       "list": [
-        "Check concession card eligibility with Services Australia [20]",
+        "Check concession card eligibility with Services Australia [18]",
         "Ask about the Closing the Gap PBS Co-payment Program if you are eligible [15]",
         "Use one pharmacy and claim the Safety Net [16]",
         "Ask for a brand with no premium [17]",
@@ -174,11 +177,11 @@
       "note": "Never ration or stop a hormone medicine because of cost without speaking to your prescriber or pharmacist first."
     },
     {
-      "h": "Keeping this page honest",
+      "h": "How current these figures are",
       "body": [
-        "Co-payment amounts, Safety Net thresholds, brand premiums and PBS listings all change — usually on 1 January, and sometimes at other points in the year.",
-        "The figures here were checked in September 2026 and reflect the amounts in force from 1 January 2026. The private prices are single retailer listings from the same month, there to show scale rather than to quote you.",
-        "If you are reading this much later, treat every dollar amount as a guide and check the current figures on the PBS website, or ask your pharmacist [3]."
+        "The co-payment amounts and Safety Net thresholds on this page are checked automatically against the PBS fee schedule on the first of each month, and updated if they have changed. Last checked {{PBS_CHECKED}} [3].",
+        "Brand premiums, PBS listings, which brands may be substituted, and the price of each listed item are also checked automatically on the first of each month, and the figures shown on this page and on each medicine page come from that check. Last checked {{PREMIUMS_CHECKED}} [17].",
+        "Private prices come from two places: reports from readers, which update as they arrive, and the PBS dispensed price of each listed medicine, checked {{PREMIUMS_CHECKED}}. If a figure here does not match what you are charged, the pharmacy's screen is the current answer."
       ]
     }
   ],
@@ -206,7 +209,7 @@
     {
       "n": 5,
       "text": "Pharmaceutical Benefits Scheme. Estradiol PBS listings — tablets (Progynova, Zumenon), patches (Estradot, Estraderm MX) and Sandrena gel. Accessed 24 September 2026.",
-      "url": "https://www.pbs.gov.au/medicine/item/1663M-1664N-8125P-8126Q-8140K-8274L-8286D-8311K-8312L-8485N-8486P-8761D-8762E-8763F-8764G-8765H"
+      "url": "https://www.pbs.gov.au/medicine/item/1663M"
     },
     {
       "n": 6,
@@ -231,7 +234,7 @@
     {
       "n": 10,
       "text": "Pharmaceutical Benefits Scheme. Testosterone gel and cream PBS listings — Testogel 1%, Testavan 2%, AndroForte 5 (Authority Required). Accessed 24 September 2026.",
-      "url": "https://www.pbs.gov.au/medicine/item/10378F-10380H-11740X-13924W-13983Y-14025E-14563L-8830R"
+      "url": "https://www.pbs.gov.au/medicine/item/10380H"
     },
     {
       "n": 11,
@@ -270,54 +273,50 @@
     },
     {
       "n": 18,
-      "text": "Chemist Warehouse. Primoteston Depot 250 mg/mL pre-filled syringe 1 x 1 mL, retail listing (price checked September 2026).",
-      "url": "https://www.chemistwarehouse.com.au/buy/156522/primoteston-depot-250mg-ml-pre-filled-syringe-1-x-1ml-testosterone-enantate"
-    },
-    {
-      "n": 19,
-      "text": "Chemist Warehouse. Sustanon 250 mg injection 1 mL, retail listing (price checked September 2026).",
-      "url": "https://www.chemistwarehouse.com.au/buy/54178/sustanon-250mg-injection-1ml-testosterone-esters"
-    },
-    {
-      "n": 20,
       "text": "Services Australia. Concession and health care cards. Accessed 24 September 2026.",
       "url": "https://www.servicesaustralia.gov.au/concession-and-health-care-cards"
     },
     {
-      "n": 21,
+      "n": 19,
       "text": "Shine SA. Referral pathways for trans and gender diverse care. Accessed September 2026.",
       "url": "https://shinesa.org.au/media/2023/09/Referral-Pathways-for-Trans-and-Gender-Diverse-Care.pdf"
     },
     {
-      "n": 22,
+      "n": 20,
       "text": "Department of Health. PBS listing change documents for testosterone, July 2024 (FOI 25-0097).",
       "url": "https://www.health.gov.au/sites/default/files/2025-02/foi-25-0097-ld-documents-for-pbs-listing-change.pdf"
     },
     {
-      "n": 23,
+      "n": 21,
       "text": "Pharmaceutical Benefits Scheme. Estradiol 0.06% (750 microgram/actuation) gel, 64 actuations (Estrogel), PBS item 14719Q — General Schedule, no restrictions; 60-day item 14741W (Restricted Benefit). Accessed 25 September 2026.",
       "url": "https://www.pbs.gov.au/medicine/item/14719Q"
     },
     {
-      "n": 24,
+      "n": 22,
       "text": "Pharmaceutical Benefits Scheme. Progesterone 100 mg capsule, 30, PBS item 14730G — General Schedule, no restrictions; brands Prometrium, Progesterone ADVZ 100 and PROGESTERONE-APX; 60-day item 14733K (Restricted Benefit). Accessed 25 September 2026.",
       "url": "https://www.pbs.gov.au/medicine/item/14730G"
     },
     {
-      "n": 25,
+      "n": 23,
       "text": "Therapeutic Goods Administration. Generic prescription medicines: fact sheet. Canberra: TGA. Accessed 26 September 2026.",
       "url": "https://www.tga.gov.au/news/news-articles/generic-prescription-medicines-fact-sheet"
     },
     {
-      "n": 26,
+      "n": 24,
       "text": "Pharmaceutical Benefits Scheme. Frequently asked questions — brand substitution, brand premiums and the Safety Net. Canberra: Department of Health. Accessed 26 September 2026.",
       "url": "https://www.pbs.gov.au/general/faq"
+    },
+    {
+      "n": 25,
+      "text": "Pharmaceutical Benefits Scheme. Closing the Gap (CTG) PBS Co-payment Program — fact sheet. Updated 18 February 2026. Accessed 1 October 2026.",
+      "url": "https://www.pbs.gov.au/publication/factsheets/closing-the-gap-pbs-co-payment-measure"
     }
   ],
   "pbsFigures": {
     "general_copay": "25.00",
     "conc_copay": "7.70",
     "sn_general": "1,748.20",
-    "sn_conc": "277.20"
+    "sn_conc": "277.20",
+    "checkedAt": "1 Oct 2026"
   }
 }

@@ -1,325 +1,713 @@
 {
-  "title": "Gender-Affirming Medicines South Australia",
-  "subtitle": "Information about hormone medicines",
-  "kicker": "An Easy Read guide",
-  "sections": [
+ "title": "Gender-Affirming Medicines South Australia",
+ "subtitle": "Easy Read guides",
+ "kicker": "An Easy Read guide",
+ "guides": [
+  {
+   "id": "start",
+   "title": "About this website",
+   "subtitle": "How to use these Easy Read guides",
+   "sections": [
     {
-      "h": "How to use this guide",
-      "blocks": [
-        {
-          "icon": "people",
-          "lines": [
-            "A pharmacist in Adelaide made this guide.",
-            "When you see the word **we**, it means the pharmacist who runs this website."
-          ]
-        },
-        {
-          "icon": "book",
-          "lines": [
-            "We wrote this information in an easy to read way.",
-            "We use pictures to explain some ideas."
-          ]
-        },
-        {
-          "icon": "bold",
-          "lines": [
-            "We wrote some important words in **bold**.",
-            "This means the letters are thicker and darker.",
-            "We explain what these words mean in the word list at the end."
-          ]
-        },
-        {
-          "icon": "web",
-          "lines": [
-            "This is an Easy Read summary of our website.",
-            "It only has the most important ideas.",
-            "The full website is at **www.gamsa.au**"
-          ]
-        },
-        {
-          "icon": "help",
-          "lines": [
-            "You can ask for help to read this guide.",
-            "A friend, family member, support person or your pharmacist may be able to help you."
-          ]
-        }
-      ]
+     "h": "How to use this guide",
+     "blocks": [
+      {
+       "icon": "people",
+       "lines": [
+        "A pharmacist in Adelaide made this guide.",
+        "When you see the word **we**, it means the pharmacist who runs this website."
+       ]
+      },
+      {
+       "icon": "book",
+       "lines": [
+        "We wrote this information in an easy to read way.",
+        "We use pictures to explain some ideas."
+       ]
+      },
+      {
+       "icon": "bold",
+       "lines": [
+        "We wrote some important words in **bold**.",
+        "This means the letters are thicker and darker.",
+        "We explain what these words mean in the word list at the end."
+       ]
+      },
+      {
+       "icon": "web",
+       "lines": [
+        "This is an Easy Read summary of our website.",
+        "It only has the most important ideas.",
+        "The full website is at **www.gamsa.au**"
+       ]
+      },
+      {
+       "icon": "help",
+       "lines": [
+        "You can ask for help to read this guide.",
+        "A friend, family member, support person or your pharmacist may be able to help you."
+       ]
+      }
+     ]
     },
     {
-      "h": "About this guide",
-      "blocks": [
-        {
-          "icon": "pills",
-          "lines": [
-            "Some trans and gender diverse people take **hormone medicines**.",
-            "These medicines change your body over time.",
-            "Doctors call this **gender-affirming hormone therapy**."
-          ]
-        },
-        {
-          "icon": "question",
-          "lines": [
-            "People often have questions about these medicines, like:",
-            "- how much they cost",
-            "- what to do when a chemist has none left",
-            "- how to use them safely."
-          ]
-        },
-        {
-          "icon": "web",
-          "lines": [
-            "The answers are usually written for doctors and pharmacists.",
-            "They can be hard to find and hard to read.",
-            "We made this guide to help."
-          ]
-        },
-        {
-          "icon": "warn",
-          "lines": [
-            "This guide does not tell you what medicine to take.",
-            "Your doctor or nurse practitioner decides that with you."
-          ]
-        }
-      ]
+     "h": "About this website",
+     "blocks": [
+      {
+       "icon": "pills",
+       "lines": [
+        "Some trans and gender diverse people take **hormone medicines**.",
+        "These medicines change your body over time.",
+        "Doctors call this **gender-affirming hormone therapy**."
+       ]
+      },
+      {
+       "icon": "question",
+       "lines": [
+        "People often have questions about these medicines, like:",
+        "- how much they cost",
+        "- what to do when a chemist has none left",
+        "- how to use them safely."
+       ]
+      },
+      {
+       "icon": "web",
+       "lines": [
+        "The answers are usually written for doctors and pharmacists.",
+        "They can be hard to find and hard to read.",
+        "We made this guide to help."
+       ]
+      },
+      {
+       "icon": "warn",
+       "lines": [
+        "This guide does not tell you what medicine to take.",
+        "Your doctor or nurse decides that with you."
+       ]
+      }
+     ]
     },
     {
-      "h": "Where you get your medicine",
-      "blocks": [
-        {
-          "icon": "doc",
-          "lines": [
-            "First you see a doctor or nurse practitioner.",
-            "If they agree the medicine is right for you, they write a **prescription**.",
-            "A prescription is a note that lets you get the medicine."
-          ]
-        },
-        {
-          "icon": "pharmacy",
-          "lines": [
-            "Then you take the prescription to a pharmacy.",
-            "A pharmacy is also called a chemist."
-          ]
-        },
-        {
-          "icon": "person",
-          "lines": [
-            "It helps to use the same pharmacy each time.",
-            "The staff get to know you.",
-            "They can order your medicine in before you run out."
-          ]
-        }
-      ]
-    },
-    {
-      "h": "Getting your name right",
-      "blocks": [
-        {
-          "icon": "nametag",
-          "lines": [
-            "Your medicine label might show a name you do not use.",
-            "This is because the pharmacy computer uses your Medicare name."
-          ]
-        },
-        {
-          "icon": "speak",
-          "lines": [
-            "You can ask the pharmacy to put your **preferred name** on the label.",
-            "Your preferred name is the name you want people to use."
-          ]
-        },
-        {
-          "icon": "clock",
-          "lines": [
-            "Some staff will not know how to do this straight away.",
-            "They may need to ring the people who make their computer program.",
-            "It is okay to ask them to find out."
-          ]
-        }
-      ]
-    },
-    {
-      "h": "When a medicine is hard to get",
-      "blocks": [
-        {
-          "icon": "warn",
-          "lines": [
-            "Sometimes a medicine runs out across the whole country.",
-            "This is called a **shortage**.",
-            "It is not your fault and it is not your pharmacy's fault."
-          ]
-        },
-        {
-          "icon": "web",
-          "lines": [
-            "Our website checks the official shortage list every day.",
-            "It shows which hormone medicines are hard to get right now."
-          ]
-        },
-        {
-          "icon": "clock",
-          "lines": [
-            "If your medicine is hard to get:",
-            "- talk to your pharmacist early",
-            "- do not wait until you have run out",
-            "- ask them to order some in for you."
-          ]
-        },
-        {
-          "icon": "swap",
-          "lines": [
-            "Your pharmacist may be able to give you a different **brand**.",
-            "A different brand is the same medicine in a different box.",
-            "This is safe and normal."
-          ]
-        }
-      ]
-    },
-    {
-      "h": "What your medicine costs",
-      "blocks": [
-        {
-          "icon": "money",
-          "lines": [
-            "The government pays for most of the cost of many medicines.",
-            "This is called the **PBS**.",
-            "You pay the rest. This part is called a **co-payment**."
-          ]
-        },
-        {
-          "icon": "card",
-          "lines": [
-            "Most people pay up to **$25.00** for a PBS medicine.",
-            "If you have a concession card, you pay up to **$7.70**."
-          ]
-        },
-        {
-          "icon": "shield",
-          "lines": [
-            "If you buy a lot of medicine in one year, the cost goes down.",
-            "This is called the **Safety Net**.",
-            "Ask your pharmacy to keep a record for you."
-          ]
-        },
-        {
-          "icon": "warn",
-          "lines": [
-            "Some medicines are not on the PBS.",
-            "These cost more.",
-            "The website has a page that explains each one."
-          ]
-        },
-        {
-          "icon": "speak",
-          "lines": [
-            "If the cost is too much, tell your pharmacist.",
-            "They can often help.",
-            "You are not the first person to ask."
-          ]
-        }
-      ]
-    },
-    {
-      "h": "Using your medicine safely",
-      "blocks": [
-        {
-          "icon": "calendar",
-          "lines": [
-            "Take your medicine the way your doctor told you.",
-            "Take it at about the same time each day."
-          ]
-        },
-        {
-          "icon": "patch",
-          "lines": [
-            "Some medicines are patches or gels that go on your skin.",
-            "Some are tablets you swallow.",
-            "Some are injections."
-          ]
-        },
-        {
-          "icon": "question",
-          "lines": [
-            "If you are not sure how to use your medicine, ask your pharmacist.",
-            "You can ask to talk somewhere private."
-          ]
-        },
-        {
-          "icon": "phone",
-          "lines": [
-            "If you feel unwell after taking your medicine, get help.",
-            "Ring your doctor.",
-            "In an emergency, ring **000**."
-          ]
-        }
-      ]
-    },
-    {
-      "h": "Where to get more help",
-      "blocks": [
-        {
-          "icon": "web",
-          "lines": [
-            "The full website is at **www.gamsa.au**",
-            "It has a page for each medicine."
-          ]
-        },
-        {
-          "icon": "phone",
-          "lines": [
-            "You can ring **healthdirect** on **1800 022 222** to talk to a nurse.",
-            "This is free and open all day and all night."
-          ]
-        },
-        {
-          "icon": "speak",
-          "lines": [
-            "You can tell us if something on the website is wrong or missing.",
-            "We want to fix it."
-          ]
-        }
-      ]
-    },
-    {
-      "h": "Word list",
-      "wordlist": true,
-      "blocks": [
-        {
-          "w": "Brand",
-          "d": "The name a company puts on a medicine. Two brands can be the same medicine."
-        },
-        {
-          "w": "Co-payment",
-          "d": "The part of the medicine price that you pay."
-        },
-        {
-          "w": "Gender-affirming hormone therapy",
-          "d": "Medicines that change your body to match your gender."
-        },
-        {
-          "w": "Hormone medicines",
-          "d": "Medicines like oestrogen, testosterone and blockers."
-        },
-        {
-          "w": "PBS",
-          "d": "The Pharmaceutical Benefits Scheme. The government pays part of the cost of many medicines."
-        },
-        {
-          "w": "Preferred name",
-          "d": "The name you want people to use for you."
-        },
-        {
-          "w": "Prescription",
-          "d": "A note from your doctor that lets you get a medicine."
-        },
-        {
-          "w": "Safety Net",
-          "d": "Once you spend enough on medicines in one year, they cost less."
-        },
-        {
-          "w": "Shortage",
-          "d": "When a medicine runs out across the country."
-        }
-      ]
+     "h": "The guides",
+     "blocks": [
+      {
+       "icon": "book",
+       "lines": [
+        "There is one Easy Read guide for each thing you might need to do.",
+        "You can read them in any order.",
+        "Each one can be printed or saved as a PDF."
+       ]
+      }
+     ]
     }
-  ]
+   ]
+  },
+  {
+   "id": "getting",
+   "title": "Getting your medicine",
+   "subtitle": "Prescriptions, the pharmacy and your name on the label",
+   "sections": [
+    {
+     "h": "Where you get your medicine",
+     "blocks": [
+      {
+       "icon": "doc",
+       "lines": [
+        "First you see a doctor or a nurse who can prescribe.",
+        "If they agree the medicine is right for you, they write a **prescription**.",
+        "A prescription is a note that lets you get the medicine."
+       ]
+      },
+      {
+       "icon": "pharmacy",
+       "lines": [
+        "Then you take the prescription to a pharmacy.",
+        "A pharmacy is also called a chemist."
+       ]
+      },
+      {
+       "icon": "person",
+       "lines": [
+        "It helps to use the same pharmacy each time.",
+        "The staff get to know you.",
+        "They can order your medicine in before you run out."
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Getting your name right",
+     "blocks": [
+      {
+       "icon": "nametag",
+       "lines": [
+        "Your medicine label might show a name you do not use.",
+        "This is because the pharmacy computer uses your Medicare name."
+       ]
+      },
+      {
+       "icon": "speak",
+       "lines": [
+        "You can ask the pharmacy to put your **preferred name** on the label.",
+        "Your preferred name is the name you want people to use."
+       ]
+      },
+      {
+       "icon": "clock",
+       "lines": [
+        "Some staff will not know how to do this straight away.",
+        "They may need to ring the people who make their computer program.",
+        "It is okay to ask them to find out."
+       ]
+      }
+     ]
+    },
+    {
+     "h": "If you live far from the city",
+     "blocks": [
+      {
+       "icon": "clock",
+       "lines": [
+        "Country pharmacies keep less medicine on the shelf.",
+        "Ask for your medicine a week before you run out."
+       ]
+      },
+      {
+       "icon": "web",
+       "lines": [
+        "An **e-script** is a prescription on your phone.",
+        "You can send it to any pharmacy in Australia.",
+        "Some pharmacies will post your medicine to you."
+       ]
+      },
+      {
+       "icon": "doc",
+       "lines": [
+        "Your doctor can see you by phone or video. This is called **telehealth**.",
+        "If you must travel a long way to see a specialist, you may get help with the cost.",
+        "In South Australia this help is called **PATS**."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "shortage",
+   "title": "When a medicine is hard to get",
+   "subtitle": "Shortages and what to do",
+   "sections": [
+    {
+     "h": "When a medicine is hard to get",
+     "blocks": [
+      {
+       "icon": "warn",
+       "lines": [
+        "Some days a medicine runs out across the whole country.",
+        "This is called a **shortage**.",
+        "It is not your fault and it is not your pharmacy's fault."
+       ]
+      },
+      {
+       "icon": "web",
+       "lines": [
+        "Our website checks the official shortage list every day.",
+        "It shows which hormone medicines are hard to get right now."
+       ]
+      },
+      {
+       "icon": "clock",
+       "lines": [
+        "If your medicine is hard to get:",
+        "- talk to your pharmacist early",
+        "- do not wait until you have run out",
+        "- ask them to order some in for you."
+       ]
+      },
+      {
+       "icon": "swap",
+       "lines": [
+        "Your pharmacist may be able to give you a different **brand**.",
+        "A different brand is the same medicine in a different box.",
+        "This is safe and normal."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cost",
+   "title": "Paying for your medicine",
+   "subtitle": "The PBS, concession cards and Closing the Gap",
+   "sections": [
+    {
+     "h": "What your medicine costs",
+     "blocks": [
+      {
+       "icon": "money",
+       "lines": [
+        "The government pays for most of the cost of many medicines.",
+        "This is called the **PBS**.",
+        "You pay the rest. This part is called a **co-payment**."
+       ]
+      },
+      {
+       "icon": "card",
+       "lines": [
+        "Most people pay up to **$25.00** for a PBS medicine.",
+        "If you have a concession card, you pay up to **$7.70**."
+       ]
+      },
+      {
+       "icon": "shield",
+       "lines": [
+        "If you buy a lot of medicine in one year, the cost goes down.",
+        "This is called the **Safety Net**.",
+        "Ask your pharmacy to keep a record for you."
+       ]
+      },
+      {
+       "icon": "warn",
+       "lines": [
+        "Some medicines are not on the PBS.",
+        "These cost more.",
+        "The website has a page that explains each one."
+       ]
+      },
+      {
+       "icon": "speak",
+       "lines": [
+        "If the cost is too much, tell your pharmacist.",
+        "They can often help.",
+        "You are not the first person to ask."
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Closing the Gap",
+     "blocks": [
+      {
+       "icon": "people",
+       "lines": [
+        "**Closing the Gap** is a government plan.",
+        "It aims to make health fairer for Aboriginal and Torres Strait Islander people.",
+        "Part of it makes medicines cheaper."
+       ]
+      },
+      {
+       "icon": "card",
+       "lines": [
+        "If you are Aboriginal or Torres Strait Islander, ask your doctor to sign you up.",
+        "You only need to do this once.",
+        "After that, PBS medicines cost less at any pharmacy.",
+        "If you have a concession card, they are free."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "patches-gel",
+   "title": "Using patches and gel",
+   "subtitle": "Medicine that goes on your skin",
+   "sections": [
+    {
+     "h": "Patches",
+     "blocks": [
+      {
+       "icon": "patch",
+       "lines": [
+        "A **patch** is a small sticker with medicine inside.",
+        "It goes on clean, dry skin.",
+        "The medicine goes through your skin slowly."
+       ]
+      },
+      {
+       "icon": "calendar",
+       "lines": [
+        "Most patches are changed twice a week.",
+        "Pick the same two days every week.",
+        "Put each new patch on a different spot."
+       ]
+      },
+      {
+       "icon": "warn",
+       "lines": [
+        "Do not put a patch on your chest or breast.",
+        "Do not put it where a belt or waistband rubs.",
+        "If a patch falls off, put on a new one."
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Gel",
+     "blocks": [
+      {
+       "icon": "pills",
+       "lines": [
+        "**Gel** is medicine you rub on your skin, usually once a day.",
+        "Put it where the box says. Let it dry before you get dressed."
+       ]
+      },
+      {
+       "icon": "help",
+       "lines": [
+        "Wash your hands straight after.",
+        "Keep other people and pets away from the gel.",
+        "Wait until your skin is dry and covered.",
+        "This matters most for children and pregnant people."
+       ]
+      }
+     ]
+    },
+    {
+     "h": "If you are not sure",
+     "blocks": [
+      {
+       "icon": "question",
+       "lines": [
+        "Ask your pharmacist to show you. You can ask to talk somewhere private."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "injections",
+   "title": "Having an injection",
+   "subtitle": "What happens, and what to tell your nurse or doctor",
+   "sections": [
+    {
+     "h": "Before the injection",
+     "blocks": [
+      {
+       "icon": "doc",
+       "lines": [
+        "Some hormone medicines are given as an **injection**.",
+        "Some you have every few weeks. Some you have every few months."
+       ]
+      },
+      {
+       "icon": "speak",
+       "lines": [
+        "Tell the nurse or doctor if you feel unwell.",
+        "Also tell them if an injection has made you sick before."
+       ]
+      }
+     ]
+    },
+    {
+     "h": "During and after",
+     "blocks": [
+      {
+       "icon": "clock",
+       "lines": [
+        "The long-acting testosterone injection is given slowly, into the side of your hip.",
+        "You then wait in the clinic for about 15 minutes.",
+        "This is normal. It is so staff can help if you have a rare reaction."
+       ]
+      },
+      {
+       "icon": "phone",
+       "lines": [
+        "Tell staff straight away if you:",
+        "- cough a lot",
+        "- feel short of breath",
+        "- feel dizzy",
+        "- have chest pain.",
+        "After you leave, ring 000 if any of these happen."
+       ]
+      },
+      {
+       "icon": "calendar",
+       "lines": [
+        "Ask when your next injection is due before you leave.",
+        "Write it down."
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Injecting at home",
+     "blocks": [
+      {
+       "icon": "help",
+       "lines": [
+        "Some people learn to give their own injections.",
+        "Only do this after a nurse or doctor has taught you.",
+        "Practise with them first."
+       ]
+      },
+      {
+       "icon": "warn",
+       "lines": [
+        "Never share needles.",
+        "Put used needles in a sharps bin, not in the rubbish.",
+        "Your pharmacy can tell you where to get a sharps bin."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tablets",
+   "title": "Taking tablets and capsules",
+   "subtitle": "Swallowing your medicine the right way",
+   "sections": [
+    {
+     "h": "Taking tablets",
+     "blocks": [
+      {
+       "icon": "pills",
+       "lines": [
+        "Take your tablets the way your doctor told you.",
+        "Take them at about the same time each day."
+       ]
+      },
+      {
+       "icon": "question",
+       "lines": [
+        "Some tablets go under your tongue instead of being swallowed. The label will say.",
+        "If you are not sure, ask your pharmacist."
+       ]
+      },
+      {
+       "icon": "calendar",
+       "lines": [
+        "If you forget a dose, take it when you remember.",
+        "If it is nearly time for the next dose, skip the missed one.",
+        "Never take two doses at once to catch up."
+       ]
+      },
+      {
+       "icon": "warn",
+       "lines": [
+        "Keep tablets in their box, somewhere cool and dry, away from children."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "doses",
+   "title": "Understanding your dose",
+   "subtitle": "What the numbers on your medicine mean",
+   "sections": [
+    {
+     "h": "What a dose is",
+     "blocks": [
+      {
+       "icon": "pills",
+       "lines": [
+        "A **dose** is how much medicine you take, and how often.",
+        "It is written on your medicine label."
+       ]
+      },
+      {
+       "icon": "book",
+       "lines": [
+        "The numbers are in **milligrams (mg)** or **micrograms (mcg)**.",
+        "A microgram is a thousand times smaller than a milligram.",
+        "That is why patches say 50 mcg and tablets say 2 mg. They are different medicines in different amounts."
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Why doses are different for different people",
+     "blocks": [
+      {
+       "icon": "people",
+       "lines": [
+        "Everyone is different.",
+        "Your doctor works out your dose from your blood tests and how you feel.",
+        "Someone else's dose is not your dose."
+       ]
+      },
+      {
+       "icon": "clock",
+       "lines": [
+        "Many people start on a low dose.",
+        "The dose often goes up slowly over months."
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Keep to your dose",
+     "blocks": [
+      {
+       "icon": "warn",
+       "lines": [
+        "Do not change your dose on your own.",
+        "Taking more does not make changes happen faster, and it can be unsafe."
+       ]
+      },
+      {
+       "icon": "doc",
+       "lines": [
+        "You will have **blood tests** from time to time. They show your doctor if the dose is right."
+       ]
+      },
+      {
+       "icon": "speak",
+       "lines": [
+        "If you want your dose changed, talk to your doctor.",
+        "That is a normal thing to ask."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "help",
+   "title": "Where to get help",
+   "subtitle": "People who can help, and a word list",
+   "sections": [
+    {
+     "h": "Using your medicine safely",
+     "blocks": [
+      {
+       "icon": "calendar",
+       "lines": [
+        "Take your medicine the way your doctor told you.",
+        "Take it at about the same time each day."
+       ]
+      },
+      {
+       "icon": "patch",
+       "lines": [
+        "Some medicines are patches or gels that go on your skin.",
+        "Some are tablets you swallow.",
+        "Some are injections."
+       ]
+      },
+      {
+       "icon": "question",
+       "lines": [
+        "If you are not sure how to use your medicine, ask your pharmacist.",
+        "You can ask to talk somewhere private."
+       ]
+      },
+      {
+       "icon": "phone",
+       "lines": [
+        "If you feel unwell after taking your medicine, get help.",
+        "Ring your doctor.",
+        "In an emergency, ring **000**."
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Where to get more help",
+     "blocks": [
+      {
+       "icon": "speak",
+       "lines": [
+        "If English is not your first language, you can get a free **interpreter**.",
+        "Ring **TIS National** on **131 450**.",
+        "Ask them to call your doctor or pharmacy for you."
+       ]
+      },
+      {
+       "icon": "web",
+       "lines": [
+        "The full website is at **www.gamsa.au**",
+        "It has a page for each medicine."
+       ]
+      },
+      {
+       "icon": "phone",
+       "lines": [
+        "You can ring **healthdirect** on **1800 022 222** to talk to a nurse.",
+        "This is free and open all day and all night."
+       ]
+      },
+      {
+       "icon": "speak",
+       "lines": [
+        "You can tell us if something on the website is wrong or missing.",
+        "We want to fix it."
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "wordlist": [
+  {
+   "w": "Brand",
+   "d": "The name a company puts on a medicine. Two brands can be the same medicine."
+  },
+  {
+   "w": "Closing the Gap",
+   "d": "A government plan that makes PBS medicines cheaper for Aboriginal and Torres Strait Islander people."
+  },
+  {
+   "w": "Co-payment",
+   "d": "The part of the medicine price that you pay."
+  },
+  {
+   "w": "Dose",
+   "d": "How much medicine you take, and how often."
+  },
+  {
+   "w": "E-script",
+   "d": "A prescription sent to your phone or email instead of on paper."
+  },
+  {
+   "w": "Gender-affirming hormone therapy",
+   "d": "Medicines that change your body to match your gender."
+  },
+  {
+   "w": "Hormone medicines",
+   "d": "Medicines like oestrogen, testosterone and blockers."
+  },
+  {
+   "w": "Injection",
+   "d": "Medicine given with a needle."
+  },
+  {
+   "w": "Interpreter",
+   "d": "A person who says what you say in another language, so you and your doctor understand each other."
+  },
+  {
+   "w": "Patch",
+   "d": "A sticker with medicine inside that goes on your skin."
+  },
+  {
+   "w": "PBS",
+   "d": "The Pharmaceutical Benefits Scheme. The government pays part of the cost of many medicines."
+  },
+  {
+   "w": "Preferred name",
+   "d": "The name you want people to use for you."
+  },
+  {
+   "w": "Prescription",
+   "d": "A note from your doctor that lets you get a medicine."
+  },
+  {
+   "w": "Safety Net",
+   "d": "Once you spend enough on medicines in one year, they cost less."
+  },
+  {
+   "w": "Shortage",
+   "d": "When a medicine runs out across the country."
+  },
+  {
+   "w": "Telehealth",
+   "d": "Seeing your doctor by phone or video."
+  }
+ ]
 }
