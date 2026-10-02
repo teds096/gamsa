@@ -48,7 +48,7 @@
         "People who would normally pay the general co-payment pay the concessional amount instead — $7.70 rather than $25.00 — and people with a concession card pay nothing [25].",
         "It covers every medicine listed on the PBS, which includes the PBS-listed hormone medicines on this site. It does not cover private prescriptions, and brand premiums still apply [25].",
         "Registration is a one-off, and you cannot do it yourself. Your GP or another PBS prescriber, or an Aboriginal Health Practitioner, registers you with Services Australia. You need to be enrolled in Medicare, and your prescriber needs to judge that cost could get in the way of you taking your medicine [25].",
-        "Once you are registered, it applies at any pharmacy. Your pharmacist can see it in their dispensing system, so you do not need anything written on each prescription. [Services Australia: Closing the Gap PBS co-payment](https://www.servicesaustralia.gov.au/closing-gap-pbs-co-payment-program)"
+        "Once you are registered, it applies at any pharmacy. Your pharmacist can see it in their dispensing system, so you do not need anything written on each prescription. [Department of Health: Closing the Gap PBS co-payment](https://www.health.gov.au/cheaper-medicines/first-nations)"
       ]
     },
     {
@@ -317,6 +317,6 @@
     "conc_copay": "7.70",
     "sn_general": "1,748.20",
     "sn_conc": "277.20",
-    "checkedAt": "2 Oct 2026"
+    "checkedAt": "1 Oct 2026"
   }
 }

@@ -71,7 +71,7 @@ export async function onRequestPost({ request, env }) {
   if (ip) form.append("remoteip", ip);
   const check = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", { method: "POST", body: form })
     .then((r) => r.json()).catch(() => ({ success: false }));
-  if (!check.success) return json({ ok: false, error: "verify" }, 403);
+  if (!check.success) return json({ ok: false, error: "verify", codes: check["error-codes"] || [] }, 403);
 
   // rate limit: 20 reports per registration number per day
   const recent = await env.DB.prepare("SELECT COUNT(*) AS n FROM pharmacy_reports WHERE ahpra=? AND created > ?")

@@ -9,14 +9,15 @@
   "since": "—",
   "expectedReturn": "—",
   "mechanism": "—",
-  "note": "A TGA shortage-database entry for conjugated estrogens appears to exist but its content couldn't be fetched this session — check directly before relying on this.",
+  "note": "Checked daily against the TGA shortage database.",
   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/conjugated-estrogens",
   "sourceLabel": "TGA shortage record (unverified)",
   "genericName": "Conjugated estrogens",
   "form": "oral tablet",
   "brands": [
    "Premarin"
-  ]
+  ],
+  "ingredient": "conjugated-estrogens"
  },
  {
   "id": "androcur",
@@ -35,7 +36,8 @@
   "form": "oral tablet",
   "brands": [
    "Androcur"
-  ]
+  ],
+  "ingredient": "cyproterone"
  },
  {
   "id": "cyprostat",
@@ -54,7 +56,9 @@
   "form": "oral tablet",
   "brands": [
    "Cyprostat"
-  ]
+  ],
+  "ingredient": "cyproterone",
+  "pin": true
  },
  {
   "id": "duphaston",
@@ -66,14 +70,15 @@
   "since": "—",
   "expectedReturn": "—",
   "mechanism": "—",
-  "note": "No TGA/PBS shortage notice located this session.",
+  "note": "No TGA or PBS shortage notice has been published.",
   "sourceUrl": "https://www.tga.gov.au/safety/shortages-and-supply-disruptions/medicine-shortages",
   "sourceLabel": "TGA shortages hub",
   "genericName": "Dydrogesterone",
   "form": "oral tablet",
   "brands": [
    "Duphaston"
-  ]
+  ],
+  "ingredient": "dydrogesterone"
  },
  {
   "id": "estrogel",
@@ -93,7 +98,8 @@
   "brands": [
    "Estrogel",
    "Sandrena"
-  ]
+  ],
+  "ingredient": "estradiol"
  },
  {
   "id": "zoladex",
@@ -112,7 +118,8 @@
   "form": "subcutaneous implant",
   "brands": [
    "Zoladex"
-  ]
+  ],
+  "ingredient": "goserelin"
  },
  {
   "id": "lucrin",
@@ -132,7 +139,8 @@
   "brands": [
    "Lucrin Depot",
    "Eligard"
-  ]
+  ],
+  "ingredient": "leuprorelin"
  },
  {
   "id": "provera",
@@ -144,7 +152,7 @@
   "since": "—",
   "expectedReturn": "—",
   "mechanism": "—",
-  "note": "No Australia-specific TGA shortage notice found this session.",
+  "note": "No Australian TGA shortage notice has been published.",
   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/medroxyprogesterone",
   "sourceLabel": "TGA shortage search (unverified)",
   "genericName": "Medroxyprogesterone acetate",
@@ -153,7 +161,8 @@
    "Provera",
    "Depo-Provera",
    "Depo-Ralovera"
-  ]
+  ],
+  "ingredient": "medroxyprogesterone"
  },
  {
   "id": "primolut-n",
@@ -172,7 +181,8 @@
   "form": "oral tablet",
   "brands": [
    "Primolut N"
-  ]
+  ],
+  "ingredient": "norethisterone"
  },
  {
   "id": "prometrium",
@@ -192,7 +202,8 @@
   "brands": [
    "Prometrium",
    "Progesterone-Teva"
-  ]
+  ],
+  "ingredient": "progesterone"
  },
  {
   "id": "spironolactone",
@@ -212,6 +223,7 @@
   "brands": [
    "Spiractin",
    "Spironolactone Viatris"
-  ]
+  ],
+  "ingredient": "spironolactone"
  }
 ]

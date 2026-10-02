@@ -63,6 +63,7 @@
   .page-head{display:flex;flex-direction:column;gap:10px;margin-bottom:26px;}
   .page-head .lede{font-size:17.5px;color:var(--ink-2);max-width:60ch;margin:0;}
   .stamp{font-size:13.5px;color:var(--ink-2);}
+  @media (max-width:430px){.tb-sa{display:none;}}
 
   /* ---- home ---- */
   .hero{padding-block:14px 4px;}
@@ -569,7 +570,7 @@
 <header>
 <div class="gov">
   <div class="wrap gov-in">
-    <span>Independent health information · South Australia</span>
+    <span>Independent health information<span class="tb-sa"> · South Australia</span></span>
     <div class="a11y">
       <button class="a11y-btn" id="a11yBtn" type="button" aria-expanded="false" aria-controls="a11yPanel">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="6.6" r="1.9" fill="currentColor"/><path d="M6.2 9.6c3.9 1 7.7 1 11.6 0l.4 1.9c-1.6.4-3 .7-4.4.8v2.6l1.9 4.6-1.9.8-1.8-4.3-1.8 4.3-1.9-.8 1.9-4.6v-2.6c-1.4-.1-2.8-.4-4.4-.8z" fill="currentColor"/></svg>
@@ -1740,6 +1741,7 @@
   }
   if(PATHMODE){
     if(/^#\//.test(location.hash)) history.replaceState(null,"",toPath(location.hash.slice(1)));
+    window.addEventListener("hashchange",function(){ if(/^#\//.test(location.hash)){ history.replaceState(null,"",toPath(location.hash.slice(1))); window.dispatchEvent(new Event("gamsa:route")); } });
     new MutationObserver(function(ms){ ms.forEach(function(m){
       m.addedNodes.forEach(function(n){ if(n.nodeType===1){
         if(n.matches && n.matches('a[href^="#/"]')) n.setAttribute("href", toPath(n.getAttribute("href").slice(1)));

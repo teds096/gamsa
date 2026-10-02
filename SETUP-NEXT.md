@@ -13,10 +13,8 @@ Workers & Pages → gamsa → Settings → Build:
 Pages now serves real addresses: gamsa.au/costs, gamsa.au/medicines/spironolactone, gamsa.au/easy/doses.
 Old links like gamsa.au/#/costs keep working and redirect to the new address.
 
-## 2. Send www to the main address (optional, 2 minutes)
-
-Rules → Redirect Rules → Create → "Redirect from WWW to root" template → Deploy.
-The pages already tell search engines that gamsa.au is the main address.
+## 2. www → gamsa.au redirect
+Done 2 Oct 2026 (Rules → Redirect Rules → "Redirect from WWW to root", 301, query string preserved).
 
 ## 3. Turn on the feedback form (10 minutes)
 
@@ -64,7 +62,7 @@ Core Web Vitals (LCP, INP, CLS) from visitors' devices.
 On the first of each month the workflow also runs `scraper/premiums.py`. It rewrites `data/premiums.json` with the brand premium table, and for every PBS item code cited in the content it records the schedule, authority level, dispensed price, general patient charge, and the brands marked "a" (substitutable). The costs page and each medicine's "Cost and PBS" section render from that file, with the "checked" date, so nothing needs hand-editing. If any cited item has vanished from the PBS, the step fails and an issue is opened; if figures changed, a "pbs" issue is opened for a wording read-through. `pbs.gov.au` blocks some cloud networks, so run it locally or in Actions, not from an ad-hoc container.
 
 ## Patient sightings (added v12)
-The "Seen it in stock, or missed out?" form on the Supply page now posts to `/api/prices`' sibling `/api/reports`, using the same database, Turnstile key and secret as the other forms. Run the `sightings` table statement from `functions/schema.sql` in the D1 console. Nothing identifying is stored (medicine, pharmacy name, suburb, what happened, optional note; notes containing an email, link or long number are rejected). Reports show for 14 days on the Supply page, each medicine page and the Patient sightings page. To remove one: `DELETE FROM sightings WHERE id = …` in the D1 console. The old `config.js` / separate Worker idea is gone.
+The "Seen it in stock, or missed out?" form on the Supply page now posts to `/api/prices`' sibling `/api/reports`, using the same database, Turnstile key and secret as the other forms. Run the `sightings` table statement from `functions/schema.sql` in the D1 console. Nothing identifying is stored (medicine, pharmacy name, suburb, what happened, optional note; notes containing an email, link or long number are rejected). Reports show for 14 days on the Supply page, each medicine page and the Patient sightings page. To remove one: open `https://gamsa.au/api/reports?token=YOUR_ADMIN_TOKEN` to see ids, then add `&delete=ID`. The old `config.js` / separate Worker idea is gone.
 
 ## Price reports (added v12)
 Run the new `prices` table statements from `functions/schema.sql` in the D1 console. `/api/prices` uses the same DB binding and TURNSTILE_SECRET as feedback — nothing else to configure. The costs page "What readers report paying" list and the per-medicine line appear once three or more reports exist for a medicine in the last 180 days; until then the page says so. No admin step is needed; if a wrong figure needs removing, delete the row in the D1 console (`DELETE FROM prices WHERE id = …`).

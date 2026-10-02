@@ -1372,7 +1372,7 @@
           "url": "https://www.pbs.gov.au/medicine/item/10205D"
         },
         {
-          "label": "TGA medicine shortage reports database",
+          "label": "TGA medicine shortage search",
           "url": "https://apps.tga.gov.au/prod/msi/search"
         }
       ],
@@ -1564,8 +1564,8 @@
           "url": "https://www.tga.gov.au/resources/artg/14521"
         },
         {
-          "label": "TGA medicine shortage information — testosterone enantate",
-          "url": "https://apps.tga.gov.au/Prod/msi/Search/Details/Testosterone%20enantate"
+          "label": "TGA medicine shortage search",
+          "url": "https://apps.tga.gov.au/prod/msi/search"
         },
         {
           "label": "PBS item pages for the subsidised testosterone alternatives (Authority Required) — neither Primoteston Depot nor Sustanon has a PBS item",
@@ -1600,8 +1600,8 @@
         },
         {
           "n": 6,
-          "text": "Therapeutic Goods Administration. Medicine Shortages Information Initiative — testosterone enantate. Canberra: TGA. Accessed September 2026.",
-          "url": "https://apps.tga.gov.au/Prod/msi/Search/Details/Testosterone%20enantate"
+          "text": "Therapeutic Goods Administration. Medicine Shortages Information Initiative (search: testosterone enantate — no current shortage listed). Canberra: TGA. Accessed 2 October 2026.",
+          "url": "https://apps.tga.gov.au/prod/msi/search"
         }
       ]
     },

@@ -18,14 +18,23 @@ export async function onRequestPost({ request, env }) {
   const form = new FormData(); form.append("secret", env.TURNSTILE_SECRET); form.append("response", String(b.token || ""));
   const check = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", { method: "POST", body: form })
     .then((r) => r.json()).catch(() => ({ success: false }));
-  if (!check.success) return json({ ok: false, error: "verify" }, 403);
+  if (!check.success) return json({ ok: false, error: "verify", codes: check["error-codes"] || [] }, 403);
   await env.DB.prepare("INSERT INTO sightings (created, medicine, pharmacy, region, status, note) VALUES (?, ?, ?, ?, ?, ?)")
     .bind(new Date().toISOString(), medicine, pharmacy, region, status, note).run();
   return json({ ok: true });
 }
 
-export async function onRequestGet({ env }) {
+export async function onRequestGet({ request, env }) {
   if (!env.DB) return json({ reports: [] });
+  // Admin: /api/reports?token=ADMIN_TOKEN lists ids; &delete=ID removes one sighting.
+  const u = new URL(request.url), token = u.searchParams.get("token") || "";
+  if (token) {
+    if (!env.ADMIN_TOKEN || token.length < 24 || token !== env.ADMIN_TOKEN) return json({ ok: false }, 404);
+    const del = u.searchParams.get("delete");
+    if (del) { await env.DB.prepare("DELETE FROM sightings WHERE id = ?").bind(Number(del)).run(); return json({ ok: true, deleted: Number(del) }); }
+    const { results } = await env.DB.prepare("SELECT id, created, medicine, pharmacy, region, status, note FROM sightings ORDER BY created DESC LIMIT 200").all();
+    return json({ ok: true, sightings: results });
+  }
   const since = new Date(Date.now() - DAYS * 864e5).toISOString();
   const { results } = await env.DB.prepare("SELECT created, medicine, pharmacy, region, status, note FROM sightings WHERE created >= ? ORDER BY created DESC LIMIT ?")
     .bind(since, MAX).all();

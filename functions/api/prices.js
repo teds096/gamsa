@@ -23,7 +23,7 @@ export async function onRequestPost({ request, env }) {
   const form = new FormData(); form.append("secret", env.TURNSTILE_SECRET); form.append("response", String(b.token || ""));
   const check = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", { method: "POST", body: form })
     .then((r) => r.json()).catch(() => ({ success: false }));
-  if (!check.success) return json({ ok: false, error: "verify" }, 403);
+  if (!check.success) return json({ ok: false, error: "verify", codes: check["error-codes"] || [] }, 403);
   await env.DB.prepare("INSERT INTO prices (created, medicine, kind, cents, state, pharmacy) VALUES (?, ?, ?, ?, ?, ?)")
     .bind(new Date().toISOString(), medicine, kind, cents, state, pharmacy).run();
   return json({ ok: true });

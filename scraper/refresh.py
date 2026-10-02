@@ -24,6 +24,10 @@ BASE = "https://apps.tga.gov.au/shortages/search/Details/{}"
 # used by the site's filters.
 INGREDIENTS = {
     "estradiol": "estrogen",
+    "estradiol-valerate": "estrogen",
+    "conjugated-estrogens": "estrogen",
+    "dydrogesterone": "progestogen",
+    "testosterone-undecanoate": "testosterone",
     "testosterone": "testosterone",
     "progesterone": "progestogen",
     "medroxyprogesterone": "progestogen",
@@ -62,9 +66,13 @@ def status_from(text):
     return "unverified", text.strip()[:60] or "Status unclear"
 
 
+CHECKED = {}  # ingredient -> HTTP status this run (the TGA page answers 500 when an ingredient has no notices)
+
+
 def scrape(ingredient, category):
     url = BASE.format(ingredient)
     resp = requests.get(url, headers=HEADERS, timeout=30)
+    CHECKED[ingredient] = resp.status_code
     if resp.status_code != 200:
         print(f"  ! {ingredient}: HTTP {resp.status_code}", file=sys.stderr)
         return []
@@ -163,6 +171,7 @@ def main():
 
     LIVE = ("status", "statusLabel", "since", "expectedReturn", "mechanism",
             "note", "sourceUrl", "sourceLabel", "lastVerified")
+    matched = set()
     for row in scraped:
         mid = curated_match(row)
         if mid:
@@ -171,8 +180,31 @@ def main():
                 if row.get(k):
                     entry[k] = row[k]
             by_id[mid] = entry
+            matched.add(mid)
         else:
             by_id[row["id"]] = row
+
+    # Curated entries with no TGA row: if their ingredient page was checked today and
+    # listed nothing for them, that is the TGA saying no shortage has been reported.
+    # A 500 from the TGA page means "no notices for this ingredient" — but only trust it
+    # when other ingredient pages answered normally in the same run.
+    msi_ok = any(code == 200 for code in CHECKED.values())
+    for mid, entry in list(by_id.items()):
+        if mid in matched or entry.get("pin"):
+            continue
+        ing = entry.get("ingredient")
+        if not ing or ing not in CHECKED:
+            continue
+        code = CHECKED[ing]
+        if code == 200 or (code == 500 and msi_ok):
+            by_id[mid] = {**entry,
+                "status": "in_supply",
+                "statusLabel": "No shortage reported to the TGA",
+                "since": "\u2014", "expectedReturn": "\u2014",
+                "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+                "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/" + ing if code == 200 else "https://apps.tga.gov.au/prod/msi/search",
+                "sourceLabel": "TGA shortage database (no notice)",
+                "lastVerified": date.today().isoformat()}
 
     payload = {
         "generatedAt": date.today().strftime("%-d %b %Y"),
