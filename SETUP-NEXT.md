@@ -64,11 +64,14 @@ On the first of each month the workflow also runs `scraper/premiums.py`. It rewr
 ## Patient sightings (added v12)
 The "Seen it in stock, or missed out?" form on the Supply page now posts to `/api/prices`' sibling `/api/reports`, using the same database, Turnstile key and secret as the other forms. Run the `sightings` table statement from `functions/schema.sql` in the D1 console. Nothing identifying is stored (medicine, pharmacy name, suburb, what happened, optional note; notes containing an email, link or long number are rejected). Reports show for 14 days on the Supply page, each medicine page and the Patient sightings page. To remove one: open `https://gamsa.au/api/reports?token=YOUR_ADMIN_TOKEN` to see ids, then add `&delete=ID`. The old `config.js` / separate Worker idea is gone.
 
-## Price reports (added v12)
-Run the new `prices` table statements from `functions/schema.sql` in the D1 console. `/api/prices` uses the same DB binding and TURNSTILE_SECRET as feedback — nothing else to configure. The costs page "What readers report paying" list and the per-medicine line appear once three or more reports exist for a medicine in the last 180 days; until then the page says so. No admin step is needed; if a wrong figure needs removing, delete the row in the D1 console (`DELETE FROM prices WHERE id = …`).
+## Price reports (added v12, removed from the site in v15)
+The reader price-report form and lists were taken off the costs page in v15. `/api/prices` and the D1 `prices` table remain but are unused; harmless to leave, or drop the table with `DROP TABLE prices;`.
 
 ## Dates that now update themselves
 Supply (daily), PBS co-payments (monthly), PBS prices/premiums/listings (monthly) each carry the date of their last check. The costs page, medicine pages, footer and the "Accessed" dates of the references the scrapers actually fetch (PBS item pages, brand premium table, fee schedule, TGA shortages database) are all stamped at build time. Other references keep the date they were read by hand.
 
 ## Release zips and live data (from v14)
 `data/medicines.json` and `data/premiums.json` are written by the scrapers on GitHub. Release zips no longer include them, so an upload cannot overwrite live data with a stale copy (that is what opened the three duplicate "pbs" issues on 2 Oct). `data/manual.json` is still shipped — it is the hand-maintained overlay.
+
+## Inbox alerts (added v15)
+Each daily run reads the feedback inbox and pending pharmacist registrations and, when there is anything new, opens a GitHub issue labelled "inbox" (or comments on the open one) with the messages and the approve/block links. GitHub emails you for every issue and comment. One-off setup: GitHub → repo → Settings → Secrets and variables → Actions → New repository secret → name `ADMIN_TOKEN`, value the same token you set in Cloudflare Pages. Close the "inbox" issue once you have dealt with it; the next batch opens a fresh one. State lives in `data/inbox-state.json` (scraper-owned, not shipped in zips).

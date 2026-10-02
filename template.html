@@ -979,66 +979,9 @@
         (it.general?'. General patient charge '+esc(it.general)+' (dispensed price '+esc(it.dpmq)+')':'')+'.'+
         (subs.length?' Brands your pharmacist may swap between: '+esc(subs.join(', '))+'.':'')+
         (nosub.length?' Listed but not marked as substitutable: '+esc(nosub.join(', '))+'.':'')+'</li>';
-    }).join('')+'</ul><p class="muted small" style="margin:8px 0 0">On a private script, expect roughly the dispensed price plus the pharmacy\u2019s mark-up; the <a href="#/costs#sec-costs-8" data-link>costs guide</a> has reader-reported prices and a form to add yours.</p><div class="paid-med" data-med="'+esc(sec.__med||'')+'"></div><p class="muted small" style="margin:8px 0 0">\u201cMay swap\u201d means the PBS marks these brands as equivalent, so a pharmacist can give you any of them unless your prescriber has written that substitution is not permitted.</p></div>';
-  }
-  function medCodes(m){
-    var sec=(m.sections||[]).filter(function(s){return s.h==="Cost and PBS";})[0]; if(!sec) return [];
-    var out=[],seen={};
-    (sec.body||[]).concat([sec.note||""]).forEach(function(t){
-      (String(t).match(/\b\d{4,5}[A-Z]\b/g)||[]).forEach(function(c){ if(!seen[c]){seen[c]=1; out.push(c);} });
-    });
-    return out;
+    }).join('')+'</ul><p class="muted small" style="margin:8px 0 0">\u201cMay swap\u201d means the PBS marks these brands as equivalent, so a pharmacist can give you any of them unless your prescriber has written that substitution is not permitted.</p></div>';
   }
   function niceDate(s){ var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(s||""); if(!m) return s||""; return (+m[3])+" "+["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][+m[2]-1]+" "+m[1]; }
-  function dollars(c){ return "$"+(c/100).toFixed(2); }
-  var PAID=null, PAID_WAIT=[];
-  function loadPaid(cb){
-    if(PAID){ cb(PAID); return; }
-    PAID_WAIT.push(cb); if(PAID_WAIT.length>1) return;
-    var done=function(d){ PAID=d||{summary:[]}; PAID_WAIT.forEach(function(f){f(PAID);}); PAID_WAIT=[]; };
-    if(!PATHMODE){ done(null); return; }
-    fetch("/api/prices",{cache:"no-store"}).then(function(r){return r.ok?r.json():null;}).then(done).catch(function(){done(null);});
-  }
-  function paidRows(medId){
-    return ((PAID&&PAID.summary)||[]).filter(function(r){return !medId||r.medicine===medId;});
-  }
-  function paidHtml(rows, withName){
-    if(!rows.length) return '';
-    var names={}; (MEDINFO.medicines||[]).forEach(function(m){names[m.id]=m.name;});
-    return '<ul>'+rows.map(function(r){
-      return '<li>'+(withName?'<b>'+esc(names[r.medicine]||r.medicine)+'</b>, ':'')+(r.kind==="pbs"?"PBS script":"private script")+': typically '+dollars(r.median)+
-        ' (range '+dollars(r.low)+' to '+dollars(r.high)+', '+r.n+' reports, latest '+esc(r.latest)+')</li>';
-    }).join('')+'</ul>';
-  }
-  function fillPaid(el, medId, withName){
-    loadPaid(function(){
-      var rows=paidRows(medId);
-      el.innerHTML = rows.length ? paidHtml(rows, withName)
-        : '<p class="muted small" style="margin:0">No reports yet'+(PAID&&PAID.days?' in the last '+PAID.days+' days':'')+'. Figures appear once three or more people have reported the same medicine.</p>';
-    });
-  }
-  function priceBlock(){
-    var items=(PREMIUMS&&PREMIUMS.items)||{}, rows=[];
-    (MEDINFO.medicines||[]).forEach(function(m){
-      var parts=[];
-      medCodes(m).forEach(function(c){ var it=items[c]; if(it&&it.dpmq) parts.push(esc(it.brands.map(function(b){return b.name;}).join(" / "))+' (item '+esc(c)+') '+esc(it.dpmq)); });
-      if(parts.length) rows.push('<li><b>'+esc(m.name)+'</b>: '+parts.join('; ')+'</li>');
-    });
-    var opts=(MEDINFO.medicines||[]).map(function(m){return '<option value="'+esc(m.id)+'">'+esc(m.name)+'</option>';}).join('');
-    return '<div class="prem" id="paidBox"><p class="prem-h">What readers report paying</p><div id="paidList"></div></div>'+
-      '<div class="prem"><p class="prem-h">PBS dispensed prices, checked '+esc(PREMIUMS.checkedAt)+'</p><ul>'+rows.join('')+'</ul>'+
-      '<p class="muted small" style="margin:8px 0 0">The dispensed price is what the PBS pays the pharmacy in total for one script. On a private script the pharmacy sets its own price, usually about this figure plus a mark-up, so treat it as a floor, not a quote.</p></div>'+
-      '<form class="rep" id="pxForm" novalidate style="margin-top:14px"><h2 class="h3" style="margin:0 0 6px">Report what you paid</h2>'+
-      '<p class="muted small" style="margin:0 0 8px">Nothing identifying is stored: just the medicine, the amount, whether it was PBS or private, and optionally your state and the kind of pharmacy.</p>'+
-      '<div class="f"><label for="pxMed">Medicine</label><select id="pxMed">'+opts+'</select></div>'+
-      '<div class="f"><label for="pxKind">Script</label><select id="pxKind"><option value="private">Private (full price)</option><option value="pbs">PBS (subsidised)</option></select></div>'+
-      '<div class="f"><label for="pxAmt">Amount paid for one script, in dollars</label><input id="pxAmt" type="number" inputmode="decimal" min="1" max="5000" step="0.01" required></div>'+
-      '<div class="f"><label for="pxState">State or territory (optional)</label><select id="pxState"><option value="">Prefer not to say</option><option>SA</option><option>VIC</option><option>NSW</option><option>QLD</option><option>WA</option><option>TAS</option><option>NT</option><option>ACT</option></select></div>'+
-      '<div class="f"><label for="pxPh">Kind of pharmacy (optional)</label><select id="pxPh"><option value="">Prefer not to say</option><option value="chain">Discount chain</option><option value="independent">Independent or local</option><option value="online">Online</option></select></div>'+
-      '<div class="hp" aria-hidden="true"><label for="pxSite">Leave this empty</label><input id="pxSite" tabindex="-1" autocomplete="off"></div>'+
-      '<div id="pxTurnstile"></div><div><button class="btn" type="submit" id="pxSend">Send price report</button></div>'+
-      '<p class="muted small" role="status" aria-live="polite" id="pxStatus" style="margin:0"></p></form>';
-  }
   function premiumList(){
     var rows=(PREMIUMS&&PREMIUMS.rows)||[];
     if(!rows.length) return '<p class="muted">No premium-priced brands are listed for these medicines at the moment.</p>';
@@ -1066,7 +1009,7 @@
       c.sections.map(function(s,i){
         newSection();
         return '<section class="block" id="sec-'+v+'-'+i+'" tabindex="-1"><h2>'+esc(s.h)+'</h2>'+
-          (s.premiums ? premiumList() : '')+(s.prices ? priceBlock() : '')+
+          (s.premiums ? premiumList() : '')+
           (s.body||[]).map(function(p){return '<p>'+C(p)+'</p>';}).join("")+
           (s.list&&s.list.length?'<ul>'+s.list.map(function(li){return '<li>'+C(li)+'</li>';}).join("")+'</ul>':'')+
           (s.svg?'<figure>'+s.svg+(s.svgCaption?'<figcaption>'+C(s.svgCaption)+'</figcaption>':'')+'</figure>':'')+
@@ -1209,8 +1152,7 @@
     .then(function(){ btn.disabled=false; if(window.turnstile && fbWidget!==null) window.turnstile.reset(fbWidget); });
   });
 
-  /* ================= price reports ================= */
-  var pxWidget=null;
+  /* ================= turnstile loader ================= */
   function tsLoad(cb){
     if(!TURNSTILE_SITEKEY || /^__/.test(TURNSTILE_SITEKEY)) return cb(false);
     if(window.turnstile) return cb(true);
@@ -1218,36 +1160,6 @@
     if(!document.querySelector('script[src*="turnstile"]')){ var sc=document.createElement("script");
       sc.src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=gamsaTurnstile&render=explicit"; sc.async=true; document.head.appendChild(sc); }
   }
-  function pxPrepare(){
-    var f=document.getElementById("pxForm"); if(!f||f.__wired) return; f.__wired=true;
-    var st=document.getElementById("pxStatus"), say=function(t,c){ st.textContent=t; st.className="muted small "+(c||""); };
-    fillPaid(document.getElementById("paidList"), null, true);
-    tsLoad(function(ok){
-      if(!ok){ say("Price reports are not switched on yet."); document.getElementById("pxSend").disabled=true; return; }
-      if(pxWidget===null) pxWidget=window.turnstile.render("#pxTurnstile",{sitekey:TURNSTILE_SITEKEY,size:"flexible",theme:"light"});
-    });
-    f.addEventListener("submit",function(e){
-      e.preventDefault();
-      var amt=parseFloat(document.getElementById("pxAmt").value);
-      if(!(amt>=1&&amt<=5000)){ say("Please enter the amount you paid, in dollars.","err"); document.getElementById("pxAmt").focus(); return; }
-      var token=(window.turnstile&&pxWidget!==null)?window.turnstile.getResponse(pxWidget):"";
-      if(!token){ say("Please complete the check above the button.","err"); return; }
-      var btn=document.getElementById("pxSend"); btn.disabled=true; say("Sending\u2026");
-      fetch("/api/prices",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({
-        medicine:document.getElementById("pxMed").value, kind:document.getElementById("pxKind").value, amount:amt,
-        state:document.getElementById("pxState").value, pharmacy:document.getElementById("pxPh").value,
-        website:document.getElementById("pxSite").value, token:token})})
-      .then(function(r){ return r.ok?r.json():Promise.reject(r.status); })
-      .then(function(){ f.reset(); PAID=null; fillPaid(document.getElementById("paidList"), null, true); say("Thank you \u2014 your report has been added.","ok"); })
-      .catch(function(){ say("Sorry, that did not send. Please try again in a moment.","err"); })
-      .then(function(){ btn.disabled=false; if(window.turnstile&&pxWidget!==null) window.turnstile.reset(pxWidget); });
-    });
-  }
-  function pxFillMed(){
-    var el=document.querySelector("#v-med .paid-med"); if(!el||el.__done) return; el.__done=true;
-    loadPaid(function(){ var rows=paidRows(el.getAttribute("data-med")); if(rows.length) el.innerHTML='<p class="prem-h" style="margin-top:8px">What readers report paying</p>'+paidHtml(rows,false); });
-  }
-
   /* ================= pharmacy stock reports ================= */
   var prForm=document.getElementById("prForm"), prMsg=document.getElementById("prMsg"),
       prGroups=document.getElementById("prGroups"), prStatus=document.getElementById("prStatus"),
@@ -1792,7 +1704,6 @@
     renderMedIndex();
     if(sq && sq.value){ sq.value=""; }
     if(h==="/feedback") fbPrepare(); else fbFrom = PATHMODE ? toPath(h) : "#"+h;
-    if(h==="/costs") pxPrepare(); else if(h==="/med") pxFillMed();
     if(h==="/pharmacy-reports") prOpen();
     if(h==="/supply") prPanel();
     if(h==="/sightings") renderSightings();

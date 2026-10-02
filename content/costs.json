@@ -118,8 +118,7 @@
         "That last one catches people out. During the estradiol patch shortages, some substitute and overseas-registered products were PBS-listed and could be swapped at the pharmacy without a new prescription, while others were not subsidised the same way or needed a new script [14].",
         "Private prices vary between pharmacies and do not count towards the Safety Net [16]. It is entirely reasonable to ring around, and to ask whether a PBS-subsidised alternative exists."
       ],
-      "note": "Always ask, before the medicine is dispensed: is this PBS or private, what will it cost me, and is there a subsidised alternative?",
-      "prices": true
+      "note": "Always ask, before the medicine is dispensed: is this PBS or private, what will it cost me, and is there a subsidised alternative?"
     },
     {
       "h": "Brands and generics: what is actually different",
@@ -181,7 +180,7 @@
       "body": [
         "The co-payment amounts and Safety Net thresholds on this page are checked automatically against the PBS fee schedule on the first of each month, and updated if they have changed. Last checked {{PBS_CHECKED}} [3].",
         "Brand premiums, PBS listings, which brands may be substituted, and the price of each listed item are also checked automatically on the first of each month, and the figures shown on this page and on each medicine page come from that check. Last checked {{PREMIUMS_CHECKED}} [17].",
-        "Private prices come from two places: reports from readers, which update as they arrive, and the PBS dispensed price of each listed medicine, checked {{PREMIUMS_CHECKED}}. If a figure here does not match what you are charged, the pharmacy's screen is the current answer."
+        "Private prices vary between pharmacies and are not tracked here; ask before the medicine is dispensed. If a figure on this page does not match what you are charged, the pharmacy's screen is the current answer."
       ]
     }
   ],
@@ -317,6 +316,6 @@
     "conc_copay": "7.70",
     "sn_general": "1,748.20",
     "sn_conc": "277.20",
-    "checkedAt": "2 Oct 2026"
+    "checkedAt": "1 Oct 2026"
   }
 }
