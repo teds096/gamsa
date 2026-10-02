@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-AU" data-routing="path">
+<html lang="en-AU">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -16,7 +16,6 @@
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_AU">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "Gender-Affirming Medicines South Australia", "alternateName": "GAMSA", "url": "https://gamsa.au/", "logo": "https://gamsa.au/og-image.png", "@id": "https://gamsa.au/#org"}, {"@type": "WebSite", "name": "Gender-Affirming Medicines South Australia", "url": "https://gamsa.au/", "inLanguage": "en-AU", "publisher": {"@id": "https://gamsa.au/#org"}}]}</script>
 <title>Gender-Affirming Medicines South Australia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,7 +53,7 @@
         </div>
         <div class="a11y-row">
           <div class="t"><b>Easy Read guides</b><span>Short guides in easy words with pictures. Each one prints or saves as a PDF.</span></div>
-          <a class="a11y-act" id="erLink" href="/easy" data-link>Open</a>
+          <a class="a11y-act" id="erLink" href="#/easy" data-link>Open</a>
         </div>
         <p class="a11y-note">Your choices are remembered on this device.</p>
       </div>
@@ -64,19 +63,19 @@
 
 <div class="bar">
   <div class="wrap bar-in">
-    <a class="logo" href="/" data-link>
+    <a class="logo" href="#/" data-link>
       <svg width="26" height="26" viewBox="0 0 70 70" aria-hidden="true"><rect width="70" height="70" rx="20" fill="#0B5D7A"/><rect x="12" y="28.5" width="46" height="13" rx="6.5" fill="#FFFFFF"/><rect x="28.5" y="12" width="13" height="46" rx="6.5" fill="#BFE3DA"/></svg>
       GAMSA
     </a>
     <button class="navbtn" id="navbtn" aria-expanded="false" type="button">Menu</button>
     <nav class="main" id="nav" aria-label="Main">
-      <a href="/" data-link>Home</a>
-      <a href="/supply" data-link>Shortages</a>
-      <a href="/medicines" data-link>Medicines</a>
-      <a href="/doses" data-link>Doses guide</a>
-      <a href="/using" data-link>How-to-use guide</a>
-      <a href="/pharmacy" data-link>Pharmacy guide</a>
-      <a href="/costs" data-link>Costs guide</a>
+      <a href="#/" data-link>Home</a>
+      <a href="#/supply" data-link>Shortages</a>
+      <a href="#/medicines" data-link>Medicines</a>
+      <a href="#/doses" data-link>Doses guide</a>
+      <a href="#/using" data-link>How-to-use guide</a>
+      <a href="#/pharmacy" data-link>Pharmacy guide</a>
+      <a href="#/costs" data-link>Costs guide</a>
     </nav>
   </div>
 </div>
@@ -111,7 +110,7 @@
 
   <!-- ALL SIGHTINGS -->
   <div class="view" id="v-sightings">
-    <a class="backlink" href="/supply">&larr; Back to supply &amp; shortages</a>
+    <a class="backlink" href="#/supply">&larr; Back to supply &amp; shortages</a>
     <div class="page-head">
       <h1 tabindex="-1">Patient sightings</h1>
       <p class="lede">What people have reported seeing on pharmacy shelves, newest first and grouped by medicine. These are reports from the public, not verified stock levels &mdash; always ring the pharmacy before travelling.</p>
@@ -123,14 +122,14 @@
     <p class="muted small" role="status" id="scount" style="margin:0 0 10px;"></p>
     <div id="sgroups"></div>
     <p class="muted small" role="status" aria-live="polite" id="sempty" style="display:none;">No sightings match that search.</p>
-    <p class="quick" style="margin-top:22px;"><a href="/supply">Share a sighting &rarr;</a></p>
+    <p class="quick" style="margin-top:22px;"><a href="#/supply">Share a sighting &rarr;</a></p>
   </div>
 
   <!-- ONE MEDICINE -->
   <div class="view" id="v-med"></div>
 
   <!-- HOME -->
-  <div class="view on" id="v-home">
+  <div class="view" id="v-home">
     <div class="hero">
       <svg class="hero-motif" viewBox="0 0 70 70" aria-hidden="true" focusable="false"><rect x="12" y="28.5" width="46" height="13" rx="6.5" fill="#FFFFFF"/><rect x="28.5" y="12" width="13" height="46" rx="6.5" fill="#BFE3DA"/></svg>
       <svg class="hero-motif-2" viewBox="0 0 70 70" aria-hidden="true" focusable="false"><rect x="12" y="28.5" width="46" height="13" rx="6.5" fill="#BFE3DA"/><rect x="28.5" y="12" width="13" height="46" rx="6.5" fill="#FFFFFF"/></svg>
@@ -142,29 +141,29 @@
     </div>
 
     <div class="tiles">
-      <a class="tile" href="/supply" data-link>
+      <a class="tile" href="#/supply" data-link>
         <span class="t">Supply &amp; shortages</span>
         <span class="d">Which medicines are hard to get right now, what to do about it, and what pharmacists report in stock.</span>
         <span class="live">Updated daily</span>
       </a>
-      <a class="tile" href="/costs" data-link>
+      <a class="tile" href="#/costs" data-link>
         <span class="t">Costs and the PBS</span>
         <span class="d">What you pay at the counter, the safety net, and what to do if cost is a barrier.</span>
         <span class="live">Updated monthly</span>
       </a>
-      <a class="tile" href="/medicines" data-link>
+      <a class="tile" href="#/medicines" data-link>
         <span class="t">Medicines A&ndash;Z</span>
         <span class="d">One page per medicine: how it works, doses used here, side effects, monitoring, cost and current supply.</span>
       </a>
-      <a class="tile" href="/doses" data-link>
+      <a class="tile" href="#/doses" data-link>
         <span class="t">Doses and formulations</span>
         <span class="d">The forms each hormone comes in, and the dose ranges Australian prescribers work within.</span>
       </a>
-      <a class="tile" href="/using" data-link>
+      <a class="tile" href="#/using" data-link>
         <span class="t">Using your medicine</span>
         <span class="d">Patches, gels, injections and tablets — how to use them, store them and dispose of them.</span>
       </a>
-      <a class="tile" href="/pharmacy" data-link>
+      <a class="tile" href="#/pharmacy" data-link>
         <span class="t">Working with your pharmacy</span>
         <span class="d">What to bring, what to do if you run out, and getting your name right on the label.</span>
       </a>
@@ -204,7 +203,7 @@
       <p class="muted small" style="margin-top:8px;max-width:60ch;">What registered pharmacists say is on their shelves right now, checked against the AHPRA register before publishing. The official data above tells you about Australia; this tells you about particular pharmacies.</p>
       <div id="prPanelList" class="ticker" hidden></div>
       <p class="muted small" role="status" aria-live="polite" id="prPanelStatus" style="margin:8px 0 0"></p>
-      <p class="quick" style="margin-top:12px;"><a class="btn" href="/pharmacy-reports" data-link>See all pharmacy stock reports</a> &nbsp; <a href="#/pharmacy-reports#prForm" data-link>Pharmacists: post a report &rarr;</a></p>
+      <p class="quick" style="margin-top:12px;"><a class="btn" href="#/pharmacy-reports" data-link>See all pharmacy stock reports</a> &nbsp; <a href="#/pharmacy-reports#prForm" data-link>Pharmacists: post a report &rarr;</a></p>
     </div>
 
     <div class="sight">
@@ -250,7 +249,7 @@
   <div class="view" id="v-easy"></div>
   <div class="view" id="v-easy-guide"></div>
   <div class="view" id="v-pharmacy-reports">
-    <a class="backlink" href="/supply">&larr; Back to supply &amp; shortages</a>
+    <a class="backlink" href="#/supply">&larr; Back to supply &amp; shortages</a>
     <div class="page-head">
       <h1 tabindex="-1">Pharmacy stock reports</h1>
       <p class="lede">Stock reports posted by registered pharmacists, newest first. Each pharmacist's registration number is checked against the AHPRA register before their first report is published; after that their reports appear straight away.</p>
@@ -320,22 +319,22 @@
       <div>
         <h2 class="h3">Sections</h2>
         <ul class="sitemap" role="list">
-          <li><a href="/" data-link>Home</a></li>
-          <li><a href="/supply" data-link>Shortages &mdash; what is hard to get now</a></li>
-          <li><a href="/medicines" data-link>Medicines A&ndash;Z &mdash; an in-depth page for each medicine</a></li>
-          <li><a href="/sightings" data-link>Patient sightings &mdash; what people have seen in stock</a></li>
-          <li><a href="/pharmacy-reports" data-link>Pharmacy stock reports &mdash; posted by registered pharmacists</a></li>
-          <li><a href="/doses" data-link>Doses guide &mdash; what each medicine is, and the usual ranges</a></li>
-          <li><a href="/using" data-link>How-to-use guide &mdash; patches, gels, injections, tablets</a></li>
-          <li><a href="/pharmacy" data-link>Pharmacy guide &mdash; what to bring, what to ask, running out</a></li>
-          <li><a href="/costs" data-link>Costs guide &mdash; what you pay, and the PBS</a></li>
+          <li><a href="#/" data-link>Home</a></li>
+          <li><a href="#/supply" data-link>Shortages &mdash; what is hard to get now</a></li>
+          <li><a href="#/medicines" data-link>Medicines A&ndash;Z &mdash; an in-depth page for each medicine</a></li>
+          <li><a href="#/sightings" data-link>Patient sightings &mdash; what people have seen in stock</a></li>
+          <li><a href="#/pharmacy-reports" data-link>Pharmacy stock reports &mdash; posted by registered pharmacists</a></li>
+          <li><a href="#/doses" data-link>Doses guide &mdash; what each medicine is, and the usual ranges</a></li>
+          <li><a href="#/using" data-link>How-to-use guide &mdash; patches, gels, injections, tablets</a></li>
+          <li><a href="#/pharmacy" data-link>Pharmacy guide &mdash; what to bring, what to ask, running out</a></li>
+          <li><a href="#/costs" data-link>Costs guide &mdash; what you pay, and the PBS</a></li>
         </ul>
       </div>
       <div>
         <h2 class="h3">About this site</h2>
         <p>GAMSA publishes independent, referenced medicines information for trans and gender diverse people in South Australia. It is not affiliated with any clinic, pharmacy or manufacturer, and carries no advertising or sponsorship.</p>
         <p>Supply information is refreshed daily from the Therapeutic Goods Administration. PBS co-payment and Safety Net figures are checked monthly against the Pharmaceutical Benefits Scheme. Clinical content is written and reviewed by hand, and every claim is referenced on the page it appears.</p>
-        <p><a href="/feedback" data-link>Send feedback or report a mistake</a></p>
+        <p><a href="#/feedback" data-link>Send feedback or report a mistake</a></p>
         <p class="rev" id="rev"></p>
       </div>
       </div>

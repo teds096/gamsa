@@ -1,5 +1,5 @@
 {
- "checkedAt": "1 Oct 2026",
+ "checkedAt": "2 Oct 2026",
  "rows": [
   {
    "brand": "Aldactone",
@@ -98,41 +98,6 @@
    ]
   }
  ],
- "listings": {
-  "checked": [
-   "10146B",
-   "10203B",
-   "10205D",
-   "10378F",
-   "10380H",
-   "11740X",
-   "11921K",
-   "14023C",
-   "14160G",
-   "14719Q",
-   "14730G",
-   "14733K",
-   "14741W",
-   "1663M",
-   "1664N",
-   "2339D",
-   "2707L",
-   "2913H",
-   "2993M",
-   "4233T",
-   "8244X",
-   "8274L",
-   "8286D",
-   "8311K",
-   "8425K",
-   "8633J",
-   "8761D",
-   "8762E",
-   "8830R",
-   "8954G"
-  ],
-  "missing": []
- },
  "items": {
   "10146B": {
    "name": "ESTRADIOL (&) ESTRADIOL + DYDROGESTERONE",
@@ -394,8 +359,8 @@
    "name": "DOXYCYCLINE",
    "schedule": "General Schedule",
    "authority": "Restricted Benefit",
-   "dpmq": "",
-   "general": "",
+   "dpmq": "-",
+   "general": "-",
    "brands": [
     {
      "name": "Doryx",
@@ -403,23 +368,6 @@
     },
     {
      "name": "Mayne Pharma Doxycycline",
-     "sub": true
-    }
-   ]
-  },
-  "2913H": {
-   "name": "LEVONORGESTREL",
-   "schedule": "General Schedule",
-   "authority": "No restrictions",
-   "dpmq": "$21.83",
-   "general": "$25.00",
-   "brands": [
-    {
-     "name": "Microlut 28",
-     "sub": true
-    },
-    {
-     "name": "Mirolesa",
      "sub": true
     }
    ]
@@ -441,8 +389,8 @@
    "name": "FINASTERIDE",
    "schedule": "Repatriation Pharmaceutical Benefits",
    "authority": "Authority Required",
-   "dpmq": "",
-   "general": "",
+   "dpmq": "-",
+   "general": "-",
    "brands": [
     {
      "name": "APO-Finasteride",
@@ -612,5 +560,39 @@
     }
    ]
   }
+ },
+ "listings": {
+  "checked": [
+   "10146B",
+   "10203B",
+   "10205D",
+   "10378F",
+   "10380H",
+   "11740X",
+   "11921K",
+   "14023C",
+   "14160G",
+   "14719Q",
+   "14730G",
+   "14733K",
+   "14741W",
+   "1663M",
+   "1664N",
+   "2339D",
+   "2707L",
+   "2993M",
+   "4233T",
+   "8244X",
+   "8274L",
+   "8286D",
+   "8311K",
+   "8425K",
+   "8633J",
+   "8761D",
+   "8762E",
+   "8830R",
+   "8954G"
+  ],
+  "missing": []
  }
 }
