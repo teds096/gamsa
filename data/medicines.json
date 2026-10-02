@@ -25,26 +25,6 @@
    "lastVerified": "2026-10-02"
   },
   {
-   "id": "duavive-0-45-20-conjugated-estrogens-bazedoxifene--as-acetat",
-   "brand": "DUAVIVE 0.45/20 conjugated estrogens/bazedoxifene (as acetate) 0.45 mg/20 mg modified release tablet blister pack AUST R: 262525 Active ingredients: bazedoxifene acetate conjugated estrogens Dosage form: Tablet, modified release Sponsor: Pfizer Australia Pty Ltd Phone: 1800 675 229",
-   "genericName": "Conjugated-estrogens",
-   "brands": [
-    "DUAVIVE 0.45/20 conjugated estrogens/bazedoxifene (as acetate) 0.45 mg/20 mg modified release tablet blister pack AUST R: 262525 Active ingredients: bazedoxifene acetate conjugated estrogens Dosage form: Tablet, modified release Sponsor: Pfizer Australia Pty Ltd Phone: 1800 675 229"
-   ],
-   "form": "",
-   "strengthLabel": "",
-   "category": "estrogen",
-   "status": "in_supply",
-   "statusLabel": "Available",
-   "since": "\u2014",
-   "expectedReturn": "\u2014",
-   "mechanism": "",
-   "note": "Automatically pulled from the TGA shortage record.",
-   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/conjugated-estrogens",
-   "sourceLabel": "TGA shortage record",
-   "lastVerified": "2026-10-02"
-  },
-  {
    "id": "androcur",
    "brand": "Androcur",
    "strengthLabel": "Cyproterone acetate 50 mg / 100 mg",
@@ -506,46 +486,6 @@
     "Reandron 1000"
    ],
    "ingredient": "testosterone-undecanoate",
-   "lastVerified": "2026-10-02"
-  },
-  {
-   "id": "gonadron-testosterone-undecanoate-1000-mg-4-ml-oily-solution",
-   "brand": "GONADRON testosterone undecanoate 1000 mg/4 mL oily solution for injection vial AUST R: 414398 Active ingredients: testosterone undecanoate Dosage form: Injection, solution Sponsor: Sun Pharma ANZ Pty Ltd Phone: 0298872600",
-   "genericName": "Testosterone-undecanoate",
-   "brands": [
-    "GONADRON testosterone undecanoate 1000 mg/4 mL oily solution for injection vial AUST R: 414398 Active ingredients: testosterone undecanoate Dosage form: Injection, solution Sponsor: Sun Pharma ANZ Pty Ltd Phone: 0298872600"
-   ],
-   "form": "",
-   "strengthLabel": "",
-   "category": "testosterone",
-   "status": "in_supply",
-   "statusLabel": "Available",
-   "since": "\u2014",
-   "expectedReturn": "\u2014",
-   "mechanism": "",
-   "note": "Automatically pulled from the TGA shortage record.",
-   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/testosterone-undecanoate",
-   "sourceLabel": "TGA shortage record",
-   "lastVerified": "2026-10-02"
-  },
-  {
-   "id": "rejunon-1000-testosterone-undecanoate-1000-mg-in-4-ml-oily-s",
-   "brand": "REJUNON 1000 testosterone undecanoate 1000 mg in 4 mL oily solution for injection vial AUST R: 407004 Active ingredients: testosterone undecanoate Dosage form: Injection, solution Sponsor: Juno Pharmaceuticals Pty Ltd Phone: 0388881288",
-   "genericName": "Testosterone-undecanoate",
-   "brands": [
-    "REJUNON 1000 testosterone undecanoate 1000 mg in 4 mL oily solution for injection vial AUST R: 407004 Active ingredients: testosterone undecanoate Dosage form: Injection, solution Sponsor: Juno Pharmaceuticals Pty Ltd Phone: 0388881288"
-   ],
-   "form": "",
-   "strengthLabel": "",
-   "category": "testosterone",
-   "status": "in_supply",
-   "statusLabel": "Available",
-   "since": "\u2014",
-   "expectedReturn": "\u2014",
-   "mechanism": "",
-   "note": "Automatically pulled from the TGA shortage record.",
-   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/testosterone-undecanoate",
-   "sourceLabel": "TGA shortage record",
    "lastVerified": "2026-10-02"
   }
  ]
