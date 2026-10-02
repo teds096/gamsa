@@ -69,3 +69,6 @@ Run the new `prices` table statements from `functions/schema.sql` in the D1 cons
 
 ## Dates that now update themselves
 Supply (daily), PBS co-payments (monthly), PBS prices/premiums/listings (monthly) each carry the date of their last check. The costs page, medicine pages, footer and the "Accessed" dates of the references the scrapers actually fetch (PBS item pages, brand premium table, fee schedule, TGA shortages database) are all stamped at build time. Other references keep the date they were read by hand.
+
+## Release zips and live data (from v14)
+`data/medicines.json` and `data/premiums.json` are written by the scrapers on GitHub. Release zips no longer include them, so an upload cannot overwrite live data with a stale copy (that is what opened the three duplicate "pbs" issues on 2 Oct). `data/manual.json` is still shipped — it is the hand-maintained overlay.

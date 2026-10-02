@@ -182,7 +182,7 @@ def main():
             by_id[mid] = entry
             matched.add(mid)
         else:
-            by_id[row["id"]] = row
+            print(f"  (unmatched TGA row, not shown: {row['brand'][:60]})")
 
     # Curated entries with no TGA row: if their ingredient page was checked today and
     # listed nothing for them, that is the TGA saying no shortage has been reported.

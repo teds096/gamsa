@@ -1752,6 +1752,7 @@
       var a=e.target.closest("a[href]"); if(!a||a.target) return;
       var h=a.getAttribute("href");
       if(h.charAt(0)!=="/"||h.charAt(1)==="/") return;
+      if(a.hasAttribute("download")||/\.(pdf|zip|png|jpg|xml|txt|ico)(\?|#|$)/i.test(h)) return;  // real files: let the browser fetch them
       e.preventDefault();
       var r=fromPath(h.split("#")[0]), anc=h.split("#")[1]||"";
       if(r!==curRoute()) go(r, anc);
