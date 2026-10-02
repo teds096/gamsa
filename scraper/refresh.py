@@ -149,6 +149,15 @@ def main():
         except Exception:
             existing = []
     manual = json.loads(MANUAL.read_text()) if MANUAL.exists() else []
+    # Scraped-origin rows from earlier runs that no content page links to are stale
+    # strays (e.g. Duavive, duplicate Gonadron/Rejunon rows); drop them before merging.
+    keep_ids = {m["id"] for m in manual}
+    try:
+        for med in json.loads((OUT.parents[1] / "content" / "medicines.json").read_text())["medicines"]:
+            keep_ids |= set(med.get("supplyIds", []))
+    except Exception:
+        pass
+    existing = [m for m in existing if m["id"] in keep_ids or m.get("sourceLabel") != "TGA shortage record" or m.get("ingredient")]
     by_id = {m["id"]: m for m in existing}
     for m in manual:
         by_id[m["id"]] = {**by_id.get(m["id"], {}), **m}
