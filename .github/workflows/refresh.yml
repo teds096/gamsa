@@ -34,6 +34,15 @@ jobs:
           python scraper/premiums.py | tee /tmp/premiums.log
           grep -q PREMIUMS_CHANGED /tmp/premiums.log && echo "changed=true" >> "$GITHUB_OUTPUT" || true
 
+      - name: Inbox — new feedback or pending pharmacists (daily)
+        continue-on-error: true
+        id: inbox
+        env:
+          ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
+        run: |
+          python scraper/inbox.py | tee /tmp/inbox.log
+          grep -q INBOX_NEW /tmp/inbox.log && echo "new=true" >> "$GITHUB_OUTPUT" || true
+
       - name: Check the data still matches the content pages
         run: python scraper/check.py
 
@@ -71,3 +80,17 @@ jobs:
             await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo,
               title: "PBS brand premiums or listings changed — check the costs wording", labels: ["pbs"],
               body: "The monthly PBS check found changes. The figures on the site have updated automatically; read the costs page prose and the affected medicine pages in case the wording needs a human touch.\n\n```\n" + log + "\n```"});
+
+      - name: Tell Ted about new feedback or registrations
+        if: steps.inbox.outputs.new == 'true'
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const fs = require("fs");
+            const body = fs.readFileSync("/tmp/inbox.md", "utf8"), title = fs.readFileSync("/tmp/inbox-title.txt", "utf8").trim();
+            const {data: open} = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "inbox"});
+            if (open.length) {
+              await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: open[0].number, body: "**" + title + "**\n\n" + body});
+            } else {
+              await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo, title, body, labels: ["inbox"]});
+            }
