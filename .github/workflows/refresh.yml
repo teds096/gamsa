@@ -66,6 +66,8 @@ jobs:
         with:
           script: |
             const log = require("fs").readFileSync("/tmp/premiums.log", "utf8");
+            const {data: open} = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "pbs"});
+            if (open.length) { core.info("pbs issue already open — not opening another"); return; }
             await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo,
               title: "PBS brand premiums or listings changed — check the costs wording", labels: ["pbs"],
               body: "The monthly PBS check found changes. The figures on the site have updated automatically; read the costs page prose and the affected medicine pages in case the wording needs a human touch.\n\n```\n" + log + "\n```"});
