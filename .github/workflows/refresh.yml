@@ -18,6 +18,7 @@ jobs:
       - run: pip install requests beautifulsoup4 rjsmin rcssmin
 
       - name: Supply data (daily)
+        id: supply
         run: python scraper/refresh.py
 
       - name: Costs and PBS figures (monthly)
@@ -44,12 +45,15 @@ jobs:
           grep -q INBOX_NEW /tmp/inbox.log && echo "new=true" >> "$GITHUB_OUTPUT" || true
 
       - name: Check the data still matches the content pages
+        id: check
         run: python scraper/check.py
 
       - name: Rebuild the site
+        id: build
         run: python build.py
 
       - name: Commit if anything changed
+        id: commit
         run: |
           git config user.name "site-bot"
           git config user.email "actions@github.com"
@@ -94,3 +98,33 @@ jobs:
             } else {
               await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo, title, body, labels: ["inbox"]});
             }
+
+      # Run metadata for the external health check. Written and committed on every run,
+      # success or failure. Never read by build.py and never a drift-guard input.
+      - name: Write run status
+        if: always()
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const fs = require("fs");
+            const outcomes = {supply: "${{ steps.supply.outcome }}", costs: "${{ steps.costs.outcome }}", premiums: "${{ steps.premiums.outcome }}",
+              inbox: "${{ steps.inbox.outcome }}", check: "${{ steps.check.outcome }}", build: "${{ steps.build.outcome }}", commit: "${{ steps.commit.outcome }}"};
+            const failed = Object.keys(outcomes).filter(k => outcomes[k] === "failure");
+            let issue = null;
+            try {
+              const {data: open} = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "scraper"});
+              if (open.length) issue = open[0].html_url;
+            } catch (e) { core.warning("could not list issues: " + e.message); }
+            const status = {finishedAt: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"), ok: failed.length === 0, failedSteps: failed,
+              issue, monthlyCostsRun: outcomes.costs !== "skipped"};
+            fs.mkdirSync("data", {recursive: true});
+            fs.writeFileSync("data/status.json", JSON.stringify(status, null, 2) + "\n");
+            core.info(JSON.stringify(status));
+
+      - name: Commit run status
+        if: always()
+        run: |
+          git config user.name "site-bot"
+          git config user.email "actions@github.com"
+          git add data/status.json
+          git diff --cached --quiet || (git commit -m "Run status ($(date -u +%Y-%m-%dT%H:%MZ))" && git push)
