@@ -5,7 +5,7 @@
 <style>
   :root{
     color-scheme:light;
-    --bg:#FFFFFF; --panel:#F6F8FA; --line:#DCE3E8; --line-2:#EDF1F4;
+    --bg:#FFFFFF; --card:#fff; --on-brand:#fff; --panel:#F6F8FA; --line:#DCE3E8; --line-2:#EDF1F4;
     --ink:#10181F; --ink-2:#4A5966;
     --brand:#0B5D7A; --brand-2:#08485E; --brand-soft:#E6F1F6;
     --red:#A32B25; --red-soft:#FBEAE8;
@@ -26,8 +26,8 @@
   h1{font-size:clamp(26px,5.2vw,36px);font-weight:700;}
   h2{font-size:clamp(20px,3.6vw,25px);font-weight:700;}
   h3,h2.h3{font-size:17px;font-weight:600;}
-  .fig-open{position:absolute;top:8px;right:8px;z-index:2;font:inherit;font-size:13px;font-weight:600;padding:5px 10px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--brand);cursor:pointer;}
-  .fig-open:hover,.fig-open:focus-visible{background:var(--brand);color:#fff;outline-offset:2px;}
+  .fig-open{position:absolute;top:8px;right:8px;z-index:2;font:inherit;font-size:13px;font-weight:600;padding:5px 10px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--brand);cursor:pointer;}
+  .fig-open:hover,.fig-open:focus-visible{background:var(--brand);color:var(--on-brand);outline-offset:2px;}
   p{margin:0 0 14px;}
   p:last-child{margin-bottom:0;}
   a{color:var(--brand);text-underline-offset:2px;}
@@ -35,23 +35,28 @@
   .small{font-size:14.5px;}
 
   /* ---- top bar + nav ---- */
-  .bar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);
+  header{position:sticky;top:0;z-index:20;}
+  .bar{position:relative;z-index:20;background:#0B5D7A;
     backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--line);}
   .bar-in{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:58px;}
+  .logo-t{display:flex;flex-direction:column;line-height:1.1;} .logo-t small{font-weight:500;font-size:11px;color:var(--ink-2);letter-spacing:.01em;}
+  @media (max-width:1180px){.logo-t small{display:none;}}
   .logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:16px;color:var(--ink);
     text-decoration:none;letter-spacing:-0.01em;}
   .logo svg{flex:none;}
   .navbtn{display:none;font:inherit;font-size:15px;font-weight:600;color:var(--brand);
     background:var(--brand-soft);border:1px solid var(--line);border-radius:9px;padding:7px 13px;cursor:pointer;}
-  nav.main{display:flex;gap:4px;}
+  nav.main{display:flex;gap:2px;}
+  .nav-home,.nav-fb{display:none;}
+  @media (max-width:1180px){.nav-home,.nav-fb{display:block;}}
   nav.main a{font-size:15px;font-weight:500;color:var(--ink-2);text-decoration:none;
     padding:8px 11px;border-radius:8px;}
   nav.main a:hover{background:var(--panel);color:var(--ink);}
   nav.main a[aria-current="page"]{color:var(--brand);background:var(--brand-soft);font-weight:600;}
-  @media (max-width:720px){
+  @media (max-width:1180px){
     .navbtn{display:block;}
     nav.main{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;
-      background:#fff;border-bottom:1px solid var(--line);padding:6px 12px 12px;box-shadow:var(--shadow);}
+      background:var(--card);border-bottom:1px solid var(--line);padding:6px 12px 12px;box-shadow:var(--shadow);}
     nav.main.open{display:flex;}
     nav.main a{padding:13px 10px;border-radius:0;border-bottom:1px solid var(--line-2);font-size:16.5px;}
     nav.main a:last-child{border-bottom:0;}
@@ -69,7 +74,7 @@
   .hero{padding-block:14px 4px;}
   .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:22px;}
   .tile{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;
-    background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow);}
+    background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow);}
   .tile:hover{border-color:var(--brand);}
   .tile .t{font-weight:700;font-size:17.5px;color:var(--brand);}
   .tile .d{font-size:15px;color:var(--ink-2);line-height:1.5;}
@@ -113,16 +118,16 @@
 
   /* ---- stock watch ---- */
   .controls{display:flex;flex-direction:column;gap:12px;margin-bottom:20px;}
-  #q{width:100%;font:inherit;font-size:16px;color:var(--ink);background:#fff;
+  #q{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--card);
     border:1px solid var(--line);border-radius:10px;padding:12px 14px;}
   #q:focus,.chip:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{
     outline:2px solid var(--brand);outline-offset:2px;}
   .chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;-webkit-overflow-scrolling:touch;}
-  .chip{flex:none;font:inherit;font-size:14.5px;background:#fff;color:var(--ink-2);
+  .chip{flex:none;font:inherit;font-size:14.5px;background:var(--card);color:var(--ink-2);
     border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer;white-space:nowrap;}
-  .chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:600;}
+  .chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--on-brand);font-weight:600;}
   ul.plain{list-style:none;margin:0;padding:0;}
-  .med{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;
+  .med{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;
     margin-bottom:12px;box-shadow:var(--shadow);}
   .med-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;}
   .med-name{font-weight:700;font-size:18px;line-height:1.3;}
@@ -144,27 +149,27 @@
 
   /* ---- sightings ---- */
   .sight{margin-top:34px;border-top:1px solid var(--line);padding-top:24px;}
-  form.rep{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;
+  form.rep{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;
     box-shadow:var(--shadow);display:flex;flex-direction:column;gap:13px;margin-top:14px;}
   .row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
   @media (max-width:560px){.row{grid-template-columns:1fr;}}
   .f{display:flex;flex-direction:column;gap:5px;}
   .f label{font-size:13.5px;font-weight:600;color:var(--ink-2);}
-  .f input,.f select{font:inherit;font-size:16px;color:var(--ink);background:#fff;
+  .f input,.f select{font:inherit;font-size:16px;color:var(--ink);background:var(--card);
     border:1px solid var(--line);border-radius:9px;padding:11px 12px;width:100%;}
-  .btn{font:inherit;font-size:16px;font-weight:600;color:#fff;background:var(--brand);
+  .btn{font:inherit;font-size:16px;font-weight:600;color:var(--on-brand);background:var(--brand);
     border:0;border-radius:9px;padding:13px 18px;cursor:pointer;}
   .btn:disabled{opacity:.55;}
   .hint{margin:0;font-size:13.5px;color:var(--ink-2);}
   .hint.err{color:var(--red);}
   .hint.ok{color:var(--green);}
   .feed{margin-top:16px;}
-  .rep-item{border:1px solid var(--line);border-radius:10px;padding:12px 15px;margin-bottom:10px;background:#fff;}
+  .rep-item{border:1px solid var(--line);border-radius:10px;padding:12px 15px;margin-bottom:10px;background:var(--card);}
   .rep-top{display:flex;justify-content:space-between;gap:10px;font-size:15px;font-weight:600;}
   .rep-meta{font-size:13.5px;color:var(--ink-2);margin-top:2px;}
 
   .gov{background:#0B5D7A;color:#fff;font-size:13px;}
-  .gov-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:8px;letter-spacing:.01em;}
+  .gov-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:7px;letter-spacing:.01em;}
   .gov-r{color:#CFE3EC;}
   @media (max-width:560px){.gov-r{display:none;}}
   @media (max-width:760px),(pointer:coarse){
@@ -177,7 +182,7 @@
   ul.sitemap{list-style:none;margin:0;padding:0;}
   ul.sitemap li{margin-bottom:8px;font-size:14.5px;}
   .rev{font-size:13px;color:var(--ink-2);}
-  .cite{font-size:13.5px;color:var(--ink-2);background:#fff;border:1px solid var(--line);
+  .cite{font-size:13.5px;color:var(--ink-2);background:var(--card);border:1px solid var(--line);
     border-radius:8px;padding:11px 13px;line-height:1.5;word-break:break-word;}
   .foot-legal{margin-top:26px;border-top:1px solid var(--line);padding-top:18px;}
   .foot-legal p{font-size:14px;color:var(--ink-2);max-width:78ch;margin-bottom:10px;}
@@ -200,7 +205,8 @@
   .tile .t::after{content:" \2192";opacity:.55;}
   .callout{border-radius:16px;}
   .block{margin-top:34px;}
-  .block h2{padding-top:14px;border-top:3px solid var(--brand-soft);}
+  .block h2{padding:0 0 0 16px;background:linear-gradient(180deg,var(--acstops)) left top/4px 100% no-repeat;}
+  .page-head .kicker::before,.home-h h2::before,.er-grp::before,.refs h2::before{content:"";display:inline-block;width:22px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--acstops));margin-right:10px;vertical-align:middle;}
   figure{border-radius:16px;}
   .chip,.btn{border-radius:999px;}
   @media (max-width:560px){.hero{padding:30px 20px 34px;}}
@@ -208,7 +214,7 @@
   /* --- design + accessibility pass --- */
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
     clip:rect(0 0 0 0);white-space:nowrap;border:0;}
-  .skip{position:absolute;left:-9999px;top:0;z-index:50;background:var(--brand);color:#fff;
+  .skip{position:absolute;left:-9999px;top:0;z-index:50;background:var(--brand);color:var(--on-brand);
     padding:10px 16px;border-radius:0 0 10px 0;font-weight:600;}
   .skip:focus{left:0;}
   h1:focus{outline:2px solid var(--brand);outline-offset:4px;}
@@ -237,7 +243,7 @@
   nav.main a{padding:10px 9px;font-size:14.5px;}
   .navbtn{padding:10px 14px;}
   /* a discontinued medicine is not the same as a temporary shortage */
-  .t-stop{background:var(--red);color:#fff;}
+  .t-stop{background:var(--red);color:var(--on-brand);}
   /* the live data earns the top of the page */
   
   .tiles .tile:first-child .t{font-size:20px;}
@@ -252,8 +258,8 @@
   /* --- medicines index + drug pages --- */
   body{background:#FBFCFD;}
   body.dys{background:#FCF9F0;}
-  .bar{background:rgba(251,252,253,.94);}
-  .tile,.med,form.rep,.rep-item,.mcard{background:#fff;}
+
+  .tile,.med,form.rep,.rep-item,.mcard{background:var(--card);}
   .mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:6px;}
   .mcard{display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);border-radius:16px;
     padding:18px 20px;text-decoration:none;color:inherit;box-shadow:var(--shadow);
@@ -277,7 +283,7 @@
     background:var(--brand-soft);border-radius:999px;padding:8px 14px;}
   .quick a:hover{background:#D5E8F0;}
   .statusline{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px;}
-  .ticker{margin-top:18px;border:1px solid var(--line);border-radius:16px;background:#fff;padding:14px 18px;}
+  .ticker{margin-top:18px;border:1px solid var(--line);border-radius:16px;background:var(--card);padding:14px 18px;}
   .ticker h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);
     border-top:0;padding-top:0;margin-bottom:8px;}
   .ticker ul{list-style:none;margin:0;padding:0;}
@@ -288,9 +294,10 @@
   .backlink{display:inline-block;margin-bottom:14px;font-size:14.5px;text-decoration:none;color:var(--ink-2);}
   .backlink:hover{color:var(--brand);text-decoration:underline;}
 
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth;scroll-padding-top:76px;}
+  html.rm{scroll-behavior:auto;}
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
-  #mq,#sq{width:100%;font:inherit;font-size:16px;color:var(--ink);background:#fff;
+  #mq,#sq{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--card);
     border:1px solid #7A8792;border-radius:12px;padding:12px 14px;}
   .ticker li{padding:0;border-bottom:1px solid var(--line-2);}
   .ticker li a.row{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;width:100%;
@@ -336,7 +343,7 @@
   .med-name,.mcard .mn{overflow-wrap:anywhere;}
   h1:focus:not(:focus-visible){outline:none;}
   .totop-fab{position:fixed;right:18px;bottom:18px;z-index:30;font:inherit;font-size:14.5px;
-    font-weight:600;color:var(--brand);background:#fff;border:1px solid var(--line);
+    font-weight:600;color:var(--brand);background:var(--card);border:1px solid var(--line);
     border-radius:999px;padding:11px 16px;box-shadow:0 4px 14px rgba(16,24,31,.14);cursor:pointer;}
   .totop-fab:hover{background:var(--brand-soft);}
   @media print{.totop-fab{display:none;}}
@@ -365,38 +372,42 @@
      near-black text on #FFE57A is 14.3:1, the pill is 5.9:1 against the strip,
      and yellow against blue-teal stays distinct for red-green colour blindness. */
   .a11y-btn{font:inherit;font-family:"Atkinson Hyperlegible","Public Sans",Verdana,sans-serif;
-    font-size:17px;font-weight:700;letter-spacing:.02em;color:#10181F;background:#FFE57A;
-    border:2px solid #FFE57A;border-radius:999px;padding:8px 18px 8px 14px;cursor:pointer;
+    font-size:14.5px;font-weight:700;letter-spacing:.01em;color:#10181F;background:#FFE57A;
+    border:2px solid #FFE57A;border-radius:999px;padding:6px 13px 6px 10px;cursor:pointer;
     display:inline-flex;align-items:center;gap:9px;line-height:1.3;
     box-shadow:0 1px 4px rgba(0,0,0,.25);}
   .a11y-btn svg{width:22px;height:22px;flex:none;}
   .a11y-btn:hover,.a11y-btn[aria-expanded="true"]{background:#FFF3C4;border-color:#FFF3C4;}
-  .a11y-btn:focus-visible{outline:3px solid #fff;outline-offset:3px;box-shadow:0 0 0 6px #10181F;}
+  .a11y-btn:focus-visible{outline:3px solid #10181F;outline-offset:2px;}
+  @media (max-width:1400px){.a11y-btn .lbl{display:none;} .a11y-btn{padding:7px 9px;}}
   .a11y-btn svg{flex:none;}
-  .a11y-panel{position:absolute;right:0;top:calc(100% + 8px);z-index:40;width:320px;max-width:calc(100vw - 32px);
+  .a11y-panel{position:absolute;right:0;top:calc(100% + 10px);z-index:40;width:340px;max-width:calc(100vw - 32px);max-height:calc(100vh - 70px);overflow:auto;overscroll-behavior:contain;width:560px;
     background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:var(--r);
     box-shadow:var(--shadow);padding:14px;text-align:left;}
   .a11y-panel[hidden]{display:none;}
   .a11y-panel .a11y-title{margin:0 0 4px;font-size:15px;font-weight:700;}
   .a11y-panel p.a11y-lede{margin:0 0 12px;font-size:13px;color:var(--ink-2);}
-  .a11y-row{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line-2);}
-  .a11y-row:first-of-type{border-top:0;}
+  .a11y-rows{display:grid;grid-template-columns:1fr 1fr;gap:0 22px;}
+  .a11y-row{display:flex;gap:10px;align-items:center;padding:7px 0;border-top:1px solid var(--line-2);}
+  .a11y-rows .a11y-row .t span{display:none;}
+  .a11y-row.a11y-reset{grid-column:1/-1;}
+  @media (max-width:600px){.a11y-rows{grid-template-columns:1fr;} .a11y-row{padding:6px 0;}}
   .a11y-row .t{flex:1;min-width:0;}
   .a11y-row .t b{display:block;font-size:14px;font-weight:600;}
   .a11y-row .t span{display:block;font-size:12.5px;color:var(--ink-2);margin-top:2px;}
-  .a11y-act{font:inherit;font-size:13px;font-weight:600;white-space:nowrap;cursor:pointer;
+  .a11y-act{font:inherit;font-size:12.5px;font-weight:600;white-space:nowrap;cursor:pointer;
     color:var(--brand);background:var(--brand-soft);border:1px solid var(--line);
     border-radius:999px;padding:5px 12px;}
-  .a11y-act[aria-pressed="true"]{background:var(--brand);color:#fff;border-color:var(--brand);}
+  .a11y-act[aria-pressed="true"]{background:var(--brand);color:var(--on-brand);border-color:var(--brand);}
   .a11y-note{margin:10px 0 0;font-size:12px;color:var(--ink-2);}
 
   /* speech control bar */
   .tts-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;z-index:60;
-    display:flex;align-items:center;gap:8px;background:var(--ink);color:#fff;
+    display:flex;align-items:center;gap:8px;background:var(--ink);color:var(--bg);
     border-radius:999px;padding:8px 10px 8px 16px;box-shadow:var(--shadow);font-size:14px;}
   .tts-bar[hidden]{display:none;}
   .tts-bar button{font:inherit;font-size:13px;font-weight:600;cursor:pointer;color:var(--ink);
-    background:#fff;border:0;border-radius:999px;padding:5px 12px;}
+    background:var(--card);border:0;border-radius:999px;padding:5px 12px;}
   .tts-bar .lbl{font-weight:600;letter-spacing:.01em;}
   .tts-now{background:#FFF3C4;box-shadow:0 0 0 6px #FFF3C4;border-radius:3px;}
   @media print{.tts-bar,.a11y{display:none;}}
@@ -447,17 +458,17 @@
   .lb-title{flex:1;min-width:120px;font-size:13.5px;font-weight:600;
     white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .lb-head button{font:inherit;font-size:13px;font-weight:700;cursor:pointer;color:var(--brand);
-    background:#fff;border:0;border-radius:999px;padding:5px 11px;min-width:34px;}
+    background:var(--card);border:0;border-radius:999px;padding:5px 11px;min-width:34px;}
   .lb-head button[aria-pressed="true"]{background:#BFE3DA;}
   .lb-lvl{font-size:12.5px;font-variant-numeric:tabular-nums;padding:0 4px;}
-  .lb-stage{flex:1;min-height:0;overflow:auto;background:#fff;padding:10px;position:relative;
+  .lb-stage{flex:1;min-height:0;overflow:auto;background:var(--card);padding:10px;position:relative;
     cursor:grab;}
   .lb-stage.panning{cursor:grabbing;}
   .lb-stage.lens{cursor:none;}
   .lb-inner{transform-origin:top left;}
   .lb-inner svg{display:block;width:100%;height:auto;}
   .lb-lens{position:absolute;pointer-events:none;border-radius:50%;
-    width:230px;height:230px;border:3px solid var(--brand);background:#fff;
+    width:230px;height:230px;border:3px solid var(--brand);background:var(--card);
     box-shadow:0 6px 20px -6px rgba(16,24,31,.5);overflow:hidden;display:none;}
   .lb-lens.on{display:block;}
   .lb-lens > div{position:absolute;transform-origin:top left;}
@@ -476,7 +487,7 @@
   #v-easy h1,#v-easy-guide h1{margin:0 0 8px;font-size:clamp(30px,5vw,42px);line-height:1.2;color:var(--brand);}
   .er-sub{margin:0;font-size:20px;color:var(--ink);}
   .er-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:22px;}
-  .er-print{font:inherit;font-size:16px;font-weight:700;cursor:pointer;color:#fff;
+  .er-print{font:inherit;font-size:16px;font-weight:700;cursor:pointer;color:var(--on-brand);
     background:var(--brand);border:0;border-radius:999px;padding:11px 20px;}
   .er-print:hover{background:var(--brand-2);}
   .er-back{font-size:16px;font-weight:600;}
@@ -520,16 +531,16 @@
   .hero{position:relative;overflow:hidden;
     background:linear-gradient(160deg,#08485E 0%,#0B5D7A 62%,#136182 100%) !important;}
   .hero-in{position:relative;}
-  .hero-motif{position:absolute;right:-60px;bottom:-70px;width:340px;height:340px;opacity:.13;pointer-events:none;}
-  .hero-motif-2{position:absolute;right:250px;top:-54px;width:150px;height:150px;opacity:.07;pointer-events:none;transform:rotate(12deg);}
+  .hero-motif{position:absolute;right:-40px;top:-70px;width:300px;height:300px;opacity:.12;pointer-events:none;}
+  .hero-motif-2{position:absolute;left:46%;bottom:-40px;width:150px;height:150px;opacity:.1;pointer-events:none;transform:rotate(12deg);}
   .hero .eyebrow{display:inline-flex;align-items:center;gap:8px;}
   .hero .eyebrow::before{content:"";width:18px;height:18px;border-radius:5px;flex:none;
     background:linear-gradient(#fff,#fff) center/10px 3px no-repeat,linear-gradient(#BFE3DA,#BFE3DA) center/3px 10px no-repeat,rgba(255,255,255,.14);}
-  .hero h1::after{content:"";display:block;width:56px;height:4px;border-radius:2px;background:#BFE3DA;margin-top:16px;}
+  .hero h1::after{content:"";display:block;width:56px;height:4px;border-radius:2px;background:linear-gradient(90deg,#5BCEFA,#FFFFFF,#F5A9B8);margin-top:16px;}
   @media (max-width:560px){.hero-motif-2{display:none;}}
   /* phones: give the motif its own space below the text so it never sits behind words */
   @media (max-width:560px){.hero{padding-bottom:104px !important;}.hero-motif{width:170px;height:170px;right:-38px;bottom:-66px;opacity:.14;}}
-  .f textarea{font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1px solid var(--line);
+  .f textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--card);border:1px solid var(--line);
     border-radius:9px;padding:11px 12px;width:100%;resize:vertical;}
   .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
   #fbStatus.ok{color:var(--green);font-weight:600;} #fbStatus.err{color:var(--red);font-weight:600;}
@@ -540,12 +551,12 @@
   .block .pro{border-left:4px solid var(--amber);background:var(--amber-soft);padding:14px 18px;border-radius:0 12px 12px 0;}
   .block .pro h2{margin-top:0;}
   a.dl{display:inline-block;font-weight:600;padding:8px 14px;border:1px solid var(--line);border-radius:999px;
-    background:#fff;text-decoration:none;margin:2px 0;}
+    background:var(--card);text-decoration:none;margin:2px 0;}
   a.dl::before{content:"\2193  ";}
   a.dl:hover{background:var(--brand-soft);}
   .er-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin:26px 0 10px;}
   .er-card{display:flex;gap:14px;align-items:center;padding:16px;border:1px solid var(--line);border-radius:14px;
-    background:#fff;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);}
+    background:var(--card);text-decoration:none;color:var(--ink);box-shadow:var(--shadow);}
   .er-card:hover{border-color:var(--brand);background:var(--brand-soft);}
   .er-card .er-icon{width:56px;height:56px;flex:none;}
   .er-card b{display:block;font-size:19px;color:var(--brand);} .er-card span span{display:block;font-size:15px;color:var(--ink-2);margin-top:3px;}
@@ -553,9 +564,9 @@
   @media print{.er-list,.er-foot{display:none;}}
   body.dys .er-kick{text-transform:none;letter-spacing:.02em;}
   .er-tx b{text-decoration:underline;text-decoration-color:#BFE3DA;text-decoration-thickness:3px;text-underline-offset:3px;}
-  .er-listen{font:inherit;font-size:16px;font-weight:700;cursor:pointer;color:var(--brand);background:#fff;
+  .er-listen{font:inherit;font-size:16px;font-weight:700;cursor:pointer;color:var(--brand);background:var(--card);
     border:2px solid var(--brand);border-radius:999px;padding:9px 18px;display:inline-flex;align-items:center;gap:8px;}
-  .er-listen[aria-pressed="true"]{background:var(--brand);color:#fff;}
+  .er-listen[aria-pressed="true"]{background:var(--brand);color:var(--on-brand);}
   .er-help{display:grid;grid-template-columns:120px 1fr;gap:26px;align-items:center;padding:16px 18px;border-radius:14px;
     background:var(--brand-soft);margin:8px 0 26px;}
   .er-help p{margin:0 0 8px;font-size:1.15em;line-height:1.6;} .er-help p:last-child{margin:0;}
@@ -563,25 +574,247 @@
   @media print{.er-listen{display:none;}}
   .prem{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;}
   .prem-h{margin:0 0 8px;font-weight:700;color:var(--brand);} .prem ul{margin:0;padding-left:20px;} .prem li{margin-bottom:6px;}
+
+  .er-grp{font-size:1.3em;margin:26px 0 10px;color:var(--brand-2);}
+  .feed-url{display:flex;gap:10px;align-items:center;flex-wrap:wrap;} .feed-url code{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:15px;word-break:break-all;}
+  .btn.sm{padding:8px 14px;font-size:15px;}
+  .alert-list li{margin-bottom:8px;}
+  .tblwrap{overflow-x:auto;margin:12px 0;}
+  .tbl{border-collapse:collapse;width:100%;font-size:14.5px;line-height:1.45;}
+  .tbl th,.tbl td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+  .tbl thead th{background:var(--brand-soft);color:var(--brand-2);font-weight:700;}
+  .tbl tbody th{background:var(--panel);font-weight:700;white-space:nowrap;}
+  /* ---- accessibility extras ---- */
+  html.ts125 body{font-size:21px;} html.ts150 body{font-size:25px;}
+  html.ts125 body.easy{font-size:24px;} html.ts150 body.easy{font-size:28px;}
+  html.hc{--ink:#000;--ink-2:#111;--line:#333;--line-2:#666;--brand:#003A52;--brand-2:#00263A;--brand-soft:#E0EEF5;--panel:#F2F2F2;--bg:#fff;--card:#fff;--red:#8A0000;--amber:#5A3A00;--green:#004D20;--grey:#222;}
+  html.hc.dark{--ink:#fff;--ink-2:#F2F2F2;--line:#BBB;--line-2:#888;--brand:#A8E4FF;--brand-2:#CDEFFF;--brand-soft:#0F2A38;--panel:#111;--bg:#000;--card:#000;--on-brand:#000;--red:#FFB4AE;--amber:#FFD27A;--green:#9BE3B4;--grey:#DDD;}
+  html.hc a{text-decoration:underline;} html.hc .tile,html.hc .med,html.hc .sr,html.hc .ng-grid{border-width:2px;}
+  html.ul a{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;}
+  html.rm *,html.rm *::before,html.rm *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+  .a11y-seg{border-color:var(--line);background:var(--panel);} .a11y-seg button{color:var(--ink-2);font-size:13px;padding:6px 9px;} .a11y-seg button[aria-pressed="true"]{background:var(--brand);color:var(--on-brand);}
+  .a11y-reset{border-top:2px solid var(--line);}
+  /* ---- dark top bar ---- */
+  .bar{border-bottom:0;box-shadow:0 1px 0 rgba(0,0,0,.15);}
+  .bar .logo{color:#fff;} .logo-t small{color:#CFE3EC;}
+  .bar .logo svg{width:32px;height:32px;border-radius:9.2px;box-shadow:0 0 0 1.5px rgba(255,255,255,.92),0 0 0 4px rgba(255,255,255,.14),0 3px 8px rgba(0,0,0,.28);}
+  .bar .logo:hover svg{box-shadow:0 0 0 1.5px #fff,0 0 0 4px rgba(255,255,255,.24),0 3px 8px rgba(0,0,0,.28);}
+  .bar .logo{gap:12px;}
+  .bar .logo{font-size:17px;letter-spacing:.01em;}
+  .bar nav.main>a,.bar .ng>.ng-btn{color:#E6F1F6;}
+  .bar nav.main>a:hover,.bar .ng>.ng-btn:hover,.bar .ng>.ng-btn[aria-expanded="true"]{background:rgba(255,255,255,.14);color:#fff;}
+  .bar nav.main>a[aria-current="page"],.bar .ng.cur>.ng-btn{background:rgba(255,255,255,.2);color:#fff;}
+  .bar .ng-col li a{color:var(--ink-2);} .bar .ng-col li a:hover{color:var(--brand);} .bar .ng-col li a[aria-current="page"],.bar .ng-col li a.ng-more-link{color:var(--brand);}
+  .navbtn{color:#fff;background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.45);}
+  .top-btn{color:#fff;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.55);} .top-btn:hover{background:rgba(255,255,255,.22);}
+  .top-btn:focus-visible{outline:3px solid #fff;outline-offset:3px;}
+  .bar .top-btn.exit{background:#fff;color:#0B5D7A;border:2px solid #fff;border-radius:999px;padding:6px 14px;box-shadow:0 1px 4px rgba(0,0,0,.25);} .bar .top-btn.exit:hover,.bar .top-btn.exit:active{background:#DCEBF3;border-color:#DCEBF3;color:#08485E;}
+  .a11y-btn:focus-visible{outline:3px solid #fff;outline-offset:3px;}
+  .bar .seg{border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.1);} .bar .seg button{color:#DCEBF3;} .bar .seg button[aria-pressed="true"]{background:#fff;color:#0B5D7A;} .bar .seg button:focus-visible{outline:2px solid #fff;}
+  @media (max-width:1180px){
+    nav.main{background:var(--card);} .bar nav.main>a,.bar .ng>.ng-btn{color:var(--ink-2);}
+    .bar nav.main>a:hover,.bar .ng>.ng-btn:hover,.bar .ng>.ng-btn[aria-expanded="true"]{background:var(--panel);color:var(--ink);}
+    .bar nav.main>a[aria-current="page"],.bar .ng.cur>.ng-btn{background:var(--brand-soft);color:var(--brand);}
+  }
+  /* ---- dark theme ---- */
+  html.dark{color-scheme:dark;--bg:#0F171D;--card:#16222B;--on-brand:#0F171D;--panel:#1B2832;--line:#2F414D;--line-2:#25333D;
+    --ink:#E8EEF2;--ink-2:#B3C0CA;--brand:#7CC8E4;--brand-2:#A6DCEE;--brand-soft:#17323F;
+    --red:#F4A49E;--red-soft:#3B1F1E;--amber:#EDC06A;--amber-soft:#3A2E14;--green:#8AD2A6;--green-soft:#17301F;
+    --grey:#B6C0C8;--grey-soft:#242E35;--shadow:0 1px 2px rgba(0,0,0,.4);}
+  html.dark body,html.dark body.dys{background:var(--bg);}
+  html.dark body.dys{--bg:#141A17;--card:#1C2420;--panel:#222B26;--line:#3A463F;--line-2:#2C3630;--ink:#E9EDE6;--ink-2:#B9C3BA;--brand-soft:#1C333C;}
+  html.dark .bar{background:#0A2E3C;} html.hc .bar{background:#003A52;}
+  html.dark .note,html.dark .banner{background:var(--brand-soft);}
+  html.dark .page-head .stamp,html.dark .page-head .lede,html.dark .kicker{color:var(--ink-2);}
+  html.dark .page-head h1{color:var(--brand-2);}
+  html.dark .quick a:hover{background:var(--brand-soft);}
+  html.dark figure svg,html.dark .er-pic svg{filter:brightness(.92);}
+  /* ---- top-strip controls ---- */
+  .bar-r{position:relative;} .bar-r .a11y{position:static;}
+  .top-btn{font:inherit;font-size:14px;font-weight:700;color:var(--brand);background:var(--brand-soft);border:2px solid var(--brand-soft);
+    border-radius:999px;padding:6px 13px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;line-height:1.3;text-decoration:none;white-space:nowrap;}
+  .top-btn svg{width:17px;height:17px;flex:none;}
+  .top-btn:focus-visible{outline:2px solid var(--brand);outline-offset:2px;}
+  .bar-r{display:flex;align-items:center;gap:8px;}
+  .seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--panel);}
+  .seg button{font:inherit;color:var(--ink-2);background:transparent;border:0;padding:7px 10px;cursor:pointer;display:inline-flex;align-items:center;line-height:1;}
+  .seg button svg{width:18px;height:18px;}
+  .seg button[aria-pressed="true"]{background:var(--brand);color:var(--on-brand);}
+  .seg button:hover:not([aria-pressed="true"]){color:var(--ink);}
+  .seg button:focus-visible{outline:2px solid var(--brand);outline-offset:-3px;}
+  .top-btn.exit{background:var(--brand);color:var(--on-brand);border-color:var(--brand);}
+  .top-btn.exit:hover,.top-btn.exit:active{background:var(--brand-2);border-color:var(--brand-2);}
+    .lbl-s{display:none;}
+  @media (max-width:600px){#themeBtn{display:none;}}
+  @media (max-width:560px){.top-btn .lbl{display:none;} .top-btn .lbl-s{display:inline;} .top-btn{padding:7px 10px;} .bar-r{gap:6px;} .a11y-btn{padding:8px 12px;} .a11y-btn .lbl{display:none;}}
+  /* ---- menu groups ---- */
+  nav.main{align-items:center;}
+  .ng{position:static;}
+  .ng-btn{font:inherit;font-size:15px;font-weight:500;color:var(--ink-2);background:none;border:0;padding:8px 11px;border-radius:8px;cursor:pointer;
+    display:inline-flex;align-items:center;gap:5px;white-space:nowrap;}
+  .ng-btn::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg);}
+  .ng-btn:hover,.ng-btn[aria-expanded="true"]{background:var(--panel);color:var(--ink);}
+  .ng.cur>.ng-btn{color:var(--brand);background:var(--brand-soft);font-weight:600;}
+  .ng-panel{display:none;position:absolute;left:0;right:0;top:100%;z-index:30;padding:10px 0 0;}
+  .ng.open>.ng-panel{display:block;}
+  .ng-grid{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 40px -18px rgba(16,24,31,.35);
+    padding:26px 30px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px 36px;max-width:980px;margin-inline:auto;}
+  html.dark .ng-grid{box-shadow:0 18px 40px -18px rgba(0,0,0,.8);}
+  .ng-col h3{margin:0 0 10px;font-size:16px;font-weight:700;color:var(--ink);padding-bottom:8px;border-bottom:2px solid var(--line-2);}
+  .ng-col ul{list-style:none;margin:0;padding:0;}
+  .ng-col li a{display:block;font-size:14.5px;color:var(--ink-2);text-decoration:none;padding:5px 0;line-height:1.4;}
+  .ng-col li a:hover{color:var(--brand);text-decoration:underline;}
+  .ng-col li a[aria-current="page"]{color:var(--brand);font-weight:600;}
+  .ng-col li a.ng-more-link{color:var(--brand);font-weight:600;}
+  @media (max-width:1180px){
+    nav.main{align-items:stretch;}
+    nav.main a{border-bottom:1px solid var(--line-2);}
+    .ng{border-bottom:1px solid var(--line-2);}
+    .ng-btn{width:100%;justify-content:space-between;padding:13px 10px;border-radius:0;font-size:16.5px;}
+    .ng-panel{position:static;padding:0 0 10px;}
+    .ng-grid{grid-template-columns:1fr;gap:14px;padding:12px 14px 16px;border-radius:12px;box-shadow:none;max-width:none;}
+    .ng-col h3{font-size:15px;margin-bottom:6px;}
+    .ng-col li a{padding:7px 0;font-size:15px;}
+  }
+  /* ---- home navigation cards + stats ---- */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:-26px;position:relative;z-index:1;}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;box-shadow:var(--shadow);text-decoration:none;color:inherit;display:block;}
+  .stat b{display:block;font-size:26px;line-height:1.1;color:var(--brand);letter-spacing:-.01em;} .stat span{display:block;font-size:13.5px;color:var(--ink-2);margin-top:4px;}
+  .stat:hover{border-color:var(--brand);}
+  @media (max-width:640px){.stats{grid-template-columns:1fr;gap:8px;} .stat{padding:10px 14px;display:flex;align-items:baseline;gap:10px;} .stat b{font-size:20px;} .stat span{margin:0;}}
+  .aud-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px;}
+  @media (max-width:760px){.aud-grid{grid-template-columns:1fr;}}
+  .aud{position:relative;display:flex;flex-direction:column;gap:8px;text-decoration:none;color:inherit;background:var(--acs);border:1px solid transparent;border-radius:20px;padding:24px 24px 22px 24px;overflow:hidden;
+    box-shadow:var(--shadow);transition:transform .14s ease,box-shadow .14s ease,border-color .14s ease;}
+  .aud::after{content:"";position:absolute;right:-40px;bottom:-40px;width:150px;height:150px;border-radius:50%;background:var(--ac);opacity:.09;}
+  .aud:hover{transform:translateY(-2px);border-color:var(--ac);box-shadow:0 14px 30px -16px rgba(16,24,31,.35);}
+  .aud .ic{width:46px;height:46px;border-radius:12px;background:var(--card);color:var(--ac);box-shadow:0 1px 3px rgba(16,24,31,.12);display:flex;align-items:center;justify-content:center;} .aud .ic svg{width:26px;height:26px;}
+  .aud .t{font-size:21px;font-weight:700;color:var(--ac);line-height:1.2;text-decoration:none;} .aud .t::before{content:"";position:absolute;inset:0;} .aud .t:focus-visible{outline:none;} .aud:has(.t:focus-visible){outline:3px solid var(--ac);outline-offset:2px;} .aud .t::after{content:" \2192";color:var(--ac);}
+  .aud .d{font-size:15px;color:var(--ink-2);}
+  .aud .ql{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;position:relative;z-index:1;} .aud .ql a{text-decoration:none;font-size:13px;color:var(--ink);background:var(--card);border:1px solid transparent;border-radius:999px;padding:3px 10px;} .aud .ql a:hover{border-color:var(--ac);color:var(--ac);}
+  .c-trans{--ac:#1F7FA8;--acs:#E6F6FD;} .c-clin{--ac:#0B5D7A;--acs:#E4F1F6;} .c-allies{--ac:#B04A66;--acs:#FDEEF1;} .c-res{--ac:#6E5BB8;--acs:#F0EDFB;}
+  html.dark .c-trans{--ac:#8FDCFB;--acs:#12303D;} html.dark .c-clin{--ac:#8CCBE2;--acs:#163240;} html.dark .c-allies{--ac:#F7B8C5;--acs:#3A2129;} html.dark .c-res{--ac:#C8BDF5;--acs:#2A2540;}
+  .aud .t::after{opacity:.8;}
+  .aud-grid{margin-top:22px;}
+  html.rm .aud{transition:none;}
+  html.hc .aud{border-color:var(--ac);}
+  :root{--acstops:#5BCEFA,#F5A9B8;} html.dark{--acstops:#5BCEFA,#F5A9B8;}
+  .acc.c-trans{--acstops:#5BCEFA,#1F7FA8;} .acc.c-clin{--acstops:#0B5D7A,#5BCEFA;} .acc.c-allies{--acstops:#F5A9B8,#D9708A;} .acc.c-res{--acstops:#5BCEFA,#B9A7F0,#F5A9B8;}
+  html.dark .acc.c-trans{--acstops:#8FDCFB,#5BCEFA;} html.dark .acc.c-clin{--acstops:#5BCEFA,#8CCBE2;} html.dark .acc.c-allies{--acstops:#F7B8C5,#F5A9B8;} html.dark .acc.c-res{--acstops:#5BCEFA,#C8BDF5,#F5A9B8;}
+  .acc .page-head{background-image:linear-gradient(180deg,var(--acstops));background-size:5px 100%;background-repeat:no-repeat;}
+  .hubv .tile{background-image:linear-gradient(90deg,var(--acstops));background-size:100% 4px;background-repeat:no-repeat;} .hubv .tile:hover{border-color:var(--ac);}
+  /* ---- home hero ---- */
+  .hero{padding:34px 28px 30px;}
+  .hero-in{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:end;position:relative;}
+  .hero-l,.hero-r{min-width:0;}
+  @media (max-width:900px){.hero-in{grid-template-columns:1fr;gap:24px;}}
+  .hero-r{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:18px;backdrop-filter:blur(2px);margin-top:60px;}
+  @media (max-width:900px){.hero-r{margin-top:0;}}
+  .hs-pop{margin:12px 0 0;font-size:13.5px;color:#DCEBF3;} .hs-pop a{color:#fff;background:rgba(255,255,255,.14);border-radius:999px;padding:3px 10px;text-decoration:none;margin-left:4px;display:inline-block;} .hs-pop a:hover{background:rgba(255,255,255,.26);}
+  .live-line{display:inline-flex;align-items:center;gap:8px;margin-top:0;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;text-decoration:none;font-size:14px;} .live-line b{font-weight:700;white-space:nowrap;} .live-line:hover{text-decoration:underline;}
+  .live-line .dot{width:9px;height:9px;border-radius:50%;background:#FFD27A;box-shadow:0 0 0 3px rgba(255,210,122,.3);flex:none;}
+  .want{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px;}
+  @media (max-width:900px){.want{grid-template-columns:repeat(2,1fr);}} @media (max-width:520px){.want{grid-template-columns:1fr;}}
+  .want a{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);}
+  .want a b{display:block;color:var(--brand);font-size:15.5px;} .want a span{display:block;font-size:13.5px;color:var(--ink-2);margin-top:3px;} .want a:hover{border-color:var(--brand);}
+  .hero h1{font-size:clamp(28px,4vw,42px);line-height:1.12;max-width:16ch;margin-bottom:10px;}
+  .hero h1 .hl{background:linear-gradient(90deg,#7FD8FB 0%,#FFFFFF 50%,#F7B6C3 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  html.hc .hero h1 .hl{background:none;color:#fff;}
+  .hero .eyebrow::before{content:"";display:inline-block;width:26px;height:3px;border-radius:2px;background:linear-gradient(90deg,#5BCEFA,#F5A9B8);margin-right:10px;vertical-align:middle;}
+  .hero .lede{font-size:17px;margin-top:10px;}
+  .hero-foot{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);}
+  .hero-cta{display:flex;gap:10px;flex-wrap:wrap;}
+  .hero-cta .cta{padding:10px 18px;font-size:15px;}
+  .cta{display:inline-block;font-weight:700;font-size:15.5px;text-decoration:none;color:#0B5D7A;background:#fff;border:2px solid #fff;border-radius:999px;padding:11px 20px;}
+  .cta.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.7);}
+  .cta:hover{background:#BFE3DA;border-color:#BFE3DA;color:#08485E;} .cta.ghost:hover{background:rgba(255,255,255,.12);color:#fff;}
+  .cta:focus-visible{outline:3px solid #fff;outline-offset:3px;}
+  @media (max-width:560px){.hero{padding:36px 18px 36px;} .hero h1{max-width:none;}}
+  /* ---- home search ---- */
+  .hero-search{position:relative;display:flex;align-items:center;margin-top:0;max-width:none;background:#fff;border-radius:999px;padding:5px 5px 5px 18px;
+    box-shadow:0 10px 30px -12px rgba(0,0,0,.45);}
+  .hero-search .hs-ico{width:22px;height:22px;flex:none;color:#4A5966;}
+  .hero-search input{flex:1;min-width:0;font:inherit;font-size:17px;color:#10181F;background:transparent;border:0;padding:11px 12px;}
+  .hero-search input::placeholder{color:#6B7A86;}
+  .hero-search input:focus{outline:none;}
+  .hero-search:focus-within{box-shadow:0 0 0 3px #fff,0 0 0 6px rgba(255,255,255,.35),0 10px 30px -12px rgba(0,0,0,.45);}
+  .hero-search button{font:inherit;font-size:15.5px;font-weight:700;color:#fff;background:#0B5D7A;border:0;border-radius:999px;padding:10px 20px;cursor:pointer;}
+  .hero-search button:hover{background:#08485E;}
+  .hero-search button:focus-visible{outline:3px solid #10181F;outline-offset:2px;}
+  @media (max-width:480px){.hero-search{padding-left:12px;} .hero-search button{padding:10px 14px;}}
+  html.dark .hero-search input{color:#10181F;}
+  .home-h{margin:34px 0 4px;}
+  .home-h h2{margin:0;font-size:21px;} .home-h p{margin:4px 0 0;color:var(--ink-2);font-size:15px;}
+  .tiles.aud{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:26px;}
+  @media (min-width:900px){.tiles.aud{grid-template-columns:repeat(2,1fr);}}
+  .home-aud .tile .t{font-size:21px;}
+  .tiles.hub{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
+  @media (min-width:980px){.tiles.hub{grid-template-columns:repeat(3,1fr);}}
+  /* ---- search results ---- */
+  .srch{display:flex;gap:8px;max-width:620px;margin:8px 0 22px;}
+  .srch input{flex:1;min-width:0;font:inherit;font-size:16px;color:var(--ink);background:var(--card);border:1px solid #7A8792;border-radius:12px;padding:12px 14px;}
+  .srch button{font:inherit;font-size:16px;font-weight:600;color:var(--on-brand);background:var(--brand);border:0;border-radius:12px;padding:0 18px;cursor:pointer;}
+  .sr{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px 18px;margin-bottom:10px;}
+  .sr .k{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin:0 0 2px;}
+  .sr h2{font-size:17px;margin:0 0 6px;} .sr h2 a{color:var(--brand);}
+  .sr p{margin:0;font-size:15px;color:var(--ink-2);} .sr mark{background:#FFF3C4;color:#10181F;border-radius:3px;padding:0 2px;}
+  .sr-count{color:var(--ink-2);margin:0 0 14px;}
+  /* ---- footer ---- */
+  .foot-row{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px;margin-top:28px;padding-top:24px;border-top:1px solid var(--line);}
+  @media (max-width:760px){.foot-row{grid-template-columns:1fr;}}
+  .ack{display:flex;gap:16px;align-items:flex-start;}
+  .ack .flags{display:flex;flex-direction:column;gap:8px;flex:none;padding-top:2px;}
+  @media (max-width:560px){.ack .flags{flex-direction:row;}}
+  .ack .flags svg{width:60px;height:38px;border-radius:3px;box-shadow:0 0 0 1px var(--line);}
+  .ack p{margin:0;font-size:14px;color:var(--ink-2);}
+  .foot-row{grid-template-columns:1.1fr 1fr;} .foot-row>*{min-width:0;}
+  .foot-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:22px 28px;}
+  .foot-cols h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);margin:0 0 8px;}
+  .foot-cols ul{list-style:none;margin:0;padding:0;} .foot-cols li{margin:0 0 6px;}
+  .foot-cols a{font-size:14.5px;color:var(--ink-2);text-decoration:none;} .foot-cols a:hover{color:var(--brand);text-decoration:underline;}
+  .foot-about{font-size:14px;color:var(--ink-2);} .foot-about p{margin:0 0 8px;}
+  .help-now{background:var(--brand-soft);border-radius:10px;padding:10px 14px;color:var(--ink);}
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 70'%3E%3Crect width='70' height='70' rx='20' fill='%230B5D7A'/%3E%3Crect x='12' y='28.5' width='46' height='13' rx='6.5' fill='%23fff'/%3E%3Crect x='28.5' y='12' width='13' height='46' rx='6.5' fill='%23BFE3DA'/%3E%3C/svg%3E">
 
+<script id="th">(function(){try{var v=localStorage.getItem("gamsa.theme");if(v==="dark"||(!v&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark");var c=document.documentElement.classList;if(localStorage.getItem("gamsa.hc")==="1")c.add("hc");if(localStorage.getItem("gamsa.ul")==="1")c.add("ul");if(localStorage.getItem("gamsa.rm")==="1")c.add("rm");var ts=localStorage.getItem("gamsa.ts");if(ts==="1.25")c.add("ts125");if(ts==="1.5")c.add("ts150");}catch(e){}})();</script>
 <a class="skip" href="#main">Skip to content</a>
 <header>
-<div class="gov">
-  <div class="wrap gov-in">
-    <span>Independent health information<span class="tb-sa"> · South Australia</span></span>
+<div class="bar">
+  <div class="wrap bar-in">
+    <a class="logo" href="#/" data-link aria-label="GAMSA home">
+      <svg width="26" height="26" viewBox="0 0 70 70" aria-hidden="true"><rect width="70" height="70" rx="20" fill="#0B5D7A"/><rect x="12" y="28.5" width="46" height="13" rx="6.5" fill="#FFFFFF"/><rect x="28.5" y="12" width="13" height="46" rx="6.5" fill="#BFE3DA"/></svg>
+      <span class="logo-t">GAMSA<small>South Australia</small></span>
+    </a>
+    <nav class="main" id="nav" aria-label="Main">
+      <a href="#/" data-link class="nav-home">Home</a>
+      <div class="ng" data-g="tgd"><button type="button" class="ng-btn" aria-expanded="false" aria-controls="ng-tgd">Trans and gender diverse</button><div class="ng-panel" id="ng-tgd"><div class="wrap ng-grid"></div></div></div>
+      <div class="ng" data-g="clin"><button type="button" class="ng-btn" aria-expanded="false" aria-controls="ng-clin">Clinicians and pharmacists</button><div class="ng-panel" id="ng-clin"><div class="wrap ng-grid"></div></div></div>
+      <div class="ng" data-g="allies"><button type="button" class="ng-btn" aria-expanded="false" aria-controls="ng-allies">Family, friends and allies</button><div class="ng-panel" id="ng-allies"><div class="wrap ng-grid"></div></div></div>
+      <div class="ng" data-g="res"><button type="button" class="ng-btn" aria-expanded="false" aria-controls="ng-res">Resources</button><div class="ng-panel" id="ng-res"><div class="wrap ng-grid"></div></div></div>
+      <a href="#/feedback" data-link class="nav-fb">Feedback</a>
+    </nav>
+    <div class="bar-r">
     <div class="a11y">
       <button class="a11y-btn" id="a11yBtn" type="button" aria-expanded="false" aria-controls="a11yPanel">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="6.6" r="1.9" fill="currentColor"/><path d="M6.2 9.6c3.9 1 7.7 1 11.6 0l.4 1.9c-1.6.4-3 .7-4.4.8v2.6l1.9 4.6-1.9.8-1.8-4.3-1.8 4.3-1.9-.8 1.9-4.6v-2.6c-1.4-.1-2.8-.4-4.4-.8z" fill="currentColor"/></svg>
-        Accessibility
+        <span class="lbl">Accessibility</span><span class="sr-only a11y-sr">Accessibility options</span>
       </button>
       <div class="a11y-panel" id="a11yPanel" role="group" aria-labelledby="a11yTitle" hidden>
         <p id="a11yTitle" class="a11y-title">Reading options</p>
         <p class="a11y-lede">These change how this site looks and sounds for you only. Nothing is sent anywhere.</p>
+        <div class="a11y-rows">
         <div class="a11y-row">
           <div class="t"><b>Read this page aloud</b><span>Your device reads the page out. Pause or stop any time.</span></div>
           <button class="a11y-act" id="ttsBtn" type="button" aria-pressed="false">Read aloud</button>
+        </div>
+        <div class="a11y-row">
+          <div class="t"><b>Text size</b><span>On top of your browser zoom.</span></div>
+          <div class="seg a11y-seg" id="tsSeg" role="group" aria-label="Text size"><button type="button" data-ts="1" aria-pressed="true">100%</button><button type="button" data-ts="1.25" aria-pressed="false">125%</button><button type="button" data-ts="1.5" aria-pressed="false">150%</button></div>
+        </div>
+        <div class="a11y-row">
+          <div class="t"><b>Colour theme</b><span>Light or dark.</span></div>
+          <div class="seg a11y-seg" id="themeSeg2" role="group" aria-label="Colour theme"><button type="button" data-theme="light" aria-pressed="true">Light</button><button type="button" data-theme="dark" aria-pressed="false">Dark</button></div>
         </div>
         <div class="a11y-row">
           <div class="t"><b>Dyslexia-friendly text</b><span>Rounder letters, wider spacing, shorter lines.</span></div>
@@ -592,31 +825,36 @@
           <button class="a11y-act" id="easyBtn" type="button" aria-pressed="false">Turn on</button>
         </div>
         <div class="a11y-row">
+          <div class="t"><b>High contrast</b><span>Near-black on white, stronger borders. Works with dark mode too.</span></div>
+          <button class="a11y-act" id="hcBtn" type="button" aria-pressed="false">Turn on</button>
+        </div>
+        <div class="a11y-row">
+          <div class="t"><b>Underline every link</b><span>So links never depend on colour alone.</span></div>
+          <button class="a11y-act" id="ulBtn" type="button" aria-pressed="false">Turn on</button>
+        </div>
+        <div class="a11y-row">
+          <div class="t"><b>Reduce motion</b><span>No animations or smooth scrolling.</span></div>
+          <button class="a11y-act" id="rmBtn" type="button" aria-pressed="false">Turn on</button>
+        </div>
+        <div class="a11y-row">
           <div class="t"><b>Easy Read guides</b><span>Short guides in easy words with pictures. Each one prints or saves as a PDF.</span></div>
           <a class="a11y-act" id="erLink" href="#/easy" data-link>Open</a>
         </div>
-        <p class="a11y-note">Your choices are remembered on this device.</p>
+        <div class="a11y-row a11y-reset"><div class="t"><b>Reset all</b><span>Back to the defaults, including light or dark.</span></div><button class="a11y-act" id="resetBtn" type="button">Reset</button></div>
+        </div>
+        <p class="a11y-note">Your choices are remembered on this device and never sent anywhere. <a href="#/accessibility" data-link>Accessibility statement</a>.</p>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="bar">
-  <div class="wrap bar-in">
-    <a class="logo" href="#/" data-link>
-      <svg width="26" height="26" viewBox="0 0 70 70" aria-hidden="true"><rect width="70" height="70" rx="20" fill="#0B5D7A"/><rect x="12" y="28.5" width="46" height="13" rx="6.5" fill="#FFFFFF"/><rect x="28.5" y="12" width="13" height="46" rx="6.5" fill="#BFE3DA"/></svg>
-      GAMSA
-    </a>
-    <button class="navbtn" id="navbtn" aria-expanded="false" type="button">Menu</button>
-    <nav class="main" id="nav" aria-label="Main">
-      <a href="#/" data-link>Home</a>
-      <a href="#/supply" data-link>Shortages</a>
-      <a href="#/medicines" data-link>Medicines</a>
-      <a href="#/doses" data-link>Doses guide</a>
-      <a href="#/using" data-link>How-to-use guide</a>
-      <a href="#/pharmacy" data-link>Pharmacy guide</a>
-      <a href="#/costs" data-link>Costs guide</a>
-    </nav>
+      <a class="top-btn exit" id="exitBtn" href="https://www.google.com.au/" title="Leave this site quickly: this page is replaced with Google">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 4h5a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-5M4 12h11m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="lbl">Quick exit</span><span class="lbl-s" aria-hidden="true">Exit</span><span class="sr-only">Leave this site quickly</span>
+      </a>
+      <div class="seg" id="themeBtn" role="group" aria-label="Colour mode">
+        <button type="button" data-theme="light" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="sr-only">Light mode</span></button>
+        <button type="button" data-theme="dark" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="sr-only">Dark mode</span></button>
+      </div>
+      <button class="navbtn" id="navbtn" aria-expanded="false" type="button">Menu</button>
+    </div>
   </div>
 </div>
 </header>
@@ -672,41 +910,64 @@
   <div class="view" id="v-home">
     <div class="hero">
       <svg class="hero-motif" viewBox="0 0 70 70" aria-hidden="true" focusable="false"><rect x="12" y="28.5" width="46" height="13" rx="6.5" fill="#FFFFFF"/><rect x="28.5" y="12" width="13" height="46" rx="6.5" fill="#BFE3DA"/></svg>
-      <svg class="hero-motif-2" viewBox="0 0 70 70" aria-hidden="true" focusable="false"><rect x="12" y="28.5" width="46" height="13" rx="6.5" fill="#BFE3DA"/><rect x="28.5" y="12" width="13" height="46" rx="6.5" fill="#FFFFFF"/></svg>
+      <svg class="hero-motif-2" viewBox="0 0 70 70" aria-hidden="true" focusable="false"><rect x="12" y="28.5" width="46" height="13" rx="6.5" fill="#F5A9B8"/><rect x="28.5" y="12" width="13" height="46" rx="6.5" fill="#FFFFFF"/></svg>
       <div class="hero-in">
+        <div class="hero-l">
         <p class="eyebrow">GAMSA</p>
-        <h1 tabindex="-1">Gender-Affirming Medicines South Australia</h1>
-        <p class="lede">Straight answers about hormone therapy and the medicines that go with it: what each one does, what it costs, how to use it, and whether your pharmacy can actually get it &mdash; for trans and gender diverse people in South Australia, and the people who support them.</p>
+        <h1 tabindex="-1">Gender-Affirming Medicines <span class="hl">South Australia</span></h1>
+        <p class="lede">Clear, referenced information about gender-affirming medicines &mdash; hormones, blockers and everything that happens at the pharmacy &mdash; for the people who take them, the people who care for them, and the clinicians who prescribe and dispense them.</p>
+        </div>
+        <div class="hero-r">
+          <form class="hero-search" id="heroSearch" role="search" action="#/search">
+            <label class="sr-only" for="siteq">Search this site</label>
+            <svg class="hs-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+            <input id="siteq" name="q" type="search" placeholder="Search a medicine, brand or topic" autocomplete="off">
+            <button type="submit">Search</button>
+          </form>
+          <p class="hs-pop">Popular: <a href="#/search?q=patches">patches</a> <a href="#/search?q=Reandron">Reandron</a> <a href="#/search?q=safety%20net">Safety Net</a> <a href="#/search?q=60-day">60-day scripts</a></p>
+        </div>
+      </div>
+      <div class="hero-foot">
+        <a class="live-line" id="homeLive" href="#/supply" data-link></a>
+        <div class="hero-cta">
+          <a class="cta" href="#/medicines" data-link>Browse medicines A&ndash;Z &rarr;</a>
+          <a class="cta ghost" href="#/supply" data-link>Check supply today</a>
+        </div>
       </div>
     </div>
 
-    <div class="tiles">
-      <a class="tile" href="#/supply" data-link>
-        <span class="t">Supply &amp; shortages</span>
-        <span class="d">Which medicines are hard to get right now, what to do about it, and what pharmacists report in stock.</span>
-        <span class="live">Updated daily</span>
-      </a>
-      <a class="tile" href="#/costs" data-link>
-        <span class="t">Costs and the PBS</span>
-        <span class="d">What you pay at the counter, the safety net, and what to do if cost is a barrier.</span>
-        <span class="live">Updated monthly</span>
-      </a>
-      <a class="tile" href="#/medicines" data-link>
-        <span class="t">Medicines A&ndash;Z</span>
-        <span class="d">One page per medicine: how it works, doses used here, side effects, monitoring, cost and current supply.</span>
-      </a>
-      <a class="tile" href="#/doses" data-link>
-        <span class="t">Doses and formulations</span>
-        <span class="d">The forms each hormone comes in, and the dose ranges Australian prescribers work within.</span>
-      </a>
-      <a class="tile" href="#/using" data-link>
-        <span class="t">Using your medicine</span>
-        <span class="d">Patches, gels, injections and tablets — how to use them, store them and dispose of them.</span>
-      </a>
-      <a class="tile" href="#/pharmacy" data-link>
-        <span class="t">Working with your pharmacy</span>
-        <span class="d">What to bring, what to do if you run out, and getting your name right on the label.</span>
-      </a>
+    <div class="want" aria-label="I want to">
+      <a href="#/supply" data-link><b>I need my medicine today</b><span>See what is in short supply and what pharmacists report in stock</span></a>
+      <a href="#/costs" data-link><b>What will it cost?</b><span>PBS prices, the Safety Net, Closing the Gap and 60-day scripts</span></a>
+      <a href="#/using" data-link><b>How do I use it?</b><span>Patches, gels, injections and tablets, step by step</span></a>
+      <a href="#/allies" data-link><b>I am helping someone</b><span>What to know and what to do at the pharmacy</span></a>
+    </div>
+
+    <div class="aud-grid">
+      <div class="aud c-trans">
+        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 20a7 7 0 0 1 14 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <a class="t" href="#/trans" data-link>Trans and gender diverse people</a>
+        <span class="d">Your medicines in plain language.</span>
+        <span class="ql"><a href="#/supply">Supply today</a><a href="#/medicines">Medicines A&ndash;Z</a><a href="#/costs">Costs and the PBS</a><a href="#/doses">Doses</a><a href="#/using">How to use</a><a href="#/pharmacy">Pharmacy guide</a><a href="#/easy">Easy Read</a><a href="#/sightings">Patient sightings</a></span>
+      </div>
+      <div class="aud c-clin">
+        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v6a6 6 0 0 0 12 0V3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 15v2a4 4 0 0 0 8 0v-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="13" r="2" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+        <a class="t" href="#/clinicians" data-link>Clinicians and pharmacists</a>
+        <span class="d">Tools behind the patient pages.</span>
+        <span class="ql"><a href="#/clinician-guide">Clinician guide</a><a href="#/pharmacy-reports">Stock register</a><a href="#/med/testosterone-undecanoate#sec-med-9">Injection training package</a><a href="#/clinician-guide#sec-clinician-guide-3">Monitoring schedule</a><a href="/clinicians/pbs-authority-wording-card.pdf" target="_blank" rel="noopener">Authority wording card</a><a href="#/alerts">Shortage alerts</a></span>
+      </div>
+      <div class="aud c-allies">
+        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.5A3.5 3.5 0 0 1 12 8a3.5 3.5 0 0 1 7 2.5C19 15.6 12 20 12 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+        <a class="t" href="#/allies" data-link>Family, friends and allies</a>
+        <span class="d">How to help without taking over.</span>
+        <span class="ql"><a href="#/ally-guide">Ally guide</a><a href="#/easy#er-allies">Easy Read for helpers</a><a href="/allies/pharmacy-visit-checklist.pdf" target="_blank" rel="noopener">Pharmacy visit checklist</a><a href="#/supply">Supply today</a><a href="#/costs">Costs and the PBS</a><a href="#/resources">Resources</a></span>
+      </div>
+      <div class="aud c-res">
+        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H4zM20 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+        <a class="t" href="#/resources" data-link>Resources</a>
+        <span class="d">Australian bodies, guidelines and support.</span>
+        <span class="ql"><a href="#/resources#sec-resources-0">Supply and medicines</a><a href="#/resources#sec-resources-1">Costs and the PBS</a><a href="#/resources#sec-resources-2">Care and support in SA</a><a href="#/resources#sec-resources-3">National information</a><a href="#/search">Search</a><a href="#/feedback">Feedback</a></span>
+      </div>
     </div>
 
     <div class="callout">
@@ -739,7 +1000,7 @@
     <div class="clear-box" id="clearBox"><h2 class="h3">No supply problems reported</h2><ul id="clear"></ul></div>
 
     <div class="sight" id="prPanel">
-      <h2>Pharmacy stock reports</h2>
+      <h2 id="sup-pharm" tabindex="-1">Pharmacy stock reports</h2>
       <p class="muted small" style="margin-top:8px;max-width:60ch;">What registered pharmacists say is on their shelves right now, checked against the AHPRA register before publishing. The official data above tells you about Australia; this tells you about particular pharmacies.</p>
       <div id="prPanelList" class="ticker" hidden></div>
       <p class="muted small" role="status" aria-live="polite" id="prPanelStatus" style="margin:8px 0 0"></p>
@@ -747,7 +1008,7 @@
     </div>
 
     <div class="sight">
-      <h2>Seen it in stock, or missed out?</h2>
+      <h2 id="sup-seen" tabindex="-1">Seen it in stock, or missed out?</h2>
       <div class="ticker" id="homeTicker" hidden></div>
       <p class="muted small" style="margin-top:8px;max-width:60ch;">Reports from other patients about what their local pharmacy had on the shelf. This sits alongside the official data above until a verified pharmacy stock feed is in place.</p>
       <form class="rep" id="repForm">
@@ -776,7 +1037,7 @@
     </div>
 
     <div class="callout" style="margin-top:30px;">
-      <h2 class="h3">If your medicine is affected</h2>
+      <h2 class="h3" id="sup-affected" tabindex="-1">If your medicine is affected</h2>
       <p>Start with your pharmacist — they can check other suppliers, order it in, and for the oestrogen patches can often supply an approved alternative without a new prescription. Filling your script a few days early, rather than on the last day, gives everyone room to move.</p>
     </div>
   </div>
@@ -787,6 +1048,21 @@
   <div class="view" id="v-pharmacy"></div>
   <div class="view" id="v-costs"></div>
   <div class="view" id="v-easy"></div>
+  <div class="view" id="v-trans"></div>
+  <div class="view" id="v-clinicians"></div>
+  <div class="view" id="v-allies"></div>
+  <div class="view" id="v-clinician-guide"></div>
+  <div class="view" id="v-ally-guide"></div>
+  <div class="view" id="v-resources"></div>
+  <div class="view" id="v-alerts"></div>
+  <div class="view" id="v-privacy"></div>
+  <div class="view" id="v-accessibility"></div>
+  <div class="view" id="v-disclaimer"></div>
+  <div class="view" id="v-search">
+    <div class="page-head"><p class="kicker">Search</p><h1 tabindex="-1">Search this site</h1><p class="lede" id="srLede">Every page, guide and medicine, searched in your browser. Nothing is sent anywhere.</p></div>
+    <form class="srch" id="srForm" role="search" action="#/search"><label class="sr-only" for="srq">Search this site</label><input id="srq" name="q" type="search" autocomplete="off" placeholder="e.g. Safety Net, patches, Reandron"><button type="submit">Search</button></form>
+    <div id="srOut" aria-live="polite"></div>
+  </div>
   <div class="view" id="v-easy-guide"></div>
   <div class="view" id="v-pharmacy-reports">
     <a class="backlink" href="#/supply">&larr; Back to supply &amp; shortages</a>
@@ -855,32 +1131,59 @@
 
 <footer>
   <div class="wrap">
-    <div class="foot-grid">
+    <div class="foot-cols">
       <div>
-        <h2 class="h3">Sections</h2>
-        <ul class="sitemap" role="list">
-          <li><a href="#/" data-link>Home</a></li>
-          <li><a href="#/supply" data-link>Shortages &mdash; what is hard to get now</a></li>
-          <li><a href="#/medicines" data-link>Medicines A&ndash;Z &mdash; an in-depth page for each medicine</a></li>
-          <li><a href="#/sightings" data-link>Patient sightings &mdash; what people have seen in stock</a></li>
-          <li><a href="#/pharmacy-reports" data-link>Pharmacy stock reports &mdash; posted by registered pharmacists</a></li>
-          <li><a href="#/doses" data-link>Doses guide &mdash; what each medicine is, and the usual ranges</a></li>
-          <li><a href="#/using" data-link>How-to-use guide &mdash; patches, gels, injections, tablets</a></li>
-          <li><a href="#/pharmacy" data-link>Pharmacy guide &mdash; what to bring, what to ask, running out</a></li>
-          <li><a href="#/costs" data-link>Costs guide &mdash; what you pay, and the PBS</a></li>
+        <h2>Information</h2>
+        <ul role="list">
+          <li><a href="#/medicines" data-link>Medicines A&ndash;Z</a></li>
+          <li><a href="#/supply" data-link>Supply &amp; shortages</a></li>
+          <li><a href="#/costs" data-link>Costs and the PBS</a></li>
+          <li><a href="#/doses" data-link>Doses guide</a></li>
+          <li><a href="#/using" data-link>How-to-use guide</a></li>
+          <li><a href="#/pharmacy" data-link>Pharmacy guide</a></li>
+          <li><a href="#/easy" data-link>Easy Read guides</a></li>
         </ul>
       </div>
       <div>
-        <h2 class="h3">About this site</h2>
-        <p>GAMSA publishes independent, referenced medicines information for trans and gender diverse people in South Australia. It is not affiliated with any clinic, pharmacy or manufacturer, and carries no advertising or sponsorship.</p>
-        <p>Supply information is refreshed daily from the Therapeutic Goods Administration. PBS co-payment and Safety Net figures are checked monthly against the Pharmaceutical Benefits Scheme. Clinical content is written and reviewed by hand, and every claim is referenced on the page it appears.</p>
-        <p><a href="#/feedback" data-link>Send feedback or report a mistake</a></p>
+        <h2>Who it is for</h2>
+        <ul role="list">
+          <li><a href="#/trans" data-link>Trans and gender diverse people</a></li>
+          <li><a href="#/clinicians" data-link>Clinicians and pharmacists</a></li>
+          <li><a href="#/allies" data-link>Family, friends and allies</a></li>
+          <li><a href="#/resources" data-link>Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Site</h2>
+        <ul role="list">
+          <li><a href="#/search" data-link>Search</a></li>
+          <li><a href="#/sightings" data-link>Patient sightings</a></li>
+          <li><a href="#/pharmacy-reports" data-link>Pharmacy stock reports</a></li>
+          <li><a href="#/alerts" data-link>Shortage alerts (RSS)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>About</h2>
+        <ul role="list">
+          <li><a href="#/disclaimer" data-link>Disclaimer</a></li>
+          <li><a href="#/privacy" data-link>Privacy</a></li>
+          <li><a href="#/accessibility" data-link>Accessibility</a></li>
+          <li><a href="#/feedback" data-link>Contact and feedback</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-row">
+      <div class="ack">
+        <div class="flags" aria-hidden="true">
+          <svg viewBox="0 0 48 30"><rect width="48" height="15" fill="#000"/><rect y="15" width="48" height="15" fill="#CC0000"/><circle cx="24" cy="15" r="8" fill="#FFCC00"/></svg>
+          <svg viewBox="0 0 48 30"><rect width="48" height="30" fill="#5BCEFA"/><rect y="6" width="48" height="18" fill="#F5A9B8"/><rect y="12" width="48" height="6" fill="#fff"/></svg>
+          <svg viewBox="0 0 48 30"><rect width="48" height="5" fill="#E40303"/><rect y="5" width="48" height="5" fill="#FF8C00"/><rect y="10" width="48" height="5" fill="#FFED00"/><rect y="15" width="48" height="5" fill="#008026"/><rect y="20" width="48" height="5" fill="#24408E"/><rect y="25" width="48" height="5" fill="#732982"/><path d="M0 0h8l15 15-15 15H0z" fill="#000"/><path d="M0 0h6l15 15-15 15H0z" fill="#613915"/><path d="M0 0h4l15 15-15 15H0z" fill="#5BCEFA"/><path d="M0 0h2l15 15-15 15H0z" fill="#F5A9B8"/><path d="M0 0l15 15L0 30z" fill="#fff"/><path d="M0 4l11 11L0 26z" fill="#FFD800"/><circle cx="3.2" cy="15" r="2.3" fill="none" stroke="#7902AA" stroke-width="1.1"/></svg>
+        </div>
+        <p>GAMSA acknowledges the Kaurna people, Traditional Owners of the Adelaide Plains where this site is made, and all Aboriginal and Torres Strait Islander Peoples as the Traditional Owners of the lands and waters across South Australia and Australia. We pay our respects to Elders past and present, and recognise that sovereignty was never ceded. GAMSA welcomes everyone, and stands with trans and gender diverse people of every background.</p>
+      </div>
+      <div class="foot-about">
+        <p class="help-now"><strong>Need help now?</strong> Emergency 000 &middot; Lifeline 13 11 14 &middot; QLife 1800 184 527 (3pm&ndash;9pm) &middot; National Relay Service 106</p>
         <p class="rev" id="rev"></p>
-      </div>
-      </div>
-      <div class="foot-legal">
-      <p><strong>This is health information, not medical advice.</strong> It cannot replace your prescriber or pharmacist, who know your history. Never change how you take a medicine based on this site alone. In an emergency call 000.</p>
-      <p>Built and maintained by Theodore South, BPharm (Hons), a registered pharmacist in Adelaide. An independent, non-commercial project, offered freely to South Australians.</p>
       </div>
     </div>
   </div>
@@ -933,10 +1236,10 @@
   /* internal links in content: [text](#/route) — only same-site hash routes */
   function ilink(t){
     return String(t)
-      .replace(/\[([^\]\d][^\]]*)\]\((#\/[a-z0-9\/-]*(?:#[a-z0-9-]+)?)\)/g,'<a href="$2">$1</a>')
-      .replace(/\[([^\]\d][^\]]*)\]\((\/clinicians\/[a-z0-9-]+\.(?:pdf|zip))\)/g,'<a href="$2" class="dl" download>$1</a>')
-      .replace(/\[([^\]\d][^\]]*)\]\((https:\/\/[^\s)]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>')
-      .replace(/\[([^\]\d][^\]]*)\]\((\/medicines\/[a-z0-9-]+(?:#[a-z0-9-]+)?)\)/g, function(_,txt,href){
+      .replace(/\[(?!\d[\d,\s]*\])([^\]]+)\]\((#\/[a-z0-9\/-]*(?:#[a-z0-9-]+)?)\)/g,'<a href="$2">$1</a>')
+      .replace(/\[(?!\d[\d,\s]*\])([^\]]+)\]\((\/(?:clinicians|allies)\/[a-z0-9-]+\.(?:pdf|zip))\)/g,'<a href="$2" class="dl" download>$1</a>')
+      .replace(/\[(?!\d[\d,\s]*\])([^\]]+)\]\((https:\/\/[^\s)]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>')
+      .replace(/\[(?!\d[\d,\s]*\])([^\]]+)\]\((\/medicines\/[a-z0-9-]+(?:#[a-z0-9-]+)?)\)/g, function(_,txt,href){
         return '<a href="'+(PATHMODE?href:"#"+href.replace(/^\/medicines\//,"/med/"))+'">'+txt+'</a>'; });
   }
   function cite(t,v){var p=v?v+"-":"";return String(t).replace(/\s*\[(\d+)\]/g,
@@ -999,10 +1302,10 @@
     function C(t){return linkMeds(cite(ilink(esc(t)), v), seen);}
     function newSection(){ seen = {}; }
     el.innerHTML =
-      '<div class="page-head"><p class="kicker">Overview guide</p><h1 tabindex="-1">'+esc(c.title)+'</h1><p class="lede">'+C(c.intro)+
+      '<div class="page-head"><p class="kicker">'+esc(c.kicker||"Overview guide")+'</p><h1 tabindex="-1">'+esc(c.title)+'</h1><p class="lede">'+C(c.intro)+
       '</p></div>'+
-      '<p class="quick"><a href="#/medicines">Looking for one medicine? See the A\u2013Z \u2192</a></p>'+
-      '<nav class="onthis" aria-label="On this page"><h2>On this page</h2><ol>'+
+      (c.kicker?'':'<p class="quick"><a href="#/medicines">Looking for one medicine? See the A\u2013Z \u2192</a></p>')+
+      '<nav class="onthis" id="onthis-'+v+'" tabindex="-1" aria-label="On this page"><h2>On this page</h2><ol>'+
         c.sections.map(function(s,i){
           return '<li><a href="#sec-'+v+'-'+i+'">'+esc(s.h)+'</a></li>';}).join("")+
       '</ol></nav>'+
@@ -1012,11 +1315,13 @@
           (s.premiums ? premiumList() : '')+
           (s.body||[]).map(function(p){return '<p>'+C(p)+'</p>';}).join("")+
           (s.list&&s.list.length?'<ul>'+s.list.map(function(li){return '<li>'+C(li)+'</li>';}).join("")+'</ul>':'')+
+          (s.table?'<div class="tblwrap"><table class="tbl"><thead><tr>'+s.table.head.map(function(h){return '<th scope="col">'+esc(h)+'</th>';}).join("")+'</tr></thead><tbody>'+
+            s.table.rows.map(function(r){return '<tr>'+r.map(function(cell,j){return (j?'<td>':'<th scope="row">')+C(cell)+(j?'</td>':'</th>');}).join("")+'</tr>';}).join("")+'</tbody></table></div>':'')+
           (s.svg?'<figure>'+s.svg+(s.svgCaption?'<figcaption>'+C(s.svgCaption)+'</figcaption>':'')+'</figure>':'')+
           (s.note?'<p class="note">'+C(s.note)+'</p>':'')+
         '</section>';
       }).join("")+
-      '<div class="refs"><h2>References</h2><ol>'+
+      (c.references.length?'<div class="refs"><h2>References</h2><ol>':'<div hidden><ol>')+
         c.references.map(function(r){
           var host=r.url?r.url.replace(/^https?:\/\/(www\.)?/,"").split("/")[0]:"";
           if(r.url&&r.url.charAt(0)==="/") return '<li id="ref-'+v+'-'+r.n+'" tabindex="-1">'+esc(r.text)+' <a href="'+esc(r.url)+'" class="dl" download>Download (PDF)</a></li>';
@@ -1080,17 +1385,18 @@
       '<a class="er-back" href="#/easy" data-link>All Easy Read guides</a>'+
       '<a class="er-back" href="#/" data-link>Main website</a></div>';
   }
-  var ER_ICON={start:"book",getting:"pharmacy",shortage:"warn",cost:"money","patches-gel":"patch",injections:"doc",tablets:"pills",doses:"question",help:"phone"};
+  var ER_ICON={start:"book",getting:"pharmacy",shortage:"warn",cost:"money","patches-gel":"patch",injections:"doc",tablets:"pills",doses:"question",help:"phone",helping:"people","ally-medicines":"pills","ally-problems":"warn","ally-support":"speak"};
   /* index of guides */
   function renderEasyRead(){
     var D=CONTENT.easyread;
     document.getElementById("v-easy").innerHTML =
       '<div class="er-cover"><p class="er-kick">'+esc(D.kicker)+'</p><h1>'+esc(D.title)+'</h1>'+
       '<p class="er-sub">Short guides in easy to read words, with pictures. Pick the one you need.</p></div>'+
-      '<div class="er-list">'+D.guides.map(function(g){
-        return '<a class="er-card" href="#/easy/'+esc(g.id)+'">'+icon(ER_ICON[g.id]||"book")+
-          '<span><b>'+esc(g.title)+'</b><span>'+esc(g.subtitle)+'</span></span></a>';
-      }).join("")+'</div>'+
+      [["you","For you","er-you"],["allies","For family, friends and carers","er-allies"]].map(function(grp){
+        return '<h2 class="er-grp" id="'+grp[2]+'" tabindex="-1">'+grp[1]+'</h2><div class="er-list">'+D.guides.filter(function(g){ return (g.audience||"you")===grp[0]; }).map(function(g){
+          return '<a class="er-card" href="#/easy/'+esc(g.id)+'">'+icon(ER_ICON[g.id]||"book")+
+            '<span><b>'+esc(g.title)+'</b><span>'+esc(g.subtitle)+'</span></span></a>';
+        }).join("")+'</div>'; }).join("")+
       '<section class="er-sec"><h2>Word list</h2><p class="er-tx-note">Words written in <b>bold</b> in the guides are explained here.</p><dl class="er-words">'+
       D.wordlist.map(function(w){ return '<dt>'+esc(w.w)+'</dt><dd>'+esc(w.d)+'</dd>'; }).join("")+'</dl></section>';
   }
@@ -1265,8 +1571,73 @@
     "v-using":    function(){ renderContent("v-using", CONTENT.administration); },
     "v-pharmacy": function(){ renderContent("v-pharmacy", CONTENT.pharmacy); },
     "v-costs":    function(){ renderContent("v-costs", CONTENT.costs); },
-    "v-easy":     function(){ renderEasyRead(); }
+    "v-easy":     function(){ renderEasyRead(); },
+    "v-clinician-guide": function(){ renderContent("v-clinician-guide", CONTENT.clinicians); },
+    "v-ally-guide": function(){ renderContent("v-ally-guide", CONTENT.allies); },
+    "v-trans":    function(){ renderHub("v-trans", HUBS.trans); },
+    "v-alerts":   function(){ renderAlerts(); },
+    "v-privacy":  function(){ renderContent("v-privacy", CONTENT.privacy); },
+    "v-accessibility": function(){ renderContent("v-accessibility", CONTENT.accessibility); },
+    "v-disclaimer": function(){ renderContent("v-disclaimer", CONTENT.disclaimer); },
+    "v-clinicians": function(){ renderHub("v-clinicians", HUBS.clinicians); },
+    "v-allies":   function(){ renderHub("v-allies", HUBS.allies); },
+    "v-resources": function(){ renderContent("v-resources", CONTENT.resources); }
   };
+  var HUBS = {
+    trans: {kicker:"Trans and gender diverse people", title:"Your medicines, in plain language", lede:"Everything on this site written for the person taking the medicine: what each one does, what it costs, how to use it, and whether your pharmacy can get it this week.",
+      items:[
+        {t:"Supply & shortages", h:"#/supply", d:"Which medicines are hard to get right now, what to do about it, and what pharmacists and patients report in stock.", live:"Updated daily"},
+        {t:"Medicines A\u2013Z", h:"#/medicines", d:"One page per medicine: how it works, doses used here, side effects, monitoring, cost and current supply."},
+        {t:"Costs and the PBS", h:"#/costs", d:"What you pay at the counter, the Safety Net, Closing the Gap, 60-day scripts, and what to do if cost is a barrier.", live:"Updated monthly"},
+        {t:"Doses and formulations", h:"#/doses", d:"The forms each hormone comes in, the dose ranges Australian prescribers work within, and getting blood tests timed right."},
+        {t:"How to use your medicine", h:"#/using", d:"Patches, gels, injections, tablets and implants: how to use, store and dispose of them."},
+        {t:"Working with your pharmacy", h:"#/pharmacy", d:"What to bring, what to say, what to do if you run out, and getting your name right on the label."},
+        {t:"Easy Read guides", h:"#/easy", d:"Short guides in easy words with pictures. Each one prints or saves as a PDF."},
+        {t:"Patient sightings", h:"#/sightings", d:"What other people have seen in stock at South Australian pharmacies, and where to add your own."}]},
+    clinicians: {kicker:"Clinicians and pharmacists", title:"For prescribers, nurses and pharmacists", lede:"The tools behind the patient pages: a training package for the long-acting testosterone injection, a stock register for pharmacists, a monitoring summary, and the PBS and prescribing references.",
+      items:[
+        {t:"For clinicians and pharmacists", h:"#/clinician-guide", d:"Training package, counter notes, monitoring schedule, Authority wording, shortage alerts, references and how the data stays current."},
+        {t:"Pharmacist stock register", h:"#/pharmacy-reports", d:"Registered pharmacists post what is on their shelves. Checked once against AHPRA, then published immediately."},
+        {t:"Injection training package", h:"#/med/testosterone-undecanoate#sec-med-9", d:"SOP and training guide, treatment-room card, competency checklist, adverse event form and audit tool. Free to download."},
+        {t:"Monitoring schedule", h:"#/clinician-guide#sec-clinician-guide-3", d:"Baseline, first year and ongoing monitoring for oestrogen- and testosterone-based therapy in one table."},
+        {t:"Authority wording card", h:"/clinicians/pbs-authority-wording-card.pdf", d:"One printable page on how PBS testosterone scripts are worded for gender-affirming care, and what to say at the counter.", live:"PDF", file:true},
+        {t:"Shortage alerts", h:"#/alerts", d:"Every listed medicine under a current TGA shortage notice, and an RSS feed you can subscribe to. Rebuilt each morning.", live:"RSS"}]},
+    allies: {kicker:"Family, friends and allies", title:"Supporting someone on hormone therapy", lede:"What the medicines are, what tends to go wrong in practice, and how to help with the medicines side without taking over.",
+      items:[
+        {t:"For family, friends and allies", h:"#/ally-guide", d:"What the medicines are, the serious problems and how they are prevented, how to help, and where to learn more about allyship."},
+        {t:"Easy Read guides for helpers", h:"#/easy#er-allies", d:"Four short guides in easy words: what the medicines are, helping with their medicine, if something goes wrong, and being an ally."},
+        {t:"Pharmacy visit checklist", h:"/allies/pharmacy-visit-checklist.pdf", d:"One page: what to take, what to ask at the counter, what to do if the medicine is out of stock.", live:"PDF", file:true},
+        {t:"Supply & shortages", h:"#/supply", d:"Check this before ringing around: which medicines are affected, and what pharmacists report in stock.", live:"Updated daily"},
+        {t:"Costs and the PBS", h:"#/costs", d:"The PBS price, the Safety Net, and why a testosterone script is worded the way it is."},
+        {t:"Resources", h:"#/resources", d:"Australian bodies, guidelines and support services in one place."}]}
+  };
+  function renderAlerts(){
+    var feed = (PATHMODE ? location.origin : "https://gamsa.au") + "/feed.xml";
+    var rows = DATA.medicines.filter(function(m){ return m.status!=="in_supply" && m.status!=="unverified"; });
+    document.getElementById("v-alerts").innerHTML =
+      '<div class="page-head"><p class="kicker">Clinicians and pharmacists</p><h1 tabindex="-1">Shortage alerts</h1><p class="lede">Every medicine on this site under a current TGA shortage notice, as a feed you can subscribe to. It is rebuilt each morning from the same data as the supply page.</p></div>'+
+      '<section class="block" id="al-how" tabindex="-1"><h2>How to subscribe</h2><p>Copy this address into a feed reader (Feedly, Inoreader, NetNewsWire), into Outlook under RSS Feeds, or into a Teams or Slack RSS connector. New entries appear when a product\u2019s status changes; nothing is emailed and no account is needed.</p>'+
+      '<p class="feed-url"><code id="feedUrl">'+esc(feed)+'</code> <button type="button" class="btn sm" id="feedCopy">Copy address</button></p>'+
+      '<p class="note">Opening the address directly in a browser shows the raw feed text; that is normal. Feed readers turn it into a list.</p></section>'+
+      '<section class="block" id="al-now" tabindex="-1"><h2>Current alerts ('+rows.length+')</h2>'+
+      (rows.length?'<ul class="alert-list">'+rows.map(function(m){ return '<li><a href="#/med/'+esc(SUPPLY2MED[m.id]||"")+'"><b>'+esc(m.brand)+'</b></a> '+esc(m.strengthLabel||"")+' \u2014 '+esc(m.statusLabel||m.status)+(m.expectedReturn&&m.expectedReturn!=="\u2014"?'; expected '+esc(m.expectedReturn):'')+'</li>'; }).join("")+'</ul>':'<p>No shortage notices today.</p>')+
+      '<p class="stamp">TGA records checked '+esc(DATA.generatedAt)+'. Full detail on the <a href="#/supply">supply page</a>.</p></section>';
+    var btn=document.getElementById("feedCopy");
+    btn.addEventListener("click", function(){ try{ navigator.clipboard.writeText(feed).then(function(){ btn.textContent="Copied"; }); }catch(e){} });
+  }
+  function renderStats(){
+    var el=document.getElementById("homeLive"); if(!el) return;
+    var n=DATA.medicines.filter(function(m){ return m.status!=="in_supply" && m.status!=="unverified"; }).length;
+    el.innerHTML='<span class="dot"></span><span><b>'+n+' medicine'+(n===1?"":"s")+'</b> under a TGA shortage notice \u00b7 checked '+esc(DATA.generatedAt)+' \u2192</span>';
+  }
+  function renderHub(id, h){
+    document.getElementById(id).classList.add("hubv");
+    document.getElementById(id).innerHTML =
+      '<div class="page-head"><p class="kicker">'+esc(h.kicker)+'</p><h1 tabindex="-1">'+esc(h.title)+'</h1><p class="lede">'+esc(h.lede)+'</p></div>'+
+      '<div class="tiles hub">'+h.items.map(function(i){
+        return '<a class="tile" href="'+i.h+'"'+(i.file?' target="_blank" rel="noopener"':'')+'><span class="t">'+esc(i.t)+'</span><span class="d">'+esc(i.d)+'</span>'+(i.live?'<span class="live">'+esc(i.live)+'</span>':'')+'</a>';
+      }).join("")+'</div>';
+  }
   function ensureRendered(id){ if(LAZY[id]){ LAZY[id](); delete LAZY[id]; } }
 
   /* ---------- supply ---------- */
@@ -1622,7 +1993,7 @@
   }
 
   /* ---------- routing ---------- */
-  var VIEWS={"/":"v-home","/supply":"v-supply","/medicines":"v-medicines","/med":"v-med","/sightings":"v-sightings","/doses":"v-doses","/using":"v-using","/pharmacy":"v-pharmacy","/costs":"v-costs","/easy":"v-easy","/easy-guide":"v-easy-guide","/feedback":"v-feedback","/pharmacy-reports":"v-pharmacy-reports"};
+  var VIEWS={"/":"v-home","/supply":"v-supply","/medicines":"v-medicines","/med":"v-med","/sightings":"v-sightings","/doses":"v-doses","/using":"v-using","/pharmacy":"v-pharmacy","/costs":"v-costs","/easy":"v-easy","/easy-guide":"v-easy-guide","/feedback":"v-feedback","/pharmacy-reports":"v-pharmacy-reports","/trans":"v-trans","/clinicians":"v-clinicians","/allies":"v-allies","/clinician-guide":"v-clinician-guide","/ally-guide":"v-ally-guide","/resources":"v-resources","/alerts":"v-alerts","/privacy":"v-privacy","/accessibility":"v-accessibility","/disclaimer":"v-disclaimer","/search":"v-search"};
   var nav=document.getElementById("nav"), navbtn=document.getElementById("navbtn");
   /* Routing. The hosted site uses real paths (/costs, /medicines/<id>) so each page
      can be indexed; the single-file preview keeps #/ hash routes. */
@@ -1672,12 +2043,17 @@
     });
   }
   var lastRoute=null;
+  var VIEWGRP={"/trans":"trans","/supply":"trans","/medicines":"trans","/med":"trans","/sightings":"trans","/costs":"trans","/doses":"trans","/using":"trans","/pharmacy":"trans","/easy":"trans","/easy-guide":"trans",
+    "/clinicians":"clin","/clinician-guide":"clin","/pharmacy-reports":"clin","/alerts":"clin","/allies":"allies","/ally-guide":"allies",
+    "/resources":"res","/search":"res","/privacy":"res","/accessibility":"res","/disclaimer":"res","/feedback":"res"};
   var TITLES={"/":"Gender-Affirming Medicines South Australia","/supply":"Supply & shortages","/doses":"Doses and formulations",
-    "/using":"How to use your medicine","/pharmacy":"Working with your pharmacy","/costs":"Costs and the PBS","/easy":"Easy Read guides","/easy-guide":"Easy Read","/feedback":"Send feedback","/pharmacy-reports":"Pharmacy stock reports","/medicines":"Medicines A\u2013Z","/med":"Medicine","/sightings":"Patient sightings"};
+    "/using":"How to use your medicine","/pharmacy":"Working with your pharmacy","/costs":"Costs and the PBS","/easy":"Easy Read guides","/easy-guide":"Easy Read","/feedback":"Send feedback","/pharmacy-reports":"Pharmacy stock reports","/trans":"Trans and gender diverse people","/clinicians":"Clinicians and pharmacists","/allies":"Family, friends and allies","/clinician-guide":"For clinicians and pharmacists","/ally-guide":"For family, friends and allies","/resources":"Resources","/alerts":"Shortage alerts","/privacy":"Privacy","/accessibility":"Accessibility","/disclaimer":"Disclaimer","/search":"Search","/medicines":"Medicines A\u2013Z","/med":"Medicine","/sightings":"Patient sightings"};
   function route(){
-    var h=curRoute(), anchor=curAnchor();
+    var h=curRoute(), anchor=curAnchor(), qs="";
     if(!PATHMODE){ var ai=h.indexOf("#"); if(ai>-1) h=h.slice(0,ai); }
-    if(PATHMODE && h===lastRoute) return;   /* in-page #ref links: let the browser scroll */
+    var qi=h.indexOf("?"); if(qi>-1){ qs=h.slice(qi+1); h=h.slice(0,qi); }
+    if(PATHMODE){ qs=location.search.slice(1); }
+    if(PATHMODE && h===lastRoute && h!=="/search") return;   /* in-page #ref links: let the browser scroll */
     lastRoute=h;
     if(h.indexOf("/med/")===0){ if(renderMedPage(h.slice(5))) h="/med"; else h="/medicines"; }
     if(h.indexOf("/easy/")===0){ if(renderEasyGuide(h.slice(6))) h="/easy-guide"; else h="/easy"; }
@@ -1688,9 +2064,10 @@
     ensureRendered(VIEWS[h]);
     Object.keys(VIEWS).forEach(function(k){
       document.getElementById(VIEWS[k]).classList.toggle("on",k===h);});
-    var navKey = (h==="/med") ? "/medicines" : h;
-    nav.querySelectorAll("a").forEach(function(a){
-      a.setAttribute("aria-current", a.getAttribute("href")===(PATHMODE?toPath(navKey):"#"+navKey)?"page":"false");});
+    var vEl=document.getElementById(VIEWS[h]), grp=VIEWGRP[h];
+    if(vEl && grp && !vEl.classList.contains("c-"+grp)) vEl.classList.add("acc","c-"+grp);
+    var navKey = (h==="/med") ? "/medicines" : (h==="/easy-guide" ? "/easy" : h);
+    navCurrent(navKey);
     // leaving a page clears its search and filters, so it opens fresh next time
     if(qEl && qEl.value){ qEl.value=""; term=""; }
     if(filter!=="all"){ filter="all";
@@ -1707,10 +2084,12 @@
     if(h==="/pharmacy-reports") prOpen();
     if(h==="/supply") prPanel();
     if(h==="/sightings") renderSightings();
+    if(h==="/search") renderSearch(decodeURIComponent((qs.match(/(?:^|&)q=([^&]*)/)||[,""])[1].replace(/\+/g," ")));
     if(h==="/supply"){ renderHomeTicker(); rpPrepare(); }
+    if(h==="/") renderStats();
     setCite();
     document.title = (h==="/med"?((CURRENT_MED||"Medicine")+": doses, cost and supply"):h==="/easy-guide"?(CURRENT_GUIDE+" (Easy Read)"):TITLES[h]) + " \u2014 GAMSA";
-    nav.classList.remove("open");navbtn.setAttribute("aria-expanded","false");
+    nav.classList.remove("open");navbtn.setAttribute("aria-expanded","false"); ngClose();
     var target = anchor ? document.getElementById(anchor) : null;
     if(target){ target.scrollIntoView(); target.focus({preventScroll:true}); return; }
     window.scrollTo(0,0);
@@ -1733,6 +2112,68 @@
     var h=document.querySelector(".view.on h1"); if(h) h.focus({preventScroll:true});
   });
   fabToggle();
+  /* ================= menu groups ================= */
+  function secLinks(route, key, max){
+    var c=CONTENT[key]; if(!c) return [];
+    var secs=c.sections.slice(0, max||7); return secs.map(function(s,i){ return {t:s.nav||s.h, h:"#"+route+"#sec-"+key.replace("dosing","doses").replace("administration","using")+"-"+i}; });
+  }
+  var ER = function(aud){ return (CONTENT.easyread.guides||[]).filter(function(g){ return (g.audience||"you")===aud; }); };
+  var NAVCFG = {
+    tgd: [
+      {h:"Start here", l:[{t:"Overview", h:"#/trans"}, {t:"Medicines A\u2013Z", h:"#/medicines"}, {t:"Supply & shortages", h:"#/supply"}, {t:"Patient sightings", h:"#/sightings"}]},
+      {h:"Guides", l:[{t:"Costs and the PBS", h:"#/costs"}, {t:"Doses and formulations", h:"#/doses"}, {t:"How to use your medicine", h:"#/using"}, {t:"Working with your pharmacy", h:"#/pharmacy"}]},
+      {h:"Easy Read", l:ER("you").slice(0,5).map(function(g){ return {t:g.title, h:"#/easy/"+g.id}; }).concat([{t:"All Easy Read guides", h:"#/easy", more:true}])}
+    ],
+    clin: [
+      {h:"Start here", l:[{t:"Overview", h:"#/clinicians"}, {t:"For clinicians and pharmacists", h:"#/clinician-guide"}, {t:"Pharmacist stock register", h:"#/pharmacy-reports"}]},
+      {h:"Tools", l:[{t:"Injection training package", h:"#/med/testosterone-undecanoate#sec-med-9"}, {t:"Monitoring schedule", h:"#/clinician-guide#sec-clinician-guide-3"}, {t:"Authority wording card (PDF)", h:"/clinicians/pbs-authority-wording-card.pdf"}, {t:"Shortage alerts", h:"#/alerts"}]},
+      {h:"References", l:[{t:"Prescribing references", h:"#/clinician-guide#sec-clinician-guide-6"}, {t:"How the data is kept current", h:"#/clinician-guide#sec-clinician-guide-7"}, {t:"Costs and the PBS", h:"#/costs"}]}
+    ],
+    allies: [
+      {h:"Start here", l:[{t:"Overview", h:"#/allies"}, {t:"For family, friends and allies", h:"#/ally-guide"}, {t:"Pharmacy visit checklist (PDF)", h:"/allies/pharmacy-visit-checklist.pdf"}]},
+      {h:"Easy Read for helpers", l:ER("allies").map(function(g){ return {t:g.title, h:"#/easy/"+g.id}; })},
+      {h:"Also useful", l:[{t:"Supply & shortages", h:"#/supply"}, {t:"Costs and the PBS", h:"#/costs"}, {t:"Resources", h:"#/resources"}]}
+    ],
+    res: [
+      {h:"Resources", l:[{t:"All resources", h:"#/resources"}, {t:"Supply and medicines", h:"#/resources#sec-resources-0"}, {t:"Costs and the PBS", h:"#/resources#sec-resources-1"}, {t:"Care and support in SA", h:"#/resources#sec-resources-2"}, {t:"National information", h:"#/resources#sec-resources-3"}]},
+      {h:"This site", l:[{t:"Search", h:"#/search"}, {t:"Send feedback", h:"#/feedback"}, {t:"Accessibility", h:"#/accessibility"}, {t:"Privacy", h:"#/privacy"}, {t:"Disclaimer", h:"#/disclaimer"}]}
+    ]
+  };
+  (function(){
+    nav.querySelectorAll(".ng").forEach(function(g){
+      var grid=g.querySelector(".ng-grid");
+      grid.innerHTML=(NAVCFG[g.dataset.g]||[]).map(function(col){
+        return '<div class="ng-col"><h3>'+esc(col.h)+'</h3><ul>'+col.l.map(function(s){ return '<li><a href="'+s.h+'"'+(s.more?' class="ng-more-link"':'')+'>'+esc(s.t)+(s.more?' \u2192':'')+'</a></li>'; }).join("")+'</ul></div>';
+      }).join("");
+    });
+    fixLinks(nav);
+  })();
+  function ngClose(except){
+    nav.querySelectorAll(".ng.open").forEach(function(g){ if(g!==except){ g.classList.remove("open"); g.querySelector(".ng-btn").setAttribute("aria-expanded","false"); } });
+  }
+  function ngOpen(g, on){
+    g.classList.toggle("open", on); g.querySelector(".ng-btn").setAttribute("aria-expanded", on?"true":"false");
+  }
+  nav.querySelectorAll(".ng").forEach(function(g){
+    var btn=g.querySelector(".ng-btn"), timer;
+    var hov=false;
+    btn.addEventListener("click", function(){ var on=hov||!g.classList.contains("open"); hov=false; ngClose(g); ngOpen(g,on); });
+    g.addEventListener("mouseenter", function(){ if(window.innerWidth>1180 && matchMedia("(hover:hover)").matches){ clearTimeout(timer); hov=!g.classList.contains("open"); ngClose(g); ngOpen(g,true); } });
+    g.addEventListener("mouseleave", function(){ hov=false; if(window.innerWidth>1180){ timer=setTimeout(function(){ ngOpen(g,false); },180); } });
+    g.addEventListener("focusout", function(e){ if(!g.contains(e.relatedTarget) && window.innerWidth>1180) ngOpen(g,false); });
+  });
+  document.addEventListener("keydown", function(e){ if(e.key==="Escape"){ var o=nav.querySelector(".ng.open"); if(o){ ngClose(); o.querySelector(".ng-btn").focus(); } } });
+  document.addEventListener("click", function(e){ if(!nav.contains(e.target)) ngClose(); });
+  nav.addEventListener("click", function(e){ if(e.target.closest("a")) ngClose(); });
+  function navCurrent(key){
+    var want = PATHMODE ? toPath(key) : "#"+key;
+    nav.querySelectorAll("a").forEach(function(a){
+      var h=a.getAttribute("href").split("#").slice(0, PATHMODE?1:2).join("#");
+      a.setAttribute("aria-current", h===want?"page":"false"); });
+    var done=false;
+    nav.querySelectorAll(".ng").forEach(function(g){ var hit=!done && !!g.querySelector('a[aria-current="page"]'); g.classList.toggle("cur", hit); if(hit) done=true; });
+  }
+
   var started=false;
   onNav(route);
   route();
@@ -1754,6 +2195,85 @@
   a11yBtn.addEventListener("click", function(){ a11yOpen(a11yPanel.hidden); });
   document.addEventListener("click", function(e){
     if(!a11yPanel.hidden && !a11yPanel.contains(e.target) && !a11yBtn.contains(e.target)) a11yOpen(false);
+  });
+
+
+  /* ================= site search ================= */
+  var SIDX=null;
+  function plain(s){ return String(s||"").replace(/\[([^\]]*)\]\([^)]*\)/g,"$1").replace(/\[\d+(?:,\s*\d+)*\]/g,"").replace(/<[^>]+>/g," ").replace(/\*\*/g,"").replace(/\s+/g," ").trim(); }
+  function buildIndex(){
+    var ix=[];
+    function add(kind, title, route, text, sub){ ix.push({k:kind, t:title, h:route, x:plain(text), s:sub||""}); }
+    var GUIDES={dosing:["/doses","Doses guide"],administration:["/using","How-to-use guide"],costs:["/costs","Costs guide"],pharmacy:["/pharmacy","Pharmacy guide"],clinicians:["/clinician-guide","Clinicians"],allies:["/ally-guide","Allies"],privacy:["/privacy","About this site"],accessibility:["/accessibility","About this site"],disclaimer:["/disclaimer","About this site"],resources:["/resources","Resources"]};
+    Object.keys(GUIDES).forEach(function(k){
+      var c=CONTENT[k], r=GUIDES[k][0], v=r.slice(1);
+      add(GUIDES[k][1], c.title, "#"+r, c.intro);
+      c.sections.forEach(function(s,i){ add(GUIDES[k][1], s.h, "#"+r+"#sec-"+v+"-"+i, (s.body||[]).join(" ")+" "+(s.list||[]).join(" ")+" "+(s.note||""), c.title); });
+    });
+    (MEDINFO.medicines||[]).forEach(function(m){
+      add("Medicine", m.name, "#/med/"+m.id, m.summary+" "+m.generic+" "+(m.brands||[]).join(" "));
+      (m.sections||[]).forEach(function(s,i){ add("Medicine", m.name+": "+s.h, "#/med/"+m.id+"#sec-med-"+i, (s.body||[]).join(" ")+" "+(s.list||[]).join(" "), m.name); });
+    });
+    (CONTENT.easyread.guides||[]).forEach(function(g){
+      add("Easy Read", g.title, "#/easy/"+g.id, g.subtitle+" "+(g.sections||[]).map(function(s){ return (s.h||"")+" "+(s.text||s.body||[]).toString(); }).join(" "));
+    });
+    add("Supply", "Supply & shortages", "#/supply", "shortage short supply out of stock TGA pharmacy stock reports patient sightings substitution alternative brand");
+    add("Site", "Pharmacist stock register", "#/pharmacy-reports", "pharmacists post stock reports register AHPRA");
+    add("Site", "Send feedback", "#/feedback", "report a mistake something missing accessibility problem contact");
+    return ix;
+  }
+  function renderSearch(q){
+    var out=document.getElementById("srOut"), inp=document.getElementById("srq");
+    inp.value=q||"";
+    if(!q){ out.innerHTML=""; document.title="Search \u2014 GAMSA"; return; }
+    SIDX=SIDX||buildIndex();
+    var words=q.toLowerCase().split(/\s+/).filter(function(w){ return w.length>1; });
+    var res=[];
+    SIDX.forEach(function(it){
+      var tl=it.t.toLowerCase(), xl=it.x.toLowerCase(), score=0, ok=true;
+      words.forEach(function(w){
+        var a=tl.split(w).length-1, b=xl.split(w).length-1;
+        if(!a&&!b) ok=false; score+=a*6+Math.min(b,5)+(it.s?0:2);
+      });
+      if(ok) res.push({it:it, score:score});
+    });
+    res.sort(function(a,b){ return b.score-a.score; });
+    res=res.slice(0,40);
+    var rx=new RegExp("("+words.map(function(w){ return w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"); }).join("|")+")","ig");
+    function snip(x){
+      var i=x.search(rx); if(i<0) return esc(x.slice(0,160))+(x.length>160?"\u2026":"");
+      var s=Math.max(0,i-70), e=Math.min(x.length,i+120);
+      return (s?"\u2026":"")+esc(x.slice(s,e)).replace(rx,"<mark>$1</mark>")+(e<x.length?"\u2026":"");
+    }
+    out.innerHTML='<p class="sr-count">'+(res.length?res.length+(res.length===40?"+":"")+" result"+(res.length===1?"":"s"):"No results")+' for \u201c'+esc(q)+'\u201d'+(res.length?"":". Try a medicine or brand name, or a word like patches, injection, cost or shortage")+'</p>'+
+      res.map(function(r){ var it=r.it; return '<div class="sr"><p class="k">'+esc(it.k)+(it.s?' \u00b7 '+esc(it.s):'')+'</p><h2><a href="'+it.h+'">'+esc(it.t)+'</a></h2><p>'+snip(it.x)+'</p></div>'; }).join("");
+    fixLinks(out);
+    document.title="Search: "+q+" \u2014 GAMSA";
+  }
+  function doSearch(q){
+    q=(q||"").trim();
+    var qs=q?"?q="+encodeURIComponent(q):"";
+    if(PATHMODE){ history.pushState(null,"","/search"+qs); lastRoute=null; window.dispatchEvent(new Event("gamsa:route")); }
+    else location.hash="/search"+qs;
+  }
+  document.getElementById("heroSearch").addEventListener("submit", function(e){ e.preventDefault(); doSearch(document.getElementById("siteq").value); });
+  document.getElementById("srForm").addEventListener("submit", function(e){ e.preventDefault(); doSearch(document.getElementById("srq").value); });
+
+  /* ================= theme ================= */
+  var themeBtn=document.getElementById("themeBtn");
+  function setTheme(dark, save){
+    document.documentElement.classList.toggle("dark", dark);
+    document.querySelectorAll("#themeBtn button, #themeSeg2 button").forEach(function(b){ b.setAttribute("aria-pressed", (b.dataset.theme==="dark")===dark?"true":"false"); });
+    if(save) LS.set("theme", dark?"dark":"light");
+  }
+  setTheme(document.documentElement.classList.contains("dark"), false);
+  themeBtn.addEventListener("click", function(e){ var b=e.target.closest("button"); if(b) setTheme(b.dataset.theme==="dark", true); });
+  document.getElementById("themeSeg2").addEventListener("click", function(e){ var b=e.target.closest("button"); if(b) setTheme(b.dataset.theme==="dark", true); });
+
+  /* ================= quick exit ================= */
+  document.getElementById("exitBtn").addEventListener("click", function(e){
+    e.preventDefault();
+    location.replace("https://www.google.com.au/");
   });
 
   /* -- reading modes -- */
@@ -1778,7 +2298,27 @@
   }
   mode("dysBtn","dys","dyslexic","Turn off","Turn on", loadDysFonts);
   mode("easyBtn","easy","easyread","Turn off","Turn on");
+  function hmode(btn, cls, key){
+    var el=document.getElementById(btn), root=document.documentElement;
+    function apply(on, save){ root.classList.toggle(cls, on); el.setAttribute("aria-pressed", on?"true":"false"); el.textContent=on?"Turn off":"Turn on"; if(save) LS.set(key, on?"1":"0"); if(cls==="rm") SMOOTH=!on && !(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches); }
+    el.addEventListener("click", function(){ apply(!root.classList.contains(cls), true); });
+    apply(LS.get(key)==="1", false);
+  }
+  hmode("hcBtn","hc","hc"); hmode("ulBtn","ul","ul"); hmode("rmBtn","rm","rm");
+  var tsSeg=document.getElementById("tsSeg");
+  function setTs(v, save){
+    document.documentElement.classList.toggle("ts125", v==="1.25"); document.documentElement.classList.toggle("ts150", v==="1.5");
+    tsSeg.querySelectorAll("button").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.ts===v?"true":"false"); });
+    if(save) LS.set("ts", v);
+  }
+  setTs(LS.get("ts")||"1", false);
+  tsSeg.addEventListener("click", function(e){ var b=e.target.closest("button"); if(b) setTs(b.dataset.ts, true); });
+  document.getElementById("resetBtn").addEventListener("click", function(){
+    ["theme","hc","ul","rm","ts","dyslexic","easyread"].forEach(function(k){ try{ localStorage.removeItem("gamsa."+k); }catch(e){} });
+    location.reload();
+  });
   document.getElementById("erLink").addEventListener("click", function(){ a11yOpen(false); });
+  a11yPanel.querySelectorAll("a[data-link]").forEach(function(a){ a.addEventListener("click", function(){ a11yOpen(false); }); });
 
   /* -- read this page aloud -- */
   var synth = window.speechSynthesis;

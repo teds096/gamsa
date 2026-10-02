@@ -6,7 +6,7 @@ KEEP = ("id","genericName","brand","brands","form","strengthLabel","category","s
 meds = json.loads((R/"data/medicines.json").read_text())
 payload = {"generatedAt": meds["generatedAt"],
            "medicines": [{k:m[k] for k in KEEP if k in m} for m in meds["medicines"]]}
-content = {k: json.loads((R/f"content/{k}.json").read_text()) for k in ("dosing","administration","costs","easyread","pharmacy")}
+content = {k: json.loads((R/f"content/{k}.json").read_text()) for k in ("dosing","administration","costs","easyread","pharmacy","clinicians","allies","resources","privacy","accessibility","disclaimer")}
 medinfo = json.loads((R/"content/medicines.json").read_text())
 CFG = json.loads((R/"site-config.json").read_text()) if (R/"site-config.json").exists() else {}
 _tpl = (R/"template.html").read_text()
@@ -74,7 +74,7 @@ def head(title, desc, path, extra=""):
     return ('<!doctype html>\n<html lang="en-AU"__ROUTING__>\n<head>\n<meta charset="utf-8">\n'
             '<meta name="viewport" content="width=device-width,initial-scale=1">\n'
             f'<meta name="description" content="{d}">\n'
-            '<meta name="theme-color" content="#0B5D7A">\n'
+            '<meta name="theme-color" content="#0B5D7A" media="(prefers-color-scheme: light)">\n<meta name="theme-color" content="#0F171D" media="(prefers-color-scheme: dark)">\n'
             f'<link rel="canonical" href="{url}">\n'
             '<meta property="og:type" content="website">\n'
             '<meta property="og:site_name" content="GAMSA — Gender-Affirming Medicines South Australia">\n'
@@ -100,6 +100,8 @@ D.mkdir(parents=True)
 script = re.search(r"<script>(.*?)</script>", html, re.S).group(1)
 import base64
 SCRIPT_HASH = "'sha256-" + base64.b64encode(hashlib.sha256(script.encode()).digest()).decode() + "'"
+_th = re.search(r'<script id="th">(.*?)</script>', html, re.S).group(1)
+SCRIPT_HASH += " 'sha256-" + base64.b64encode(hashlib.sha256(_th.encode()).digest()).decode() + "'"
 # rewrite #/ links in the static markup only; the script must stay byte-identical to its CSP hash
 _pre, _post = html.split("<script>" + script + "</script>")
 def _paths(x):
@@ -121,16 +123,24 @@ VIEWDESC = {
  "/sightings": "Reports from the public of gender-affirming medicines seen in stock at South Australian pharmacies.",
  "/pharmacy-reports": "Stock reports for gender-affirming medicines posted by registered South Australian pharmacists.",
  "/feedback": "Report a mistake, something missing or an accessibility problem on GAMSA.",
+ "/search": "Search every page, guide and medicine on GAMSA.",
+ "/alerts": "Gender-affirming medicines under a current TGA shortage notice, with an RSS feed for prescribers and pharmacists.",
+ "/trans": "Gender-affirming medicines in plain language for trans and gender diverse South Australians: supply, costs, doses, how to use each one, and your pharmacy.",
+ "/clinicians": "For prescribers, nurses and pharmacists: testosterone injection training package, pharmacist stock register, monitoring schedule, PBS Authority wording, shortage alerts.",
+ "/allies": "GAMSA for family, friends and allies of trans and gender diverse people: what the medicines are, what goes wrong, and how to help at the pharmacy.",
  "/easy": "Easy Read guides to gender-affirming hormone medicines: getting your medicine, shortages, costs, doses and using it safely, in short sentences with pictures.",
 }
-CVIEW = {"/doses": "dosing", "/using": "administration", "/costs": "costs", "/pharmacy": "pharmacy"}
+CVIEW = {"/doses": "dosing", "/using": "administration", "/costs": "costs", "/pharmacy": "pharmacy", "/clinician-guide": "clinicians", "/ally-guide": "allies", "/resources": "resources", "/privacy": "privacy", "/accessibility": "accessibility", "/disclaimer": "disclaimer"}
 TITLES = {"/": "Gender-Affirming Medicines South Australia", "/supply": "Supply & shortages",
           "/medicines": "Medicines A–Z", "/sightings": "Patient sightings", "/easy": "Easy Read guides",
           "/doses": "Doses and formulations", "/using": "How to use your medicine",
-          "/pharmacy": "Working with your pharmacy", "/costs": "Costs and the PBS", "/feedback": "Send feedback", "/pharmacy-reports": "Pharmacy stock reports"}
+          "/pharmacy": "Working with your pharmacy", "/costs": "Costs and the PBS", "/feedback": "Send feedback", "/pharmacy-reports": "Pharmacy stock reports",
+          "/trans": "Trans and gender diverse people", "/clinicians": "Clinicians and pharmacists", "/allies": "Family, friends and allies",
+          "/clinician-guide": "For clinicians and pharmacists", "/ally-guide": "For family, friends and allies", "/resources": "Resources", "/alerts": "Shortage alerts", "/privacy": "Privacy", "/accessibility": "Accessibility", "/disclaimer": "Disclaimer", "/search": "Search"}
 VIEWID = {"/": "v-home", "/supply": "v-supply", "/medicines": "v-medicines", "/sightings": "v-sightings",
           "/easy": "v-easy", "/doses": "v-doses", "/using": "v-using", "/pharmacy": "v-pharmacy",
-          "/costs": "v-costs", "/feedback": "v-feedback", "/pharmacy-reports": "v-pharmacy-reports"}
+          "/costs": "v-costs", "/feedback": "v-feedback", "/pharmacy-reports": "v-pharmacy-reports",
+          "/trans": "v-trans", "/clinicians": "v-clinicians", "/allies": "v-allies", "/clinician-guide": "v-clinician-guide", "/ally-guide": "v-ally-guide", "/resources": "v-resources", "/alerts": "v-alerts", "/privacy": "v-privacy", "/accessibility": "v-accessibility", "/disclaimer": "v-disclaimer", "/search": "v-search"}
 
 def ld(obj):
     return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False).replace("</", "<\\/") + "</script>\n"
@@ -158,8 +168,8 @@ for path, title in TITLES.items():
         schema = {"@context": "https://schema.org", "@type": "MedicalWebPage", "name": title,
                   "url": SITE + path, "description": desc, "inLanguage": "en-AU",
                   "author": AUTHOR, "publisher": ORG}
-    write(path, title, desc, VIEWID[path], schema)
-    if path not in ("/sightings", "/feedback"): urls.append(path)
+    write(path, title, desc, VIEWID[path], schema, noindex=(path == "/search"))
+    if path not in ("/sightings", "/feedback", "/search"): urls.append(path)
 
 for m in medinfo["medicines"]:
     path = "/medicines/" + m["id"]
@@ -192,6 +202,20 @@ today = datetime.date.today().isoformat()
 (D/"sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n'
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     "".join(f"  <url><loc>{SITE}{u}</loc><lastmod>{today}</lastmod></url>\n" for u in urls) + "</urlset>\n")
+def _rss():
+    import email.utils, datetime
+    items = []
+    for r in meds["medicines"]:
+        if r.get("status") in (None, "in_supply", "unverified"): continue
+        name = r.get("brand", "") + (" (" + r["strengthLabel"] + ")" if r.get("strengthLabel") else "")
+        st = r.get("statusLabel") or str(r.get("status")).replace("_", " ").title()
+        d = r.get("lastVerified") or meds.get("generatedAt", "")
+        try: dt = datetime.datetime.fromisoformat(str(d)[:10]).replace(tzinfo=datetime.timezone.utc)
+        except Exception: dt = datetime.datetime.now(datetime.timezone.utc)
+        link = SITE + "/supply"
+        items.append("<item><title>" + H.escape(f"{st}: {name}") + "</title><link>" + link + "</link><guid isPermaLink=\"false\">" + H.escape(f"gamsa-{r.get('id', name)}-{r.get('status')}") + "</guid><pubDate>" + email.utils.format_datetime(dt) + "</pubDate><description>" + H.escape((r.get("note") or st) + " Expected return: " + str(r.get("expectedReturn", "—")) + ". TGA status as checked " + str(meds.get("generatedAt", "")) + ".") + "</description></item>")
+    (D/"feed.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>GAMSA shortage alerts</title><link>' + SITE + '/supply</link><description>Gender-affirming medicines in Australia under a current TGA shortage notice. Rebuilt daily.</description><language>en-au</language>' + "".join(items) + "</channel></rss>\n")
+_rss()
 (D/"robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
 if (R/"static").exists():
     shutil.copytree(R/"static", D, dirs_exist_ok=True)

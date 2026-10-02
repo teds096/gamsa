@@ -20,7 +20,8 @@
         "Fenway Health — transgender health injection guide, the one TransHub links to [10]",
         "NSW Health community sharps management, and Diabetes Australia's safe sharps pages [11][12]",
         "Return Unwanted Medicines (returnmed.com.au) [13]"
-      ]
+      ],
+      "nav": "Printable guides"
     },
     {
       "h": "If you run out and have no script",
@@ -33,7 +34,8 @@
         "Keep the dispensing label or box — it is the fastest proof of what you take",
         "Ask for a repeat before the last one, not after",
         "Injectables held in a clinic fridge are worth checking on early, since they are ordered in"
-      ]
+      ],
+      "nav": "Run out, no script"
     },
     {
       "h": "What to tell the pharmacist, and what to avoid",
@@ -45,7 +47,8 @@
         "Needles and syringes are available from participating South Australian pharmacies, which also take back full sharps containers [16].",
         "If English is not your first language, you can ask for an interpreter at no cost: the Translating and Interpreting Service (TIS National) is available to pharmacies and doctors on 131 450, 24 hours a day, and you can ring it yourself and ask to be connected to your pharmacy. The [Easy Read guides](#/easy) on this site are also written in plain language for people who find reading hard."
       ],
-      "note": "Bring a list, or a photo of your labels, to any new pharmacy — it is the fastest way for them to see everything you take. It is not a prescription, so you will still need a valid script for anything they dispense."
+      "note": "Bring a list, or a photo of your labels, to any new pharmacy — it is the fastest way for them to see everything you take. It is not a prescription, so you will still need a valid script for anything they dispense.",
+      "nav": "What to tell the pharmacist"
     },
     {
       "h": "If you live outside Adelaide",
@@ -55,7 +58,8 @@
         "Some products must stay cold until they are dispensed. Eligard, for example, is kept refrigerated at the pharmacy, so a regional pharmacy may need extra time to have it delivered with the cold chain intact.",
         "Many prescribers of gender-affirming hormone therapy consult by telehealth, which can save a long trip, and the prescription can be sent to you electronically.",
         "Help with travel. If you live more than 100 km from the nearest relevant specialist, South Australia's Patient Assistance Transport Scheme can subsidise your travel and accommodation for specialist appointments — in 2025–26, 33.6 cents a kilometre by private car and $110 a night for accommodation. It covers specialist appointments, not visits to a GP or a pharmacy. [PATS: how to apply](https://www.pats.sa.gov.au/) [19]."
-      ]
+      ],
+      "nav": "Outside Adelaide"
     },
     {
       "h": "For Aboriginal and Torres Strait Islander people",
@@ -65,7 +69,8 @@
         "If cost is a barrier, ask about the Closing the Gap PBS Co-payment Program. A GP at an Aboriginal health service, or any PBS prescriber, can register you, and it lowers or removes the co-payment on PBS medicines. The costs guide explains [how Closing the Gap works](#/costs#sec-costs-3).",
         "Information written by and for Aboriginal and Torres Strait Islander people about gender-affirming medicines is still limited. [TransHub's Trans Mob page](https://www.transhub.org.au/social/trans-mob/) connects to Sistergirl and Brotherboy community networks [22], and [Indigenous HealthInfoNet](https://healthinfonet.ecu.edu.au/learn/population-groups/lgbtqisb/) gathers research and resources for LGBTQISB Aboriginal and Torres Strait Islander people [23].",
         "This section is short because reliable, community-authored information is still scarce, not because it matters less. If you know of a resource that should be here, please send it through the feedback page."
-      ]
+      ],
+      "nav": "Aboriginal and Torres Strait Islander people"
     },
     {
       "h": "Getting your name right on the label",
@@ -81,7 +86,8 @@
         "If the pharmacist is unsure how, ask whether they can check with their software support",
         "Once it is set, it stays set for that pharmacy"
       ],
-      "note": "A pharmacy can put your name on the label. A prescription still has to carry the name held by Medicare for PBS claiming, so the two may not match, and that is normal."
+      "note": "A pharmacy can put your name on the label. A prescription still has to carry the name held by Medicare for PBS claiming, so the two may not match, and that is normal.",
+      "nav": "Your name on the label"
     }
   ],
   "references": [

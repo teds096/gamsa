@@ -1,0 +1,122 @@
+{
+  "title": "For clinicians and pharmacists",
+  "intro": "What GAMSA offers prescribers, nurses and pharmacists who care for trans and gender diverse people: the injection training package, the pharmacist stock register, and the Australian prescribing and PBS references the patient pages are built on.",
+  "sections": [
+    {
+      "h": "Testosterone undecanoate injection: training package",
+      "body": [
+        "A free package for clinics giving the long-acting testosterone injection by the ventrogluteal route: a standard operating procedure and training guide, a one-page treatment-room card, a competency checklist, an adverse event form and a clinic audit tool. Version 2.0 was checked against the Australian Product Information for Reandron 1000 and Testosterone ADVZ 1000, the MHRA-approved administration guidance for the same formulation, SA Health's ventrogluteal brochure, the SESLHD intramuscular injection guideline and the ASCIA anaphylaxis guideline. Download it from the [testosterone undecanoate page](#/med/testosterone-undecanoate#sec-med-9)."
+      ],
+      "nav": "Training package"
+    },
+    {
+      "h": "Pharmacist stock register",
+      "body": [
+        "Registered pharmacists can post what is on their shelves. Each registration number is checked once against the AHPRA register; after that, reports publish immediately and show on the supply page and on each medicine page for 14 days. [Post a report](#/pharmacy-reports)."
+      ],
+      "nav": "Stock register"
+    },
+    {
+      "h": "At the pharmacy counter",
+      "body": [
+        "Points that come up most with gender-affirming scripts, with the page on this site that patients are reading:"
+      ],
+      "list": [
+        "Brand substitution and Serious Shortage Substitution Notices: check the [supply page](#/supply) for the current TGA position on each affected product before telling a patient nothing is available.",
+        "PBS Authority wording for testosterone does not describe gender-affirming use; the prescriber's indication wording is explained in the [costs guide](#/costs#sec-costs-7).",
+        "60-day prescriptions apply to several of these medicines and halve the counter cost; see the [costs guide](#/costs#sec-costs-4).",
+        "Closing the Gap: eligible Aboriginal and Torres Strait Islander patients need the CTG annotation on the script and registration, not a card; see the [costs guide](#/costs#sec-costs-3).",
+        "Name and gender on the label: dispense under the name the patient uses where your software allows, and say so; the [pharmacy guide](#/pharmacy) tells patients what to ask for.",
+        "Easy Read guides on [this site](#/easy) can be printed for patients with low literacy or English as a second language; TIS National on 131 450 for interpreters."
+      ],
+      "nav": "At the counter"
+    },
+    {
+      "h": "Monitoring schedule at a glance",
+      "nav": "Monitoring schedule",
+      "body": [
+        "A one-table summary of the monitoring in the AusPATH standards of care (2025) and the Australian position statement (2019) [1, 2]. It is a prompt, not a protocol: the current standards and the Product Information set the detail, and individual risk changes the intervals."
+      ],
+      "table": {
+        "head": [
+          "When",
+          "Everyone",
+          "Estradiol-based therapy",
+          "Testosterone-based therapy"
+        ],
+        "rows": [
+          [
+            "Before starting",
+            "History and examination; baseline full blood count, electrolytes and kidney function, liver function, estradiol and testosterone, LH and FSH, prolactin; fasting lipids and glucose; vitamin D and sexual health screening if indicated [1, 2]. Fertility, contraception, smoking and clot risk discussed [1].",
+            "Baseline liver function before cyproterone, with periodic monitoring during treatment [1]. Electrolytes before spironolactone; care with renal impairment or medicines that raise potassium [1, 2].",
+            "Full blood count: testosterone raises haematocrit [2]. Fasting lipids and glucose [2]."
+          ],
+          [
+            "First year",
+            "Review clinical progress and blood tests every 3 to 4 months [1] (3-monthly in the position statement [2]): effects, sex steroid levels, mood, adverse effects, preventive screening [2].",
+            "Trough estradiol: before the next dose for tablets or gel, mid-cycle for patches [1]; aim above 250 pmol/L (250 to 600 pmol/L) with total testosterone under 2 nmol/L [2]. Electrolytes while on spironolactone; liver function while on cyproterone [1, 2].",
+            "Trough total testosterone, timed to the formulation: just before the long-acting injection, and not adjusted until after three injections; before application for 1% gel and 5% cream; 2 to 4 hours after for 2% gel [1]. Aim for the lower male range, about 10 to 15 nmol/L trough [2]. Haemoglobin and haematocrit at each review [2]."
+          ],
+          [
+            "After the first year",
+            "Review 6 to 12 monthly once stable [2] (annually in the standards of care [1]). Cancer screening by the organs present, not by gender or hormone status [1, 2]. Bone density if risk factors, including sub-therapeutic hormone levels [2].",
+            "Same bloods as the first year, at the review interval [1, 2].",
+            "Same bloods as the first year. If haematocrit is above 0.5, exclude other causes such as smoking, then lower the dose or lengthen the interval [1, 2]."
+          ]
+        ]
+      },
+      "note": "Blood test timing in patient terms is in the [doses guide](#/doses#sec-doses-7). Sources: AusPATH 2025 baseline and review sections and Tables 5 and 7 [1]; position statement sections on baseline investigations, monitoring and polycythaemia [2]."
+    },
+    {
+      "h": "Authority wording card",
+      "nav": "Authority wording card",
+      "body": [
+        "A printable one-page card on how PBS testosterone prescriptions are worded for gender-affirming care: the indication the Australian position statement tells prescribers to use, who has to be named on the application, and a line to say to the patient at the counter. [Download the card (PDF)](/clinicians/pbs-authority-wording-card.pdf). The patient-facing explanation is in the [costs guide](#/costs#sec-costs-7)."
+      ]
+    },
+    {
+      "h": "Shortage alerts",
+      "nav": "Shortage alerts",
+      "body": [
+        "Wholesaler and TGA alerts reach pharmacies, but rarely prescribers or patients. GAMSA publishes an RSS feed of every gender-affirming medicine currently affected by a TGA shortage notice, rebuilt each morning from the same data as the supply page. The [shortage alerts page](#/alerts) lists the current notices and explains how to add the feed to a feed reader, Outlook or Teams so it updates itself."
+      ]
+    },
+    {
+      "h": "Prescribing references",
+      "body": [
+        "The patient pages cite their sources on every page. The ones prescribers ask for most:"
+      ],
+      "list": [
+        "[AusPATH Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2025)](https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf)",
+        "[Position statement on the hormonal management of adult transgender and gender diverse individuals, MJA 2019](https://www.mja.com.au/journal/2019/211/3/position-statement-hormonal-management-adult-transgender-and-gender-diverse)",
+        "[RACGP: Hormone therapy for trans and gender diverse patients in the general practice setting](https://www1.racgp.org.au/getattachment/d0c29d2a-ee67-4ef0-a125-65c2694f3cb2/Hormone-therapy-for-trans-and-gender-diverse-patie.aspx)",
+        "[Equinox hormone therapy prescribing guide for GPs (AusPATH-endorsed)](https://equinox.org.au/wp-content/uploads/2021/07/ht-prescribing-guideline-v3-aug-2020.pdf)",
+        "[SA Health State-wide Gender Diversity Model of Care](https://www.sahealth.sa.gov.au/wps/wcm/connect/d70c3a24-a054-4f6a-b56c-17152faa9d5c/Model+of+care_Gender+Diversity_Jul2023_FINAL_FOR+PUBLICATION.pdf?MOD=AJPERES)",
+        "[SHINE SA referral pathways for trans and gender diverse care](https://shinesa.org.au/media/2023/09/Referral-Pathways-for-Trans-and-Gender-Diverse-Care.pdf)",
+        "[PBS: testosterone items and the Authority wording](#/costs#sec-costs-7)",
+        "[TGA Medicine Shortages Information Initiative](https://apps.tga.gov.au/prod/msi/search)"
+      ],
+      "nav": "References"
+    },
+    {
+      "h": "How the data on this site is kept current",
+      "body": [
+        "Supply status is read from the TGA shortages database every morning for every medicine listed. PBS co-payments, Safety Net thresholds, brand premiums, listings and substitutable brands are read from the PBS on the first of each month. Every page shows the date of its last check. If you find an error, the [feedback page](#/feedback) reaches the author directly."
+      ],
+      "nav": "How data stays current"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "text": "AusPATH. Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2. 2025.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 2,
+      "text": "Cheung AS, Wynne K, Erasmus J, Murray S, Zajac JD. Position statement on the hormonal management of adult transgender and gender diverse individuals. Med J Aust 2019;211:127–133.",
+      "url": "https://www.mja.com.au/journal/2019/211/3/position-statement-hormonal-management-adult-transgender-and-gender-diverse"
+    }
+  ],
+  "kicker": "For health professionals"
+}

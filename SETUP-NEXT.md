@@ -75,3 +75,9 @@ Supply (daily), PBS co-payments (monthly), PBS prices/premiums/listings (monthly
 
 ## Inbox alerts (added v15)
 Each daily run reads the feedback inbox and pending pharmacist registrations and, when there is anything new, opens a GitHub issue labelled "inbox" (or comments on the open one) with the messages and the approve/block links. GitHub emails you for every issue and comment. One-off setup: GitHub → repo → Settings → Secrets and variables → Actions → New repository secret → name `ADMIN_TOKEN`, value the same token you set in Cloudflare Pages. Close the "inbox" issue once you have dealt with it; the next batch opens a fresh one. State lives in `data/inbox-state.json` (scraper-owned, not shipped in zips).
+
+From v17 the feedback table has a `notified` column: the daily inbox step reads only `?new=1` rows and marks them `?ack=` afterwards, so a message is reported once even if `data/inbox-state.json` is reset. Existing database: run once in the D1 console `ALTER TABLE feedback ADD COLUMN notified INTEGER NOT NULL DEFAULT 0;` (done 2 Oct 2026 before v17 went live). Remove a message with `/api/feedback?token=…&delete=ID`.
+
+
+## Run status (added v17)
+Every workflow run, pass or fail, ends by writing and committing `data/status.json` (`finishedAt`, `ok`, `failedSteps`, `issue`, `monthlyCostsRun`) for the external health check. It is run metadata only: not read by `build.py`, not a drift-guard input, and excluded from release zips with the other workflow-owned data files.

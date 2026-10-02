@@ -1,0 +1,61 @@
+{
+  "title": "Resources",
+  "intro": "Links in one place: the Australian bodies, guidelines and services the pages on this site rely on, grouped by what you need.",
+  "sections": [
+    {
+      "h": "Supply and medicines",
+      "list": [
+        "[TGA medicine shortages database](https://apps.tga.gov.au/prod/msi/search)",
+        "[TGA: about the shortage of transdermal HRT patches](https://www.tga.gov.au/safety/shortages-and-supply-disruptions/medicine-shortages/major-or-ongoing-medicine-shortages/about-shortage-transdermal-hrt-patches)",
+        "[Consumer Medicine Information: Medicine Finder (ACSQHC)](https://www.safetyandquality.gov.au/medicine-finder)",
+        "[Return Unwanted Medicines](https://returnmed.com.au/)"
+      ]
+    },
+    {
+      "h": "Costs and the PBS",
+      "list": [
+        "[PBS co-payments (Department of Health)](https://www.health.gov.au/cheaper-medicines/pbs-co-payments)",
+        "[60-day prescriptions](https://www.health.gov.au/cheaper-medicines/60-day-prescriptions)",
+        "[Closing the Gap PBS co-payment](https://www.health.gov.au/cheaper-medicines/first-nations)",
+        "[Concession and health care cards (Services Australia)](https://www.servicesaustralia.gov.au/concession-and-health-care-cards)",
+        "[PBS brand premium list](https://www.pbs.gov.au/browse/brand-premium)"
+      ]
+    },
+    {
+      "h": "Care and support in South Australia",
+      "list": [
+        "[Trans Health South Australia: directory, support groups, crisis supports, medical and legal information](https://transhealthsa.com/)",
+        "[SHINE SA](https://shinesa.org.au/)",
+        "[Nunkuwarrin Yunti general clinic](https://nunku.org.au/our-services/physical/general-clinic/)",
+        "[Aboriginal Health Council of South Australia](https://ahcsa.org.au/)",
+        "[Patient Assistance Transport Scheme](https://www.pats.sa.gov.au/)",
+        "[Updating your name or gender with Medicare](https://www.servicesaustralia.gov.au/how-you-update-your-name-date-birth-or-gender-for-medicare)"
+      ]
+    },
+    {
+      "h": "National information",
+      "list": [
+        "[TransHub (ACON): Hormones 101](https://www.transhub.org.au/hormones)",
+        "[TransHub Downloads Hub: fact sheets, templates and guides](https://www.transhub.org.au/downloads)",
+        "[TransHub: For Allies](https://www.transhub.org.au/allies)",
+        "[AusPATH standards of care](https://auspath.org.au/standards-of-care/)",
+        "[Indigenous HealthInfoNet: LGBTQIA+SB resources](https://healthinfonet.ecu.edu.au/learn/population-groups/lgbtqisb/)",
+        "[QLife, 1800 184 527](https://qlife.org.au/)",
+        "[Translating and Interpreting Service, 131 450](https://www.tisnational.gov.au/)"
+      ]
+    },
+    {
+      "h": "On this site",
+      "list": [
+        "[Trans and gender diverse people: all guides](#/trans)",
+        "[Clinicians and pharmacists](#/clinicians)",
+        "[Family, friends and allies](#/allies)",
+        "[Easy Read guides](#/easy)",
+        "[Search this site](#/search)",
+        "[Send feedback](#/feedback)"
+      ]
+    }
+  ],
+  "references": [],
+  "kicker": "Links in one place"
+}

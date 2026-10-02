@@ -47,9 +47,16 @@ export async function onRequestPost({ request, env }) {
 }
 
 export async function onRequestGet({ request, env }) {
-  const token = new URL(request.url).searchParams.get("token") || "";
+  const q = new URL(request.url).searchParams, token = q.get("token") || "";
   if (!env.ADMIN_TOKEN || token.length < 24 || token !== env.ADMIN_TOKEN) return json({ ok: false }, 404);
+  const ids = (s) => (s || "").split(",").map((x) => parseInt(x, 10)).filter((n) => n > 0);
+  // ?ack=1,2,3 marks messages as notified (the daily inbox issue has reported them); ?delete=ID removes one
+  const ack = ids(q.get("ack"));
+  if (ack.length) await env.DB.prepare(`UPDATE feedback SET notified = 1 WHERE id IN (${ack.join(",")})`).run();
+  const del = ids(q.get("delete"));
+  if (del.length) await env.DB.prepare(`DELETE FROM feedback WHERE id IN (${del.join(",")})`).run();
+  const where = q.get("new") === "1" ? " WHERE notified = 0" : "";
   const { results } = await env.DB.prepare(
-    "SELECT id, created, topic, page, message, email FROM feedback ORDER BY id DESC LIMIT 200").all();
-  return json({ ok: true, feedback: results });
+    "SELECT id, created, topic, page, message, email, notified FROM feedback" + where + " ORDER BY id DESC LIMIT 200").all();
+  return json({ ok: true, feedback: results, acked: ack.length, deleted: del.length });
 }

@@ -1,0 +1,67 @@
+{
+  "title": "Accessibility",
+  "kicker": "About this site",
+  "intro": "What this site aims for, what it already does, where it falls short, and how to tell me about a barrier.",
+  "sections": [
+    {
+      "h": "What this site aims for",
+      "nav": "Aim",
+      "body": [
+        "WCAG 2.1 Level AA, the standard Australian government services are held to. Every page is checked with automated tools (axe) in light and dark mode on each release, plus keyboard and zoom passes. There has been no independent audit, so this is a target, not a certified result."
+      ]
+    },
+    {
+      "h": "The Accessibility button",
+      "nav": "Accessibility button",
+      "body": [
+        "The yellow Accessibility button at the top of every page opens options that apply straight away and are remembered on this device:"
+      ],
+      "list": [
+        "**Read this page aloud** using your device's own voices, with pause and stop.",
+        "**Text size**: 100%, 125% or 150%, on top of your browser's zoom.",
+        "**Dyslexia-friendly text**: rounder letters, wider spacing, shorter lines, off-white background.",
+        "**Bigger text and spacing** for every page.",
+        "**High contrast**: near-black on white (or white on black in dark mode) with stronger borders.",
+        "**Underline every link** so links never depend on colour alone.",
+        "**Reduce motion**: no animations or smooth scrolling. Your device's reduced-motion setting is always honoured anyway.",
+        "**Easy Read guides** in short sentences with pictures, each printable.",
+        "**Reset all** returns every setting to its default.",
+        "The light/dark switch in the menu bar follows your device setting until you choose."
+      ]
+    },
+    {
+      "h": "What the site does",
+      "nav": "What it does",
+      "list": [
+        "Skip link, visible focus outlines and full keyboard paths through the menus, the Accessibility panel, the search, the forms and the figure viewer.",
+        "Real structure: one heading per page, landmarks, lists, labelled form fields and an On-this-page list on long guides, so screen readers can navigate by them.",
+        "Reflows to a 360px phone and 200% zoom without sideways scrolling. Works on phones, tablets and desktops.",
+        "Light and dark themes, both contrast-checked.",
+        "Every figure has a text description and an Enlarge button.",
+        "Easy Read versions of the main guides, and short Easy Read guides for family, friends and carers.",
+        "Fast and light: one page request, no video, no autoplay, no advertising or tracking scripts.",
+        "PDFs on this site are one or two pages, high contrast, and carry a QR code back to the current web version."
+      ]
+    },
+    {
+      "h": "Where it falls short",
+      "nav": "Known gaps",
+      "list": [
+        "No independent audit yet.",
+        "The PDFs are not fully tagged for screen readers; the same content is on the web pages, which are.",
+        "The Turnstile bot check on forms is Cloudflare's widget and is outside this site's control.",
+        "Read aloud depends on the voices installed on your device; quality varies, and some browsers pause it when the screen locks.",
+        "Documents linked from other organisations (TGA, PBS, guidelines) may not be accessible; tell me and I will look for an alternative."
+      ]
+    },
+    {
+      "h": "Tell me about a barrier",
+      "nav": "Report a barrier",
+      "body": [
+        "If something is hard or impossible to use, [send feedback](#/feedback) with the page, what you were trying to do, and what happened. Nothing is required; a one-line report is useful. Access problems are looked at first. If you need information from this site in another format, ask and it will be sent as plain text or read to you by phone.",
+        "If you need help now, do not wait: call 000 in an emergency. If you are Deaf or have a speech or hearing impairment, the National Relay Service reaches emergency services on 106. Last reviewed 2 October 2026."
+      ]
+    }
+  ],
+  "references": []
+}

@@ -8,7 +8,8 @@
         "The Pharmaceutical Benefits Scheme is the Australian Government's medicine subsidy. When a medicine is listed, the government pays most of its cost and you pay a fixed amount — the co-payment — whatever the medicine actually costs [1].",
         "That is why a $90 box and a $30 box can cost you the same at the counter, and why a medicine that is not PBS-listed can cost several times more even though it is the same kind of treatment.",
         "You need a Medicare card to get the PBS price [2]."
-      ]
+      ],
+      "nav": "What the PBS is"
     },
     {
       "h": "What you pay at the counter",
@@ -25,7 +26,8 @@
       ],
       "note": "These amounts change. They were checked in September 2026 and apply from 1 January 2026. Your pharmacy can always tell you the current figure.",
       "svg": "<svg aria-labelledby=\"fig106t\" aria-describedby=\"fig106d\" role=\"img\" viewBox=\"0 0 560 592\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Public Sans, sans-serif\"><title id=\"fig106t\">What determines the price you pay at the pharmacy counter, step by step</title><desc id=\"fig106d\">Four stacked bands: whether the medicine is on the PBS, whether you hold a concession card, whether a brand premium applies, and whether you have reached the Safety Net.</desc><rect x=\"0\" y=\"0\" width=\"560\" height=\"592\" fill=\"#FFFFFF\"/><text x=\"4\" y=\"22\" font-size=\"16\" font-weight=\"600\" fill=\"#10181F\">What you pay at the counter</text><rect x=\"4\" y=\"44\" width=\"552\" height=\"116\" rx=\"10\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><text x=\"20\" y=\"70\" font-size=\"14\" font-weight=\"600\" fill=\"#10181F\">Is it PBS-subsidised for what you are using it for?</text><rect x=\"20\" y=\"82\" width=\"252\" height=\"66\" rx=\"8\" fill=\"#FFFFFF\" stroke=\"#A32B25\" stroke-width=\"2\"/><rect x=\"20\" y=\"82\" width=\"6\" height=\"66\" fill=\"#A32B25\"/><text x=\"38\" y=\"102\" font-size=\"13\" font-weight=\"600\" fill=\"#A32B25\">No</text><text x=\"38\" y=\"122\" font-size=\"13\" fill=\"#10181F\">Private price - whatever the</text><text x=\"38\" y=\"140\" font-size=\"13\" fill=\"#10181F\">pharmacy charges.</text><rect x=\"288\" y=\"82\" width=\"252\" height=\"66\" rx=\"8\" fill=\"#FFFFFF\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><rect x=\"288\" y=\"82\" width=\"6\" height=\"66\" fill=\"#0B5D7A\"/><text x=\"306\" y=\"102\" font-size=\"13\" font-weight=\"600\" fill=\"#0B5D7A\">Yes</text><text x=\"306\" y=\"122\" font-size=\"13\" fill=\"#10181F\">Keep going down the page.</text><line x1=\"280\" y1=\"160\" x2=\"280\" y2=\"170\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><polygon points=\"274,170 286,170 280,178\" fill=\"#0B5D7A\"/><rect x=\"4\" y=\"180\" width=\"552\" height=\"116\" rx=\"10\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><text x=\"20\" y=\"206\" font-size=\"14\" font-weight=\"600\" fill=\"#10181F\">Do you have a concession card?</text><rect x=\"20\" y=\"218\" width=\"252\" height=\"66\" rx=\"8\" fill=\"#FFFFFF\" stroke=\"#1F6B43\" stroke-width=\"2\"/><rect x=\"20\" y=\"218\" width=\"6\" height=\"66\" fill=\"#1F6B43\"/><text x=\"38\" y=\"238\" font-size=\"13\" font-weight=\"600\" fill=\"#1F6B43\">Yes</text><text x=\"38\" y=\"258\" font-size=\"13\" fill=\"#10181F\">$7.70 a script. A pharmacy may</text><text x=\"38\" y=\"276\" font-size=\"13\" fill=\"#10181F\">take $0.60 off that.</text><rect x=\"288\" y=\"218\" width=\"252\" height=\"66\" rx=\"8\" fill=\"#FFFFFF\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><rect x=\"288\" y=\"218\" width=\"6\" height=\"66\" fill=\"#0B5D7A\"/><text x=\"306\" y=\"238\" font-size=\"13\" font-weight=\"600\" fill=\"#0B5D7A\">No</text><text x=\"306\" y=\"258\" font-size=\"13\" fill=\"#10181F\">Up to $25.00 a script. No</text><text x=\"306\" y=\"276\" font-size=\"13\" fill=\"#10181F\">discount allowed in 2026.</text><line x1=\"280\" y1=\"296\" x2=\"280\" y2=\"306\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><polygon points=\"274,306 286,306 280,314\" fill=\"#0B5D7A\"/><rect x=\"4\" y=\"316\" width=\"552\" height=\"116\" rx=\"10\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><text x=\"20\" y=\"342\" font-size=\"14\" font-weight=\"600\" fill=\"#10181F\">Did you choose a dearer brand?</text><rect x=\"20\" y=\"354\" width=\"252\" height=\"66\" rx=\"8\" fill=\"#FFFFFF\" stroke=\"#8A5B08\" stroke-width=\"2\"/><rect x=\"20\" y=\"354\" width=\"6\" height=\"66\" fill=\"#8A5B08\"/><text x=\"38\" y=\"374\" font-size=\"13\" font-weight=\"600\" fill=\"#8A5B08\">Yes</text><text x=\"38\" y=\"394\" font-size=\"13\" fill=\"#10181F\">Add the brand premium on top</text><text x=\"38\" y=\"412\" font-size=\"13\" fill=\"#10181F\">of the co-payment.</text><rect x=\"288\" y=\"354\" width=\"252\" height=\"66\" rx=\"8\" fill=\"#FFFFFF\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><rect x=\"288\" y=\"354\" width=\"6\" height=\"66\" fill=\"#0B5D7A\"/><text x=\"306\" y=\"374\" font-size=\"13\" font-weight=\"600\" fill=\"#0B5D7A\">No</text><text x=\"306\" y=\"394\" font-size=\"13\" fill=\"#10181F\">Nothing extra to pay.</text><line x1=\"280\" y1=\"432\" x2=\"280\" y2=\"442\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><polygon points=\"274,442 286,442 280,450\" fill=\"#0B5D7A\"/><rect x=\"4\" y=\"452\" width=\"552\" height=\"116\" rx=\"10\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><text x=\"20\" y=\"478\" font-size=\"14\" font-weight=\"600\" fill=\"#10181F\">Have you passed the Safety Net for the year?</text><rect x=\"20\" y=\"490\" width=\"252\" height=\"66\" rx=\"8\" fill=\"#FFFFFF\" stroke=\"#1F6B43\" stroke-width=\"2\"/><rect x=\"20\" y=\"490\" width=\"6\" height=\"66\" fill=\"#1F6B43\"/><text x=\"38\" y=\"510\" font-size=\"13\" font-weight=\"600\" fill=\"#1F6B43\">Yes</text><text x=\"38\" y=\"530\" font-size=\"13\" fill=\"#10181F\">$7.70 a script, or free if you</text><text x=\"38\" y=\"548\" font-size=\"13\" fill=\"#10181F\">hold a concession card.</text><rect x=\"288\" y=\"490\" width=\"252\" height=\"66\" rx=\"8\" fill=\"#FFFFFF\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><rect x=\"288\" y=\"490\" width=\"6\" height=\"66\" fill=\"#0B5D7A\"/><text x=\"306\" y=\"510\" font-size=\"13\" font-weight=\"600\" fill=\"#0B5D7A\">Not yet</text><text x=\"306\" y=\"530\" font-size=\"13\" fill=\"#10181F\">Your scripts keep counting</text><text x=\"306\" y=\"548\" font-size=\"13\" fill=\"#10181F\">towards the threshold.</text></svg>",
-      "svgCaption": "The four things that decide what you hand over at the counter. Figures from the PBS patient fees and charges page and the Department of Health's cheaper medicines pages, current from 1 January 2026 [1][2][3]."
+      "svgCaption": "The four things that decide what you hand over at the counter. Figures from the PBS patient fees and charges page and the Department of Health's cheaper medicines pages, current from 1 January 2026 [1][2][3].",
+      "nav": "Counter prices"
     },
     {
       "h": "The PBS Safety Net",
@@ -38,7 +40,8 @@
       ],
       "note": "If you take several PBS medicines, keeping all your scripts at one pharmacy makes the Safety Net much easier to reach and to claim.",
       "svg": "<svg aria-labelledby=\"fig107t\" aria-describedby=\"fig107d\" role=\"img\" viewBox=\"0 0 600 380\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Public Sans, sans-serif\"><title id=\"fig107t\">How prescriptions add up towards the two PBS Safety Net thresholds during a calendar year</title><desc id=\"fig107d\">A bar filling across a calendar year towards two thresholds: the concession threshold, after which prescriptions are free, and the general threshold, after which they drop to the concession rate.</desc><rect x=\"0\" y=\"0\" width=\"600\" height=\"380\" fill=\"#FFFFFF\"/><text x=\"4\" y=\"22\" font-size=\"16\" font-weight=\"600\" fill=\"#10181F\">How the Safety Net builds up</text><text x=\"4\" y=\"42\" font-size=\"13\" fill=\"#4A5966\">Every PBS script you fill counts. The total resets on 1 January.</text><text x=\"4\" y=\"82\" font-size=\"14\" font-weight=\"600\" fill=\"#10181F\">Concession card</text><text x=\"4\" y=\"100\" font-size=\"13\" fill=\"#4A5966\">$277.20</text><rect x=\"180\" y=\"68\" width=\"398\" height=\"32\" rx=\"6\" fill=\"#F6F8FA\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><rect x=\"180\" y=\"68\" width=\"247\" height=\"32\" rx=\"6\" fill=\"#E6F1F6\"/><line x1=\"220\" y1=\"68\" x2=\"220\" y2=\"100\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><line x1=\"260\" y1=\"68\" x2=\"260\" y2=\"100\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><line x1=\"299\" y1=\"68\" x2=\"299\" y2=\"100\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><line x1=\"339\" y1=\"68\" x2=\"339\" y2=\"100\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><line x1=\"379\" y1=\"68\" x2=\"379\" y2=\"100\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><line x1=\"419\" y1=\"68\" x2=\"419\" y2=\"100\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><line x1=\"459\" y1=\"68\" x2=\"459\" y2=\"100\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><line x1=\"498\" y1=\"68\" x2=\"498\" y2=\"100\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><line x1=\"538\" y1=\"68\" x2=\"538\" y2=\"100\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><line x1=\"578\" y1=\"58\" x2=\"578\" y2=\"110\" stroke=\"#1F6B43\" stroke-width=\"3\"/><text x=\"578\" y=\"52\" font-size=\"13\" font-weight=\"600\" text-anchor=\"end\" fill=\"#1F6B43\">threshold</text><text x=\"180\" y=\"122\" font-size=\"13\" fill=\"#4A5966\">about 36 scripts at $7.70</text><text x=\"180\" y=\"142\" font-size=\"13\" fill=\"#10181F\">Then PBS scripts are free for the rest of the year.</text><text x=\"4\" y=\"208\" font-size=\"14\" font-weight=\"600\" fill=\"#10181F\">General patient</text><text x=\"4\" y=\"226\" font-size=\"13\" fill=\"#4A5966\">$1,748.20</text><rect x=\"180\" y=\"194\" width=\"398\" height=\"32\" rx=\"6\" fill=\"#F6F8FA\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><rect x=\"180\" y=\"194\" width=\"175\" height=\"32\" rx=\"6\" fill=\"#E6F1F6\"/><line x1=\"220\" y1=\"194\" x2=\"220\" y2=\"226\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><line x1=\"260\" y1=\"194\" x2=\"260\" y2=\"226\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><line x1=\"299\" y1=\"194\" x2=\"299\" y2=\"226\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><line x1=\"339\" y1=\"194\" x2=\"339\" y2=\"226\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><line x1=\"379\" y1=\"194\" x2=\"379\" y2=\"226\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><line x1=\"419\" y1=\"194\" x2=\"419\" y2=\"226\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><line x1=\"459\" y1=\"194\" x2=\"459\" y2=\"226\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><line x1=\"498\" y1=\"194\" x2=\"498\" y2=\"226\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><line x1=\"538\" y1=\"194\" x2=\"538\" y2=\"226\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><line x1=\"578\" y1=\"184\" x2=\"578\" y2=\"236\" stroke=\"#1F6B43\" stroke-width=\"3\"/><text x=\"578\" y=\"178\" font-size=\"13\" font-weight=\"600\" text-anchor=\"end\" fill=\"#1F6B43\">threshold</text><text x=\"180\" y=\"248\" font-size=\"13\" fill=\"#4A5966\">about 70 scripts at $25.00</text><text x=\"180\" y=\"268\" font-size=\"13\" fill=\"#10181F\">Then you pay $7.70 a script for the rest of the year.</text><rect x=\"4\" y=\"290\" width=\"592\" height=\"84\" rx=\"10\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><text x=\"20\" y=\"314\" font-size=\"13\" fill=\"#10181F\">Two things never go into the bar: brand premiums, and anything bought on a</text><text x=\"20\" y=\"332\" font-size=\"13\" fill=\"#10181F\">private prescription.</text><text x=\"20\" y=\"358\" font-size=\"13\" fill=\"#4A5966\">Your pharmacy only counts what you buy there - ask for a Prescription Record Form.</text></svg>",
-      "svgCaption": "How prescriptions accumulate towards the two 2026 Safety Net thresholds, and what happens once you pass one. Thresholds and rules from the PBS fees page and PBS explanatory note 1.5 on the Safety Net Scheme [1][3][16]. The fill shown is illustrative, not a real total."
+      "svgCaption": "How prescriptions accumulate towards the two 2026 Safety Net thresholds, and what happens once you pass one. Thresholds and rules from the PBS fees page and PBS explanatory note 1.5 on the Safety Net Scheme [1][3][16]. The fill shown is illustrative, not a real total.",
+      "nav": "The Safety Net"
     },
     {
       "h": "Closing the Gap: lower costs for Aboriginal and Torres Strait Islander people",
@@ -49,7 +52,8 @@
         "It covers every medicine listed on the PBS, which includes the PBS-listed hormone medicines on this site. It does not cover private prescriptions, and brand premiums still apply [25].",
         "Registration is a one-off, and you cannot do it yourself. Your GP or another PBS prescriber, or an Aboriginal Health Practitioner, registers you with Services Australia. You need to be enrolled in Medicare, and your prescriber needs to judge that cost could get in the way of you taking your medicine [25].",
         "Once you are registered, it applies at any pharmacy. Your pharmacist can see it in their dispensing system, so you do not need anything written on each prescription. [Department of Health: Closing the Gap PBS co-payment](https://www.health.gov.au/cheaper-medicines/first-nations)"
-      ]
+      ],
+      "nav": "Closing the Gap"
     },
     {
       "h": "60-day prescriptions",
@@ -57,7 +61,8 @@
         "Many PBS medicines for ongoing conditions can be prescribed as a 60-day supply: two months of medicine for one co-payment, and half as many trips to the pharmacy [4].",
         "Not every medicine is on the eligible list, medicines in short supply are excluded, and your prescriber has to decide it suits you and write the prescription that way [4]. Ask your prescriber whether yours qualifies, and ask your pharmacist if you are not sure what your current script says.",
         "Fewer dispensings also means fewer co-payments counted towards the Safety Net, so if you are close to the threshold it is worth a conversation about which suits you better [16]."
-      ]
+      ],
+      "nav": "60-day scripts"
     },
     {
       "h": "Which gender-affirming medicines are subsidised",
@@ -79,7 +84,8 @@
         "PBS, Authority required: testosterone undecanoate injection, Testogel, Testavan, AndroForte 5",
         "Private: testosterone esters, GnRH analogues for puberty suppression, all compounded products"
       ],
-      "note": "PBS listings change several times a year. Treat this as a map, not a price list, and confirm with your pharmacist."
+      "note": "PBS listings change several times a year. Treat this as a map, not a price list, and confirm with your pharmacist.",
+      "nav": "Which medicines are subsidised"
     },
     {
       "h": "Getting testosterone on the PBS: the Authority pathway",
@@ -94,7 +100,8 @@
         "Ask whether the specialist referral or consultation is documented, and whose name is on it",
         "If a referral is pending, an appointment booked with an approved specialist can be enough"
       ],
-      "note": "If a pharmacy tells you a testosterone script is private, it is worth asking whether it could be written as a PBS Authority script instead."
+      "note": "If a pharmacy tells you a testosterone script is private, it is worth asking whether it could be written as a PBS Authority script instead.",
+      "nav": "Testosterone Authority"
     },
     {
       "h": "Authority prescriptions, and the wording that does not describe you",
@@ -108,7 +115,8 @@
         "It can still be jarring to see on a screen at the counter. If a pharmacist reacts, that is usually unfamiliarity rather than doubt — they are allowed to dispense it.",
         "If an Authority is missed or has expired, the pharmacy cannot charge you the PBS price. The fix is a quick call to your prescriber, not a private price. Ask before you pay."
       ],
-      "note": "The PBS item pages publish the indication headings only, so the quoted wording above is as reported in the 2019 position statement [11]. Your prescriber or pharmacist can read you the current restriction from the PBS Schedule."
+      "note": "The PBS item pages publish the indication headings only, so the quoted wording above is as reported in the 2019 position statement [11]. Your prescriber or pharmacist can read you the current restriction from the PBS Schedule.",
+      "nav": "The Authority wording"
     },
     {
       "h": "What a private script means, and what it costs",
@@ -118,7 +126,8 @@
         "That last one catches people out. During the estradiol patch shortages, some substitute and overseas-registered products were PBS-listed and could be swapped at the pharmacy without a new prescription, while others were not subsidised the same way or needed a new script [14].",
         "Private prices vary between pharmacies and do not count towards the Safety Net [16]. It is entirely reasonable to ring around, and to ask whether a PBS-subsidised alternative exists."
       ],
-      "note": "Always ask, before the medicine is dispensed: is this PBS or private, what will it cost me, and is there a subsidised alternative?"
+      "note": "Always ask, before the medicine is dispensed: is this PBS or private, what will it cost me, and is there a subsidised alternative?",
+      "nav": "Private scripts"
     },
     {
       "h": "Brands and generics: what is actually different",
@@ -139,7 +148,8 @@
       ],
       "note": "If you are ever handed a box you do not recognise, it is reasonable to ask the pharmacist to confirm it is the same medicine as last time. That is a normal question and a good one.",
       "svg": "<svg aria-labelledby=\"fig120t\" aria-describedby=\"fig120d\" role=\"img\" viewBox=\"0 0 600 300\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Public Sans, sans-serif\"><title id=\"fig120t\">What is the same and what may differ between a brand-name medicine and its generic</title><desc id=\"fig120d\">Two boxes side by side. Both share the same active ingredient, strength, form and absorption. The items that may differ between them are the inactive ingredients, the tablet colour and shape, the packaging and the name.</desc><rect x=\"0\" y=\"0\" width=\"600\" height=\"300\" fill=\"#FFFFFF\"/><text x=\"4\" y=\"22\" font-size=\"16\" font-weight=\"600\" fill=\"#10181F\">Two brands, one medicine</text><rect x=\"4\" y=\"40\" width=\"286\" height=\"96\" rx=\"10\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"20\" y=\"66\" font-size=\"13\" font-weight=\"600\" fill=\"#0B5D7A\">Original brand</text><text x=\"20\" y=\"90\" font-size=\"13\" fill=\"#10181F\">estradiol 2 mg tablet</text><text x=\"20\" y=\"112\" font-size=\"13\" fill=\"#4A5966\">white, round, foil strip</text><rect x=\"310\" y=\"40\" width=\"286\" height=\"96\" rx=\"10\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"326\" y=\"66\" font-size=\"13\" font-weight=\"600\" fill=\"#0B5D7A\">Generic brand</text><text x=\"326\" y=\"90\" font-size=\"13\" fill=\"#10181F\">estradiol 2 mg tablet</text><text x=\"326\" y=\"112\" font-size=\"13\" fill=\"#4A5966\">blue, oval, blister pack</text><rect x=\"4\" y=\"150\" width=\"286\" height=\"142\" rx=\"10\" fill=\"#E6F3EB\" stroke=\"#1F6B43\" stroke-width=\"2\"/><text x=\"20\" y=\"176\" font-size=\"13\" font-weight=\"600\" fill=\"#1F6B43\">Must be the same</text><text x=\"20\" y=\"202\" font-size=\"13\" fill=\"#10181F\">active ingredient</text><text x=\"20\" y=\"224\" font-size=\"13\" fill=\"#10181F\">strength and form</text><text x=\"20\" y=\"246\" font-size=\"13\" fill=\"#10181F\">how much reaches your blood</text><text x=\"20\" y=\"268\" font-size=\"13\" fill=\"#10181F\">how quickly it gets there</text><rect x=\"310\" y=\"150\" width=\"286\" height=\"142\" rx=\"10\" fill=\"#FDF1DC\" stroke=\"#8A5B08\" stroke-width=\"2\"/><text x=\"326\" y=\"176\" font-size=\"13\" font-weight=\"600\" fill=\"#8A5B08\">May differ</text><text x=\"326\" y=\"202\" font-size=\"13\" fill=\"#10181F\">inactive ingredients</text><text x=\"326\" y=\"224\" font-size=\"13\" fill=\"#10181F\">colour, shape and size</text><text x=\"326\" y=\"246\" font-size=\"13\" fill=\"#10181F\">packaging and the name</text><text x=\"326\" y=\"268\" font-size=\"13\" fill=\"#10181F\">price, if a premium applies</text></svg>",
-      "svgCaption": "What a generic brand has to match, and what it is allowed to change. From the TGA generic prescription medicines fact sheet [23]."
+      "svgCaption": "What a generic brand has to match, and what it is allowed to change. From the TGA generic prescription medicines fact sheet [23].",
+      "nav": "Brands and generics"
     },
     {
       "h": "Brand premiums, and how to avoid paying one",
@@ -153,7 +163,8 @@
       "note": "Brand premiums change whenever PBS prices are reset, which happens several times a year. Your pharmacy screen is always the current answer [17].",
       "svg": "<svg aria-labelledby=\"fig108t\" aria-describedby=\"fig108d\" role=\"img\" viewBox=\"0 0 600 330\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Public Sans, sans-serif\"><title id=\"fig108t\">How a brand premium is added on top of the PBS co-payment and does not count towards the Safety Net</title><desc id=\"fig108d\">A stacked bar showing the standard co-payment plus an extra brand premium, with a note that the premium never counts towards the Safety Net.</desc><rect x=\"0\" y=\"0\" width=\"600\" height=\"330\" fill=\"#FFFFFF\"/><text x=\"4\" y=\"22\" font-size=\"16\" font-weight=\"600\" fill=\"#10181F\">What a brand premium adds</text><text x=\"4\" y=\"82\" font-size=\"13\" font-weight=\"600\" fill=\"#10181F\">Cheapest brand</text><rect x=\"180\" y=\"62\" width=\"240\" height=\"34\" rx=\"6\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"300\" y=\"85\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#0B5D7A\">your co-payment</text><text x=\"432\" y=\"85\" font-size=\"13\" fill=\"#1F6B43\">counts to the Safety Net</text><text x=\"4\" y=\"162\" font-size=\"13\" font-weight=\"600\" fill=\"#10181F\">Dearer brand</text><rect x=\"180\" y=\"142\" width=\"240\" height=\"34\" rx=\"6\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"300\" y=\"165\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#0B5D7A\">your co-payment</text><rect x=\"420\" y=\"142\" width=\"110\" height=\"34\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#8A5B08\" stroke-width=\"2\"/><text x=\"475\" y=\"165\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#8A5B08\">premium</text><line x1=\"475\" y1=\"180\" x2=\"475\" y2=\"198\" stroke=\"#8A5B08\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><text x=\"596\" y=\"204\" font-size=\"13\" text-anchor=\"end\" fill=\"#8A5B08\">does not count to the Safety Net</text><rect x=\"4\" y=\"222\" width=\"592\" height=\"100\" rx=\"10\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><text x=\"20\" y=\"246\" font-size=\"13\" fill=\"#10181F\">Your pharmacist can nearly always offer a brand with no premium. Just ask.</text><text x=\"20\" y=\"272\" font-size=\"13\" fill=\"#4A5966\">Some brands carry a premium; the list on this page is checked monthly.</text><text x=\"20\" y=\"292\" font-size=\"13\" fill=\"#4A5966\">Benchmark brands of the same medicine have no premium at all.</text><text x=\"20\" y=\"312\" font-size=\"13\" fill=\"#4A5966\">Premiums change, so check the price with your pharmacy.</text></svg>",
       "svgCaption": "How a brand premium sits on top of the co-payment, and why it never counts towards the Safety Net. From the PBS brand premium listings and PBS explanatory note 1.5 [16][17].",
-      "premiums": true
+      "premiums": true,
+      "nav": "Brand premiums"
     },
     {
       "h": "If cost is a barrier",
@@ -173,7 +184,8 @@
         "Ask about a 60-day prescription [4]",
         "Ask about hospital supply if you attend a public clinic"
       ],
-      "note": "Never ration or stop a hormone medicine because of cost without speaking to your prescriber or pharmacist first."
+      "note": "Never ration or stop a hormone medicine because of cost without speaking to your prescriber or pharmacist first.",
+      "nav": "If cost is a barrier"
     },
     {
       "h": "How current these figures are",
@@ -181,7 +193,8 @@
         "The co-payment amounts and Safety Net thresholds on this page are checked automatically against the PBS fee schedule on the first of each month, and updated if they have changed. Last checked {{PBS_CHECKED}} [3].",
         "Brand premiums, PBS listings, which brands may be substituted, and the price of each listed item are also checked automatically on the first of each month, and the figures shown on this page and on each medicine page come from that check. Last checked {{PREMIUMS_CHECKED}} [17].",
         "Private prices vary between pharmacies and are not tracked here; ask before the medicine is dispensed. If a figure on this page does not match what you are charged, the pharmacy's screen is the current answer."
-      ]
+      ],
+      "nav": "How current the figures are"
     }
   ],
   "references": [
@@ -316,6 +329,6 @@
     "conc_copay": "7.70",
     "sn_general": "1,748.20",
     "sn_conc": "277.20",
-    "checkedAt": "2 Oct 2026"
+    "checkedAt": "1 Oct 2026"
   }
 }

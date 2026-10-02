@@ -5,7 +5,8 @@ CREATE TABLE IF NOT EXISTS feedback (
   topic   TEXT NOT NULL,
   page    TEXT,
   message TEXT NOT NULL,
-  email   TEXT
+  email   TEXT,
+  notified INTEGER NOT NULL DEFAULT 0   -- set by the daily inbox step once reported; existing DBs: ALTER TABLE feedback ADD COLUMN notified INTEGER NOT NULL DEFAULT 0;
 );
 
 CREATE TABLE IF NOT EXISTS pharmacists (

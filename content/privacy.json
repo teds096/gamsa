@@ -1,0 +1,66 @@
+{
+  "title": "Privacy",
+  "kicker": "About this site",
+  "intro": "What this site collects, who sees it, and how to stop it, in plain words.",
+  "sections": [
+    {
+      "h": "The short version",
+      "nav": "Short version",
+      "body": [
+        "Browsing GAMSA does not require a name, an account or a cookie. The only measurement is Cloudflare Web Analytics, which counts page views without cookies, fingerprinting or tracking you between sites. The forms on this site ask only for what they need to work, and nothing collected is sold, shared with advertisers or used for anything other than running the site."
+      ]
+    },
+    {
+      "h": "Analytics",
+      "body": [
+        "Every page loads one small Cloudflare Web Analytics script. It records which page was opened, the page that linked to it, your country, browser and device type, and page speed. It sets no cookies and does not build a profile of you. The reports show totals; they cannot show who you are. A content blocker that blocks static.cloudflareinsights.com stops it, and the site works normally without it."
+      ]
+    },
+    {
+      "h": "Server logs",
+      "body": [
+        "The site is served by Cloudflare. Like any web host, it keeps short-lived request logs (IP address, time, page, browser) for security and to keep the site running. These are not joined to anything else and are not used to identify visitors."
+      ]
+    },
+    {
+      "h": "What the forms collect",
+      "nav": "Forms",
+      "list": [
+        "**Feedback**: your message, the page you were on, the topic you chose, and an email address only if you want a reply.",
+        "**Patient sightings**: the medicine, the pharmacy or suburb, whether it was in stock, and an optional note. No name is asked for.",
+        "**Pharmacist stock register**: your name, AHPRA registration number, pharmacy and suburb, and the report itself. The registration number is checked once against the public AHPRA register.",
+        "All three use Cloudflare Turnstile to tell people from bots. Turnstile checks your browser, not what you typed. Submissions are stored in a Cloudflare database and read only by the author; the author receives an alert when something arrives. Delete requests are honoured without asking why: use the feedback page."
+      ]
+    },
+    {
+      "h": "What is stored on your device",
+      "nav": "On your device",
+      "body": [
+        "The Accessibility panel and the light/dark switch save your choices in this browser's local storage (keys beginning with `gamsa.`). They hold no identifying information and are never sent anywhere. Reset all in the Accessibility panel removes them; clearing your browser data does too."
+      ]
+    },
+    {
+      "h": "Other sites",
+      "body": [
+        "Links to the TGA, PBS, Services Australia and support organisations take you to their sites, each with its own privacy practices. PDFs and the RSS feed are plain files served from this site."
+      ]
+    },
+    {
+      "h": "What this site never does",
+      "nav": "Never",
+      "list": [
+        "Sell, rent or trade anything about you.",
+        "Run advertising or share data with advertising networks.",
+        "Ask you to create an account.",
+        "Use the Quick exit button to record anything; it only replaces this page with Google."
+      ]
+    },
+    {
+      "h": "Changes and contact",
+      "body": [
+        "If anything that collects data is added or removed, this page changes at the same time. Questions or removal requests: [send feedback](#/feedback). Last reviewed 2 October 2026."
+      ]
+    }
+  ],
+  "references": []
+}

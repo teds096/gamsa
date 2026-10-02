@@ -1,0 +1,76 @@
+{
+  "title": "For family, friends and allies",
+  "intro": "If someone you care about is starting or continuing gender-affirming hormone therapy, this page explains what the medicines are, what tends to go wrong in practice, and how you can help without taking over.",
+  "sections": [
+    {
+      "h": "What the medicines are",
+      "body": [
+        "Gender-affirming hormone therapy uses ordinary, long-established medicines: oestrogen and testosterone in the same forms used for menopause and for hormone deficiency, plus medicines that lower or block hormones the person does not want. They are prescribed by GPs and specialists under Australian standards of care, and dispensed by any pharmacy. The [Medicines A–Z](#/medicines) has a plain-language page on each one, and the [Easy Read guides](#/easy) say the same things in fewer words."
+      ],
+      "nav": "What the medicines are"
+    },
+    {
+      "h": "What actually goes wrong",
+      "body": [
+        "Day to day, the problems are rarely medical. They are a patch brand that is out of stock, a script that has lapsed, a pharmacy that quotes a private price when the PBS one applies, or a name on a label that is wrong. The [supply page](#/supply), the [costs guide](#/costs) and the [pharmacy guide](#/pharmacy) exist for exactly those moments, and you can use them on someone's behalf.",
+        "The serious problems are uncommon and mostly prevented by routine monitoring, which is why the blood tests matter. Oestrogen slightly raises the risk of blood clots, more so with smoking, long periods of immobility and some older oestrogen types, so clinicians use estradiol, review risk and act on leg swelling or sudden breathlessness [1]. Testosterone can thicken the blood (a high haematocrit); it is picked up on the regular blood test and managed by adjusting the dose or form [1]. Spironolactone can raise potassium and cyproterone can affect the liver, so both are checked on blood tests too [1, 2]. The long-acting testosterone injection carries a rare risk of oil reaching the lungs or an allergic reaction in the minutes after the dose, which is why the person is asked to wait at the clinic afterwards [1]. In every case the prevention is the same: the person keeps their reviews, has the blood tests when asked, and tells the prescriber or pharmacist about new medicines, smoking, or symptoms."
+      ],
+      "nav": "What goes wrong"
+    },
+    {
+      "h": "How to help with their medicines",
+      "body": [
+        "These are the practical things that make the medicines side easier. For the wider picture of being an ally, see the links below."
+      ],
+      "list": [
+        "Learn the name of the medicine and the brand, and where the script is kept; it saves a lot when a pharmacy asks.",
+        "Offer to ring around pharmacies during a shortage, using the supply page to see which products are affected.",
+        "Come to the long-acting injection appointment if asked; the [how-to guide](#/using#sec-using-4) explains what happens and why there is a wait afterwards.",
+        "Use the person's name and pronouns, including with pharmacy and clinic staff, and let them lead on what they share.",
+        "Do not adjust, hold or 'top up' doses; if something seems wrong, the right call is to the prescriber or pharmacist, and in an emergency 000."
+      ],
+      "nav": "Helping with medicines"
+    },
+    {
+      "h": "Pharmacy visit checklist",
+      "nav": "Pharmacy visit checklist",
+      "body": [
+        "A one-page checklist for going to the pharmacy with or for someone: what to take, what to ask at the counter, and what to do if the medicine is out of stock. [Download the checklist (PDF)](/allies/pharmacy-visit-checklist.pdf). The same steps are in the [Easy Read guide for helpers](#/easy/helping)."
+      ]
+    },
+    {
+      "h": "Being an ally more broadly",
+      "body": [
+        "This site covers the medicines. For how to support someone through transition, at home, at school or at work, these Australian resources are written for exactly that:"
+      ],
+      "list": [
+        "[TransHub: For Allies, with sections for carers and families, partners and friends, and professionals](https://www.transhub.org.au/allies)",
+        "[PFLAG+ Australia: peer support for parents, carers and friends](https://pflagaustralia.org.au/)",
+        "[Transcend Australia: support for families of trans and gender diverse children](https://transcend.org.au/)",
+        "[QLife: anonymous peer support for LGBTIQ+ people and those around them, 3pm to 9pm, 1800 184 527](https://qlife.org.au/)"
+      ],
+      "nav": "Local services"
+    },
+    {
+      "h": "Local services",
+      "list": [
+        "[Trans Health South Australia: directory of affirming services](https://transhealthsa.com/directory/)",
+        "[SHINE SA](https://shinesa.org.au/)"
+      ],
+      "nav": "Local services"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "text": "AusPATH. Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2. 2025.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 2,
+      "text": "Cheung AS et al. Position statement on the hormonal management of adult transgender and gender diverse individuals. Med J Aust 2019;211:127–133.",
+      "url": "https://www.mja.com.au/journal/2019/211/3/position-statement-hormonal-management-adult-transgender-and-gender-diverse"
+    }
+  ],
+  "kicker": "For supporters"
+}

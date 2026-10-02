@@ -15,9 +15,10 @@ SITE = "https://gamsa.au"
 
 def diff(feedback, pending, state):
     """Return (new_feedback, new_pending, new_state)."""
+    # feedback rows arrive already filtered to notified=0 by the API, so a reset state file can never re-report them
     last = int(state.get("lastFeedbackId", 0))
     seen = set(state.get("pendingSeen", []))
-    new_fb = sorted([f for f in feedback if int(f["id"]) > last], key=lambda f: int(f["id"]))
+    new_fb = sorted([f for f in feedback if not f.get("notified")], key=lambda f: int(f["id"]))
     new_pd = [p for p in pending if p["ahpra"] not in seen]
     new_state = {"lastFeedbackId": max([last] + [int(f["id"]) for f in feedback]),
                  "pendingSeen": sorted({p["ahpra"] for p in pending})}
@@ -36,7 +37,7 @@ def body(new_fb, new_pd):
         for p in new_pd:
             out.append(f"- **{p.get('name','')}** ({p.get('ahpra','')}) · {p.get('pharmacy','')}, {p.get('suburb','')} · first report: {p.get('medicine','')} — {p.get('status','')}\n"
                        f"  [Check on AHPRA]({p.get('check','')}) · [Approve]({p.get('approve','')}) · [Block]({p.get('block','')})\n")
-    out.append(f"\nFull inbox: {SITE}/api/feedback?token=… and {SITE}/api/pharmacy?token=… (your ADMIN_TOKEN).")
+    out.append(f"\nFull inbox: {SITE}/api/feedback?token=… (add &delete=ID to remove a message) and {SITE}/api/pharmacy?token=… (your ADMIN_TOKEN).")
     return "\n".join(out)
 
 
@@ -45,7 +46,7 @@ def main():
     if not token:
         print("inbox: ADMIN_TOKEN not set — skipping"); return 0
     try:
-        fb = requests.get(f"{SITE}/api/feedback", params={"token": token}, timeout=30).json().get("feedback", [])
+        fb = requests.get(f"{SITE}/api/feedback", params={"token": token, "new": "1"}, timeout=30).json().get("feedback", [])
         pd = requests.get(f"{SITE}/api/pharmacy", params={"token": token}, timeout=30).json().get("pending", [])
     except Exception as exc:
         print(f"inbox: could not read admin endpoints ({exc})", file=sys.stderr); return 0
@@ -57,6 +58,9 @@ def main():
     pathlib.Path("/tmp/inbox.md").write_text(body(new_fb, new_pd))
     pathlib.Path("/tmp/inbox-title.txt").write_text(
         " / ".join(x for x in [f"New feedback ({len(new_fb)})" if new_fb else "", f"pending pharmacist ({len(new_pd)})" if new_pd else ""] if x))
+    if new_fb:   # mark as reported so tomorrow's run (or a restored state file) never repeats them
+        try: requests.get(f"{SITE}/api/feedback", params={"token": token, "ack": ",".join(str(f["id"]) for f in new_fb)}, timeout=30)
+        except Exception as exc: print(f"inbox: could not ack ({exc})", file=sys.stderr)
     print("INBOX_NEW"); return 0
 
 

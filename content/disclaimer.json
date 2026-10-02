@@ -1,0 +1,55 @@
+{
+  "title": "Disclaimer",
+  "kicker": "About this site",
+  "intro": "This is health information, not medical advice. It cannot replace your prescriber or pharmacist, who know your history.",
+  "sections": [
+    {
+      "h": "Who makes this site",
+      "nav": "Who",
+      "body": [
+        "GAMSA is built and maintained by Theodore South, BPharm (Hons), a registered pharmacist in Adelaide, as an independent, non-commercial project offered freely to South Australians. It is not affiliated with any clinic, pharmacy, manufacturer, government body or advocacy organisation, carries no advertising, and receives no funding."
+      ]
+    },
+    {
+      "h": "Not medical advice",
+      "nav": "Not advice",
+      "body": [
+        "Every page describes how gender-affirming medicines are generally used, priced and supplied in Australia so you can walk into an appointment or a pharmacy better informed. It is general information, not advice about your situation. Never start, stop or change how you take a medicine based on this site alone. Your prescriber and pharmacist know your history; in an emergency call 000."
+      ]
+    },
+    {
+      "h": "How the information is kept current",
+      "nav": "Currency",
+      "body": [
+        "Supply status is read from the TGA shortages database every morning. PBS co-payments, Safety Net thresholds, brand premiums and listings are read from the PBS on the first of each month. Clinical content is checked against the Australian Product Information, the AusPATH standards of care and the sources listed under References on each page, and every page shows the date it was last checked. Even so, prices, listings, guidelines and supply change, sometimes quickly; confirm anything important with your pharmacist or an official source before relying on it."
+      ]
+    },
+    {
+      "h": "Stock reports and sightings",
+      "nav": "Stock reports",
+      "body": [
+        "Pharmacist stock reports are posted by people whose AHPRA registration has been checked once; what they report is not independently verified. Patient sightings are posted by the public and are not verified. Both are snapshots that can be out of date within hours. Ring the pharmacy before you travel."
+      ]
+    },
+    {
+      "h": "Links and documents",
+      "nav": "Links",
+      "body": [
+        "Links to other organisations, documents and services are pointers, not endorsements. Their content, accuracy, accessibility and privacy practices are outside this site's control. The clinician training package and the printable cards are offered as templates for clinics to adapt under their own governance; using them does not create a clinical relationship with the author."
+      ]
+    },
+    {
+      "h": "Corrections",
+      "body": [
+        "If something is wrong, out of date or missing, [send feedback](#/feedback). Corrections are made as quickly as possible, and pharmacist reports or sightings are removed on request without asking why."
+      ]
+    },
+    {
+      "h": "Liability",
+      "body": [
+        "This site is provided in good faith and free of charge. To the extent the law allows, the author accepts no liability for loss or harm arising from reliance on information here or from dealings with any pharmacy or service mentioned. Nothing on this page limits rights under the Australian Consumer Law that cannot be excluded. Last reviewed 2 October 2026."
+      ]
+    }
+  ],
+  "references": []
+}
