@@ -60,9 +60,8 @@ html = _tpl.replace("__TURNSTILE_SITEKEY__", CFG.get("turnstileSiteKey", "")) \
 import re, hashlib, html as H, shutil, datetime
 
 SITE = "https://gamsa.au"
-BASE_DESC = ("Independent, referenced medicines information for trans and gender diverse people in "
-             "South Australia: supply and shortages, costs and the PBS, doses and formulations, and how "
-             "to use each form.")
+BASE_DESC = ("Independent, referenced information on gender-affirming medicines in South Australia: "
+             "supply and shortages, PBS costs, doses and how to use each form.")
 AUTHOR = {"@type": "Person", "name": "Theodore South", "jobTitle": "Registered pharmacist",
           "hasCredential": "BPharm (Hons)"}
 ORG = {"@type": "Organization", "name": "Gender-Affirming Medicines South Australia",
@@ -119,7 +118,7 @@ def sentence(t, n=158):
 VIEWDESC = {
  "/": BASE_DESC,
  "/supply": "Which gender-affirming hormone medicines are in short supply in Australia right now, checked daily against TGA records, and what to do about it.",
- "/medicines": "Every medicine used in gender-affirming hormone therapy in Australia, with an in-depth page for each: how it is used, what it costs, what is monitored, and current supply.",
+ "/medicines": "Every medicine used in gender-affirming hormone therapy in Australia, with a page for each: how it is used, cost, monitoring and current supply.",
  "/sightings": "Reports from the public of gender-affirming medicines seen in stock at South Australian pharmacies.",
  "/pharmacy-reports": "Stock reports for gender-affirming medicines posted by registered South Australian pharmacists.",
  "/feedback": "Report a mistake, something missing or an accessibility problem on GAMSA.",
@@ -173,7 +172,8 @@ for path, title in TITLES.items():
 
 for m in medinfo["medicines"]:
     path = "/medicines/" + m["id"]
-    title = m["name"] + ": doses, cost and supply"
+    short = m["name"].split(" (")[0]
+    title = short + (": doses, cost and supply" if len(short) < 34 else "")
     desc = sentence(m.get("summary", ""))
     schema = {"@context": "https://schema.org", "@type": "MedicalWebPage", "name": m["name"],
               "url": SITE + path, "description": desc, "inLanguage": "en-AU",

@@ -3,11 +3,14 @@
 
 Every external https link on every page is requested once. 2xx/3xx is fine; 401/403/405/429
 are treated as "blocked to bots", not broken (government sites often refuse scripts).
-404/410, 5xx and connection failures are reported. Writes /tmp/links.md and prints
+404/410, 5xx and DNS/SSL failures are reported. Timeouts and dropped connections are
+listed separately as "could not check" (big .gov.au sites throttle GitHub's servers); they
+do not raise the issue. Each host is checked one link at a time with a pause, so no site
+is hammered. Writes /tmp/links.md and prints
 LINKS_BROKEN when anything needs attention. Always exits 0: a dead outside link must
 never stop the data refresh.
 """
-import re, pathlib, sys, concurrent.futures as cf
+import re, pathlib, sys, time, concurrent.futures as cf
 import requests
 
 D = pathlib.Path(__file__).resolve().parents[1] / "dist"
@@ -19,15 +22,26 @@ def pages():
         rel = "/" + str(f.relative_to(D)).removesuffix(".html").replace("index", "")
         yield rel, f.read_text(errors="ignore")
 
+SOFT = ("ReadTimeout", "ConnectTimeout", "Timeout", "ConnectionError", "ChunkedEncodingError")
+
 def check(url):
-    for attempt in range(2):
+    for attempt in range(3):
         try:
-            r = requests.get(url, headers=UA, timeout=25, allow_redirects=True, stream=True)
+            r = requests.get(url, headers=UA, timeout=30, allow_redirects=True, stream=True)
             r.close()
+            if r.status_code in (429, 503) and attempt < 2: time.sleep(10); continue
             return r.status_code
         except Exception as exc:
             err = type(exc).__name__
+            if "NameResolution" in str(exc) or "SSL" in err: return err + " (site address or certificate failed)"
+            time.sleep(5 * (attempt + 1))
     return err
+
+def by_host(urls):
+    out = {}
+    for u in urls:
+        out[u] = check(u); time.sleep(1.5)
+    return out
 
 def main():
     where = {}
@@ -36,10 +50,16 @@ def main():
             u = u.rstrip(".,;")
             if not SKIP.search(u):
                 where.setdefault(u, set()).add(page)
+    hosts = {}
+    for u in where: hosts.setdefault(u.split("/")[2], []).append(u)
+    res = {}
     with cf.ThreadPoolExecutor(12) as ex:
-        res = dict(zip(where, ex.map(check, where)))
-    bad = {u: c for u, c in res.items() if not (isinstance(c, int) and (c < 400 or c in (401, 403, 405, 429)))}
-    print(f"links: {len(res)} checked, {len(bad)} broken")
+        for part in ex.map(by_host, hosts.values()): res.update(part)
+    soft = {u: c for u, c in res.items() if isinstance(c, str) and c in SOFT}
+    bad = {u: c for u, c in res.items() if u not in soft and not (isinstance(c, int) and (c < 400 or c in (401, 403, 405, 429)))}
+    print(f"links: {len(res)} checked, {len(bad)} broken, {len(soft)} could not check (timeouts)")
+    if soft:
+        print("Could not check (site slow or throttling GitHub): " + ", ".join(sorted({u.split('/')[2] for u in soft})))
     if bad:
         lines = [f"## Broken outside links ({len(bad)})\n"]
         for u, c in sorted(bad.items()):

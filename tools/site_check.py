@@ -9,6 +9,10 @@ Builds the site, then runs every local check and prints a PASS/FAIL summary:
   4. axe (WCAG 2.0/2.1 A+AA + best practice) on every route, light and dark; JS errors;
      one h1; titles; noopener; overflow at 360px (tools/audit.py)
   5. phones and iPads, portrait and landscape: overflow, 24px tap targets, menu, a11y panel (tools/devices.py)
+  6. tools/extra_checks.py: SEO, download links, PDFs (pages, QR codes), wording, page weight,
+     search quality, keyboard-only use, print layout, Safari (WebKit) and Firefox engines
+  7. optional: pass the release zip path to check its contents match the repo
+Flags: --update-weights resets the page-weight baseline after an intended size change.
 Needs: python3, playwright (chromium), axe-core in node_modules (npm i axe-core). Set CHROME=/path
 to use a specific Chromium. Live-site, analytics, GitHub, database and outside-link checks are in
 the gamsa-site-check skill (they need Chrome, Cloudflare and GitHub access, not this script).
@@ -61,8 +65,21 @@ try:
     step("accessibility + errors, every route, light and dark", c == 0 and not bad, "; ".join(x[:150] for x in bad) or o.strip().splitlines()[0])
     c, o = run("python3 tools/devices.py", 900); bad = [l for l in o.splitlines() if "'ok'" not in l]
     step("phones and iPads", c == 0 and not bad, "; ".join(x[:150] for x in bad))
+    c, o = run("python3 tools/extra_checks.py" + (" --update-weights" if "--update-weights" in sys.argv else ""), 900)
+    for l in o.splitlines():
+        if l.startswith(("PASS ", "FAIL ")): k, rest = l[:4], l[5:]; name, _, det = rest.partition(" — "); step(name, k == "PASS", det)
+        elif l.startswith("SKIP "): print(l)
 finally:
     srv.send_signal(signal.SIGTERM)
+zarg = [a for a in sys.argv[1:] if a.endswith(".zip")]
+if zarg:   # release zip check: python3 tools/site_check.py "path/to/GAC – GAMSA Release vX.zip"
+    import zipfile, hashlib
+    z = zipfile.ZipFile(zarg[0]); names = set(z.namelist())
+    banned = [n for n in ("data/medicines.json", "data/premiums.json", "data/inbox-state.json", "data/status.json") if n in names]
+    need = [n for n in ("template.html", "build.py", "data/manual.json", ".github/workflows/refresh.yml", "tools/site_check.py") if n not in names]
+    stale = [n for n in names if not n.endswith("/") and pathlib.Path(n).is_file() and z.read(n) != pathlib.Path(n).read_bytes()]
+    step("release zip", not banned and not need and not stale, "; ".join(filter(None, [f"contains {banned}" if banned else "", f"missing {need}" if need else "", f"differs from repo {stale[:5]}" if stale else ""])) or f"{len(names)} files, matches repo")
+    print("NOTE workflow file in this zip — Ted must paste refresh.yml by hand if it changed since the last release")
 f = [r for r in res if not r[1]]
 print(f"\n{len(res)-len(f)}/{len(res)} checks passed" + ("" if not f else ": fix " + ", ".join(r[0] for r in f)))
 sys.exit(1 if f else 0)

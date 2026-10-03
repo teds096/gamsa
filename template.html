@@ -2088,7 +2088,7 @@
     if(h==="/supply"){ renderHomeTicker(); rpPrepare(); }
     if(h==="/") renderStats();
     setCite();
-    document.title = (h==="/med"?((CURRENT_MED||"Medicine")+": doses, cost and supply"):h==="/easy-guide"?(CURRENT_GUIDE+" (Easy Read)"):TITLES[h]) + " \u2014 GAMSA";
+    document.title = (h==="/med"?((function(n){n=n.split(" (")[0];return n+(n.length<34?": doses, cost and supply":"");})(CURRENT_MED||"Medicine")):h==="/easy-guide"?(CURRENT_GUIDE+" (Easy Read)"):TITLES[h]) + " \u2014 GAMSA";
     nav.classList.remove("open");navbtn.setAttribute("aria-expanded","false"); ngClose();
     var target = anchor ? document.getElementById(anchor) : null;
     if(target){ target.scrollIntoView(); target.focus({preventScroll:true}); return; }
