@@ -61,18 +61,29 @@ def main():
     token = os.environ.get("ADMIN_TOKEN", "").strip()
     if not token:
         print("inbox: ADMIN_TOKEN not set — skipping"); return 0
+    out = {}
     try:
-        fb = requests.get(f"{SITE}/api/feedback", params={"token": token, "new": "1"}, timeout=30).json().get("feedback", [])
-        pd = requests.get(f"{SITE}/api/pharmacy", params={"token": token}, timeout=30).json().get("pending", [])
-        si = requests.get(f"{SITE}/api/reports", params={"token": token}, timeout=30).json().get("sightings", [])
+        for key, path, extra in (("feedback", "feedback", {"new": "1"}), ("pending", "pharmacy", {}), ("sightings", "reports", {})):
+            r = requests.get(f"{SITE}/api/{path}", params={"token": token, **extra}, timeout=30)
+            if r.status_code in (401, 403, 404):
+                # the site rejected the token: GitHub's ADMIN_TOKEN secret does not match Cloudflare's — fail the step so status.json shows it
+                msg = (f"The site rejected GitHub's ADMIN_TOKEN at /api/{path} (HTTP {r.status_code}), so new feedback, pharmacist "
+                       "registrations and sightings cannot be read. Make the GitHub secret (Settings → Secrets → Actions → ADMIN_TOKEN) "
+                       "exactly match the Cloudflare Pages variable ADMIN_TOKEN, then Run workflow. Close this issue once the next run says nothing new.")
+                print(f"inbox: {msg}")
+                pathlib.Path("/tmp/inbox.md").write_text(msg + "\n")
+                pathlib.Path("/tmp/inbox-title.txt").write_text("Inbox cannot be read: admin token mismatch")
+                print("INBOX_NEW"); return 0   # opens/comments the "inbox" issue, which GitHub emails to Ted
+            out[key] = r.json().get(key, [])
     except Exception as exc:
         print(f"inbox: could not read admin endpoints ({exc})", file=sys.stderr); return 0
+    fb, pd, si = out["feedback"], out["pending"], out["sightings"]
     state = json.loads(STATE.read_text()) if STATE.exists() else {}
     new_fb, new_pd, new_state = diff(fb, pd, state)
     new_si, new_state["lastSightingId"] = new_sightings(si, state)
     STATE.write_text(json.dumps(new_state, indent=1) + "\n")
     if not new_fb and not new_pd and not new_si:
-        print("inbox: nothing new"); return 0
+        print("inbox: nothing new (token accepted by all three admin endpoints)"); return 0
     pathlib.Path("/tmp/inbox.md").write_text(body(new_fb, new_pd, new_si))
     pathlib.Path("/tmp/inbox-title.txt").write_text(
         " / ".join(x for x in [f"New feedback ({len(new_fb)})" if new_fb else "", f"pending pharmacist ({len(new_pd)})" if new_pd else "",
