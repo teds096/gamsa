@@ -1,0 +1,48 @@
+name: Live check after release
+
+# After every release (a push that changes the site), waits until Cloudflare Pages is serving it,
+# then checks the live gamsa.au: all pages, 404s, security headers, script hashes, no cookies,
+# no outside services, downloads, redirects and the reports API.
+# Opens a "live" issue (GitHub emails Ted) if anything fails; closes it when a later run passes.
+on:
+  push:
+    branches: [main]
+    paths: ["template.html", "build.py", "content/**", "static/**", "functions/**"]
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  live:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install requests beautifulsoup4 rjsmin rcssmin
+      - name: Build this commit (to know which version to wait for)
+        run: python build.py
+      - name: Check the live site
+        id: c
+        run: |
+          python tools/live_check.py | tee /tmp/live.log
+          grep -q "^FAIL" /tmp/live.log && echo "failed=true" >> "$GITHUB_OUTPUT" || true
+      - name: Open or close the live issue
+        uses: actions/github-script@v8
+        env:
+          FAILED: ${{ steps.c.outputs.failed }}
+        with:
+          script: |
+            const log = require("fs").readFileSync("/tmp/live.log", "utf8"), o = context.repo.owner, r = context.repo.repo;
+            const {data: open} = await github.rest.issues.listForRepo({owner: o, repo: r, state: "open", labels: "live"});
+            if (process.env.FAILED === "true") {
+              const body = "The after-release live check found a problem on gamsa.au:\n\n```\n" + log + "\n```";
+              if (open.length) await github.rest.issues.createComment({owner: o, repo: r, issue_number: open[0].number, body});
+              else await github.rest.issues.create({owner: o, repo: r, title: "Live site problem after release", labels: ["live"], body});
+            } else for (const i of open) {
+              await github.rest.issues.createComment({owner: o, repo: r, issue_number: i.number, body: "Live check passes again. Closing."});
+              await github.rest.issues.update({owner: o, repo: r, issue_number: i.number, state: "closed"});
+            }
