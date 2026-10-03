@@ -19,7 +19,8 @@ except ImportError:
 _prem = json.loads((R/"data/premiums.json").read_text())
 _dates = {"{{PBS_CHECKED}}": content["costs"].get("pbsFigures", {}).get("checkedAt", "recently"),
           "{{PREMIUMS_CHECKED}}": _prem.get("checkedAt", "recently"),
-          "{{SUPPLY_CHECKED}}": meds["generatedAt"]}
+          "{{SUPPLY_CHECKED}}": meds["generatedAt"],
+          "{{REVIEWED}}": medinfo.get("reviewed", "October 2026")}
 _AUTO_REFS = [  # sources the scrapers fetch: their "Accessed" date is stamped with that check's date
     (re.compile(r"pbs\.gov\.au/(medicine/item/|browse/brand-premium)"), _dates["{{PREMIUMS_CHECKED}}"]),
     (re.compile(r"pbs\.gov\.au/healthpro/explanatory-notes/front/fee"), _dates["{{PBS_CHECKED}}"]),
@@ -44,7 +45,7 @@ def _tok(obj):
     for k, v in _dates.items(): s = s.replace(k, v)
     return _stamp_refs(json.loads(s))
 content = _tok(content); medinfo = _tok(medinfo)
-html = _tpl.replace("__TURNSTILE_SITEKEY__", CFG.get("turnstileSiteKey", "")) \
+html = _tpl.replace("{{REVIEWED}}", _dates["{{REVIEWED}}"]).replace("__TURNSTILE_SITEKEY__", CFG.get("turnstileSiteKey", "")) \
     .replace("__MEDS__", json.dumps(payload, separators=(",",":"))) \
     .replace("__CONTENT__", json.dumps(content, separators=(",",":"))) \
     .replace("__MEDINFO__", json.dumps(medinfo, separators=(",",":"))) \
@@ -62,6 +63,7 @@ import re, hashlib, html as H, shutil, datetime
 SITE = "https://gamsa.au"
 BASE_DESC = ("Independent, referenced information on gender-affirming medicines in South Australia: "
              "supply and shortages, PBS costs, doses and how to use each form.")
+REVIEWED_ISO = datetime.datetime.strptime(medinfo.get("reviewed", "3 October 2026"), "%d %B %Y").date().isoformat()
 AUTHOR = {"@type": "Person", "name": "Theodore South", "jobTitle": "Registered pharmacist",
           "hasCredential": "BPharm (Hons)"}
 ORG = {"@type": "Organization", "name": "Gender-Affirming Medicines South Australia",
@@ -70,6 +72,8 @@ ORG = {"@type": "Organization", "name": "Gender-Affirming Medicines South Austra
 def head(title, desc, path, extra=""):
     url = SITE + path
     t, d = H.escape(title, quote=True), H.escape(desc, quote=True)
+    _og = (R/"static/og"/((path.strip("/").replace("/", "-") or "home") + ".jpg"))
+    og = f"{SITE}/og/{_og.name}" if _og.exists() else f"{SITE}/og-image.png"
     return ('<!doctype html>\n<html lang="en-AU"__ROUTING__>\n<head>\n<meta charset="utf-8">\n'
             '<meta name="viewport" content="width=device-width,initial-scale=1">\n'
             f'<meta name="description" content="{d}">\n'
@@ -78,7 +82,7 @@ def head(title, desc, path, extra=""):
             '<meta property="og:type" content="website">\n'
             '<meta property="og:site_name" content="GAMSA — Gender-Affirming Medicines South Australia">\n'
             f'<meta property="og:title" content="{t}">\n<meta property="og:description" content="{d}">\n'
-            f'<meta property="og:url" content="{url}">\n<meta property="og:image" content="{SITE}/og-image.png">\n'
+            f'<meta property="og:url" content="{url}">\n<meta property="og:image" content="{og}">\n'
             '<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
             '<meta property="og:locale" content="en_AU">\n<meta name="twitter:card" content="summary_large_image">\n'
             + extra)
@@ -88,7 +92,8 @@ def shell(top, body_html):
     return top + body_html[:i] + "\n</head>\n<body>\n" + body_html[i:] + "\n</body>\n</html>\n"
 
 # 1. single-file preview (hash routes, inline script) -----------------------
-(R/"preview.html").write_text(shell(head("Gender-Affirming Medicines South Australia", BASE_DESC, "/").replace("__ROUTING__", ""), html))
+_prev = re.sub(r'@font-face\{[^}]*\}', '', re.sub(r'<link rel="preload"[^>]*woff2[^>]*>\n?', '', html))  # file:// cannot load /fonts/; system fonts are fine locally
+(R/"preview.html").write_text(shell(head("Gender-Affirming Medicines South Australia", BASE_DESC, "/").replace("__ROUTING__", ""), _prev))
 
 # 2. hosted site ------------------------------------------------------------
 D = R/"dist"
@@ -175,10 +180,23 @@ for m in medinfo["medicines"]:
     short = m["name"].split(" (")[0]
     title = short + (": doses, cost and supply" if len(short) < 34 else "")
     desc = sentence(m.get("summary", ""))
-    schema = {"@context": "https://schema.org", "@type": "MedicalWebPage", "name": m["name"],
+    page_ld = {"@type": "MedicalWebPage", "name": m["name"],
               "url": SITE + path, "description": desc, "inLanguage": "en-AU",
               "about": {"@type": "Drug", "name": m["name"], "nonProprietaryName": m["generic"]},
-              "author": AUTHOR, "publisher": ORG}
+              "author": AUTHOR, "reviewedBy": AUTHOR, "lastReviewed": REVIEWED_ISO, "publisher": ORG}
+    nm = short[0].lower() + short[1:] if short.split()[0].lower() in m["generic"].lower() else short
+    pl = short.split()[-1].endswith("s") and not short.endswith("ss")
+    qa = [(f"What {'are' if pl else 'is'} {nm}?", "What it is"),
+          (f"How {'are' if pl else 'is'} {nm} used?", "How it is used"),
+          (f"How much {'do' if pl else 'does'} {nm} cost on the PBS?", "Cost and PBS"),
+          (f"How should {nm} be stored?", "Storage and disposal")]
+    faq = []
+    for q, h in qa:
+        sec = next((x for x in m["sections"] if x.get("h") == h), None)
+        txt = " ".join(b for b in (sec or {}).get("body", []) if isinstance(b, str))[:900]
+        txt = re.sub(r"\s*\[\d+(?:[,\s]*\d+)*\]", "", re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", txt)).strip()
+        if txt: faq.append({"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": txt}})
+    schema = {"@context": "https://schema.org", "@graph": [page_ld] + ([{"@type": "FAQPage", "mainEntity": faq}] if faq else [])}
     write(path, title, desc, "v-med", schema)
     urls.append(path)
 
@@ -224,8 +242,8 @@ csp = "; ".join([
     "default-src 'self'",
     "script-src 'self' " + SCRIPT_HASH + " https://static.cloudflareinsights.com https://challenges.cloudflare.com",
     "frame-src https://challenges.cloudflare.com",
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-    "font-src 'self' https://fonts.gstatic.com",
+    "style-src 'self' 'unsafe-inline'",
+    "font-src 'self'",
     "img-src 'self' data:",
     "connect-src 'self' https://cloudflareinsights.com",
     "frame-ancestors 'none'", "base-uri 'self'", "form-action 'self'", "object-src 'none'",

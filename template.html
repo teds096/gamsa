@@ -1,8 +1,7 @@
 <title>Gender-Affirming Medicines South Australia</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Atkinson+Hyperlegible:wght@700&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/public-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:"Public Sans";font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/public-sans-latin-wght-normal.woff2) format("woff2");}@font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/atkinson-hyperlegible-latin-400-normal.woff2) format("woff2");}@font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/atkinson-hyperlegible-latin-700-normal.woff2) format("woff2");}@font-face{font-family:"Lexend";font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/lexend-latin-wght-normal.woff2) format("woff2");}
   :root{
     color-scheme:light;
     --bg:#FFFFFF; --card:#fff; --on-brand:#fff; --panel:#F6F8FA; --line:#DCE3E8; --line-2:#EDF1F4;
@@ -109,7 +108,7 @@
   figure svg{display:block;width:100%;height:auto;}
   figcaption{margin-top:10px;font-size:13.5px;color:var(--ink-2);line-height:1.5;}
   sup a{text-decoration:none;font-weight:600;padding:0 1px;}
-  .refs{margin-top:32px;background:var(--panel);border:1px solid var(--line);
+  .reviewed{font-size:14px;color:var(--ink-2);margin:18px 0 0;}.refs{margin-top:32px;background:var(--panel);border:1px solid var(--line);
     border-radius:16px;padding:18px 22px;}
   .refs h2{font-size:13.5px;margin-bottom:10px;border-top:0;padding-top:0;
     text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2);}
@@ -592,7 +591,7 @@
   html.hc a{text-decoration:underline;} html.hc .tile,html.hc .med,html.hc .sr,html.hc .ng-grid{border-width:2px;}
   html.ul a{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;}
   html.rm *,html.rm *::before,html.rm *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
-  .a11y-seg{border-color:var(--line);background:var(--panel);} .a11y-seg button{color:var(--ink-2);font-size:13px;padding:6px 9px;} .a11y-seg button[aria-pressed="true"]{background:var(--brand);color:var(--on-brand);}
+  .a11y-seg{border-color:var(--line);background:var(--panel);} .a11y-seg button{color:var(--ink-2);font-size:13px;padding:6px 9px;} .a11y-seg button[aria-pressed="true"]{background:var(--brand);color:var(--on-brand);}.bar .seg.a11y-seg{border-color:var(--line);background:var(--panel);}.bar .seg.a11y-seg button{color:var(--ink);font-weight:600;font-size:13px;padding:6px 9px;}.bar .seg.a11y-seg button:hover:not([aria-pressed="true"]){background:var(--acs,rgba(0,0,0,.05));}.bar .seg.a11y-seg button[aria-pressed="true"]{background:var(--brand);color:var(--on-brand);}.bar .seg.a11y-seg button:focus-visible{outline:2px solid var(--brand);outline-offset:-3px;}
   .a11y-reset{border-top:2px solid var(--line);}
   /* ---- dark top bar ---- */
   .bar{border-bottom:0;box-shadow:0 1px 0 rgba(0,0,0,.15);}
@@ -1903,6 +1902,7 @@
             (rf.url?' <a href="'+esc(rf.url)+'" target="_blank" rel="noopener">View on '+esc(host)+
               '<span class="sr-only"> (opens in a new tab)</span></a>':'')+'</li>';}).join("")+
         '</ol></div>':'')+
+      '<p class="reviewed">Written and reviewed by Theodore South, BPharm (Hons), registered pharmacist. Last reviewed {{REVIEWED}}.</p>'+
       '<p class="totop"><a href="#main" data-top>\u2191 Back to top</a></p>';
     renderTicker(m); prMed(m);
     return true;
@@ -2292,9 +2292,7 @@
   var DYS_FONTS=false;
   function loadDysFonts(){
     if(DYS_FONTS) return; DYS_FONTS=true;
-    var l=document.createElement("link"); l.rel="stylesheet";
-    l.href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap";
-    document.head.appendChild(l);
+    /* fonts are served from gamsa.au and load on first use */
   }
   mode("dysBtn","dys","dyslexic","Turn off","Turn on", loadDysFonts);
   mode("easyBtn","easy","easyread","Turn off","Turn on");

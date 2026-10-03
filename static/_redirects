@@ -1,0 +1,23 @@
+# Cloudflare Pages redirects: old or mistyped addresses -> the right page (301 = permanent).
+# Add a line when Search Console "Not found (404)" or Web Analytics shows people using a wrong address.
+# Format: /wrong-address  /right-address  301      (":splat" carries the rest of the path)
+/home              /                    301
+/medicine          /medicines           301
+/medicine/*        /medicines/:splat    301
+/med/*             /medicines/:splat    301
+/meds              /medicines           301
+/shortages         /supply              301
+/shortage          /supply              301
+/cost              /costs               301
+/pbs               /costs               301
+/dose              /doses               301
+/dosing            /doses               301
+/how-to-use        /using               301
+/clinician         /clinicians          301
+/pharmacists       /clinicians          301
+/ally              /allies              301
+/family            /allies              301
+/easy-read         /easy                301
+/easyread          /easy                301
+/contact           /feedback            301
+/about             /disclaimer          301

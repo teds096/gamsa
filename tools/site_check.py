@@ -68,7 +68,7 @@ try:
     c, o = run("python3 tools/extra_checks.py" + (" --update-weights" if "--update-weights" in sys.argv else ""), 900)
     for l in o.splitlines():
         if l.startswith(("PASS ", "FAIL ")): k, rest = l[:4], l[5:]; name, _, det = rest.partition(" — "); step(name, k == "PASS", det)
-        elif l.startswith("SKIP "): print(l)
+        elif l.startswith(("SKIP ", "NOTE ")): print(l)
 finally:
     srv.send_signal(signal.SIGTERM)
 zarg = [a for a in sys.argv[1:] if a.endswith(".zip")]
