@@ -3,7 +3,7 @@
 
 Every external https link on every page is requested once. 2xx/3xx is fine; 401/403/405/429
 are treated as "blocked to bots", not broken (government sites often refuse scripts).
-404/410, 5xx and DNS/SSL failures are reported. Timeouts and dropped connections are
+404/410, 5xx and DNS/SSL failures are reported. Timeouts, dropped connections and incomplete certificate chains (page loads in browsers) are
 listed separately as "could not check" (big .gov.au sites throttle GitHub's servers); they
 do not raise the issue. Each host is checked one link at a time with a pause, so no site
 is hammered. Writes /tmp/links.md and prints
@@ -11,7 +11,8 @@ LINKS_BROKEN when anything needs attention. Always exits 0: a dead outside link 
 never stop the data refresh.
 """
 import re, pathlib, sys, time, concurrent.futures as cf
-import requests
+import requests, urllib3
+urllib3.disable_warnings()
 
 D = pathlib.Path(__file__).resolve().parents[1] / "dist"
 SKIP = re.compile(r"fonts\.(googleapis|gstatic)|cloudflareinsights|challenges\.cloudflare|schema\.org|w3\.org|google\.com\.au/?$")
@@ -22,7 +23,7 @@ def pages():
         rel = "/" + str(f.relative_to(D)).removesuffix(".html").replace("index", "")
         yield rel, f.read_text(errors="ignore")
 
-SOFT = ("ReadTimeout", "ConnectTimeout", "Timeout", "ConnectionError", "ChunkedEncodingError")
+SOFT = ("CertChain", "ReadTimeout", "ConnectTimeout", "Timeout", "ConnectionError", "ChunkedEncodingError")
 
 def check(url):
     for attempt in range(2):
@@ -33,7 +34,14 @@ def check(url):
             return r.status_code
         except Exception as exc:
             err = type(exc).__name__
-            if "NameResolution" in str(exc) or "SSL" in err: return err + " (site address or certificate failed)"
+            if "SSL" in err:
+                # Some gov sites send an incomplete certificate chain: browsers fill the gap, Python does not.
+                try:
+                    r2 = requests.get(url, headers=UA, timeout=20, verify=False, allow_redirects=True, stream=True); r2.close()
+                    if r2.status_code < 400: return "CertChain"
+                except Exception: pass
+                return err + " (certificate failed)"
+            if "NameResolution" in str(exc): return err + " (site address failed)"
             time.sleep(3)
     return err
 
@@ -44,7 +52,7 @@ def by_host(urls):
     for u in urls:
         if strikes >= 2: out[u] = "Timeout"; continue
         out[u] = check(u); time.sleep(1.5)
-        strikes = strikes + 1 if out[u] in SOFT else 0
+        strikes = strikes + 1 if out[u] in SOFT and out[u] != "CertChain" else 0
     return out
 
 def main():
