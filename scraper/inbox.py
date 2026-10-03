@@ -85,7 +85,8 @@ def main():
     if not new_fb and not new_pd and not new_si:
         print("inbox: nothing new (token accepted by all three admin endpoints)"); return 0
     pathlib.Path("/tmp/inbox.md").write_text(body(new_fb, new_pd, new_si))
-    pathlib.Path("/tmp/inbox-title.txt").write_text(
+    spam = len(new_si) >= 10 or len(new_pd) >= 5 or len(new_fb) >= 15   # far above normal daily volume: possible spam or a bot
+    pathlib.Path("/tmp/inbox-title.txt").write_text(("UNUSUAL VOLUME — check for spam: " if spam else "") +
         " / ".join(x for x in [f"New feedback ({len(new_fb)})" if new_fb else "", f"pending pharmacist ({len(new_pd)})" if new_pd else "",
                             f"New sightings ({len(new_si)})" if new_si else ""] if x))
     if new_fb:   # mark as reported so tomorrow's run (or a restored state file) never repeats them
