@@ -52,7 +52,7 @@
         "Sell, rent or trade anything about you.",
         "Run advertising or share data with advertising networks.",
         "Ask you to create an account.",
-        "Use the Quick exit button to record anything; it only replaces this page with Google."
+        "Use the Quick exit button (or pressing Esc twice) to record anything. It clears this site's saved settings and replaces the page in this tab with the Bureau of Meteorology weather site, so Back does not return to it (other gamsa.au pages opened earlier in the same tab can still be reached with Back, unless you turn on Discreet browsing in the Accessibility panel first). It cannot erase your browser's own history: for that, use a private window (Safari: File → New Private Window; Chrome: New Incognito Window), or afterwards delete gamsa.au from your history (Safari: History → Show All History, search gamsa; Chrome: History, search gamsa, tick and delete)."
       ]
     },
     {
