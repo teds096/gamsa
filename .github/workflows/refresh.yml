@@ -103,6 +103,17 @@ jobs:
             if (open.length) { await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: open[0].number, body}); return; }
             await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo, title: "Some outside links on gamsa.au are broken", labels: ["links"], body});
 
+      - name: Close the links issue once links are fixed
+        if: steps.links.outcome == 'success' && steps.links.outputs.broken != 'true'
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const {data: open} = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "links"});
+            for (const i of open) {
+              await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: i.number, body: "Latest outside link check found no broken links. Closing."});
+              await github.rest.issues.update({owner: context.repo.owner, repo: context.repo.repo, issue_number: i.number, state: "closed"});
+            }
+
       - name: Tell Ted about new feedback or registrations
         if: steps.inbox.outputs.new == 'true'
         uses: actions/github-script@v8
