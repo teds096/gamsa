@@ -45,36 +45,37 @@ def hashes(csp):
     return set(re.findall(r"'sha256-[^']+'", csp or ""))
 
 
-def expected_hashes():
-    try:
-        txt = open("dist/_headers", encoding="utf-8").read()
-    except OSError:
-        return set()
-    m = re.search(r"Content-Security-Policy:\s*(.+)", txt)
-    return hashes(m.group(1)) if m else set()
-
-
 def wait_for_deploy(max_wait=900):
-    want = expected_hashes()
-    if not want or os.environ.get("LIVE_NOWAIT"):
-        print("NOTE no dist/_headers — not waiting for deploy")
+    """Wait for the "Cloudflare Pages" check on this commit (posted by Cloudflare's GitHub app) to finish."""
+    import json, os
+    sha, repo, tok = os.environ.get("GITHUB_SHA"), os.environ.get("GITHUB_REPOSITORY"), os.environ.get("GITHUB_TOKEN")
+    if os.environ.get("LIVE_NOWAIT") or not (sha and repo and tok):
+        print("NOTE not waiting for deploy")
         return True
+    url = f"https://api.github.com/repos/{repo}/commits/{sha}/check-runs"
+    hdr = {"Authorization": f"Bearer {tok}", "Accept": "application/vnd.github+json", "User-Agent": "gamsa-live-check"}
     t0 = time.time()
     while time.time() - t0 < max_wait:
         try:
-            _, h, _, _ = get("/")
-            if want <= hashes(h.get("Content-Security-Policy") or h.get("content-security-policy")):
-                print(f"Deploy is live after {int(time.time() - t0)} s")
+            runs = json.load(urllib.request.urlopen(urllib.request.Request(url, headers=hdr), timeout=30))["check_runs"]
+            cf = [r for r in runs if "cloudflare" in (r.get("app") or {}).get("slug", "") or r["name"].startswith("Cloudflare")]
+            if cf and all(r["status"] == "completed" for r in cf):
+                ok = all(r["conclusion"] == "success" for r in cf)
+                print(f"Cloudflare deploy {'finished' if ok else 'FAILED'} after {int(time.time() - t0)} s")
+                time.sleep(45)  # let the new version reach the edge
+                return ok
+            if not cf and time.time() - t0 > 300:
+                print("NOTE no Cloudflare Pages check on this commit after 5 min — checking the live site anyway")
                 return True
-        except Exception as e:  # network blip — keep waiting
+        except Exception as e:  # API blip — keep waiting
             print("waiting:", e)
-        time.sleep(30)
+        time.sleep(20)
     return False
 
 
 def main():
     if not wait_for_deploy():
-        result(False, "deploy", "Cloudflare was still serving the previous version after 15 minutes")
+        result(False, "deploy", "Cloudflare Pages deploy failed or did not finish within 15 minutes")
         return finish()
 
     # Pages
