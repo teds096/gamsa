@@ -67,7 +67,15 @@ jobs:
           git config user.email "actions@github.com"
           if git diff --quiet; then echo "No change."; else
             git add -A && git commit -m "Refresh data ($(date -u +%Y-%m-%d))" && git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Tell search engines what changed (IndexNow)
+        if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        run: |
+          sleep 120   # give Cloudflare Pages time to publish the new build
+          python scraper/indexnow.py ${{ github.event_name == 'workflow_dispatch' && 'all' || 'data' }}
 
       - name: Open an issue if a refresh broke
         if: failure() || steps.costs.outcome == 'failure' || steps.premiums.outcome == 'failure'
