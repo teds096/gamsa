@@ -81,3 +81,6 @@ From v17 the feedback table has a `notified` column: the daily inbox step reads 
 
 ## Run status (added v17)
 Every workflow run, pass or fail, ends by writing and committing `data/status.json` (`finishedAt`, `ok`, `failedSteps`, `issue`, `monthlyCostsRun`) for the external health check. It is run metadata only: not read by `build.py`, not a drift-guard input, and excluded from release zips with the other workflow-owned data files.
+
+## Outside link check (added v17.1)
+On the 1st of each month (and on any manual Run workflow) `scraper/links.py` requests every outside link on the built site from the GitHub runner. 404/410, server errors and dead hosts are listed in a "links" issue (one open at a time; later runs comment on it) and `data/status.json` gets `linksBroken: true`. 401/403/405/429 count as "blocked to bots", not broken. It never stops the data refresh.

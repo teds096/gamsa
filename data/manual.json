@@ -175,8 +175,8 @@
   "expectedReturn": "—",
   "mechanism": "—",
   "note": "No TGA shortage notice has been published for Primolut N.",
-  "sourceUrl": "https://www.tga.gov.au/safety/shortages-and-supply-disruptions/medicine-shortages",
-  "sourceLabel": "TGA medicine shortages",
+  "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/norethisterone",
+  "sourceLabel": "TGA shortage database (norethisterone)",
   "genericName": "Norethisterone",
   "form": "oral tablet",
   "brands": [
