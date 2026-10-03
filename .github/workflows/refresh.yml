@@ -52,6 +52,14 @@ jobs:
         id: build
         run: python build.py
 
+      - name: Outside links still work (monthly)
+        if: github.event.schedule == '30 19 1 * *' || github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        id: links
+        run: |
+          python scraper/links.py | tee /tmp/links.log
+          grep -q LINKS_BROKEN /tmp/links.log && echo "broken=true" >> "$GITHUB_OUTPUT" || true
+
       - name: Commit if anything changed
         id: commit
         run: |
@@ -85,6 +93,16 @@ jobs:
               title: "PBS brand premiums or listings changed — check the costs wording", labels: ["pbs"],
               body: "The monthly PBS check found changes. The figures on the site have updated automatically; read the costs page prose and the affected medicine pages in case the wording needs a human touch.\n\n```\n" + log + "\n```"});
 
+      - name: Report broken outside links
+        if: steps.links.outputs.broken == 'true'
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const body = require("fs").readFileSync("/tmp/links.md", "utf8");
+            const {data: open} = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "links"});
+            if (open.length) { await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: open[0].number, body}); return; }
+            await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo, title: "Some outside links on gamsa.au are broken", labels: ["links"], body});
+
       - name: Tell Ted about new feedback or registrations
         if: steps.inbox.outputs.new == 'true'
         uses: actions/github-script@v8
@@ -108,7 +126,7 @@ jobs:
           script: |
             const fs = require("fs");
             const outcomes = {supply: "${{ steps.supply.outcome }}", costs: "${{ steps.costs.outcome }}", premiums: "${{ steps.premiums.outcome }}",
-              inbox: "${{ steps.inbox.outcome }}", check: "${{ steps.check.outcome }}", build: "${{ steps.build.outcome }}", commit: "${{ steps.commit.outcome }}"};
+              inbox: "${{ steps.inbox.outcome }}", check: "${{ steps.check.outcome }}", build: "${{ steps.build.outcome }}", links: "${{ steps.links.outcome }}", commit: "${{ steps.commit.outcome }}"};
             const failed = Object.keys(outcomes).filter(k => outcomes[k] === "failure");
             let issue = null;
             try {
@@ -116,7 +134,7 @@ jobs:
               if (open.length) issue = open[0].html_url;
             } catch (e) { core.warning("could not list issues: " + e.message); }
             const status = {finishedAt: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"), ok: failed.length === 0, failedSteps: failed,
-              issue, monthlyCostsRun: outcomes.costs !== "skipped"};
+              issue, monthlyCostsRun: outcomes.costs !== "skipped", linksBroken: "${{ steps.links.outputs.broken }}" === "true"};
             fs.mkdirSync("data", {recursive: true});
             fs.writeFileSync("data/status.json", JSON.stringify(status, null, 2) + "\n");
             core.info(JSON.stringify(status));
