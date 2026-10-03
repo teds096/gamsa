@@ -227,7 +227,11 @@ def engines():
                         who = q.evaluate("""(()=>{const W=document.documentElement.clientWidth;const o=[];for(const e of document.querySelectorAll('body *')){const b=e.getBoundingClientRect();
                           if(b.width&&b.right>W+1&&!(e.parentElement&&e.parentElement.getBoundingClientRect().right>W+1)){o.push((e.tagName.toLowerCase()+(e.id?'#'+e.id:'')+(e.className&&e.className.baseVal===undefined?'.'+String(e.className).trim().split(/\\s+/).join('.'):''))+' '+Math.round(b.right)+'>'+W);if(o.length>2)break;}}
                           return o.join(', ')+' (page '+document.documentElement.scrollWidth+')';})()""")
-                        bad.append(f"overflow {w}px {r}: {who}")
+                        hdr = q.evaluate("""(()=>{const W=e=>e?Math.round(e.getBoundingClientRect().width):0;
+                          return 'header logo '+W(document.querySelector('.bar .logo'))+' nav '+W(document.querySelector('nav.main'))+' right '+W(document.querySelector('.bar-r'))
+                          +' buttons ['+[...document.querySelectorAll('nav.main > *, .bar-r > *')].map(W).join(',')+']'
+                          +' font '+(document.fonts.check('16px "Public Sans"')?'loaded':'NOT loaded')+' cur '+[...document.querySelectorAll('.ng.cur')].length;})()""")
+                        bad.append(f"overflow {w}px {r}: {who}; {hdr}")
                     if not q.evaluate("!!document.querySelector('.view.on h1')"): bad.append(f"no content {w}px {r}")
                 try:
                     q.goto(B + "/"); q.wait_for_timeout(300); q.click("#a11yBtn"); q.wait_for_timeout(300)
