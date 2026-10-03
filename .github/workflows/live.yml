@@ -1,6 +1,6 @@
 name: Live check after release
 
-# After every release (a push that changes the site), waits until Cloudflare Pages is serving it,
+# After every release (a push that changes the site), waits for Cloudflare Pages to finish deploying it,
 # then checks the live gamsa.au: all pages, 404s, security headers, script hashes, no cookies,
 # no outside services, downloads, redirects and the reports API.
 # Opens a "live" issue (GitHub emails Ted) if anything fails; closes it when a later run passes.
@@ -12,6 +12,8 @@ on:
 
 permissions:
   issues: write
+  checks: read
+  contents: read
 
 jobs:
   live:
@@ -22,11 +24,10 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-      - run: pip install requests beautifulsoup4 rjsmin rcssmin
-      - name: Build this commit (to know which version to wait for)
-        run: python build.py
       - name: Check the live site
         id: c
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           python tools/live_check.py | tee /tmp/live.log
           grep -q "^FAIL" /tmp/live.log && echo "failed=true" >> "$GITHUB_OUTPUT" || true
