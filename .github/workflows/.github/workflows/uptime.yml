@@ -1,0 +1,56 @@
+name: Uptime check
+
+# Checks gamsa.au every 15 minutes from GitHub's servers. If a page fails twice
+# a minute apart it opens a "down" issue (GitHub emails Ted); when the site is back it closes it.
+on:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+concurrency:
+  group: uptime
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check pages
+        id: c
+        run: |
+          fail=""
+          for p in / /supply /medicines; do
+            ok=""
+            for try in 1 2; do
+              body=$(curl -sS -m 20 -o - -w '\n%{http_code}' "https://gamsa.au$p?uptime=$(date +%s)" || true)
+              code=$(echo "$body" | tail -n1)
+              if [ "$code" = "200" ] && echo "$body" | grep -q 'class="view on"'; then ok=1; break; fi
+              sleep 60
+            done
+            [ -z "$ok" ] && fail="$fail $p ($code)"
+          done
+          echo "fail=$fail" >> "$GITHUB_OUTPUT"
+          echo "Failed:$fail"
+
+      - name: Open or close the down issue
+        uses: actions/github-script@v8
+        env:
+          FAIL: ${{ steps.c.outputs.fail }}
+        with:
+          script: |
+            const fail = process.env.FAIL.trim(), o = context.repo.owner, r = context.repo.repo;
+            const {data: open} = await github.rest.issues.listForRepo({owner: o, repo: r, state: "open", labels: "down"});
+            const now = new Date().toISOString().slice(0, 16).replace("T", " ") + " UTC";
+            if (fail) {
+              if (!open.length) await github.rest.issues.create({owner: o, repo: r, labels: ["down"], title: "gamsa.au is not responding",
+                body: `Checked ${now}: these pages did not load (twice, a minute apart): ${fail}\n\nCheck https://www.cloudflarestatus.com and the Cloudflare Pages deployments. This issue closes itself when the site is back.`});
+            } else {
+              for (const i of open) {
+                await github.rest.issues.createComment({owner: o, repo: r, issue_number: i.number, body: `Back up at ${now}.`});
+                await github.rest.issues.update({owner: o, repo: r, issue_number: i.number, state: "closed"});
+              }
+            }
