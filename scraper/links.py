@@ -25,22 +25,26 @@ def pages():
 SOFT = ("ReadTimeout", "ConnectTimeout", "Timeout", "ConnectionError", "ChunkedEncodingError")
 
 def check(url):
-    for attempt in range(3):
+    for attempt in range(2):
         try:
-            r = requests.get(url, headers=UA, timeout=30, allow_redirects=True, stream=True)
+            r = requests.get(url, headers=UA, timeout=20, allow_redirects=True, stream=True)
             r.close()
-            if r.status_code in (429, 503) and attempt < 2: time.sleep(10); continue
+            if r.status_code in (429, 503) and attempt < 1: time.sleep(10); continue
             return r.status_code
         except Exception as exc:
             err = type(exc).__name__
             if "NameResolution" in str(exc) or "SSL" in err: return err + " (site address or certificate failed)"
-            time.sleep(5 * (attempt + 1))
+            time.sleep(3)
     return err
 
 def by_host(urls):
-    out = {}
+    # A site that times out twice in a row is throttling us: mark the rest "could not check"
+    # instead of waiting minutes per link (keeps the whole step to a few minutes).
+    out, strikes = {}, 0
     for u in urls:
+        if strikes >= 2: out[u] = "Timeout"; continue
         out[u] = check(u); time.sleep(1.5)
+        strikes = strikes + 1 if out[u] in SOFT else 0
     return out
 
 def main():
