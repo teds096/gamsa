@@ -77,7 +77,7 @@ def head(title, desc, path, extra=""):
     return ('<!doctype html>\n<html lang="en-AU"__ROUTING__>\n<head>\n<meta charset="utf-8">\n'
             '<meta name="viewport" content="width=device-width,initial-scale=1">\n'
             f'<meta name="description" content="{d}">\n'
-            '<meta name="theme-color" content="#0B5D7A" media="(prefers-color-scheme: light)">\n<meta name="theme-color" content="#0F171D" media="(prefers-color-scheme: dark)">\n'
+            '<meta name="theme-color" content="#0B5D7A" media="(prefers-color-scheme: light)">\n<meta name="theme-color" content="#0A2E3C" media="(prefers-color-scheme: dark)">\n'
             f'<link rel="canonical" href="{url}">\n'
             '<meta property="og:type" content="website">\n'
             '<meta property="og:site_name" content="GAMSA — Gender-Affirming Medicines South Australia">\n'

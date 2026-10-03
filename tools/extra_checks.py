@@ -76,6 +76,7 @@ def pdfs():
         limit = 8 if "sop" in f.name else 2
         if n > limit: bad.append(f"{f.name} {n} pages")
         info.append(n)
+        if "gamsa-brand-5b" not in p.stdout and "gamsa-logo-5b" not in p.stdout: bad.append(f"no logo/stripe on {f.name} - run python3 tools/brand.py")
         if cv2:
             png = f"/tmp/_qr_{f.stem}"
             subprocess.run(["pdftoppm", "-r", "150", "-png", "-f", "1", "-l", "1", str(f), png], capture_output=True)
@@ -89,7 +90,13 @@ def pdfs():
                     if data: break
             if not data: bad.append(f"no QR found {f.name}")
             elif not data.startswith("https://gamsa.au/"): bad.append(f"QR {f.name} -> {data}")
-    out(not bad, "pdfs", "; ".join(bad[:5]) or f"{len(info)} PDFs open, page counts OK" + (", QR codes point to gamsa.au" if cv2 else " (QR not checked: pip install opencv-python-headless)"))
+    z = ROOT/"static/clinicians/testosterone-undecanoate-im-training-package.zip"
+    if z.exists():
+        import zipfile
+        with zipfile.ZipFile(z) as zz:
+            for n in zz.namelist():
+                if zz.read(n) != (ROOT/"static/clinicians"/n).read_bytes(): bad.append(f"training zip has an old copy of {n} - run python3 tools/brand.py")
+    out(not bad, "pdfs", "; ".join(bad[:5]) or f"{len(info)} PDFs open, page counts OK, logo on each, training zip current" + (", QR codes point to gamsa.au" if cv2 else " (QR not checked: pip install opencv-python-headless)"))
 
 def assets():
     bad = []
@@ -202,7 +209,10 @@ def browser_checks():
             pp.emulate_media(media="screen")
         out(not bad, "print", "; ".join(bad) or "A4 print layout OK")
         b.close()
-        # other engines
+
+def engines():
+    from playwright.sync_api import sync_playwright
+    with sync_playwright() as p:
         for name in ("webkit", "firefox"):
             try: eb = getattr(p, name).launch()
             except Exception as e:
@@ -211,16 +221,22 @@ def browser_checks():
             for w, h in ((390, 844), (1280, 900)):
                 c = eb.new_context(viewport={"width": w, "height": h}); c.route("**/*", lambda r: r.abort() if "127.0.0.1" not in r.request.url else r.continue_())
                 q = c.new_page(); errs = []; q.on("pageerror", lambda e: errs.append(str(e)[:80]))
-                for r in ("/", "/clinicians", "/costs", "/easy/helping"):
+                for r in ("/", "/clinicians", "/costs", "/supply", "/medicines/estradiol-patches", "/easy/helping"):
                     q.goto(B + r); q.wait_for_timeout(300)
                     if q.evaluate("document.documentElement.scrollWidth>innerWidth+1"): bad.append(f"overflow {w}px {r}")
                     if not q.evaluate("!!document.querySelector('.view.on h1')"): bad.append(f"no content {w}px {r}")
+                try:
+                    q.goto(B + "/"); q.wait_for_timeout(300); q.click("#a11yBtn"); q.wait_for_timeout(300)
+                    if not q.evaluate("(()=>{const p=document.getElementById('a11yPanel');return !!p&&p.offsetHeight>0})()"): bad.append(f"Accessibility panel does not open {w}px")
+                except Exception as e: bad.append(f"Accessibility panel {w}px: {str(e)[:60]}")
                 if errs: bad.append(f"JS error {w}px: {errs[0]}")
                 c.close()
             eb.close()
             out(not bad, f"engine {name}", "; ".join(bad[:4]) or "renders cleanly at phone and desktop width")
 
 if __name__ == "__main__":
+    if "--engines-only" in sys.argv: engines(); sys.exit(0)
     seo(); downloads(); assets(); review_date(); pdfs(); wording(); weight("--update-weights" in sys.argv)
     try: browser_checks()
     except Exception as e: out(False, "browser checks", str(e)[:200])
+    engines()

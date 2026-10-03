@@ -75,7 +75,7 @@ zarg = [a for a in sys.argv[1:] if a.endswith(".zip")]
 if zarg:   # release zip check: python3 tools/site_check.py "path/to/GAC – GAMSA Release vX.zip"
     import zipfile, hashlib
     z = zipfile.ZipFile(zarg[0]); names = set(z.namelist())
-    banned = [n for n in ("data/medicines.json", "data/premiums.json", "data/inbox-state.json", "data/status.json") if n in names]
+    banned = [n for n in ("data/medicines.json", "data/premiums.json", "data/inbox-state.json", "data/status.json", "data/pi-state.json") if n in names]
     need = [n for n in ("template.html", "build.py", "data/manual.json", ".github/workflows/refresh.yml", "tools/site_check.py") if n not in names]
     stale = [n for n in names if not n.endswith("/") and pathlib.Path(n).is_file() and z.read(n) != pathlib.Path(n).read_bytes()]
     step("release zip", not banned and not need and not stale, "; ".join(filter(None, [f"contains {banned}" if banned else "", f"missing {need}" if need else "", f"differs from repo {stale[:5]}" if stale else ""])) or f"{len(names)} files, matches repo")
