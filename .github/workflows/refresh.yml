@@ -10,7 +10,7 @@ permissions: {contents: write, issues: write}
 
 jobs:
   refresh:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # pinned: ubuntu-latest moves to Ubuntu 26 from 19 Oct 2026
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -19,6 +19,7 @@ jobs:
 
       - name: Supply data (daily)
         id: supply
+        timeout-minutes: 15
         run: python scraper/refresh.py
 
       - name: Costs and PBS figures (monthly)
@@ -78,7 +79,7 @@ jobs:
           python scraper/indexnow.py ${{ github.event_name == 'workflow_dispatch' && 'all' || 'data' }}
 
       - name: Open an issue if a refresh broke
-        if: failure() || steps.costs.outcome == 'failure' || steps.premiums.outcome == 'failure'
+        if: (failure() || steps.costs.outcome == 'failure' || steps.premiums.outcome == 'failure') && !cancelled()
         uses: actions/github-script@v8
         with:
           script: |
@@ -88,6 +89,17 @@ jobs:
             await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo,
               title: "Data refresh failed - site figures are going stale", labels: ["scraper"],
               body: "A scheduled refresh failed, so the site is serving its last good data. Usual cause: the TGA or PBS changed their page layout. The site degrades rather than breaking - nothing is overwritten with bad data."});
+
+      - name: Close the refresh issue once data refreshes again
+        if: success() && steps.supply.outcome == 'success' && steps.check.outcome == 'success'
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const {data: open} = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "scraper"});
+            for (const i of open) {
+              await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: i.number, body: "Data refreshed successfully again. Closing."});
+              await github.rest.issues.update({owner: context.repo.owner, repo: context.repo.repo, issue_number: i.number, state: "closed"});
+            }
 
       - name: Note when brand premiums or listings changed
         if: steps.premiums.outputs.changed == 'true'
@@ -160,6 +172,7 @@ jobs:
 
       - name: Commit run status
         if: always()
+        continue-on-error: true
         run: |
           git config user.name "site-bot"
           git config user.email "actions@github.com"
