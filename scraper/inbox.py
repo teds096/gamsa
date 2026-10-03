@@ -45,7 +45,8 @@ def body(new_fb, new_pd, new_si=()):
         out.append(f"## Pending pharmacist registrations ({len(new_pd)})\n")
         for p in new_pd:
             out.append(f"- **{p.get('name','')}** ({p.get('ahpra','')}) · {p.get('pharmacy','')}, {p.get('suburb','')} · first report: {p.get('medicine','')} — {p.get('status','')}\n"
-                       f"  [Check on AHPRA]({p.get('check','')}) · [Approve]({p.get('approve','')}) · [Block]({p.get('block','')})\n")
+                       f"  [Check on AHPRA]({p.get('check','')}) · approve: {SITE}/api/pharmacy?token=…&approve={p.get('ahpra','')} · block: …&block={p.get('ahpra','')}\n")
+    # Never put the admin token in the issue: the repository is public. Ted pastes his ADMIN_TOKEN in place of …
     if new_si:
         out.append(f"## New patient sightings ({len(new_si)}) — already live on the supply page\n")
         for x in new_si:
