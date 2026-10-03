@@ -61,6 +61,15 @@ jobs:
           python scraper/links.py | tee /tmp/links.log
           grep -q LINKS_BROKEN /tmp/links.log && echo "broken=true" >> "$GITHUB_OUTPUT" || true
 
+      - name: Product information revisions (monthly)
+        if: github.event.schedule == '30 19 1 * *' || github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        timeout-minutes: 10
+        id: pi
+        run: |
+          python scraper/pi_check.py | tee /tmp/pi.log
+          grep -q PI_CHANGED /tmp/pi.log && echo "changed=true" >> "$GITHUB_OUTPUT" || true
+
       - name: Commit if anything changed
         id: commit
         run: |
@@ -133,6 +142,16 @@ jobs:
               await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: i.number, body: "Latest outside link check found no broken links. Closing."});
               await github.rest.issues.update({owner: context.repo.owner, repo: context.repo.repo, issue_number: i.number, state: "closed"});
             }
+
+      - name: Report revised product information
+        if: steps.pi.outputs.changed == 'true'
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const body = require("fs").readFileSync("/tmp/pi.md", "utf8");
+            const {data: open} = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "pi"});
+            if (open.length) { await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: open[0].number, body}); return; }
+            await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo, title: "Product information revised - re-check medicine pages", labels: ["pi"], body});
 
       - name: Tell Ted about new feedback or registrations
         if: steps.inbox.outputs.new == 'true'
