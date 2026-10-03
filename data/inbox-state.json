@@ -1,5 +1,7 @@
 {
- "lastFeedbackId": 6,
- "pendingSeen": [],
- "lastSightingId": 0
+ "lastFeedbackId": 7,
+ "pendingSeen": [
+  "PHA0000000000"
+ ],
+ "lastSightingId": 1
 }
