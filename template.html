@@ -64,7 +64,8 @@
   main{padding-block:30px 10px;}
   .view{display:none;}
   .view.on{display:block;}
-  .page-head{display:flex;flex-direction:column;gap:10px;margin-bottom:26px;}
+  .page-head{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;margin-bottom:26px;}   /* grid with a 0 minimum, not a flex column: Safari overflowed sideways at desktop width */
+  .page-head>*{min-width:0;}
   .page-head .lede{font-size:17.5px;color:var(--ink-2);max-width:60ch;margin:0;}
   .stamp{font-size:13.5px;color:var(--ink-2);}
   @media (max-width:430px){.tb-sa{display:none;}}
