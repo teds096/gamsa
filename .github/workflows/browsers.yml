@@ -1,0 +1,51 @@
+name: Safari and Firefox check
+
+# Renders key pages in WebKit (the engine behind Safari on iPhone, iPad and Mac) and Firefox,
+# at phone and desktop width, after every release (a push that changes the site) and monthly.
+# Opens a "browsers" issue if anything breaks; closes it when a later run passes.
+on:
+  push:
+    branches: [main]
+    paths: ["template.html", "build.py", "content/**", "static/**"]
+  schedule:
+    - cron: '45 19 3 * *'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  engines:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install requests beautifulsoup4 rjsmin rcssmin playwright
+      - run: python -m playwright install --with-deps webkit firefox
+      - name: Build the site
+        run: python build.py
+      - name: Check Safari (WebKit) and Firefox
+        id: e
+        run: |
+          (python tools/pages_gz.py >/dev/null 2>&1 &) ; sleep 3
+          python tools/extra_checks.py --engines-only | tee /tmp/engines.log
+          grep -q "^FAIL" /tmp/engines.log && echo "failed=true" >> "$GITHUB_OUTPUT" || true
+      - name: Open or close the browsers issue
+        uses: actions/github-script@v8
+        env:
+          FAILED: ${{ steps.e.outputs.failed }}
+        with:
+          script: |
+            const log = require("fs").readFileSync("/tmp/engines.log", "utf8"), o = context.repo.owner, r = context.repo.repo;
+            const {data: open} = await github.rest.issues.listForRepo({owner: o, repo: r, state: "open", labels: "browsers"});
+            if (process.env.FAILED === "true") {
+              const body = "Safari (WebKit) or Firefox problem found:\n\n```\n" + log + "\n```";
+              if (open.length) await github.rest.issues.createComment({owner: o, repo: r, issue_number: open[0].number, body});
+              else await github.rest.issues.create({owner: o, repo: r, title: "Page problem in Safari or Firefox", labels: ["browsers"], body});
+            } else for (const i of open) {
+              await github.rest.issues.createComment({owner: o, repo: r, issue_number: i.number, body: "Safari and Firefox checks pass again. Closing."});
+              await github.rest.issues.update({owner: o, repo: r, issue_number: i.number, state: "closed"});
+            }
