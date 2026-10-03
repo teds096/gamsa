@@ -531,11 +531,13 @@
   .hero{position:relative;overflow:hidden;
     background:radial-gradient(420px 260px at 92% 0%,rgba(127,216,251,.18),transparent 70%),radial-gradient(380px 240px at 0% 100%,rgba(247,182,195,.12),transparent 70%),linear-gradient(160deg,#08485E 0%,#0B5D7A 62%,#136182 100%) !important;}
   .hero-in{position:relative;}
-  .hero-ring,.hero-badge{position:absolute;pointer-events:none;overflow:visible;}
+  .hero-pat,.hero-ring,.hero-badge{position:absolute;pointer-events:none;overflow:visible;}
   .hero-ring{right:-70px;top:-90px;width:330px;height:330px;opacity:.12;}
-  .hero-badge{right:60px;top:40px;width:96px;height:96px;filter:drop-shadow(0 0 18px rgba(127,216,251,.3));}
+  .hero-badge{right:47px;top:27px;width:96px;height:96px;}
+  .hero-pat{right:0;top:0;width:560px;height:373px;opacity:.05;-webkit-mask-image:linear-gradient(90deg,transparent,#000 60%);mask-image:linear-gradient(90deg,transparent,#000 60%);}
+  html.dark .bf{fill:#0A2E3C;} html.hc .bf{fill:#003A52;}
   .hero-in{z-index:1;}
-  @media (max-width:899px){.hero-ring{right:-60px;top:-70px;width:250px;height:250px;}.hero-badge{right:40px;top:30px;width:70px;height:70px;}}
+  @media (max-width:899px){.hero-ring{right:-60px;top:-70px;width:250px;height:250px;}.hero-badge{right:30px;top:20px;width:70px;height:70px;}}
 
   .hero .eyebrow{display:inline-flex;align-items:center;gap:8px;}
   .hero .eyebrow::before{content:"";width:18px;height:18px;border-radius:5px;flex:none;
@@ -543,7 +545,7 @@
   .hero h1::after{content:"";display:block;width:56px;height:4px;border-radius:2px;background:linear-gradient(90deg,#7FD8FB,#FFFFFF,#F7B6C3);margin-top:16px;}
   @media (max-width:420px){.hero-search input::placeholder{font-size:14px;}}
   /* phones: small badge in the top corner, clear of the title */
-  @media (max-width:560px){.hero-ring{right:-50px;top:-30px;width:180px;height:180px;}.hero-badge{right:18px;top:18px;width:44px;height:44px;}}
+  @media (max-width:560px){.hero-pat{display:none;}.hero-ring{right:4px;top:4px;width:74px;height:74px;opacity:.18;}.hero-badge{right:20px;top:20px;width:42px;height:42px;}}
   .f textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--card);border:1px solid var(--line);
     border-radius:9px;padding:11px 12px;width:100%;resize:vertical;}
   .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
@@ -604,7 +606,10 @@
   @media print{header::after{display:none;}}
   .bar .logo{color:#fff;} .logo-t small{color:#CFE3EC;}
   .bar .logo svg{width:34px;height:34px;}
-  .bar .logo:hover svg{box-shadow:0 0 0 1.5px #fff,0 0 0 4px rgba(255,255,255,.24),0 3px 8px rgba(0,0,0,.28);}
+  /* logo hover: the capsule turns half a turn (pink to the top) with a small bounce; still under reduced motion */
+  .logo .pill{transform-box:fill-box;transform-origin:center;transition:transform .45s cubic-bezier(.3,1.4,.5,1);}
+  .logo:hover .pill,.logo:focus-visible .pill{transform:rotate(180deg);}
+  @media (prefers-reduced-motion:reduce){.logo .pill{transition:none;}.logo:hover .pill,.logo:focus-visible .pill{transform:none;}}
   .bar .logo{gap:12px;}
   .bar .logo{font-size:17px;letter-spacing:.01em;font-weight:700;}
   .bar nav.main>a,.bar .ng>.ng-btn{color:#E6F1F6;}
@@ -789,7 +794,7 @@
 <div class="bar">
   <div class="wrap bar-in">
     <a class="logo" href="#/" data-link aria-label="GAMSA home">
-      <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect x="1.5" y="1.5" width="61" height="61" rx="14" fill="#0B5D7A"/><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#FFFFFF"/><rect x="21.3" y="5.8" width="21.4" height="52.4" rx="10.7" fill="#0B5D7A"/><path d="M23.5 32V16.5a8.5 8.5 0 0 1 17 0V32z" fill="#7FD8FB"/><path d="M23.5 32h17V47.5a8.5 8.5 0 0 1 -17 0z" fill="#F7B6C3"/><rect x="23.5" y="31" width="17" height="2" fill="#FFFFFF"/></svg>
+      <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect class="bf" x="1.5" y="1.5" width="61" height="61" rx="14" fill="#0B5D7A"/><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#FFFFFF"/><rect class="bf" x="21.3" y="5.8" width="21.4" height="52.4" rx="10.7" fill="#0B5D7A"/><g class="pill"><path d="M23.5 32V16.5a8.5 8.5 0 0 1 17 0V32z" fill="#7FD8FB"/><path d="M23.5 32h17V47.5a8.5 8.5 0 0 1 -17 0z" fill="#F7B6C3"/><rect x="23.5" y="31" width="17" height="2" fill="#FFFFFF"/></g></svg>
       <span class="logo-t">GAMSA<small>South Australia</small></span>
     </a>
     <nav class="main" id="nav" aria-label="Main">
@@ -843,6 +848,10 @@
           <button class="a11y-act" id="rmBtn" type="button" aria-pressed="false">Turn on</button>
         </div>
         <div class="a11y-row">
+          <div class="t"><b>Discreet browsing</b><span>This tab keeps one history entry for the whole visit, so Quick exit leaves no gamsa.au pages behind. Back then leaves the site. Ends when you close the tab.</span></div>
+          <button class="a11y-act" id="dmBtn" type="button" aria-pressed="false">Turn on</button>
+        </div>
+        <div class="a11y-row">
           <div class="t"><b>Easy Read guides</b><span>Short guides in easy words with pictures. Each one prints or saves as a PDF.</span></div>
           <a class="a11y-act" id="erLink" href="#/easy" data-link>Open</a>
         </div>
@@ -851,7 +860,7 @@
         <p class="a11y-note">Your choices are remembered on this device and never sent anywhere. <a href="#/accessibility" data-link>Accessibility statement</a>.</p>
       </div>
     </div>
-      <a class="top-btn exit" id="exitBtn" href="https://www.google.com.au/" title="Leave this site quickly: this page is replaced with Google">
+      <a class="top-btn exit" id="exitBtn" href="https://www.bom.gov.au/" title="Leave this site quickly (or press Esc twice): this page is replaced with the Bureau of Meteorology weather site">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 4h5a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-5M4 12h11m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span class="lbl">Quick exit</span><span class="lbl-s" aria-hidden="true">Exit</span><span class="sr-only">Leave this site quickly</span>
       </a>
@@ -915,8 +924,9 @@
   <!-- HOME -->
   <div class="view" id="v-home">
     <div class="hero">
+      <svg class="hero-pat" viewBox="0 0 180 120" aria-hidden="true" focusable="false"><g transform="translate(0,0) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(0,30) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(0,60) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(0,90) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(0,120) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(30,0) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(30,30) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(30,60) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(30,90) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(30,120) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(60,0) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(60,30) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(60,60) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(60,90) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(60,120) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(90,0) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(90,30) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(90,60) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(90,90) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(90,120) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(120,0) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(120,30) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(120,60) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(120,90) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(120,120) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(150,0) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(150,30) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(150,60) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(150,90) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(150,120) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(180,0) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(180,30) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(180,60) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(180,90) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g><g transform="translate(180,120) scale(.34)"><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#fff"/><rect x="23.5" y="8" width="17" height="48" rx="8.5" fill="#fff"/></g></svg>
       <svg class="hero-ring" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="#FFFFFF" stroke-width=".55"><rect x="8" y="24.5" width="48" height="15" rx="7.5"/><rect x="23.5" y="8" width="17" height="48" rx="8.5"/></g></svg>
-      <svg class="hero-badge" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect x="1.5" y="1.5" width="61" height="61" rx="14" fill="#0B5D7A" stroke="rgba(255,255,255,.35)" stroke-width="1"/><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#FFFFFF"/><rect x="21.3" y="5.8" width="21.4" height="52.4" rx="10.7" fill="#0B5D7A"/><path d="M23.5 32V16.5a8.5 8.5 0 0 1 17 0V32z" fill="#7FD8FB"/><path d="M23.5 32h17V47.5a8.5 8.5 0 0 1 -17 0z" fill="#F7B6C3"/><rect x="23.5" y="31" width="17" height="2" fill="#FFFFFF"/></svg>
+      <svg class="hero-badge" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect class="bf" x="1.5" y="1.5" width="61" height="61" rx="14" fill="#0B5D7A"/><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#FFFFFF"/><rect class="bf" x="21.3" y="5.8" width="21.4" height="52.4" rx="10.7" fill="#0B5D7A"/><path d="M23.5 32V16.5a8.5 8.5 0 0 1 17 0V32z" fill="#7FD8FB"/><path d="M23.5 32h17V47.5a8.5 8.5 0 0 1 -17 0z" fill="#F7B6C3"/><rect x="23.5" y="31" width="17" height="2" fill="#FFFFFF"/></svg>
       <div class="hero-in">
         <div class="hero-l">
         <p class="eyebrow">GAMSA</p>
@@ -1225,6 +1235,10 @@
 </div>
 
 <script>
+  /* discreet browsing: one history entry per visit (session only, so nothing is left once the tab closes) */
+  var DISCREET=false; try{ DISCREET=sessionStorage.getItem("gamsa.dm")==="1"; }catch(_){}
+  function gHist(st,t,u){ try{ if(DISCREET) history.replaceState(st,t,u); else history.pushState(st,t,u); }catch(_){ } }
+
 (function(){
   "use strict";
   var DATA = __MEDS__, CONTENT = __CONTENT__, MEDINFO = __MEDINFO__;
@@ -2012,7 +2026,7 @@
   function go(r, anc){
     var tail = anc ? "#"+anc : "";
     if(!PATHMODE){ location.hash=r+tail; return; }
-    history.pushState(null,"",toPath(r)+tail); window.dispatchEvent(new Event("gamsa:route"));
+    gHist(null,"",toPath(r)+tail); window.dispatchEvent(new Event("gamsa:route"));
   }
   /* a route may carry a section anchor: #/costs#sec-costs-3 or /costs#sec-costs-3 */
   function curAnchor(){
@@ -2046,7 +2060,7 @@
       e.preventDefault();
       var r=fromPath(h.split("#")[0]), anc=h.split("#")[1]||"";
       if(r!==curRoute()) go(r, anc);
-      else if(anc){ var el=document.getElementById(anc); if(el){ history.pushState(null,"",h); el.scrollIntoView(); el.focus({preventScroll:true}); } }
+      else if(anc){ var el=document.getElementById(anc); if(el){ gHist(null,"",h); el.scrollIntoView(); el.focus({preventScroll:true}); } }
     });
   }
   var lastRoute=null;
@@ -2260,7 +2274,7 @@
   function doSearch(q){
     q=(q||"").trim();
     var qs=q?"?q="+encodeURIComponent(q):"";
-    if(PATHMODE){ history.pushState(null,"","/search"+qs); lastRoute=null; window.dispatchEvent(new Event("gamsa:route")); }
+    if(PATHMODE){ gHist(null,"","/search"+qs); lastRoute=null; window.dispatchEvent(new Event("gamsa:route")); }
     else location.hash="/search"+qs;
   }
   document.getElementById("heroSearch").addEventListener("submit", function(e){ e.preventDefault(); doSearch(document.getElementById("siteq").value); });
@@ -2280,8 +2294,24 @@
   /* ================= quick exit ================= */
   document.getElementById("exitBtn").addEventListener("click", function(e){
     e.preventDefault();
-    location.replace("https://www.google.com.au/");
+    // Leave no trace this site can remove: its saved settings, this tab's session data, and the current page's
+    // address (replaced with the home page, so Back or the tab's history doesn't show which page was open).
+    // A website cannot erase the browser's own history list; the Privacy page explains how.
+    try { Object.keys(localStorage).forEach(function(k){ if(/^gamsa\./.test(k)) localStorage.removeItem(k); }); } catch(_) {}
+    try { sessionStorage.clear(); } catch(_) {}
+    try { history.replaceState(null, "", "/"); } catch(_) {}
+    location.replace("https://www.bom.gov.au/");
   });
+  // Esc twice (within a second) = Quick exit, as on family-violence services' sites
+  var lastEsc=0;
+  document.addEventListener("keydown", function(e){
+    if(e.key!=="Escape") return;
+    var now=Date.now(); if(now-lastEsc<1000){ document.getElementById("exitBtn").click(); } lastEsc=now;
+  });
+  (function(){ var b=document.getElementById("dmBtn"); if(!b) return;
+    function show(){ b.setAttribute("aria-pressed", DISCREET?"true":"false"); b.textContent=DISCREET?"Turn off":"Turn on"; }
+    b.addEventListener("click", function(){ DISCREET=!DISCREET; try{ if(DISCREET) sessionStorage.setItem("gamsa.dm","1"); else sessionStorage.removeItem("gamsa.dm"); }catch(_){} show(); });
+    show(); })();
 
   /* -- reading modes -- */
   function mode(btn, cls, key, onLabel, offLabel, whenOn){
