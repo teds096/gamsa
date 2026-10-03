@@ -71,7 +71,7 @@ CHECKED = {}  # ingredient -> HTTP status this run (the TGA page answers 500 whe
 
 def scrape(ingredient, category):
     url = BASE.format(ingredient)
-    resp = requests.get(url, headers=HEADERS, timeout=30)
+    resp = requests.get(url, headers=HEADERS, timeout=(10, 20))  # connect, read: a slow TGA must not stall the run
     CHECKED[ingredient] = resp.status_code
     if resp.status_code != 200:
         print(f"  ! {ingredient}: HTTP {resp.status_code}", file=sys.stderr)
