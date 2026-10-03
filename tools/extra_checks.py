@@ -222,7 +222,7 @@ def engines():
                 c = eb.new_context(viewport={"width": w, "height": h}); c.route("**/*", lambda r: r.abort() if "127.0.0.1" not in r.request.url else r.continue_())
                 q = c.new_page(); errs = []; q.on("pageerror", lambda e: errs.append(str(e)[:80]))
                 for r in ("/", "/clinicians", "/costs", "/supply", "/medicines/estradiol-patches", "/easy/helping"):
-                    q.goto(B + r); q.wait_for_timeout(300)
+                    q.goto(B + r); q.evaluate("document.fonts.ready.then(()=>1)"); q.wait_for_timeout(300)
                     if q.evaluate("document.documentElement.scrollWidth>innerWidth+1"):
                         who = q.evaluate("""(()=>{const W=document.documentElement.clientWidth;const o=[];for(const e of document.querySelectorAll('body *')){const b=e.getBoundingClientRect();
                           if(b.width&&b.right>W+1&&!(e.parentElement&&e.parentElement.getBoundingClientRect().right>W+1)){o.push((e.tagName.toLowerCase()+(e.id?'#'+e.id:'')+(e.className&&e.className.baseVal===undefined?'.'+String(e.className).trim().split(/\\s+/).join('.'):''))+' '+Math.round(b.right)+'>'+W);if(o.length>2)break;}}
