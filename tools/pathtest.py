@@ -64,9 +64,9 @@ with sync_playwright() as pw:
     pg.goto(B+"/"); pg.wait_for_timeout(400)
     pg.fill("#siteq","safety net"); pg.press("#siteq","Enter"); pg.wait_for_timeout(500)
     chk(pg.url.endswith("/search?q=safety%20net") and pg.evaluate("document.querySelectorAll('#srOut .sr').length")>3, f"home search shows results ({pg.url})")
-    chk(pg.evaluate("document.querySelector('#srOut .sr h2 a').getAttribute('href')").startswith("/"), "search results use real paths")
+    chk(pg.evaluate("document.querySelector('#srOut .sr h3 a').getAttribute('href')").startswith("/"), "search results use real paths")
     pg.fill("#srq","reandron"); pg.press("#srq","Enter"); pg.wait_for_timeout(400)
-    chk("reandron" in pg.url and pg.evaluate("document.querySelector('#srOut .sr h2 a').textContent").startswith("Testosterone undecanoate"), "second search re-renders on the same route")
+    chk("reandron" in pg.url and pg.evaluate("document.querySelector('#srOut .sr h3 a').textContent").startswith("Testosterone undecanoate"), "second search re-renders on the same route")
     pg.goto(B+"/search?q=patches"); pg.wait_for_timeout(600)
     chk(pg.evaluate("document.querySelectorAll('#srOut .sr').length")>3, "search URL loads directly with results")
     # dark mode persists

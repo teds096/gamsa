@@ -6,9 +6,21 @@ from playwright.sync_api import sync_playwright
 from PIL import Image
 axe=AXE
 B="http://127.0.0.1:8767"
-DEV=[("Android small",360,780,True),("iPhone SE",375,667,True),("iPhone 15",393,852,True),("iPad mini portrait",744,1133,True),("iPad portrait",820,1180,True),("iPad landscape",1180,820,True),("iPad Pro portrait",1024,1366,True),("iPad Pro landscape",1366,1024,True)]
+DEV=[("Android small",360,780,True),("iPhone SE",375,667,True),("iPhone 15",393,852,True),("iPhone SE landscape",667,375,True),("iPhone 15 landscape",852,393,True),("iPad mini portrait",744,1133,True),("iPad portrait",820,1180,True),("iPad landscape",1180,820,True),("iPad Pro portrait",1024,1366,True),("iPad Pro landscape",1366,1024,True)]
 R=["/","/trans","/clinicians","/allies","/resources","/supply","/costs","/medicines","/medicines/testosterone-undecanoate","/using","/easy/helping","/clinician-guide","/accessibility","/search?q=patches","/feedback"]
 TAP="""(()=>{const bad=[];document.querySelectorAll('header a,header button,.view.on button,.view.on .tile,.view.on .chip,.view.on .aud .ql a,.view.on .cta,footer a').forEach(e=>{const r=e.getBoundingClientRect();if(r.width&&r.height&&getComputedStyle(e).visibility!=='hidden'&&(r.width<24||r.height<24))bad.push((e.id||e.className||e.tagName)+' '+Math.round(r.width)+'x'+Math.round(r.height));});return [...new Set(bad)].slice(0,4)})()"""
+# text blocks drawn on top of each other (e.g. the v17.9 phone footer)
+OVERLAP="""(()=>{const sel='.view.on h1,.view.on h2,.view.on h3,.view.on p,.view.on li,.view.on .sr,footer p,footer h2,footer li,footer .flags';
+const els=[...document.querySelectorAll(sel)].filter(e=>{const r=e.getBoundingClientRect();return r.width>4&&r.height>4&&getComputedStyle(e).visibility!=='hidden'&&(!e.checkVisibility||e.checkVisibility())}).slice(0,500);
+const rs=els.map(e=>e.getBoundingClientRect());const bad=[];
+for(let i=0;i<els.length;i++)for(let j=i+1;j<els.length;j++){if(els[i].contains(els[j])||els[j].contains(els[i]))continue;const a=rs[i],b=rs[j];
+const w=Math.min(a.right,b.right)-Math.max(a.left,b.left),h=Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top);
+if(w>6&&h>6)bad.push((els[i].className||els[i].tagName)+' / '+(els[j].className||els[j].tagName));}
+return [...new Set(bad)].slice(0,3)})()"""
+# chips in a wrapped row must line up and stay inside their box
+CHIPS="""(()=>{const box=document.querySelector('.hs-pop');if(!box)return '';const b=box.getBoundingClientRect();const cs=[...box.querySelectorAll('a')].map(a=>a.getBoundingClientRect());
+const rows={};cs.forEach(r=>{const k=Math.round(r.top/4);(rows[k]=rows[k]||[]).push(r)});const lefts=Object.values(rows).map(r=>Math.min(...r.map(x=>x.left)));
+if(cs.some(r=>r.right>b.right+1))return 'chip past edge';const ks=Object.keys(rows);if(ks.length>1){const firstRowStarts=lefts.slice(1);if(new Set(firstRowStarts.map(Math.round)).size>1)return 'chip rows misaligned'}return ''})()"""
 out={}
 with sync_playwright() as p:
     b=p.chromium.launch(**({"executable_path":CHROME} if CHROME else {}))
@@ -20,14 +32,27 @@ with sync_playwright() as p:
             if pg.evaluate("document.documentElement.scrollWidth>innerWidth+1"): issues.append("overflow "+r)
             t=pg.evaluate(TAP)
             if t: issues.append("small taps "+r+" "+";".join(t))
+            o=pg.evaluate(OVERLAP)
+            if o: issues.append("overlapping text "+r+" "+";".join(o))
         pg.goto(B+"/"); pg.wait_for_timeout(200)
         pg.add_script_tag(content=axe); v=pg.evaluate("axe.run(document,{runOnly:['wcag2a','wcag2aa','wcag21aa']})")["violations"]
         if v: issues.append("axe "+",".join(x["id"] for x in v))
+        c=pg.evaluate(CHIPS)
+        if c: issues.append(c)
+        pg.evaluate("document.querySelector('footer').scrollIntoView()"); pg.wait_for_timeout(150)
+        pg.screenshot(path=f"d_{w}x{h}_footer.png")
+        pg.evaluate("scrollTo(0,0)")
         hdr=pg.evaluate("document.querySelector('header').getBoundingClientRect().height")
         menu=pg.evaluate("getComputedStyle(document.getElementById('navbtn')).display")!="none"
         if menu:
             pg.tap("#navbtn"); pg.wait_for_timeout(150); pg.tap('nav#nav .ng[data-g=tgd] .ng-btn'); pg.wait_for_timeout(150)
             if pg.evaluate("document.querySelector('.ng[data-g=tgd] .ng-panel').getBoundingClientRect().height")<50: issues.append("menu group did not open")
+            # open every group, scroll the menu to its end: the last link must be on screen and the page must not move
+            m=pg.evaluate("""(()=>{document.querySelectorAll('nav#nav .ng').forEach(g=>g.classList.add('open'));const n=document.getElementById('nav');const y=scrollY;n.scrollTop=n.scrollHeight;
+              const ls=[...n.querySelectorAll('a')].filter(a=>a.offsetParent);const r=ls[ls.length-1].getBoundingClientRect();
+              return {last:r.bottom<=innerHeight+1&&r.top>=0, locked:document.documentElement.classList.contains('navlock')||getComputedStyle(document.body).overflow==='hidden', pageMoved:scrollY!==y}})()""")
+            if not m["last"]: issues.append("menu: last link cannot be reached")
+            if not m["locked"]: issues.append("menu: page behind still scrolls")
             pg.screenshot(path=f"d_{w}_menu.png"); pg.goto(B+"/"); pg.wait_for_timeout(150)
         pg.tap("#a11yBtn"); pg.wait_for_timeout(150)
         fit=pg.evaluate("(()=>{const r=document.getElementById('a11yPanel').getBoundingClientRect();return r.bottom<=innerHeight+1&&r.right<=innerWidth+1&&r.left>=-1})()")
@@ -37,3 +62,12 @@ with sync_playwright() as p:
         ctx.close()
     b.close()
 for k,v in out.items(): print(k,v)
+# dark mode: infographic labels need a light canvas (v17.9.4)
+with sync_playwright() as p:
+    b=p.chromium.launch(**({"executable_path":CHROME} if CHROME else {}))
+    pg=b.new_page(viewport={"width":390,"height":844},color_scheme="dark"); bad=[]
+    for r in ["/using","/costs","/doses"]:
+        pg.goto(B+r); pg.wait_for_timeout(300)
+        n=pg.evaluate("[...document.querySelectorAll('.view.on figure svg')].filter(s=>getComputedStyle(s).backgroundColor==='rgba(0, 0, 0, 0)').length")
+        if n: bad.append(f"{r}: {n} diagrams without a light canvas")
+    print("dark diagrams", repr(bad or "ok")); b.close()

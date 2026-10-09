@@ -50,7 +50,7 @@
         "No independent audit yet.",
         "The PDFs are not fully tagged for screen readers; the same content is on the web pages, which are.",
         "The Turnstile bot check on forms is Cloudflare's widget and is outside this site's control.",
-        "Read aloud depends on the voices installed on your device; quality varies, and some browsers pause it when the screen locks.",
+        "Read aloud reads the page you are on. Use Next and Back on the bar at the bottom of the screen to move a section at a time, and Menu to hear the site menu. It depends on the voices installed on your device; quality varies, and some browsers pause it when the screen locks. If you use a screen reader such as VoiceOver or TalkBack, that will usually work better.",
         "Documents linked from other organisations (TGA, PBS, guidelines) may not be accessible; tell me and I will look for an alternative."
       ]
     },

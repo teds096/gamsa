@@ -71,13 +71,17 @@ with sync_playwright() as pw:
     pg.evaluate("""() => { window.__c=[]; const s=speechSynthesis;
         s.speak=u=>{ window.__c.push(u.text); setTimeout(()=>u.onend&&u.onend(),1); }; }""")
     pg.tap("#a11yBtn"); pg.wait_for_selector("#a11yPanel:not([hidden])", timeout=5000); pg.wait_for_timeout(200)
-    pg.tap("#ttsBtn"); pg.wait_for_timeout(6000)
+    pg.evaluate("""() => { const s=speechSynthesis; s.speak=u=>{ window.__c.push(u.text); setTimeout(()=>u.onend&&u.onend(),40); }; }""")
+    pg.tap("#ttsBtn"); pg.wait_for_timeout(700)
+    chk(pg.locator("#ttsBar").is_visible(), "speech control bar shows on mobile")
+    bb=pg.locator("#ttsToggle").bounding_box() or {"x":-1,"width":0}
+    chk(bb["x"]>=0 and bb["x"]+bb["width"]<=391, "speech bar fits the screen")
+    pg.evaluate("document.getElementById('ttsMenu').click()"); pg.wait_for_timeout(300)
+    pg.evaluate("document.getElementById('ttsNext').click()"); pg.wait_for_timeout(5000)
     c=pg.evaluate("window.__c")
     chk(len(c)>20, "read aloud runs on mobile (%d pieces)"%len(c))
-    chk(any("menu has" in x for x in c), "read aloud includes the navigation")
-    chk(pg.locator("#ttsBar").is_visible(), "speech control bar shows on mobile")
-    bb=pg.locator("#ttsToggle").bounding_box()
-    chk(bb["x"]>=0 and bb["x"]+bb["width"]<=391, "speech bar fits the screen")
+    chk(not any("menu has" in x for x in c[:3]), "read aloud does not start by reading the whole menu")
+    chk(any(x.startswith("Site menu") for x in c), "Menu button on the speech bar reads the menu")
     pg.evaluate("document.getElementById('ttsStop').click()")
 
     # figure window on mobile (touch)

@@ -55,8 +55,10 @@
   @media (max-width:1180px){
     .navbtn{display:block;}
     nav.main{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;
-      background:var(--card);border-bottom:1px solid var(--line);padding:6px 12px 12px;box-shadow:var(--shadow);}
+      background:var(--card);border-bottom:1px solid var(--line);padding:6px 12px 12px;box-shadow:var(--shadow);
+      max-height:calc(100vh - 70px);max-height:calc(100dvh - 70px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;}
     nav.main.open{display:flex;}
+    html.navlock body{overflow:hidden;}
     nav.main a{padding:13px 10px;border-radius:0;border-bottom:1px solid var(--line-2);font-size:16.5px;}
     nav.main a:last-child{border-bottom:0;}
   }
@@ -640,6 +642,8 @@
   html.dark .page-head h1{color:var(--brand-2);}
   html.dark .quick a:hover{background:var(--brand-soft);}
   html.dark figure svg,html.dark .er-pic svg{filter:brightness(.92);}
+  /* infographics are drawn for a light page: in dark mode give them their own light canvas so every label stays readable */
+  html.dark figure svg,html.dark .er-pic svg,html.dark .lb svg{background:#fff;border-radius:10px;}
   /* ---- top-strip controls ---- */
   .bar-r{position:relative;} .bar-r .a11y{position:static;}
   .top-btn{font:inherit;font-size:14px;font-weight:700;color:var(--brand);background:var(--brand-soft);border:2px solid var(--brand-soft);
@@ -721,7 +725,8 @@
   @media (max-width:900px){.hero-in{grid-template-columns:1fr;gap:24px;}}
   .hero-r{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:18px;backdrop-filter:blur(2px);margin-top:60px;}
   @media (max-width:900px){.hero-r{margin-top:0;}}
-  .hs-pop{margin:12px 0 0;font-size:13.5px;color:#DCEBF3;} .hs-pop a{color:#fff;background:rgba(255,255,255,.14);border-radius:999px;padding:3px 10px;text-decoration:none;margin-left:4px;display:inline-block;} .hs-pop a:hover{background:rgba(255,255,255,.26);}
+  .sr-grp{margin:22px 0 0;} .sr-grp>h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);margin:0 0 6px;padding-bottom:6px;border-bottom:1px solid var(--line);} .sr-grp>h2 span{font-weight:500;color:var(--ink-2);} .sr-jump{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0;} .sr-jump a{font-size:14px;padding:4px 12px;border-radius:999px;background:var(--panel);border:1px solid var(--line);text-decoration:none;color:var(--ink);} .sr-more summary{cursor:pointer;font-weight:600;color:var(--brand);padding:10px 0;min-height:24px;}
+  .hs-pop{margin:12px 0 0;font-size:13.5px;color:#DCEBF3;display:flex;flex-wrap:wrap;align-items:center;gap:6px;} .hs-pop a{color:#fff;background:rgba(255,255,255,.14);border-radius:999px;padding:3px 10px;text-decoration:none;display:inline-block;} .hs-pop a:hover{background:rgba(255,255,255,.26);}
   .live-line{display:inline-flex;align-items:center;gap:8px;margin-top:0;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;text-decoration:none;font-size:14px;} .live-line b{font-weight:700;white-space:nowrap;} .live-line:hover{text-decoration:underline;}
   .live-line .dot{width:9px;height:9px;border-radius:50%;background:#FFD27A;box-shadow:0 0 0 3px rgba(255,210,122,.3);flex:none;}
   .want{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px;}
@@ -767,7 +772,7 @@
   .srch button{font:inherit;font-size:16px;font-weight:600;color:var(--on-brand);background:var(--brand);border:0;border-radius:12px;padding:0 18px;cursor:pointer;}
   .sr{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px 18px;margin-bottom:10px;}
   .sr .k{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin:0 0 2px;}
-  .sr h2{font-size:17px;margin:0 0 6px;} .sr h2 a{color:var(--brand);}
+  .sr h2,.sr h3{font-size:17px;margin:0 0 6px;} .sr h2 a,.sr h3 a{color:var(--brand);}
   .sr p{margin:0;font-size:15px;color:var(--ink-2);} .sr mark{background:#FFF3C4;color:#10181F;border-radius:3px;padding:0 2px;}
   .sr-count{color:var(--ink-2);margin:0 0 14px;}
   /* ---- footer ---- */
@@ -779,6 +784,8 @@
   .ack .flags svg{width:60px;height:38px;border-radius:3px;box-shadow:0 0 0 1px var(--line);}
   .ack p{margin:0;font-size:14px;color:var(--ink-2);}
   .foot-row{grid-template-columns:1.1fr 1fr;} .foot-row>*{min-width:0;}
+  @media (max-width:760px){.foot-row{grid-template-columns:minmax(0,1fr);}}
+  @media (max-width:560px){.ack{flex-direction:column;gap:12px;} .ack p,.foot-about p{overflow-wrap:anywhere;}}
   .foot-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:22px 28px;}
   .foot-cols h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);margin:0 0 8px;}
   .foot-cols ul{list-style:none;margin:0;padding:0;} .foot-cols li{margin:0 0 2px;}
@@ -1228,9 +1235,10 @@
 
 <div class="tts-bar" id="ttsBar" hidden>
   <span class="lbl" id="ttsState">Reading aloud</span>
-  <button type="button" id="ttsPrev" aria-label="Previous paragraph">&#8592;</button>
+  <button type="button" id="ttsPrev" aria-label="Previous section">&#8592; Back</button>
   <button type="button" id="ttsToggle">Pause</button>
-  <button type="button" id="ttsNext" aria-label="Next paragraph">&#8594;</button>
+  <button type="button" id="ttsNext" aria-label="Next section">Next &#8594;</button>
+  <button type="button" id="ttsMenu">Menu</button>
   <button type="button" id="ttsStop">Stop</button>
 </div>
 
@@ -1238,6 +1246,12 @@
   /* discreet browsing: one history entry per visit (session only, so nothing is left once the tab closes) */
   var DISCREET=false; try{ DISCREET=sessionStorage.getItem("gamsa.dm")==="1"; }catch(_){}
   function gHist(st,t,u){ try{ if(DISCREET) history.replaceState(st,t,u); else history.pushState(st,t,u); }catch(_){ } }
+  /* single-file preview uses #/ links: with Discreet browsing on, swap the history entry instead of adding one */
+  document.addEventListener("click", function(e){
+    if(!DISCREET||e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey) return;
+    var a=e.target.closest&&e.target.closest('a[href^="#/"]'); if(!a) return;
+    e.preventDefault(); location.replace(a.getAttribute("href"));
+  }, true);
 
 (function(){
   "use strict";
@@ -2059,6 +2073,7 @@
       if(a.hasAttribute("download")||/\.(pdf|zip|png|jpg|xml|txt|ico)(\?|#|$)/i.test(h)) return;  // real files: let the browser fetch them
       e.preventDefault();
       var r=fromPath(h.split("#")[0]), anc=h.split("#")[1]||"";
+      if(r==="/" && !anc && curRoute()==="/"){ location.reload(); return; }
       if(r!==curRoute()) go(r, anc);
       else if(anc){ var el=document.getElementById(anc); if(el){ gHist(null,"",h); el.scrollIntoView(); el.focus({preventScroll:true}); } }
     });
@@ -2117,6 +2132,14 @@
     if(started){ var hh=document.getElementById(VIEWS[h]).querySelector("h1");
       if(hh){ hh.setAttribute("tabindex","-1"); hh.focus({preventScroll:true}); } }
   }
+  /* while the phone menu is open only the menu scrolls; the page underneath stays put */
+  var lockY=0, lockAt="";
+  new MutationObserver(function(){
+    var on=nav.classList.contains("open"), de=document.documentElement, bs=document.body.style;
+    if(on===de.classList.contains("navlock")) return;
+    if(on && getComputedStyle(navbtn).display!=="none"){ lockY=scrollY; lockAt=location.pathname+location.hash; de.classList.add("navlock"); bs.position="fixed"; bs.top=(-lockY)+"px"; bs.left="0"; bs.right="0"; }
+    else if(!on){ de.classList.remove("navlock"); bs.position=bs.top=bs.left=bs.right=""; var sb=de.style.scrollBehavior; de.style.scrollBehavior="auto"; if(location.pathname+location.hash===lockAt) scrollTo(0,lockY); de.style.scrollBehavior=sb; }
+  }).observe(nav,{attributes:true,attributeFilter:["class"]});
   navbtn.addEventListener("click",function(){
     var open=nav.classList.toggle("open");navbtn.setAttribute("aria-expanded",open?"true":"false");});
   document.addEventListener("click",function(e){
@@ -2266,8 +2289,26 @@
       var s=Math.max(0,i-70), e=Math.min(x.length,i+120);
       return (s?"\u2026":"")+esc(x.slice(s,e)).replace(rx,"<mark>$1</mark>")+(e<x.length?"\u2026":"");
     }
-    out.innerHTML='<p class="sr-count">'+(res.length?res.length+(res.length===40?"+":"")+" result"+(res.length===1?"":"s"):"No results")+' for \u201c'+esc(q)+'\u201d'+(res.length?"":". Try a medicine or brand name, or a word like patches, injection, cost or shortage")+'</p>'+
-      res.map(function(r){ var it=r.it; return '<div class="sr"><p class="k">'+esc(it.k)+(it.s?' \u00b7 '+esc(it.s):'')+'</p><h2><a href="'+it.h+'">'+esc(it.t)+'</a></h2><p>'+snip(it.x)+'</p></div>'; }).join("");
+    /* results are grouped: medicines first when a medicine matches, then guides, Easy Read and other pages */
+    function cat(k){ return k==="Medicine"?"Medicines":k==="Easy Read"?"Easy Read":(k==="Supply"||k==="Site")?"Other pages":"Guides"; }
+    var groups={}, order=[];
+    res.forEach(function(r){ var c=cat(r.it.k); if(!groups[c]){ groups[c]=[]; order.push(c); } groups[c].push(r); });
+    if(groups.Medicines){
+      function tr(r){ var tl=r.it.t.toLowerCase(); return words.some(function(w){ return tl.indexOf(w)===0; })?0:words.some(function(w){ return tl.indexOf(w)>-1; })?1:2; }
+      groups.Medicines.sort(function(a,b){ return (a.it.s?1:0)-(b.it.s?1:0) || tr(a)-tr(b) || b.score-a.score; });   /* the medicine's own page before its sections */
+      var medHit=groups.Medicines.some(function(r){ var tl=r.it.t.toLowerCase(); return words.some(function(w){ return tl.indexOf(w)>-1; }); });
+      if(medHit) order=["Medicines"].concat(order.filter(function(c){ return c!=="Medicines"; }));
+    }
+    function card(r){ var it=r.it; return '<div class="sr"><p class="k">'+esc(it.k)+(it.s?' \u00b7 '+esc(it.s):'')+'</p><h3><a href="'+it.h+'">'+esc(it.t)+'</a></h3><p>'+snip(it.x)+'</p></div>'; }
+    var head='<p class="sr-count">'+(res.length?res.length+(res.length===40?"+":"")+" result"+(res.length===1?"":"s"):"No results")+' for \u201c'+esc(q)+'\u201d'+(res.length?"":". Try a medicine or brand name, or a word like patches, injection, cost or shortage")+'</p>';
+    var jump=order.length>1?'<p class="sr-jump">'+order.map(function(c){ return '<a href="#sr-'+c.replace(/\s+/g,"-").toLowerCase()+'">'+c+' ('+groups[c].length+')</a>'; }).join(" ")+'</p>':'';
+    out.innerHTML=head+jump+order.map(function(c){
+      var g=groups[c], id="sr-"+c.replace(/\s+/g,"-").toLowerCase();
+      return '<section class="sr-grp" aria-labelledby="'+id+'"><h2 id="'+id+'" tabindex="-1">'+c+' <span>'+g.length+'</span></h2>'+
+        g.slice(0,6).map(card).join("")+
+        (g.length>6?'<details class="sr-more"><summary>Show '+(g.length-6)+' more '+c.toLowerCase()+'</summary>'+g.slice(6).map(card).join("")+'</details>':'')+'</section>';
+    }).join("");
+    out.querySelectorAll(".sr-jump a").forEach(function(a){ a.addEventListener("click",function(ev){ ev.preventDefault(); var h=document.getElementById(a.getAttribute("href").slice(1)); if(h){ h.scrollIntoView(); h.focus({preventScroll:true}); } }); });
     fixLinks(out);
     document.title="Search: "+q+" \u2014 GAMSA";
   }
@@ -2385,13 +2426,7 @@
     /* start with where you are and where you can go, so a listener who cannot
        see the menu still knows what the site offers */
     var h1=view.querySelector("h1");
-    out0.push({el:h1||view, text:"You are on the "+((h1&&h1.textContent.trim())||"home")+" page of GAMSA, Gender-Affirming Medicines South Australia."});
-    var links=[];
-    nav.querySelectorAll("a").forEach(function(a){
-      var t=a.textContent.replace(/\s+/g," ").trim();
-      if(t) links.push(t + (a.getAttribute("aria-current")==="page" ? ", the page you are on now" : ""));
-    });
-    if(links.length) out0.push({el:nav, text:"The menu has "+links.length+" pages: "+links.join(". ")+"."});
+    out0.push({el:h1||view, text:"Reading the "+((h1&&h1.textContent.trim())||"home")+" page of GAMSA."});
     var onthis=view.querySelector(".onthis");
     if(onthis){
       var secs=[];
@@ -2400,7 +2435,7 @@
       });
       if(secs.length) out0.push({el:onthis, text:"This page has "+secs.length+" sections: "+secs.join(". ")+"."});
     }
-    out0.push({el:h1||view, text:"You can pause, skip forward or go back with the buttons at the bottom of the screen. Here is the page."});
+    out0.push({el:h1||view, text:"Use Next and Back at the bottom of the screen to move between sections, or Menu to hear the site menu."});
     /* Cards and panels carry their text in spans, not paragraphs, so the
        containers are listed too. Anything that wraps another entry is then
        dropped, which stops a card being read twice. */
@@ -2483,13 +2518,17 @@
     speakBit();
   }
   function speakBit(){
-    if(bit>=bits.length){ blk++; setTimeout(speakBlock, 260); return; }
-    var u=new SpeechSynthesisUtterance(bits[bit++]);
+    if(bit>=bits.length){ blk++; setTimeout(speakBlock, 120); return; }
+    var txt=bits[bit++], u=new SpeechSynthesisUtterance(txt), done=false;
+    window.__ttsU=u;   /* keep a reference: Safari can drop an utterance mid-way and never fire onend */
     if(VOICE) u.voice=VOICE;
     u.lang=(VOICE&&VOICE.lang)||"en-AU";
     u.rate=0.92; u.pitch=1;
-    u.onend=function(){ if(reading) speakBit(); };
-    u.onerror=function(){ if(reading) speakBit(); };
+    function next(){ if(done) return; done=true; clearTimeout(dog); if(reading && !synth.paused) speakBit(); }
+    /* watchdog: if the browser never reports the end, carry on anyway (stops the reader stalling between sections) */
+    var dog=setTimeout(function wait(){ if(synth.paused||synth.speaking){ dog=setTimeout(wait,1500); return; } next(); }, 1500+txt.length*90);
+    u.onend=next;
+    u.onerror=function(e){ if(e&&e.error==="interrupted") return; next(); };
     synth.speak(u);
   }
   function ttsStart(){
@@ -2500,10 +2539,6 @@
     ttsBar.hidden=false; ttsToggle.textContent="Pause";
     ttsBtn.setAttribute("aria-pressed","true"); ttsBtn.textContent="Stop reading";
     a11yOpen(false);
-    /* Chrome stops speaking after ~15s unless nudged */
-    keepAlive=setInterval(function(){
-      if(reading && synth.speaking && !synth.paused){ synth.pause(); synth.resume(); }
-    }, 9000);
     speakBlock();
   }
   function ttsEnd(finished){
@@ -2522,14 +2557,35 @@
     if(synth.paused){ synth.resume(); ttsToggle.textContent="Pause"; }
     else { synth.pause(); ttsToggle.textContent="Resume"; ttsState.textContent="Paused"; }
   });
+  function isHead(i){ var e=SCRIPT[i]&&SCRIPT[i].el; return !!(e&&e.matches&&e.matches("h1,h2,h3")); }
+  /* Next / Back move a whole section (to the next or previous heading), not one line */
   function jump(d){
     if(!reading) return;
-    blk=Math.min(SCRIPT.length-1, Math.max(0, blk+d));
+    var i=blk+d;
+    while(i>0 && i<SCRIPT.length-1 && !isHead(i)) i+=d;
+    blk=Math.min(SCRIPT.length-1, Math.max(0, i));
     try{ synth.cancel(); }catch(e){}
     speakBlock();
   }
+  /* The menu is only read when asked for: groups first, then their pages */
+  function menuText(){
+    var parts=[];
+    nav.querySelectorAll(":scope > a, :scope > .ng").forEach(function(x){
+      if(x.matches("a")){ var t=x.textContent.replace(/\s+/g," ").trim(); if(t) parts.push(t+"."); return; }
+      var g=x.querySelector(".ng-btn").textContent.replace(/\s+/g," ").trim(), ls=[];
+      x.querySelectorAll(".ng-panel a").forEach(function(a){ var t=a.textContent.replace(/\s+/g," ").trim(); if(t) ls.push(t); });
+      parts.push(g+": "+ls.join(", ")+".");
+    });
+    return "Site menu. "+parts.join(" ")+" To open a page, press the Menu button at the top of the screen.";
+  }
   ttsPrev.addEventListener("click", function(){ jump(-1); });
   ttsNext.addEventListener("click", function(){ jump(1); });
+  document.getElementById("ttsMenu").addEventListener("click", function(){
+    if(!reading) return;
+    try{ synth.cancel(); }catch(e){}
+    SCRIPT.splice(blk,0,{el:nav, text:menuText()});
+    speakBlock();
+  });
   onNav(function(){ if(reading) ttsEnd(); });
   window.addEventListener("beforeunload", function(){ try{ synth.cancel(); }catch(e){} });
 
