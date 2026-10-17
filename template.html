@@ -2037,12 +2037,16 @@
     var rows=(PREMIUMS&&PREMIUMS.rows)||[];
     if(!rows.length) return '<p class="muted">No premium-priced brands are listed for these medicines at the moment.</p>';
     var by={}, order=[];
-    rows.forEach(function(r){ var k=r.brand+" — "+r.product; if(!by[k]){by[k]=[];order.push(k);} by[k].push(r); });
+    var prem={}, strength=function(p){ return String(p||"").replace(/,\s*\d+\s*$/,""); };
+    rows.forEach(function(r){ var k=r.brand+" — "+r.product; if(!by[k]){by[k]=[];order.push(k);} by[k].push(r);
+      (prem[strength(r.product)]=prem[strength(r.product)]||{})[r.brand]=1; });
     return '<div class="prem"><p class="prem-h">Brands with a premium on the PBS list, checked '+esc(PREMIUMS.checkedAt)+'</p><ul>'+
       order.map(function(k){
         var rs=by[k], r0=rs[0];
         var amounts=rs.map(function(r){ return '$'+r.premium+(rs.length>1?' for '+r.packs+(r.packs==="1"?' pack':' packs'):''); }).join(', ');
-        return '<li><b>'+esc(r0.brand)+'</b> ('+esc(r0.product)+'): '+amounts+'. No premium: '+esc(r0.benchmark.join(', '))+'.</li>';
+        /* the PBS benchmark column can name brands that carry their own premium on the same item or strength (Spiractin, Doryx, Mayne Pharma): list only brands with none */
+        var none=(r0.benchmark||[]).filter(function(b){ return !(prem[strength(r0.product)]||{})[b]; });
+        return '<li><b>'+esc(r0.brand)+'</b> ('+esc(r0.product)+'): '+amounts+'. '+(none.length?'No premium: '+esc(none.join(', '))+'.':'Every brand of this item carries a premium.')+'</li>';
       }).join('')+'</ul></div>';
   }
   function renderContent(id, c){

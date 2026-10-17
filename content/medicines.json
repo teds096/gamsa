@@ -991,9 +991,9 @@
         {
           "h": "Cost and PBS",
           "body": [
-            "Cyproterone acetate 50 mg tablets (packs of 50) are PBS-listed with no authority needed. Item 1270W (up to 100 tablets a script) has no restriction. Item 14023C (up to 200 tablets, a two-month supply) is a Restricted Benefit [5].",
+            "Cyproterone acetate 50 mg tablets (packs of 50) are PBS-listed with no authority needed. Item 1270W (up to 100 tablets a script) has no restriction. Item 14023C (up to 200 tablets, a two-month supply) is a Restricted Benefit. The 100 mg tablets (packs of 50) are listed the same way: item 8019C (up to 50 tablets) has no restriction and item 14022B (up to 100 tablets, a two-month supply) is a Restricted Benefit [5].",
             "That restriction is about quantity, not about who may have the medicine. The wording is: \"The condition must be stable for the prescriber to consider the listed maximum quantity of this medicine suitable for this patient\" [5].",
-            "Several brands share these items. Anterone 50 and Cyproterone Sandoz are benchmark-priced; Androcur carries a small brand premium (at the last PBS check, $1.90 on a two-pack script and $4.00 on a four-pack script), which you pay on top of your co-payment and which does not count towards the Safety Net [5]. Ask your pharmacist for a brand with no premium if cost matters.",
+            "Several brands share these items. Anterone and Cyproterone Sandoz are benchmark-priced; Androcur and Androcur-100 carry a small brand premium (at the last PBS check, Androcur 50 mg $1.90 on a two-pack script and $4.00 on a four-pack script; Androcur-100 $1.17 on a one-pack script and $2.34 on a two-pack script), which you pay on top of your co-payment and which does not count towards the Safety Net [5]. Ask your pharmacist for a brand with no premium if cost matters.",
             "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70 [5][8]."
           ]
         },
@@ -1066,7 +1066,7 @@
         },
         {
           "n": 5,
-          "text": "Pharmaceutical Benefits Scheme. Cyproterone acetate 50 mg tablet, 50 — PBS items 1270W (General Schedule, no restriction) and 14023C (Restricted Benefit, 60-day supply); brands Anterone 50, Cyproterone Sandoz and Androcur. Accessed 17 October 2026.",
+          "text": "Pharmaceutical Benefits Scheme. Cyproterone acetate 50 mg tablet, 50 — PBS items 1270W (General Schedule, no restriction) and 14023C (Restricted Benefit, 60-day supply); brands Anterone 50, Cyproterone Sandoz and Androcur. Cyproterone acetate 100 mg tablet, 50 — PBS items 8019C (General Schedule, no restriction) and 14022B (Restricted Benefit, 60-day supply); brands Anterone 100, Cyproterone Sandoz and Androcur-100. Accessed 18 October 2026.",
           "url": "https://www.pbs.gov.au/medicine/item/1270W"
         },
         {
@@ -1203,8 +1203,8 @@
         {
           "h": "Cost and PBS",
           "body": [
-            "Spironolactone is PBS-listed on the General Schedule with no restrictions, so no authority is needed and the standard co-payment applies. The 25 mg tablet, 100 pack, is item 2339D [5].",
-            "Three brands share that item, and two of them carry a brand premium you pay on top of your co-payment. On the September 2026 listing, Spironolactone Viatris 25 had no premium, Spiractin 25 carried $4.42 and Aldactone carried $7.33 [5].",
+            "Spironolactone is PBS-listed on the General Schedule with no restrictions, so no authority is needed and the standard co-payment applies. The 25 mg tablet, 100 pack, is item 2339D, and the 100 mg tablet, 100 pack, is item 2340E [5].",
+            "Three brands share each item, and two of them carry a brand premium you pay on top of your co-payment. At the last PBS check (October 2026), Spironolactone Viatris had no premium; on a one-pack script Spiractin carried $4.42 (25 mg) or $4.37 (100 mg) and Aldactone $7.33 (25 mg) or $7.28 (100 mg) [5].",
             "Brand premiums do not count towards the Safety Net and you still pay them after you have passed it. Ask your pharmacist for the benchmark brand if cost matters — swapping brands of the same medicine is routine.",
             "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70; the yearly Safety Net thresholds are $1,748.20 general and $277.20 concessional [7]."
           ]
@@ -1273,7 +1273,7 @@
         },
         {
           "n": 5,
-          "text": "Pharmaceutical Benefits Scheme. Spironolactone 25 mg tablet, 100 — PBS item 2339D, General Schedule, no restrictions; brand premiums for Spiractin 25 and Aldactone. Accessed September 2026.",
+          "text": "Pharmaceutical Benefits Scheme. Spironolactone 25 mg tablet, 100 — PBS item 2339D, and spironolactone 100 mg tablet, 100 — PBS item 2340E, General Schedule, no restrictions; brand premiums for Spiractin and Aldactone. Accessed 18 October 2026.",
           "url": "https://www.pbs.gov.au/medicine/item/2339D"
         },
         {
@@ -1436,9 +1436,9 @@
           "pro": true,
           "body": [
             "These documents are written for clinicians who administer testosterone undecanoate by deep intramuscular injection, not for patients. If you are a patient, you are welcome to download them and take them to your clinic.",
-            "Version 2.1, revised 16 October 2026 and checked against the Australian Product Information for Reandron 1000 and Testosterone ADVZ 1000. They describe the ventrogluteal site, needle selection, slow injection technique, the observation period of at least 30 minutes, and recognition and management of pulmonary oil microembolism and anaphylaxis. They are offered as a starting point for a clinic's own procedure, to be adapted to local policy, and do not replace the Product Information.",
+            "Version 2.2, revised 18 October 2026 and checked against the Australian Product Information for Reandron 1000 and Testosterone ADVZ 1000. They describe the ventrogluteal site, needle selection, slow injection technique, the observation period of at least 30 minutes, and recognition and management of pulmonary oil microembolism and anaphylaxis. They are offered as a starting point for a clinic's own procedure, to be adapted to local policy, and do not replace the Product Information.",
             "The package recommends, but does not require, a pregnancy test before each injection for anyone who could become pregnant, because testosterone must not be used in pregnancy [2][7].",
-            "[Standard operating procedure and training guide (PDF, 7 pages)](/clinicians/testosterone-undecanoate-im-sop-and-training-guide.pdf)",
+            "[Standard operating procedure and training guide (PDF, 6 pages)](/clinicians/testosterone-undecanoate-im-sop-and-training-guide.pdf)",
             "[Treatment-room card: one page to print and laminate (PDF)](/clinicians/testosterone-undecanoate-im-treatment-room-card.pdf)",
             "[Competency checklist (PDF, 2 pages)](/clinicians/testosterone-undecanoate-im-competency-checklist.pdf)",
             "[Adverse event reporting form (PDF, 2 pages)](/clinicians/testosterone-undecanoate-im-adverse-event-form.pdf)",
@@ -1446,7 +1446,7 @@
             "[Whole training package: all five documents in one zip file](/clinicians/testosterone-undecanoate-im-training-package.zip)",
             "Patients: what to expect at the appointment, and why you are asked to wait afterwards, is explained in plain language on the [How-to-use guide](#/using#sec-using-4)."
           ],
-          "note": "Prepared by Theodore South, BPharm (Hons). Version 2.1, revised 16 October 2026. Not endorsed by any health service. Clinics remain responsible for their own procedures, training and credentialling."
+          "note": "Prepared by Theodore South, BPharm (Hons). Version 2.2, revised 18 October 2026. Not endorsed by any health service. Clinics remain responsible for their own procedures, training and credentialling."
         },
         {
           "h": "Questions worth asking",
@@ -2611,7 +2611,7 @@
           "h": "Cost and PBS",
           "body": [
             "Doxycycline is PBS-listed as a Restricted Benefit rather than unrestricted: it can be prescribed on the PBS only for the listed conditions, which are bronchiectasis, chronic bronchitis and severe acne. No phone approval is needed [5][8].",
-            "For severe acne the PBS subsidises both strengths: 50 mg plain tablets (items 2711Q and 9106G, several generic brands), 50 mg modified-release capsules (item 2707L: Doryx and Mayne Pharma Doxycycline, which both carry a brand premium) and 100 mg tablets (item 10779H). The PBS treats the 50 mg tablets and capsules as interchangeable, so ask for a brand without a premium if cost matters. Other 100 mg listings are for other infections [5].",
+            "For severe acne the PBS subsidises both strengths: 50 mg plain tablets (item 2711Q, several generic brands, and item 9106G, Doxycycline Sandoz), 50 mg modified-release capsules (item 2707L: Doryx and Mayne Pharma Doxycycline, which both carry a brand premium, $4.74 and $2.41 on a one-pack script at the last PBS check) and 100 mg tablets (item 10779H). The PBS treats the 50 mg tablets and capsules as interchangeable, so ask for a brand without a premium if cost matters. Other 100 mg listings are for other infections [5].",
             "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70 [5][7]."
           ]
         },
@@ -3341,6 +3341,7 @@
           "h": "Cost and PBS",
           "body": [
             "Depo-Provera is PBS-listed on the General Schedule with no restrictions — medroxyprogesterone acetate 150 mg/mL injection, 1 mL pre-filled syringe, item 14160G [4].",
+            "The tablets are also listed with no restrictions: 5 mg tablet, 56 (item 2323G) and 10 mg tablet, 30 (item 2321E), one pack with two repeats. Two brands share these items: Ralovera is benchmark-priced and Provera carries a brand premium (at the last PBS check, $4.42 for 5 mg and $6.50 for 10 mg on a one-pack script), which you pay on top of your co-payment and which does not count towards the Safety Net. Ask your pharmacist for Ralovera if cost matters [4].",
             "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70 [4][6]."
           ]
         },
@@ -3395,7 +3396,7 @@
         },
         {
           "n": 4,
-          "text": "Pharmaceutical Benefits Scheme. Medroxyprogesterone acetate 150 mg/mL injection, 1 mL pre-filled syringe, Depo-Provera — PBS item 14160G, General Schedule, no restrictions. Accessed September 2026.",
+          "text": "Pharmaceutical Benefits Scheme. Medroxyprogesterone acetate 150 mg/mL injection, 1 mL pre-filled syringe, Depo-Provera — PBS item 14160G, General Schedule, no restrictions; medroxyprogesterone acetate 5 mg tablet, 56 (item 2323G) and 10 mg tablet, 30 (item 2321E), no restrictions, brands Ralovera and Provera (brand premium). Accessed 18 October 2026.",
           "url": "https://www.pbs.gov.au/medicine/item/14160G"
         },
         {

@@ -259,7 +259,7 @@
         "There is no PBS listing for gender affirmation. Every PBS testosterone item is listed for androgen deficiency, and each one needs an Authority prescription [20].",
         "The restriction requires that you are treated by, in consultation with, or waiting on an appointment with a specialist general paediatrician, paediatric endocrinologist, urologist, endocrinologist or a Fellow of the Australasian Chapter of Sexual Health Medicine. The specialist's name goes on the authority application. Once that is in place, a GP or nurse practitioner can write the PBS script [20][19].",
         "This is the single biggest lever on what you pay. The same vial can cost a $25.00 PBS co-payment ($7.70 with a concession card) or the full private price; the PBS full price alone is $92.91 [3][6]. Which one you pay depends entirely on whether the paperwork is in place.",
-        "Estradiol, spironolactone and cyproterone are General Schedule items and need no authority [20]."
+        "Estradiol, spironolactone and cyproterone (its packs of 50) are General Schedule items and need no authority [20]."
       ],
       "list": [
         "Ask your prescriber: is this script being written as a PBS Authority item?",
@@ -629,6 +629,6 @@
     "conc_copay": "7.70",
     "sn_general": "1,748.20",
     "sn_conc": "277.20",
-    "checkedAt": "17 Oct 2026"
+    "checkedAt": "9 Oct 2026"
   }
 }
