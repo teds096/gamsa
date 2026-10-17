@@ -410,6 +410,27 @@
     }
    ]
   },
+  "14022B": {
+   "name": "CYPROTERONE",
+   "schedule": "General Schedule",
+   "authority": "Restricted Benefit",
+   "dpmq": "$107.12",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "ANTERONE 100",
+     "sub": true
+    },
+    {
+     "name": "Cyproterone Sandoz",
+     "sub": true
+    },
+    {
+     "name": "Androcur-100",
+     "sub": true
+    }
+   ]
+  },
   "14023C": {
    "name": "CYPROTERONE",
    "schedule": "General Schedule",
@@ -551,6 +572,40 @@
     }
    ]
   },
+  "2321E": {
+   "name": "MEDROXYPROGESTERONE",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$21.02",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Ralovera",
+     "sub": true
+    },
+    {
+     "name": "Provera",
+     "sub": true
+    }
+   ]
+  },
+  "2323G": {
+   "name": "MEDROXYPROGESTERONE",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$19.70",
+   "general": "$24.03",
+   "brands": [
+    {
+     "name": "Ralovera",
+     "sub": true
+    },
+    {
+     "name": "Provera",
+     "sub": true
+    }
+   ]
+  },
   "2339D": {
    "name": "SPIRONOLACTONE",
    "schedule": "General Schedule",
@@ -568,6 +623,27 @@
     },
     {
      "name": "Spiractin 25",
+     "sub": true
+    }
+   ]
+  },
+  "2340E": {
+   "name": "SPIRONOLACTONE",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$28.72",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Spironolactone Viatris 100",
+     "sub": true
+    },
+    {
+     "name": "Aldactone",
+     "sub": true
+    },
+    {
+     "name": "Spiractin 100",
      "sub": true
     }
    ]
@@ -668,6 +744,27 @@
     },
     {
      "name": "Proscar",
+     "sub": true
+    }
+   ]
+  },
+  "8019C": {
+   "name": "CYPROTERONE",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$60.74",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "ANTERONE 100",
+     "sub": true
+    },
+    {
+     "name": "Cyproterone Sandoz",
+     "sub": true
+    },
+    {
+     "name": "Androcur-100",
      "sub": true
     }
    ]
@@ -815,6 +912,19 @@
     }
    ]
   },
+  "9106G": {
+   "name": "DOXYCYCLINE",
+   "schedule": "General Schedule",
+   "authority": "Restricted Benefit",
+   "dpmq": "$17.27",
+   "general": "$21.60",
+   "brands": [
+    {
+     "name": "Doxycycline Sandoz",
+     "sub": true
+    }
+   ]
+  },
   "9378N": {
    "name": "TRIPTORELIN",
    "schedule": "General Schedule",
@@ -840,6 +950,7 @@
    "11740X",
    "11921K",
    "1270W",
+   "14022B",
    "14023C",
    "14160G",
    "14705Y",
@@ -849,11 +960,15 @@
    "14741W",
    "1663M",
    "1664N",
+   "2321E",
+   "2323G",
    "2339D",
+   "2340E",
    "2707L",
    "2711Q",
    "2993M",
    "4233T",
+   "8019C",
    "8244X",
    "8274L",
    "8286D",
@@ -865,6 +980,7 @@
    "8830R",
    "8954G",
    "8955H",
+   "9106G",
    "9378N"
   ],
   "missing": []
