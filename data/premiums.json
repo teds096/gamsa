@@ -1,5 +1,5 @@
 {
- "checkedAt": "9 Oct 2026",
+ "checkedAt": "17 Oct 2026",
  "rows": [
   {
    "brand": "Aldactone",
@@ -96,6 +96,164 @@
     "ANTERONE 100",
     "Cyproterone Sandoz"
    ]
+  },
+  {
+   "brand": "Doryx",
+   "product": "doxycycline 50 mg modified release capsule, 25",
+   "packs": "1",
+   "units": "25",
+   "repeats": "5",
+   "premium": "4.74",
+   "benchmark": [
+    "Mayne Pharma Doxycycline"
+   ]
+  },
+  {
+   "brand": "Doryx",
+   "product": "doxycycline 50 mg modified release capsule, 25",
+   "packs": "2",
+   "units": "50",
+   "repeats": "2",
+   "premium": "9.48",
+   "benchmark": [
+    "Mayne Pharma Doxycycline"
+   ]
+  },
+  {
+   "brand": "Mayne Pharma Doxycycline",
+   "product": "doxycycline 50 mg modified release capsule, 25",
+   "packs": "1",
+   "units": "25",
+   "repeats": "5",
+   "premium": "2.41",
+   "benchmark": [
+    "Doryx"
+   ]
+  },
+  {
+   "brand": "Mayne Pharma Doxycycline",
+   "product": "doxycycline 50 mg modified release capsule, 25",
+   "packs": "2",
+   "units": "50",
+   "repeats": "2",
+   "premium": "4.82",
+   "benchmark": [
+    "Doryx"
+   ]
+  },
+  {
+   "brand": "Provera",
+   "product": "medroxyprogesterone acetate 5 mg tablet, 56",
+   "packs": "1",
+   "units": "56",
+   "repeats": "2",
+   "premium": "4.42",
+   "benchmark": [
+    "Ralovera"
+   ]
+  },
+  {
+   "brand": "Provera",
+   "product": "medroxyprogesterone acetate 5 mg tablet, 56",
+   "packs": "2",
+   "units": "112",
+   "repeats": "2",
+   "premium": "8.84",
+   "benchmark": [
+    "Ralovera"
+   ]
+  },
+  {
+   "brand": "Provera",
+   "product": "medroxyprogesterone acetate 10 mg tablet, 30",
+   "packs": "1",
+   "units": "30",
+   "repeats": "2",
+   "premium": "6.50",
+   "benchmark": [
+    "Ralovera"
+   ]
+  },
+  {
+   "brand": "Provera",
+   "product": "medroxyprogesterone acetate 10 mg tablet, 30",
+   "packs": "2",
+   "units": "60",
+   "repeats": "2",
+   "premium": "13.00",
+   "benchmark": [
+    "Ralovera"
+   ]
+  },
+  {
+   "brand": "Provera",
+   "product": "medroxyprogesterone acetate 10 mg tablet, 100",
+   "packs": "1",
+   "units": "100",
+   "repeats": "2",
+   "premium": "6.49",
+   "benchmark": [
+    "Ralovera"
+   ]
+  },
+  {
+   "brand": "Provera",
+   "product": "medroxyprogesterone acetate 10 mg tablet, 100",
+   "packs": "2",
+   "units": "200",
+   "repeats": "2",
+   "premium": "12.98",
+   "benchmark": [
+    "Ralovera"
+   ]
+  },
+  {
+   "brand": "Spiractin 100",
+   "product": "spironolactone 100 mg tablet, 100",
+   "packs": "1",
+   "units": "100",
+   "repeats": "5",
+   "premium": "4.37",
+   "benchmark": [
+    "Aldactone",
+    "Spironolactone Viatris 100"
+   ]
+  },
+  {
+   "brand": "Spiractin 100",
+   "product": "spironolactone 100 mg tablet, 100",
+   "packs": "2",
+   "units": "200",
+   "repeats": "5",
+   "premium": "8.74",
+   "benchmark": [
+    "Aldactone",
+    "Spironolactone Viatris 100"
+   ]
+  },
+  {
+   "brand": "Spiractin 25",
+   "product": "spironolactone 25 mg tablet, 100",
+   "packs": "1",
+   "units": "100",
+   "repeats": "5",
+   "premium": "4.42",
+   "benchmark": [
+    "Aldactone",
+    "Spironolactone Viatris 25"
+   ]
+  },
+  {
+   "brand": "Spiractin 25",
+   "product": "spironolactone 25 mg tablet, 100",
+   "packs": "2",
+   "units": "200",
+   "repeats": "5",
+   "premium": "8.84",
+   "benchmark": [
+    "Aldactone",
+    "Spironolactone Viatris 25"
+   ]
   }
  ],
  "items": {
@@ -180,6 +338,31 @@
     }
    ]
   },
+  "10779H": {
+   "name": "DOXYCYCLINE",
+   "schedule": "General Schedule",
+   "authority": "Restricted Benefit",
+   "dpmq": "$25.32",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "APX-Doxycycline",
+     "sub": true
+    },
+    {
+     "name": "DOXYCYCLINE-WGR",
+     "sub": true
+    },
+    {
+     "name": "Doxsig",
+     "sub": true
+    },
+    {
+     "name": "Doxylin 100",
+     "sub": true
+    }
+   ]
+  },
   "11740X": {
    "name": "TESTOSTERONE",
    "schedule": "General Schedule",
@@ -203,6 +386,27 @@
     {
      "name": "Oratane",
      "sub": false
+    }
+   ]
+  },
+  "1270W": {
+   "name": "CYPROTERONE",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$73.92",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "ANTERONE 50",
+     "sub": true
+    },
+    {
+     "name": "Cyproterone Sandoz",
+     "sub": true
+    },
+    {
+     "name": "Androcur",
+     "sub": true
     }
    ]
   },
@@ -236,6 +440,19 @@
    "brands": [
     {
      "name": "Depo-Provera",
+     "sub": false
+    }
+   ]
+  },
+  "14705Y": {
+   "name": "LEVONORGESTREL",
+   "schedule": "General Schedule",
+   "authority": "Restricted Benefit",
+   "dpmq": "$187.14",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Mirena",
      "sub": false
     }
    ]
@@ -368,6 +585,31 @@
     },
     {
      "name": "Mayne Pharma Doxycycline",
+     "sub": true
+    }
+   ]
+  },
+  "2711Q": {
+   "name": "DOXYCYCLINE",
+   "schedule": "General Schedule",
+   "authority": "Restricted Benefit",
+   "dpmq": "$17.27",
+   "general": "$21.60",
+   "brands": [
+    {
+     "name": "APX-Doxycycline",
+     "sub": true
+    },
+    {
+     "name": "DOXYCYCLINE-WGR",
+     "sub": true
+    },
+    {
+     "name": "Doxsig",
+     "sub": true
+    },
+    {
+     "name": "Doxylin 50",
      "sub": true
     }
    ]
@@ -559,6 +801,32 @@
      "sub": false
     }
    ]
+  },
+  "8955H": {
+   "name": "ADAPALENE + BENZOYL PEROXIDE",
+   "schedule": "General Schedule",
+   "authority": "Restricted Benefit",
+   "dpmq": "$30.62",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Epiduo",
+     "sub": false
+    }
+   ]
+  },
+  "9378N": {
+   "name": "TRIPTORELIN",
+   "schedule": "General Schedule",
+   "authority": "No restrictions",
+   "dpmq": "$207.94",
+   "general": "$25.00",
+   "brands": [
+    {
+     "name": "Diphereline",
+     "sub": false
+    }
+   ]
   }
  },
  "listings": {
@@ -568,10 +836,13 @@
    "10205D",
    "10378F",
    "10380H",
+   "10779H",
    "11740X",
    "11921K",
+   "1270W",
    "14023C",
    "14160G",
+   "14705Y",
    "14719Q",
    "14730G",
    "14733K",
@@ -580,6 +851,7 @@
    "1664N",
    "2339D",
    "2707L",
+   "2711Q",
    "2993M",
    "4233T",
    "8244X",
@@ -591,7 +863,9 @@
    "8761D",
    "8762E",
    "8830R",
-   "8954G"
+   "8954G",
+   "8955H",
+   "9378N"
   ],
   "missing": []
  }
