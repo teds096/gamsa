@@ -28,39 +28,208 @@
         "Rotate sites, and leave a week before reusing a spot",
         "Fold used patches in half before binning them"
       ],
-      "note": "If a patch falls off, put a new one on a different clean patch of skin and keep your original change days [3]. If one comes off repeatedly, tell your pharmacist — the adhesive varies between brands, and that matters more during a shortage, when brands get substituted [4][5].",
-      "svg": "<svg viewBox=\"0 0 400 480\" width=\"100%\" role=\"img\" aria-labelledby=\"fig1t\" aria-describedby=\"fig1d\" xmlns=\"http://www.w3.org/2000/svg\"><title id=\"fig1t\">Where an oestrogen patch goes</title><desc id=\"fig1d\">Front and back body maps. Numbered spots mark patch sites on the lower belly, hips and upper outer buttock. Crossed dashed areas mark the chest and beltline, where a patch should not go.</desc><text x=\"0\" y=\"18\" font-family=\"Public Sans, sans-serif\" font-size=\"17\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"700\">Where a patch goes</text><text x=\"0\" y=\"38\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">Front of the body, facing you</text><g fill=\"#F6F8FA\" stroke=\"#AEBCC6\" stroke-width=\"1.31\" stroke-linejoin=\"round\"><circle cx=\"96.0\" cy=\"66.8\" r=\"11.9\"/><path d=\"M90.3 84.8 C86.6 85.6 82.9 88.1 79.6 89.7 C76.3 91.4 73.2 92.5 70.6 94.6 C68.0 96.8 65.7 96.8 64.0 102.8 C62.4 108.9 61.0 122.5 60.7 130.7 C60.5 138.9 61.6 147.0 62.4 152.0 C63.2 157.1 64.0 160.0 65.7 161.1 C67.3 162.2 70.7 163.4 72.2 158.6 C73.7 153.8 74.0 140.6 74.7 132.4 C75.4 124.2 76.2 111.3 76.3 109.4 C76.5 107.5 75.1 116.0 75.5 120.9 C75.9 125.8 79.5 132.4 78.8 138.9 C78.1 145.5 72.9 153.1 71.4 160.2 C69.9 167.3 69.5 172.5 69.8 181.6 C70.0 190.6 71.9 203.7 73.0 214.4 C74.1 225.0 75.4 237.3 76.3 245.5 C77.3 253.7 76.7 260.6 78.8 263.6 C80.8 266.6 86.7 271.5 88.6 263.6 C90.5 255.6 89.6 228.3 90.3 216.0 C90.9 203.7 91.8 196.6 92.7 189.8 C93.7 182.9 94.9 175.0 96.0 175.0 C97.1 175.0 98.3 182.9 99.3 189.8 C100.2 196.6 101.1 203.7 101.7 216.0 C102.4 228.3 101.5 255.6 103.4 263.6 C105.3 271.5 111.2 266.6 113.2 263.6 C115.3 260.6 114.7 253.7 115.7 245.5 C116.6 237.3 117.9 225.0 119.0 214.4 C120.1 203.7 122.0 190.6 122.2 181.6 C122.5 172.5 122.1 167.3 120.6 160.2 C119.1 153.1 113.9 145.5 113.2 138.9 C112.5 132.4 116.1 125.8 116.5 120.9 C116.9 116.0 115.5 107.5 115.7 109.4 C115.8 111.3 116.6 124.2 117.3 132.4 C118.0 140.6 118.3 153.8 119.8 158.6 C121.3 163.4 124.7 162.2 126.3 161.1 C128.0 160.0 128.8 157.1 129.6 152.0 C130.4 147.0 131.5 138.9 131.3 130.7 C131.0 122.5 129.6 108.9 128.0 102.8 C126.3 96.8 124.0 96.8 121.4 94.6 C118.8 92.5 115.7 91.4 112.4 89.7 C109.1 88.1 105.4 85.6 101.7 84.8 C98.0 84.0 94.0 84.0 90.3 84.8 Z\"/></g><circle cx=\"96.0\" cy=\"143.8\" r=\"2.1\" fill=\"#4A5966\"/><g><rect x=\"69.0\" y=\"91.0\" width=\"54\" height=\"26\" rx=\"7\" fill=\"#FBEAE8\" stroke=\"#A32B25\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\"/><path d=\"M88 96 l16 16 M104 96 l-16 16\" stroke=\"#A32B25\" stroke-width=\"2.4\" stroke-linecap=\"round\" fill=\"none\"/></g><g><circle cx=\"81\" cy=\"150\" r=\"11\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"81\" y=\"155\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">1</text></g><g><circle cx=\"111\" cy=\"150\" r=\"11\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"111\" y=\"155\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">2</text></g><g><circle cx=\"69\" cy=\"174\" r=\"11\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"69\" y=\"179\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">3</text></g><g><circle cx=\"123\" cy=\"174\" r=\"11\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"123\" y=\"179\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">4</text></g><text x=\"96\" y=\"292\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#4A5966\" text-anchor=\"middle\" font-weight=\"400\">Estradot: on the abdomen</text><text x=\"96\" y=\"312\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#A32B25\" text-anchor=\"middle\" font-weight=\"400\">Not the chest or the beltline</text><text x=\"230\" y=\"38\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">Back of the body</text><g fill=\"#F6F8FA\" stroke=\"#AEBCC6\" stroke-width=\"1.31\" stroke-linejoin=\"round\"><circle cx=\"300.0\" cy=\"66.8\" r=\"11.9\"/><path d=\"M294.3 84.8 C290.6 85.6 286.9 88.1 283.6 89.7 C280.3 91.4 277.2 92.5 274.6 94.6 C272.0 96.8 269.7 96.8 268.0 102.8 C266.4 108.9 265.0 122.5 264.7 130.7 C264.5 138.9 265.6 147.0 266.4 152.0 C267.2 157.1 268.0 160.0 269.7 161.1 C271.3 162.2 274.7 163.4 276.2 158.6 C277.7 153.8 278.0 140.6 278.7 132.4 C279.4 124.2 280.2 111.3 280.3 109.4 C280.5 107.5 279.1 116.0 279.5 120.9 C279.9 125.8 283.5 132.4 282.8 138.9 C282.1 145.5 276.9 153.1 275.4 160.2 C273.9 167.3 273.5 172.5 273.8 181.6 C274.0 190.6 275.9 203.7 277.0 214.4 C278.1 225.0 279.4 237.3 280.3 245.5 C281.3 253.7 280.7 260.6 282.8 263.6 C284.8 266.6 290.7 271.5 292.6 263.6 C294.5 255.6 293.6 228.3 294.3 216.0 C294.9 203.7 295.8 196.6 296.7 189.8 C297.7 182.9 298.9 175.0 300.0 175.0 C301.1 175.0 302.3 182.9 303.3 189.8 C304.2 196.6 305.1 203.7 305.7 216.0 C306.4 228.3 305.5 255.6 307.4 263.6 C309.3 271.5 315.2 266.6 317.2 263.6 C319.3 260.6 318.7 253.7 319.7 245.5 C320.6 237.3 321.9 225.0 323.0 214.4 C324.1 203.7 326.0 190.6 326.2 181.6 C326.5 172.5 326.1 167.3 324.6 160.2 C323.1 153.1 317.9 145.5 317.2 138.9 C316.5 132.4 320.1 125.8 320.5 120.9 C320.9 116.0 319.5 107.5 319.7 109.4 C319.8 111.3 320.6 124.2 321.3 132.4 C322.0 140.6 322.3 153.8 323.8 158.6 C325.3 163.4 328.7 162.2 330.3 161.1 C332.0 160.0 332.8 157.1 333.6 152.0 C334.4 147.0 335.5 138.9 335.3 130.7 C335.0 122.5 333.6 108.9 332.0 102.8 C330.3 96.8 328.0 96.8 325.4 94.6 C322.8 92.5 319.7 91.4 316.4 89.7 C313.1 88.1 309.4 85.6 305.7 84.8 C302.1 84.0 297.9 84.0 294.3 84.8 Z\"/></g><g><circle cx=\"278\" cy=\"172\" r=\"11\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"278\" y=\"177\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">5</text></g><g><circle cx=\"322\" cy=\"172\" r=\"11\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"322\" y=\"177\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">6</text></g><text x=\"300\" y=\"292\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#4A5966\" text-anchor=\"middle\" font-weight=\"400\">Estraderm MX: on the buttock</text><rect x=\"0\" y=\"336\" width=\"400\" height=\"94\" rx=\"9\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\"/><circle cx=\"22\" cy=\"361\" r=\"9\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"42\" y=\"366\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"400\">A patch goes here — clean, dry, hair-free skin</text><circle cx=\"22\" cy=\"387\" r=\"9\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"42\" y=\"392\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"400\">Move to the next number each time you change it</text><rect x=\"13\" y=\"404\" width=\"18\" height=\"18\" rx=\"4\" fill=\"#FBEAE8\" stroke=\"#A32B25\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/><path d=\"M17 408 l10 10 M27 408 l-10 10\" stroke=\"#A32B25\" stroke-width=\"2\" stroke-linecap=\"round\" fill=\"none\"/><text x=\"42\" y=\"418\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"400\">Never here: a waistband or belt rubs a patch off</text></svg>",
-      "svgCaption": "Where an oestrogen patch goes, and where it should not. Based on the Royal Children's Hospital patch information sheet and the Estradot Consumer Medicine Information.",
-      "nav": "About patches"
+      "note": "If a patch falls off, press it back on, or put on a new one if it will not stick, on a different clean area of skin, and keep your original change days [3][1]. If one comes off repeatedly, tell your pharmacist — the adhesive varies between brands, and that matters more during a shortage, when brands get substituted [4][5].",
+      "nav": "About patches",
+      "figure": {
+        "id": "patch-sites",
+        "type": "body-map",
+        "title": "Where a patch goes",
+        "sub": "Front and back of the body. Follow the leaflet for your brand.",
+        "alt": "Front and back body maps: patch spots on the lower belly and buttocks, below the waistline",
+        "long": "On the front, spots 1 and 2 are on the lower belly, one each side, below the belly button and below the dashed waistline. On the back, spots 3 and 4 are on the buttocks, one each side, below the dashed waistline. The chest is crossed out.",
+        "views": [
+          {
+            "side": "front",
+            "label": "Front",
+            "note": "Lower belly, spots 1 and 2: Estradot or Estraderm MX"
+          },
+          {
+            "side": "back",
+            "label": "Back",
+            "note": "Buttocks, spots 3 and 4: Estraderm MX only"
+          }
+        ],
+        "geom": {
+          "spots": [
+            {
+              "n": "1",
+              "view": "front",
+              "x": -14.5,
+              "y": 128
+            },
+            {
+              "n": "2",
+              "view": "front",
+              "x": 14.5,
+              "y": 128
+            },
+            {
+              "n": "3",
+              "view": "back",
+              "x": -16.5,
+              "y": 140
+            },
+            {
+              "n": "4",
+              "view": "back",
+              "x": 16.5,
+              "y": 140
+            }
+          ],
+          "zones": [
+            {
+              "view": "front",
+              "kind": "not",
+              "region": "chest"
+            }
+          ],
+          "bands": [
+            {
+              "view": "front",
+              "y": 100
+            },
+            {
+              "view": "back",
+              "y": 100
+            }
+          ]
+        },
+        "key": [
+          {
+            "sym": "spot",
+            "text": "Put a patch on a numbered spot: clean, dry, unbroken skin that clothes will cover."
+          },
+          {
+            "sym": "next",
+            "text": "Use the next number each time you change the patch. Leave at least a week before using the same spot again."
+          },
+          {
+            "sym": "not",
+            "text": "Never on the breasts or chest."
+          },
+          {
+            "sym": "band",
+            "text": "Not on the waistline, where tight clothes or a belt can rub the patch off."
+          }
+        ],
+        "easyTitle": "Where to put a patch",
+        "easy": [
+          {
+            "pic": "front:patch",
+            "text": "Put the patch on clean, dry skin on your lower belly."
+          },
+          {
+            "pic": "back:patch",
+            "text": "Some patches can go on your bottom. Check the leaflet for your brand."
+          },
+          {
+            "pic": "front:not-chest",
+            "text": "Do not put a patch on your chest or breast."
+          },
+          {
+            "pic": "cycle",
+            "text": "Put each new patch on a different spot."
+          }
+        ],
+        "caption": "Where an oestrogen patch goes, and where it should not. Based on the Estradot and Estraderm MX Product Information and Consumer Medicine Information and the Royal Children's Hospital patch information sheet [1][2][3]."
+      }
     },
     {
       "h": "Applying gel, and keeping it off other people",
       "body": [
         "Gels and creams are applied once a day, at about the same time, to clean dry skin.",
-        "Oestrogen gel (Sandrena, Estrogel) usually goes on the upper arms, shoulders or inner thighs — follow the site your own leaflet specifies, because brands differ. Do not rub it into the breasts or genitals.",
+        "Oestrogen gel goes on different areas depending on the brand, so follow your own leaflet. Sandrena goes on the lower body or thighs, changing sides each day; Estrogel is spread over a large area of the outer arms and shoulders or the inner thighs [27][28]. Neither goes on the breasts; keep Estrogel away from the genital area and Sandrena off the face and irritated skin [27][28].",
         "Testosterone gel (Testogel) goes on the upper arms, shoulders or abdomen, not the upper chest and never the genitals. It dries in three to five minutes; once dry, cover the area with clothing [6][7].",
         "Wash your hands with soap and water straight after applying, every time [6][7].",
-        "Testosterone gel transfers to other people through skin contact, and that transfer is not harmless — it matters particularly for children, for partners, and for pets that sleep on or against you. Wash your hands straight after applying, let the gel dry for three to five minutes, then cover the area with clothing. Wash the application site with soap and water before close skin contact with anyone. Testogel's leaflet also says not to shower or bathe for at least six hours after applying, and to leave six hours between applying and intimate contact — Testavan's says one to two hours before showering, so follow the leaflet for your own brand [6][7].",
+        "Testosterone gel transfers to other people through skin contact, and that transfer is not harmless — it matters particularly for children, for partners, and for pets that sleep on or against you. Wash your hands straight after applying, let the gel dry for three to five minutes, then cover the area with clothing. Wash the application site with soap and water before close skin contact with anyone. Testogel's leaflet says not to shower or bathe for at least one hour after applying (its product information says six hours is preferable), and to leave six hours between applying and intimate contact [6][7]; Testavan's leaflet says to avoid showering or swimming for at least two hours [29], so follow the leaflet for your own brand.",
         "If gel does get onto someone else's skin, wash that area thoroughly with soap and water [6]. Be careful with towels, bedding and shared furniture too: anything that touches the site before it is washed can carry medicine with it."
       ],
       "list": [
         "Same time each day, onto clean dry skin",
-        "Let it dry fully — about 3-5 minutes — then cover with clothing",
+        "Let it dry fully — about 3–5 minutes — then cover with clothing",
         "Wash your hands immediately afterwards",
         "Keep the site covered around children, partners and pets, and wash it before skin contact",
         "Cover the area with clothing, and wash the site before close skin contact [6][7]"
       ],
-      "note": "If you are having a blood test to check your level, your prescriber will usually want the sample in the morning before you apply that day's dose. Ask before you apply.",
-      "svg": "<svg viewBox=\"0 0 400 470\" width=\"100%\" role=\"img\" aria-labelledby=\"fig2t\" aria-describedby=\"fig2d\" xmlns=\"http://www.w3.org/2000/svg\"><title id=\"fig2t\">Where testosterone gel goes</title><desc id=\"fig2d\">Front body map. Shaded areas on the shoulders, upper arms and belly mark where gel is applied. Crossed dashed areas mark the upper chest and genitals.</desc><text x=\"0\" y=\"18\" font-family=\"Public Sans, sans-serif\" font-size=\"17\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"700\">Where the gel goes</text><text x=\"0\" y=\"38\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">Testosterone gel. Front of the body, facing you.</text><g fill=\"#F6F8FA\" stroke=\"#AEBCC6\" stroke-width=\"1.60\" stroke-linejoin=\"round\"><circle cx=\"150.0\" cy=\"70.0\" r=\"14.5\"/><path d=\"M143.0 92.0 C138.5 93.0 134.0 96.0 130.0 98.0 C126.0 100.0 122.2 101.3 119.0 104.0 C115.8 106.7 113.0 106.7 111.0 114.0 C109.0 121.3 107.3 138.0 107.0 148.0 C106.7 158.0 108.0 167.8 109.0 174.0 C110.0 180.2 111.0 183.7 113.0 185.0 C115.0 186.3 119.2 187.8 121.0 182.0 C122.8 176.2 123.2 160.0 124.0 150.0 C124.8 140.0 125.8 124.3 126.0 122.0 C126.2 119.7 124.5 130.0 125.0 136.0 C125.5 142.0 129.8 150.0 129.0 158.0 C128.2 166.0 121.8 175.3 120.0 184.0 C118.2 192.7 117.7 199.0 118.0 210.0 C118.3 221.0 120.7 237.0 122.0 250.0 C123.3 263.0 124.8 278.0 126.0 288.0 C127.2 298.0 126.5 306.3 129.0 310.0 C131.5 313.7 138.7 319.7 141.0 310.0 C143.3 300.3 142.2 267.0 143.0 252.0 C143.8 237.0 144.8 228.3 146.0 220.0 C147.2 211.7 148.7 202.0 150.0 202.0 C151.3 202.0 152.8 211.7 154.0 220.0 C155.2 228.3 156.2 237.0 157.0 252.0 C157.8 267.0 156.7 300.3 159.0 310.0 C161.3 319.7 168.5 313.7 171.0 310.0 C173.5 306.3 172.8 298.0 174.0 288.0 C175.2 278.0 176.7 263.0 178.0 250.0 C179.3 237.0 181.7 221.0 182.0 210.0 C182.3 199.0 181.8 192.7 180.0 184.0 C178.2 175.3 171.8 166.0 171.0 158.0 C170.2 150.0 174.5 142.0 175.0 136.0 C175.5 130.0 173.8 119.7 174.0 122.0 C174.2 124.3 175.2 140.0 176.0 150.0 C176.8 160.0 177.2 176.2 179.0 182.0 C180.8 187.8 185.0 186.3 187.0 185.0 C189.0 183.7 190.0 180.2 191.0 174.0 C192.0 167.8 193.3 158.0 193.0 148.0 C192.7 138.0 191.0 121.3 189.0 114.0 C187.0 106.7 184.2 106.7 181.0 104.0 C177.8 101.3 174.0 100.0 170.0 98.0 C166.0 96.0 161.5 93.0 157.0 92.0 C152.5 91.0 147.5 91.0 143.0 92.0 Z\"/></g><circle cx=\"150.0\" cy=\"164.0\" r=\"2.6\" fill=\"#4A5966\"/><rect x=\"91\" y=\"106\" width=\"30\" height=\"62\" rx=\"14\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"1.8\"/><rect x=\"179\" y=\"106\" width=\"30\" height=\"62\" rx=\"14\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"1.8\"/><g><rect x=\"127.0\" y=\"118.0\" width=\"46\" height=\"24\" rx=\"7\" fill=\"#FBEAE8\" stroke=\"#A32B25\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\"/><path d=\"M142 122 l16 16 M158 122 l-16 16\" stroke=\"#A32B25\" stroke-width=\"2.4\" stroke-linecap=\"round\" fill=\"none\"/></g><g><rect x=\"131.0\" y=\"191.0\" width=\"38\" height=\"22\" rx=\"7\" fill=\"#FBEAE8\" stroke=\"#A32B25\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\"/><path d=\"M142 194 l16 16 M158 194 l-16 16\" stroke=\"#A32B25\" stroke-width=\"2.4\" stroke-linecap=\"round\" fill=\"none\"/></g><text x=\"238\" y=\"118\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#0B5D7A\" text-anchor=\"start\" font-weight=\"400\">Shoulders and</text><text x=\"238\" y=\"136\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#0B5D7A\" text-anchor=\"start\" font-weight=\"400\">upper arms</text><text x=\"238\" y=\"162\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#A32B25\" text-anchor=\"start\" font-weight=\"400\">Not the upper chest</text><text x=\"238\" y=\"216\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#A32B25\" text-anchor=\"start\" font-weight=\"400\">Not the genitals</text><rect x=\"0\" y=\"332\" width=\"400\" height=\"94\" rx=\"9\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\"/><rect x=\"13\" y=\"348\" width=\"18\" height=\"18\" rx=\"4\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"1.8\"/><text x=\"42\" y=\"362\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"400\">Apply to clean, dry, unbroken skin</text><rect x=\"13\" y=\"374\" width=\"18\" height=\"18\" rx=\"4\" fill=\"#FBEAE8\" stroke=\"#A32B25\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/><path d=\"M17 378 l10 10 M27 378 l-10 10\" stroke=\"#A32B25\" stroke-width=\"2\" stroke-linecap=\"round\" fill=\"none\"/><text x=\"42\" y=\"388\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"400\">Never here</text><circle cx=\"22\" cy=\"409\" r=\"9\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"42\" y=\"414\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"400\">Let it dry, then cover with clothing</text><text x=\"0\" y=\"446\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">Oestrogen gel uses different areas — follow your own leaflet.</text></svg>",
-      "svgCaption": "Where testosterone gel is applied, and the areas to keep it away from. Based on the Testogel Consumer Medicine Information (Besins Healthcare) and TransHub guidance.",
-      "nav": "About applying gel"
+      "note": "If you are having a blood test to check your level, ask your prescriber when to have it: for Testogel the sample is usually taken in the morning before you apply that day's dose, and for Testavan it is taken 2 to 4 hours after applying.",
+      "nav": "About applying gel",
+      "figure": {
+        "id": "gel-sites",
+        "type": "body-map",
+        "title": "Where testosterone gel goes",
+        "sub": "Testogel, front of the body. Oestrogen gel uses different areas: follow your own leaflet.",
+        "alt": "Front body map: gel areas on shoulders, upper arms and belly; upper chest and genitals crossed out",
+        "long": "The shoulders and upper arms, and the belly, are marked as the places to apply testosterone gel. The upper chest and the genitals are crossed out.",
+        "views": [
+          {
+            "side": "front",
+            "label": "Front"
+          }
+        ],
+        "geom": {
+          "zones": [
+            {
+              "kind": "here",
+              "region": "shoulders"
+            },
+            {
+              "kind": "here",
+              "region": "belly"
+            },
+            {
+              "kind": "not",
+              "region": "upper-chest"
+            },
+            {
+              "kind": "not",
+              "region": "groin"
+            }
+          ]
+        },
+        "key": [
+          {
+            "sym": "here",
+            "lead": "Apply here:",
+            "text": "the shoulders and upper arms, or the belly, on clean, dry, unbroken skin."
+          },
+          {
+            "sym": "not",
+            "lead": "Never here:",
+            "text": "the upper chest or the genitals."
+          }
+        ],
+        "note": [
+          "Let it dry for 3 to 5 minutes, then cover the area with clothing.",
+          "Wash your hands with soap and water straight afterwards."
+        ],
+        "easyTitle": "Where to put testosterone gel",
+        "easy": [
+          {
+            "pic": "front:gel",
+            "text": "Put testosterone gel on your shoulders and upper arms, or on your belly."
+          },
+          {
+            "pic": "front:not-gel",
+            "text": "Do not put it on your upper chest or your genitals."
+          },
+          {
+            "pic": "wash",
+            "text": "Wash your hands straight after."
+          },
+          {
+            "pic": "shirt",
+            "text": "Let the gel dry. Then cover it with clothes."
+          }
+        ],
+        "caption": "Where testosterone gel is applied, and the areas to keep it away from. Based on the Testogel patient information and Consumer Medicine Information (Besins Healthcare) and TransHub guidance [6][7][14]."
+      }
     },
     {
       "h": "Your long-acting injection: finding the right spot",
       "body": [
-        "Testosterone undecanoate (Reandron 1000 and other brands) is 1,000 mg of testosterone in 4 mL of oil [8]. It is a large, thick injection, and in Australia a doctor or nurse gives it. It is not a medicine you inject yourself [9][10].",
-        "The recommended site is ventrogluteal: the side of your hip, over the gluteus medius muscle, rather than the back of the buttock. That is what SA Health's guidance for this injection recommends, and it is the site the clinician training package on this site teaches [11].",
-        "SA Health describes the side of the hip as the safer site: the muscles there absorb medicine well, and there is more of them to hold a 4 mL depot of oil. Injecting into the buttock carries a chance of hitting a large nerve or blood vessel, which sit close to that site [12][11].",
+        "Testosterone undecanoate (Reandron 1000 and other brands) is 1,000 mg of testosterone undecanoate in 4 mL of oil [8]. It is a large, thick injection, and in Australia a doctor or nurse gives it. It is not a medicine you inject yourself [9][10].",
+        "The recommended site is ventrogluteal: the side of your hip, over the gluteus medius muscle, rather than the back of the buttock. SA Health's brochure on long-acting intramuscular injections recommends this site, and it is the site the clinician training package on this site teaches [12][11].",
+        "SA Health describes the side of the hip as safer than other sites, with large muscles that absorb medicine well. Injecting into the buttock carries a chance of hitting a large nerve or blood vessel, which sit close to that site [12][11].",
         "The clinician does not guess where it goes. You lie on your side with the upper hip uncovered, or on your back with that hip bent a little. They put the heel of the opposite hand on the top of your thigh bone, point their index finger towards the bony point at the front of your hip, and run their middle finger along the rim of your hip bone. The injection goes into the middle of the V their fingers make [11].",
         "The needle goes straight in at ninety degrees, and the 4 mL is pushed in very slowly — over about two minutes [11]. The product information is emphatic that this injection is given strictly into muscle and very slowly, because injecting an oily solution quickly is what causes problems [9][11].",
         "Afterwards you get gentle pressure and a dressing. The site is not massaged or rubbed hard [11].",
@@ -73,16 +242,78 @@
         "The needle goes in at ninety degrees and the 4 mL is injected very slowly",
         "Gentle pressure and a dressing afterwards; no vigorous massage"
       ],
-      "svg": "<svg viewBox=\"0 0 400 620\" width=\"100%\" role=\"img\" aria-labelledby=\"fig3t\" aria-describedby=\"fig3d\" xmlns=\"http://www.w3.org/2000/svg\"><title id=\"fig3t\">Where the long-acting injection goes</title><desc id=\"fig3d\">The right hip seen from the side. The hip bone and the top of the thigh bone are drawn inside the body outline. A hand is placed over them with the index and middle fingers spread apart, and the injection site sits between the fingertips, above the bony knob of the thigh bone.</desc><text x=\"0\" y=\"18\" font-family=\"Public Sans, sans-serif\" font-size=\"17\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"700\">Where the long-acting injection goes</text><text x=\"0\" y=\"38\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">The ventrogluteal site — the side of the hip</text><path d=\"M162 58 C150 78 138 98 130 122 C120 152 118 184 124 214 C131 248 142 274 148 304 C154 338 152 392 152 440 L238 440 C238 392 240 340 246 306 C252 274 266 248 274 216 C282 184 280 150 268 120 C260 96 250 76 242 58 Z\" fill=\"#F6F8FA\" stroke=\"#AEBCC6\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M158 108 C194 94 228 98 248 116 C254 152 250 194 236 222 C218 250 182 252 166 236 C152 204 150 148 158 108 Z\" fill=\"#E7ECF0\" stroke=\"#4A5966\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/><path d=\"M198 292 L208 440\" stroke=\"#4A5966\" stroke-width=\"19\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M198 292 L208 440\" stroke=\"#E7ECF0\" stroke-width=\"15\" stroke-linecap=\"round\" fill=\"none\"/><circle cx=\"208\" cy=\"266\" r=\"20\" fill=\"#E7ECF0\" stroke=\"#4A5966\" stroke-width=\"1.8\"/><circle cx=\"172\" cy=\"278\" r=\"18\" fill=\"#E7ECF0\" stroke=\"#4A5966\" stroke-width=\"1.8\"/><path d=\"M178 120 L244 130 L172 278 Z\" fill=\"#E6F1F6\" fill-opacity=\"0.85\" stroke=\"#0B5D7A\" stroke-width=\"2.4\" stroke-dasharray=\"7 5\" stroke-linejoin=\"round\"/><circle cx=\"178\" cy=\"120\" r=\"6\" fill=\"#10181F\"/><circle cx=\"244\" cy=\"130\" r=\"6\" fill=\"#10181F\"/><circle cx=\"172\" cy=\"278\" r=\"6\" fill=\"#10181F\"/><circle cx=\"197\" cy=\"184\" r=\"12\" fill=\"#0B5D7A\"/><path d=\"M112 184 h71\" stroke=\"#0B5D7A\" stroke-width=\"2.2\" fill=\"none\"/><path d=\"M183 178 l12 6 -12 6 Z\" fill=\"#0B5D7A\"/><text x=\"108\" y=\"172\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#0B5D7A\" text-anchor=\"end\" font-weight=\"700\">Injection site</text><path d=\"M116 118 h56\" stroke=\"#4A5966\" stroke-width=\"1.4\" fill=\"none\"/><text x=\"112\" y=\"104\" font-family=\"Public Sans, sans-serif\" font-size=\"13\" fill=\"#10181F\" text-anchor=\"end\" font-weight=\"400\">Top ridge of hip</text><text x=\"112\" y=\"120\" font-family=\"Public Sans, sans-serif\" font-size=\"13\" fill=\"#4A5966\" text-anchor=\"end\" font-weight=\"400\">bone (iliac crest)</text><path d=\"M250 130 h32\" stroke=\"#4A5966\" stroke-width=\"1.4\" fill=\"none\"/><text x=\"286\" y=\"108\" font-family=\"Public Sans, sans-serif\" font-size=\"13\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"400\">Front point of</text><text x=\"286\" y=\"124\" font-family=\"Public Sans, sans-serif\" font-size=\"13\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">hip bone (ASIS)</text><path d=\"M190 278 h92\" stroke=\"#4A5966\" stroke-width=\"1.4\" fill=\"none\"/><text x=\"286\" y=\"262\" font-family=\"Public Sans, sans-serif\" font-size=\"13\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"400\">Bony knob of</text><text x=\"286\" y=\"278\" font-family=\"Public Sans, sans-serif\" font-size=\"13\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">thigh bone</text><text x=\"286\" y=\"294\" font-family=\"Public Sans, sans-serif\" font-size=\"13\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">(trochanter)</text><rect x=\"0\" y=\"468\" width=\"400\" height=\"136\" rx=\"9\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\"/><g><circle cx=\"26\" cy=\"493\" r=\"11\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"26\" y=\"498\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">1</text></g><text x=\"50\" y=\"498\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"400\">Palm flat on the bony knob, fingers pointing up</text><g><circle cx=\"26\" cy=\"523\" r=\"11\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"26\" y=\"528\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">2</text></g><text x=\"50\" y=\"528\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"400\">Index finger on the front point of the hip bone</text><g><circle cx=\"26\" cy=\"553\" r=\"11\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"26\" y=\"558\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">3</text></g><text x=\"50\" y=\"558\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"400\">Spread your middle finger back along the top ridge</text><circle cx=\"26\" cy=\"583\" r=\"9\" fill=\"#0B5D7A\"/><text x=\"50\" y=\"588\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"400\">Needle into the V between them, straight in at 90°</text><text x=\"0\" y=\"630\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">Use the hand opposite the hip: right hand on the left hip.</text></svg>",
-      "svgCaption": "The side of the hip (ventrogluteal site) and the three bony landmarks that locate it. Based on SA Health's long-acting intramuscular injections brochure and factsheet.",
-      "nav": "Finding the injection spot"
+      "nav": "Finding the injection spot",
+      "figure": {
+        "id": "vg-site",
+        "type": "anatomy",
+        "art": "hip",
+        "title": "Where the long-acting injection goes",
+        "sub": "The side of the hip (ventrogluteal site), seen from the side",
+        "alt": "Side of the hip: three bony landmarks, and the injection site in the V between them",
+        "long": "The right hip seen from the side, with the back of the body on the left. Dotted lines show the hip bone and the top of the thigh bone under the skin. Lines from the bony knob of the thigh bone to the front point of the hip bone and to its top ridge make a V, and the injection site is in the middle of the V.",
+        "geom": {
+          "site": {
+            "x": 171,
+            "y": 122
+          }
+        },
+        "key": [
+          {
+            "n": "1",
+            "at": "troch",
+            "lead": "Bony knob at the side of the thigh",
+            "term": "greater trochanter"
+          },
+          {
+            "n": "2",
+            "at": "asis",
+            "lead": "Front point of the hip bone",
+            "term": "ASIS"
+          },
+          {
+            "n": "3",
+            "at": "crest",
+            "lead": "Top ridge of the hip bone",
+            "term": "iliac crest"
+          },
+          {
+            "sym": "site",
+            "lead": "Injection site",
+            "term": "middle of the V"
+          }
+        ],
+        "stepsTitle": "How the spot is found",
+        "steps": [
+          "Heel of the hand on the bony knob (1), fingers pointing towards the head.",
+          "Index finger on the front point of the hip bone (2).",
+          "Middle finger spread back along the top ridge (3).",
+          "The needle goes into the middle of the V, straight in at 90°."
+        ],
+        "note": "The clinician uses the hand opposite your hip: right hand on your left hip.",
+        "easyTitle": "Where the injection goes",
+        "easy": [
+          {
+            "pic": "hip",
+            "text": "The long-acting injection goes into the side of your hip."
+          },
+          {
+            "pic": "find",
+            "text": "The nurse or doctor finds the right spot with their hand."
+          },
+          {
+            "pic": "clock",
+            "text": "It goes in slowly. It takes about 2 minutes."
+          }
+        ],
+        "caption": "The side of the hip (ventrogluteal site) and the three bony landmarks that locate it. Based on SA Health's long-acting intramuscular injections brochure and the training guide on this site [12][11]."
+      }
     },
     {
       "h": "What happens at the injection appointment",
       "body": [
-        "The appointment is short, but you will be asked to stay afterwards, and that part is not a formality. You will be observed for at least fifteen minutes after the injection [11].",
-        "The reason is a rare reaction called pulmonary oil microembolism, or POME. A small amount of the oil can reach the lungs, and it usually shows itself within minutes: a sudden cough, breathlessness, chest tightness, dizziness or feeling faint. A very rare allergic reaction (anaphylaxis) is also possible [9][11].",
-        "A 2022 review of 29 studies covering nearly 8,000 patients found POME to be rare, and almost all cases settled on their own within about an hour without treatment [13]. Clinics keep you there because it is manageable and they want to be present if it happens — not because it is likely.",
+        "The appointment is short, but you will be asked to stay afterwards, and that part is not a formality. You will be observed for at least 30 minutes after the injection [11][26].",
+        "The reason is a rare reaction called pulmonary oil microembolism, or POME. A small amount of the oil can reach the lungs, and it usually shows itself within minutes, typically within 30 minutes: a sudden cough, breathlessness, chest tightness, dizziness or feeling faint. A very rare allergic reaction (anaphylaxis) is also possible [9][11][26].",
+        "A 2022 review of 29 studies covering nearly 8,000 patients found POME to be rare [13], and Australian standards say most episodes settle on their own within 30 minutes to a few hours, often without treatment [26]. Clinics keep you there because it is manageable and they want to be present if it happens — not because it is likely.",
         "If you feel any of those things, tell staff straight away. Do not wait to see if it passes, and do not walk out to the car park.",
         "Afterwards the site can ache for a day or two. Walking about helps, and a warm pack and simple pain relief are fine if your pharmacist says they suit you.",
         "The usual schedule is a second dose about six weeks after the first, then one every 10 to 14 weeks [9][11]. Book the next one before you leave — that single habit prevents most gaps.",
@@ -90,15 +321,71 @@
       ],
       "list": [
         "Expect to be at the clinic for a while after the injection, not just for it",
-        "Stay for at least fifteen minutes; the clinic will have emergency equipment ready",
+        "Stay for at least 30 minutes; the clinic will have emergency equipment ready",
         "Tell staff immediately about sudden cough, breathlessness, chest tightness, dizziness or faintness",
         "Some ache at the site for a day or two is normal",
         "Book the next appointment before you leave — usually 10 to 14 weeks away"
       ],
       "note": "Sudden cough, breathlessness, chest tightness, dizziness or feeling faint in the minutes after this injection are the symptoms to report on the spot. They are uncommon and they are treatable, and staff would far rather hear about it than not [9][13][11].",
-      "svg": "<svg aria-labelledby=\"fig105t\" aria-describedby=\"fig105d\" role=\"img\" viewBox=\"0 0 480 422\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Public Sans, sans-serif\"><title id=\"fig105t\">What happens step by step at a long-acting testosterone injection appointment</title><desc id=\"fig105d\">Numbered steps from arriving and checking the dose, through the injection itself, to the waiting period afterwards before leaving.</desc><rect x=\"0\" y=\"0\" width=\"480\" height=\"422\" fill=\"#FFFFFF\"/><text x=\"4\" y=\"22\" font-size=\"16\" font-weight=\"600\" fill=\"#10181F\">At the appointment, step by step</text><rect x=\"4\" y=\"40\" width=\"472\" height=\"50\" rx=\"9\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><circle cx=\"32\" cy=\"66\" r=\"15\" fill=\"#0B5D7A\"/><text x=\"32\" y=\"71\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#FFFFFF\">1</text><text x=\"58\" y=\"64\" font-size=\"13\" fill=\"#10181F\">Lie on your side with the upper hip uncovered</text><text x=\"58\" y=\"82\" font-size=\"13\" fill=\"#10181F\">(or on your back with that hip bent a little).</text><rect x=\"4\" y=\"98\" width=\"472\" height=\"50\" rx=\"9\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><circle cx=\"32\" cy=\"124\" r=\"15\" fill=\"#0B5D7A\"/><text x=\"32\" y=\"129\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#FFFFFF\">2</text><text x=\"58\" y=\"122\" font-size=\"13\" fill=\"#10181F\">The clinician finds the spot by hand, using the</text><text x=\"58\" y=\"140\" font-size=\"13\" fill=\"#10181F\">bony points of your hip. No guessing.</text><rect x=\"4\" y=\"156\" width=\"472\" height=\"50\" rx=\"9\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><circle cx=\"32\" cy=\"182\" r=\"15\" fill=\"#0B5D7A\"/><text x=\"32\" y=\"187\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#FFFFFF\">3</text><text x=\"58\" y=\"180\" font-size=\"13\" fill=\"#10181F\">The needle goes straight in, and the 4 mL is</text><text x=\"58\" y=\"198\" font-size=\"13\" fill=\"#10181F\">pushed in very slowly, over about 2 minutes.</text><rect x=\"4\" y=\"214\" width=\"472\" height=\"50\" rx=\"9\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><circle cx=\"32\" cy=\"240\" r=\"15\" fill=\"#0B5D7A\"/><text x=\"32\" y=\"245\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#FFFFFF\">4</text><text x=\"58\" y=\"238\" font-size=\"13\" fill=\"#10181F\">Gentle pressure and a dressing afterwards.</text><text x=\"58\" y=\"256\" font-size=\"13\" fill=\"#10181F\">No hard rubbing or massaging.</text><rect x=\"4\" y=\"272\" width=\"472\" height=\"70\" rx=\"9\" fill=\"#FFFFFF\" stroke=\"#8A5B08\" stroke-width=\"2\"/><circle cx=\"32\" cy=\"298\" r=\"15\" fill=\"#8A5B08\"/><text x=\"32\" y=\"303\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#FFFFFF\">5</text><text x=\"58\" y=\"296\" font-size=\"13\" fill=\"#10181F\">You stay at the clinic for at least 15 minutes.</text><text x=\"58\" y=\"314\" font-size=\"13\" fill=\"#10181F\">Tell staff straight away about sudden cough,</text><text x=\"58\" y=\"332\" font-size=\"13\" fill=\"#10181F\">breathlessness, chest tightness, dizziness or faintness.</text><rect x=\"4\" y=\"350\" width=\"472\" height=\"50\" rx=\"9\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\" stroke-width=\"1\"/><circle cx=\"32\" cy=\"376\" r=\"15\" fill=\"#0B5D7A\"/><text x=\"32\" y=\"381\" font-size=\"14\" font-weight=\"600\" text-anchor=\"middle\" fill=\"#FFFFFF\">6</text><text x=\"58\" y=\"374\" font-size=\"13\" fill=\"#10181F\">Book the next one before you leave - usually</text><text x=\"58\" y=\"392\" font-size=\"13\" fill=\"#10181F\">10 to 14 weeks away.</text></svg>",
-      "svgCaption": "What happens, in order, at a long-acting testosterone injection appointment. From the clinician training package on this site, the SA Health brochure and the POME literature review [12][13][11].",
-      "nav": "The injection appointment"
+      "nav": "The injection appointment",
+      "figure": {
+        "id": "injection-appointment",
+        "type": "steps",
+        "title": "At the appointment, step by step",
+        "alt": "Six steps at a long-acting testosterone injection appointment, in order",
+        "long": "What happens, in order. Step 5, waiting at least 30 minutes afterwards, is the one not to skip.",
+        "steps": [
+          {
+            "pic": "lie",
+            "text": "Lie on your side with the upper hip uncovered, or on your back with that hip bent a little."
+          },
+          {
+            "pic": "find",
+            "text": "The clinician finds the spot by hand, using the bony points of your hip. No guessing."
+          },
+          {
+            "pic": "clock",
+            "text": "The needle goes straight in, and the 4 mL is pushed in very slowly, over about 2 minutes."
+          },
+          {
+            "pic": "plaster",
+            "text": "Gentle pressure and a dressing afterwards. No hard rubbing or massaging."
+          },
+          {
+            "pic": "timer",
+            "warn": "Important:",
+            "text": "stay at the clinic for at least 30 minutes after the injection. Tell staff straight away about a sudden cough, breathlessness, chest tightness, dizziness or feeling faint."
+          },
+          {
+            "pic": "calendar",
+            "text": "Book the next one before you leave: about 6 weeks after your first dose, then usually every 10 to 14 weeks."
+          }
+        ],
+        "easyTitle": "At the injection appointment",
+        "easy": [
+          {
+            "pic": "lie",
+            "text": "Lie on your side."
+          },
+          {
+            "pic": "clock",
+            "text": "The injection goes in slowly."
+          },
+          {
+            "pic": "timer",
+            "text": "Stay at the clinic for at least 30 minutes after."
+          },
+          {
+            "pic": "alert",
+            "text": "Tell staff straight away if you cough or feel unwell."
+          },
+          {
+            "pic": "calendar",
+            "text": "Book your next injection before you leave."
+          }
+        ],
+        "caption": "What happens, in order, at a long-acting testosterone injection appointment. From the clinician training package on this site, the SA Health brochure and the POME literature review [11][12][13]."
+      }
     },
     {
       "h": "Learning to inject testosterone yourself",
@@ -115,9 +402,88 @@
         "Ask them to choose your needle and syringe sizes and write those down too; needle length in particular depends on your body",
         "Get a script or a supply arrangement for needles, syringes and a sharps container at the same time"
       ],
-      "svg": "<svg viewBox=\"0 0 400 400\" width=\"100%\" role=\"img\" aria-labelledby=\"fig4t\" aria-describedby=\"fig4d\" xmlns=\"http://www.w3.org/2000/svg\"><title id=\"fig4t\">Under the skin versus into the muscle</title><desc id=\"fig4d\">A cross-section of skin, fat and muscle drawn to a millimetre scale. A short needle at 45 degrees stops in the fat layer. A longer needle at 90 degrees reaches the muscle.</desc><text x=\"0\" y=\"18\" font-family=\"Public Sans, sans-serif\" font-size=\"17\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"700\">Under the skin, or into the muscle</text><rect x=\"0\" y=\"74\" width=\"290\" height=\"18\" fill=\"#E9EDF0\" stroke=\"#DCE3E8\"/><text x=\"8\" y=\"88.0\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"600\">Skin</text><rect x=\"0\" y=\"92\" width=\"290\" height=\"62\" fill=\"#FBF3E4\" stroke=\"#DCE3E8\"/><text x=\"8\" y=\"128.0\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"600\">Fat</text><rect x=\"0\" y=\"154\" width=\"290\" height=\"70\" fill=\"#F2E4E3\" stroke=\"#DCE3E8\"/><text x=\"8\" y=\"194.0\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"600\">Muscle</text><line x1=\"300\" y1=\"74\" x2=\"300\" y2=\"224\" stroke=\"#4A5966\" stroke-width=\"1.4\"/><line x1=\"296\" y1=\"74\" x2=\"304\" y2=\"74\" stroke=\"#4A5966\" stroke-width=\"1.4\"/><text x=\"310\" y=\"79\" font-family=\"Public Sans, sans-serif\" font-size=\"13\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">0 mm</text><line x1=\"296\" y1=\"124\" x2=\"304\" y2=\"124\" stroke=\"#4A5966\" stroke-width=\"1.4\"/><text x=\"310\" y=\"129\" font-family=\"Public Sans, sans-serif\" font-size=\"13\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">10 mm</text><line x1=\"296\" y1=\"174\" x2=\"304\" y2=\"174\" stroke=\"#4A5966\" stroke-width=\"1.4\"/><text x=\"310\" y=\"179\" font-family=\"Public Sans, sans-serif\" font-size=\"13\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">20 mm</text><line x1=\"296\" y1=\"224\" x2=\"304\" y2=\"224\" stroke=\"#4A5966\" stroke-width=\"1.4\"/><text x=\"310\" y=\"229\" font-family=\"Public Sans, sans-serif\" font-size=\"13\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">30 mm</text><line x1=\"70\" y1=\"54\" x2=\"118\" y2=\"122\" stroke=\"#0B5D7A\" stroke-width=\"3.4\" stroke-linecap=\"round\"/><circle cx=\"118\" cy=\"122\" r=\"4\" fill=\"#0B5D7A\"/><text x=\"0\" y=\"42\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#0B5D7A\" text-anchor=\"start\" font-weight=\"600\">A  45°, short needle</text><line x1=\"220\" y1=\"54\" x2=\"220\" y2=\"192\" stroke=\"#1F6B43\" stroke-width=\"3.4\" stroke-linecap=\"round\"/><circle cx=\"220\" cy=\"192\" r=\"4\" fill=\"#1F6B43\"/><text x=\"180\" y=\"42\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#1F6B43\" text-anchor=\"start\" font-weight=\"600\">B  90°, longer needle</text><text x=\"0\" y=\"254\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"400\">A — under the skin (subcutaneous): the medicine sits</text><text x=\"0\" y=\"276\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"400\">in the fat and is taken up slowly.</text><text x=\"0\" y=\"320\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"400\">B — into the muscle (intramuscular): the needle goes</text><text x=\"0\" y=\"342\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"400\">through the fat into the muscle.</text><text x=\"0\" y=\"370\" font-family=\"Public Sans, sans-serif\" font-size=\"13.5\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">Your needle length is set by the person who trains you.</text></svg>",
-      "svgCaption": "Under the skin versus into the muscle, drawn to a millimetre scale. Based on the Fenway Health transgender health injection guide.",
-      "nav": "Learning to self-inject"
+      "nav": "Learning to self-inject",
+      "figure": {
+        "id": "sc-vs-im",
+        "type": "anatomy",
+        "art": "skin-layers",
+        "title": "Under the skin, or into the muscle",
+        "sub": "A slice through the skin, drawn to scale",
+        "alt": "Skin, fat and muscle layers to scale: needle A stops in the fat, needle B reaches the muscle",
+        "long": "Three layers from the surface down: skin, then fat, then muscle, with a depth scale from 0 to 30 mm. Needle A goes in at 45° and its tip stops in the fat, about 10 mm down. Needle B goes straight in at 90° and its tip reaches the muscle, about 24 mm down.",
+        "geom": {
+          "layers": [
+            {
+              "kind": "skin",
+              "name": "Skin",
+              "to": 3.6
+            },
+            {
+              "kind": "fat",
+              "name": "Fat",
+              "to": 16
+            },
+            {
+              "kind": "muscle",
+              "name": "Muscle",
+              "to": 30
+            }
+          ],
+          "scale": {
+            "to": 30,
+            "step": 10
+          },
+          "needles": [
+            {
+              "n": "A",
+              "angle": 45,
+              "x": 124,
+              "depth": 9.6
+            },
+            {
+              "n": "B",
+              "angle": 90,
+              "x": 206,
+              "depth": 23.6
+            }
+          ]
+        },
+        "key": [
+          {
+            "n": "A",
+            "lead": "Under the skin",
+            "term": "subcutaneous",
+            "text": "a short needle at 45°. The medicine sits in the fat and is taken up slowly."
+          },
+          {
+            "n": "B",
+            "lead": "Into the muscle",
+            "term": "intramuscular",
+            "text": "a longer needle, straight in at 90°, through the fat into the muscle."
+          },
+          {
+            "sym": "site",
+            "text": "Where the medicine ends up."
+          }
+        ],
+        "note": "Your needle length is set by the person who trains you.",
+        "easyTitle": "Under the skin, or into the muscle",
+        "easy": [
+          {
+            "pic": "sc",
+            "text": "Under the skin: a short needle. The medicine goes into the fat."
+          },
+          {
+            "pic": "im",
+            "text": "Into the muscle: a longer needle, straight in."
+          },
+          {
+            "pic": "people",
+            "text": "The person who teaches you picks your needle."
+          }
+        ],
+        "caption": "Under the skin versus into the muscle, drawn to a millimetre scale. Based on the Fenway Health transgender health injection guide [16]."
+      }
     },
     {
       "h": "Doing the injection, and what to watch for",
@@ -142,17 +508,105 @@
         "A proper sharps container, within reach before you start"
       ],
       "note": "If you are ever unsure part-way through, stop and ring the clinic or your pharmacist. Nobody minds the question, and it is a much better outcome than guessing.",
-      "svg": "<svg viewBox=\"0 0 400 440\" width=\"100%\" role=\"img\" aria-labelledby=\"fig5t\" aria-describedby=\"fig5d\" xmlns=\"http://www.w3.org/2000/svg\"><title id=\"fig5t\">Rotating your injection sites</title><desc id=\"fig5d\">Front body map with six numbered injection sites: four around the belly, avoiding the navel, and one on the middle third of each thigh. An arrow strip shows the order one to six and back to one.</desc><text x=\"0\" y=\"18\" font-family=\"Public Sans, sans-serif\" font-size=\"17\" fill=\"#10181F\" text-anchor=\"start\" font-weight=\"700\">Rotate your sites</text><text x=\"0\" y=\"38\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">Use the next number each time. Front of the body, facing you.</text><g fill=\"#F6F8FA\" stroke=\"#AEBCC6\" stroke-width=\"1.60\" stroke-linejoin=\"round\"><circle cx=\"150.0\" cy=\"70.0\" r=\"14.5\"/><path d=\"M143.0 92.0 C138.5 93.0 134.0 96.0 130.0 98.0 C126.0 100.0 122.2 101.3 119.0 104.0 C115.8 106.7 113.0 106.7 111.0 114.0 C109.0 121.3 107.3 138.0 107.0 148.0 C106.7 158.0 108.0 167.8 109.0 174.0 C110.0 180.2 111.0 183.7 113.0 185.0 C115.0 186.3 119.2 187.8 121.0 182.0 C122.8 176.2 123.2 160.0 124.0 150.0 C124.8 140.0 125.8 124.3 126.0 122.0 C126.2 119.7 124.5 130.0 125.0 136.0 C125.5 142.0 129.8 150.0 129.0 158.0 C128.2 166.0 121.8 175.3 120.0 184.0 C118.2 192.7 117.7 199.0 118.0 210.0 C118.3 221.0 120.7 237.0 122.0 250.0 C123.3 263.0 124.8 278.0 126.0 288.0 C127.2 298.0 126.5 306.3 129.0 310.0 C131.5 313.7 138.7 319.7 141.0 310.0 C143.3 300.3 142.2 267.0 143.0 252.0 C143.8 237.0 144.8 228.3 146.0 220.0 C147.2 211.7 148.7 202.0 150.0 202.0 C151.3 202.0 152.8 211.7 154.0 220.0 C155.2 228.3 156.2 237.0 157.0 252.0 C157.8 267.0 156.7 300.3 159.0 310.0 C161.3 319.7 168.5 313.7 171.0 310.0 C173.5 306.3 172.8 298.0 174.0 288.0 C175.2 278.0 176.7 263.0 178.0 250.0 C179.3 237.0 181.7 221.0 182.0 210.0 C182.3 199.0 181.8 192.7 180.0 184.0 C178.2 175.3 171.8 166.0 171.0 158.0 C170.2 150.0 174.5 142.0 175.0 136.0 C175.5 130.0 173.8 119.7 174.0 122.0 C174.2 124.3 175.2 140.0 176.0 150.0 C176.8 160.0 177.2 176.2 179.0 182.0 C180.8 187.8 185.0 186.3 187.0 185.0 C189.0 183.7 190.0 180.2 191.0 174.0 C192.0 167.8 193.3 158.0 193.0 148.0 C192.7 138.0 191.0 121.3 189.0 114.0 C187.0 106.7 184.2 106.7 181.0 104.0 C177.8 101.3 174.0 100.0 170.0 98.0 C166.0 96.0 161.5 93.0 157.0 92.0 C152.5 91.0 147.5 91.0 143.0 92.0 Z\"/></g><circle cx=\"150.0\" cy=\"164.0\" r=\"2.6\" fill=\"#4A5966\"/><g><circle cx=\"120\" cy=\"144\" r=\"12\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"120\" y=\"149\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">1</text></g><g><circle cx=\"180\" cy=\"144\" r=\"12\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"180\" y=\"149\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">2</text></g><g><circle cx=\"120\" cy=\"172\" r=\"12\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"120\" y=\"177\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">3</text></g><g><circle cx=\"180\" cy=\"172\" r=\"12\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"180\" y=\"177\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">4</text></g><g><circle cx=\"128\" cy=\"248\" r=\"12\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"128\" y=\"253\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">5</text></g><g><circle cx=\"172\" cy=\"248\" r=\"12\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"172\" y=\"253\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">6</text></g><text x=\"252\" y=\"140\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">Around the belly,</text><text x=\"252\" y=\"158\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">clear of the navel</text><text x=\"252\" y=\"250\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">Middle third</text><text x=\"252\" y=\"268\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" fill=\"#4A5966\" text-anchor=\"start\" font-weight=\"400\">of each thigh</text><rect x=\"0\" y=\"328\" width=\"400\" height=\"52\" rx=\"9\" fill=\"#F6F8FA\" stroke=\"#DCE3E8\"/><g><circle cx=\"34\" cy=\"352\" r=\"11\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"34\" y=\"357\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">1</text></g><path d=\"M49 352 h22\" stroke=\"#0B5D7A\" stroke-width=\"1.8\" fill=\"none\" marker-end=\"url(#ar)\"/><g><circle cx=\"94\" cy=\"352\" r=\"11\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"94\" y=\"357\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">2</text></g><path d=\"M109 352 h22\" stroke=\"#0B5D7A\" stroke-width=\"1.8\" fill=\"none\" marker-end=\"url(#ar)\"/><g><circle cx=\"154\" cy=\"352\" r=\"11\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"154\" y=\"357\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">3</text></g><path d=\"M169 352 h22\" stroke=\"#0B5D7A\" stroke-width=\"1.8\" fill=\"none\" marker-end=\"url(#ar)\"/><g><circle cx=\"214\" cy=\"352\" r=\"11\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"214\" y=\"357\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">4</text></g><path d=\"M229 352 h22\" stroke=\"#0B5D7A\" stroke-width=\"1.8\" fill=\"none\" marker-end=\"url(#ar)\"/><g><circle cx=\"274\" cy=\"352\" r=\"11\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"274\" y=\"357\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">5</text></g><path d=\"M289 352 h22\" stroke=\"#0B5D7A\" stroke-width=\"1.8\" fill=\"none\" marker-end=\"url(#ar)\"/><g><circle cx=\"334\" cy=\"352\" r=\"11\" fill=\"#E6F1F6\" stroke=\"#0B5D7A\" stroke-width=\"2\"/><text x=\"334\" y=\"357\" font-family=\"Public Sans, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0B5D7A\" text-anchor=\"middle\">6</text></g><defs><marker id=\"ar\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><path d=\"M0 0 L7 3.5 L0 7 z\" fill=\"#0B5D7A\"/></marker></defs><text x=\"400\" y=\"388\" font-family=\"Public Sans, sans-serif\" font-size=\"13\" fill=\"#4A5966\" text-anchor=\"end\" font-weight=\"400\">then back to 1</text></svg>",
-      "svgCaption": "Rotating injection sites around the belly and thighs. Based on the Fenway Health transgender health injection guide.",
-      "nav": "Doing the injection"
+      "nav": "Doing the injection",
+      "figure": {
+        "id": "injection-rotation",
+        "type": "body-map",
+        "title": "Rotate your sites",
+        "sub": "Front of the body. Use the sites the person who trains you shows you.",
+        "alt": "Front body map: six numbered injection sites, four around the belly and one on each thigh",
+        "long": "Spots 1 to 4 are around the belly, clear of the belly button. Spots 5 and 6 are on the front of each thigh, in the middle third between the hip and the knee.",
+        "views": [
+          {
+            "side": "front",
+            "label": "Front"
+          }
+        ],
+        "geom": {
+          "spots": [
+            {
+              "n": "1",
+              "x": -14,
+              "y": 94
+            },
+            {
+              "n": "2",
+              "x": 14,
+              "y": 94
+            },
+            {
+              "n": "3",
+              "x": -14,
+              "y": 123
+            },
+            {
+              "n": "4",
+              "x": 14,
+              "y": 123
+            },
+            {
+              "n": "5",
+              "x": -18,
+              "y": 184
+            },
+            {
+              "n": "6",
+              "x": 18,
+              "y": 184
+            }
+          ]
+        },
+        "key": [
+          {
+            "sym": "spot",
+            "text": "An injection site: around the belly, clear of the belly button, or the middle third of each thigh."
+          },
+          {
+            "sym": "next",
+            "text": "Use the next number each time, so no patch of skin is used twice in a row."
+          }
+        ],
+        "seq": {
+          "label": "Order:",
+          "order": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "then": "then back to 1"
+        },
+        "easyTitle": "Where to inject at home",
+        "easy": [
+          {
+            "pic": "front:belly",
+            "text": "You can inject into your belly. Stay away from your belly button."
+          },
+          {
+            "pic": "front:thigh",
+            "text": "Or into the front of your thigh."
+          },
+          {
+            "pic": "cycle",
+            "text": "Use a different spot each time."
+          },
+          {
+            "pic": "people",
+            "text": "Only use the spots your nurse or doctor shows you."
+          }
+        ],
+        "caption": "Rotating injection sites around the belly and thighs. Based on the Fenway Health transgender health injection guide [16]."
+      }
     },
     {
       "h": "Taking tablets and capsules",
       "body": [
         "Most tablets are swallowed with water at about the same time each day. Pick an anchor — brushing your teeth, the kettle going on — rather than relying on memory.",
-        "Some prescribers direct estradiol tablets to be taken sublingually — dissolved under the tongue or between cheek and gum. That changes how much medicine gets in and how fast, so only do it if you have been told to. Let the tablet dissolve fully before eating or drinking [19].",
-        "Micronised progesterone capsules are usually taken at night [15].",
-        "Spironolactone is a diuretic, so it makes you pass more urine; many people prefer to take it earlier in the day rather than at bedtime [15]. Ask your pharmacist what suits your dose.",
+        "Some prescribers direct estradiol tablets to be taken sublingually, dissolved under the tongue or between the cheek and gum [19]. That changes how fast the medicine gets in and how blood levels rise and fall, which affects blood test results, so only do it if you have been told to [26].",
+        "Micronised progesterone capsules are usually taken at night [15][26].",
+        "Spironolactone is a diuretic, so it can make you pass more urine [15]. Its leaflet says to take it at the same time each day [30]; ask your pharmacist whether earlier in the day would suit you.",
         "If you use a dose administration aid — a weekly blister pack made up by your pharmacy — ask whether your hormone medicines can be packed in it. Most tablets can."
       ],
       "nav": "Tablets and capsules"
@@ -162,7 +616,7 @@
       "body": [
         "Implants are small pellets placed under the skin during a short procedure with local anaesthetic, releasing hormone slowly over months.",
         "TransHub describes oestradiol pellets being inserted in a procedure of about fifteen minutes, and replaced every six to twenty-four months depending on how you respond [19]. Testosterone pellets are used by a small number of people, and can only be made by a compounding pharmacy [14]. Neither is a registered, PBS-subsidised product in Australia, so both are paid for privately [14][19].",
-        "GnRH analogues used for puberty suppression are given this way too: goserelin (Zoladex) is a small implant placed under the skin of the abdomen, and leuprorelin is a depot injection. Both are given in a clinic every one to three months.",
+        "GnRH analogues used for puberty suppression are given this way too: goserelin (Zoladex) is a small implant placed under the skin of the abdomen, and leuprorelin is a depot injection. Both are given in a clinic every one to six months, depending on the product.",
         "Aftercare is simple: keep the site clean and dry for a day or two, and expect some bruising. Contact the clinic if it becomes red, hot, painful or starts to discharge [18]."
       ],
       "nav": "Implants"
@@ -184,6 +638,7 @@
       "body": [
         "Most of these medicines are stored below 25 degrees, in a cool dry place, away from direct sunlight — not in the bathroom and not in a car [1][7].",
         "Patches stay in their sealed pouches until you use them; gels and creams keep their caps on and stay upright; ampoules and vials stay in their carton, away from light.",
+        "A few have a time limit once dispensed or opened: Estalis patches keep for up to one month below 25°C after the pharmacy hands them over, and a Testavan pump for 60 days after it is first opened. Each medicine page gives its brand's rules [31][32].",
         "Keep everything out of reach of children. Testosterone gel in particular should be stored where a child cannot get to it [7].",
         "Check the expiry date when you pick up a new supply, especially if shortages have you keeping a buffer at home. Your pharmacist can confirm the storage rules for your brand."
       ],
@@ -209,13 +664,13 @@
   "references": [
     {
       "n": 1,
-      "text": "Australian Commission on Safety and Quality in Health Care. Medicine finder: Estradot transdermal patch (consumer medicine information). Accessed 24 September 2026.",
+      "text": "Estradot (estradiol) transdermal patch, Australian Product Information and Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
       "url": "https://www.safetyandquality.gov.au/medicine-finder/estradot-transdermal-patch"
     },
     {
       "n": 2,
-      "text": "Estraderm MX transdermal patches, Australian Consumer Medicine Information. Accessed September 2026.",
-      "url": "https://www.nps.org.au/medicine-finder/estraderm-mx-transdermal-patches"
+      "text": "Estraderm MX (estradiol) transdermal patches, Australian Product Information and Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/estraderm-mx"
     },
     {
       "n": 3,
@@ -229,7 +684,7 @@
     },
     {
       "n": 5,
-      "text": "Therapeutic Goods Administration. About the shortage of transdermal HRT patches. Canberra: TGA. Accessed 24 September 2026.",
+      "text": "Therapeutic Goods Administration. About the shortage of transdermal HRT patches (last updated 14 September 2026). Canberra: TGA. Accessed 17 October 2026.",
       "url": "https://www.tga.gov.au/safety/shortages-and-supply-disruptions/medicine-shortages/major-or-ongoing-medicine-shortages/about-shortage-transdermal-hrt-patches"
     },
     {
@@ -239,7 +694,7 @@
     },
     {
       "n": 7,
-      "text": "Australian Commission on Safety and Quality in Health Care. Medicine finder: Testogel (consumer medicine information). Accessed 24 September 2026.",
+      "text": "Testogel (testosterone 1%) gel, Australian Product Information and Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
       "url": "https://www.safetyandquality.gov.au/medicine-finder/testogel"
     },
     {
@@ -249,17 +704,17 @@
     },
     {
       "n": 9,
-      "text": "Reandron 1000 (testosterone undecanoate 1000 mg/4 mL) consumer medicine information. Accessed 24 September 2026.",
-      "url": "https://mydr.com.au/medicines/reandron-1000/"
+      "text": "Reandron 1000 (testosterone undecanoate 1000 mg/4 mL) injection, Australian Product Information and Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/reandron-1000"
     },
     {
       "n": 10,
-      "text": "Cundill P. Hormone therapy for trans and gender diverse patients in the general practice setting. Aust J Gen Pract. 2020;49(7):385-90. Accessed 24 September 2026.",
+      "text": "Cundill P. Hormone therapy for trans and gender diverse patients in the general practice setting. Aust J Gen Pract. 2020;49(7):385-90. Accessed 17 October 2026.",
       "url": "https://www1.racgp.org.au/getattachment/d0c29d2a-ee67-4ef0-a125-65c2694f3cb2/Hormone-therapy-for-trans-and-gender-diverse-patie.aspx"
     },
     {
       "n": 11,
-      "text": "South T. Testosterone undecanoate IM injection: standard operating procedure and training guide, version 2.0. GAMSA — Gender-Affirming Medicines South Australia; 5 October 2025, revised 2 October 2026.",
+      "text": "South T. Testosterone undecanoate IM injection: standard operating procedure and training guide, version 2.1. GAMSA — Gender-Affirming Medicines South Australia; 5 October 2025, revised 16 October 2026.",
       "url": "/clinicians/testosterone-undecanoate-im-sop-and-training-guide.pdf"
     },
     {
@@ -279,7 +734,7 @@
     },
     {
       "n": 15,
-      "text": "Cundill P, Wong P, Cheung A. Hormone therapy prescribing guide for general practitioners working with trans, gender diverse and non-binary patients, version 3.0. Equinox Gender Diverse Health Centre, Thorne Harbour Health; August 2020 (AusPATH-endorsed). Accessed 24 September 2026.",
+      "text": "Cundill P, Wong P, Cheung A. Hormone therapy prescribing guide for general practitioners working with trans, gender diverse and non-binary patients, version 3.0. Equinox Gender Diverse Health Centre, Thorne Harbour Health; July 2020 (AusPATH-endorsed). Accessed 16 October 2026.",
       "url": "https://equinox.org.au/wp-content/uploads/2021/07/ht-prescribing-guideline-v3-aug-2020.pdf"
     },
     {
@@ -295,7 +750,7 @@
     {
       "n": 18,
       "text": "healthdirect Australia. Cellulitis. Accessed 24 September 2026.",
-      "url": "https://www.healthdirect.gov.au/cellulitis"
+      "url": "https://www.healthdirect.gov.au/conditions/skin-conditions/cellulitis"
     },
     {
       "n": 19,
@@ -331,6 +786,41 @@
       "n": 25,
       "text": "Therapeutic Goods Administration. Safe disposal of unwanted medicines. Canberra: TGA. Accessed 24 September 2026.",
       "url": "https://www.tga.gov.au/resources/consumer-information-and-resources/medicines-safety-and-general-information-consumers/safe-disposal-unwanted-medicines"
+    },
+    {
+      "n": 26,
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 27,
+      "text": "Sandrena (estradiol) gel sachets, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/sandrena-gel"
+    },
+    {
+      "n": 28,
+      "text": "Estrogel (estradiol 0.06% w/w) gel, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/estrogel"
+    },
+    {
+      "n": 29,
+      "text": "Testavan (testosterone 2% w/w) gel with cap applicator, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/testavan"
+    },
+    {
+      "n": 30,
+      "text": "Aldactone (spironolactone) tablets, Australian Consumer Medicine Information (\"should be used regularly at the same time each day\"). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/aldactone-tablets"
+    },
+    {
+      "n": 31,
+      "text": "Estalis Continuous and Estalis Sequi (estradiol and norethisterone acetate) patches, Australian Product Information, sections 4.1 Therapeutic indications and 6.4 Storage (date of revision 14 April 2025). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/estalis-continuous"
+    },
+    {
+      "n": 32,
+      "text": "Testavan (testosterone 2% w/w) gel, Australian Product Information, section 6.4 Storage (date of revision 22 April 2026). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/testavan"
     }
   ]
 }

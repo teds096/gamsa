@@ -35,7 +35,7 @@
       "h": "Pharmacy visit checklist",
       "nav": "Pharmacy visit checklist",
       "body": [
-        "A one-page checklist for going to the pharmacy with or for someone: what to take, what to ask at the counter, and what to do if the medicine is out of stock. [Download the checklist (PDF)](/allies/pharmacy-visit-checklist.pdf). The same steps are in the [Easy Read guide for helpers](#/easy/helping)."
+        "A one-page checklist for going to the pharmacy with or for someone: what to take, what to ask at the counter, and what to do if the medicine is out of stock. [Pharmacy visit checklist (PDF, 1 page)](/allies/pharmacy-visit-checklist.pdf). The same steps are in the [Easy Read guide for helpers](#/easy/helping)."
       ]
     },
     {
@@ -47,7 +47,7 @@
         "[TransHub: For Allies, with sections for carers and families, partners and friends, and professionals](https://www.transhub.org.au/allies)",
         "[PFLAG+ Australia: peer support for parents, carers and friends](https://pflagaustralia.org.au/)",
         "[Transcend Australia: support for families of trans and gender diverse children](https://transcend.org.au/)",
-        "[QLife: anonymous peer support for LGBTIQ+ people and those around them, 3pm to 9pm, 1800 184 527](https://qlife.org.au/)"
+        "[QLife: anonymous peer support for LGBTIQ+ people and those around them, 3pm to 9pm every day, 1800 184 527](https://qlife.org.au/)"
       ],
       "nav": "Local services"
     },
@@ -63,12 +63,12 @@
   "references": [
     {
       "n": 1,
-      "text": "AusPATH. Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2. 2025.",
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
       "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
     },
     {
       "n": 2,
-      "text": "Cheung AS et al. Position statement on the hormonal management of adult transgender and gender diverse individuals. Med J Aust 2019;211:127–133.",
+      "text": "Cheung AS, Wynne K, Erasmus J, Murray S, Zajac JD. Position statement on the hormonal management of adult transgender and gender diverse individuals. Med J Aust. 2019;211(3):127-33. Accessed 17 October 2026.",
       "url": "https://www.mja.com.au/journal/2019/211/3/position-statement-hormonal-management-adult-transgender-and-gender-diverse"
     }
   ],

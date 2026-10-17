@@ -37,7 +37,7 @@
   "brands": [
    "Androcur"
   ],
-  "ingredient": "cyproterone"
+  "ingredient": "cyproterone-acetate"
  },
  {
   "id": "cyprostat",
@@ -46,10 +46,10 @@
   "category": "anti-androgen",
   "status": "discontinued",
   "statusLabel": "Discontinued (ARTG cancelled)",
-  "since": "sponsor cancellation",
+  "since": "16 Jun 2023",
   "expectedReturn": "not returning",
   "mechanism": "Cancelled under Section 30(1)(c) of the Therapeutic Goods Act",
-  "note": "Permanently withdrawn by the sponsor — this is a discontinuation, not a temporary shortage. Patients on Cyprostat need an alternative brand or agent.",
+  "note": "Permanently withdrawn by the sponsor: both strengths (50 mg, ARTG 156921, and 100 mg, ARTG 51450) were cancelled at Bayer's request from 16 June 2023. This is a discontinuation, not a temporary shortage. Patients on Cyprostat need an alternative brand or agent.",
   "sourceUrl": "https://www.tga.gov.au/resources/cancellations-by-sponsors/cyprostat-cyproterone-acetate-100mg-tablet-blister-pack-cancelled-under-section-301c-act",
   "sourceLabel": "TGA cancellation notice",
   "genericName": "Cyproterone acetate",
@@ -57,28 +57,13 @@
   "brands": [
    "Cyprostat"
   ],
-  "ingredient": "cyproterone",
+  "ingredient": "cyproterone-acetate",
   "pin": true
  },
  {
   "id": "duphaston",
-  "brand": "Duphaston",
-  "strengthLabel": "Dydrogesterone tablets",
-  "category": "progestogen",
-  "status": "unverified",
-  "statusLabel": "No shortage record found",
-  "since": "—",
-  "expectedReturn": "—",
-  "mechanism": "—",
-  "note": "No TGA or PBS shortage notice has been published.",
-  "sourceUrl": "https://www.tga.gov.au/safety/shortages-and-supply-disruptions/medicine-shortages",
-  "sourceLabel": "TGA shortages hub",
-  "genericName": "Dydrogesterone",
-  "form": "oral tablet",
-  "brands": [
-   "Duphaston"
-  ],
-  "ingredient": "dydrogesterone"
+  "remove": true,
+  "note": "Removed from /supply on 17 Oct 2026: Duphaston (dydrogesterone tablets) is not on the Australian Register of Therapeutic Goods (TGA ARTG search and cancellations-by-sponsors search, 17 Oct 2026: no matching results). In Australia dydrogesterone is registered only inside Femoston 1/10, 2/10 and Conti. refresh.py drops a row marked remove: true."
  },
  {
   "id": "estrogel",
@@ -90,7 +75,7 @@
   "since": "—",
   "expectedReturn": "—",
   "mechanism": "—",
-  "note": "No TGA/PBS shortage notice located — treat as unconfirmed rather than confirmed clear.",
+  "note": "No current TGA shortage record for estradiol gel.",
   "sourceUrl": "https://www.tga.gov.au/resources/artg/301620",
   "sourceLabel": "TGA ARTG record",
   "genericName": "Estradiol",
@@ -107,19 +92,21 @@
   "strengthLabel": "Goserelin monthly implant",
   "category": "gnrh-analogue",
   "status": "delisting",
-  "statusLabel": "PBS delisting from Nov 2026",
-  "since": "announced Jul 2026",
+  "statusLabel": "PBS access being extended (was due to end 1 Nov 2026)",
+  "since": "announced 16 Jul 2026; sponsor update Sep 2026",
   "expectedReturn": "access change, not a manufacturing shortage",
   "mechanism": "PBS funding/access change, per TGA/PBS and AstraZeneca notices",
-  "note": "Directly relevant to TGD patients using low-dose Zoladex for puberty suppression or as an anti-androgen adjunct. This is a funding/access change, not a supply shortage — worth flagging distinctly. Exact scope (full withdrawal vs PBS-listing-only) wasn't independently confirmed — verify before advising patients.",
-  "sourceUrl": "https://www.pbs.gov.au/news/2026/07/update-on-access-to-goserelin-3-6-mg-implant-zoladex-implant",
-  "sourceLabel": "PBS access update",
+  "note": "Zoladex 3.6 mg was due to leave the PBS on 1 November 2026. AstraZeneca has since told the TGA it will keep supplying it and extend PBS access, and it is not on the PBS deletions list for 1 November 2026; ask the pharmacist for the current position. This site will check this again after 1 November 2026. Triptorelin 3.75 mg (Diphereline) has had no PBS restriction since 1 October 2026, but its listing is not for use in gender dysphoria in minors.",
+  "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/goserelin",
+  "sourceLabel": "TGA shortage database (sponsor update)",
   "genericName": "Goserelin",
   "form": "subcutaneous implant",
   "brands": [
    "Zoladex"
   ],
-  "ingredient": "goserelin"
+  "ingredient": "goserelin",
+  "pin": true,
+  "pinUntil": "2026-10-31"
  },
  {
   "id": "lucrin",
@@ -131,7 +118,7 @@
   "since": "—",
   "expectedReturn": "—",
   "mechanism": "—",
-  "note": "Only an older New Zealand notice and an undated headline turned up — nothing confirming a current Australian shortage.",
+  "note": "No current TGA shortage record for leuprorelin.",
   "sourceUrl": "https://www.tga.gov.au/resources/artg/97449",
   "sourceLabel": "TGA ARTG record",
   "genericName": "Leuprorelin",
@@ -147,22 +134,21 @@
   "brand": "Provera / Depo-Provera",
   "strengthLabel": "Medroxyprogesterone acetate, tablets & injection",
   "category": "progestogen",
-  "status": "unverified",
-  "statusLabel": "No shortage record found",
+  "status": "in_supply",
+  "statusLabel": "Available; shortages expected from late 2026",
   "since": "—",
   "expectedReturn": "—",
   "mechanism": "—",
-  "note": "No Australian TGA shortage notice has been published.",
-  "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/medroxyprogesterone",
-  "sourceLabel": "TGA shortage search (unverified)",
+  "note": "The TGA expects shortages of Provera 10 mg (new embossing) from 7 December 2026 and Ralovera 5 mg and 10 mg from late November and December 2026; other strengths and brands remain available. No record for Depo-Provera. Depo-Ralovera injection is no longer registered in Australia (ARTG 44464 cancelled from 19 June 2026); Depo-Provera is the injection available.",
+  "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/medroxyprogesterone-acetate",
+  "sourceLabel": "TGA shortage database",
   "genericName": "Medroxyprogesterone acetate",
   "form": "oral tablet; depot injection",
   "brands": [
    "Provera",
-   "Depo-Provera",
-   "Depo-Ralovera"
+   "Depo-Provera"
   ],
-  "ingredient": "medroxyprogesterone"
+  "ingredient": "medroxyprogesterone-acetate"
  },
  {
   "id": "primolut-n",
@@ -175,7 +161,7 @@
   "expectedReturn": "—",
   "mechanism": "—",
   "note": "No TGA shortage notice has been published for Primolut N.",
-  "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/norethisterone",
+  "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
   "sourceLabel": "TGA shortage database (norethisterone)",
   "genericName": "Norethisterone",
   "form": "oral tablet",
@@ -190,18 +176,19 @@
   "strengthLabel": "Oral capsules",
   "category": "progestogen",
   "status": "unverified",
-  "statusLabel": "Possible shortage — unconfirmed",
+  "statusLabel": "No shortage reported to the TGA",
   "since": "—",
   "expectedReturn": "—",
   "mechanism": "—",
-  "note": "TGA has registered an additional supplier, Progesterone-Teva — often a sign of an existing shortage of the primary brand — but this isn't independently confirmed.",
-  "sourceUrl": "https://www.tga.gov.au/resources/prescription-medicines-registrations/progesterone-teva-teva-pharma-australia-pty-ltd",
-  "sourceLabel": "TGA product registration",
+  "note": "No current TGA shortage record. Three brands share PBS item 14730G (Prometrium, Progesterone ADVZ 100, PROGESTERONE-APX).",
+  "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+  "sourceLabel": "TGA shortage database (no notice)",
   "genericName": "Progesterone (micronised)",
   "form": "oral capsule",
   "brands": [
    "Prometrium",
-   "Progesterone-Teva"
+   "Progesterone ADVZ 100",
+   "PROGESTERONE-APX"
   ],
   "ingredient": "progesterone"
  },
@@ -211,19 +198,54 @@
   "strengthLabel": "25 mg tablets (also higher strengths)",
   "category": "anti-androgen",
   "status": "unverified",
-  "statusLabel": "Historical shortage measure — current status unconfirmed",
+  "statusLabel": "No shortage reported to the TGA",
   "since": "—",
   "expectedReturn": "—",
-  "mechanism": "Section 19A approval for an overseas alternative previously existed, now lapsed",
-  "note": "Unclear whether the lapse means the shortage resolved or the approval simply expired — verify before relying on this.",
+  "mechanism": "A Section 19A approval for an overseas product has lapsed",
+  "note": "No current TGA shortage record for spironolactone.",
   "sourceUrl": "https://www.tga.gov.au/resources/section-19a-approvals/approval-lapsed-spironolactone-tablets-usp-25mg-oxford-pharmaceuticals-usa",
   "sourceLabel": "TGA Section 19A record",
   "genericName": "Spironolactone",
   "form": "oral tablet",
   "brands": [
+   "Aldactone",
    "Spiractin",
    "Spironolactone Viatris"
   ],
   "ingredient": "spironolactone"
+ },
+ {
+  "id": "estraderm-mx-100",
+  "brand": "Estraderm MX 100",
+  "strengthLabel": "100 mcg/24h patch",
+  "category": "estrogen",
+  "status": "limited",
+  "statusLabel": "Limited availability",
+  "since": "—",
+  "expectedReturn": "30 Oct 2026",
+  "mechanism": "SSSI substitution allowed to 28 Feb 2027",
+  "note": "The TGA shortage database lists Estraderm MX 100 as in limited supply until 30 October 2026. Estraderm MX 50 was resolved on 14 October 2026.",
+  "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/estradiol-hemihydrate",
+  "sourceLabel": "TGA shortage database",
+  "genericName": "Estradiol",
+  "form": "transdermal patch",
+  "brands": [
+   "Estraderm MX"
+  ],
+  "ingredient": "estradiol",
+  "pin": true,
+  "pinUntil": "2026-10-30"
+ },
+ {
+  "id": "progynova",
+  "mechanism": "—"
+ },
+ {
+  "id": "estalis-50-140",
+  "mechanism": "—"
+ },
+ {
+  "id": "estalis-50-250",
+  "mechanism": "—"
  }
 ]

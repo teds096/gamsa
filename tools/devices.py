@@ -8,7 +8,7 @@ axe=AXE
 B="http://127.0.0.1:8767"
 DEV=[("Android small",360,780,True),("iPhone SE",375,667,True),("iPhone 15",393,852,True),("iPhone SE landscape",667,375,True),("iPhone 15 landscape",852,393,True),("iPad mini portrait",744,1133,True),("iPad portrait",820,1180,True),("iPad landscape",1180,820,True),("iPad Pro portrait",1024,1366,True),("iPad Pro landscape",1366,1024,True)]
 R=["/","/trans","/clinicians","/allies","/resources","/supply","/costs","/medicines","/medicines/testosterone-undecanoate","/using","/easy/helping","/clinician-guide","/accessibility","/search?q=patches","/feedback"]
-TAP="""(()=>{const bad=[];document.querySelectorAll('header a,header button,.view.on button,.view.on .tile,.view.on .chip,.view.on .aud .ql a,.view.on .cta,footer a').forEach(e=>{const r=e.getBoundingClientRect();if(r.width&&r.height&&getComputedStyle(e).visibility!=='hidden'&&(r.width<24||r.height<24))bad.push((e.id||e.className||e.tagName)+' '+Math.round(r.width)+'x'+Math.round(r.height));});return [...new Set(bad)].slice(0,4)})()"""
+TAP="""(()=>{const bad=[];document.querySelectorAll('header a,header button,.view.on button,.view.on .tile,.view.on .chip,.view.on .x-path a,.view.on .x-task,.x-help,footer a').forEach(e=>{const r=e.getBoundingClientRect();if(r.width&&r.height&&getComputedStyle(e).visibility!=='hidden'&&(r.width<24||r.height<24))bad.push((e.id||e.className||e.tagName)+' '+Math.round(r.width)+'x'+Math.round(r.height));});return [...new Set(bad)].slice(0,4)})()"""
 # text blocks drawn on top of each other (e.g. the v17.9 phone footer)
 OVERLAP="""(()=>{const sel='.view.on h1,.view.on h2,.view.on h3,.view.on p,.view.on li,.view.on .sr,footer p,footer h2,footer li,footer .flags';
 const els=[...document.querySelectorAll(sel)].filter(e=>{const r=e.getBoundingClientRect();return r.width>4&&r.height>4&&getComputedStyle(e).visibility!=='hidden'&&(!e.checkVisibility||e.checkVisibility())}).slice(0,500);
@@ -45,15 +45,18 @@ with sync_playwright() as p:
         hdr=pg.evaluate("document.querySelector('header').getBoundingClientRect().height")
         menu=pg.evaluate("getComputedStyle(document.getElementById('navbtn')).display")!="none"
         if menu:
-            pg.tap("#navbtn"); pg.wait_for_timeout(150); pg.tap('nav#nav .ng[data-g=tgd] .ng-btn'); pg.wait_for_timeout(150)
-            if pg.evaluate("document.querySelector('.ng[data-g=tgd] .ng-panel').getBoundingClientRect().height")<50: issues.append("menu group did not open")
-            # open every group, scroll the menu to its end: the last link must be on screen and the page must not move
-            m=pg.evaluate("""(()=>{document.querySelectorAll('nav#nav .ng').forEach(g=>g.classList.add('open'));const n=document.getElementById('nav');const y=scrollY;n.scrollTop=n.scrollHeight;
-              const ls=[...n.querySelectorAll('a')].filter(a=>a.offsetParent);const r=ls[ls.length-1].getBoundingClientRect();
-              return {last:r.bottom<=innerHeight+1&&r.top>=0, locked:document.documentElement.classList.contains('navlock')||getComputedStyle(document.body).overflow==='hidden', pageMoved:scrollY!==y}})()""")
-            if not m["last"]: issues.append("menu: last link cannot be reached")
-            if not m["locked"]: issues.append("menu: page behind still scrolls")
-            pg.screenshot(path=f"d_{w}_menu.png"); pg.goto(B+"/"); pg.wait_for_timeout(150)
+            # the Menu button opens the pop-up menu: it must open, lock the page, reach its last link and close with Esc
+            pg.tap("#navbtn"); pg.wait_for_timeout(300)
+            m=pg.evaluate("""(()=>{const mn=document.getElementById('xMenu');if(!mn||mn.hidden)return {open:false};const p=mn.querySelector('.x-menu-p');const y=scrollY;p.scrollTop=p.scrollHeight;
+              const ls=[...p.querySelectorAll('a')].filter(a=>a.offsetParent);const r=ls[ls.length-1].getBoundingClientRect();
+              return {open:true,last:r.bottom<=innerHeight+1&&r.top>=0,locked:document.documentElement.classList.contains('x-lock'),pageMoved:scrollY!==y}})()""")
+            if not m["open"]: issues.append("menu did not open")
+            else:
+                if not m["last"]: issues.append("menu: last link cannot be reached")
+                if not m["locked"]: issues.append("menu: page behind still scrolls")
+            pg.screenshot(path=f"d_{w}_menu.png"); pg.keyboard.press("Escape"); pg.wait_for_timeout(150)
+            if not pg.evaluate("document.getElementById('xMenu').hidden"): issues.append("menu: Esc did not close it")
+            pg.goto(B+"/"); pg.wait_for_timeout(150)
         pg.tap("#a11yBtn"); pg.wait_for_timeout(150)
         fit=pg.evaluate("(()=>{const r=document.getElementById('a11yPanel').getBoundingClientRect();return r.bottom<=innerHeight+1&&r.right<=innerWidth+1&&r.left>=-1})()")
         if not fit: issues.append("a11y panel off-screen")
@@ -62,12 +65,4 @@ with sync_playwright() as p:
         ctx.close()
     b.close()
 for k,v in out.items(): print(k,v)
-# dark mode: infographic labels need a light canvas (v17.9.4)
-with sync_playwright() as p:
-    b=p.chromium.launch(**({"executable_path":CHROME} if CHROME else {}))
-    pg=b.new_page(viewport={"width":390,"height":844},color_scheme="dark"); bad=[]
-    for r in ["/using","/costs","/doses"]:
-        pg.goto(B+r); pg.wait_for_timeout(300)
-        n=pg.evaluate("[...document.querySelectorAll('.view.on figure svg')].filter(s=>getComputedStyle(s).backgroundColor==='rgba(0, 0, 0, 0)').length")
-        if n: bad.append(f"{r}: {n} diagrams without a light canvas")
-    print("dark diagrams", repr(bad or "ok")); b.close()
+# dark mode: figures and Easy Read pictures follow the theme (no light plates); extra_checks.py figures checks them at 3:1

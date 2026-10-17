@@ -6,6 +6,15 @@ from playwright.sync_api import sync_playwright
 B="http://127.0.0.1:8767"
 ok=[];bad=[]
 def chk(c,m): (ok if c else bad).append(m)
+WHOLE_FIG = r"""()=>{ const lb=document.getElementById('figZoom'), c=document.querySelector('#lbInner figure.gf'), f=[...document.querySelectorAll('.view.on figure.gf')].find(x=>x.querySelector('.gf-t').textContent===document.getElementById('lbTitle').textContent);
+  if(!c||!f) return 'no window copy';
+  const norm=(el,skip)=>{ const k=el.cloneNode(true); k.querySelectorAll(skip).forEach(e=>e.remove()); return k.textContent.replace(/\s+/g,' ').trim(); };
+  if(norm(f,'.fig-open,.figzoom-hint,.gf-t')!==norm(c,'.gf-t')) return 'words differ';
+  for(const s of ['.gf-s','.gf-art','.gf-pin','.gf-lab','.gf-long','.gf-key>li','.gf-steps>li','.gf-note','.gf-rows>li','.gf-mi>li','.gf-lgd>li','figcaption'])
+    if(f.querySelectorAll(s).length!==c.querySelectorAll(s).length) return s+' missing';
+  if(lb.getAttribute('aria-modal')!=='true') return 'not modal';
+  const st=document.getElementById('lbStage'); if(st.scrollWidth>st.clientWidth+1) return 'scrolls sideways';
+  return 'ok'; }"""
 with sync_playwright() as pw:
     b=pw.chromium.launch(**({"executable_path":CHROME} if CHROME else {}),args=["--no-sandbox"])
     pg=b.new_page(viewport={"width":1280,"height":900}); errs=[]
@@ -55,7 +64,7 @@ with sync_playwright() as pw:
     chk(pg.url.endswith("/medicines/spironolactone"), f"old link /#/med/x -> {pg.url}")
     # nav current page marker
     chk(pg.evaluate("document.querySelector('nav#nav a[aria-current=page]').getAttribute('href')")=="/medicines", "nav marks Medicines as current on a medicine page")
-    chk(pg.evaluate("document.querySelector('.ng.cur .ng-btn').textContent")=="Trans and gender diverse", "menu group marked current")
+    chk(pg.evaluate("document.querySelector('.ng.cur .ng-btn').textContent")=="Trans & gender diverse", "menu group marked current")
     # section jump from the menu
     pg.click('nav#nav .ng[data-g=res] .ng-btn'); pg.wait_for_timeout(150)
     pg.click('nav#nav a[href="/resources#sec-resources-1"]'); pg.wait_for_timeout(500)
@@ -86,16 +95,24 @@ with sync_playwright() as pw:
     pg.goto(B+"/doses"); pg.wait_for_timeout(400)
     chk(pg.evaluate("document.documentElement.classList.contains('hc') && getComputedStyle(document.body).fontSize")=="21px", "accessibility settings persist across pages")
     pg.click("#a11yBtn"); pg.click("#resetBtn"); pg.wait_for_timeout(600)
-    chk(pg.evaluate("!document.documentElement.classList.contains('hc') && getComputedStyle(document.body).fontSize")=="17px", "reset all clears settings")
+    chk(pg.evaluate("!document.documentElement.classList.contains('hc') && getComputedStyle(document.body).fontSize")=="18px", "reset all clears settings")
     # new audience pages
     for r in ("/trans","/clinicians","/allies","/clinician-guide","/ally-guide","/resources"):
         pg.goto(B+r); pg.wait_for_timeout(400)
         chk(pg.evaluate("document.querySelector('.view.on h1').textContent").strip()!="" and pg.evaluate("(document.querySelectorAll('.view.on section.block').length>=3||document.querySelectorAll('.view.on .tile').length>=3)"), f"{r} renders sections or tiles")
     chk(pg.evaluate("document.querySelector('.ack p').textContent").startswith("GAMSA acknowledges the Kaurna"), "acknowledgement of country in footer")
     # read-aloud + figure window still work in path mode
-    pg.goto(B+"/costs"); pg.wait_for_timeout(600)
-    pg.query_selector_all("#v-costs figure")[0].click(); pg.wait_for_timeout(300)
-    chk(pg.locator("#figZoom").is_visible(), "diagram window opens in path mode"); pg.click("#lbClose")
+    pg.goto(B+"/doses"); pg.wait_for_timeout(600)   # a figure with a drawing (Costs has only words and charts)
+    pg.query_selector_all("#v-doses figure .gf-art")[0].click(); pg.wait_for_timeout(300)
+    chk(pg.locator("#figZoom").is_visible(), "diagram window opens in path mode")
+    wf=pg.evaluate(WHOLE_FIG); chk(wf=="ok", "path mode: the figure window shows the whole figure ("+wf+")")
+    inside=[]
+    for _ in range(8):
+        pg.keyboard.press("Tab"); inside.append(pg.evaluate("document.getElementById('figZoom').contains(document.activeElement)"))
+    chk(all(inside), "path mode: Tab stays inside the figure window")
+    pg.keyboard.press("Escape"); pg.wait_for_timeout(150)
+    chk(pg.evaluate("document.getElementById('figZoom').hidden && document.activeElement.classList.contains('fig-open')"), "path mode: Esc closes the figure window and focus returns to Enlarge")
+    chk("127.0.0.1" in pg.url or "localhost" in pg.url, "Esc on the figure window does not trigger Quick exit")
     chk(not errs, f"no JS/CSP errors ({errs[:2]})")
     b.close()
 print("\n".join("PASS "+m for m in ok)); print("\n".join("FAIL "+m for m in bad) or "ALL PASSED")

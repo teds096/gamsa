@@ -19,7 +19,7 @@
     {
       "h": "Server logs",
       "body": [
-        "The site is served by Cloudflare. Like any web host, it keeps short-lived request logs (IP address, time, page, browser) for security and to keep the site running. These are not joined to anything else and are not used to identify visitors."
+        "The site is served by Cloudflare. Like any web host, Cloudflare processes each request (IP address, time, page, browser) to deliver the site and keep it secure, under [Cloudflare's privacy policy](https://www.cloudflare.com/privacypolicy/). This site's own code does not record IP addresses, and request details are not joined to anything else or used to identify visitors."
       ]
     },
     {
@@ -27,16 +27,17 @@
       "nav": "Forms",
       "list": [
         "**Feedback**: your message, the page you were on, the topic you chose, and an email address only if you want a reply.",
-        "**Patient sightings**: the medicine, the pharmacy or suburb, whether it was in stock, and an optional note. No name is asked for.",
-        "**Pharmacist stock register**: your name, AHPRA registration number, pharmacy and suburb, and the report itself. The registration number is checked once against the public AHPRA register.",
-        "All three use Cloudflare Turnstile to tell people from bots. Turnstile checks your browser, not what you typed. Submissions are stored in a Cloudflare database and read only by the author; the author receives an alert when something arrives. Delete requests are honoured without asking why: use the feedback page."
+        "**Patient sightings**: the medicine, the suburb or postcode, the pharmacy name if you give it, what happened, and an optional note. No name is asked for.",
+        "**Pharmacist stock register**: your name, AHPRA registration number, pharmacy and suburb or postcode, the report itself, and a work email only if you give one. Your registration number is checked once against the public AHPRA register and is never shown on the site.",
+        "All three use Cloudflare Turnstile to tell people from bots. Turnstile checks your browser, not what you typed; for feedback and pharmacist reports your IP address is also passed to Cloudflare for that check, and it is not stored. What you send is stored in a Cloudflare database that only the author can read. Sightings and stock reports stop showing on the site after 14 days, but everything sent stays in that database until the author deletes it; ask through the feedback page and it will be deleted. Once a day the author gets an alert that says how many new messages, sightings or registrations arrived. The alert never includes what you wrote, your email, your name or your registration number. Patient sightings and pharmacists' stock reports are shown on the site without names, emails or registration numbers. Delete requests are honoured without asking why: use the feedback page."
       ]
     },
     {
       "h": "What is stored on your device",
       "nav": "On your device",
       "body": [
-        "The Accessibility panel and the light/dark switch save your choices in this browser's local storage (keys beginning with `gamsa.`). They hold no identifying information and are never sent anywhere. Reset all in the Accessibility panel removes them; clearing your browser data does too."
+        "The Accessibility panel and the light and dark buttons save your choices in this browser's local storage (names starting `gamsa.`). Discreet browsing is kept only in this tab's session storage, so it ends when you close the tab. None of this identifies you, and none of it is sent anywhere. Reset all removes your saved choices but does not change Discreet browsing. Quick exit, or clearing your browser data, removes all of it.",
+        "Search runs in your browser: your search is not sent to a server to find results. Read aloud uses your device's voices. Some browsers' online voices (for example Chrome's Google voices) send the text to the browser maker to be spoken."
       ]
     },
     {
@@ -52,13 +53,13 @@
         "Sell, rent or trade anything about you.",
         "Run advertising or share data with advertising networks.",
         "Ask you to create an account.",
-        "Use the Quick exit button (or pressing Esc twice) to record anything. It clears this site's saved settings and replaces the page in this tab with the Bureau of Meteorology weather site, so Back does not return to it (other gamsa.au pages opened earlier in the same tab can still be reached with Back, unless you turn on Discreet browsing in the Accessibility panel first). It cannot erase your browser's own history: for that, use a private window (Safari: File → New Private Window; Chrome: New Incognito Window), or afterwards delete gamsa.au from your history (Safari: History → Show All History, search gamsa; Chrome: History, search gamsa, tick and delete)."
+        "Keep any record when you use Quick exit (or press Esc twice). Quick exit clears this site's saved settings and replaces the page in this tab with the Bureau of Meteorology weather site, so Back does not return to it (other gamsa.au pages opened earlier in the same tab can still be reached with Back, unless you turn on Discreet browsing in the Accessibility panel first). It cannot erase your browser's own history: for that, use a private window (Safari: File → New Private Window; Chrome: New Incognito Window), or afterwards delete gamsa.au from your history (Safari: History → Show All History, search gamsa; Chrome: History, search gamsa, tick and delete)."
       ]
     },
     {
       "h": "Changes and contact",
       "body": [
-        "If anything that collects data is added or removed, this page changes at the same time. Questions or removal requests: [send feedback](#/feedback). Last reviewed 2 October 2026."
+        "If anything that collects data is added or removed, this page changes at the same time. Questions or removal requests: [send feedback](#/feedback). Last reviewed 17 October 2026."
       ]
     }
   ],

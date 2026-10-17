@@ -2,7 +2,8 @@
 """Monthly check of PBS brand premiums and PBS listings for the medicines on the site.
 
 1. Reads the PBS brand-premium table and keeps the rows for the site's medicines,
-   writing data/premiums.json. The costs page renders that list, so the figures on
+   writing data/premiums.json. The schedule is split by the brand's first letter
+   (?initial=a ... z; the bare URL shows only "A"), so every letter page is read. The costs page renders that list, so the figures on
    the site always match the PBS list as of the last run. If the rows differ from
    last month the script prints PREMIUMS_CHANGED so the workflow can open a note.
 2. Fetches every PBS item page cited in the content (item 10205D and so on), confirms
@@ -29,11 +30,24 @@ def generics():
             if len(part) > 4: words.add(part)
     return sorted(words)
 
-def premium_rows(words):
-    html = requests.get(URL, timeout=60, headers=H).text
+# Rows that match a generic name on the site but are not medicines the site covers:
+# combined contraceptive pills (levonorgestrel + ethinylestradiol, e.g. Levlen ED) and
+# doxycycline 100 mg, which the PBS lists only for other infections (acne uses 50 mg).
+EXCLUDE = ("ethinylestradiol", "doxycycline 100 mg")
+LETTERS = "abcdefghilmnopqrstuvwyz"   # fallback if the letter links cannot be read (checked 17 Oct 2026)
+
+
+def letters(html):
+    """The letters the schedule is split into, from the page's own ?initial= links."""
+    found = sorted(set(re.findall(r"[?&]initial=([a-z])\b", html)))
+    return found or list(LETTERS)
+
+
+def parse_premium_table(html, words):
+    """Rows of one brand premium page that belong to the site's medicines. None if the page has no table."""
     soup = BeautifulSoup(html, "html.parser")
     table = soup.find("table")
-    if not table: raise SystemExit("FAIL: no table on the brand premium page — layout changed")
+    if not table: return None
     rows = []
     for tr in table.find_all("tr")[1:]:
         tds = tr.find_all("td")
@@ -42,13 +56,34 @@ def premium_rows(words):
         cell = lambda i: re.sub(r"\s+", " ", tds[i].get_text(" ")).strip()
         product = cell(1)
         if not any(w in product.lower() for w in words): continue
+        if any(x in product.lower() for x in EXCLUDE): continue
         m = re.search(r"\$(\d+\.\d{2})", cell(5))
         if not m: continue
         bench = [re.sub(r"\s+", " ", a.get_text()).strip() for a in tds[6].find_all("a")] or [cell(6)]
         rows.append({"brand": cell(0), "product": product, "packs": cell(2), "units": cell(3),
                      "repeats": cell(4), "premium": m.group(1), "benchmark": bench})
+    return rows
+
+
+def premium_rows(words, get=None):
+    get = get or (lambda url: requests.get(url, timeout=60, headers=H).text)
+    first = get(URL)
+    if parse_premium_table(first, words) is None:
+        raise SystemExit("FAIL: no table on the brand premium page — layout changed")
+    rows, seen = [], set()
+    for l in letters(first):
+        html = get(URL + "?initial=" + l)
+        part = parse_premium_table(html, words)
+        if part is None:
+            if "No records found" in html: continue      # a letter with no premium brands (Q on 1 Oct 2026)
+            raise SystemExit(f"FAIL: no table on the brand premium page for '{l}' — layout changed")
+        for r in part:
+            key = json.dumps(r, sort_keys=True)
+            if key not in seen: seen.add(key); rows.append(r)
+        time.sleep(0.3)
     if not rows: raise SystemExit("FAIL: brand premium table parsed but no rows matched — check the parser")
     return rows
+
 
 def listing_codes():
     codes = set()

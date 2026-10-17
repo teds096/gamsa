@@ -4,7 +4,8 @@
   python3 tools/pdf_brand.py      # (usually via tools/brand.py) needs pymupdf (pip install pymupdf)
 Finds each PDF's teal title band, puts the logo (vector, from static/logo.svg) at its right end where no
 text is, and draws the gradient stripe under it, as on the site header. Safe to re-run: stamped files are
-skipped. Also rebuilds the training package zip from the stamped PDFs.
+skipped. Sets each PDF's document title (shown in the browser tab, read by screen readers). Also rebuilds the
+training package zip from the stamped PDFs.
 """
 import pathlib, zipfile
 import pymupdf as fitz
@@ -44,17 +45,41 @@ def brand(path, logo):
     tmp = path.with_suffix(".tmp.pdf"); d.save(tmp, garbage=3, deflate=True); d.close(); tmp.replace(path)
     return f"logo {int(r.width)} pt at ({int(r.x0)},{int(r.y0)}), stripe added"
 
+# document titles: browser PDF viewers show this in the tab and screen readers announce it (WCAG technique PDF18)
+TU = "Testosterone undecanoate IM injection: "
+TITLES = {"pharmacy-visit-checklist": "Pharmacy visit checklist", "pbs-authority-wording-card": "PBS Authority wording card",
+          "testosterone-undecanoate-im-adverse-event-form": TU + "adverse event form", "testosterone-undecanoate-im-clinic-audit-tool": TU + "clinic audit tool",
+          "testosterone-undecanoate-im-competency-checklist": TU + "competency checklist", "testosterone-undecanoate-im-sop-and-training-guide": TU + "SOP and training guide",
+          "testosterone-undecanoate-im-treatment-room-card": TU + "treatment-room card"}
+
+def title(path):
+    want = TITLES.get(path.stem)
+    if not want: return "no title set for this file"
+    want += " \u2014 GAMSA"
+    d = fitz.open(path); m = d.metadata; cat = d.pdf_catalog()
+    if m.get("title") == want and "DisplayDocTitle" in (d.xref_get_key(cat, "ViewerPreferences")[1] or ""): d.close(); return "title already set"
+    m["title"] = want; m["author"] = m.get("author") or "GAMSA (gamsa.au)"; d.set_metadata(m)
+    d.xref_set_key(cat, "ViewerPreferences", "<</DisplayDocTitle true>>")
+    tmp = path.with_suffix(".tmp.pdf"); d.save(tmp, garbage=3, deflate=True); d.close(); tmp.replace(path)
+    return "title set: " + want
+
 def main():
     svg = (S / "logo.svg").read_text().encode()
     logo = fitz.open(stream=fitz.open(stream=svg, filetype="svg").convert_to_pdf(), filetype="pdf")
     pdfs = sorted(S.glob("*/*.pdf"))
-    for p in pdfs: print(p.relative_to(S), "-", brand(p, logo))
+    for p in pdfs: print(p.relative_to(S), "-", brand(p, logo), "-", title(p))
     z = S / "clinicians/testosterone-undecanoate-im-training-package.zip"
     if z.exists():
-        names = zipfile.ZipFile(z).namelist()
+        # read everything first (opening for "w" truncates the zip); PDFs come from the loose files, anything else
+        # (README.txt) is kept as it is; nothing is rewritten when every PDF already matches its loose file
+        with zipfile.ZipFile(z) as zz:
+            items = [(i, zz.read(i.filename)) for i in zz.infolist()]
+        loose = {i.filename: (S / "clinicians" / i.filename).read_bytes() for i, _ in items if i.filename.endswith(".pdf")}
+        if all(loose[i.filename] == b for i, b in items if i.filename in loose):
+            print("training package zip current:", len(items), "files"); return
         with zipfile.ZipFile(z, "w", zipfile.ZIP_DEFLATED) as out:
-            for n in names: out.write(S / "clinicians" / n, n)
-        print("training package zip rebuilt:", len(names), "files")
+            for i, b in items: out.writestr(i, loose.get(i.filename, b))
+        print("training package zip rebuilt:", len(items), "files")
 
 if __name__ == "__main__":
     main()

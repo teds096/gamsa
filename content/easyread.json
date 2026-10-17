@@ -1,7 +1,7 @@
 {
-  "title": "Gender-Affirming Medicines South Australia",
+  "title": "Easy Read guides",
   "subtitle": "Easy Read guides",
-  "kicker": "An Easy Read guide",
+  "kicker": "Easy Read",
   "guides": [
     {
       "id": "start",
@@ -286,7 +286,8 @@
                 "You are not the first person to ask."
               ]
             }
-          ]
+          ],
+          "figure": "safety-net"
         },
         {
           "h": "Closing the Gap",
@@ -342,10 +343,11 @@
               "lines": [
                 "Do not put a patch on your chest or breast.",
                 "Do not put it where a belt or waistband rubs.",
-                "If a patch falls off, put on a new one."
+                "If a patch falls off, put it back on or use a new one."
               ]
             }
-          ]
+          ],
+          "figure": "patch-sites"
         },
         {
           "h": "Gel",
@@ -366,7 +368,8 @@
                 "This matters most for children and pregnant people."
               ]
             }
-          ]
+          ],
+          "figure": "gel-sites"
         },
         {
           "h": "If you are not sure",
@@ -403,6 +406,15 @@
                 "Tell the nurse or doctor if you feel unwell.",
                 "Also tell them if an injection has made you sick before."
               ]
+            },
+            {
+              "icon": "pills",
+              "lines": [
+                "Tell your doctor about all your other medicines.",
+                "Testosterone can make your blood thicker.",
+                "Some medicines for diabetes, the heart or the kidneys can do this too.",
+                "If you take one of them, you may need more blood tests."
+              ]
             }
           ]
         },
@@ -413,7 +425,7 @@
               "icon": "clock",
               "lines": [
                 "The long-acting testosterone injection is given slowly, into the side of your hip.",
-                "You then wait in the clinic for about 15 minutes.",
+                "You then wait in the clinic for at least 30 minutes.",
                 "This is normal. It is so staff can help if you have a rare reaction."
               ]
             },
@@ -434,8 +446,20 @@
                 "Ask when your next injection is due before you leave.",
                 "Write it down."
               ]
+            },
+            {
+              "icon": "help",
+              "lines": [
+                "Some injections and implants pause your body's own sex hormones.",
+                "Zoladex, Lucrin, Eligard and Diphereline work this way.",
+                "They can change your mood. Some people feel very low.",
+                "A very small number of people have thoughts of suicide.",
+                "Tell your doctor if your mood changes.",
+                "If you feel low or unsafe, ring Lifeline on **13 11 14**, any time."
+              ]
             }
-          ]
+          ],
+          "figure": "vg-site"
         },
         {
           "h": "Injecting at home",
@@ -456,7 +480,8 @@
                 "Your pharmacy can tell you where to get a sharps bin."
               ]
             }
-          ]
+          ],
+          "figure": "injection-rotation"
         }
       ],
       "audience": "you"
@@ -522,7 +547,7 @@
               "lines": [
                 "The numbers are in **milligrams (mg)** or **micrograms (mcg)**.",
                 "A microgram is a thousand times smaller than a milligram.",
-                "That is why patches say 50 mcg and tablets say 2 mg. They are different medicines in different amounts."
+                "That is why a patch says 50 mcg and a tablet says 2 mg. They are different ways of taking the medicine, so the amounts are different."
               ]
             }
           ]
@@ -570,7 +595,8 @@
                 "That is a normal thing to ask."
               ]
             }
-          ]
+          ],
+          "figure": "review-rhythm"
         }
       ],
       "audience": "you"
@@ -578,7 +604,7 @@
     {
       "id": "help",
       "title": "Where to get help",
-      "subtitle": "People who can help, and a word list",
+      "subtitle": "People who can help",
       "sections": [
         {
           "h": "Using your medicine safely",
@@ -636,8 +662,17 @@
             {
               "icon": "phone",
               "lines": [
-                "You can ring **healthdirect** on **1800 022 222** to talk to a nurse.",
+                "You can ring **1800MEDICARE** on **1800 633 422** to talk to a nurse.",
                 "This is free and open all day and all night."
+              ]
+            },
+            {
+              "icon": "phone",
+              "lines": [
+                "SA Mental Health Triage helps in a mental health crisis in South Australia. Ring **13 14 65**, any time.",
+                "If you feel low or unsafe, ring Lifeline on **13 11 14**, any time.",
+                "QLife is for LGBTIQ+ people. Ring **1800 184 527**, 3pm to 9pm, every day.",
+                "13YARN is for Aboriginal and Torres Strait Islander people. Ring **13 92 76**, any time."
               ]
             },
             {
@@ -757,7 +792,7 @@
               "icon": "clock",
               "lines": [
                 "Some people get a long-acting injection every few months.",
-                "After the injection they wait at the clinic for about 30 minutes.",
+                "After the injection they wait at the clinic for at least 30 minutes.",
                 "This is normal and safe."
               ]
             },
@@ -784,7 +819,7 @@
               "icon": "phone",
               "lines": [
                 "QLife is a phone line for LGBTIQ+ people and the people who care about them.",
-                "Call **1800 184 527**, 3pm to 9pm.",
+                "Call **1800 184 527**, 3pm to 9pm, every day.",
                 "Or chat online at qlife.org.au."
               ]
             }
@@ -940,7 +975,7 @@
           "h": "Things not to do",
           "blocks": [
             {
-              "icon": "bold",
+              "icon": "warn",
               "lines": [
                 "Do not change the dose.",
                 "Do not stop the medicine.",
@@ -1038,6 +1073,22 @@
   ],
   "wordlist": [
     {
+      "w": "60-day",
+      "d": "A 60-day prescription gives you two months of medicine at a time."
+    },
+    {
+      "w": "Allies",
+      "d": "People who support trans and gender diverse people."
+    },
+    {
+      "w": "Block",
+      "d": "To stop something working. A medicine that blocks a hormone is called a blocker."
+    },
+    {
+      "w": "Blood test",
+      "d": "A small amount of blood is taken to check your medicine is working."
+    },
+    {
       "w": "Brand",
       "d": "The name a company puts on a medicine. Two brands can be the same medicine."
     },
@@ -1050,12 +1101,20 @@
       "d": "The part of the medicine price that you pay."
     },
     {
+      "w": "Concession card",
+      "d": "A government card that makes PBS medicines cheaper."
+    },
+    {
       "w": "Dose",
       "d": "How much medicine you take, and how often."
     },
     {
       "w": "E-script",
       "d": "A prescription sent to your phone or email instead of on paper."
+    },
+    {
+      "w": "Gel",
+      "d": "Medicine you rub on your skin."
     },
     {
       "w": "Gender-affirming hormone therapy",
@@ -1074,8 +1133,28 @@
       "d": "A person who says what you say in another language, so you and your doctor understand each other."
     },
     {
+      "w": "Medicare card",
+      "d": "The card that lets you get PBS prices."
+    },
+    {
+      "w": "Microgram",
+      "d": "A much smaller way to measure medicine. It is written mcg. 1000 micrograms make 1 milligram."
+    },
+    {
+      "w": "Milligram",
+      "d": "A way to measure how much medicine. It is written mg."
+    },
+    {
+      "w": "Oestrogen",
+      "d": "A hormone. Some people take it as a medicine."
+    },
+    {
       "w": "Patch",
       "d": "A sticker with medicine inside that goes on your skin."
+    },
+    {
+      "w": "PATS",
+      "d": "Help with travel costs in South Australia when you need to see a specialist far away."
     },
     {
       "w": "PBS",
@@ -1100,6 +1179,10 @@
     {
       "w": "Telehealth",
       "d": "Seeing your doctor by phone or video."
+    },
+    {
+      "w": "Testosterone",
+      "d": "A hormone. Some people take it as a medicine."
     }
   ]
 }

@@ -13,6 +13,9 @@ Prints one line per check: "PASS name — detail", "FAIL name — detail" or "SK
   keyboard       Tab reaches skip link, menu, accessibility, quick exit, search; focus always visible;
                  Enter opens a menu group, Escape closes it
   print          print media: no sideways overflow at A4 width, header and menus hidden or static
+  figures        figures built by figures.py: alt <= 100 characters, visible long description, words in HTML (no SVG
+                 text), each view <= 8 KB, no fixed colours or plates; lines and marks >= 3:1 in light, dark, high
+                 contrast, HC + dark, colour-blind and CB + dark (browser part needs the local server)
   engines        Safari (WebKit) and Firefox: home, a hub, costs and an Easy Read page render without errors
                  or overflow at phone and desktop width (SKIP if the engines are not installed:
                  python3 -m playwright install webkit firefox)
@@ -48,6 +51,9 @@ def seo():
     if dups: bad.append(f"duplicate descriptions {dups[:2]}")
     s = (D/"search.html").read_text() if (D/"search.html").exists() else ""
     if 'name="robots" content="noindex"' not in s or "gamsa.au/search<" in sm: bad.append("search should be noindex and out of the sitemap")
+    for _p in ("/sightings", "/feedback"):
+        if f"gamsa.au{_p}<" not in sm: bad.append(f"{_p} should be in the sitemap")
+        elif 'name="robots" content="noindex"' in (D/(_p.strip("/")+".html")).read_text(): bad.append(f"{_p} is in the sitemap but noindex")
     out(not bad, "seo", "; ".join(bad[:6]) or "titles, descriptions, canonicals, Open Graph, JSON-LD")
 
 def downloads():
@@ -95,6 +101,8 @@ def pdfs():
         import zipfile
         with zipfile.ZipFile(z) as zz:
             for n in zz.namelist():
+                if not n.endswith(".pdf"): continue  # README.txt lives only in the zip
+                if not (ROOT/"static/clinicians"/n).exists(): bad.append(f"training zip has {n}, missing from static/clinicians"); continue
                 if zz.read(n) != (ROOT/"static/clinicians"/n).read_bytes(): bad.append(f"training zip has an old copy of {n} - run python3 tools/brand.py")
     out(not bad, "pdfs", "; ".join(bad[:5]) or f"{len(info)} PDFs open, page counts OK, logo on each, training zip current" + (", QR codes point to gamsa.au" if cv2 else " (QR not checked: pip install opencv-python-headless)"))
 
@@ -104,7 +112,11 @@ def assets():
         for u in re.findall(r'og:image" content="https://gamsa\.au/([^"]+)"', h):
             if not (D / u).exists(): bad.append(f"missing og image {u}")
         if re.search(r"fonts\.(googleapis|gstatic)\.com", h): bad.append(f"Google Fonts still referenced in {f}")
+        for u in set(re.findall(r'<link [^>]*href="/([^"#?]+)"', h)):   # tab icons (mask-icon.svg), font preloads
+            if not (D / u).exists(): bad.append(f"linked file missing /{u} in {f}")
         if "ld+json" in h and str(f).startswith("/medicines/") and '"FAQPage"' not in h: bad.append(f"no FAQ markup {f}")
+    for k in ("favicon.ico", "apple-touch-icon.png", "mask-icon.svg"):
+        if not (D / k).exists() or (D / k).read_bytes() != (ROOT / "static" / k).read_bytes(): bad.append(f"icon {k} missing or not the static/ file")
     keys = [k for k in D.glob("*.txt") if re.fullmatch(r"[0-9a-f]{32}\.txt", k.name)]
     if not keys: bad.append("IndexNow key file missing")
     for w in ("public-sans-latin-wght-normal", "lexend-latin-wght-normal", "atkinson-hyperlegible-latin-700-normal"):
@@ -121,7 +133,7 @@ def assets():
                 tgt = f2[1].replace(":splat", "estradiol-patches")
                 if tgt not in real and not (D / (tgt.strip("/") + ".html")).exists(): bad.append(f"redirect target missing {f2[1]}")
                 if f2[0].rstrip("*").rstrip("/") in real: bad.append(f"redirect hides a real page {f2[0]}")
-    out(not bad, "assets", "; ".join(bad[:4]) or "own fonts, page share images, FAQ markup and IndexNow key in place")
+    out(not bad, "assets", "; ".join(bad[:4]) or "own fonts, page share images, icons, linked files, FAQ markup and IndexNow key in place")
 
 def review_date():
     import json as _j, datetime as _dt
@@ -143,6 +155,95 @@ def wording():
             if '\\"' in ctx: continue   # inside a quotation from a source
             if w.lower() in us or not m.group(1): bad.append(f"{f.name}: …{ctx.strip()[:50]}…")
     out(not bad, "wording", "; ".join(bad[:5]) or "no leftovers or US spellings")
+
+FIG_MODES = {"light": {"theme": "light"}, "dark": {"theme": "dark"}, "high contrast": {"theme": "light", "hc": "1"},
+             "HC + dark": {"theme": "dark", "hc": "1"}, "colour-blind": {"theme": "light", "cb": "1"}, "CB + dark": {"theme": "dark", "cb": "1"}}
+# art shapes that carry meaning (lines, marks, sites): each must stand out 3:1 from the figure surface (WCAG 2.2 1.4.11).
+# Left out on purpose: the soft arch, zone tints and textures (decoration; the outline, hatching and words carry the meaning).
+FIG_JS = """() => { const out=[]; const lum=c=>{const m=c.match(/[\\d.]+/g);if(!m)return null;const [r,g,b]=m.slice(0,3).map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return {L:.2126*r+.7152*g+.0722*b,a:m.length>3?+m[3]:1}};
+  const ratio=(a,b)=>{const x=lum(a),y=lum(b);if(!x||!y)return 99;return (Math.max(x.L,y.L)+.05)/(Math.min(x.L,y.L)+.05)};
+  for(const f of document.querySelectorAll('.view.on figure.gf')){ const bg=getComputedStyle(f).backgroundColor;
+    for(const e of f.querySelectorAll('svg :is(.k-body,.k-body *,.k-bone,.k-v,.k-mark,.k-site,.k-not rect,.k-x,.k-band,.k-edge,.k-edge2,.k-needle,.k-hub,.k-axis,.k-line,.k-p,.k-pl,.k-pa,.k-za,.k-pf,.k-pm,.k-arrow,.gf-sw .k-spot,.k-zb,.gf-bod .k-zone *,.k-pn rect)')){
+      const s=getComputedStyle(e); if(s.display==='none'||!e.getBoundingClientRect().width) continue;
+      const paint=(s.stroke&&s.stroke!=='none'&&parseFloat(s.strokeWidth)>0&&!e.matches('.k-site'))?s.stroke:s.fill;
+      if(!paint||paint==='none'||/url/.test(paint)) continue;
+      const r=ratio(paint,bg); if(r<3) out.push(f.dataset.fig+' '+e.getAttribute('class')+' '+paint+' on '+bg+' '+r.toFixed(2)); }
+    for(const e of f.querySelectorAll('.gf-mk')){ const s=getComputedStyle(e), b=e.getBoundingClientRect(); if(s.display==='none'||!(b.width||b.height)) continue;
+      let paint=(s.backgroundImage==='none'&&!e.matches('.gf-win,.gf-ring')&&s.backgroundColor!=='rgba(0, 0, 0, 0)')?s.backgroundColor:null;
+      if(!paint&&parseFloat(s.borderTopWidth)>0) paint=s.borderTopColor; if(!paint) continue;   /* hatching is texture: its stripes are checked by eye */
+      const r=ratio(paint,bg); if(r<3) out.push(f.dataset.fig+' '+e.className+' '+paint+' on '+bg+' '+r.toFixed(2)); }
+    for(const sv of f.querySelectorAll('svg')){ const b=getComputedStyle(sv).backgroundColor; if(b!=='rgba(0, 0, 0, 0)') out.push(f.dataset.fig+' plate '+b); }
+    if(document.documentElement.classList.contains('dark') && lum(bg) && lum(bg).L>.5) out.push(f.dataset.fig+' light figure in dark mode');
+  } return out; }"""
+
+# Easy Read pictures (template ICONS): the picture colour against whatever it sits on (row, card, page) >= 3:1, no plate
+ICON_JS = """() => { const out=[]; const lum=c=>{const m=c.match(/[\\d.]+/g);if(!m)return null;const [r,g,b]=m.slice(0,3).map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return {L:.2126*r+.7152*g+.0722*b,a:m.length>3?+m[3]:1}};
+  const ratio=(a,b)=>{const x=lum(a),y=lum(b);if(!x||!y)return 99;return (Math.max(x.L,y.L)+.05)/(Math.min(x.L,y.L)+.05)};
+  const bgOf=e=>{for(let x=e;x;x=x.parentElement){const b=getComputedStyle(x).backgroundColor;const l=lum(b);if(l&&l.a>0)return b;}return 'rgb(255, 255, 255)'};
+  let n=0; for(const sv of document.querySelectorAll('.view.on svg.er-icon')){ if(!sv.getBoundingClientRect().width) continue; n++;
+    const s=getComputedStyle(sv); if(s.backgroundColor!=='rgba(0, 0, 0, 0)') out.push('icon plate '+s.backgroundColor);
+    const bg=bgOf(sv.parentElement), r=ratio(s.fill,bg); if(r<3) out.push('icon '+s.fill+' on '+bg+' '+r.toFixed(2)); }
+  return {n, out}; }"""
+
+def figures():
+    """figures built by figures.py from content/*.json: alt <= 100 characters, a long description on the page, every word in
+    HTML (no drawn <text>), each view <= 8 KB, colours only from the stylesheet (no fixed white plate); then, in the browser,
+    lines and marks (SVG shapes and the HTML chart marks) >= 3:1 against the figure in every colour mode, and the Easy Read
+    pictures >= 3:1 against what they sit on. A section with an old hand-drawn "svg" is a failure (it is no longer shown)."""
+    sys.path.insert(0, str(ROOT))
+    import figures as F
+    c = {p.stem: json.loads(p.read_text()) for p in (ROOT / "content").glob("*.json")}
+    old = [f"{k}:{i}" for k, v in c.items() if isinstance(v, dict) for i, s in enumerate(v.get("sections", [])) if s.get("svg")]
+    bad = [f"{x} has an old svg diagram, which the site no longer shows: convert it to a figure" for x in old]
+    try: done = F.render_content(c)
+    except Exception as e: return out(False, "figures", f"definition error: {e}")
+    for page in c.values():
+        for s in (page.get("sections", []) if isinstance(page, dict) else []):
+            g = s.get("fig")
+            if not g: continue
+            d = g["id"]
+            if s.get("svg"): bad.append(f"{d} has an old svg as well")
+            h, er = g["html"], g["er"]
+            alt = re.search(r'<title id="[^"]+">([^<]*)</title>|aria-label="([^"]*)"', h)
+            alt = (alt.group(1) or alt.group(2)) if alt else ""
+            if not alt: bad.append(f"{d} no alt")
+            elif len(alt) > F.ALT_MAX: bad.append(f"{d} alt {len(alt)} chars")
+            if not re.search(r'id="gfU-[^"]+-d"[^>]*>[^<]{20,}', h): bad.append(f"{d} no long description")
+            if '<svg' in h and 'role="img"' in h and 'aria-describedby="gfU-' not in h: bad.append(f"{d} drawing not tied to its description")
+            for v, x in (("page", h), ("easy", er)):
+                if "<text" in x: bad.append(f"{d} {v}: words drawn in the SVG")
+                if len(x.encode()) > F.LIMIT: bad.append(f"{d} {v} view {len(x.encode())} B > {F.LIMIT}")
+                if re.search(r'(fill|stroke|stop-color)="#|style="[^"]*(?:fill|stroke|background)', x): bad.append(f"{d} {v}: fixed colour in the markup")
+            if not g["er"].count("<li>") >= 3: bad.append(f"{d} fewer than 3 Easy Read panels")
+    detail = f"{len(done)} figures: alt <= 100, long description, words in HTML, <= 8 KB, colours from the stylesheet"
+    try:
+        import socket; s_ = socket.socket(); up = s_.connect_ex(("127.0.0.1", 8767)) == 0; s_.close()
+        if not up: raise RuntimeError("local server not running")
+        from playwright.sync_api import sync_playwright
+        routes = sorted({"/using", "/costs", "/doses"} | {"/easy/" + g["id"] for g in c["easyread"]["guides"] for s in g["sections"] if s.get("figure")}
+                        | {"/medicines/estradiol-patches", "/medicines/estradiol-tablets", "/medicines/cyproterone-acetate"})
+        with sync_playwright() as p:
+            b = p.chromium.launch(**({"executable_path": CHROME} if CHROME else {}))
+            icons, er_routes = 0, ["/easy"] + ["/easy/" + g["id"] for g in c["easyread"]["guides"]]
+            for mode, ls in FIG_MODES.items():
+                ctx = b.new_context(viewport={"width": 1280, "height": 900})
+                ctx.add_init_script("try{localStorage.clear();" + "".join(f"localStorage.setItem('gamsa.{k}','{v}');" for k, v in ls.items()) + "}catch(e){}")
+                ctx.route("**/*", lambda r: r.abort() if "127.0.0.1" not in r.request.url else r.continue_())
+                pg = ctx.new_page()
+                for r in routes:
+                    pg.goto(B + r); pg.wait_for_timeout(250)
+                    bad += [f"{mode} {r}: {x}" for x in pg.evaluate(FIG_JS)[:3]]
+                for r in er_routes:
+                    pg.goto(B + r); pg.wait_for_timeout(200)
+                    res = pg.evaluate(ICON_JS); icons += res["n"]
+                    bad += [f"{mode} {r}: {x}" for x in res["out"][:3]]
+                ctx.close()
+            b.close()
+        detail += (f"; lines and marks >= 3:1, no plates, in {len(FIG_MODES)} colour modes on {len(routes)} pages"
+                   f"; Easy Read pictures >= 3:1, no plates ({icons} checks on {len(er_routes)} pages)")
+    except Exception as e:
+        detail += f" (browser part skipped: {str(e)[:60]})"
+    out(not bad, "figures", "; ".join(bad[:5]) or detail)
 
 def weight(update=False):
     base_f = ROOT/"tools"/"weights.json"
@@ -244,7 +345,8 @@ def engines():
 
 if __name__ == "__main__":
     if "--engines-only" in sys.argv: engines(); sys.exit(0)
-    seo(); downloads(); assets(); review_date(); pdfs(); wording(); weight("--update-weights" in sys.argv)
+    if "--figures-only" in sys.argv: figures(); sys.exit(0)
+    seo(); downloads(); assets(); review_date(); pdfs(); wording(); figures(); weight("--update-weights" in sys.argv)
     try: browser_checks()
     except Exception as e: out(False, "browser checks", str(e)[:200])
     engines()

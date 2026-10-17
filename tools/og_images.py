@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
-"""Brand images from the logo (static/logo.svg): share images, favicon.ico and the home-screen icon.
+"""Brand images: share images from the logo (static/logo.svg); favicon.ico and the home-screen icon from the tab icon masters.
 
-  python3 tools/og_images.py      # (usually via tools/brand.py) needs Pillow and Playwright's Chromium (CHROME=/path if not bundled)
+  python3 tools/og_images.py        # (usually via tools/brand.py) needs Pillow and Playwright's Chromium (CHROME=/path if not bundled)
+  python3 tools/og_images.py icons  # favicon.ico and apple-touch-icon.png only
 Writes static/og-image.png (site-wide share image), static/og/*.jpg (hubs, key pages, every medicine),
-static/favicon.ico (16/32/48, seamless small version) and static/apple-touch-icon.png (180, full-bleed).
-Run after adding or renaming a medicine or hub, or after any logo or palette change.
+static/favicon.ico and static/apple-touch-icon.png. Tab icon N8 "Adaptive 5b cross" (v18.1.1, 15 Oct 2026), no tile:
+  static/favicon-master.svg = the tab icon (template.html line 4 is this file as a data URI): teal keyline, bar teal in light
+    tabs (.L) and white in dark tabs (.D); favicon.ico (no media query there) takes the white-bar art (.D): 16 and 32 px from this 16 grid,
+  static/apple-touch-icon-master.svg = the 64 master on the teal tile (iOS shows a transparent icon on black): apple-touch-icon.png (180),
+    and its inner 64 art, without the tile, is favicon.ico's 48 px. static/mask-icon.svg is Safari's pinned-tab silhouette (hand-drawn).
+Icons are drawn at 4-16x and box-filtered down (same as the design round's ship.py, so the files come out byte-identical).
+Run after adding or renaming a medicine or hub, or after any logo, icon or palette change.
 """
-import io, json, os, pathlib, textwrap
+import io, json, os, pathlib, re, sys, textwrap
 from PIL import Image, ImageDraw, ImageFont
 R = pathlib.Path(__file__).resolve().parents[1]
 S = R / "static"; OUT = S / "og"
@@ -20,14 +26,26 @@ def font(bold, size):
             if (pathlib.Path(d) / n).exists(): return ImageFont.truetype(str(pathlib.Path(d) / n), size)
     return ImageFont.load_default()
 
-def render(svg, px, transparent=True):
+def render(svg, px, transparent=True, ss=1):
+    """svg at px x px; ss > 1 draws it ss times larger and box-filters it down (crisper small icons)"""
     from playwright.sync_api import sync_playwright
+    n = px * ss
     with sync_playwright() as p:
         kw = {"executable_path": os.environ["CHROME"]} if os.environ.get("CHROME") else {}
-        b = p.chromium.launch(**kw); pg = b.new_page(viewport={"width": px, "height": px})
-        pg.set_content(f"<style>html,body{{margin:0;background:transparent}}svg{{width:{px}px;height:{px}px;display:block}}</style>{svg}")
+        b = p.chromium.launch(**kw); pg = b.new_page(viewport={"width": n, "height": n})
+        pg.set_content(f"<style>html,body{{margin:0;background:transparent}}svg{{width:{n}px;height:{n}px;display:block}}</style>{svg}")
         img = Image.open(io.BytesIO(pg.screenshot(omit_background=transparent))).convert("RGBA"); b.close()
-    return img
+    return img if ss == 1 else img.resize((px, px), Image.BOX)
+
+def icons():
+    """favicon.ico (16/32/48, white-bar art) and apple-touch-icon.png (180, teal tile) from the N8 masters"""
+    fav, tile = (S / "favicon-master.svg").read_text(), (S / "apple-touch-icon-master.svg").read_text()
+    dark = re.search(r'<g class="D">(.*?)</g></svg>', fav, re.S).group(1)
+    a16 = f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">{dark}</svg>'
+    a64 = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">' + re.search(r'<g transform="translate\(6\.4 6\.4\) scale\(\.8\)">(.*)</g></svg>', tile, re.S).group(1) + "</svg>"
+    f16, f32, f48 = render(a16, 16, ss=16), render(a16, 32, ss=8), render(a64, 48, ss=4)
+    f48.save(S / "favicon.ico", format="ICO", sizes=[(16, 16), (32, 32), (48, 48)], append_images=[f16, f32])
+    render(re.sub(r' width="64" height="64"', "", tile, count=1), 180, ss=4).convert("RGB").save(S / "apple-touch-icon.png")
 
 def hx(h): return tuple(int(h[i:i + 2], 16) for i in (1, 3, 5))
 
@@ -45,7 +63,6 @@ def background():
 def main():
     OUT.mkdir(exist_ok=True)
     logo = (S / "logo.svg").read_text()
-    small = logo.replace('<rect x="23.5" y="31" width="17" height="2" fill="#FFFFFF"/>', "")
     big = render(logo, 112)
     faint = render(logo.replace('<rect x="1.5" y="1.5" width="61" height="61" rx="14" fill="#0B5D7A"/>', ""), 460)
     faint.putalpha(faint.getchannel("A").point(lambda v: int(v * .13)))
@@ -74,12 +91,9 @@ def main():
     for k, (t, s2, c) in pages.items(): make(OUT / f"{k}.jpg", t, s2, c)
     meds = json.loads((R / "content/medicines.json").read_text())["medicines"]
     for m in meds: make(OUT / f"medicines-{m['id']}.jpg", m["name"].split(" (")[0], "Doses, cost, supply and how to use it", FLAG)
-    # icons
-    ico = [render(small, n) for n in (16, 32, 48)]
-    ico[2].save(S / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)], append_images=ico[:2])
-    full = logo.replace('rx="14"', 'rx="0"').replace('x="1.5" y="1.5" width="61" height="61"', 'x="0" y="0" width="64" height="64"')
-    render(full, 180, transparent=False).convert("RGB").save(S / "apple-touch-icon.png", optimize=True)
+    icons()
     print(f"og-image.png + {len(pages) + len(meds)} share images, favicon.ico, apple-touch-icon.png written")
 
 if __name__ == "__main__":
-    main()
+    if "icons" in sys.argv[1:]: icons(); print("favicon.ico, apple-touch-icon.png written")
+    else: main()

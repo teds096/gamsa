@@ -9,6 +9,15 @@ B=CHROME
 ROUTES=["#/","#/supply","#/medicines","#/med/spironolactone","#/med/testosterone-undecanoate",
         "#/doses","#/using","#/pharmacy","#/costs","#/easy","#/easy/doses","#/feedback","#/pharmacy-reports","#/sightings"]
 fails=[]; notes=[]
+WHOLE_FIG = r"""()=>{ const lb=document.getElementById('figZoom'), c=document.querySelector('#lbInner figure.gf'), f=[...document.querySelectorAll('.view.on figure.gf')].find(x=>x.querySelector('.gf-t').textContent===document.getElementById('lbTitle').textContent);
+  if(!c||!f) return 'no window copy';
+  const norm=(el,skip)=>{ const k=el.cloneNode(true); k.querySelectorAll(skip).forEach(e=>e.remove()); return k.textContent.replace(/\s+/g,' ').trim(); };
+  if(norm(f,'.fig-open,.figzoom-hint,.gf-t')!==norm(c,'.gf-t')) return 'words differ';
+  for(const s of ['.gf-s','.gf-art','.gf-pin','.gf-lab','.gf-long','.gf-key>li','.gf-steps>li','.gf-note','.gf-rows>li','.gf-mi>li','.gf-lgd>li','figcaption'])
+    if(f.querySelectorAll(s).length!==c.querySelectorAll(s).length) return s+' missing';
+  if(lb.getAttribute('aria-modal')!=='true') return 'not modal';
+  const st=document.getElementById('lbStage'); if(st.scrollWidth>st.clientWidth+1) return 'scrolls sideways';
+  return 'ok'; }"""
 def chk(ok, msg):
     (notes if ok else fails).append(("PASS " if ok else "FAIL ")+msg)
 
@@ -74,23 +83,30 @@ with sync_playwright() as pw:
     pg.evaluate("""() => { const s=speechSynthesis; s.speak=u=>{ window.__c.push(u.text); setTimeout(()=>u.onend&&u.onend(),40); }; }""")
     pg.tap("#ttsBtn"); pg.wait_for_timeout(700)
     chk(pg.locator("#ttsBar").is_visible(), "speech control bar shows on mobile")
-    bb=pg.locator("#ttsToggle").bounding_box() or {"x":-1,"width":0}
+    bb=pg.locator("#ttsBar").bounding_box() or {"x":-1,"width":0}
     chk(bb["x"]>=0 and bb["x"]+bb["width"]<=391, "speech bar fits the screen")
     pg.evaluate("document.getElementById('ttsMenu').click()"); pg.wait_for_timeout(300)
     pg.evaluate("document.getElementById('ttsNext').click()"); pg.wait_for_timeout(5000)
+    pg.evaluate("document.getElementById('ttsNext').click()"); pg.wait_for_timeout(600)   # back on the page: Next = the next section's heading
     c=pg.evaluate("window.__c")
     chk(len(c)>20, "read aloud runs on mobile (%d pieces)"%len(c))
     chk(not any("menu has" in x for x in c[:3]), "read aloud does not start by reading the whole menu")
     chk(any(x.startswith("Site menu") for x in c), "Menu button on the speech bar reads the menu")
+    chk(any(x.startswith("Back to the page") for x in c), "after the menu, read aloud goes back to the page")
+    chk(any(x.startswith("Section ") and " of " in x[:16] for x in c), "read aloud announces each section")
+    chk(not any("[" in x for x in c), "read aloud leaves out reference markers")
     pg.evaluate("document.getElementById('ttsStop').click()")
 
     # figure window on mobile (touch)
-    pg.goto(url+"#/costs"); pg.wait_for_timeout(900)
-    figs=pg.query_selector_all("#v-costs figure")
-    figs[-2].tap(); pg.wait_for_timeout(500)
+    pg.goto(url+"#/doses"); pg.wait_for_timeout(900)   # the Costs figures are words and charts now (no drawing to enlarge)
+    figs=pg.query_selector_all("#v-doses figure .gf-art")
+    figs[0].tap(); pg.wait_for_timeout(500)
     chk(pg.locator("#figZoom").is_visible(), "diagram window opens on tap")
     lbb=pg.locator("#figZoom").bounding_box()
     chk(lbb["x"]>=-1 and lbb["x"]+lbb["width"]<=392, "diagram window fits the screen (x=%s w=%s)"%(round(lbb["x"]),round(lbb["width"])))
+    chk(abs(lbb["x"])<=1 and abs(lbb["width"]-390)<=1, "on a phone the figure window is a full-screen sheet")
+    wf=pg.evaluate(WHOLE_FIG)
+    chk(wf=="ok", "figure window shows the whole figure: words, drawing, pins, key, description, caption ("+wf+")")
     pg.tap("#lbIn"); pg.wait_for_timeout(200)
     chk(pg.locator("#lbLvl").inner_text()!="100%", "zoom in works by tap (%s)"%pg.locator("#lbLvl").inner_text())
     pg.tap("#lbLensBtn"); pg.wait_for_timeout(200)
@@ -98,6 +114,7 @@ with sync_playwright() as pw:
         "magnifier toggles on mobile")
     pg.tap("#lbClose"); pg.wait_for_timeout(200)
     chk(not pg.locator("#figZoom").is_visible(), "diagram window closes")
+    chk(pg.evaluate("document.activeElement && document.activeElement.classList.contains('fig-open') && ![...document.body.children].some(e=>e.inert)"), "closing returns focus to Enlarge and the page is usable again")
     pg.screenshot(path="/tmp/gamsa-mob.png")
 
     # ---------- ALL ROUTES, DESKTOP + MOBILE ----------

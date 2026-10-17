@@ -45,6 +45,8 @@ def _tok(obj):
     for k, v in _dates.items(): s = s.replace(k, v)
     return _stamp_refs(json.loads(s))
 content = _tok(content); medinfo = _tok(medinfo)
+import figures   # figure definitions in content/*.json -> HTML + inline SVG (page view + Easy Read view); see figures.py
+_FIGS = figures.render_content(content)
 html = _tpl.replace("{{REVIEWED}}", _dates["{{REVIEWED}}"]).replace("__TURNSTILE_SITEKEY__", CFG.get("turnstileSiteKey", "")) \
     .replace("__MEDS__", json.dumps(payload, separators=(",",":"))) \
     .replace("__CONTENT__", json.dumps(content, separators=(",",":"))) \
@@ -74,7 +76,7 @@ def head(title, desc, path, extra=""):
     t, d = H.escape(title, quote=True), H.escape(desc, quote=True)
     _og = (R/"static/og"/((path.strip("/").replace("/", "-") or "home") + ".jpg"))
     og = f"{SITE}/og/{_og.name}" if _og.exists() else f"{SITE}/og-image.png"
-    return ('<!doctype html>\n<html lang="en-AU"__ROUTING__>\n<head>\n<meta charset="utf-8">\n'
+    return ('<!doctype html>\n<html lang="en-AU" class="rb-b3"__ROUTING__>\n<head>\n<meta charset="utf-8">\n'
             '<meta name="viewport" content="width=device-width,initial-scale=1">\n'
             f'<meta name="description" content="{d}">\n'
             '<meta name="theme-color" content="#0B5D7A" media="(prefers-color-scheme: light)">\n<meta name="theme-color" content="#0A2E3C" media="(prefers-color-scheme: dark)">\n'
@@ -125,12 +127,12 @@ VIEWDESC = {
  "/supply": "Which gender-affirming hormone medicines are in short supply in Australia right now, checked daily against TGA records, and what to do about it.",
  "/medicines": "Every medicine used in gender-affirming hormone therapy in Australia, with a page for each: how it is used, cost, monitoring and current supply.",
  "/sightings": "Reports from the public of gender-affirming medicines seen in stock at South Australian pharmacies.",
- "/pharmacy-reports": "Stock reports for gender-affirming medicines posted by registered South Australian pharmacists.",
+ "/pharmacy-reports": "Stock reports for gender-affirming medicines posted by registered pharmacists.",
  "/feedback": "Report a mistake, something missing or an accessibility problem on GAMSA.",
- "/search": "Search every page, guide and medicine on GAMSA.",
+ "/search": "Search every page, medicine and Easy Read guide on GAMSA. The search runs in your browser.",
  "/alerts": "Gender-affirming medicines under a current TGA shortage notice, with an RSS feed for prescribers and pharmacists.",
  "/trans": "Gender-affirming medicines in plain language for trans and gender diverse South Australians: supply, costs, doses, how to use each one, and your pharmacy.",
- "/clinicians": "For prescribers, nurses and pharmacists: testosterone injection training package, pharmacist stock register, monitoring schedule, PBS Authority wording, shortage alerts.",
+ "/clinicians": "For prescribers, nurses and pharmacists: an injection training package, pharmacist stock register, monitoring schedule and PBS Authority wording card.",
  "/allies": "GAMSA for family, friends and allies of trans and gender diverse people: what the medicines are, what goes wrong, and how to help at the pharmacy.",
  "/easy": "Easy Read guides to gender-affirming hormone medicines: getting your medicine, shortages, costs, doses and using it safely, in short sentences with pictures.",
 }
@@ -150,7 +152,7 @@ def ld(obj):
     return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False).replace("</", "<\\/") + "</script>\n"
 
 def write(path, title, desc, view, schema, noindex=False):
-    full = title if path == "/" else title + " — GAMSA"
+    full = title + " — GAMSA"   # home too (v18.1.1 review): the same title the app sets after in-app navigation, with the brand name
     extra = ld(schema) + ('<meta name="robots" content="noindex">\n' if noindex else "")
     top = head(full, desc, path, extra).replace("__ROUTING__", ' data-routing="path"')
     body = page.replace("__TITLE__", H.escape(full), 1) \
@@ -173,7 +175,7 @@ for path, title in TITLES.items():
                   "url": SITE + path, "description": desc, "inLanguage": "en-AU",
                   "author": AUTHOR, "publisher": ORG}
     write(path, title, desc, VIEWID[path], schema, noindex=(path == "/search"))
-    if path not in ("/sightings", "/feedback", "/search"): urls.append(path)
+    if path != "/search": urls.append(path)   # /sightings and /feedback indexed too (v18.1.1, Ted 15 Oct); /search stays noindex
 
 for m in medinfo["medicines"]:
     path = "/medicines/" + m["id"]
@@ -231,7 +233,7 @@ def _rss():
         try: dt = datetime.datetime.fromisoformat(str(d)[:10]).replace(tzinfo=datetime.timezone.utc)
         except Exception: dt = datetime.datetime.now(datetime.timezone.utc)
         link = SITE + "/supply"
-        items.append("<item><title>" + H.escape(f"{st}: {name}") + "</title><link>" + link + "</link><guid isPermaLink=\"false\">" + H.escape(f"gamsa-{r.get('id', name)}-{r.get('status')}") + "</guid><pubDate>" + email.utils.format_datetime(dt) + "</pubDate><description>" + H.escape((r.get("note") or st) + " Expected return: " + str(r.get("expectedReturn", "—")) + ". TGA status as checked " + str(meds.get("generatedAt", "")) + ".") + "</description></item>")
+        items.append("<item><title>" + H.escape(f"{st}: {name}") + "</title><link>" + link + "</link><guid isPermaLink=\"false\">" + H.escape(f"gamsa-{r.get('id', name)}-{r.get('status')}") + "</guid><pubDate>" + email.utils.format_datetime(dt) + "</pubDate><description>" + H.escape((r.get("note") or st) + (" Not returning" if "not returning" in str(r.get("expectedReturn", "")).lower() else " Expected return: " + str(r.get("expectedReturn", "—"))) + ". TGA status as checked " + str(meds.get("generatedAt", "")) + ".") + "</description></item>")
     (D/"feed.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>GAMSA shortage alerts</title><link>' + SITE + '/supply</link><description>Gender-affirming medicines in Australia under a current TGA shortage notice. Rebuilt daily.</description><language>en-au</language>' + "".join(items) + "</channel></rss>\n")
 _rss()
 (D/"robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
@@ -261,4 +263,4 @@ csp = "; ".join([
     "",
 ]))
 n = sum(1 for _ in D.rglob("*.html")) - 1
-print(f"Built dist/: {n} pages, sitemap with {len(urls)} URLs; preview.html for local viewing")
+print(f"Built dist/: {n} pages, sitemap with {len(urls)} URLs, {len(_FIGS)} figures; preview.html for local viewing")

@@ -1,7 +1,7 @@
 {
   "title": "Accessibility",
   "kicker": "About this site",
-  "intro": "What this site aims for, what it already does, where it falls short, and how to tell me about a barrier.",
+  "intro": "What this site aims for, what it already does, where it falls short, and how to tell us about a barrier.",
   "sections": [
     {
       "h": "What this site aims for",
@@ -14,19 +14,24 @@
       "h": "The Accessibility button",
       "nav": "Accessibility button",
       "body": [
-        "The yellow Accessibility button at the top of every page opens options that apply straight away and are remembered on this device:"
+        "The Accessibility button (a figure in a circle) at the top of every page opens options that work straight away and are remembered on this device:"
       ],
       "list": [
-        "**Read this page aloud** using your device's own voices, with pause and stop.",
-        "**Text size**: 100%, 125% or 150%, on top of your browser's zoom.",
+        "**Read this page aloud** using your device's own voices: it highlights each sentence as it reads, moves a section at a time, describes diagrams, reads tables row by row and can read the site menu.",
+        "**Text size**: 100%, 125%, 150% or 175%, on top of your browser's zoom.",
+        "**Line height**: Default, Relaxed or Extra space between lines.",
+        "**Text spacing**: Default, Medium or Maximum space between letters and words.",
+        "**Cursor size**: a larger mouse or trackpad pointer.",
+        "**Colour-blind friendly**: changes the red and green status colours, the colour of each audience section and the colours in diagrams to ones that stay easy to tell apart with the common types of colour blindness. Every status also has a word, so colour is never the only clue.",
+        "**Colour theme** starts on Auto, which follows your device's light or dark setting, even when it changes. Choose Light or Dark (here, or with the light and dark buttons at the top of the page) to keep one; choose Auto to follow your device again.",
         "**Dyslexia-friendly text**: rounder letters, wider spacing, shorter lines, off-white background.",
         "**Bigger text and spacing** for every page.",
         "**High contrast**: near-black on white (or white on black in dark mode) with stronger borders.",
         "**Underline every link** so links never depend on colour alone.",
-        "**Reduce motion**: no animations or smooth scrolling. Your device's reduced-motion setting is always honoured anyway.",
+        "**Reduce motion**: no animations or smooth scrolling, and the home page picture and ribbon stay still. Your device's reduced-motion setting is always honoured too.",
+        "**Discreet browsing**: turn it on before you browse, and this tab keeps no trail of GAMSA pages, so Back and Quick exit leave the site. It ends when you close the tab.",
         "**Easy Read guides** in short sentences with pictures, each printable.",
-        "**Reset all** returns every setting to its default.",
-        "The light/dark switch in the menu bar follows your device setting until you choose."
+        "**Reset all** puts every setting back to its default, and Colour theme goes back to Auto. Reset all does not change Discreet browsing: it stays as it is until you turn it off or close the tab."
       ]
     },
     {
@@ -35,12 +40,12 @@
       "list": [
         "Skip link, visible focus outlines and full keyboard paths through the menus, the Accessibility panel, the search, the forms and the figure viewer.",
         "Real structure: one heading per page, landmarks, lists, labelled form fields and an On-this-page list on long guides, so screen readers can navigate by them.",
-        "Reflows to a 360px phone and 200% zoom without sideways scrolling. Works on phones, tablets and desktops.",
+        "Reflows down to a 320px-wide screen and 200% zoom without sideways scrolling. Works on phones, tablets and desktops.",
         "Light and dark themes, both contrast-checked.",
         "Every figure has a text description and an Enlarge button.",
         "Easy Read versions of the main guides, and short Easy Read guides for family, friends and carers.",
-        "Fast and light: one page request, no video, no autoplay, no advertising or tracking scripts.",
-        "PDFs on this site are one or two pages, high contrast, and carry a QR code back to the current web version."
+        "Fast and light: no video, no autoplay, no advertising or tracking scripts.",
+        "PDFs on this site are short (most are one or two pages; the clinicians' injection procedure and training guide is seven), high contrast, and carry a QR code back to the current web version."
       ]
     },
     {
@@ -50,16 +55,16 @@
         "No independent audit yet.",
         "The PDFs are not fully tagged for screen readers; the same content is on the web pages, which are.",
         "The Turnstile bot check on forms is Cloudflare's widget and is outside this site's control.",
-        "Read aloud reads the page you are on. Use Next and Back on the bar at the bottom of the screen to move a section at a time, and Menu to hear the site menu. It depends on the voices installed on your device; quality varies, and some browsers pause it when the screen locks. If you use a screen reader such as VoiceOver or TalkBack, that will usually work better.",
-        "Documents linked from other organisations (TGA, PBS, guidelines) may not be accessible; tell me and I will look for an alternative."
+        "Read aloud reads the main part of the page you are on, one sentence at a time, and highlights each sentence as it goes. The bar at the bottom of the screen shows which section you are in. Back and Next move a section at a time (Next also skips the rest of a table or diagram), Menu reads the site menu and then goes back to where you were, Speed changes how fast it reads, and Stop closes it. Reference numbers are left out of sentences; the references are offered at the end of the page. It depends on the voices installed on your device; quality varies, and some browsers pause it when the screen locks. If you use a screen reader such as VoiceOver or TalkBack, that will usually work better.",
+        "Documents linked from other organisations (TGA, PBS, guidelines) may not be accessible; tell us and we will look for an alternative."
       ]
     },
     {
-      "h": "Tell me about a barrier",
+      "h": "Tell us about a barrier",
       "nav": "Report a barrier",
       "body": [
-        "If something is hard or impossible to use, [send feedback](#/feedback) with the page, what you were trying to do, and what happened. Nothing is required; a one-line report is useful. Access problems are looked at first. If you need information from this site in another format, ask and it will be sent as plain text or read to you by phone.",
-        "If you need help now, do not wait: call 000 in an emergency. If you are Deaf or have a speech or hearing impairment, the National Relay Service reaches emergency services on 106. Last reviewed 2 October 2026."
+        "If something is hard or impossible to use, [send feedback](#/feedback) with the page, what you were trying to do, and what happened. Nothing is required; a one-line report is useful. Access problems are looked at first. If you need information from this site in another format, ask and it will be sent as plain text.",
+        "If you need help now, do not wait: call 000 in an emergency. If you are Deaf, hard of hearing or have a speech impairment, you can call 000 through the [National Relay Service](https://www.accesshub.gov.au/about-the-nrs/how-to-make-an-emergency-call-using-the-nrs) by NRS Chat, SMS relay, voice relay, or TTY on 106. Last reviewed 17 October 2026."
       ]
     }
   ],

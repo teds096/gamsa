@@ -128,7 +128,7 @@ def main():
         s, _, _, final = get("https://www.gamsa.au/")
         result(final.rstrip("/") == SITE, "www → gamsa.au", final)
     dl = sorted(dl)
-    badl = [p for p in dl + ["/og-image.png", "/favicon.ico", "/apple-touch-icon.png", "/feed.xml", "/robots.txt"]
+    badl = [p for p in dl + ["/og-image.png", "/favicon.ico", "/apple-touch-icon.png", "/mask-icon.svg", "/feed.xml", "/robots.txt"]
             if get(p)[0] != 200]
     result(not badl, f"downloads and files — {len(dl)} documents", ", ".join(badl))
     try:
