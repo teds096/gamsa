@@ -1,5 +1,5 @@
 {
- "generatedAt": "18 Oct 2026",
+ "generatedAt": "19 Oct 2026",
  "source": "TGA medicine shortage records + manually maintained entries",
  "scrapedCount": 12,
  "medicines": [
@@ -22,7 +22,7 @@
     "Premarin"
    ],
    "ingredient": "conjugated-estrogens",
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   },
   {
    "id": "androcur",
@@ -43,7 +43,7 @@
     "Androcur"
    ],
    "ingredient": "cyproterone-acetate",
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   },
   {
    "id": "cyprostat",
@@ -107,7 +107,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   },
   {
    "id": "estradot-25",
@@ -127,7 +127,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   },
   {
    "id": "estradot-50",
@@ -147,7 +147,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   },
   {
    "id": "estradot-75",
@@ -167,7 +167,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   },
   {
    "id": "estrogel",
@@ -189,7 +189,7 @@
     "Sandrena"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   },
   {
    "id": "estalis-50-140",
@@ -210,7 +210,7 @@
     "Estalis Continuous"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   },
   {
    "id": "estalis-50-250",
@@ -231,7 +231,7 @@
     "Estalis Continuous"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   },
   {
    "id": "progynova",
@@ -252,7 +252,7 @@
     "Progynova"
    ],
    "ingredient": "estradiol-valerate",
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   },
   {
    "id": "zoladex",
@@ -272,7 +272,7 @@
    "brands": [
     "Zoladex"
    ],
-   "lastVerified": "2026-10-18",
+   "lastVerified": "2026-10-19",
    "ingredient": "goserelin",
    "pin": true,
    "pinUntil": "2026-10-31"
@@ -296,7 +296,7 @@
     "Eligard"
    ],
    "ingredient": "leuprorelin",
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   },
   {
    "id": "lucrin",
@@ -318,7 +318,7 @@
     "Eligard"
    ],
    "ingredient": "leuprorelin",
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   },
   {
    "id": "provera",
@@ -340,7 +340,7 @@
     "Depo-Provera"
    ],
    "ingredient": "medroxyprogesterone-acetate",
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   },
   {
    "id": "primolut-n",
@@ -361,7 +361,7 @@
     "Primolut N"
    ],
    "ingredient": "norethisterone",
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   },
   {
    "id": "prometrium",
@@ -384,7 +384,7 @@
     "PROGESTERONE-APX"
    ],
    "ingredient": "progesterone",
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   },
   {
    "id": "spironolactone",
@@ -407,7 +407,7 @@
     "Spironolactone Viatris"
    ],
    "ingredient": "spironolactone",
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   },
   {
    "id": "androforte",
@@ -428,7 +428,7 @@
     "AndroForte 5"
    ],
    "ingredient": "testosterone",
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   },
   {
    "id": "testogel",
@@ -449,7 +449,7 @@
     "Testogel"
    ],
    "ingredient": "testosterone",
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   },
   {
    "id": "reandron",
@@ -470,7 +470,7 @@
     "Reandron 1000"
    ],
    "ingredient": "testosterone-undecanoate",
-   "lastVerified": "2026-10-18"
+   "lastVerified": "2026-10-19"
   }
  ]
 }
