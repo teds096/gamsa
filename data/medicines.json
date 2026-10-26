@@ -1,7 +1,7 @@
 {
- "generatedAt": "25 Oct 2026",
+ "generatedAt": "26 Oct 2026",
  "source": "TGA medicine shortage records + manually maintained entries",
- "scrapedCount": 12,
+ "scrapedCount": 11,
  "medicines": [
   {
    "id": "premarin",
@@ -22,7 +22,7 @@
     "Premarin"
    ],
    "ingredient": "conjugated-estrogens",
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   },
   {
    "id": "androcur",
@@ -43,7 +43,7 @@
     "Androcur"
    ],
    "ingredient": "cyproterone-acetate",
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   },
   {
    "id": "cyprostat",
@@ -107,7 +107,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   },
   {
    "id": "estradot-25",
@@ -127,7 +127,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   },
   {
    "id": "estradot-50",
@@ -147,7 +147,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   },
   {
    "id": "estradot-75",
@@ -167,7 +167,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   },
   {
    "id": "estrogel",
@@ -189,7 +189,7 @@
     "Sandrena"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   },
   {
    "id": "estalis-50-140",
@@ -210,7 +210,7 @@
     "Estalis Continuous"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   },
   {
    "id": "estalis-50-250",
@@ -231,7 +231,7 @@
     "Estalis Continuous"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   },
   {
    "id": "progynova",
@@ -252,7 +252,7 @@
     "Progynova"
    ],
    "ingredient": "estradiol-valerate",
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   },
   {
    "id": "zoladex",
@@ -272,7 +272,7 @@
    "brands": [
     "Zoladex"
    ],
-   "lastVerified": "2026-10-25",
+   "lastVerified": "2026-10-26",
    "ingredient": "goserelin",
    "pin": true,
    "pinUntil": "2026-10-31"
@@ -296,7 +296,7 @@
     "Eligard"
    ],
    "ingredient": "leuprorelin",
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   },
   {
    "id": "lucrin",
@@ -318,7 +318,7 @@
     "Eligard"
    ],
    "ingredient": "leuprorelin",
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   },
   {
    "id": "provera",
@@ -340,7 +340,7 @@
     "Depo-Provera"
    ],
    "ingredient": "medroxyprogesterone-acetate",
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   },
   {
    "id": "primolut-n",
@@ -361,7 +361,7 @@
     "Primolut N"
    ],
    "ingredient": "norethisterone",
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   },
   {
    "id": "prometrium",
@@ -384,7 +384,7 @@
     "PROGESTERONE-APX"
    ],
    "ingredient": "progesterone",
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   },
   {
    "id": "spironolactone",
@@ -407,7 +407,7 @@
     "Spironolactone Viatris"
    ],
    "ingredient": "spironolactone",
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   },
   {
    "id": "androforte",
@@ -428,7 +428,7 @@
     "AndroForte 5"
    ],
    "ingredient": "testosterone",
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   },
   {
    "id": "testogel",
@@ -449,7 +449,7 @@
     "Testogel"
    ],
    "ingredient": "testosterone",
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   },
   {
    "id": "reandron",
@@ -462,7 +462,7 @@
    "expectedReturn": "\u2014",
    "mechanism": "No substitution instrument in effect",
    "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
-   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/testosterone-undecanoate",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
    "sourceLabel": "TGA shortage database (no notice)",
    "genericName": "Testosterone undecanoate",
    "form": "intramuscular depot injection",
@@ -470,7 +470,7 @@
     "Reandron 1000"
    ],
    "ingredient": "testosterone-undecanoate",
-   "lastVerified": "2026-10-25"
+   "lastVerified": "2026-10-26"
   }
  ]
 }
