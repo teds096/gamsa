@@ -1,0 +1,70 @@
+name: Weekly analytics
+
+# Hub item B-23 (v19, 24 Oct 2026). Secrets, by name only: CLOUDFLARE_ANALYTICS_TOKEN (read-only Cloudflare
+# token: Account > Account Analytics > Read) and CLOUDFLARE_ACCOUNT_ID. Until both exist the run says
+# "secret ... not set, skipping" and stays green.
+# Every Monday it asks Cloudflare Web Analytics for last week's totals (Monday to Sunday, Adelaide time) and
+# writes data/analytics.json: page views, visits, top pages, outside referrer hosts and countries. Totals only:
+# no IP addresses or visitor-level data, and anything under 3 page views is folded into "(other)".
+# data/analytics.json is a data file for the hub: never in a release zip and never read by build.py.
+# Runs at a quiet hour so its commit does not race the daily refresh (19:00 UTC).
+# A failed run shows up in the Weekly digest issue.
+on:
+  schedule:
+    - cron: '40 2 * * 1'   # Monday 02:40 UTC = 13:10 ACDT / 12:10 ACST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: analytics
+  cancel-in-progress: false
+
+jobs:
+  analytics:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check the analytics secrets are set
+        id: secrets
+        env:
+          CLOUDFLARE_ANALYTICS_TOKEN: ${{ secrets.CLOUDFLARE_ANALYTICS_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          missing=""
+          [ -n "$CLOUDFLARE_ANALYTICS_TOKEN" ] || missing="$missing CLOUDFLARE_ANALYTICS_TOKEN"
+          [ -n "$CLOUDFLARE_ACCOUNT_ID" ] || missing="$missing CLOUDFLARE_ACCOUNT_ID"
+          if [ -n "$missing" ]; then
+            echo "Secret(s)$missing not set, skipping. Nothing was fetched or committed."
+            echo "Weekly analytics skipped: secret(s)$missing not set." >> "$GITHUB_STEP_SUMMARY"
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v5
+        if: steps.secrets.outputs.ready == 'true'
+
+      - uses: actions/setup-python@v6
+        if: steps.secrets.outputs.ready == 'true'
+        with: {python-version: "3.12"}
+
+      - name: Fetch last week's totals
+        if: steps.secrets.outputs.ready == 'true'
+        env:
+          CLOUDFLARE_ANALYTICS_TOKEN: ${{ secrets.CLOUDFLARE_ANALYTICS_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_ANALYTICS_SITE_TAG: ${{ vars.CLOUDFLARE_ANALYTICS_SITE_TAG }}
+        run: python tools/analytics.py
+
+      - name: Commit if anything changed
+        if: steps.secrets.outputs.ready == 'true'
+        run: |
+          git config user.name "site-bot"
+          git config user.email "actions@github.com"
+          git add data/analytics.json
+          if git diff --cached --quiet; then echo "No change."; else
+            git commit -m "Weekly analytics ($(date -u +%Y-%m-%d))"
+            git push || (git pull --rebase && git push)
+          fi
