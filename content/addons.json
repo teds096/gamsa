@@ -1,0 +1,155 @@
+{
+  "title": "Add-on therapies",
+  "intro": "Medicines sometimes prescribed alongside gender-affirming hormone therapy to treat some of its effects: acne, scalp hair loss, periods that continue on testosterone, and vaginal dryness. None is hormone therapy in a different form, and none is automatic. It is background reading, not a prescription.",
+  "sections": [
+    {
+      "h": "What add-on therapies are",
+      "body": [
+        "Testosterone and oestrogen change more than the things someone is aiming for. Four effects come up often enough to have their own treatments: acne, scalp (androgenetic) hair loss, periods that keep coming despite testosterone, and vaginal dryness. Each is possible rather than certain — plenty of people never develop one or more of them — and the medicines used for them are ordinary prescriptions, not hormone therapy in a different form [1][2].",
+        "Each of these has its own page in the Medicines A–Z with doses, side effects and cost."
+      ],
+      "note": "Micronised progesterone, which some people take alongside oestrogen, is part of feminising hormone therapy rather than an add-on; it is covered in the [doses guide](#/doses#sec-doses-3).",
+      "nav": "Overview",
+      "figure": {
+        "id": "effects-medicines",
+        "type": "table",
+        "title": "What else might be prescribed",
+        "long": "These treat effects of hormone therapy. They are not hormone therapy themselves, and none is automatic.",
+        "alt": "Four effects of hormone therapy, and the medicines that may be offered for each",
+        "table": {
+          "head": [
+            "The effect",
+            "What may be offered"
+          ],
+          "rows": [
+            [
+              "Acne",
+              "A topical retinoid with benzoyl peroxide first; then doxycycline; isotretinoin for severe or scarring acne"
+            ],
+            [
+              "Scalp hair loss",
+              "Topical minoxidil; finasteride in some cases"
+            ],
+            [
+              "Periods still coming",
+              "Norethisterone or medroxyprogesterone tablets; the three-monthly medroxyprogesterone injection; a levonorgestrel IUD"
+            ],
+            [
+              "Vaginal dryness",
+              "Low-dose vaginal oestrogen; vaginal moisturisers, which need no prescription"
+            ]
+          ]
+        },
+        "note": "Ask your prescriber which, if any, is right for you.",
+        "easyTitle": "Other medicines that can help",
+        "easy": [
+          {
+            "pic": "pills",
+            "text": "Other medicines can help with some effects of hormone therapy."
+          },
+          {
+            "pic": "doc",
+            "text": "For example: pimples, hair loss, periods, or dryness."
+          },
+          {
+            "pic": "speak",
+            "text": "Ask your doctor which, if any, is right for you."
+          }
+        ],
+        "caption": "The effects of hormone therapy that are commonly treated, and the medicines Australian guidance names for each. Based on the Australian position statement, Australia's 2026 standards of care and the AJGP hormone therapy article [3][2][4]."
+      }
+    },
+    {
+      "h": "Acne",
+      "body": [
+        "Acne on testosterone comes from the same mechanism as acne generally: androgens increase the size and output of the skin's oil (sebaceous) glands, and more oil means more breakouts on the face and body [5]. It tends to start within the first few weeks of treatment and is most active in the first one to two years, often settling after that even without treatment [4].",
+        "Australian guidance follows the usual escalation: a topical retinoid combined with benzoyl peroxide first, an oral tetracycline such as doxycycline if that is not enough, and isotretinoin — a stronger oral retinoid, usually managed with a dermatologist — for acne that is severe or scarring [4]. The three act at different points: the topical combination clears pores and reduces surface bacteria, doxycycline settles the inflammation that follows, and isotretinoin reduces the oil glands themselves, which is why it is kept for acne the other options have not controlled."
+      ],
+      "nav": "Acne"
+    },
+    {
+      "h": "Scalp hair loss",
+      "body": [
+        "Testosterone is converted into dihydrotestosterone (DHT) by the enzyme 5-alpha reductase [6]. DHT drives most masculinising change, but its effect on hair follicles depends on where they sit: follicles on the beard, underarm and pubic area enlarge, while follicles at the temples, crown and front of the scalp tend to miniaturise — the same process behind male-pattern baldness [2]. It is slower to show than acne, typically taking over twelve months to become noticeable, and can continue for as long as testosterone does [2].",
+        "Topical minoxidil is a non-hormonal option; Australian product information is candid that exactly how it works is not known, though it appears to prolong the hair growth phase [7]. Finasteride instead blocks the enzyme that produces DHT in the scalp [6]. A small case review in trans men taking low-dose finasteride found modest improvement, without the sexual side effects reported in cisgender men on the same drug, though the evidence base remains limited [2]. It is contraindicated during pregnancy, relevant if a partner could become pregnant, and because it acts on the same pathway that drives masculinisation, some prescribers treat it as a trade-off to discuss rather than a routine add-on [2]. Hair loss can also take over a year to appear, so waiting before deciding on treatment is a reasonable choice [2]."
+      ],
+      "list": [
+        "Finasteride and dutasteride are not general blockers; they are commonly added for scalp hair loss, although Australian guidance notes it is unclear whether they add benefit [2]"
+      ],
+      "nav": "Scalp hair loss"
+    },
+    {
+      "h": "Periods that continue on testosterone",
+      "body": [
+        "Testosterone at gender-affirming doses does not reliably switch off ovulation, so periods can continue, especially in the first months of treatment [5]. On full-dose testosterone, periods are generally expected to stop within about six months, though this varies and not everyone reaches that point on testosterone alone; testosterone is not contraception regardless of whether periods have stopped [2].",
+        "If periods continue and cause distress, the options are reviewing whether the testosterone dose has reached target, an oral progestogen such as norethisterone or medroxyprogesterone acetate, or a levonorgestrel intrauterine device (IUD) [3]. Norethisterone is taken as tablets [8]; medroxyprogesterone acetate comes as tablets or as an injection given every three months [9]; the IUD is fitted once and can remain in place for several years [10]. The IUD and the three-monthly medroxyprogesterone injection also work as contraception; norethisterone and medroxyprogesterone tablets do not [2][8][9]."
+      ],
+      "nav": "Periods"
+    },
+    {
+      "h": "Vaginal dryness",
+      "body": [
+        "Testosterone suppresses the ovaries' own oestrogen production, and the vaginal lining depends on oestrogen to stay thick and lubricated. As that exposure drops, the tissue can thin and dry in a way similar to menopause, sometimes causing irritation, dryness or pain with penetration [5]. This tends to build up gradually over time on testosterone rather than appearing suddenly.",
+        "Low-dose vaginal oestrogen treats the tissue directly: daily for the first two weeks, then twice weekly, with product information describing systemic absorption as low enough that blood oestradiol stays within the usual postmenopausal range [11]. It acts locally and does not work against testosterone's effects elsewhere in the body [5]. Vaginal moisturisers, available without a prescription, are a non-hormonal alternative some people try first [2]."
+      ],
+      "nav": "Vaginal dryness"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "text": "Cundill P, Wong P, Cheung A. Hormone therapy prescribing guide for general practitioners working with trans, gender diverse and non-binary patients, version 3.0. Equinox Gender Diverse Health Centre, Thorne Harbour Health; July 2020 (AusPATH-endorsed). Accessed 16 October 2026.",
+      "url": "https://equinox.org.au/wp-content/uploads/2021/07/ht-prescribing-guideline-v3-aug-2020.pdf"
+    },
+    {
+      "n": 2,
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 3,
+      "text": "Cheung AS, Wynne K, Erasmus J, Murray S, Zajac JD. Position statement on the hormonal management of adult transgender and gender diverse individuals. Med J Aust. 2019;211(3):127-33. Accessed 17 October 2026.",
+      "url": "https://www.mja.com.au/journal/2019/211/3/position-statement-hormonal-management-adult-transgender-and-gender-diverse"
+    },
+    {
+      "n": 4,
+      "text": "Cundill P. Hormone therapy for trans and gender diverse patients in the general practice setting. Aust J Gen Pract. 2020;49(7):385-90. Accessed 17 October 2026.",
+      "url": "https://www1.racgp.org.au/getattachment/d0c29d2a-ee67-4ef0-a125-65c2694f3cb2/Hormone-therapy-for-trans-and-gender-diverse-patie.aspx"
+    },
+    {
+      "n": 5,
+      "text": "TransHub (ACON). Hormones — Masculinising. Sydney: ACON. Accessed 24 September 2026.",
+      "url": "https://www.transhub.org.au/medical/hormones-masculinising/"
+    },
+    {
+      "n": 6,
+      "text": "Finasteride GH 1 (finasteride 1 mg) tablets, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/finasteride-gh-1-tablets"
+    },
+    {
+      "n": 7,
+      "text": "Men's Regaine Extra Strength Foam (minoxidil 5% w/w), Australian Consumer Medicine Information. ACSQHC Medicine Finder. Accessed September 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/mens-regaine-extra-strength-foam"
+    },
+    {
+      "n": 8,
+      "text": "Primolut N (norethisterone) 5 mg tablets, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/primolut-n"
+    },
+    {
+      "n": 9,
+      "text": "Depo-Provera (medroxyprogesterone acetate 150 mg/mL) injection, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/depo-provera"
+    },
+    {
+      "n": 10,
+      "text": "Mirena (levonorgestrel 52 mg) intrauterine device, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/mirena-intrauterine-device"
+    },
+    {
+      "n": 11,
+      "text": "Vagifem Low (estradiol 10 microgram) modified release vaginal pessary, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/vagifem-low"
+    }
+  ]
+}

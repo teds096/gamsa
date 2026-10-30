@@ -1,0 +1,74 @@
+{
+  "title": "About GAMSA",
+  "intro": [
+    "Who makes this site, how the pages are written and checked, and what to do if something is wrong."
+  ],
+  "updated": "2026-10-24",
+  "sections": [
+    {
+      "h": "Who runs this site",
+      "paras": [
+        "GAMSA is written and kept up to date by Theodore South, BPharm (Hons), a registered pharmacist in Adelaide. It is an independent, non-commercial project, and it is free to use."
+      ],
+      "bullets": []
+    },
+    {
+      "h": "Funding",
+      "paras": [
+        "GAMSA has no funding, no advertising and no sponsors. It is not linked to any clinic, pharmacy, drug company, government body or advocacy group."
+      ],
+      "bullets": []
+    },
+    {
+      "h": "How pages are made",
+      "paras": [],
+      "bullets": [
+        "Clinical pages are based on the Australian standards of care (AusPATH), the Australian Product Information for each medicine, the PBS, the TGA and published research. Each page lists its sources under References.",
+        "Pages use plain words and short sentences. They describe how medicines are generally used. They are not advice for one person.",
+        "Supply status is read from the TGA every morning. PBS prices and listings are read at the start of each month.",
+        "**AI-assisted drafting:** some text is first drafted with an AI writing tool. A pharmacist checks every statement against its source before it goes on the site. Nothing is published without that check."
+      ]
+    },
+    {
+      "h": "How pages are reviewed",
+      "paras": [],
+      "bullets": [
+        "A page is reviewed again when AusPATH, a Product Information, the PBS or a TGA safety notice changes.",
+        "Each medicine page shows the date it was last reviewed.",
+        "Dated changes to the information on this site are listed on [What's changed](#/changes)."
+      ]
+    },
+    {
+      "h": "Corrections",
+      "paras": [
+        "If something is wrong, out of date or missing, [send feedback](#/feedback), or email gamsaenquiries@gmail.com. Safety errors are fixed first."
+      ],
+      "bullets": []
+    },
+    {
+      "h": "Complaints",
+      "paras": [
+        "Please tell us first, using the [feedback form](#/feedback). If you are not happy with the reply, you can go to:"
+      ],
+      "bullets": [
+        "**Health and Community Services Complaints Commissioner (HCSCC SA)**: independent complaints about health services in South Australia, including pharmacists. [HCSCC website](https://www.hcscc.sa.gov.au/).",
+        "**Ahpra**: concerns about a registered pharmacist's practice or conduct. [How to raise a concern](https://www.ahpra.gov.au/Notifications/Concerned-about-a-health-practitioner.aspx), phone 1300 419 495.",
+        "**Office of the Australian Information Commissioner (OAIC)**: privacy complaints, after you have complained to us first (see the [Privacy page](#/privacy)). [Privacy complaints](https://www.oaic.gov.au/privacy/privacy-complaints), phone 1300 363 992."
+      ]
+    },
+    {
+      "h": "Accessibility statement (24 October 2026)",
+      "paras": [
+        "Full details are on the [Accessibility page](#/accessibility)."
+      ],
+      "bullets": [
+        "**Aim:** WCAG 2.1 Level AA for all pages at gamsa.au.",
+        "**Status:** partly meets the aim. No independent audit has been done.",
+        "**Relies on:** HTML, CSS, JavaScript and WAI-ARIA.",
+        "**How it is checked:** every release is tested with automated tools (axe), in light and dark mode, with keyboard-only and zoom checks.",
+        "**Known gaps:** the PDFs are not fully tagged for screen readers; the same content is on the web pages.",
+        "**Spam check on forms:** the feedback and report forms use Cloudflare Turnstile to stop spam. It is outside our control. It may not work with some screen readers, voice control, switch access, older browsers or strict privacy settings. If it blocks you, email gamsaenquiries@gmail.com instead."
+      ]
+    }
+  ]
+}

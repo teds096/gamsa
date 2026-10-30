@@ -137,7 +137,7 @@
           "body": [
             "Estradiol patches are PBS-listed on the General Schedule with no restriction attached, so any prescriber can write them and no authority is needed. You pay the standard co-payment [5].",
             "Estradot is listed at 25, 37.5, 50, 75 and 100 micrograms per 24 hours (items 8761D, 8762E, 8763F, 8764G and 8765H). Estraderm MX is listed at 25, 50 and 100 micrograms per 24 hours (items 8311K, 8140K and 8312L) [5].",
-            "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70. Once a household's PBS spending reaches the safety net threshold for the calendar year — $1,748.20 for general patients, $277.20 for concession card holders — remaining scripts cost less or nothing for the rest of that year [8].",
+            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70. Once a household's PBS spending reaches the safety net threshold for the calendar year — $1,748.20 for general patients, $277.20 for concession card holders — remaining scripts cost less or nothing for the rest of that year [8].",
             "If a substitute or imported product is supplied during a shortage, ask your pharmacist whether that specific product is subsidised, because not all of them are [6]."
           ]
         },
@@ -222,7 +222,7 @@
         },
         {
           "n": 7,
-          "text": "Therapeutic Goods Administration. Substitution approval extended for HRT patch shortages (Serious Scarcity Substitution Instrument, in force to 28 February 2027). Canberra: TGA. Accessed September 2026.",
+          "text": "Therapeutic Goods Administration. Substitution approval extended for HRT patch shortages (Serious Scarcity Substitution Instrument, in force to 28 February 2027). Canberra: TGA. Accessed 24 September 2026.",
           "url": "https://www.tga.gov.au/safety/shortages-and-supply-disruptions/medicine-shortages/medicine-shortage-alerts/substitution-approval-extended-hrt-patch-shortages"
         },
         {
@@ -232,7 +232,7 @@
         },
         {
           "n": 9,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
@@ -365,7 +365,7 @@
           "body": [
             "Both brands are PBS-listed on the General Schedule with no restriction, so no authority is needed. Their full price is below $25.00, so general patients pay a little less than the standard co-payment; the PBS box below shows the current charge [6].",
             "Progynova is listed as estradiol valerate 1 mg (item 1663M) and 2 mg (item 1664N) in packs of 56. Zumenon is listed as estradiol 2 mg, 56 tablets (item 8274L) [6].",
-            "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70. Once a household's PBS spending reaches the safety net threshold for the year — $1,748.20 for general patients, $277.20 for concession card holders — remaining scripts cost less or nothing for the rest of the calendar year [8]."
+            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70. Once a household's PBS spending reaches the safety net threshold for the year — $1,748.20 for general patients, $277.20 for concession card holders — remaining scripts cost less or nothing for the rest of the calendar year [8]."
           ]
         },
         {
@@ -434,7 +434,7 @@
         },
         {
           "n": 5,
-          "text": "TransHub (ACON). Hormones — Feminising. Sydney: ACON. Accessed September 2026.",
+          "text": "TransHub (ACON). Hormones — Feminising. Sydney: ACON. Accessed 24 September 2026.",
           "url": "https://www.transhub.org.au/medical/hormones-feminising/"
         },
         {
@@ -454,7 +454,7 @@
         },
         {
           "n": 9,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
@@ -477,12 +477,13 @@
       "supplyIds": [
         "estrogel"
       ],
-      "summary": "A clear gel rubbed into the skin once a day. Like a patch, it delivers estradiol without passing through the liver first, and it suits people who want a daily routine or small dose steps rather than an adhesive.",
+      "summary": "A clear gel rubbed into the skin once a day. Like a patch, it delivers estradiol without passing through the liver first, and it suits people who want a daily routine or small dose steps rather than an adhesive. It can pass to other people through skin contact, so let it dry and cover the area.",
+      "reviewed": "24 October 2026",
       "sections": [
         {
           "h": "What it is",
           "body": [
-            "Estradiol gel is the same hormone as the tablets and patches, in a gel that dries on the skin. It works by binding to oestrogen receptors in breast or chest tissue, skin, bone and the brain, and because it is absorbed through the skin it avoids the first pass through the liver — Australian guidance groups it with patches as preferred where clot risk is higher [1].",
+            "Estradiol gel is the same hormone as the tablets and patches, in a gel that dries on the skin. It works by binding to oestrogen receptors in breast or chest tissue, skin, bone and the brain, and because it is absorbed through the skin it avoids the first pass through the liver — Australian guidance groups it with patches as preferred where clot risk is higher [1]. The gel can pass to other people through skin contact, so let it dry, cover the area with clothing and wash your hands [2][3].",
             "Two registered products are used here, and they are measured differently. Sandrena comes as single-use sachets — \"0.5 g or 1 g sachets\" containing 0.5 mg or 1 mg of estradiol [2]. Estrogel comes as a metered pump, where \"each 1.25g dose of Estrogel gel contains 0.75 mg of estradiol (as hemihydrate)\" [3].",
             "Because the two are dosed in different units, do not convert between them yourself. Your prescriber will write the one you are being supplied.",
             "Before starting, oestrogen's effect on fertility is worth discussing — sperm production falls over time on oestrogen, so sperm cryopreservation is worth raising with a prescriber beforehand if having biological children later matters to you [1]."
@@ -495,6 +496,7 @@
             "The approved sites differ. For Sandrena, \"apply the gel to your lower body or thighs\" and \"alternate the application site each day\" — not on breast or chest tissue, the face, or irritated skin [2]. For Estrogel, spread it over a large area of the outer arms, shoulders or mid-inner thighs, and not near breast or chest tissue or the genitals [3].",
             "Let it dry before dressing. Sandrena says to \"allow the gel to dry for a few minutes\" and \"do not wash the area where you have applied the gel for at least one hour\" [2]. Estrogel says \"leave to dry for 5 minutes before covering with clothes,\" and separately warns not to \"wash the skin or apply other skin care products until at least one hour after application\" — that includes strong cleansers and alcohol-based skincare, which can change how much is absorbed [3].",
             "Wash your hands afterwards. Estrogel: \"wash hands with soap and water after applying the gel\" [3].",
+            "The Estrogel product information also says to avoid skin contact with a partner for one hour after applying the gel [3].",
             "If a dose is missed, both brands use the same 12-hour rule: apply it as soon as you remember if you are within 12 hours of the missed time, otherwise skip it and apply the next dose as usual — never double up [2][3]. Both leaflets warn that missed doses can cause unexpected spotting or bleeding [2][3].",
             "If you tend to get patchy skin darkening (chloasma) with oestrogen, Sandrena's leaflet specifically advises minimising sun or UV exposure while using it [2]."
           ],
@@ -573,7 +575,7 @@
           "h": "Storage and disposal",
           "body": [
             "Sandrena: \"Store below 25°C\", in a cool dry place away from moisture and heat [2].",
-            "Estrogel: \"Keep your medicine in a cool dry place where the temperature stays below 30°C\", and not in the bathroom, near a sink, on a window sill or in the car [3].",
+            "Estrogel: \"Keep your medicine in a cool dry place where the temperature stays below 30°C\", and not in the bathroom, near a sink, on a window sill or in the car. Its product information also says \"Protect from light\" [3].",
             "Keep gel out of reach of children and pets, both because of the medicine itself and because of the transfer risk. Return what you no longer need to a pharmacy."
           ]
         },
@@ -583,7 +585,7 @@
             "Sandrena is PBS-listed on the General Schedule with no restriction — estradiol 0.1% gel, 28 x 1 g sachets, item 8286D [5].",
             "The PBS also lists estradiol 0.1% gel in 28 x 500 mg sachets, and estradiol 0.06% gel at 750 micrograms per actuation in a 64-actuation pack, which is the Estrogel presentation [5].",
             "Gel listings have changed over time and not every gel product has been subsidised in every year, so confirm the current price for the specific product you are being given rather than assuming [5].",
-            "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70. Once a household's PBS spending reaches the safety net threshold for the year — $1,748.20 general, $277.20 concessional — remaining scripts cost less or nothing for the rest of the calendar year [7]."
+            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70. Once a household's PBS spending reaches the safety net threshold for the year — $1,748.20 general, $277.20 concessional — remaining scripts cost less or nothing for the rest of the calendar year [7]."
           ]
         },
         {
@@ -641,7 +643,7 @@
         },
         {
           "n": 3,
-          "text": "Estrogel (estradiol 0.06% w/w) gel, Australian Product Information (section 4.2; date of revision 18 December 2023) and Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
+          "text": "Estrogel (estradiol 0.06% w/w) gel, Australian Product Information (sections 4.2 and 6.4; date of revision 18 December 2023) and Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
           "url": "https://www.safetyandquality.gov.au/medicine-finder/estrogel"
         },
         {
@@ -666,7 +668,7 @@
         },
         {
           "n": 8,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
@@ -697,6 +699,7 @@
         "prometrium"
       ],
       "summary": "A progestogen that some people take alongside oestrogen. It is also used the other way around, to manage bleeding for people on testosterone.",
+      "reviewed": "24 October 2026",
       "sections": [
         {
           "h": "What it is",
@@ -748,13 +751,15 @@
           "h": "Side effects that need attention",
           "body": [
             "Get urgent medical help — emergency department or 000 — for any of the following. Both leaflets treat swelling of the face, mouth or throat as an emergency [2][3].",
-            "Prometrium's leaflet also lists reasons to stop and get medical advice promptly, even without going to hospital: new vision changes, jaundice, a new or severe migraine, or sudden problems with speech or coordination [2].",
+            "Prometrium's leaflet says to stop taking it and tell your doctor straight away, or go to the emergency department, for any of these signs [2].",
             "The product information asks for caution with conditions progesterone may make worse or bring back, including a history of depression, epilepsy, migraine, asthma, diabetes, high blood pressure, and heart or kidney disease (because of fluid retention). Tell your prescriber if any of these apply to you [10].",
             "Overdose symptoms listed in the product information for progesterone 100 mg capsules are drowsiness, dizziness, a feeling of euphoria, or painful periods. Management is observation and supportive care rather than a specific antidote — contact the Poisons Information Centre (13 11 26) for advice on any suspected overdose [8]."
           ],
           "list": [
             "Swelling of the face, lips, mouth or throat, difficulty swallowing or breathing, or hives [2][3]",
-            "Chest pain, or pain and swelling in a leg — possible blood clot [2]",
+            "Chest pain, or pain, numbness or swelling in an arm or leg — possible blood clot [2]",
+            "Sudden loss or change of speech, coordination or vision [2]",
+            "Unexplained shortness of breath [2]",
             "Yellowing of the skin or eyes [2]",
             "New or severe migraine, or problems with your vision [2]"
           ],
@@ -783,7 +788,7 @@
             "Micronised progesterone 100 mg capsules are PBS-listed on the General Schedule with no restrictions — progesterone 100 mg capsule, 30, item 14730G. The brands listed against that item include Prometrium, Progesterone ADVZ 100 and PROGESTERONE-APX [4].",
             "Because several brands share the item, ask your pharmacist for one with no brand premium if cost matters.",
             "Vaginal progesterone products, including pessaries and gel, are listed separately [4]. The Australian PBS listings for progesterone are not written for gender-affirming care specifically — the General Schedule listing means no authority is required.",
-            "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70 [4][6]."
+            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [4][6]."
           ]
         },
         {
@@ -861,7 +866,7 @@
         },
         {
           "n": 7,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
@@ -937,7 +942,8 @@
           "h": "Side effects to expect",
           "body": [
             "The commonest reported effects are tiredness, weight change, headache, low mood, nausea and reduced sex drive [2].",
-            "Reduced sex drive and fewer spontaneous erections are expected effects of blocking testosterone rather than side effects in the usual sense, but they can still be distressing and are worth raising."
+            "Reduced sex drive and fewer spontaneous erections are expected effects of blocking testosterone rather than side effects in the usual sense, but they can still be distressing and are worth raising.",
+            "Two longer-term points from the product information: after cyproterone is stopped, sperm production takes 3 to 20 months to recover, and osteoporosis (thinning of the bones) is listed among its warnings and precautions [11]."
           ],
           "list": [
             "Tiredness [2]",
@@ -993,8 +999,8 @@
           "body": [
             "Cyproterone acetate 50 mg tablets (packs of 50) are PBS-listed with no authority needed. Item 1270W (up to 100 tablets a script) has no restriction. Item 14023C (up to 200 tablets, a two-month supply) is a Restricted Benefit. The 100 mg tablets (packs of 50) are listed the same way: item 8019C (up to 50 tablets) has no restriction and item 14022B (up to 100 tablets, a two-month supply) is a Restricted Benefit [5].",
             "That restriction is about quantity, not about who may have the medicine. The wording is: \"The condition must be stable for the prescriber to consider the listed maximum quantity of this medicine suitable for this patient\" [5].",
-            "Several brands share these items. Anterone and Cyproterone Sandoz are benchmark-priced; Androcur and Androcur-100 carry a small brand premium (at the last PBS check, Androcur 50 mg $1.90 on a two-pack script and $4.00 on a four-pack script; Androcur-100 $1.17 on a one-pack script and $2.34 on a two-pack script), which you pay on top of your co-payment and which does not count towards the Safety Net [5]. Ask your pharmacist for a brand with no premium if cost matters.",
-            "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70 [5][8]."
+            "Several brands share these items. Anterone and Cyproterone Sandoz are benchmark-priced; Androcur and Androcur-100 carry a small brand premium (PBS, 17 Oct 2026, Androcur 50 mg $1.90 on a two-pack script and $4.00 on a four-pack script; Androcur-100 $1.17 on a one-pack script and $2.34 on a two-pack script), which you pay on top of your co-payment and which does not count towards the Safety Net [5]. Ask your pharmacist for a brand with no premium if cost matters.",
+            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [5][8]."
           ]
         },
         {
@@ -1086,13 +1092,18 @@
         },
         {
           "n": 9,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
           "n": 10,
           "text": "Androcur (date of revision 25 November 2024), Anterone 50 and Anterone 100 (27 February 2025) and Cyproterone Sandoz (23 March 2026) tablets, Australian Product Information, sections 4.4 (liver) and 6.4 (storage). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
           "url": "https://www.safetyandquality.gov.au/medicine-finder/anterone-50?bid=b2dec155-2faa-4df6-b8cd-a6f700e23724"
+        },
+        {
+          "n": 11,
+          "text": "Androcur (cyproterone acetate) tablets, Australian Product Information, section 4.4 Special warnings and precautions (recovery of sperm production; osteoporosis) (date of revision 25 November 2024). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
+          "url": "https://www.safetyandquality.gov.au/medicine-finder/androcur-tablets"
         }
       ]
     },
@@ -1110,7 +1121,8 @@
       "supplyIds": [
         "spironolactone"
       ],
-      "summary": "A tablet that blocks the effect of testosterone and also acts as a mild diuretic. It is the gentler of the two androgen blockers used in Australia, and the one that needs kidney and potassium checks.",
+      "summary": "A tablet that blocks the effect of testosterone and also acts as a mild diuretic. It is one of the two androgen blockers used in Australia, and it needs kidney and potassium checks.",
+      "reviewed": "24 October 2026",
       "sections": [
         {
           "h": "What it is",
@@ -1139,7 +1151,8 @@
           "list": [
             "Usual range — 50 to 200 mg daily [8]",
             "100 to 200 mg daily in the 2019 position statement [1]",
-            "Levels and bloods rechecked six to eight weeks after a change [4]"
+            "Potassium and kidney tests about one week after starting, then as your prescriber sets [2]",
+            "Oestradiol levels rechecked six to eight weeks after a change to oestrogen [4]"
           ],
           "note": "Only your prescriber can set or change your dose. The figures above are the ranges Australian guidance works within, not a recommendation for you."
         },
@@ -1183,7 +1196,8 @@
           "body": [
             "The specific extra checks for spironolactone are electrolytes — particularly potassium — and kidney function, along with your blood pressure [2][4].",
             "The Spiractin leaflet describes the pattern: \"Your doctor may do blood tests to check your sodium and potassium levels and see how your kidneys are working\", potentially weekly at first, then monthly for three months, quarterly for a year, then every six months [2].",
-            "Alongside that, the usual feminising-therapy monitoring applies: trough oestradiol above about 250 pmol/L [8]. Spironolactone blocks testosterone at the tissues and may not bring blood testosterone below 2 nmol/L, so Australian guidance says its effect is judged by your physical changes rather than the testosterone result alone [8]."
+            "Alongside that, the usual feminising-therapy monitoring applies: trough oestradiol above about 250 pmol/L [8]. Spironolactone blocks testosterone at the tissues and may not bring blood testosterone below 2 nmol/L, so Australian guidance says its effect is judged by your physical changes rather than the testosterone result alone [8].",
+            "If you also take PrEP to prevent HIV, it does not interact with your hormones, but the kidney test matters even more. Australian guidelines suggest that anyone on hormones (including those with a vagina) should take PrEP every day, not on-demand [10]."
           ],
           "list": [
             "Potassium and sodium, and kidney function [2][4]",
@@ -1204,9 +1218,9 @@
           "h": "Cost and PBS",
           "body": [
             "Spironolactone is PBS-listed on the General Schedule with no restrictions, so no authority is needed and the standard co-payment applies. The 25 mg tablet, 100 pack, is item 2339D, and the 100 mg tablet, 100 pack, is item 2340E [5].",
-            "Three brands share each item, and two of them carry a brand premium you pay on top of your co-payment. At the last PBS check (October 2026), Spironolactone Viatris had no premium; on a one-pack script Spiractin carried $4.42 (25 mg) or $4.37 (100 mg) and Aldactone $7.33 (25 mg) or $7.28 (100 mg) [5].",
+            "Three brands share each item, and two of them carry a brand premium you pay on top of your co-payment. At the PBS check on 17 October 2026, Spironolactone Viatris had no premium; on a one-pack script Spiractin carried $4.42 (25 mg) or $4.37 (100 mg) and Aldactone $7.33 (25 mg) or $7.28 (100 mg) [5].",
             "Brand premiums do not count towards the Safety Net and you still pay them after you have passed it. Ask your pharmacist for the benchmark brand if cost matters — swapping brands of the same medicine is routine.",
-            "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70; the yearly Safety Net thresholds are $1,748.20 general and $277.20 concessional [7]."
+            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70; the yearly Safety Net thresholds are $1,748.20 general and $277.20 concessional [7]."
           ]
         },
         {
@@ -1288,13 +1302,18 @@
         },
         {
           "n": 8,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
           "n": 9,
           "text": "Aldactone (date of revision 18 June 2025) and Spiractin (28 July 2025) (spironolactone) tablets, Australian Product Information, section 4.8 Adverse effects (Stevens-Johnson syndrome, toxic epidermal necrolysis, DRESS). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 18 October 2026.",
           "url": "https://www.safetyandquality.gov.au/medicine-finder/aldactone"
+        },
+        {
+          "n": 10,
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"), page 36 (Ongoing monitoring of GAHT: kidney function with spironolactone or PrEP) and page 58 (Pre-exposure prophylaxis). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 24 October 2026.",
+          "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         }
       ]
     },
@@ -1313,7 +1332,8 @@
       "supplyIds": [
         "reandron"
       ],
-      "summary": "A long-acting testosterone injection given by a clinician every few months. It is the most widely used masculinising hormone in Australia, and the one that needs the fewest doses per year.",
+      "summary": "A long-acting testosterone injection given by a clinician, usually every 10 to 14 weeks. After each dose you wait at the clinic for at least 30 minutes, because the oil can very rarely reach the lungs.",
+      "reviewed": "24 October 2026",
       "sections": [
         {
           "h": "What it is",
@@ -1419,7 +1439,8 @@
             "The listed indications on the item are androgen deficiency, micropenis, pubertal induction, and constitutional delay of growth or puberty [4]. Prescribers apply under androgen deficiency, where the PBS criteria read \"Patient must have an established pituitary or testicular disorder\", with prescribing by or in consultation with a specialist (general paediatrician, paediatric endocrinologist, urologist, endocrinologist or sexual health physician), whose name goes on the authority application [4][1]. Australian standards note the specialist consultation only needs to happen once, and the same specialist's name can be used on later applications [7].",
             "The PBS also lists testosterone for a second kind of androgen deficiency: in people aged 40 or over, confirmed by two morning blood tests, and not caused by a pituitary or testicular disorder. That is not the pathway used in gender-affirming care, so if you see it on the item page, it is not the one your prescriber applies under [11][7].",
             "If the authority is missing or expired, the pharmacy cannot charge you the PBS price. The fix is a phone call to your prescriber, not a private price — ask before you pay.",
-            "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70 [4][6]."
+            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [4][6].",
+            "The PBS Authority for testosterone, the four PBS brands of the long-acting injection, why there are no testosterone patches, and e-scripts are explained in the [testosterone section of the doses guide](#/doses#sec-doses-4)."
           ],
           "note": "Every PBS testosterone item is listed for androgen deficiency and related conditions, not for gender affirmation, so the wording on the screen will not describe you. It is a quirk of a listing written before anyone was thinking about gender-affirming care, and it does not change your entitlement or your price."
         },
@@ -1436,7 +1457,7 @@
           "pro": true,
           "body": [
             "These documents are written for clinicians who administer testosterone undecanoate by deep intramuscular injection, not for patients. If you are a patient, you are welcome to download them and take them to your clinic.",
-            "Version 2.2, revised 18 October 2026 and checked against the Australian Product Information for Reandron 1000 and Testosterone ADVZ 1000. They describe the ventrogluteal site, needle selection, slow injection technique, the observation period of at least 30 minutes, and recognition and management of pulmonary oil microembolism and anaphylaxis. They are offered as a starting point for a clinic's own procedure, to be adapted to local policy, and do not replace the Product Information.",
+            "Version 2.4, revised 31 October 2026 and checked against the Australian Product Information for Reandron 1000 and Testosterone ADVZ 1000. They describe the ventrogluteal site, needle selection, slow injection technique, the observation period of at least 30 minutes, and recognition and management of pulmonary oil microembolism and anaphylaxis. They are offered as a starting point for a clinic's own procedure, to be adapted to local policy, and do not replace the Product Information.",
             "The package recommends, but does not require, a pregnancy test before each injection for anyone who could become pregnant, because testosterone must not be used in pregnancy [2][7].",
             "[Standard operating procedure and training guide (PDF, 6 pages)](/clinicians/testosterone-undecanoate-im-sop-and-training-guide.pdf)",
             "[Treatment-room card: one page to print and laminate (PDF)](/clinicians/testosterone-undecanoate-im-treatment-room-card.pdf)",
@@ -1446,7 +1467,7 @@
             "[Whole training package: all five documents in one zip file](/clinicians/testosterone-undecanoate-im-training-package.zip)",
             "Patients: what to expect at the appointment, and why you are asked to wait afterwards, is explained in plain language on the [How-to-use guide](#/using#sec-using-4)."
           ],
-          "note": "Prepared by Theodore South, BPharm (Hons). Version 2.2, revised 18 October 2026. Not endorsed by any health service. Clinics remain responsible for their own procedures, training and credentialling."
+          "note": "Prepared by Theodore South, BPharm (Hons). Version 2.4, revised 31 October 2026. Not endorsed by any health service. Clinics remain responsible for their own procedures, training and credentialling."
         },
         {
           "h": "Questions worth asking",
@@ -1511,7 +1532,7 @@
         },
         {
           "n": 7,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
@@ -1558,6 +1579,7 @@
       "forms": "Intramuscular injection. Primoteston Depot 250 mg/1 mL pre-filled syringe; Sustanon 250, 250 mg of mixed esters in 1 mL ampoule",
       "supplyIds": [],
       "summary": "Shorter-acting testosterone injections given every two to four weeks. Both are registered in Australia but neither is PBS-subsidised, so they are private prescriptions.",
+      "reviewed": "24 October 2026",
       "sections": [
         {
           "h": "What it is",
@@ -1658,7 +1680,8 @@
           "body": [
             "Neither is PBS-subsidised, so both are private prescriptions and you pay the pharmacy's full price [4].",
             "Primoteston Depot was deleted from the PBS on 1 February 2018 at the manufacturer's request [9]. Sustanon is not PBS-listed either [4].",
-            "Private prices vary between pharmacies and do not count towards the PBS Safety Net. It is entirely reasonable to ring around, and to ask your prescriber whether a PBS-subsidised alternative — the long-acting undecanoate injection, or a gel or cream — would suit you instead."
+            "Private prices vary between pharmacies and do not count towards the PBS Safety Net. It is entirely reasonable to ring around, and to ask your prescriber whether a PBS-subsidised form of testosterone would suit you.",
+            "The PBS Authority for testosterone, the four PBS brands of the long-acting injection, why there are no testosterone patches, and e-scripts are explained in the [testosterone section of the doses guide](#/doses#sec-doses-4)."
           ]
         },
         {
@@ -1676,7 +1699,7 @@
             "How is my haematocrit tracking, and at what level would you change my dose or interval?",
             "If I notice a mood or energy dip before my next injection is due, does that mean my interval needs shortening?",
             "Given testosterone's effect on sperm production, do I need to think about fertility preservation before we go any higher?",
-            "Would switching to the long-acting undecanoate injection, which is PBS-subsidised, make sense for me?",
+            "Is there a PBS-subsidised form of testosterone that would suit me?",
             "If I miss or need to delay an injection, how late can it safely run before it matters?"
           ]
         }
@@ -1735,7 +1758,7 @@
         },
         {
           "n": 6,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
@@ -1783,12 +1806,13 @@
       "supplyIds": [
         "testogel"
       ],
-      "summary": "A testosterone gel rubbed into the skin once a day. It suits people who prefer a daily routine, or who want the dose adjusted in small steps rather than every few months.",
+      "summary": "A testosterone gel rubbed into the skin once a day. It suits people who prefer a daily routine, or who want the dose adjusted in small steps rather than every few months. It can pass to other people through skin contact, so wash your hands and cover the area once it is dry.",
+      "reviewed": "24 October 2026",
       "sections": [
         {
           "h": "What it is",
           "body": [
-            "Testosterone gel delivers testosterone through the skin daily, instead of in one large dose every few months. Levels stay steadier day to day, and the dose can be moved in small increments. It works by binding to androgen receptors in muscle, skin, hair follicles, the voice box and the brain, driving masculinising changes over months to years [1].",
+            "Testosterone gel delivers testosterone through the skin daily, instead of in one large dose every few months. It is used every day, and the dose can be moved in small steps. It works by binding to androgen receptors in muscle, skin, hair follicles, the voice box and the brain, driving masculinising changes over months to years [1]. The gel can pass to other people through skin contact, so wash your hands and cover the area once it is dry [2][3].",
             "Two products are registered in Australia at different concentrations. Testogel is 1%: a 5 g sachet contains 50 mg of testosterone, and the metered pump delivers 12.5 mg per press [2]. Testavan is 2%: the pump delivers 23 mg of testosterone per press, in 1.15 g of gel [3].",
             "Both are registered for testosterone replacement in male hypogonadism. Testogel's product information says it \"must not be used in women or children\", and Testavan's that it \"is contraindicated in all women\" (sections 4.1 and 4.3) [13]. That is a statement about the registered use, not a bar to gender-affirming care: masculinising hormone therapy uses testosterone outside its registered use (off-label), and Australia's 2026 standards of care set out how GPs prescribe it for trans and gender diverse people under informed consent [8]. Both also say testosterone should not be used during pregnancy or while breastfeeding (sections 4.3 and 4.6) [13].",
             "Because the concentrations differ, the number of pump presses is not transferable between the two. Never convert a Testogel dose into Testavan presses yourself.",
@@ -1891,7 +1915,8 @@
             "Testogel is listed as 1% (50 mg/5 g) gel, 30 x 5 g sachets (items 8830R and 13983Y) and as 1% (12.5 mg/actuation) gel, 2 x 60 actuations (items 10380H and 13924W). Testavan is listed as 2% (23 mg/actuation) gel, 56 actuations (items 11740X and 14025E) [5].",
             "The listed indications on these items are androgen deficiency, micropenis, pubertal induction, and constitutional delay of growth or puberty [5].",
             "If the authority is missing or has expired, the pharmacy cannot charge you the PBS price. The fix is a phone call to your prescriber, not a private price — ask before you pay.",
-            "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70 [5][7]."
+            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [5][7].",
+            "The PBS Authority for testosterone, the four PBS brands of the long-acting injection, why there are no testosterone patches, and e-scripts are explained in the [testosterone section of the doses guide](#/doses#sec-doses-4)."
           ],
           "note": "Every PBS testosterone item is listed for androgen deficiency and related conditions, not for gender affirmation, so the wording on the screen will not describe you. It is a quirk of a listing written before anyone was thinking about gender-affirming care, and it does not change your entitlement or your price."
         },
@@ -1975,7 +2000,7 @@
         },
         {
           "n": 8,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
@@ -2023,12 +2048,13 @@
       "supplyIds": [
         "androforte"
       ],
-      "summary": "A testosterone cream measured by the millilitre and rubbed into the skin daily. AndroForte 5 is the higher strength used in masculinising therapy; AndroFeme 1 is a much lower strength registered for a different purpose.",
+      "summary": "A testosterone cream measured by the millilitre and rubbed into the skin daily. The 5% cream (AndroForte 5) is the strength used in masculinising therapy; the 1% cream (AndroFeme 1) is a much lower strength registered for a different purpose. It can pass to other people through skin contact, so keep the area covered.",
+      "reviewed": "24 October 2026",
       "sections": [
         {
           "h": "What it is",
           "body": [
-            "Cream works like gel — daily application through the skin, steadier levels than an injection, and a dose that can be moved in small steps. It is measured in millilitres using an applicator rather than in pump presses. Testosterone works by binding to androgen receptors in muscle, skin, hair follicles, the voice box and the brain, driving masculinising changes over months to years [1].",
+            "Cream works like gel: applied daily, with a dose that can be moved in small steps. It is measured in millilitres using an applicator rather than in pump presses. Testosterone works by binding to androgen receptors in muscle, skin, hair follicles, the voice box and the brain, driving masculinising changes over months to years [1]. The cream can pass to other people through skin-to-skin contact, so keep the area covered with clothing and wash your hands after applying it [2][3].",
             "AndroForte 5 contains \"50 mg testosterone per 1 mL of cream\", supplied in Australia by Lawley Pharmaceuticals [2].",
             "AndroFeme 1 is a much weaker cream: \"10 mg testosterone per 1 mL of cream\" [3]. It is registered in Australia for treating hypoactive sexual desire dysfunction after menopause, not for masculinising hormone therapy [3]. It is included here because people do encounter it, and because the tenfold difference in strength matters.",
             "AndroForte 5 is registered for testosterone replacement in male hypogonadism, and its product information says it \"should not be used by women or children\" (sections 4.1 and 4.4) [14]. That is a statement about the registered use, not a bar to gender-affirming care: masculinising hormone therapy uses testosterone outside its registered use (off-label), and Australia's 2026 standards of care set out how GPs prescribe it for trans and gender diverse people under informed consent [9]. Both creams' product information says testosterone should not be used during pregnancy or while breastfeeding (AndroForte 5 section 4.6; AndroFeme 1 section 4.3) [14].",
@@ -2132,7 +2158,8 @@
             "AndroForte 5 is PBS-listed, but Authority Required — testosterone 5% (50 mg/mL) cream, 50 mL, items 10378F and 14563L. Your prescriber arranges the authority before you get to the pharmacy [5].",
             "The listed indications are androgen deficiency, micropenis, pubertal induction, and constitutional delay of growth or puberty [5].",
             "AndroFeme 1 is registered in Australia but is not PBS-subsidised, so it is a private prescription and you pay the pharmacy's full price. The PBAC considered a submission for it in November 2025 and did not recommend listing [6].",
-            "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70 — this applies to AndroForte 5, not to the private AndroFeme 1 [5][8]."
+            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 — this applies to AndroForte 5, not to the private AndroFeme 1 [5][8].",
+            "The PBS Authority for testosterone, the four PBS brands of the long-acting injection, why there are no testosterone patches, and e-scripts are explained in the [testosterone section of the doses guide](#/doses#sec-doses-4)."
           ],
           "note": "Every PBS testosterone item is listed for androgen deficiency and related conditions, not for gender affirmation, so the wording on the screen will not describe you. It is a quirk of a listing written before anyone was thinking about gender-affirming care, and it does not change your entitlement or your price."
         },
@@ -2224,7 +2251,7 @@
         },
         {
           "n": 9,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
@@ -2271,7 +2298,8 @@
       "category": "gnrh-analogue",
       "forms": "Zoladex — goserelin 3.6 mg subcutaneous implant, every 28 days. Lucrin Depot — leuprorelin powder for intramuscular injection, including 3.75 mg and 11.25 mg, and a 30 mg paediatric presentation given every three months. Eligard — leuprorelin subcutaneous injection, 7.5 mg monthly, 22.5 mg three-monthly, 30 mg four-monthly and 45 mg six-monthly",
       "supplyIds": [
-        "zoladex"
+        "zoladex",
+        "diphereline"
       ],
       "summary": "Injections or implants that pause puberty by switching off the hormone signal from the brain. They are always used under specialist care. None of them is PBS-subsidised for puberty suppression: triptorelin 3.75 mg (Diphereline) has had no PBS restriction since 1 October 2026, but its listing is not for use in gender dysphoria in people under 18.",
       "sections": [
@@ -2379,7 +2407,7 @@
           "body": [
             "Since 1 October 2026, triptorelin 3.75 mg (Diphereline), a monthly injection, has been on the PBS General Schedule with no restriction (item 9378N). Its listing carries a PBS note: \"The listing of this medicine is not for use in gender dysphoria in minors\" [8]. So it does not make puberty suppression PBS-subsidised. Goserelin (Zoladex), leuprorelin (Lucrin, Eligard) and the longer-acting triptorelin strengths (11.25 mg and 22.5 mg) are PBS-listed only for other conditions, such as prostate cancer, endometriosis or central precocious puberty. For puberty suppression, all of them are private prescriptions. SA Health's model of care, written in 2023, noted that a young person who could not get them through a hospital faced a cost of several thousand dollars a year [5].",
             "Because these medicines have PBS listings for other conditions, a pharmacist may see a subsidised price on screen. That does not make a prescription for puberty suppression a PBS one — ask your prescriber directly whether yours is PBS or private.",
-            "Access to goserelin has been changing. In July 2026 the PBS announced that the goserelin 3.6 mg implant (Zoladex) would leave the PBS on 1 November 2026, with the sponsor supplying it free through a Zoladex Continuity Program [6]. Since then the sponsor has told the TGA it will keep supplying the implant and extend PBS access, and goserelin is not on the PBS list of deletions for 1 November 2026 [9][10]. Ask your prescriber or pharmacist for the current position before the next dose is due. This site will check this again after 1 November 2026.",
+            "Access to goserelin has been changing. In July 2026 the PBS announced that the goserelin 3.6 mg implant (Zoladex) would leave the PBS on 1 November 2026, with the sponsor supplying it free through a Zoladex Continuity Program [6]. On 23 September 2026 the sponsor, AstraZeneca, said instead that the implant will stay on the PBS until 1 May 2027, that PBS prescriptions written by 30 April 2027 can be filled until 1 May 2028, and that the Continuity Program will not go ahead [15]. The TGA shortage record still shows the earlier date [9], but goserelin is not on the PBS list of deletions for 1 November 2026 [10]. Ask your prescriber or pharmacist for the current position before the next dose is due. This site will check this again after 1 November 2026.",
             "If this affects you or your child, raise it with your prescriber and your pharmacist well before the next dose is due, not in the week it falls due."
           ]
         },
@@ -2461,12 +2489,12 @@
         },
         {
           "n": 5,
-          "text": "SA Health. State-wide Gender Diversity Model of Care, version 1.2. Adelaide: Department for Health and Wellbeing, Government of South Australia; July 2023. Accessed September 2026.",
+          "text": "SA Health. State-wide Gender Diversity Model of Care, version 1.2. Adelaide: Department for Health and Wellbeing, Government of South Australia; July 2023. Accessed 24 September 2026.",
           "url": "https://www.sahealth.sa.gov.au/wps/wcm/connect/d70c3a24-a054-4f6a-b56c-17152faa9d5c/Model+of+care_Gender+Diversity_Jul2023_FINAL_FOR+PUBLICATION.pdf?MOD=AJPERES"
         },
         {
           "n": 6,
-          "text": "Pharmaceutical Benefits Scheme. Update on access to goserelin 3.6 mg implant (Zoladex Implant). Canberra: Department of Health, Disability and Ageing; 16 July 2026. Accessed September 2026.",
+          "text": "Pharmaceutical Benefits Scheme. Update on access to goserelin 3.6 mg implant (Zoladex Implant). Canberra: Department of Health, Disability and Ageing; 16 July 2026. Accessed 24 September 2026.",
           "url": "https://www.pbs.gov.au/news/2026/07/update-on-access-to-goserelin-3-6-mg-implant-zoladex-implant"
         },
         {
@@ -2508,6 +2536,11 @@
           "n": 14,
           "text": "Diphereline (triptorelin; date of revision 8 April 2026), Lucrin Depot (leuprorelin; 21 February 2025) and Eligard (leuprorelin; 22 December 2025), Australian Product Information, section 4.4 Special warnings and precautions (depression and mood changes; convulsions) and Eligard section 4.8; the Zoladex 3.6 mg Consumer Medicine Information lists mood changes and depression as serious side effects. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 18 October 2026.",
           "url": "https://www.safetyandquality.gov.au/medicine-finder/diphereline"
+        },
+        {
+          "n": 15,
+          "text": "AstraZeneca Australia. AstraZeneca to extend PBS access to Zoladex (goserelin) monthly (3.6mg) implant (media release): PBS-listed until 1 May 2027; PBS prescriptions written by 30 April 2027 can be filled until 1 May 2028; the Zoladex continuity program will not proceed. Macquarie Park: AstraZeneca; 23 September 2026. Accessed 23 October 2026.",
+          "url": "https://www.astrazeneca.com.au/news/media-releases/2026/ASTRAZENECA-TO-EXTEND-PBS-ACCESS-TO-ZOLADEX-goserelin-MONTHLY-3_6mg-IMPLANT.html"
         }
       ]
     },
@@ -2611,8 +2644,8 @@
           "h": "Cost and PBS",
           "body": [
             "Doxycycline is PBS-listed as a Restricted Benefit rather than unrestricted: it can be prescribed on the PBS only for the listed conditions, which are bronchiectasis, chronic bronchitis and severe acne. No phone approval is needed [5][8].",
-            "For severe acne the PBS subsidises both strengths: 50 mg plain tablets (item 2711Q, several generic brands, and item 9106G, Doxycycline Sandoz), 50 mg modified-release capsules (item 2707L: Doryx and Mayne Pharma Doxycycline, which both carry a brand premium, $4.74 and $2.41 on a one-pack script at the last PBS check) and 100 mg tablets (item 10779H). The PBS treats the 50 mg tablets and capsules as interchangeable, so ask for a brand without a premium if cost matters. Other 100 mg listings are for other infections [5].",
-            "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70 [5][7]."
+            "For severe acne the PBS subsidises both strengths: 50 mg plain tablets (item 2711Q, several generic brands, and item 9106G, Doxycycline Sandoz), 50 mg modified-release capsules (item 2707L: Doryx and Mayne Pharma Doxycycline, which both carry a brand premium, $4.74 and $2.41 on a one-pack script, PBS, 17 Oct 2026) and 100 mg tablets (item 10779H). The PBS treats the 50 mg tablets and capsules as interchangeable, so ask for a brand without a premium if cost matters. Other 100 mg listings are for other infections [5].",
+            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [5][7]."
           ]
         },
         {
@@ -2762,6 +2795,7 @@
           "h": "Side effects that need attention",
           "body": [
             "Genuine allergic reactions to a topical gel are uncommon, but the leaflet is clear about what to do if one happens [2].",
+            "The Epiduo Forte product information says it contains polysorbate 80. If you have reacted to polysorbate 80 before, tell your prescriber or pharmacist [7].",
             "Adapalene should not be used in pregnancy or while trying to conceive — relevant if pregnancy is possible for you, since testosterone does not reliably prevent it [1][2]."
           ],
           "list": [
@@ -2792,7 +2826,7 @@
           "body": [
             "Epiduo (adapalene 0.1% / benzoyl peroxide 2.5% gel, 30 g) is PBS-listed as a Restricted Benefit for severe acne vulgaris: item 8954G for a course of acute treatment used together with an oral antibiotic, and item 8955H for maintenance treatment [4].",
             "Epiduo Forte (adapalene 0.3%) is not PBS-listed, so it is a private prescription and you pay the pharmacy's price [4].",
-            "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70 [4][5]."
+            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [4][5]."
           ]
         },
         {
@@ -2878,11 +2912,25 @@
       "name": "Isotretinoin",
       "generic": "Isotretinoin",
       "brands": [
-        "Oratane"
+        "Oratane",
+        "APO-Isotretinoin",
+        "Isotretinoin Gx",
+        "Isotretinoin Lupin",
+        "Isotretinoin-WGR"
       ],
       "category": "adjunct",
       "forms": "Oral capsule. 5 mg, 10 mg, 20 mg, 30 mg and 40 mg (Oratane)",
-      "supplyIds": [],
+      "supplyIds": [
+        "isotretinoin-apo-10",
+        "isotretinoin-apo-20",
+        "isotretinoin-gx-10",
+        "isotretinoin-gx-20",
+        "isotretinoin-lupin-10",
+        "isotretinoin-lupin-20",
+        "isotretinoin-wgr-10",
+        "isotretinoin-wgr-20",
+        "oratane"
+      ],
       "summary": "A strong oral retinoid for acne that is severe, scarring, or has not responded to other treatment. Australian guidance points to it once testosterone-related acne needs a dermatologist.",
       "sections": [
         {
@@ -2977,13 +3025,15 @@
           "body": [
             "Isotretinoin is PBS-listed, Authority Required (Streamlined), for \"severe cystic acne\" — for example, the 30 mg capsule, 60 pack, item 11921K [5].",
             "The streamlined authority means your prescriber writes an authority code on the script instead of phoning for approval. The acne must not have responded to other treatment, and up to three repeats can be written [5].",
-            "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70 [5][7]."
+            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [5][7]."
           ]
         },
         {
           "h": "Supply in Australia",
           "body": [
-            "No current TGA shortage notice was located for Oratane in Australia. That is not the same as a confirmed all-clear, so ask your pharmacist ahead of time if you're worried about continuity through a course [6]."
+            "When checked on 24 October 2026, the TGA listed all the generic isotretinoin capsules as unavailable: APO-Isotretinoin, Isotretinoin Gx, Isotretinoin Lupin and Isotretinoin-WGR, in both the 10 mg and 20 mg strengths. They are expected back between 25 December 2026 and 8 October 2027 [6].",
+            "No shortage notice was listed for Oratane. That is not the same as a confirmed all-clear, so ask your pharmacist ahead of time if you're worried about continuity through a course [6].",
+            "The [supply page](#/supply) lists each one with its expected return date, checked against TGA records every day."
           ]
         },
         {
@@ -3025,7 +3075,7 @@
         },
         {
           "n": 3,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
@@ -3160,7 +3210,7 @@
           "h": "Cost and PBS",
           "body": [
             "Norethisterone is PBS-listed on the General Schedule with no restrictions — norethisterone 5 mg tablet, 30 pack, item 2993M, brand Primolut N [5].",
-            "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70 [5][6]."
+            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [5][6]."
           ]
         },
         {
@@ -3227,7 +3277,7 @@
         },
         {
           "n": 7,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
@@ -3341,8 +3391,8 @@
           "h": "Cost and PBS",
           "body": [
             "Depo-Provera is PBS-listed on the General Schedule with no restrictions — medroxyprogesterone acetate 150 mg/mL injection, 1 mL pre-filled syringe, item 14160G [4].",
-            "The tablets are also listed with no restrictions: 5 mg tablet, 56 (item 2323G) and 10 mg tablet, 30 (item 2321E), one pack with two repeats. Two brands share these items: Ralovera is benchmark-priced and Provera carries a brand premium (at the last PBS check, $4.42 for 5 mg and $6.50 for 10 mg on a one-pack script), which you pay on top of your co-payment and which does not count towards the Safety Net. Ask your pharmacist for Ralovera if cost matters [4].",
-            "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70 [4][6]."
+            "The tablets are also listed with no restrictions: 5 mg tablet, 56 (item 2323G) and 10 mg tablet, 30 (item 2321E), one pack with two repeats. Two brands share these items: Ralovera is benchmark-priced and Provera carries a brand premium (PBS, 17 Oct 2026, $4.42 for 5 mg and $6.50 for 10 mg on a one-pack script), which you pay on top of your co-payment and which does not count towards the Safety Net. Ask your pharmacist for a brand with no premium if cost matters [4].",
+            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [4][6]."
           ]
         },
         {
@@ -3411,7 +3461,7 @@
         },
         {
           "n": 7,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
@@ -3446,27 +3496,28 @@
       "category": "adjunct",
       "forms": "Intrauterine device, 52 mg levonorgestrel, releasing about 20 micrograms per day initially, fitted by a clinician",
       "supplyIds": [],
-      "summary": "A small hormone-releasing device fitted inside the uterus that stops or lightens periods and provides long-acting contraception at the same time. For menstrual suppression on testosterone, it avoids a daily tablet or a repeat appointment every few months.",
+      "summary": "A small hormone-releasing device fitted inside the uterus that stops or lightens periods and provides long-acting contraception at the same time. For menstrual suppression on testosterone, it avoids a daily tablet or a repeat appointment every few months. It needs a fitting in a clinic, and thread checks after each period while periods continue.",
+      "reviewed": "24 October 2026",
       "sections": [
         {
           "h": "What it is",
           "body": [
             "Mirena releases a progestogen, levonorgestrel, directly inside the uterus. The dose that reaches the rest of the body is much lower than with a tablet or injection, because most of it acts locally to thin the uterine lining [2].",
             "The position statement lists \"progestin-releasing intrauterine devices\" as an option for periods that persist and cause distress on testosterone [1]. TransHub's contraception page names \"Hormonal IUDs (eg. Mirena)\" among the options available to trans people, alongside the reminder that \"testosterone alone is not an effective form of contraception for people with a uterus\" [3].",
-            "Because it's fitted once and then left in place, it suits people who'd rather not manage a daily tablet or a repeat injection every twelve weeks."
+            "Because it's fitted once and then left in place, it suits people who'd rather not manage a daily tablet or a repeat injection every twelve weeks. It does need a fitting in a clinic, and thread checks after each period while periods continue [2]."
           ]
         },
         {
           "h": "How it is used",
           "body": [
             "A doctor or nurse fits it inside the uterus during a clinic procedure, ideally \"within seven days from the beginning of your period\" [2]. It is not something you manage day to day once it's in.",
-            "\"After each menstrual period check that the device is in place by feeling for the thin threads attached to the lower end\" — if periods stop altogether, which is common with continued use, this check is less relevant [2].",
+            "\"After each menstrual period check that the device is in place by feeling for the thin threads attached to the lower end\" [2]. Some people's periods stop. If yours do, keep feeling for the threads now and then and keep your regular check-ups, because Mirena can come out without you noticing [2].",
             "Wait roughly 48 hours after insertion before penetrative vaginal intercourse [2]."
           ],
           "list": [
             "Fitted by a clinician, typically within a week of your period starting [2]",
-            "Lasts up to 8 years for contraception; for heavy bleeding it is proven for 5 years and can stay in up to 8 years if the bleeding has not come back [2]",
-            "Check the threads after each period, if you're still having them [2]"
+            "Lasts up to 8 years for contraception; for heavy bleeding the evidence covers 5 years, and it can stay in up to 8 years if the bleeding has not come back [2]",
+            "Check the threads after each period, and now and then if your periods stop [2]"
           ],
           "note": "Insertion itself can be uncomfortable, and testosterone can thin vaginal and cervical tissue over time — it's worth asking your clinician what pain relief or local anaesthetic options are available before the appointment, rather than on the day."
         },
@@ -3477,7 +3528,7 @@
           ],
           "list": [
             "One device, fitted once [2]",
-            "Up to 8 years for contraception; for heavy menstrual bleeding, proven for 5 years, then replaced when the bleeding comes back or at 8 years at the latest [2]"
+            "Up to 8 years for contraception; for heavy menstrual bleeding, the evidence covers 5 years, then it is replaced when the bleeding comes back or at 8 years at the latest [2]"
           ],
           "note": "Your prescriber will advise which duration applies to why you're using it."
         },
@@ -3529,7 +3580,7 @@
           "body": [
             "Mirena is PBS-listed as a Restricted Benefit: item 14705Y for contraception and item 8633J for heavy menstrual bleeding with no known cause (idiopathic menorrhagia). No phone approval is needed, and a doctor or nurse practitioner can prescribe it [4]. Ask the clinic whether to fill the script at a pharmacy and bring the device to your fitting appointment.",
             "The device itself is subsidised on the PBS, but the insertion procedure is usually billed separately by the clinic or through Medicare, so ask about the total cost of the appointment, not just the device [4].",
-            "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70 [4][6]."
+            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [4][6]."
           ]
         },
         {
@@ -3613,6 +3664,7 @@
       "forms": "Vaginal pessary (tablet), 10 micrograms estradiol, inserted with an applicator",
       "supplyIds": [],
       "summary": "A very low, local dose of oestrogen inserted into the vagina, with little reaching the rest of the body. Treats the dryness and irritation testosterone can cause in vaginal tissue over time.",
+      "reviewed": "24 October 2026",
       "sections": [
         {
           "h": "What it is",
@@ -3655,7 +3707,7 @@
           ],
           "list": [
             "Vaginal thrush [2]",
-            "Vaginal discharge or spotting, particularly when starting [2]",
+            "Vaginal discharge, particularly when starting [2]",
             "Itching or a genital rash [2]",
             "Headache [2]"
           ]
@@ -3668,20 +3720,22 @@
           "list": [
             "Sudden chest pain and difficulty breathing [2]",
             "Severe pain or swelling in a leg [2]",
-            "Unexplained vaginal bleeding beyond spotting [2]",
+            "Any vaginal bleeding or spotting: make an appointment with your doctor [2]",
             "A new, migraine-type headache [2]",
             "Yellowing of the skin or eyes [2]"
           ],
-          "note": "Call 000 or go to the nearest emergency department for sudden chest pain, breathlessness or a suspected blood clot. Tell your prescriber promptly about unexplained bleeding or a new migraine-type headache rather than waiting for your next review."
+          "note": "Call 000 or go to the nearest emergency department for sudden chest pain, breathlessness or a suspected blood clot. Tell your prescriber promptly about any bleeding or spotting, or a new migraine-type headache, rather than waiting for your next review."
         },
         {
           "h": "What is monitored",
           "body": [
-            "Given how little reaches the bloodstream, routine blood tests aren't usually needed for this alone — review is mostly about whether the dryness or irritation has actually improved [2]."
+            "Given how little reaches the bloodstream, routine blood tests aren't usually needed for this alone — review is mostly about whether the dryness or irritation has actually improved [2].",
+            "The Vagifem Low product information says treatment should be reviewed 3 to 6 months after starting, and then at least once a year [10]."
           ],
           "list": [
             "Symptom response, reviewed clinically [1][3][4]",
-            "Any bleeding pattern that doesn't fit the expected early spotting [2]"
+            "Any bleeding or spotting, which your doctor should check [2]",
+            "A review 3 to 6 months after starting, then at least yearly [10]"
           ]
         },
         {
@@ -3695,7 +3749,7 @@
           "h": "Cost and PBS",
           "body": [
             "Vagifem Low is PBS-listed on the General Schedule with no restrictions — estradiol 10 microgram modified-release pessary, 18 pack, item 10203B, shared with the brand Estro-Pess [5].",
-            "The PBS general patient co-payment is currently $25.00 per script, and the concessional co-payment is $7.70 [5][6]."
+            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [5][6]."
           ]
         },
         {
@@ -3736,7 +3790,7 @@
       "references": [
         {
           "n": 1,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
@@ -3778,6 +3832,11 @@
           "n": 9,
           "text": "Vagifem Low (date of revision 31 October 2023) and Estro-Pess (7 March 2024) (estradiol 10 microgram) pessaries, Australian Product Information, sections 4.4 Special warnings and precautions and 4.8 Adverse effects (applicator). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 18 October 2026.",
           "url": "https://www.safetyandquality.gov.au/medicine-finder/vagifem-low"
+        },
+        {
+          "n": 10,
+          "text": "Vagifem Low (estradiol 10 microgram) pessaries, Australian Product Information, section 4.2 Dose and method of administration (review) (date of revision 31 October 2023). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
+          "url": "https://www.safetyandquality.gov.au/medicine-finder/vagifem-low"
         }
       ]
     },
@@ -3788,12 +3847,19 @@
       "brands": [
         "Finasteride GH 1",
         "Propecia",
-        "APO-Finasteride 1"
+        "APO-Finasteride 1",
+        "Finapen"
       ],
       "category": "adjunct",
       "forms": "Oral tablet, 1 mg (for hair loss — a separate 5 mg strength is used for an unrelated prostate condition)",
-      "supplyIds": [],
+      "supplyIds": [
+        "finapen-1",
+        "apo-finasteride-1",
+        "finasteride-gh-1",
+        "propecia"
+      ],
       "summary": "A tablet that blocks the conversion of testosterone into dihydrotestosterone (DHT) in the scalp. An emerging option for androgenic hair loss in people on testosterone, and commonly used in feminising care as well.",
+      "reviewed": "24 October 2026",
       "sections": [
         {
           "h": "What it is",
@@ -3835,9 +3901,7 @@
             "The evidence specific to people taking testosterone is limited, but the effects described here come from the wider evidence base for this medicine."
           ],
           "list": [
-            "Reduced libido or difficulty with erections, for people who have erections [2]",
-            "Breast or chest tenderness or enlargement [2]",
-            "Skin rash [2]"
+            "Reduced libido or difficulty with erections, for people who have erections [2]"
           ]
         },
         {
@@ -3851,6 +3915,8 @@
             "Low mood, or thoughts of self-harm [2]",
             "Sexual side effects that persist or don't improve [2]",
             "Breast or chest lumps, pain or discharge [2]",
+            "Breast or chest swelling or tenderness: tell your doctor straight away [2]",
+            "Skin rash, itch or hives: tell your doctor straight away [2]",
             "Swelling of the face, lips, mouth or throat, or difficulty breathing — severe allergic reaction [2]"
           ],
           "note": "Call 000 or go to the nearest emergency department for a severe allergic reaction, or if you're in immediate danger from thoughts of self-harm. Otherwise, raise mood or sexual side effects with your prescriber rather than stopping quietly — there may be other options."
@@ -3877,7 +3943,7 @@
           "h": "Cost and PBS",
           "body": [
             "Finasteride 1 mg for hair loss is not PBS-subsidised. The only listing for finasteride at all is the unrelated 5 mg strength on the Repatriation PBS, for eligible veterans with benign prostatic hyperplasia (Authority Required) [3].",
-            "This means a private script and the pharmacy's own price for the 1 mg strength, which varies considerably between brands — generic finasteride 1 mg is usually cheaper than the original Propecia brand."
+            "This means a private script and the pharmacy's own price for the 1 mg strength, which varies between brands and pharmacies, so ask your pharmacist."
           ]
         },
         {
@@ -3910,7 +3976,7 @@
       "references": [
         {
           "n": 1,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
@@ -4062,7 +4128,7 @@
       "references": [
         {
           "n": 1,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
@@ -4084,7 +4150,7 @@
     },
     {
       "id": "estalis-patches",
-      "name": "Estalis and Estalis Sequi (combined estradiol and norethisterone patches)",
+      "name": "Estradiol and norethisterone patches (Estalis and Estalis Sequi)",
       "generic": "Estradiol + norethisterone acetate",
       "brands": [
         "Estalis Continuous",
@@ -4267,7 +4333,7 @@
         },
         {
           "n": 7,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
@@ -4284,7 +4350,7 @@
     },
     {
       "id": "kliogest-kliovance",
-      "name": "Kliogest and Kliovance (combined estradiol and norethisterone tablets)",
+      "name": "Estradiol and norethisterone tablets (Kliogest and Kliovance)",
       "generic": "Estradiol + norethisterone acetate",
       "brands": [
         "Kliogest",
@@ -4433,7 +4499,7 @@
         },
         {
           "n": 6,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
@@ -4450,7 +4516,7 @@
     },
     {
       "id": "trisequens",
-      "name": "Trisequens (sequential estradiol and norethisterone tablets)",
+      "name": "Sequential estradiol and norethisterone tablets (Trisequens)",
       "generic": "Estradiol + norethisterone acetate",
       "brands": [
         "Trisequens"
@@ -4579,7 +4645,7 @@
         },
         {
           "n": 5,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
@@ -4596,7 +4662,7 @@
     },
     {
       "id": "femoston",
-      "name": "Femoston and Femoston-Conti (combined estradiol and dydrogesterone tablets)",
+      "name": "Estradiol and dydrogesterone tablets (Femoston and Femoston-Conti)",
       "generic": "Estradiol + dydrogesterone",
       "brands": [
         "Femoston 1/10",
@@ -4765,7 +4831,7 @@
         },
         {
           "n": 7,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {
@@ -4782,7 +4848,7 @@
     },
     {
       "id": "angeliq",
-      "name": "Angeliq (combined estradiol and drospirenone tablets)",
+      "name": "Estradiol and drospirenone tablets (Angeliq)",
       "generic": "Estradiol + drospirenone",
       "brands": [
         "Angeliq"
@@ -4914,7 +4980,7 @@
         },
         {
           "n": 6,
-          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+          "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
           "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
         },
         {

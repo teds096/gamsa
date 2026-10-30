@@ -4,6 +4,7 @@
 /home              /                    301
 /medicine          /medicines           301
 /medicine/*        /medicines/:splat    301
+/med               /medicines           301
 /med/*             /medicines/:splat    301
 /meds              /medicines           301
 /shortages         /supply              301

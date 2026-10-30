@@ -37,6 +37,9 @@ INGREDIENTS = {
     "cyproterone-acetate": "anti-androgen",          # likewise
     "goserelin": "gnrh-analogue",
     "leuprorelin": "gnrh-analogue",
+    "triptorelin": "gnrh-analogue",                  # Diphereline (B-10, 24 Oct 2026); answers 500 = no notices
+    "isotretinoin": "adjunct",                       # generic capsules (APO, Gx, Lupin, WGR) and Oratane
+    "finasteride": "adjunct",                        # Finapen 1 mg and the other 1 mg brands
 }
 
 # A parse that returns fewer than this many rows across all ingredients means the page
@@ -220,7 +223,8 @@ def pin_expired(entry, today=None):
 def keeps_own_status(entry, today=None):
     """A pinned entry, or one marked "delisting" (a PBS funding change the TGA does not record), keeps its own status and
     wording when a TGA row matches it; only the check date is refreshed. A "pinUntil" date ends both: e.g. Zoladex is
-    pinned to 31 Oct 2026, so from 1 Nov 2026 the daily run shows the TGA record again until Ted rechecks it."""
+    pinned to 30 Apr 2027 (PBS-listed until 1 May 2027, AstraZeneca 23 Sep 2026), so from 1 May 2027 the daily run shows
+    the TGA record again until Ted rechecks it."""
     return pinned(entry, today) or (entry.get("status") == "delisting" and not pin_expired(entry, today))
 
 
@@ -286,7 +290,8 @@ def main():
         text = " ".join([row.get("brand", ""), row.get("genericName", "")]).lower()
         best = None
         for m in curated:
-            names = [m.get("brand", "")] + list(m.get("brands", []))
+            # "tgaMatch" (data/manual.json): extra text that picks out one TGA product row, e.g. one strength of a generic
+            names = [m.get("brand", "")] + list(m.get("brands", [])) + list(m.get("tgaMatch", []))
             for n in names:
                 n = (n or "").strip().lower()
                 if len(n) > 3 and n in text:

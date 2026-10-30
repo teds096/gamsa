@@ -1,6 +1,6 @@
 {
-  "title": "Doses and formulations",
-  "intro": "A plain-language guide to the medicines used for gender-affirming hormone therapy in Australia: what each one is, what forms it comes in, the ranges Australian prescribers work within, and the blood tests that go with them. It is background reading, not a prescription.",
+  "title": "Medicines, doses and formulations",
+  "intro": "A plain-language guide to the medicines used for gender-affirming hormone therapy in Australia: what each one is, what forms it comes in, and the ranges Australian prescribers work within. It is background reading, not a prescription. Blood tests, fertility, PrEP and surgery are on the [Monitoring and related care](#/monitoring) page.",
   "sections": [
     {
       "h": "Start here: the dose is yours, and only your prescriber sets it",
@@ -25,16 +25,17 @@
         "It comes as tablets, skin patches and skin gel. Which one suits you is a clinical decision, not just a preference.",
         "Patches and gel avoid the first pass through the liver, so they are preferred where the risk of blood clots is higher [1].",
         "Ethinylestradiol, the oestrogen in the combined pill, is not used for gender affirmation. The high doses used until 1989 were linked to more clots [1].",
-        "Estradiol injections and implants are not available as registered products here. Compounded versions exist, but they are not tested for potency, efficacy, safety or quality control, and Australian guidance advises caution [1]."
+        "Estradiol injections and implants are not available as registered products here. Compounded versions exist, but they are not tested for potency, efficacy, safety or quality control, and Australian guidance advises caution [1].",
+        "Australia's 2026 standards of care say implants are not recommended for starting therapy, but are preferred by many people for maintenance, once treatment is settled. They often give higher oestradiol levels. They come only from pharmacies that make and sterilise them, private fees apply, and blood tests are used to time the next implant. Their clot risk is not known [3]."
       ],
       "list": [
-        "Tablets — estradiol valerate (Progynova) or estradiol (Zumenon), commonly 2–8 mg daily, taken once a day or split into two doses [17]. Other guidance: the 2019 position statement gives 2–6 mg daily [1], and the Zumenon product information, written for menopause, uses one 2 mg tablet a day [29]",
-        "Tablets under the tongue — changes how the medicine is absorbed, so only do this if your prescriber has told you to [4]",
-        "Patches — Estradot or Estraderm MX, changed twice a week. Australian guidance gives a common range of 50–200 micrograms per 24 hours; many prescribers start low and build up every two to three months, which may mean wearing more than one patch at a time [17]",
-        "Gel — once daily, measured in pumps or sachets. Australian guidance gives one to four pumps of Estrogel (0.75 mg estradiol each) or one to two 1 g Sandrena sachets daily [17]. Other guidance: the Estrogel product information, written for menopause, says the long-term safety of more than two pumps a day has not been established [31]",
-        "Monitoring — oestradiol and total testosterone, rechecked six to eight weeks after any change [3]"
+        "Tablets — estradiol valerate (Progynova) or estradiol (Zumenon), commonly 2–8 mg daily, taken once a day or split into two doses [4]. Other guidance: the 2019 position statement gives 2–6 mg daily [1], and the Zumenon product information, written for menopause, uses one 2 mg tablet a day [5]",
+        "Tablets under the tongue — changes how the medicine is absorbed, so only do this if your prescriber has told you to [6]",
+        "Patches — Estradot or Estraderm MX, changed twice a week. Australian guidance gives a common range of 50–200 micrograms per 24 hours; many prescribers start low and build up every two to three months, which may mean wearing more than one patch at a time [4]",
+        "Gel — once daily, measured in pumps or sachets. Australian guidance gives one to four pumps of Estrogel (0.75 mg estradiol each) or one to two 1 g Sandrena sachets daily [4]. Other guidance: the Estrogel product information, written for menopause, says the long-term safety of more than two pumps a day has not been established [7]",
+        "Monitoring — oestradiol and total testosterone, rechecked six to eight weeks after any change [8]"
       ],
-      "note": "Estradiol tablets and patches are on the PBS with no restriction attached, so the usual co-payment applies. Both estradiol gels, Sandrena sachets and the Estrogel pump, are listed too [7][24].",
+      "note": "Estradiol tablets and patches are on the PBS with no restriction attached, so the usual co-payment applies. Both estradiol gels, Sandrena sachets and the Estrogel pump, are listed too [9][10].",
       "nav": "Oestrogen",
       "figure": {
         "id": "estradiol-forms",
@@ -97,7 +98,7 @@
             "text": "Your doctor picks the form and the dose."
           }
         ],
-        "caption": "The three forms of estradiol available in Australia, and how often each is used. From Australia's 2026 standards of care and the TransHub feminising hormones guide, with the 2019 position statement and the Zumenon and Estrogel product information for comparison [17][4][1][29][31]."
+        "caption": "The three forms of estradiol available in Australia, and how often each is used. From Australia's 2026 standards of care and the TransHub feminising hormones guide, with the 2019 position statement and the Zumenon and Estrogel product information for comparison [4][6][1][5][7]."
       }
     },
     {
@@ -105,16 +106,17 @@
       "body": [
         "These medicines lower the effect of testosterone. Oestrogen on its own does not usually suppress testosterone enough, so a blocker is often added.",
         "Two are used in Australia: spironolactone and cyproterone acetate. There is no good head-to-head evidence that one is better than the other, so the choice comes down to your health history and how you tolerate it [1].",
-        "The advice is to use the lowest effective dose of cyproterone. The Australian product information reports meningioma with long-term use at doses of 25 mg a day and above, with the risk rising as the total dose taken over the years adds up. If a meningioma is diagnosed, cyproterone must be stopped permanently. Prolactinoma has also been reported [1][16].",
-        "After an orchidectomy a blocker is no longer needed. Oestrogen is usually paused around the time of surgery because of clot risk, so plan that with your surgeon and prescriber [1]."
+        "The advice is to use the lowest effective dose of cyproterone. The Australian product information reports meningioma with long-term use at doses of 25 mg a day and above, with the risk rising as the total dose taken over the years adds up. If a meningioma is diagnosed, cyproterone must be stopped permanently. Prolactinoma has also been reported [1][11].",
+        "Bicalutamide, a prostate cancer medicine, is sometimes used as a blocker. Australia's 2026 standards of care say it should not be a first choice, because there is very little evidence for it in gender-affirming care [12]. Liver damage, liver failure and lung damage, including deaths, have been reported, so anyone taking it needs regular liver blood tests for as long as they take it [12]. The Australian product information says most liver changes happen in the first 6 months, and that it is stopped for jaundice or if the liver test ALT rises above twice the upper limit of normal [13]. In July 2026 it added a warning about interstitial lung disease, a lung inflammation that has caused deaths. Bicalutamide is stopped if this is diagnosed [13, 14]. It can make warfarin work more strongly, so anyone on warfarin needs closer INR blood tests, and in rare cases it can make skin burn more easily in the sun [13].",
+        "After an orchidectomy a blocker is no longer needed [1]. Whether to stop hormones before an operation is covered in [Hormones around surgery](#/monitoring#sec-monitoring-5) on the Monitoring and related care page."
       ],
       "list": [
-        "Spironolactone (Spiractin, Aldactone and generics) — a daily tablet, usually 50–200 mg daily in Australian guidance [17], and 100–200 mg in the 2019 position statement [1]",
-        "Spironolactone monitoring — it is also a diuretic, so blood tests check electrolytes and kidney function, along with your blood pressure [3]",
-        "Cyproterone acetate (Androcur, Anterone, Cyproterone Sandoz) — a stronger blocker, and a progestogen in its own right. Australian guidance gives 12.5 mg once a week up to 25 mg daily [17]",
-        "Cyproterone, lower still — 12.5 mg (a quarter tablet) every second day or twice a week is commonly used [17]",
-        "Cyproterone monitoring — blood tests usually include liver function [3]",
-        "Finasteride and dutasteride are not general blockers; they are commonly added for scalp hair loss, although Australian guidance notes it is unclear whether they add benefit [17]"
+        "Spironolactone (Spiractin, Aldactone and generics) — a daily tablet, usually 50–200 mg daily in Australian guidance [4], and 100–200 mg in the 2019 position statement [1]",
+        "Spironolactone monitoring — it is also a diuretic, so blood tests check electrolytes and kidney function, along with your blood pressure [8]",
+        "Cyproterone acetate (Androcur, Anterone, Cyproterone Sandoz) — a stronger blocker, and a progestogen in its own right. Australian guidance gives 12.5 mg once a week up to 25 mg daily [4]",
+        "Cyproterone, lower still — 12.5 mg (a quarter tablet) every second day or twice a week is commonly used [4]",
+        "Cyproterone monitoring — blood tests usually include liver function [8]",
+        "Finasteride and dutasteride are not general blockers; they are commonly added for scalp hair loss, although Australian guidance notes it is unclear whether they add benefit [4]"
       ],
       "note": "Spironolactone and potassium interact. Tell your pharmacist about any potassium supplements, salt substitutes or blood pressure medicines before you start.",
       "nav": "Androgen blockers"
@@ -122,30 +124,34 @@
     {
       "h": "Progestogens",
       "body": [
-        "A separate group of hormones that some people take alongside oestrogen. If one is used, Australia's 2026 standards of care prefer micronised progesterone (for example Prometrium) [17].",
+        "A separate group of hormones that some people take alongside oestrogen. If one is used, Australia's 2026 standards of care prefer micronised progesterone (for example Prometrium) [4].",
         "The evidence for whether progestogens add anything to breast development or mood is limited, which is why practice varies between prescribers. It is a reasonable thing to ask about.",
         "They are also used the other way around. If periods continue on testosterone and cause distress, the options include raising the testosterone dose, an oral progestogen, or a progestogen-releasing IUD [1]."
       ],
       "list": [
-        "Micronised progesterone (Prometrium) — commonly 100–200 mg nightly, reviewed after three to six months [17]",
-        "No progesterone blood level target is given [17]"
+        "Micronised progesterone (Prometrium) — commonly 100–200 mg nightly, reviewed after three to six months [4]",
+        "No progesterone blood level target is given [4]"
       ],
       "nav": "Progestogens"
     },
     {
       "h": "Testosterone",
       "body": [
-        "Testosterone is the medicine used in masculinising hormone therapy. In Australia it comes as a long-acting intramuscular injection, a daily gel, a daily cream, and shorter-acting injections [5].",
+        "Testosterone is the medicine used in masculinising hormone therapy. In Australia it comes as a long-acting intramuscular injection, a daily gel, a daily cream, and shorter-acting injections [15].",
         "The gels and cream suit a daily routine, or a dose adjusted in smaller steps. The long-acting injection is given by a clinician every few months.",
-        "Testosterone implants (pellets) are used by a small number of people. They last several months, but they are not PBS-subsidised and can only be made by a compounding pharmacy [5].",
-        "On the PBS, every testosterone product needs an Authority prescription. Your prescriber arranges that before you get to the pharmacy [6][10]."
+        "Testosterone implants (pellets) are used by a small number of people. They last several months, but they are not PBS-subsidised and can only be made by a compounding pharmacy [15].",
+        "On the PBS, every testosterone product needs an Authority prescription. Your prescriber arranges that before you get to the pharmacy [16][17].",
+        "**Why does testosterone need a PBS Authority?** Every PBS testosterone product is listed as Authority Required [18][19]. For gender-affirming care, the prescriber needs a one-off second opinion from an endocrinologist, urologist or sexual health physician. It can be in person or by telehealth, and that specialist's name is then used on later scripts. A script can also be written once an appointment with the specialist is booked [19]. The [Authority wording card](#/clinician-guide) explains the wording for prescribers and pharmacists.",
+        "**Which testosterone injections are there?** The long-acting testosterone undecanoate injection, 1,000 mg in 4 mL, is on the PBS under four brands: Reandron 1000, Gonadron, Rejunon 1000 and Testosterone ADVZ 1000 [18]. Two shorter-acting injections, Primoteston Depot and Sustanon 250, are not PBS-subsidised [19].",
+        "**Are there testosterone patches?** Not at present. The TGA cancelled the Androderm testosterone patches at the sponsor's request: the 12.2 mg patch from 29 June 2022 and the 24.3 mg patch from 26 June 2025 [20][21]. Australia's 2026 standards of care list testosterone as gels, a cream and injections [19].",
+        "**Can testosterone be an e-script?** Electronic prescriptions can be used for any medicine anywhere in Australia, and you can still ask for a paper script. An e-script arrives as a token, usually a QR code, by SMS or email [22]."
       ],
       "list": [
-        "Testosterone undecanoate (Reandron 1000, and newer brands including Gonadron and Rejunon 1000) — 1,000 mg in 4 mL, deep intramuscular. A second dose about six weeks after the first, then one every 10 to 14 weeks [1][3][11]",
-        "Testosterone 1% gel (Testogel) — a metered pump delivering 12.5 mg per press, or 5 g sachets, applied daily. Australian standards give one to eight pumps, or one to two sachets, daily; four pumps is often enough for full masculinisation [17][10]",
-        "Testosterone 2% gel (Testavan), 23 mg per press, one to three presses daily, and 5% cream (AndroForte 5), 1–4 mL daily, often 2 mL [17][10]",
-        "Shorter-acting esters — testosterone enantate (Primoteston Depot) and Sustanon, usually 125–250 mg every two to four weeks [17]. Primoteston Depot was removed from the PBS on 1 February 2018 at the manufacturer's request and is now a private prescription [32]; Sustanon is not PBS-subsidised either [10][13]",
-        "Monitoring — trough total testosterone and haematocrit; see the blood tests section below [1][3]"
+        "Testosterone undecanoate (Reandron 1000, and newer brands including Gonadron and Rejunon 1000) — 1,000 mg in 4 mL, deep intramuscular. A second dose about six weeks after the first, then one every 10 to 14 weeks [1][8][23]",
+        "Testosterone 1% gel (Testogel) — a metered pump delivering 12.5 mg per press, or 5 g sachets, applied daily. Australian standards give one to eight pumps, or one to two sachets, daily; four pumps is often enough for full masculinisation [4][17]",
+        "Testosterone 2% gel (Testavan), 23 mg per press, one to three presses daily, and 5% cream (AndroForte 5), 1–4 mL daily, often 2 mL [4][17]",
+        "Shorter-acting esters — testosterone enantate (Primoteston Depot) and Sustanon, usually 125–250 mg every two to four weeks [4]. Primoteston Depot was removed from the PBS on 1 February 2018 at the manufacturer's request and is now a private prescription [24]; Sustanon is not PBS-subsidised either [17][25]",
+        "Monitoring — trough total testosterone and haematocrit; see the [blood tests section](#/monitoring#sec-monitoring-0) on the Monitoring and related care page [1][8]"
       ],
       "note": "Testosterone can harm a developing pregnancy and does not reliably stop ovulation. If pregnancy is possible for you, contraception is worth a specific conversation with your prescriber — do not assume testosterone covers it [1].",
       "nav": "Testosterone",
@@ -233,281 +239,24 @@
             "text": "Long-acting injection: every 10 to 14 weeks."
           }
         ],
-        "caption": "How often each form of testosterone is given, compared over fourteen weeks. Intervals from Australia's 2026 standards of care and the Reandron consumer medicine information [17][11]."
+        "caption": "How often each form of testosterone is given, compared over fourteen weeks. Intervals from Australia's 2026 standards of care and the Reandron consumer medicine information [4][23]."
       }
     },
     {
       "h": "Puberty blockers (GnRH analogues)",
       "body": [
         "These medicines pause puberty by switching off the signal from the brain that drives it. They are given as an implant or a depot injection, always under specialist care.",
-        "Australia's standards of care for children and adolescents name goserelin (Zoladex), leuprorelin (Lucrin, Eligard) and triptorelin (Diphereline), repeated every one to six months, depending on the product [30].",
-        "Since 1 October 2026, triptorelin 3.75 mg (Diphereline), a monthly injection, has been on the PBS with no restriction (item 9378N), but its listing carries a note that it \"is not for use in gender dysphoria in minors\" [25]. So, like goserelin and leuprorelin, which are PBS-listed only for other conditions, it is a private prescription for puberty suppression. SA Health's model of care (2023) notes that a young person who cannot get them through a hospital faces a cost of several thousand dollars a year [8].",
-        "Access to goserelin has been changing. The 3.6 mg implant was due to leave the PBS on 1 November 2026, with a free Zoladex Continuity Program to follow [9]. The sponsor has since told the TGA it will keep supplying the implant and extend PBS access, and goserelin is not on the PBS list of deletions for 1 November 2026 [26][27]. If this affects you or your child, ask your prescriber and your pharmacist well before the next dose is due."
+        "Australia's standards of care for children and adolescents name goserelin (Zoladex), leuprorelin (Lucrin, Eligard) and triptorelin (Diphereline), repeated every one to six months, depending on the product [26].",
+        "Since 1 October 2026, triptorelin 3.75 mg (Diphereline), a monthly injection, has been on the PBS with no restriction (item 9378N), but its listing carries a note that it \"is not for use in gender dysphoria in minors\" [27]. So, like goserelin and leuprorelin, which are PBS-listed only for other conditions, it is a private prescription for puberty suppression. SA Health's model of care (2023) notes that a young person who cannot get them through a hospital faces a cost of several thousand dollars a year [28].",
+        "Access to goserelin has been changing. The 3.6 mg implant was due to leave the PBS on 1 November 2026, with a free Zoladex Continuity Program planned in its place [29]. On 23 September 2026 the sponsor, AstraZeneca, said instead that the implant will stay on the PBS until 1 May 2027, that PBS prescriptions written by 30 April 2027 can be filled until 1 May 2028, and that the Continuity Program will not go ahead [30]. The TGA shortage record still shows the earlier date [31], but goserelin is not on the PBS list of deletions for 1 November 2026 [32]. If this affects you or your child, ask your prescriber and your pharmacist well before the next dose is due."
       ],
       "nav": "Puberty blockers"
     },
     {
-      "h": "Blood tests and reviews",
-      "body": [
-        "Blood tests are not something you pass or fail. They tell your prescriber whether the dose is doing what you both want, and whether anything needs watching.",
-        "For feminising therapy, Australia's 2026 standards of care recommend keeping trough oestradiol above about 250 pmol/L, without a fixed upper limit, and total testosterone below 2 nmol/L for people who want full suppression [17]. The 2019 position statement suggested 250–600 pmol/L [1].",
-        "For masculinising therapy, the usual target is a trough total testosterone of about 10–20 nmol/L [17]. Other guidance: the 2019 position statement and the 2020 Australian GP guides suggest 10–15 nmol/L [1][3][13]; Australia's 2026 standards of care, which this site follows, give about 10–20 [17]. Testosterone also thickens the blood, so haematocrit is checked; above about 0.50 the dose or the interval is usually reviewed [1][3]. The product information for several testosterone injections now also warns about SGLT-2 inhibitors, medicines for diabetes, heart failure or kidney disease such as empagliflozin or dapagliflozin. Taken with testosterone, they have been linked to too many red blood cells, so the blood count is checked more closely [28]. This warning is not yet in every product information, so tell your prescriber if you take one, whatever form of testosterone you use [33].",
-        "Reviews cover more than levels: blood pressure, weight, smoking, and how you are going in yourself — mood, energy, sleep, and whether the changes match what you hoped for [1][2].",
-        "Screening follows the organs you have, not your gender and not your hormones [1][2]. If you have a cervix, screening is still due every five years, and collecting your own swab is an option that many people find far easier than a speculum examination [15]. The same logic applies to breast or chest tissue, and to prostate tissue, which genital surgery does not remove [2]."
-      ],
-      "list": [
-        "Feminising — oestradiol and total testosterone; electrolytes and kidney function if you take spironolactone; liver function if you take cyproterone [1][3]",
-        "Masculinising — total testosterone, and a full blood count for haematocrit; liver function and lipids as your prescriber decides [1][3]",
-        "Either therapy — blood pressure and weight at each review; glucose or HbA1c and lipids periodically, particularly if you have other risk factors [1][2]",
-        "Puberty blockers — bone health is monitored, because blockers pause the bone strengthening that puberty normally provides [1][2]",
-        "Before starting — baseline bloods, and a conversation about fertility and about contraception if pregnancy is possible, since neither testosterone nor oestrogen is reliable contraception [1][2]",
-        "Sexual health — STI and blood-borne virus testing as relevant to you, the same as for anyone [2]",
-        "Timing — review roughly every three months through the first year, then every six to twelve months, indefinitely [1][2]. Other guidance: Australia's 2026 standards of care suggest yearly reviews once things are stable [17]. After a change to oestrogen, levels are rechecked six to eight weeks later rather than straight away; after a change to the long-acting testosterone injection, the Equinox guide waits two more injections [3]"
-      ],
-      "note": "Screening and monitoring are easy to lose track of when you move between services. Ask your GP to keep a written list of what is due and when, and ask for a copy yourself.",
-      "nav": "Blood tests and reviews",
-      "figure": {
-        "id": "review-rhythm",
-        "type": "chart-timeline",
-        "form": "milestones",
-        "title": "The usual rhythm of reviews",
-        "sub": "Months after starting, drawn to scale",
-        "alt": "Timeline: blood tests before starting, reviews at 3, 6, 9 and 12 months, then every 6 to 12 months",
-        "long": "Drawn to scale from the start to 12 months: a ring at the start for baseline blood tests, a dot at each review, and a dotted line after 12 months for the reviews that carry on.",
-        "axis": {
-          "to": 12,
-          "more": 3,
-          "label": "Months after starting",
-          "moreLabel": "then every 6–12 months"
-        },
-        "events": [
-          {
-            "at": 0,
-            "ring": true,
-            "tick": "Start"
-          },
-          {
-            "at": 3,
-            "tick": "3"
-          },
-          {
-            "at": 6,
-            "tick": "6"
-          },
-          {
-            "at": 9,
-            "tick": "9"
-          },
-          {
-            "at": 12,
-            "tick": "12"
-          }
-        ],
-        "items": [
-          {
-            "lead": "Before you start:",
-            "text": "baseline blood tests."
-          },
-          {
-            "lead": "First year:",
-            "text": "a review roughly every 3 months, at 3, 6, 9 and 12 months."
-          },
-          {
-            "lead": "After that:",
-            "text": "every 6 to 12 months, indefinitely."
-          },
-          {
-            "lead": "After a dose change:",
-            "text": "levels are rechecked once the new dose has settled: 6 to 8 weeks later for oestrogen, two injections later for the long-acting testosterone injection."
-          }
-        ],
-        "legend": [
-          {
-            "mark": "ring",
-            "text": "Baseline blood tests"
-          },
-          {
-            "mark": "dot",
-            "text": "A review, usually with blood tests"
-          },
-          {
-            "mark": "cont",
-            "text": "Reviews carry on, indefinitely"
-          }
-        ],
-        "easyTitle": "Check-ups and blood tests",
-        "easy": [
-          {
-            "pic": "tube",
-            "text": "You have blood tests before you start."
-          },
-          {
-            "pic": "calendar",
-            "text": "In the first year, you see your doctor about every 3 months."
-          },
-          {
-            "pic": "cycle",
-            "text": "After that, you go every 6 to 12 months (some guides say once a year)."
-          },
-          {
-            "pic": "clock",
-            "text": "If your dose changes, you have a blood test some weeks later. Your doctor tells you when."
-          }
-        ],
-        "caption": "The usual schedule of reviews and blood tests, from the Australian position statement, WPATH Standards of Care version 8 and the Equinox prescribing guide, with Australia's 2026 standards of care for comparison [1][2][3][17].",
-        "note": "Other guidance: Australia's 2026 standards of care suggest a yearly review once things are stable."
-      }
-    },
-    {
-      "h": "Getting the timing of the blood test right",
-      "body": [
-        "When the sample is taken matters as much as what is measured. Most targets in the guidelines are trough levels — the lowest point, just before the next dose is due [1][3].",
-        "A sample drawn at the wrong point can look far too high or too low when nothing is wrong, and lead to a dose change you did not need.",
-        "For Testogel or testosterone cream, your prescriber will usually want the sample in the morning before you apply that day's dose [3][17]. For Testavan, it is taken 2 to 4 hours after applying [17]. For the long-acting injection, the test is booked just before the next injection is due rather than soon after one."
-      ],
-      "note": "Ask for the required timing to be written on your pathology form, and tell the collection centre when your last dose was. It takes ten seconds and it saves repeat tests.",
-      "nav": "Timing your blood test",
-      "figure": {
-        "id": "trough-timing",
-        "type": "chart-timeline",
-        "form": "curve",
-        "title": "Why the timing of the blood test matters",
-        "sub": "The shape of the level after one dose. A picture of the pattern, not real numbers.",
-        "alt": "Curve: the hormone level rises after a dose, then falls to its lowest just before the next dose",
-        "long": "A curve of hormone level against time since the dose. It rises soon after the dose (1), then falls slowly to its lowest point, the trough, just before the next dose is due (2). After the next dose it rises again.",
-        "curve": {
-          "points": [
-            {
-              "x": 3,
-              "y": 90.0
-            },
-            {
-              "x": 6.1,
-              "y": 65.5
-            },
-            {
-              "x": 10.0,
-              "y": 45.2
-            },
-            {
-              "x": 15.3,
-              "y": 30.7
-            },
-            {
-              "x": 24.5,
-              "y": 24.0
-            },
-            {
-              "x": 34.7,
-              "y": 27.8
-            },
-            {
-              "x": 47.0,
-              "y": 36.5
-            },
-            {
-              "x": 60.2,
-              "y": 46.0
-            },
-            {
-              "x": 73.4,
-              "y": 54.2
-            },
-            {
-              "x": 84.0,
-              "y": 59.7
-            },
-            {
-              "x": 91.0,
-              "y": 62.9
-            },
-            {
-              "x": 93.2,
-              "y": 45.4
-            },
-            {
-              "x": 95.4,
-              "y": 32.2
-            },
-            {
-              "x": 97.6,
-              "y": 22.5
-            }
-          ],
-          "base": 92,
-          "guides": [
-            {
-              "x": 3
-            },
-            {
-              "x": 91
-            }
-          ],
-          "xlabel": "Time since the dose",
-          "ylabel": "Hormone level",
-          "ticks": [
-            {
-              "x": 3,
-              "text": "Dose"
-            },
-            {
-              "x": 91,
-              "text": "Next dose"
-            }
-          ]
-        },
-        "key": [
-          {
-            "n": "1",
-            "at": {
-              "x": 24.5,
-              "y": 24.0,
-              "dx": 0,
-              "dy": -24
-            },
-            "lead": "Soon after a dose:",
-            "text": "the level is near its highest. A sample taken here can look far too high."
-          },
-          {
-            "n": "2",
-            "at": {
-              "x": 91,
-              "y": 62.9,
-              "dx": -18,
-              "dy": -26
-            },
-            "here": true,
-            "lead": "Trough:",
-            "text": "the lowest level, just before the next dose is due. Most targets are trough levels, so this is when the sample is usually taken."
-          }
-        ],
-        "note": [
-          "Testogel or cream: the sample is taken in the morning, before that day's dose. Testavan: 2 to 4 hours after applying.",
-          "Ask for the timing to be written on your pathology form."
-        ],
-        "easyTitle": "When to have the blood test",
-        "easy": [
-          {
-            "pic": "curve",
-            "text": "The amount of hormone in your blood goes up and down."
-          },
-          {
-            "pic": "tube",
-            "text": "The blood test is usually just before your next dose."
-          },
-          {
-            "pic": "doc",
-            "text": "Ask for the time to be written on your form."
-          }
-        ],
-        "caption": "Where a trough level sits in a dosing cycle, and why the timing of the sample changes the result. Based on the trough-level targets in the Australian position statement, the Equinox prescribing guide and Australia's 2026 standards of care [1][3][17]."
-      }
-    },
-    {
       "h": "If your medicine is hard to get",
       "body": [
-        "Shortages happen, and estradiol patches have been the long-running one. The 25, 50, 75 and 100 microgram Estradot patches are still in short supply, with the TGA estimating a return to normal supply by 31 December 2026; the [supply page](#/supply) shows the latest position [12].",
-        "The TGA has approved substitution for these patches, so where it is appropriate your pharmacist can supply a different brand or strength that delivers the same amount of estradiol per day, without a new prescription. That approval runs to 28 February 2027 [14].",
+        "Shortages happen, and estradiol patches have been the long-running one. The 25, 50, 75 and 100 microgram Estradot patches are still in short supply, with the TGA estimating a return to normal supply by 31 December 2026; the [supply page](#/supply) shows the latest position [33].",
+        "The TGA has approved substitution for these patches, so where it is appropriate your pharmacist can supply a different brand or strength that delivers the same amount of estradiol per day, without a new prescription. That approval runs to 28 February 2027 [34].",
         "Ask your pharmacist what is available and whether the product they can get is PBS-subsidised. Bring it up before you run out, not on your last day of supply.",
         "International guidance is explicit that established hormone therapy should be continued rather than stopped, including through periods when your mental health is poor, unless there is a medical reason to stop [2]. Continuity is part of the treatment."
       ],
@@ -516,66 +265,10 @@
     {
       "h": "Other medicines used alongside hormone therapy",
       "body": [
-        "Testosterone and oestrogen change more than the things someone is aiming for. Four effects come up often enough to have their own treatments: acne, scalp (androgenetic) hair loss, periods that keep coming despite testosterone, and vaginal dryness. Each is possible rather than certain — plenty of people never develop one or more of them — and the medicines used for them are ordinary prescriptions, not hormone therapy in a different form [3][17].",
-        "Acne on testosterone comes from the same mechanism as acne generally: androgens increase the size and output of the skin's oil (sebaceous) glands, and more oil means more breakouts on the face and body [5]. It tends to start within the first few weeks of treatment and is most active in the first one to two years, often settling after that even without treatment [13].",
-        "Australian guidance follows the usual escalation: a topical retinoid combined with benzoyl peroxide first, an oral tetracycline such as doxycycline if that is not enough, and isotretinoin — a stronger oral retinoid, usually managed with a dermatologist — for acne that is severe or scarring [13]. The three act at different points: the topical combination clears pores and reduces surface bacteria, doxycycline settles the inflammation that follows, and isotretinoin reduces the oil glands themselves, which is why it is kept for acne the other options have not controlled.",
-        "Testosterone is converted into dihydrotestosterone (DHT) by the enzyme 5-alpha reductase [23]. DHT drives most masculinising change, but its effect on hair follicles depends on where they sit: follicles on the beard, underarm and pubic area enlarge, while follicles at the temples, crown and front of the scalp tend to miniaturise — the same process behind male-pattern baldness [17]. It is slower to show than acne, typically taking over twelve months to become noticeable, and can continue for as long as testosterone does [17].",
-        "Topical minoxidil is a non-hormonal option; Australian product information is candid that exactly how it works is not known, though it appears to prolong the hair growth phase [22]. Finasteride instead blocks the enzyme that produces DHT in the scalp [23]. A small case review in trans men taking low-dose finasteride found modest improvement, without the sexual side effects reported in cisgender men on the same drug, though the evidence base remains limited [17]. It is contraindicated during pregnancy, relevant if a partner could become pregnant, and because it acts on the same pathway that drives masculinisation, some prescribers treat it as a trade-off to discuss rather than a routine add-on [17]. Hair loss can also take over a year to appear, so waiting before deciding on treatment is a reasonable choice [17].",
-        "Testosterone at gender-affirming doses does not reliably switch off ovulation, so periods can continue, especially in the first months of treatment [5]. On full-dose testosterone, periods are generally expected to stop within about six months, though this varies and not everyone reaches that point on testosterone alone; testosterone is not contraception regardless of whether periods have stopped [17].",
-        "If periods continue and cause distress, the options are reviewing whether the testosterone dose has reached target, an oral progestogen such as norethisterone or medroxyprogesterone acetate, or a levonorgestrel intrauterine device (IUD) [1]. Norethisterone is taken as tablets [18]; medroxyprogesterone acetate comes as tablets or as an injection given every three months [19]; the IUD is fitted once and can remain in place for several years [20]. The IUD and the three-monthly medroxyprogesterone injection also work as contraception; norethisterone and medroxyprogesterone tablets do not [17][18][19].",
-        "Testosterone suppresses the ovaries' own oestrogen production, and the vaginal lining depends on oestrogen to stay thick and lubricated. As that exposure drops, the tissue can thin and dry in a way similar to menopause, sometimes causing irritation, dryness or pain with penetration [5]. This tends to build up gradually over time on testosterone rather than appearing suddenly.",
-        "Low-dose vaginal oestrogen treats the tissue directly: daily for the first two weeks, then twice weekly, with product information describing systemic absorption as low enough that blood oestradiol stays within the usual postmenopausal range [21]. It acts locally and does not work against testosterone's effects elsewhere in the body [5]. Vaginal moisturisers, available without a prescription, are a non-hormonal alternative some people try first [17].",
-        "Each of these has its own page in the Medicines A–Z with doses, side effects and cost."
+        "Some effects of hormone therapy have their own treatments: a topical retinoid with benzoyl peroxide, doxycycline or isotretinoin for acne [25]; topical minoxidil [35] or finasteride [36] for scalp hair loss; norethisterone [37], medroxyprogesterone acetate [38] or a levonorgestrel IUD [39] for periods that continue on testosterone [15]; and low-dose vaginal oestrogen for vaginal dryness [40]. They are not hormone therapy in a different form, and none is automatic [8][4].",
+        "The [add-on therapies page](#/add-on-therapies) explains each one: why the effect happens, what is usually tried first, and what to ask your prescriber."
       ],
-      "nav": "Other medicines",
-      "figure": {
-        "id": "effects-medicines",
-        "type": "table",
-        "title": "What else might be prescribed",
-        "long": "These treat effects of hormone therapy. They are not hormone therapy themselves, and none is automatic.",
-        "alt": "Four effects of hormone therapy, and the medicines that may be offered for each",
-        "table": {
-          "head": [
-            "The effect",
-            "What may be offered"
-          ],
-          "rows": [
-            [
-              "Acne",
-              "A topical retinoid with benzoyl peroxide first; then doxycycline; isotretinoin for severe or scarring acne"
-            ],
-            [
-              "Scalp hair loss",
-              "Topical minoxidil; finasteride in some cases"
-            ],
-            [
-              "Periods still coming",
-              "Norethisterone or medroxyprogesterone tablets; the three-monthly medroxyprogesterone injection; a levonorgestrel IUD"
-            ],
-            [
-              "Vaginal dryness",
-              "Low-dose vaginal oestrogen; vaginal moisturisers, which need no prescription"
-            ]
-          ]
-        },
-        "note": "Ask your prescriber which, if any, is right for you.",
-        "easyTitle": "Other medicines that can help",
-        "easy": [
-          {
-            "pic": "pills",
-            "text": "Other medicines can help with some effects of hormone therapy."
-          },
-          {
-            "pic": "doc",
-            "text": "For example: pimples, hair loss, periods, or dryness."
-          },
-          {
-            "pic": "speak",
-            "text": "Ask your doctor which, if any, is right for you."
-          }
-        ],
-        "caption": "The effects of hormone therapy that are commonly treated, and the medicines Australian guidance names for each. Based on the Australian position statement, Australia's 2026 standards of care and the AJGP hormone therapy article [1][17][13]."
-      }
+      "nav": "Other medicines"
     }
   ],
   "references": [
@@ -586,163 +279,198 @@
     },
     {
       "n": 2,
-      "text": "Coleman E, Radix AE, Bouman WP, et al. Standards of Care for the Health of Transgender and Gender Diverse People, Version 8. Int J Transgend Health. 2022;23(Suppl 1):S1-259.",
+      "text": "Coleman E, Radix AE, Bouman WP, et al. Standards of Care for the Health of Transgender and Gender Diverse People, Version 8. Int J Transgend Health. 2022;23(Suppl 1):S1-259. Accessed 24 October 2026.",
       "url": "https://doi.org/10.1080/26895269.2022.2100644"
     },
     {
       "n": 3,
-      "text": "Cundill P, Wong P, Cheung A. Hormone therapy prescribing guide for general practitioners working with trans, gender diverse and non-binary patients, version 3.0. Equinox Gender Diverse Health Centre, Thorne Harbour Health; July 2020 (AusPATH-endorsed). Accessed 16 October 2026.",
-      "url": "https://equinox.org.au/wp-content/uploads/2021/07/ht-prescribing-guideline-v3-aug-2020.pdf"
-    },
-    {
-      "n": 4,
-      "text": "TransHub (ACON). Hormones — Feminising. Sydney: ACON. Accessed 24 September 2026.",
-      "url": "https://www.transhub.org.au/medical/hormones-feminising/"
-    },
-    {
-      "n": 5,
-      "text": "TransHub (ACON). Hormones — Masculinising. Sydney: ACON. Accessed 24 September 2026.",
-      "url": "https://www.transhub.org.au/medical/hormones-masculinising/"
-    },
-    {
-      "n": 6,
-      "text": "Pharmaceutical Benefits Scheme. Testosterone undecanoate 1 g/4 mL injection, PBS item 10205D (Authority Required). Accessed 24 September 2026.",
-      "url": "https://www.pbs.gov.au/medicine/item/10205D"
-    },
-    {
-      "n": 7,
-      "text": "Pharmaceutical Benefits Scheme. Estradiol PBS listings — tablets (Progynova, Zumenon), patches (Estradot, Estraderm MX) and Sandrena gel. Accessed 24 September 2026.",
-      "url": "https://www.pbs.gov.au/medicine/item/1663M"
-    },
-    {
-      "n": 8,
-      "text": "SA Health. State-wide Gender Diversity Model of Care, version 1.2. Adelaide: Department for Health and Wellbeing, Government of South Australia; July 2023. Accessed 24 September 2026.",
-      "url": "https://www.sahealth.sa.gov.au/wps/wcm/connect/d70c3a24-a054-4f6a-b56c-17152faa9d5c/Model+of+care_Gender+Diversity_Jul2023_FINAL_FOR+PUBLICATION.pdf?MOD=AJPERES"
-    },
-    {
-      "n": 9,
-      "text": "Pharmaceutical Benefits Scheme. Update on access to goserelin 3.6 mg implant (Zoladex Implant). Canberra: Department of Health, Disability and Ageing; 16 July 2026. Accessed 24 September 2026.",
-      "url": "https://www.pbs.gov.au/news/2026/07/update-on-access-to-goserelin-3-6-mg-implant-zoladex-implant"
-    },
-    {
-      "n": 10,
-      "text": "Pharmaceutical Benefits Scheme. Testosterone gel and cream PBS listings — Testogel 1%, Testavan 2%, AndroForte 5 (Authority Required). Accessed 24 September 2026.",
-      "url": "https://www.pbs.gov.au/medicine/item/10380H"
-    },
-    {
-      "n": 11,
-      "text": "Reandron 1000 (testosterone undecanoate 1000 mg/4 mL) injection, Australian Product Information and Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/reandron-1000"
-    },
-    {
-      "n": 12,
-      "text": "Therapeutic Goods Administration. About the shortage of transdermal HRT patches (last updated 14 September 2026). Canberra: TGA. Accessed 17 October 2026.",
-      "url": "https://www.tga.gov.au/safety/shortages-and-supply-disruptions/medicine-shortages/major-or-ongoing-medicine-shortages/about-shortage-transdermal-hrt-patches"
-    },
-    {
-      "n": 13,
-      "text": "Cundill P. Hormone therapy for trans and gender diverse patients in the general practice setting. Aust J Gen Pract. 2020;49(7):385-90. Accessed 17 October 2026.",
-      "url": "https://www1.racgp.org.au/getattachment/d0c29d2a-ee67-4ef0-a125-65c2694f3cb2/Hormone-therapy-for-trans-and-gender-diverse-patie.aspx"
-    },
-    {
-      "n": 14,
-      "text": "Therapeutic Goods Administration. Substitution approval extended for HRT patch shortages (Serious Scarcity Substitution Instrument, in force to 28 February 2027). Canberra: TGA. Accessed 24 September 2026.",
-      "url": "https://www.tga.gov.au/safety/shortages-and-supply-disruptions/medicine-shortages/medicine-shortage-alerts/substitution-approval-extended-hrt-patch-shortages"
-    },
-    {
-      "n": 15,
-      "text": "Australian Centre for the Prevention of Cervical Cancer. Cervical screening for trans and gender diverse people. Canberra: Department of Health, Disability and Ageing; 2025. Accessed 17 October 2026.",
-      "url": "https://www.health.gov.au/sites/default/files/2025-06/cervical-screening-for-trans-and-gender-diverse-people.pdf"
-    },
-    {
-      "n": 16,
-      "text": "Androcur (cyproterone acetate) Australian Product Information and Consumer Medicine Information. Accessed September 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/androcur-tablets"
-    },
-    {
-      "n": 17,
-      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"), page 26 (Choice of oestrogen formulation: estradiol implants). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 24 October 2026.",
       "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
     },
     {
-      "n": 18,
-      "text": "Primolut N (norethisterone) 5 mg tablets, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/primolut-n"
+      "n": 4,
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
     },
     {
-      "n": 19,
-      "text": "Depo-Provera (medroxyprogesterone acetate 150 mg/mL) injection, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/depo-provera"
-    },
-    {
-      "n": 20,
-      "text": "Mirena (levonorgestrel 52 mg) intrauterine device, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/mirena-intrauterine-device"
-    },
-    {
-      "n": 21,
-      "text": "Vagifem Low (estradiol 10 microgram) modified release vaginal pessary, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/vagifem-low"
-    },
-    {
-      "n": 22,
-      "text": "Men's Regaine Extra Strength Foam (minoxidil 5% w/w), Australian Consumer Medicine Information. ACSQHC Medicine Finder. Accessed September 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/mens-regaine-extra-strength-foam"
-    },
-    {
-      "n": 23,
-      "text": "Finasteride GH 1 (finasteride 1 mg) tablets, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/finasteride-gh-1-tablets"
-    },
-    {
-      "n": 24,
-      "text": "Pharmaceutical Benefits Scheme. Estradiol 0.06% gel (Estrogel), PBS item 14719Q. Accessed 15 October 2026.",
-      "url": "https://www.pbs.gov.au/medicine/item/14719Q"
-    },
-    {
-      "n": 25,
-      "text": "Pharmaceutical Benefits Scheme. Triptorelin 3.75 mg injection (Diphereline), PBS item 9378N — General Schedule, no restrictions from 1 October 2026; PBS note: \"The listing of this medicine is not for use in gender dysphoria in minors.\" Accessed 17 October 2026.",
-      "url": "https://www.pbs.gov.au/medicine/item/9378N"
-    },
-    {
-      "n": 26,
-      "text": "Therapeutic Goods Administration. Medicine Shortage Reports Database: goserelin (Zoladex 3.6 mg implant) — \"Deletion from market: 01 Nov 2026\"; the sponsor has advised that the product will continue to be supplied, with a link to its release on extending PBS access. Canberra: TGA. Accessed 17 October 2026.",
-      "url": "https://apps.tga.gov.au/prod/msi/Search/Details/goserelin"
-    },
-    {
-      "n": 27,
-      "text": "Pharmaceutical Benefits Scheme. Summary of Changes, 1 October 2026: triptorelin 3.75 mg (9378N) changed from restricted to unrestricted, with a note added; advance notices of deletions for 1 November 2026 (goserelin is not listed). Canberra: Department of Health, Disability and Ageing. Accessed 17 October 2026.",
-      "url": "https://www.pbs.gov.au/changes"
-    },
-    {
-      "n": 28,
-      "text": "Reandron 1000 (testosterone undecanoate) injection, Australian Product Information, section 4.5 Interactions (date of revision 11 December 2025); the same wording is in the Gonadron (25 February 2026), Rejunon 1000 (17 March 2026) and Sustanon 250 (23 February 2026) product information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/reandron-1000"
-    },
-    {
-      "n": 29,
+      "n": 5,
       "text": "Zumenon (estradiol) tablets, Australian Product Information, sections 4.2 and 4.4 (date of revision 8 January 2026). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
       "url": "https://www.safetyandquality.gov.au/medicine-finder/zumenon"
     },
     {
-      "n": 30,
-      "text": "Telfer MM, Tollit MA, Pace CC, Pang KC. Australian Standards of Care and Treatment Guidelines for Trans and Gender Diverse Children and Adolescents, version 1.3 (appendices 3 and 4: goserelin, leuprorelin and triptorelin). Melbourne: The Royal Children's Hospital; 2020. Accessed 17 October 2026.",
-      "url": "https://www.rch.org.au/uploadedFiles/Main/Content/adolescent-medicine/australian-standards-of-care-and-treatment-guidelines-for-trans-and-gender-diverse-children-and-adolescents.pdf"
+      "n": 6,
+      "text": "TransHub (ACON). Hormones — Feminising. Sydney: ACON. Accessed 24 September 2026.",
+      "url": "https://www.transhub.org.au/medical/hormones-feminising/"
     },
     {
-      "n": 31,
+      "n": 7,
       "text": "Estrogel (estradiol 0.06% w/w) gel, Australian Product Information, section 4.2 (date of revision 18 December 2023). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
       "url": "https://www.safetyandquality.gov.au/medicine-finder/estrogel"
     },
     {
-      "n": 32,
+      "n": 8,
+      "text": "Cundill P, Wong P, Cheung A. Hormone therapy prescribing guide for general practitioners working with trans, gender diverse and non-binary patients, version 3.0. Equinox Gender Diverse Health Centre, Thorne Harbour Health; July 2020 (AusPATH-endorsed). Accessed 16 October 2026.",
+      "url": "https://equinox.org.au/wp-content/uploads/2021/07/ht-prescribing-guideline-v3-aug-2020.pdf"
+    },
+    {
+      "n": 9,
+      "text": "Pharmaceutical Benefits Scheme. Estradiol PBS listings — tablets (Progynova, Zumenon), patches (Estradot, Estraderm MX) and Sandrena gel. Accessed 24 September 2026.",
+      "url": "https://www.pbs.gov.au/medicine/item/1663M"
+    },
+    {
+      "n": 10,
+      "text": "Pharmaceutical Benefits Scheme. Estradiol 0.06% gel (Estrogel), PBS item 14719Q. Accessed 15 October 2026.",
+      "url": "https://www.pbs.gov.au/medicine/item/14719Q"
+    },
+    {
+      "n": 11,
+      "text": "Androcur (cyproterone acetate) Australian Product Information and Consumer Medicine Information. Accessed September 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/androcur-tablets"
+    },
+    {
+      "n": 12,
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"), page 28 (Bicalutamide). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 24 October 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 13,
+      "text": "AstraZeneca Pty Ltd. Cosudex (bicalutamide) Australian Product Information, section 4.4 Special warnings and precautions for use (liver; coumarin anticoagulants; interstitial lung disease), section 4.5 Interactions (cytochrome P450; warfarin), section 4.8 Adverse effects (photosensitivity reaction) and Summary table of changes. Date of revision 9 July 2026. Accessed 31 October 2026.",
+      "url": "https://www.medsinfo.com.au/api/documents/Cosudex_PI?format=pdf"
+    },
+    {
+      "n": 14,
+      "text": "Therapeutic Goods Administration. Product Information safety updates – August 2026 (Cosudex: interstitial lung disease added to section 4.4, approved 8 July 2026). Published 11 September 2026. Accessed 31 October 2026.",
+      "url": "https://www.tga.gov.au/news/safety-updates/product-information-safety-updates-august-2026"
+    },
+    {
+      "n": 15,
+      "text": "TransHub (ACON). Hormones — Masculinising. Sydney: ACON. Accessed 24 September 2026.",
+      "url": "https://www.transhub.org.au/medical/hormones-masculinising/"
+    },
+    {
+      "n": 16,
+      "text": "Pharmaceutical Benefits Scheme. Testosterone undecanoate 1 g/4 mL injection, PBS item 10205D (Authority Required). Accessed 24 September 2026.",
+      "url": "https://www.pbs.gov.au/medicine/item/10205D"
+    },
+    {
+      "n": 17,
+      "text": "Pharmaceutical Benefits Scheme. Testosterone gel and cream PBS listings — Testogel 1%, Testavan 2%, AndroForte 5 (Authority Required). Accessed 24 September 2026.",
+      "url": "https://www.pbs.gov.au/medicine/item/10380H"
+    },
+    {
+      "n": 18,
+      "text": "Pharmaceutical Benefits Scheme. Testosterone undecanoate 1 g/4 mL modified release injection, PBS item 10205D, General Schedule, Authority Required; brands Gonadron, Rejunon 1000, Reandron 1000 and Testosterone ADVZ 1000. Accessed 24 October 2026.",
+      "url": "https://www.pbs.gov.au/medicine/item/10205D"
+    },
+    {
+      "n": 19,
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"), page 33 (PBS authority for testosterone) and page 34 (Table 6. Testosterones). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 24 October 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 20,
+      "text": "Therapeutic Goods Administration. Androderm testosterone 12.2 mg per patch transdermal drug delivery system sachet (ARTG 61818), cancelled under Section 30(1)(c) of the Act, date of effect 29 June 2022. Cancellations by sponsors. Accessed 24 October 2026.",
+      "url": "https://www.tga.gov.au/resources/cancellations-by-sponsors/androderm-testosterone-122-mg-patch-transdermal-drug-delivery-system-sachet-cancelled-under-section-301c-act"
+    },
+    {
+      "n": 21,
+      "text": "Therapeutic Goods Administration. Androderm testosterone 24.3 mg per patch transdermal drug delivery system sachet (ARTG 82398), cancelled under Section 30(1)(c) of the Act, date of effect 26 June 2025. Cancellations by sponsors. Accessed 24 October 2026.",
+      "url": "https://www.tga.gov.au/resources/cancellations-by-sponsors/androderm-testosterone-243-mg-patch-transdermal-drug-delivery-system-sachet-cancelled-under-section-301c-act"
+    },
+    {
+      "n": 22,
+      "text": "Department of Health, Disability and Ageing. Electronic prescribing (date last updated 9 July 2026). Accessed 24 October 2026.",
+      "url": "https://www.health.gov.au/our-work/electronic-prescribing"
+    },
+    {
+      "n": 23,
+      "text": "Reandron 1000 (testosterone undecanoate 1000 mg/4 mL) injection, Australian Product Information and Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/reandron-1000"
+    },
+    {
+      "n": 24,
       "text": "OUTinPerth. PBS to remove common testosterone hormone replacement therapy (Department of Health: Primoteston Depot \"will be deleted from the Pharmaceutical Benefits Scheme (PBS) on 1 February 2018\"; \"Deletion from the PBS was requested by the manufacturer\"). 15 January 2018. Accessed 17 October 2026.",
       "url": "https://outinperth.com/?p=71290"
     },
     {
+      "n": 25,
+      "text": "Cundill P. Hormone therapy for trans and gender diverse patients in the general practice setting. Aust J Gen Pract. 2020;49(7):385-90. Accessed 17 October 2026.",
+      "url": "https://www1.racgp.org.au/getattachment/d0c29d2a-ee67-4ef0-a125-65c2694f3cb2/Hormone-therapy-for-trans-and-gender-diverse-patie.aspx"
+    },
+    {
+      "n": 26,
+      "text": "Telfer MM, Tollit MA, Pace CC, Pang KC. Australian Standards of Care and Treatment Guidelines for Trans and Gender Diverse Children and Adolescents, version 1.3 (appendices 3 and 4: goserelin, leuprorelin and triptorelin). Melbourne: The Royal Children's Hospital; 2020. Accessed 17 October 2026.",
+      "url": "https://www.rch.org.au/uploadedFiles/Main/Content/adolescent-medicine/australian-standards-of-care-and-treatment-guidelines-for-trans-and-gender-diverse-children-and-adolescents.pdf"
+    },
+    {
+      "n": 27,
+      "text": "Pharmaceutical Benefits Scheme. Triptorelin 3.75 mg injection (Diphereline), PBS item 9378N — General Schedule, no restrictions from 1 October 2026; PBS note: \"The listing of this medicine is not for use in gender dysphoria in minors.\" Accessed 17 October 2026.",
+      "url": "https://www.pbs.gov.au/medicine/item/9378N"
+    },
+    {
+      "n": 28,
+      "text": "SA Health. State-wide Gender Diversity Model of Care, version 1.2. Adelaide: Department for Health and Wellbeing, Government of South Australia; July 2023. Accessed 24 September 2026.",
+      "url": "https://www.sahealth.sa.gov.au/wps/wcm/connect/d70c3a24-a054-4f6a-b56c-17152faa9d5c/Model+of+care_Gender+Diversity_Jul2023_FINAL_FOR+PUBLICATION.pdf?MOD=AJPERES"
+    },
+    {
+      "n": 29,
+      "text": "Pharmaceutical Benefits Scheme. Update on access to goserelin 3.6 mg implant (Zoladex Implant). Canberra: Department of Health, Disability and Ageing; 16 July 2026. Accessed 24 September 2026.",
+      "url": "https://www.pbs.gov.au/news/2026/07/update-on-access-to-goserelin-3-6-mg-implant-zoladex-implant"
+    },
+    {
+      "n": 30,
+      "text": "AstraZeneca Australia. AstraZeneca to extend PBS access to Zoladex (goserelin) monthly (3.6mg) implant (media release): PBS-listed until 1 May 2027; PBS prescriptions written by 30 April 2027 can be filled until 1 May 2028; the Zoladex continuity program will not proceed. Macquarie Park: AstraZeneca; 23 September 2026. Accessed 23 October 2026.",
+      "url": "https://www.astrazeneca.com.au/news/media-releases/2026/ASTRAZENECA-TO-EXTEND-PBS-ACCESS-TO-ZOLADEX-goserelin-MONTHLY-3_6mg-IMPLANT.html"
+    },
+    {
+      "n": 31,
+      "text": "Therapeutic Goods Administration. Medicine Shortage Reports Database: goserelin (Zoladex 3.6 mg implant) — \"Deletion from market: 01 Nov 2026\"; the sponsor has advised that the product will continue to be supplied, with a link to its release on extending PBS access. Canberra: TGA. Accessed 17 October 2026.",
+      "url": "https://apps.tga.gov.au/prod/msi/Search/Details/goserelin"
+    },
+    {
+      "n": 32,
+      "text": "Pharmaceutical Benefits Scheme. Summary of Changes, 1 October 2026: triptorelin 3.75 mg (9378N) changed from restricted to unrestricted, with a note added; advance notices of deletions for 1 November 2026 (goserelin is not listed). Canberra: Department of Health, Disability and Ageing. Accessed 17 October 2026.",
+      "url": "https://www.pbs.gov.au/changes"
+    },
+    {
       "n": 33,
-      "text": "Testosterone product information without the SGLT-2 inhibitor warning in section 4.5 Interactions (checked 17 October 2026): Testosterone ADVZ 1000 (first approved 13 December 2023, not revised since), Primoteston Depot (date of revision 13 January 2026), Testogel (7 October 2025), Testavan (22 April 2026), AndroForte 5 (10 August 2023) and AndroFeme 1 (19 August 2026). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/testosterone-advz-1000"
+      "text": "Therapeutic Goods Administration. About the shortage of transdermal HRT patches (last updated 14 September 2026). Canberra: TGA. Accessed 17 October 2026.",
+      "url": "https://www.tga.gov.au/safety/shortages-and-supply-disruptions/medicine-shortages/major-or-ongoing-medicine-shortages/about-shortage-transdermal-hrt-patches"
+    },
+    {
+      "n": 34,
+      "text": "Therapeutic Goods Administration. Substitution approval extended for HRT patch shortages (Serious Scarcity Substitution Instrument, in force to 28 February 2027). Canberra: TGA. Accessed 24 September 2026.",
+      "url": "https://www.tga.gov.au/safety/shortages-and-supply-disruptions/medicine-shortages/medicine-shortage-alerts/substitution-approval-extended-hrt-patch-shortages"
+    },
+    {
+      "n": 35,
+      "text": "Men's Regaine Extra Strength Foam (minoxidil 5% w/w), Australian Consumer Medicine Information. ACSQHC Medicine Finder. Accessed September 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/mens-regaine-extra-strength-foam"
+    },
+    {
+      "n": 36,
+      "text": "Finasteride GH 1 (finasteride 1 mg) tablets, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/finasteride-gh-1-tablets"
+    },
+    {
+      "n": 37,
+      "text": "Primolut N (norethisterone) 5 mg tablets, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/primolut-n"
+    },
+    {
+      "n": 38,
+      "text": "Depo-Provera (medroxyprogesterone acetate 150 mg/mL) injection, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/depo-provera"
+    },
+    {
+      "n": 39,
+      "text": "Mirena (levonorgestrel 52 mg) intrauterine device, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/mirena-intrauterine-device"
+    },
+    {
+      "n": 40,
+      "text": "Vagifem Low (estradiol 10 microgram) modified release vaginal pessary, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/vagifem-low"
     }
   ]
 }

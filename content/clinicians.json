@@ -5,7 +5,7 @@
     {
       "h": "Testosterone undecanoate injection: training package",
       "body": [
-        "A free package for clinics giving the long-acting testosterone injection by the ventrogluteal route: a standard operating procedure and training guide, a one-page treatment-room card, a competency checklist, an adverse event form and a clinic audit tool. It was checked against the Australian Product Information for Reandron 1000 and Testosterone ADVZ 1000, a UK manufacturer's administration guidance for the same formulation, SA Health's ventrogluteal brochure, the SESLHD intramuscular injection guideline and the ASCIA anaphylaxis guideline. Version 2.2 (18 October 2026) asks for observation for at least 30 minutes after each injection, and recommends, but does not require, a pregnancy test before each injection for anyone who could become pregnant, because testosterone must not be used in pregnancy [1]. Download it from the [testosterone undecanoate page](#/med/testosterone-undecanoate#sec-med-9)."
+        "A free package for clinics giving the long-acting testosterone injection by the ventrogluteal route: a standard operating procedure and training guide, a one-page treatment-room card, a competency checklist, an adverse event form and a clinic audit tool. It was checked against the Australian Product Information for Reandron 1000 and Testosterone ADVZ 1000, a UK manufacturer's administration guidance for the same formulation, SA Health's ventrogluteal brochure, the SESLHD intramuscular injection guideline and the ASCIA anaphylaxis guideline. All five documents are version 2.4 (31 October 2026), and each has a document ID, an amendment table and a next review date (24 October 2027). Version 2.4 asks for observation for at least 30 minutes after each injection, and recommends, but does not require, a pregnancy test before each injection for anyone who could become pregnant, because testosterone must not be used in pregnancy [1]. Download it from the [testosterone undecanoate page](#/med/testosterone-undecanoate#sec-med-9). To report an error in the training documents, the [feedback page](#/feedback) is preferred; you can also email gamsaenquiries@gmail.com."
       ],
       "nav": "Training package"
     },
@@ -29,7 +29,8 @@
         "Name and gender on the label: dispense under the name the patient uses where your software allows, and say so; the [pharmacy guide](#/pharmacy) tells patients what to ask for.",
         "Easy Read guides on [this site](#/easy) can be printed for patients with low literacy or English as a second language; TIS National on 131 450 for interpreters."
       ],
-      "nav": "At the counter"
+      "nav": "At the counter",
+      "note": "Bicalutamide is not first-line for gender-affirming care: check liver function regularly, stop it for jaundice or ALT above 2 × the upper limit of normal, and note the new interstitial lung disease precaution [11, 12, 13]. Bicalutamide potentiates warfarin (monitor PT/INR closely and consider anticoagulant dose adjustment) and inhibits CYP3A4 (midazolam levels up to 80% higher): terfenadine, astemizole and cisapride are contraindicated, and use caution with other CYP3A4 substrates such as ciclosporin, calcium channel blockers, HIV antivirals and statins. Photosensitivity reactions are a rare adverse effect [11]. On hormones and PrEP? They do not interact. Australian guidelines suggest that anyone on hormones (including those with a vagina) should take PrEP daily rather than on-demand; keep up kidney function tests, especially with spironolactone [12]. Patient wording is in the doses guide for [bicalutamide](#/doses#sec-doses-2) and on the monitoring page for [PrEP and hormones](#/monitoring#sec-monitoring-4)."
     },
     {
       "h": "Monitoring schedule at a glance",
@@ -65,14 +66,14 @@
           ]
         ]
       },
-      "note": "Blood test timing in patient terms is in the [doses guide](#/doses#sec-doses-7). Sources: AusPATH 2026 baseline and review sections and Tables 5 and 7 [1]; position statement sections on baseline investigations, monitoring and polycythaemia [2]. GnRH analogues (puberty suppression, or lowering testosterone in adults): androgen deprivation may prolong the QT interval. Weigh this with congenital long QT, heart failure, frequent electrolyte abnormalities or QT-prolonging medicines, correct electrolytes, and consider periodic ECG and electrolytes (Zoladex PI s4.4/4.5; the same warning is in the Eligard, Lucrin and Diphereline PIs) [5]. Severe cutaneous adverse reactions (SJS/TEN, and DRESS and AGEP with triptorelin) are reported with triptorelin and leuprorelin [6]. Mood changes and depression, sometimes severe (very rare suicidal ideation or attempts), are reported with GnRH agonists; monitor patients with known depression closely. Convulsions are reported, mostly with risk factors [10]. Other interactions that need monitoring: testosterone may increase ciclosporin levels and the risk of nephrotoxicity [7], and Prometrium may raise ciclosporin levels [8]; oestradiol lowers lamotrigine levels and may reduce seizure control, so review the lamotrigine dose when oestradiol is started, changed or stopped [9]."
+      "note": "Blood test timing in patient terms is in the [monitoring guide](#/monitoring#sec-monitoring-1). Sources: AusPATH 2026 baseline and review sections and Tables 5 and 7 [1]; position statement sections on baseline investigations, monitoring and polycythaemia [2]. GnRH analogues (puberty suppression, or lowering testosterone in adults): androgen deprivation may prolong the QT interval. Weigh this with congenital long QT, heart failure, frequent electrolyte abnormalities or QT-prolonging medicines, correct electrolytes, and consider periodic ECG and electrolytes (Zoladex PI s4.4/4.5; the same warning is in the Eligard, Lucrin and Diphereline PIs) [5]. Severe cutaneous adverse reactions (SJS/TEN, and DRESS and AGEP with triptorelin) are reported with triptorelin and leuprorelin [6]. Mood changes and depression, sometimes severe (very rare suicidal ideation or attempts), are reported with GnRH agonists; monitor patients with known depression closely. Convulsions are reported, mostly with risk factors [10]. Other interactions that need monitoring: testosterone may increase ciclosporin levels and the risk of nephrotoxicity [7], and Prometrium may raise ciclosporin levels [8]; oestradiol lowers lamotrigine levels and may reduce seizure control, so review the lamotrigine dose when oestradiol is started, changed or stopped [9]."
     },
     {
       "h": "Authority wording card",
       "nav": "Authority wording card",
       "body": [
         "A printable one-page card on how PBS testosterone prescriptions are worded for gender-affirming care: the indication the Australian position statement tells prescribers to use, who has to be named on the application, and a line to say to the patient at the counter.",
-        "[Authority wording card: one page to print (PDF)](/clinicians/pbs-authority-wording-card.pdf)",
+        "[Authority wording card, version 1.5 (31 October 2026): one page to print (PDF)](/clinicians/pbs-authority-wording-card.pdf)",
         "Patients: the plain-language explanation is in the [costs guide](#/costs#sec-costs-7)."
       ]
     },
@@ -111,7 +112,7 @@
   "references": [
     {
       "n": 1,
-      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
       "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
     },
     {
@@ -158,6 +159,21 @@
       "n": 10,
       "text": "Diphereline (triptorelin; date of revision 8 April 2026), Lucrin Depot (leuprorelin; 21 February 2025) and Eligard (leuprorelin; 22 December 2025), Australian Product Information, section 4.4 Special warnings and precautions (depression and mood changes; convulsions) and Eligard section 4.8; the Zoladex 3.6 mg Consumer Medicine Information lists mood changes and depression as serious side effects. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 18 October 2026.",
       "url": "https://www.safetyandquality.gov.au/medicine-finder/diphereline"
+    },
+    {
+      "n": 11,
+      "text": "AstraZeneca Pty Ltd. Cosudex (bicalutamide) Australian Product Information, section 4.4 Special warnings and precautions for use (liver; coumarin anticoagulants; interstitial lung disease), section 4.5 Interactions (cytochrome P450; warfarin), section 4.8 Adverse effects (photosensitivity reaction) and Summary table of changes. Date of revision 9 July 2026. Accessed 31 October 2026.",
+      "url": "https://www.medsinfo.com.au/api/documents/Cosudex_PI?format=pdf"
+    },
+    {
+      "n": 12,
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"), page 28 (Bicalutamide), page 36 (Ongoing monitoring of GAHT: kidney function with spironolactone or PrEP) and page 58 (Pre-exposure prophylaxis). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 24 October 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 13,
+      "text": "Therapeutic Goods Administration. Product Information safety updates – August 2026 (Cosudex: interstitial lung disease added to section 4.4, approved 8 July 2026). Published 11 September 2026. Accessed 31 October 2026.",
+      "url": "https://www.tga.gov.au/news/safety-updates/product-information-safety-updates-august-2026"
     }
   ],
   "kicker": "For health professionals"

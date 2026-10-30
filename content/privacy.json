@@ -1,65 +1,77 @@
 {
   "title": "Privacy",
   "kicker": "About this site",
-  "intro": "What this site collects, who sees it, and how to stop it, in plain words.",
+  "intro": "What this site collects, who can see it, and how to have it removed.",
   "sections": [
     {
       "h": "The short version",
       "nav": "Short version",
       "body": [
-        "Browsing GAMSA does not require a name, an account or a cookie. The only measurement is Cloudflare Web Analytics, which counts page views without cookies, fingerprinting or tracking you between sites. The forms on this site ask only for what they need to work, and nothing collected is sold, shared with advertisers or used for anything other than running the site."
+        "Using GAMSA needs no name, account or cookie. The only measurement is a cookie-free page-view count, and nothing collected is sold, shared with advertisers or used except to run the site."
       ]
     },
     {
       "h": "Analytics",
       "body": [
-        "Every page loads one small Cloudflare Web Analytics script. It records which page was opened, the page that linked to it, your country, browser and device type, and page speed. It sets no cookies and does not build a profile of you. The reports show totals; they cannot show who you are. A content blocker that blocks static.cloudflareinsights.com stops it, and the site works normally without it."
+        "Each page loads a small Cloudflare Web Analytics script recording the page, the referring page, your country, browser and device type, and page speed. It sets no cookies, uses no fingerprinting, does not track you between sites or build a profile, and reports only totals. Blocking static.cloudflareinsights.com stops it without affecting the site."
       ]
     },
     {
       "h": "Server logs",
       "body": [
-        "The site is served by Cloudflare. Like any web host, Cloudflare processes each request (IP address, time, page, browser) to deliver the site and keep it secure, under [Cloudflare's privacy policy](https://www.cloudflare.com/privacypolicy/). This site's own code does not record IP addresses, and request details are not joined to anything else or used to identify visitors."
+        "Cloudflare hosts the site and, like any host, processes each request (IP address, time, page, browser) to deliver and secure it, under [Cloudflare's privacy policy](https://www.cloudflare.com/privacypolicy/). The site's own code records no IP addresses and does not link request details to anything else or use them to identify visitors. To prevent message floods, the forms hold a scrambled form of your IP address in memory for a few minutes; it is never stored. If your browser blocks part of a page under the site's safety rules, it reports the rule, the page and the source website; only daily counts are kept."
       ]
     },
     {
       "h": "What the forms collect",
       "nav": "Forms",
       "list": [
-        "**Feedback**: your message, the page you were on, the topic you chose, and an email address only if you want a reply.",
-        "**Patient sightings**: the medicine, the suburb or postcode, the pharmacy name if you give it, what happened, and an optional note. No name is asked for.",
-        "**Pharmacist stock register**: your name, AHPRA registration number, pharmacy and suburb or postcode, the report itself, and a work email only if you give one. Your registration number is checked once against the public AHPRA register and is never shown on the site.",
-        "All three use Cloudflare Turnstile to tell people from bots. Turnstile checks your browser, not what you typed; for feedback and pharmacist reports your IP address is also passed to Cloudflare for that check, and it is not stored. What you send is stored in a Cloudflare database that only the author can read. Sightings and stock reports stop showing on the site after 14 days, but everything sent stays in that database until the author deletes it; ask through the feedback page and it will be deleted. Once a day the author gets an alert that says how many new messages, sightings or registrations arrived. The alert never includes what you wrote, your email, your name or your registration number. Patient sightings and pharmacists' stock reports are shown on the site without names, emails or registration numbers. Delete requests are honoured without asking why: use the feedback page."
+        "**Feedback**: your message, the page and topic, and an email address only if you want a reply.",
+        "**Patient sightings**: the medicine, suburb or postcode, the pharmacy name (optional), what happened and an optional note. No name is asked for.",
+        "**Pharmacist stock register**: your name, AHPRA registration number, pharmacy, suburb or postcode, the report, and a work email only if you give one. The registration number is checked once against the public AHPRA register and never shown. Once approved you receive a private report key, of which the site keeps only a scrambled copy.",
+        "All three forms use Cloudflare Turnstile to detect bots. It checks your browser, not your entries; for feedback and pharmacist reports it also passes your IP address to Cloudflare, which does not store it. Submissions are kept in a Cloudflare database that only the author can view through this site, although Cloudflare stores and processes them as the provider. Sightings and stock reports appear without names, emails or registration numbers and are removed from view after 14 days. The author's daily alert gives only the number of new messages, sightings and registrations, never their content or personal details. Deletion requests through the feedback page are honoured without question."
+      ]
+    },
+    {
+      "h": "Where it is kept and for how long",
+      "nav": "Storage",
+      "list": [
+        "**Where**: Cloudflare, a US company, runs the database in its Oceania region; it offers no setting that keeps data inside Australia only ([Cloudflare: D1 data location](https://developers.cloudflare.com/d1/configuration/data-location/)).",
+        "**How long**: there is no fixed deletion date yet. The author deletes what is no longer needed, and anything you sent sooner if you ask through the [feedback page](#/feedback).",
+        "**Access and correction**: ask through the [feedback page](#/feedback) to see, correct or delete what you sent.",
+        "**Backup**: a monthly backup is being set up but has not started. It will be encrypted, kept for 90 days on GitHub (a US company) so the database can be restored, and only the author will be able to unlock it. This page will say when it starts."
       ]
     },
     {
       "h": "What is stored on your device",
       "nav": "On your device",
       "body": [
-        "The Accessibility panel and the light and dark buttons save your choices in this browser's local storage (names starting `gamsa.`). Discreet browsing is kept only in this tab's session storage, so it ends when you close the tab. None of this identifies you, and none of it is sent anywhere. Reset all removes your saved choices but does not change Discreet browsing. Quick exit, or clearing your browser data, removes all of it.",
-        "Search runs in your browser: your search is not sent to a server to find results. Read aloud uses your device's voices. Some browsers' online voices (for example Chrome's Google voices) send the text to the browser maker to be spoken."
+        "The Accessibility panel and the light and dark buttons save your choices in this browser's local storage (names starting `gamsa.`); Discreet browsing uses only this tab's session storage and ends when the tab closes. None of it identifies you or leaves your device. Reset all clears saved choices but not Discreet browsing; Quick exit or clearing your browser data removes everything.",
+        "Pharmacists: the stock report form remembers your registration number, name, pharmacy, suburb and report key in this browser. They leave your device only when you post a report; Forget them, under the form, removes them, and they are not kept with Discreet browsing on.",
+        "Search runs in your browser and is not sent to a server. Read aloud uses your device's voices; some browsers' online voices (such as Chrome's Google voices) send the text to the browser maker."
       ]
     },
     {
       "h": "Other sites",
       "body": [
-        "Links to the TGA, PBS, Services Australia and support organisations take you to their sites, each with its own privacy practices. PDFs and the RSS feed are plain files served from this site."
+        "Links to the TGA, PBS, Services Australia and support organisations lead to sites with their own privacy practices. PDFs and the RSS feed are plain files served from this site."
       ]
     },
     {
       "h": "What this site never does",
       "nav": "Never",
       "list": [
-        "Sell, rent or trade anything about you.",
-        "Run advertising or share data with advertising networks.",
-        "Ask you to create an account.",
-        "Keep any record when you use Quick exit (or press Esc twice). Quick exit clears this site's saved settings and replaces the page in this tab with the Bureau of Meteorology weather site, so Back does not return to it (other gamsa.au pages opened earlier in the same tab can still be reached with Back, unless you turn on Discreet browsing in the Accessibility panel first). It cannot erase your browser's own history: for that, use a private window (Safari: File → New Private Window; Chrome: New Incognito Window), or afterwards delete gamsa.au from your history (Safari: History → Show All History, search gamsa; Chrome: History, search gamsa, tick and delete)."
+        "Sell, rent or trade information about you.",
+        "Advertise or share data with advertising networks.",
+        "Require an account.",
+        "Keep a record when you use Quick exit (or press Esc twice). It clears this site's saved settings and replaces the page with the Bureau of Meteorology weather site, so Back does not return to it; earlier gamsa.au pages in the same tab can still be reached unless Discreet browsing (Accessibility panel) was on. It cannot erase your browser history: use a private window (Safari: File → New Private Window; Chrome: New Incognito Window), or delete gamsa.au from your history afterwards (Safari: History → Show All History; Chrome: History; search gamsa and delete)."
       ]
     },
     {
       "h": "Changes and contact",
       "body": [
-        "If anything that collects data is added or removed, this page changes at the same time. Questions or removal requests: [send feedback](#/feedback). Last reviewed 17 October 2026."
+        "This page changes whenever data collection is added or removed. Questions or removal requests: [send feedback](#/feedback). Last reviewed 31 October 2026.",
+        "If you are unhappy with how your information has been handled, tell the author first through the [feedback page](#/feedback). To ask about or correct your personal information, you can also email gamsaenquiries@gmail.com. If that does not resolve it, contact the Office of the Australian Information Commissioner (OAIC) at [oaic.gov.au](https://www.oaic.gov.au). For a concern about a health service, including a pharmacist, contact South Australia's Health and Community Services Complaints Commissioner (HCSCC) at [hcscc.sa.gov.au](https://www.hcscc.sa.gov.au)."
       ]
     }
   ],

@@ -1,94 +1,82 @@
 // Cloudflare Pages Function: /api/pharmacy — stock reports from registered pharmacists.
 //
-// How verification works (as automated as it can be without an AHPRA API):
-//   automatic  — AHPRA number format (PHA + 10 digits), Turnstile, honeypot, rate limit,
-//                14-day expiry, and a block list
-//   once only  — the FIRST report from a registration number is held until the site owner
-//                checks the number on the public AHPRA register and approves it (one link click).
-//                Every later report from that number publishes immediately.
+// How verification works (v19):
+//   automatic  — AHPRA number format (PHA + 10 digits), Turnstile (and the site it was solved on), honeypot,
+//                rate limits, 14-day expiry, and a block list
+//   once only  — the FIRST report from a registration number is held until the site owner checks the number
+//                on the public AHPRA register and approves it on /admin. Approving creates a private REPORT KEY,
+//                which the site owner emails to the pharmacist from /admin (one button opens a written email).
+//   every time — a later report publishes straight away only if it carries that pharmacist's report key.
+//                AHPRA numbers are public, so the number alone is no longer enough: without the key (or with a
+//                wrong one) the report is held for the site owner, who can publish it on /admin.
+// Published reports show stock facts only: medicine, pharmacy, suburb, status and date. A note that mentions
+// prices, offers or contact details is dropped.
 //
-// Bindings: DB (D1), TURNSTILE_SECRET, ADMIN_TOKEN — same as feedback.js. Schema in schema.sql.
+// Bindings: DB (D1), TURNSTILE_SECRET, ADMIN_TOKEN. Schema in schema.sql. Admin actions are in admin.js.
+import { json, clean, readJson, turnstileOk, tooMany, tableBusy, factsOnly, NAME_BAD, EMAIL_RE,
+         sha256hex, sameSecret, normKey, ensureSchema } from "../_lib/util.js";
 
 const STATUSES = new Set(["in_stock", "low", "order", "none"]);
 const DAYS = 14;
-const json = (obj, status = 200) =>
-  new Response(JSON.stringify(obj), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" } });
-const clean = (v, n) => String(v || "").replace(/\s+/g, " ").trim().slice(0, n);
 const since = () => new Date(Date.now() - DAYS * 864e5).toISOString();
 
-export async function onRequestGet({ request, env }) {
+export async function onRequestGet({ env }) {
   if (!env.DB) return json({ ok: false, error: "not-configured" }, 503);
-  const url = new URL(request.url);
-  const token = url.searchParams.get("token") || "";
-  const admin = env.ADMIN_TOKEN && token.length >= 24 && token === env.ADMIN_TOKEN;
-
-  if (admin && url.searchParams.get("approve")) {
-    const a = url.searchParams.get("approve").toUpperCase();
-    await env.DB.prepare("UPDATE pharmacists SET state='approved', decided=? WHERE ahpra=?").bind(new Date().toISOString(), a).run();
-    await env.DB.prepare("UPDATE pharmacy_reports SET published=1 WHERE ahpra=?").bind(a).run();
-    return json({ ok: true, approved: a });
-  }
-  if (admin && url.searchParams.get("block")) {
-    const a = url.searchParams.get("block").toUpperCase();
-    await env.DB.prepare("UPDATE pharmacists SET state='blocked', decided=? WHERE ahpra=?").bind(new Date().toISOString(), a).run();
-    await env.DB.prepare("UPDATE pharmacy_reports SET published=0 WHERE ahpra=?").bind(a).run();
-    return json({ ok: true, blocked: a });
-  }
-  if (admin) {
-    const pending = await env.DB.prepare(
-      "SELECT p.ahpra, p.name, p.email, p.created, r.pharmacy, r.suburb, r.medicine, r.status FROM pharmacists p " +
-      "LEFT JOIN pharmacy_reports r ON r.ahpra = p.ahpra WHERE p.state='pending' ORDER BY p.created").all();
-    const base = url.origin + "/api/pharmacy?token=" + encodeURIComponent(token);
-    return json({ ok: true, pending: pending.results.map((p) => ({
-      ...p, check: "https://www.ahpra.gov.au/Registration/Registers-of-Practitioners.aspx",
-      approve: base + "&approve=" + p.ahpra, block: base + "&block=" + p.ahpra })) });
-  }
-  // public: published reports from the last 14 days, registration number never exposed
+  // public: published reports from the last 14 days; registration number, name and email never exposed
   const { results } = await env.DB.prepare(
     "SELECT created, pharmacy, suburb, medicine, status, note FROM pharmacy_reports " +
     "WHERE published=1 AND created > ? ORDER BY id DESC LIMIT 300").bind(since()).all();
-  return json({ ok: true, reports: results });
+  return json({ ok: true, reports: results.map((r) => ({
+    created: r.created, pharmacy: r.pharmacy, suburb: r.suburb, medicine: r.medicine, status: r.status,
+    note: factsOnly(r.note) || null })) });
 }
 
 export async function onRequestPost({ request, env }) {
   if (!env.DB || !env.TURNSTILE_SECRET) return json({ ok: false, error: "not-configured" }, 503);
-  let b;
-  try { b = await request.json(); } catch { return json({ ok: false, error: "bad-request" }, 400); }
+  const { b, res } = await readJson(request);
+  if (res) return res;
   if (b.website) return json({ ok: true, published: false });   // honeypot
 
   const ahpra = clean(b.ahpra, 13).toUpperCase();
   if (!/^PHA\d{10}$/.test(ahpra)) return json({ ok: false, error: "ahpra" }, 400);
   const name = clean(b.name, 80), pharmacy = clean(b.pharmacy, 80), suburb = clean(b.suburb, 40),
-        medicine = clean(b.medicine, 80), note = clean(b.note, 200), email = clean(b.email, 200);
+        medicine = clean(b.medicine, 80), email = clean(b.email, 200), rawNote = clean(b.note, 200);
   if (!name || !pharmacy || !suburb || !medicine) return json({ ok: false, error: "fields" }, 400);
+  if (NAME_BAD.test(name + " " + pharmacy + " " + suburb + " " + medicine)) return json({ ok: false, error: "fields" }, 400);
   if (!STATUSES.has(b.status)) return json({ ok: false, error: "status" }, 400);
-  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return json({ ok: false, error: "email" }, 400);
+  if (email && !EMAIL_RE.test(email)) return json({ ok: false, error: "email" }, 400);
+  const note = factsOnly(rawNote);
 
-  const form = new FormData();
-  form.append("secret", env.TURNSTILE_SECRET);
-  form.append("response", String(b.token || ""));
-  const ip = request.headers.get("CF-Connecting-IP");
-  if (ip) form.append("remoteip", ip);
-  const check = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", { method: "POST", body: form })
-    .then((r) => r.json()).catch(() => ({ success: false }));
-  if (!check.success) return json({ ok: false, error: "verify", codes: check["error-codes"] || [] }, 403);
+  if (await tooMany(request, "pr", 10, 10 * 60e3)) return json({ ok: false, error: "rate" }, 429);
+  if (!(await turnstileOk(request, env, b.token))) return json({ ok: false, error: "verify" }, 403);
+  await ensureSchema(env);
 
-  // rate limit: 20 reports per registration number per day
+  // rate limits: 20 reports per registration number per day; 60 a hour across the site
   const recent = await env.DB.prepare("SELECT COUNT(*) AS n FROM pharmacy_reports WHERE ahpra=? AND created > ?")
     .bind(ahpra, new Date(Date.now() - 864e5).toISOString()).first();
   if (recent && recent.n >= 20) return json({ ok: false, error: "rate" }, 429);
+  if (await tableBusy(env, "pharmacy_reports", 60)) return json({ ok: false, error: "rate" }, 429);
 
   const now = new Date().toISOString();
-  let p = await env.DB.prepare("SELECT state FROM pharmacists WHERE ahpra=?").bind(ahpra).first();
+  let p = await env.DB.prepare("SELECT state, key_hash FROM pharmacists WHERE ahpra=?").bind(ahpra).first();
   if (!p) {
-    await env.DB.prepare("INSERT INTO pharmacists (ahpra, name, email, state, created) VALUES (?, ?, ?, 'pending', ?)")
+    await env.DB.prepare("INSERT OR IGNORE INTO pharmacists (ahpra, name, email, state, created) VALUES (?, ?, ?, 'pending', ?)")
       .bind(ahpra, name, email || null, now).run();
-    p = { state: "pending" };
+    p = (await env.DB.prepare("SELECT state, key_hash FROM pharmacists WHERE ahpra=?").bind(ahpra).first()) || { state: "pending" };
   }
   if (p.state === "blocked") return json({ ok: false, error: "blocked" }, 403);
-  const published = p.state === "approved" ? 1 : 0;
+
+  let published = 0, held = "new";
+  if (p.state === "approved") {
+    const key = normKey(b.key);
+    if (key && p.key_hash && (await sameSecret(await sha256hex(key), p.key_hash))) { published = 1; held = null; }
+    else held = "key";   // approved number, but no key or the wrong key: Ted checks it on /admin
+  }
   await env.DB.prepare(
     "INSERT INTO pharmacy_reports (created, ahpra, pharmacy, suburb, medicine, status, note, published) VALUES (?, ?, ?, ?, ?, ?, ?, ?)")
     .bind(now, ahpra, pharmacy, suburb, medicine, b.status, note || null, published).run();
-  return json({ ok: true, published: !!published });
+  const out = { ok: true, published: !!published };
+  if (held) out.held = held;                       // "new" = first report, waits for the AHPRA check; "key" = report key missing or wrong
+  if (rawNote && !note) out.noteRemoved = true;    // the note mentioned a price, an offer or contact details
+  return json(out);
 }

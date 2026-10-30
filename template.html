@@ -74,7 +74,7 @@
   .page-head>*{min-width:0;}
   .page-head .lede{font-size:17.5px;color:var(--ink-2);max-width:60ch;margin:0;}
   .stamp{font-size:13.5px;color:var(--ink-2);}
-  @media (max-width:430px){.tb-sa{display:none;}}
+  
 
   /* ---- home ---- */
   .hero{padding-block:14px 4px;}
@@ -175,23 +175,16 @@
   .rep-meta{font-size:13.5px;color:var(--ink-2);margin-top:2px;}
 
   .gov{background:#0B5D7A;color:#fff;font-size:13px;}
-  .gov-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:7px;letter-spacing:.01em;}
-  .gov-r{color:#CFE3EC;}
-  @media (max-width:560px){.gov-r{display:none;}}
+  
   @media (max-width:760px),(pointer:coarse){
     .a11y-btn{padding:10px 18px 10px 14px;font-size:17px;min-height:44px;}
     .a11y-act{padding:9px 14px;min-height:40px;}
   }
-  .foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;}
-  .foot-grid h3{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);margin-bottom:10px;}
-  .foot-grid p{font-size:14px;color:var(--ink-2);margin-bottom:10px;}
   ul.sitemap{list-style:none;margin:0;padding:0;}
   ul.sitemap li{margin-bottom:8px;font-size:14.5px;}
   .rev{font-size:13px;color:var(--ink-2);}
   .cite{font-size:13.5px;color:var(--ink-2);background:var(--card);border:1px solid var(--line);
     border-radius:8px;padding:11px 13px;line-height:1.5;word-break:break-word;}
-  .foot-legal{margin-top:26px;border-top:1px solid var(--line);padding-top:18px;}
-  .foot-legal p{font-size:14px;color:var(--ink-2);max-width:78ch;margin-bottom:10px;}
   footer{margin-top:50px;border-top:1px solid var(--line);background:var(--panel);}
   footer .wrap{padding-block:24px 36px;}
   footer p{font-size:14px;color:var(--ink-2);max-width:68ch;margin-bottom:10px;}
@@ -200,10 +193,7 @@
   html,body{overflow-x:hidden;}
   .hero{margin-inline:-20px;background:linear-gradient(160deg,#08485E 0%,#0B5D7A 62%,#136182 100%);
     color:#fff;padding:40px 20px 44px;margin-bottom:26px;}
-  .hero-in{max-width:none;}
   .hero h1{color:#fff;letter-spacing:-.01em;line-height:1.18;}
-  .hero .eyebrow{margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.14em;
-    text-transform:uppercase;color:#9FD0E4;}
   .hero .lede{color:#DCEBF3;margin-top:14px;font-size:17.5px;max-width:56ch;}
   .tiles{margin-top:0;gap:16px;}
   .tile{border-radius:16px;padding:22px;transition:transform .14s ease,box-shadow .14s ease,border-color .14s ease;}
@@ -212,7 +202,7 @@
   .callout{border-radius:16px;}
   .block{margin-top:34px;}
   .block h2{padding:0 0 0 16px;background:linear-gradient(180deg,var(--acstops)) left top/4px 100% no-repeat;}
-  .page-head .kicker::before,.home-h h2::before,.er-grp::before,.refs h2::before{content:"";display:inline-block;width:22px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--acstops));margin-right:10px;vertical-align:middle;}
+  .page-head .kicker::before,.er-grp::before,.refs h2::before{content:"";display:inline-block;width:22px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--acstops));margin-right:10px;vertical-align:middle;}
   figure{border-radius:16px;}
   .chip,.btn{border-radius:999px;}
   @media (max-width:560px){.hero{padding:30px 20px 34px;}}
@@ -228,7 +218,6 @@
   html,body{overflow-x:visible;}
   /* hero and page heads share one language */
   .hero{margin-inline:0;border-radius:20px;padding:40px 28px 44px;}
-  .hero .eyebrow{color:#B8DDEC;}
   .page-head{padding:26px 28px 28px;}
   .kicker{margin:0 0 4px;font-size:12.5px;font-weight:700;letter-spacing:.12em;
     text-transform:uppercase;color:#40606F;}
@@ -286,6 +275,8 @@
     background:var(--brand-soft);border-radius:999px;padding:8px 14px;}
   .quick a:hover{background:#D5E8F0;}
   .statusline{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px;}
+  .statusline .sl-h{font-weight:700;}
+  .prforget{background:none;border:0;padding:2px 0;min-height:24px;font:inherit;color:var(--brand);text-decoration:underline;cursor:pointer;} .statusline .sl-d{color:var(--ink-2);font-size:14.5px;}
   .ticker{margin-top:18px;border:1px solid var(--line);border-radius:16px;background:var(--card);padding:14px 18px;}
   .ticker h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);
     border-top:0;padding-top:0;margin-bottom:8px;}
@@ -351,13 +342,12 @@
   .totop-fab:hover{background:var(--brand-soft);}
   @media print{.totop-fab{display:none;}}
   .wrap{max-width:none;padding-inline:clamp(20px,4vw,64px);}
-  .block p,.block li,.page-head .lede,.hero-in,.refs ol,form.rep,.clear-box{max-width:none;}
+  .block p,.block li,.page-head .lede,.refs ol,form.rep,.clear-box{max-width:none;}
   @media (max-width:1180px){.wrap{max-width:none;}}
   @media (max-width:980px){.wrap{max-width:none;}}
 
   /* --- wider layout, same reading measure --- */
   .wrap{max-width:none;}
-  .hero-in{max-width:none;}
   .page-head .lede{max-width:none;}
   .block p,.block li{max-width:none;}
   .tiles{grid-template-columns:repeat(3,1fr);}
@@ -448,7 +438,7 @@
     --ink:#222B33; --ink-2:#4A5560; --brand-soft:#E4EFF3;
     font-family:"Lexend","Atkinson Hyperlegible",Verdana,Tahoma,"Trebuchet MS",sans-serif;
     font-size:17.5px;letter-spacing:.045em;word-spacing:.18em;}
-  body.dys .block p,body.dys .block li,body.dys .hero-in,body.dys .page-head .lede,
+  body.dys .block p,body.dys .block li,body.dys .page-head .lede,
   body.dys .er-tx p,body.dys .er-tx li{
     line-height:1.75;max-width:62ch;text-align:left;text-wrap:pretty;}
   body.dys .block p,body.dys .er-tx p{margin-bottom:1.25em;}
@@ -460,7 +450,7 @@
 
   /* easy read */
   body.easy{font-size:19px;}
-  body.easy .block p,body.easy .block li,body.easy .page-head .lede,body.easy .hero-in{
+  body.easy .block p,body.easy .block li,body.easy .page-head .lede{
     font-size:1.05em;line-height:1.9;max-width:60ch;}
   body.easy .block li{margin-bottom:.7em;}
   body.easy h1{font-size:2em;} body.easy h2{font-size:1.45em;margin-top:1.6em;}
@@ -557,22 +547,12 @@
   /* home banner: the logo's cross as a faint motif */
   .hero{position:relative;overflow:hidden;
     background:radial-gradient(420px 260px at 92% 0%,rgba(127,216,251,.18),transparent 70%),radial-gradient(380px 240px at 0% 100%,rgba(247,182,195,.12),transparent 70%),linear-gradient(160deg,#08485E 0%,#0B5D7A 62%,#136182 100%) !important;}
-  .hero-in{position:relative;}
-  .hero-pat,.hero-ring,.hero-badge{position:absolute;pointer-events:none;overflow:visible;}
-  .hero-ring{right:-70px;top:-90px;width:330px;height:330px;opacity:.12;}
-  .hero-badge{right:47px;top:27px;width:96px;height:96px;}
-  .hero-pat{right:0;top:0;width:560px;height:373px;opacity:.05;-webkit-mask-image:linear-gradient(90deg,transparent,#000 60%);mask-image:linear-gradient(90deg,transparent,#000 60%);}
   html.dark .bf{fill:#0A2E3C;} html.hc .bf{fill:#003A52;}
-  .hero-in{z-index:1;}
-  @media (max-width:899px){.hero-ring{right:-60px;top:-70px;width:250px;height:250px;}.hero-badge{right:30px;top:20px;width:70px;height:70px;}}
-
-  .hero .eyebrow{display:inline-flex;align-items:center;gap:8px;}
-  .hero .eyebrow::before{content:"";width:18px;height:18px;border-radius:5px;flex:none;
-    background:linear-gradient(#fff,#fff) center/10px 3px no-repeat,linear-gradient(#7FD8FB 50%,#F7B6C3 50%) center/4px 11px no-repeat,rgba(255,255,255,.14);}
+  
   .hero h1::after{content:"";display:block;width:56px;height:4px;border-radius:2px;background:linear-gradient(90deg,#7FD8FB,#FFFFFF,#F7B6C3);margin-top:16px;}
   @media (max-width:420px){.hero-search input::placeholder{font-size:14px;}}
   /* phones: small badge in the top corner, clear of the title */
-  @media (max-width:560px){.hero-pat{display:none;}.hero-ring{right:4px;top:4px;width:74px;height:74px;opacity:.18;}.hero-badge{right:20px;top:20px;width:42px;height:42px;}}
+  
   .f textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--card);border:1px solid var(--line);
     border-radius:9px;padding:11px 12px;width:100%;resize:vertical;}
   .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
@@ -581,6 +561,13 @@
      nothing jumps when the content arrives (protects CLS) */
   html[data-routing="path"]:not(.ready) footer{visibility:hidden;}
   html[data-routing="path"]:not(.ready) #main{min-height:100vh;}
+  /* A-12 (24 Oct 2026): /supply moved 2 s after loading on phones (layout shift 0.81) because the script drew the breadcrumb, the stamp and
+     the supply list over a page already on screen. Until it runs, the breadcrumb's row (54 px) and the stamp's line are kept free and the
+     supply list holds a screen's height, so what sits below it starts off-screen; the scroll bar waits until the script has placed it. */
+  html[data-routing="path"]:not(.ready) #main>.view.on:not(#v-home):has(>.page-head:first-child)::before{content:"";display:block;height:54px;}
+  #stamp:empty::before{content:"\00a0";}
+  html[data-routing="path"]:not(.ready) #affected{min-height:100vh;}
+  html:not(.ready) .fbtrack,html:not(.ready) .fbpill,html:not(.ready) .flagbar{visibility:hidden;}
   .block .pro{border-left:4px solid var(--amber);background:var(--amber-soft);padding:14px 18px;border-radius:0 12px 12px 0;}
   .block .pro h2{margin-top:0;}
   a.dl{display:inline-block;font-weight:600;padding:8px 14px;border:1px solid var(--line);border-radius:999px;
@@ -714,13 +701,11 @@
     .ng-col li a{padding:7px 0;font-size:15px;}
   }
   /* ---- home navigation cards + stats ---- */
-  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:-26px;position:relative;z-index:1;}
   .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;box-shadow:var(--shadow);text-decoration:none;color:inherit;display:block;}
   .stat b{display:block;font-size:26px;line-height:1.1;color:var(--brand);letter-spacing:-.01em;} .stat span{display:block;font-size:13.5px;color:var(--ink-2);margin-top:4px;}
   .stat:hover{border-color:var(--brand);}
-  @media (max-width:640px){.stats{grid-template-columns:1fr;gap:8px;} .stat{padding:10px 14px;display:flex;align-items:baseline;gap:10px;} .stat b{font-size:20px;} .stat span{margin:0;}}
-  .aud-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px;}
-  @media (max-width:760px){.aud-grid{grid-template-columns:1fr;}}
+  @media (max-width:640px){ .stat{padding:10px 14px;display:flex;align-items:baseline;gap:10px;} .stat b{font-size:20px;} .stat span{margin:0;}}
+  
   .aud{position:relative;display:flex;flex-direction:column;gap:8px;text-decoration:none;color:inherit;background:var(--acs);border:1px solid transparent;border-radius:20px;padding:24px 24px 22px 24px;overflow:hidden;
     box-shadow:var(--shadow);transition:transform .14s ease,box-shadow .14s ease,border-color .14s ease;}
   .aud::after{content:"";position:absolute;right:-40px;bottom:-40px;width:150px;height:150px;border-radius:50%;background:var(--ac);opacity:.09;}
@@ -728,11 +713,9 @@
   .aud .ic{width:46px;height:46px;border-radius:12px;background:var(--card);color:var(--ac);box-shadow:0 1px 3px rgba(16,24,31,.12);display:flex;align-items:center;justify-content:center;} .aud .ic svg{width:26px;height:26px;}
   .aud .t{font-size:21px;font-weight:700;color:var(--ac);line-height:1.2;text-decoration:none;} .aud .t::before{content:"";position:absolute;inset:0;} .aud .t:focus-visible{outline:none;} .aud:has(.t:focus-visible){outline:3px solid var(--ac);outline-offset:2px;} .aud .t::after{content:" \2192";color:var(--ac);}
   .aud .d{font-size:15px;color:var(--ink-2);}
-  .aud .ql{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;position:relative;z-index:1;} .aud .ql a{text-decoration:none;font-size:13px;color:var(--ink);background:var(--card);border:1px solid transparent;border-radius:999px;padding:3px 10px;} .aud .ql a:hover{border-color:var(--ac);color:var(--ac);}
   .c-trans{--ac:#2A6F92;--acs:#EAF1F4;} .c-clin{--ac:#2D6E62;--acs:#EAF1EF;} .c-allies{--ac:#8C4A86;--acs:#F4EDF3;} .c-res{--ac:#5E5A9C;--acs:#EFEFF5;}
   html.dark .c-trans{--ac:#8CC8E6;--acs:#142C38;} html.dark .c-clin{--ac:#8FD1C0;--acs:#142D29;} html.dark .c-allies{--ac:#E3A5DC;--acs:#33212F;} html.dark .c-res{--ac:#BCB6F0;--acs:#26253D;}
   .aud .t::after{opacity:.8;}
-  .aud-grid{margin-top:22px;}
   html.rm .aud{transition:none;}
   html.hc .aud{border-color:var(--ac);}
   :root{--acstops:#7FD8FB,#F7B6C3;} html.dark{--acstops:#7FD8FB,#F7B6C3;}
@@ -742,11 +725,8 @@
   .hubv .tile{background-image:linear-gradient(90deg,var(--acstops));background-size:100% 4px;background-repeat:no-repeat;} .hubv .tile:hover{border-color:var(--ac);}
   /* ---- home hero ---- */
   .hero{padding:34px 28px 30px;}
-  .hero-in{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:end;position:relative;}
-  .hero-l,.hero-r{min-width:0;}
-  @media (max-width:900px){.hero-in{grid-template-columns:1fr;gap:24px;}}
-  .hero-r{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:18px;backdrop-filter:blur(2px);margin-top:60px;}
-  @media (max-width:900px){.hero-r{margin-top:0;}}
+  
+  
   .sr-grp{margin:22px 0 0;} .sr-grp>h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);margin:0 0 6px;padding-bottom:6px;border-bottom:1px solid var(--line);} .sr-grp>h2 span{font-weight:500;color:var(--ink-2);} .sr-jump{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0;} .sr-jump a{font-size:14px;padding:4px 12px;border-radius:999px;background:var(--panel);border:1px solid var(--line);text-decoration:none;color:var(--ink);} .sr-more summary{cursor:pointer;font-weight:600;color:var(--brand);padding:10px 0;min-height:24px;}
   .hs-pop{margin:12px 0 0;font-size:13.5px;color:#DCEBF3;display:flex;flex-wrap:wrap;align-items:center;gap:6px;} .hs-pop a{color:#fff;background:rgba(255,255,255,.14);border-radius:999px;padding:3px 10px;text-decoration:none;display:inline-block;} .hs-pop a:hover{background:rgba(255,255,255,.26);}
   .live-line{display:inline-flex;align-items:center;gap:8px;margin-top:0;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;text-decoration:none;font-size:14px;} .live-line b{font-weight:700;white-space:nowrap;} .live-line:hover{text-decoration:underline;}
@@ -758,15 +738,7 @@
   .hero h1{font-size:clamp(28px,4vw,42px);line-height:1.12;max-width:16ch;margin-bottom:10px;}
   .hero h1 .hl{background:linear-gradient(90deg,#7FD8FB 0%,#FFFFFF 50%,#F7B6C3 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
   html.hc .hero h1 .hl{background:none;color:#fff;}
-  .hero .eyebrow::before{content:"";display:inline-block;width:26px;height:3px;border-radius:2px;background:linear-gradient(90deg,#7FD8FB,#F7B6C3);margin-right:10px;vertical-align:middle;}
   .hero .lede{font-size:17px;margin-top:10px;}
-  .hero-foot{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);}
-  .hero-cta{display:flex;gap:10px;flex-wrap:wrap;}
-  .hero-cta .cta{padding:10px 18px;font-size:15px;}
-  .cta{display:inline-block;font-weight:700;font-size:15.5px;text-decoration:none;color:#0B5D7A;background:#fff;border:2px solid #fff;border-radius:999px;padding:11px 20px;}
-  .cta.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.7);}
-  .cta:hover{background:#DCEFF8;border-color:#DCEFF8;color:#08485E;} .cta.ghost:hover{background:rgba(255,255,255,.12);color:#fff;}
-  .cta:focus-visible{outline:3px solid #fff;outline-offset:3px;}
   @media (max-width:560px){.hero{padding:36px 18px 36px;} .hero h1{max-width:none;}}
   /* ---- home search ---- */
   .hero-search{position:relative;display:flex;align-items:center;margin-top:0;max-width:none;background:#fff;border-radius:999px;padding:5px 5px 5px 18px;
@@ -781,11 +753,8 @@
   .hero-search button:focus-visible{outline:3px solid #10181F;outline-offset:2px;}
   @media (max-width:480px){.hero-search{padding-left:12px;} .hero-search button{padding:10px 14px;}}
   html.dark .hero-search input{color:#10181F;}
-  .home-h{margin:34px 0 4px;}
-  .home-h h2{margin:0;font-size:21px;} .home-h p{margin:4px 0 0;color:var(--ink-2);font-size:15px;}
   .tiles.aud{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:26px;}
   @media (min-width:900px){.tiles.aud{grid-template-columns:repeat(2,1fr);}}
-  .home-aud .tile .t{font-size:21px;}
   .tiles.hub{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
   @media (min-width:980px){.tiles.hub{grid-template-columns:repeat(3,1fr);}}
   /* ---- search results ---- */
@@ -859,6 +828,7 @@
   /* v18.1.1 (Ted's pick "the pill on a faint track"): a 4 px blue-to-pink bar grows down a faint track under the header with the flag
      capsule at its tip. Track and capsule are moved with transform (set by the scroll bar JS), so they never count as layout shift. */
   .flagbar{width:4px;background:linear-gradient(180deg,#5BCEFA,#F5A9B8);}
+  .flagbar{top:0;height:100%;transform-origin:0 0;transform:translateY(62px) scaleY(0);will-change:transform;}   /* A-12: grows by transform (set by the scroll bar JS), never by height */
   .fbtrack{position:fixed;left:0;top:0;width:4px;height:100%;z-index:58;pointer-events:none;background:rgba(11,93,122,.12);transform:translateY(62px);}
   html.dark .fbtrack{background:rgba(127,211,245,.14);}
   .fbpill{position:fixed;left:-6px;top:0;width:16px;height:32px;z-index:59;pointer-events:none;border-radius:9px;box-sizing:border-box;border:2px solid #0B5D7A;background:linear-gradient(180deg,#7FD8FB 0 47%,#fff 47% 53%,#F7B6C3 53%);transform:translateY(52px);}
@@ -1033,8 +1003,6 @@
   @media (max-width:560px){.x-help{padding:10px 14px 10px 12px;font-size:13.5px;right:12px;bottom:12px;} .x-help svg{width:18px;height:18px;}}
   /* home */
   .x-hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);gap:clamp(24px,5vw,72px);align-items:center;padding:clamp(36px,6vw,84px) 0 clamp(28px,4vw,48px);}
-  .x-eyebrow{margin:0 0 18px;display:inline-flex;align-items:center;gap:10px;font:700 14px/1.3 var(--x-fb);color:var(--x-brand);}
-  .x-eyebrow::before{content:"";flex:none;width:28px;height:4px;border-radius:4px;background:linear-gradient(90deg,#5BCEFA 0 33%,#F5A9B8 33% 66%,#fff 66%);}
   .x-hero h1{font-size:clamp(40px,6vw,76px)!important;line-height:1.02;letter-spacing:-.035em;margin:0;font-weight:800;color:var(--x-ink)!important;}
   .x-hero h1 .hl{color:var(--x-brand);background:none!important;-webkit-text-fill-color:currentColor;}
   .x-lede{font-size:clamp(18px,1.6vw,21px);line-height:1.6;color:var(--x-ink2);max-width:56ch;margin:22px 0 28px;}
@@ -1165,8 +1133,8 @@
   @media print{.x-help,.x-helpp,.x-menu,.x-pager,.x-crumb,.x-hero-a{display:none!important;}}
   /* ===== v18.1.1 home graphic V-final "Arch, cross centred" (picked 15 Oct) + animation "Settle, then shimmer" =====
      the line still life (vial, gel pump, patch) in one 2.4-unit line (teal; dark #7FD3F5; hc ink) on a soft arch (dropped in hc), the logo's 5b cross
-     (white bar, upright blue-over-pink capsule, white seam) centred on it. The pump body is opaque at x 320 y 200 of the 400 box, where the page ribbon
-     starts, so the ribbon leaves the pump's side. Lines draw in, solids fade, the capsule settles, then one shimmer; still under reduced motion; hidden
+     (white bar, upright blue-over-pink capsule, white seam) centred on it. v19.2 (31 Oct, "Option 5 + B"): the page ribbon pours from the
+     pump's nozzle (head bar and nozzle, classes hg-ph/hg-pn, turned to point right), a syringe and blister strip complete the set. Lines draw in, solids fade, the capsule settles, then one shimmer; still under reduced motion; hidden
      at 860 px and below. JS (gamsaLogo) sets on #heroArt: lg-w (waiting for first view), st (settle), sh (shimmer), lg-off (off-screen: paused) */
   .lg .lg-hc{stroke:none;} .lg .lg-shine{display:none;} html.hc .lg .lg-hc{stroke:var(--ink,#000);stroke-width:3;}
   .x-hero-a.sh .lg-shine{display:inline;} .x-hero-a.sh .lg-shine rect{animation:lgSh .9s cubic-bezier(.22,1,.36,1) both;}
@@ -1214,10 +1182,41 @@
   html.dark .rb-home{opacity:.9;}
   html.hc .rb-home,body.dys .rb-home,body.easy .rb-home{display:none;}
   @media print{.rb-home{display:none!important;}}
+  /* ===== v19.2 ribbon "Option 5 + B" (Ted, 31 Oct 2026; mock-ups in claude/design/ribbon-2026-10-31) =====
+     the pump head (hg-ph) and nozzle (hg-pn) are mirrored about x 47 of the pump group so the nozzle points right, nozzle 1.35x taller about y -185;
+     gamsaRibbon adds pp to #heroArt for one 0.7 s press as the ribbon pours (rb-pour), then a gentle press every 6 s; one white sheen along the first
+     curve; the ribbon gets the flag bar's shadow; the pour starts as a thin lead (--rbk). Uses the separate translate property so each path keeps its
+     own transform. All motion off under reduced motion, html.rm and rb-still. */
+  #heroArt .hg-ph:not(.hg-pn){transform:translate(94px,0) scale(-1,1);}
+  #heroArt .hg-pn{transform:translate(94px,64.75px) scale(-1,1.35);}
+  #heroArt.pp .hg-ph{animation:rbPress .7s linear both;}
+  #heroArt:not(.st):not(.lg-w):not(.sh):not(.pp) .hg-ph{animation:rbPump 6s ease-in-out 4s infinite;}
+  @keyframes rbPress{0%{translate:0 0;animation-timing-function:cubic-bezier(.5,0,.75,.35);}34%{translate:0 8px;animation-timing-function:cubic-bezier(.25,.6,.35,1);}82%{translate:0 -.6px;animation-timing-function:ease-in-out;}100%{translate:0 0;}}
+  @keyframes rbPump{0%,80%,100%{translate:0 0;}86%{translate:0 6px;}93%{translate:0 0;}}
+  @media (prefers-reduced-motion:reduce){#heroArt .hg-ph{animation:none!important;} .rb-home .rb-sheen{display:none;}}
+  html.rm #heroArt .hg-ph{animation:none!important;} html.rm .rb-sheen,html.rb-still .rb-sheen{display:none;}
+  .rb-home .rb-sheen{stroke:#fff;stroke-width:calc(var(--w)*.5px);stroke-linecap:round;stroke-dasharray:.16 2;stroke-dashoffset:.16;opacity:0;}
+  .rb-home.rb-pour .rb-sheen{animation:rbSheen 1.1s cubic-bezier(.4,0,.2,1) .15s both;}
+  @keyframes rbSheen{0%{stroke-dashoffset:.16;opacity:0;}20%{opacity:.85;}100%{stroke-dashoffset:-1;opacity:0;}}
+  html.dark .rb-home .rb-sheen{stroke:#fff;}
+  .rb-home>g.rb:not(.th){filter:drop-shadow(0 1px 2px rgba(0,0,0,.2));}
+  html.dark .rb-home>g.rb:not(.th){filter:drop-shadow(0 1px 2px rgba(0,0,0,.45));}
+  /* v19.2 layout (Ted, 31 Oct): the "Guides" section sits 14 px closer to "What do you need today?"; the gap to the cards is unchanged */
+  .x-sec:has(>#hPath){margin-top:calc(clamp(48px,7vw,88px) - 14px);}
+  /* smoother pour (31 Oct): the ribbon leaves the nozzle as a thin lead that widens to full width over its first 0.35 s */
+  @property --rbk{syntax:"<number>";inherits:true;initial-value:1;}
+  .rb-home .rb .e{stroke-width:calc(var(--w)*var(--rbk)*1px + 2px);} .rb-home .rb .a{stroke-width:calc(var(--w)*var(--rbk)*1px);}
+  .rb-home .rb .b{stroke-width:calc(var(--w)*var(--rbk)*.6px);} .rb-home .rb .c{stroke-width:calc(var(--w)*var(--rbk)*.2px);}
+  .rb-home.rb-pour{animation:rbLead .35s cubic-bezier(.3,0,.2,1) both;}
+  @keyframes rbLead{from{--rbk:.3;}to{--rbk:1;}}
+  @media (prefers-reduced-motion:reduce){.rb-home.rb-pour{animation:none;}} html.rm .rb-home.rb-pour,html.rb-still .rb-home.rb-pour{animation:none;}
   /* ===== v18.1.1 pre-publish review fixes (15 Oct) ===== */
   /* section jumps clear the sticky header at every width (--x-hh is the measured header height). Set on the targets, not as
      scroll-padding on the page: with scroll-padding, focusing a header button (closing the Menu or search) scrolled the page */
   html{scroll-padding-top:0;} #main [id]{scroll-margin-top:calc(var(--x-hh,76px) + 14px);}
+  /* A-14 (WCAG 2.4.11, 24 Oct 2026): anything that takes keyboard focus scrolls clear of the sticky header (74 px on phones, so about 90 px)
+     and of the Need help now and Top buttons at the bottom right. On the controls, not the page, for the reason above. */
+  :where(#main,footer) :is(a,button,input,select,textarea,summary,[tabindex]){scroll-margin-top:calc(var(--x-hh,76px) + 16px);scroll-margin-bottom:140px;}
   /* Quick exit never shrinks below its label; the search box gives way instead; short "Exit" label up to 640 px */
   .bar-r>*:not(.hsb){flex-shrink:0;} .bar-r .top-btn.exit{flex:none;} .bar-r>.hsb{flex:1 1 150px!important;min-width:0!important;}
   @media (max-width:640px){.bar-r .top-btn.exit .lbl{display:none;} .bar-r .top-btn.exit .lbl-s{display:inline;}}
@@ -1518,14 +1517,57 @@
     html figure.gf .gf-tb tbody :is(th,td){width:auto;padding:0;border:0}}
   @media (forced-colors:active){.gf .gf-mk{forced-color-adjust:none;background:CanvasText;border-color:CanvasText} .gf :is(.gf-ring,.gf-win){background:Canvas}
     .gf :is(.gf-hat,.gf-acch){background:repeating-linear-gradient(45deg,CanvasText 0 2px,Canvas 2px 6px)} .gf .gf-cont{background:none}}
+  /* ===== C-11 header, help button and ribbon (design option 3, 24 Oct 2026) ===== */
+  .x-help{min-height:44px;}   /* the phone button was 38 px tall; every option keeps it at 44 px or more */
+  @media (max-width:560px){html.x-reading .bar-in{min-height:0!important;padding-top:4px!important;} html.x-reading .bar .logo,html.x-reading .bar .bar-r{padding-bottom:4px!important;}
+    html.x-reading .bar .logo-n{display:none!important;} html.x-reading .bar .logo svg{width:34px!important;height:34px!important;}}
+  .x-help .hs{display:none;} html.x-reading .x-help .hf{display:none;} html.x-reading .x-help .hs{display:inline;}
+  html.x-reading .x-help{padding:0 17px 0 14px!important;}
+  .rb .spk{opacity:clamp(0,calc((var(--p,1) - var(--f,.9))*25),1);}
+  .rb .spk path{fill:#fff;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;transform-box:fill-box;transform-origin:center;animation:rbTw 3.2s ease-in-out infinite;animation-delay:var(--d,0s);}
+  .rb .spk .h{fill:var(--rb-2);opacity:.55;filter:blur(1.5px);} .rb .spk.b .h{fill:var(--rb-1);}
+  html.dark .rb .spk .h{opacity:.6;}
+  @keyframes rbTw{0%,100%{transform:scale(.72);opacity:.75;}50%{transform:scale(1.12);opacity:1;}}
+  html.rm .rb .spk path,html.rb-still .rb .spk path{animation:none;} @media (prefers-reduced-motion:reduce){.rb .spk path{animation:none;}}
+  /* ===== B-03 Print button (design option 1, 24 Oct 2026) ===== */
+  .pr-btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px 0 14px;border-radius:999px;cursor:pointer;
+    font:700 15px/1 var(--x-fb);color:var(--x-brand);background:var(--x-surface);border:1.5px solid var(--x-line);}
+  .pr-btn svg{width:20px;height:20px;flex:none;} .pr-btn:hover{border-color:var(--x-brand);background:var(--x-soft);}
+  .pr-btn:focus-visible{outline:3px solid var(--x-focus);outline-offset:2px;}
+  html.hc .pr-btn{color:var(--ink);background:var(--bg);border:2px solid var(--ink);}
+  @media print{.pr-btn,.pr-tools{display:none!important;}}
+  .pr-tools{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0;}
+  @media (max-width:560px){.pr-tools .pr-btn{padding:0 14px 0 11px;font-size:14.5px;gap:7px;}}
+  /* ===== B-14 "Updated" notes + What's changed page (design option 1, 24 Oct 2026); both come from content/changes.json ===== */
+  .chg-day h2{font-size:19px;}
+  .chg-list,.block .chg-list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px;}
+  .chg-list li{margin:0;background:var(--x-surface);border:1px solid var(--x-line);border-radius:14px;padding:14px 18px;}
+  .chg-list p{margin:0;font-size:16px;line-height:1.55;color:var(--x-ink);}
+  .chg-list .chg-pg{margin:0 0 4px;font:700 16.5px/1.4 var(--x-fh);} .chg-list .chg-pg a{color:var(--x-brand);}
+  .foot-copy{margin-top:10px;} .foot-copy a{display:inline-block;min-height:24px;padding:4px 0;color:inherit;text-decoration:underline;text-underline-offset:3px;}
+  .upd a{font-weight:700;}
+  .upd-b{display:flex;gap:12px;align-items:flex-start;margin:18px 0 0;padding:12px 16px;border-radius:14px;background:var(--x-surface);border:1px solid var(--x-line);border-left:5px solid var(--green);}
+  .upd-b .upd-tag,.er-upd{flex:none;font:800 12px/1 var(--x-fb);letter-spacing:.06em;text-transform:uppercase;color:var(--green);background:var(--green-soft);border-radius:999px;padding:6px 10px;margin-top:1px;}
+  .er-upd{display:inline-block;margin:14px 0 0;font-size:15px;}
+  .upd-b p{margin:0;font-size:15.5px;line-height:1.5;color:var(--x-ink);}
+  html.dark .upd-b{border-left-color:#7FCFA0;} html.dark .upd-b .upd-tag,html.dark .er-upd{color:#9FE0B8;background:#173326;}
+  @media (max-width:560px){.upd-b{flex-direction:column;gap:8px;}}
+  /* /clinicians and other download links: file type and size, worked out by build.py from the files themselves */
+  .dl-meta{white-space:nowrap;}
+  /* Easy Read prints at 14 pt body text (Scope Easy Read guideline; 24 Oct 2026) */
+  @media print{
+    #v-easy,#v-easy-guide{font-size:14pt;}
+    :is(#v-easy,#v-easy-guide) :is(p,li,dt,dd,td,th,label,figcaption,.lede,.stamp,.note,.d,.t,.upd-tag),
+    .er-tx p,.er-tx li,.er-words dd,.er-words dt{font-size:14pt!important;line-height:1.5;}
+  }
 </style>
 <a class="skip" href="#main">Skip to content</a>
 <header>
 <div class="bar">
   <div class="wrap bar-in">
-    <a class="logo" href="#/" data-link aria-label="GAMSA home">
+    <a class="logo" href="#/" data-link>
       <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect class="bf" x="1.5" y="1.5" width="61" height="61" rx="14" fill="#0B5D7A"/><rect x="8" y="24.5" width="48" height="15" rx="7.5" fill="#FFFFFF"/><rect class="bf" x="21.3" y="5.8" width="21.4" height="52.4" rx="10.7" fill="#0B5D7A"/><g class="pill"><path d="M23.5 32V16.5a8.5 8.5 0 0 1 17 0V32z" fill="#7FD8FB"/><path d="M23.5 32h17V47.5a8.5 8.5 0 0 1 -17 0z" fill="#F7B6C3"/><rect x="23.5" y="31" width="17" height="2" fill="#FFFFFF"/></g></svg>
-      <span class="logo-n"><span class="logo-t">GAMSA</span><small class="logo-s"><span class="ls-full">Gender-Affirming Medicines South Australia</span><span class="ls-short">Gender-Affirming Medicines SA</span></small></span>
+      <span class="logo-n"><span class="logo-t">GAMSA</span><small class="logo-s"><span class="ls-full">Gender-Affirming Medicines South Australia</span><span class="ls-short">Gender-Affirming Medicines SA</span></small></span><span class="sr-only">, home page</span>
     </a>
     <nav class="main" id="nav" aria-label="Main">
       
@@ -1655,7 +1697,7 @@
     <a class="backlink" href="#/supply">&larr; Back to supply &amp; shortages</a>
     <div class="page-head">
       <h1 tabindex="-1">Patient sightings</h1>
-      <p class="lede">What people have reported seeing on pharmacy shelves, newest first and grouped by medicine. These are reports from the public, not verified stock levels &mdash; always ring the pharmacy before travelling.</p>
+      <p class="lede">What people have reported seeing on pharmacy shelves, newest first and grouped by medicine. These are reports from the public, not verified stock levels &mdash; always ring the pharmacy before travelling. To have a report removed, use the <a href="#/feedback" data-link>feedback page</a> (preferred) or email gamsaenquiries@gmail.com.</p>
     </div>
     <div class="controls">
       <label class="sr-only" for="sq">Search sightings</label>
@@ -1664,7 +1706,7 @@
     <p class="muted small" role="status" id="scount" style="margin:0 0 10px;"></p>
     <div id="sgroups"></div>
     <p class="muted small" role="status" aria-live="polite" id="sempty" style="display:none;">No sightings match that search.</p>
-    <p class="quick" style="margin-top:22px;"><a href="#/supply">Share a sighting &rarr;</a></p>
+    <p class="quick" style="margin-top:22px;"><a href="#/supply#sup-seen">Share a sighting &rarr;</a></p>
   </div>
 
   <!-- ONE MEDICINE -->
@@ -1687,11 +1729,11 @@
           <p class="x-ctas"><a href="#/medicines" data-link>Browse medicines A&ndash;Z &rarr;</a><a href="#/supply" data-link>Check supply today</a></p>
         </div>
       </div>
-      <div class="x-hero-a" id="heroArt"><svg viewBox="0 0 400 400" aria-hidden="true" focusable="false" class="lg hg hgS hgvf"><defs><linearGradient id="hvfsg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><g class="hg-sol" style="--d:0s"><path class="hg-soft hg-card" d="M64 314V224A136 136 0 0 1 336 224V314Z"/></g><g class="hg-o" style="--d:0s;--sw:2.4" transform="translate(0 0)"><path class="hg-ln" pathLength="1" d="M34 314H374"/></g><g class="hg-o" style="--d:0.1s;--sw:2.86" transform="translate(50 314) scale(0.84)"><path class="hg-ln hg-bf" pathLength="1" d="M12 -190H56A6 6 0 0 1 62 -184V-166A6 6 0 0 1 56 -160H12A6 6 0 0 1 6 -166V-184A6 6 0 0 1 12 -190Z"/><path class="hg-ln" pathLength="1" d="M21 -183V-167M34 -183V-167M47 -183V-167"/><path class="hg-ln hg-bf" pathLength="1" d="M16 -160H52A2 2 0 0 1 54 -158V-150A2 2 0 0 1 52 -148H16A2 2 0 0 1 14 -150V-158A2 2 0 0 1 16 -160Z"/><path class="hg-ln hg-bf" pathLength="1" d="M14 -148H54C62 -148 68 -142 68 -134V-12C68 -5.14 62.86 0 56 0H12C5.14 0 0 -5.14 0 -12V-134C0 -142 6 -148 14 -148Z"/><path class="hg-ln" pathLength="1" d="M6 -114Q34 -107 62 -114"/><path class="hg-ln" pathLength="1" d="M17 -96H51A5 5 0 0 1 56 -91V-43A5 5 0 0 1 51 -38H17A5 5 0 0 1 12 -43V-91A5 5 0 0 1 17 -96Z"/><path class="hg-ln" pathLength="1" d="M20 -78H48M20 -66H40"/></g><g class="hg-o" style="--d:0.22s;--sw:2.73" transform="translate(293 314) scale(0.88)"><path class="hg-ln hg-bf" pathLength="1" d="M20 -142H66A20 20 0 0 1 86 -122V-20A20 20 0 0 1 66 0H20A20 20 0 0 1 0 -20V-122A20 20 0 0 1 20 -142Z"/><path class="hg-ln hg-bf" pathLength="1" d="M26 -158H60A4 4 0 0 1 64 -154V-146A4 4 0 0 1 60 -142H26A4 4 0 0 1 22 -146V-154A4 4 0 0 1 26 -158Z"/><path class="hg-ln" pathLength="1" d="M43 -178V-158"/><path class="hg-ln hg-bf" pathLength="1" d="M30 -192H64A6 6 0 0 1 70 -186V-184A6 6 0 0 1 64 -178H30A6 6 0 0 1 24 -184V-186A6 6 0 0 1 30 -192Z"/><path class="hg-ln" pathLength="1" d="M24.8 -189H2A4 4 0 0 0 2 -181H24.8"/><path class="hg-ln" pathLength="1" d="M43 -92C43 -92 29 -76 29 -66A14 14 0 0 0 57 -66C57 -76 43 -92 43 -92Z"/></g><g class="hg-sol" style="--d:0.85s"><path class="hg-wf" d="M145.65 210.24H254.35A24.71 24.71 0 0 1 279.06 234.94A24.71 24.71 0 0 1 254.35 259.65H145.65A24.71 24.71 0 0 1 120.94 234.94A24.71 24.71 0 0 1 145.65 210.24Z"/></g><g class="hg-o" style="--d:0.3s;--sw:2.4" transform="translate(0 0)"><path class="hg-ln" pathLength="1" d="M145.65 210.24H254.35A24.71 24.71 0 0 1 279.06 234.94A24.71 24.71 0 0 1 254.35 259.65H145.65A24.71 24.71 0 0 1 120.94 234.94A24.71 24.71 0 0 1 145.65 210.24Z"/></g><clipPath id="hvfgc"><rect width="400" height="312.8"/></clipPath><g class="hg-cap" style="--cd:0.55s"><rect class="hg-gapt" clip-path="url(#hvfgc)" x="172" y="155.88" width="56" height="158.12" rx="28" stroke-width="14.49"/><g class=""><clipPath id="hvfc"><rect x="172" y="155.88" width="56" height="158.12" rx="28"/></clipPath><g clip-path="url(#hvfc)"><rect x="172" y="155.88" width="56" height="79.06" fill="#7FD8FB"/><rect x="172" y="234.94" width="56" height="79.06" fill="#F7B6C3"/><rect x="172" y="231.65" width="56" height="6.59" fill="#fff"/><g class="lg-shine" transform="rotate(20 200 200)"><rect x="-20" y="-40" width="56" height="480" fill="url(#hvfsg)"/></g></g><rect class="lg-hc" x="172" y="155.88" width="56" height="158.12" rx="28" fill="none"/></g><rect class="hg-out" x="172" y="155.88" width="56" height="158.12" rx="28"/></g><g class="hg-sol" style="--d:0.4s" clip-path="url(#hvfgc)"><path class="hg-gapt" transform="translate(254 288.15) rotate(10 0 0) scale(0.68)" stroke-width="10.59" d="M-19 -35H19A16 16 0 0 1 35 -19V19A16 16 0 0 1 19 35H-19A16 16 0 0 1 -35 19V-19A16 16 0 0 1 -19 -35Z"/></g><g class="hg-o" style="--d:0.4s;--sw:3.53" transform="translate(254 288.15) rotate(10 0 0) scale(0.68)"><path class="hg-ln hg-bf" pathLength="1" d="M-19 -35H19A16 16 0 0 1 35 -19V19A16 16 0 0 1 19 35H-19A16 16 0 0 1 -35 19V-19A16 16 0 0 1 -19 -35Z"/><path class="hg-dash" pathLength="189" d="M-17 -26H17A9 9 0 0 1 26 -17V17A9 9 0 0 1 17 26H-17A9 9 0 0 1 -26 17V-17A9 9 0 0 1 -17 -26Z"/><path class="hg-ln" pathLength="1" d="M0 -7A7 7 0 1 1 0 7A7 7 0 1 1 0 -7Z"/></g></svg></div>
+      <div class="x-hero-a" id="heroArt"><svg viewBox="0 0 400 400" aria-hidden="true" focusable="false" class="lg hg hgS hgvf"><defs><linearGradient id="hvfsg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><g class="hg-sol" style="--d:0s"><path class="hg-soft hg-card" d="M64 314V224A136 136 0 0 1 336 224V314Z"/></g><g class="hg-o" style="--d:0s;--sw:2.4" transform="translate(0 0)"><path class="hg-ln" pathLength="1" d="M34 314H374"/></g><g class="hg-o" style="--d:0.1s;--sw:2.86" transform="translate(50 314) scale(0.84)"><path class="hg-ln hg-bf" pathLength="1" d="M12 -190H56A6 6 0 0 1 62 -184V-166A6 6 0 0 1 56 -160H12A6 6 0 0 1 6 -166V-184A6 6 0 0 1 12 -190Z"/><path class="hg-ln" pathLength="1" d="M21 -183V-167M34 -183V-167M47 -183V-167"/><path class="hg-ln hg-bf" pathLength="1" d="M16 -160H52A2 2 0 0 1 54 -158V-150A2 2 0 0 1 52 -148H16A2 2 0 0 1 14 -150V-158A2 2 0 0 1 16 -160Z"/><path class="hg-ln hg-bf" pathLength="1" d="M14 -148H54C62 -148 68 -142 68 -134V-12C68 -5.14 62.86 0 56 0H12C5.14 0 0 -5.14 0 -12V-134C0 -142 6 -148 14 -148Z"/><path class="hg-ln" pathLength="1" d="M6 -114Q34 -107 62 -114"/><path class="hg-ln" pathLength="1" d="M17 -96H51A5 5 0 0 1 56 -91V-43A5 5 0 0 1 51 -38H17A5 5 0 0 1 12 -43V-91A5 5 0 0 1 17 -96Z"/><path class="hg-ln" pathLength="1" d="M20 -78H48M20 -66H40"/></g><g class="hg-o" style="--d:0.22s;--sw:2.73" transform="translate(293 314) scale(0.88)"><path class="hg-ln hg-bf" pathLength="1" d="M20 -142H66A20 20 0 0 1 86 -122V-20A20 20 0 0 1 66 0H20A20 20 0 0 1 0 -20V-122A20 20 0 0 1 20 -142Z"/><path class="hg-ln hg-bf" pathLength="1" d="M26 -158H60A4 4 0 0 1 64 -154V-146A4 4 0 0 1 60 -142H26A4 4 0 0 1 22 -146V-154A4 4 0 0 1 26 -158Z"/><path class="hg-ln" pathLength="1" d="M43 -178V-158"/><path class="hg-ln hg-bf hg-ph" pathLength="1" d="M30 -192H64A6 6 0 0 1 70 -186V-184A6 6 0 0 1 64 -178H30A6 6 0 0 1 24 -184V-186A6 6 0 0 1 30 -192Z"/><path class="hg-ln hg-ph hg-pn" pathLength="1" d="M24.8 -189H2A4 4 0 0 0 2 -181H24.8"/><path class="hg-ln" pathLength="1" d="M43 -92C43 -92 29 -76 29 -66A14 14 0 0 0 57 -66C57 -76 43 -92 43 -92Z"/></g><g class="hg-sol" style="--d:0.85s"><path class="hg-wf" d="M145.65 210.24H254.35A24.71 24.71 0 0 1 279.06 234.94A24.71 24.71 0 0 1 254.35 259.65H145.65A24.71 24.71 0 0 1 120.94 234.94A24.71 24.71 0 0 1 145.65 210.24Z"/></g><g class="hg-o" style="--d:0.3s;--sw:2.4" transform="translate(0 0)"><path class="hg-ln" pathLength="1" d="M145.65 210.24H254.35A24.71 24.71 0 0 1 279.06 234.94A24.71 24.71 0 0 1 254.35 259.65H145.65A24.71 24.71 0 0 1 120.94 234.94A24.71 24.71 0 0 1 145.65 210.24Z"/></g><clipPath id="hvfgc"><rect width="400" height="312.8"/></clipPath><g class="hg-cap" style="--cd:0.55s"><rect class="hg-gapt" clip-path="url(#hvfgc)" x="172" y="155.88" width="56" height="158.12" rx="28" stroke-width="14.49"/><g class=""><clipPath id="hvfc"><rect x="172" y="155.88" width="56" height="158.12" rx="28"/></clipPath><g clip-path="url(#hvfc)"><rect x="172" y="155.88" width="56" height="79.06" fill="#7FD8FB"/><rect x="172" y="234.94" width="56" height="79.06" fill="#F7B6C3"/><rect x="172" y="231.65" width="56" height="6.59" fill="#fff"/><g class="lg-shine" transform="rotate(20 200 200)"><rect x="-20" y="-40" width="56" height="480" fill="url(#hvfsg)"/></g></g><rect class="lg-hc" x="172" y="155.88" width="56" height="158.12" rx="28" fill="none"/></g><rect class="hg-out" x="172" y="155.88" width="56" height="158.12" rx="28"/></g><g class="hg-sol" style="--d:0.4s" clip-path="url(#hvfgc)"><path class="hg-gapt" transform="translate(254 288.15) rotate(10 0 0) scale(0.68)" stroke-width="10.59" d="M-19 -35H19A16 16 0 0 1 35 -19V19A16 16 0 0 1 19 35H-19A16 16 0 0 1 -35 19V-19A16 16 0 0 1 -19 -35Z"/></g><g class="hg-o" style="--d:0.4s;--sw:3.53" transform="translate(254 288.15) rotate(10 0 0) scale(0.68)"><path class="hg-ln hg-bf" pathLength="1" d="M-19 -35H19A16 16 0 0 1 35 -19V19A16 16 0 0 1 19 35H-19A16 16 0 0 1 -35 19V-19A16 16 0 0 1 -19 -35Z"/><path class="hg-dash" pathLength="189" d="M-17 -26H17A9 9 0 0 1 26 -17V17A9 9 0 0 1 17 26H-17A9 9 0 0 1 -26 17V-17A9 9 0 0 1 -17 -26Z"/><path class="hg-ln" pathLength="1" d="M0 -7A7 7 0 1 1 0 7A7 7 0 1 1 0 -7Z"/></g><g class="hg-o" style="--d:0.5s;--sw:2.4" transform="translate(14 314) rotate(-7)"><path class="hg-ln hg-bf" pathLength="1" d="M4 -84H30A4 4 0 0 1 34 -80V-4A4 4 0 0 1 30 0H4A4 4 0 0 1 0 -4V-80A4 4 0 0 1 4 -84Z"/><path class="hg-ln hg-acc" pathLength="1" d="M17 -74A6 6 0 1 1 17 -62A6 6 0 1 1 17 -74ZM17 -50A6 6 0 1 1 17 -38A6 6 0 1 1 17 -50ZM17 -26A6 6 0 1 1 17 -14A6 6 0 1 1 17 -26Z"/></g><g class="hg-o" style="--d:0.62s;--sw:2.4" transform="translate(70 300)"><path class="hg-ln hg-bf" pathLength="1" d="M3 0H89A3 3 0 0 1 92 3V11A3 3 0 0 1 89 14H3A3 3 0 0 1 0 11V3A3 3 0 0 1 3 0Z"/><path class="hg-ln" pathLength="1" d="M0 -4V18M-22 7H0M-26 -1V15M92 4H100V10H92M100 7H130M20 0V5M36 0V5M52 0V5M68 0V5"/><path class="hg-soft hg-nos" d="M46 2H90V12H46Z" style="opacity:.9"/></g></svg></div>
     </section>
     <div class="x-live"><a class="live-line" id="homeLive" href="#/supply" data-link></a></div>
     <section class="x-sec" aria-labelledby="hNeed"><h2 class="x-h2" id="hNeed">What do you need today?</h2><div class="x-tasks"><a class="x-task" href="#/supply" data-link><span class="x-ti"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 8l8-4 8 4v8l-8 4-8-4zM4 8l8 4 8-4M12 12v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="x-tt"><b>I need my medicine today</b><span>See what is in short supply and what pharmacists report in stock</span></span><span class="x-ta"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="x-task" href="#/costs" data-link><span class="x-ti"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM14.8 9.2c-.5-.9-1.6-1.4-2.8-1.4-1.6 0-2.8.8-2.8 2 0 2.9 5.8 1.5 5.8 4.4 0 1.2-1.3 2-2.9 2-1.3 0-2.4-.6-2.9-1.5M12 6.3v1.5m0 8.4v1.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="x-tt"><b>What will it cost?</b><span>PBS prices, the Safety Net, Closing the Gap and 60-day scripts</span></span><span class="x-ta"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="x-task" href="#/using" data-link><span class="x-ti"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 12V6.5a1.5 1.5 0 0 1 3 0V11m0-.5V5a1.5 1.5 0 0 1 3 0v6m0-4.5a1.5 1.5 0 0 1 3 0V12m0-3a1.5 1.5 0 0 1 3 0v5.5A6.5 6.5 0 0 1 12.5 21h-.9a6 6 0 0 1-4.6-2.2L3.6 14.7a1.6 1.6 0 0 1 2.4-2.1L7 13.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="x-tt"><b>How do I use it?</b><span>Patches, gels, injections and tablets, step by step</span></span><span class="x-ta"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="x-task" href="#/allies" data-link><span class="x-ti"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20s-7-4.3-7-9.6A4 4 0 0 1 12 8a4 4 0 0 1 7 2.4C19 15.7 12 20 12 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="x-tt"><b>I am helping someone</b><span>What to know and what to do at the pharmacy</span></span><span class="x-ta"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></section>
-    <section class="x-sec" aria-labelledby="hPath"><h2 class="x-h2" id="hPath">Choose your path</h2><div class="x-paths"><article class="x-path c-trans"><span class="x-pi"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 20a7 7 0 0 1 14 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><h3><a href="#/trans" data-link>Trans and gender diverse people</a></h3><p>Your medicines in plain language.</p><ul><li><a href="#/supply">Supply today</a></li><li><a href="#/medicines">Medicines A&ndash;Z</a></li><li><a href="#/costs">Costs and the PBS</a></li><li><a href="#/doses">Doses</a></li><li><a href="#/using">How to use</a></li><li><a href="#/pharmacy">Pharmacy guide</a></li><li><a href="#/easy">Easy Read</a></li><li><a href="#/sightings">Patient sightings</a></li></ul><a class="x-pmore" href="#/trans" data-link>Overview<span class="sr-only">: Trans and gender diverse people</span> <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></article><article class="x-path c-clin"><span class="x-pi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v6a6 6 0 0 0 12 0V3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 15v2a4 4 0 0 0 8 0v-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="13" r="2" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><h3><a href="#/clinicians" data-link>Clinicians and pharmacists</a></h3><p>Tools behind the patient pages.</p><ul><li><a href="#/clinician-guide">Clinician guide</a></li><li><a href="#/pharmacy-reports">Stock register</a></li><li><a href="#/med/testosterone-undecanoate#sec-med-9">Injection training package</a></li><li><a href="#/clinician-guide#sec-clinician-guide-3">Monitoring schedule</a></li><li><a href="/clinicians/pbs-authority-wording-card.pdf" target="_blank" rel="noopener">PBS Authority wording card (PDF, 1 page)</a></li><li><a href="#/alerts">Shortage alerts</a></li></ul><a class="x-pmore" href="#/clinicians" data-link>Overview<span class="sr-only">: Clinicians and pharmacists</span> <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></article><article class="x-path c-allies"><span class="x-pi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.5A3.5 3.5 0 0 1 12 8a3.5 3.5 0 0 1 7 2.5C19 15.6 12 20 12 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><h3><a href="#/allies" data-link>Family, friends and allies</a></h3><p>How to help without taking over.</p><ul><li><a href="#/ally-guide">Ally guide</a></li><li><a href="#/easy#er-allies">Easy Read for helpers</a></li><li><a href="/allies/pharmacy-visit-checklist.pdf" target="_blank" rel="noopener">Pharmacy visit checklist (PDF, 1 page)</a></li><li><a href="#/supply">Supply today</a></li><li><a href="#/costs">Costs and the PBS</a></li><li><a href="#/resources">Resources</a></li></ul><a class="x-pmore" href="#/allies" data-link>Overview<span class="sr-only">: Family, friends and allies</span> <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></article><article class="x-path c-res"><span class="x-pi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H4zM20 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><h3><a href="#/resources" data-link>Resources</a></h3><p>Australian bodies, guidelines and support.</p><ul><li><a href="#/resources#sec-resources-0">Supply and medicines</a></li><li><a href="#/resources#sec-resources-1">Costs and the PBS</a></li><li><a href="#/resources#sec-resources-2">Care and support in SA</a></li><li><a href="#/resources#sec-resources-3">National information</a></li><li><a href="#/search">Search</a></li><li><a href="#/feedback">Feedback</a></li></ul><a class="x-pmore" href="#/resources" data-link>Overview<span class="sr-only">: Resources</span> <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></article></div></section>
+    <section class="x-sec" aria-labelledby="hPath"><h2 class="x-h2" id="hPath">Guides</h2><div class="x-paths"><article class="x-path c-trans"><span class="x-pi"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 20a7 7 0 0 1 14 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><h3><a href="#/trans" data-link>Trans and gender diverse people</a></h3><p>Your medicines in plain language.</p><ul><li><a href="#/supply">Supply today</a></li><li><a href="#/medicines">Medicines A&ndash;Z</a></li><li><a href="#/costs">Costs and the PBS</a></li><li><a href="#/doses">Medicines guide</a></li><li><a href="#/monitoring">Monitoring</a></li><li><a href="#/add-on-therapies">Add-on therapies</a></li><li><a href="#/using">How to use</a></li><li><a href="#/pharmacy">Pharmacy guide</a></li><li><a href="#/easy">Easy Read</a></li><li><a href="#/sightings">Patient sightings</a></li></ul><a class="x-pmore" href="#/trans" data-link>Overview<span class="sr-only">: Trans and gender diverse people</span> <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></article><article class="x-path c-clin"><span class="x-pi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v6a6 6 0 0 0 12 0V3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 15v2a4 4 0 0 0 8 0v-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="13" r="2" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><h3><a href="#/clinicians" data-link>Clinicians and pharmacists</a></h3><p>Tools behind the patient pages.</p><ul><li><a href="#/clinician-guide">Clinician guide</a></li><li><a href="#/pharmacy-reports">Stock register</a></li><li><a href="#/med/testosterone-undecanoate#sec-med-9">Injection training package</a></li><li><a href="#/clinician-guide#sec-clinician-guide-3">Monitoring schedule</a></li><li><a href="/clinicians/pbs-authority-wording-card.pdf" target="_blank" rel="noopener">PBS Authority wording card (PDF, 1 page)</a></li><li><a href="#/alerts">Shortage alerts</a></li></ul><a class="x-pmore" href="#/clinicians" data-link>Overview<span class="sr-only">: Clinicians and pharmacists</span> <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></article><article class="x-path c-allies"><span class="x-pi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.5A3.5 3.5 0 0 1 12 8a3.5 3.5 0 0 1 7 2.5C19 15.6 12 20 12 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><h3><a href="#/allies" data-link>Family, friends and allies</a></h3><p>How to help without taking over.</p><ul><li><a href="#/ally-guide">Ally guide</a></li><li><a href="#/easy#er-allies">Easy Read for helpers</a></li><li><a href="/allies/pharmacy-visit-checklist.pdf" target="_blank" rel="noopener">Pharmacy visit checklist (PDF, 1 page)</a></li><li><a href="#/supply">Supply today</a></li><li><a href="#/costs">Costs and the PBS</a></li><li><a href="#/resources">Resources</a></li></ul><a class="x-pmore" href="#/allies" data-link>Overview<span class="sr-only">: Family, friends and allies</span> <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></article><article class="x-path c-res"><span class="x-pi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H4zM20 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><h3><a href="#/resources" data-link>Resources</a></h3><p>Australian bodies, guidelines and support.</p><ul><li><a href="#/resources#sec-resources-0">Supply and medicines</a></li><li><a href="#/resources#sec-resources-1">Costs and the PBS</a></li><li><a href="#/resources#sec-resources-2">Care and support in SA</a></li><li><a href="#/resources#sec-resources-3">National information</a></li><li><a href="#/search">Search</a></li><li><a href="#/feedback">Feedback</a></li></ul><a class="x-pmore" href="#/resources" data-link>Overview<span class="sr-only">: Resources</span> <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></article></div></section>
     <section class="x-sec x-tsec" aria-label="Why you can trust this site"><ul class="x-trust"><li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Referenced</b>Sources cited on every guide</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.6 3.9a4.6 4.6 0 0 1 6.5 6.5l-6.7 6.7a4.6 4.6 0 0 1-6.5-6.5zM7.3 7.2l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Pharmacist-written</b>By a registered pharmacist in Adelaide</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Kept current</b>Supply checked daily from TGA records; PBS prices monthly</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l7 3v5c0 4.6-3 8.4-7 10-4-1.6-7-5.4-7-10V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Private</b>No cookies, no tracking, Quick exit</span></li></ul></section>
     <div class="callout">
       <h2 class="h3">Looking for a prescriber?</h2>
@@ -1716,6 +1758,7 @@
         <button class="chip" data-f="testosterone" aria-pressed="false" type="button">Testosterone</button>
         <button class="chip" data-f="anti-androgen" aria-pressed="false" type="button">Blockers (anti-androgens)</button>
         <button class="chip" data-f="gnrh-analogue" aria-pressed="false" type="button">Puberty blockers (GnRH analogues)</button>
+        <button class="chip" data-f="adjunct" aria-pressed="false" type="button">Used alongside</button>
       </div>
     </div>
 
@@ -1767,6 +1810,8 @@
 
   <!-- CONTENT PAGES -->
   <div class="view" id="v-doses"></div>
+  <div class="view" id="v-monitoring"></div>
+  <div class="view" id="v-add-on-therapies"></div>
   <div class="view" id="v-using"></div>
   <div class="view" id="v-pharmacy"></div>
   <div class="view" id="v-costs"></div>
@@ -1778,6 +1823,8 @@
   <div class="view" id="v-ally-guide"></div>
   <div class="view" id="v-resources"></div>
   <div class="view" id="v-alerts"></div>
+  <div class="view" id="v-changes"></div>
+  <div class="view" id="v-about"></div>
   <div class="view" id="v-privacy"></div>
   <div class="view" id="v-accessibility"></div>
   <div class="view" id="v-disclaimer"></div>
@@ -1796,7 +1843,7 @@
     <div id="prGroups"></div>
     <p class="muted small" role="status" aria-live="polite" id="prStatus" style="margin:0 0 18px;"></p>
     <h2>Post a report</h2>
-    <p class="muted">For pharmacists, and pharmacy staff posting on a pharmacist's behalf. Your name, registration number and work email (if you give one) are stored, and only the author can see them. Your registration number is never shown. The pharmacy name, suburb, medicine, stock position and note are public.</p>
+    <p class="muted">For pharmacists, and pharmacy staff posting on a pharmacist's behalf. Your name, registration number and work email (if you give one) are stored, and only the author can see them. Your registration number is never shown. The pharmacy name, suburb, medicine, stock position and note are public. To correct or remove a report, use the <a href="#/feedback" data-link>feedback page</a> (preferred) or email gamsaenquiries@gmail.com.</p>
     <form class="rep" id="prForm" novalidate>
       <div class="row">
         <div class="f"><label for="prAhpra">AHPRA registration number</label><input id="prAhpra" required autocomplete="off" placeholder="PHA0001234567" maxlength="13" pattern="PHA\d{10}" style="text-transform:uppercase"></div>
@@ -1818,8 +1865,10 @@
       </div>
       <div class="f"><label for="prNote">Note (optional)</label><input id="prNote" maxlength="200" autocomplete="off" placeholder="e.g. 3 boxes, holding one for a regular"></div>
       <div class="f"><label for="prEmail">Work email (optional &mdash; only used if there is a question about your registration)</label><input id="prEmail" type="email" maxlength="200" autocomplete="email"></div>
+      <div class="f"><label for="prKey">Report key (sent to you after your first approved report; leave empty the first time)</label><input id="prKey" maxlength="40" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="ABCDE-FGHJK-LMNPQ-RSTVW" style="text-transform:uppercase"></div>
       <div class="hp" aria-hidden="true"><label for="prSite">Leave this empty</label><input id="prSite" tabindex="-1" autocomplete="off"></div>
-      <p class="muted small" style="margin:0;">By posting you confirm you are a registered pharmacist, or are posting with one's permission, and that the report is accurate at the time of posting. Reports expire after 14 days.</p>
+      <p class="muted small" id="prRem" style="margin:0;" hidden>Your registration number, name, pharmacy, suburb and report key are remembered on this device for your next report; the report itself is not. <button type="button" class="prforget" id="prForget">Forget them</button></p>
+      <p class="muted small" style="margin:0;"><strong>Not for promoting your pharmacy: report stock facts only.</strong> By posting you confirm you are a registered pharmacist, or are posting with one's permission, and that the report is accurate at the time of posting. Reports expire after 14 days.</p>
       <div class="ts-slot"><div id="prTurnstile" class="ts-box"></div><p class="ts-msg" role="status" aria-live="polite"></p><p class="ts-size" aria-hidden="true">The spam check could not load, so this form cannot send. A content blocker or privacy setting may be stopping it. Allow challenges.cloudflare.com for gamsa.au, or try another browser.</p></div>
       <div><button class="btn" type="submit" id="prSend">Post report</button></div>
       <p class="muted small" role="status" aria-live="polite" id="prMsg" style="margin:0;"></p>
@@ -1828,7 +1877,7 @@
   <div class="view" id="v-feedback">
     <div class="page-head">
       <h1 tabindex="-1">Send feedback</h1>
-      <p class="lede">Spotted something wrong, out of date or missing? Tell us here. Every message is read, and corrections are made as quickly as possible.</p>
+      <p class="lede">Spotted something wrong, out of date or missing? Tell us here. Every message is read, and corrections are made as quickly as possible. The form is the preferred way to reach us; if you cannot use it, email gamsaenquiries@gmail.com.</p>
     </div>
     <form class="rep" id="fbForm" novalidate>
       <div class="f"><label for="fbTopic">What is it about?</label>
@@ -1861,7 +1910,9 @@
           <li><a href="#/medicines" data-link>Medicines A&ndash;Z</a></li>
           <li><a href="#/supply" data-link>Supply &amp; shortages</a></li>
           <li><a href="#/costs" data-link>Costs and the PBS</a></li>
-          <li><a href="#/doses" data-link>Doses guide</a></li>
+          <li><a href="#/doses" data-link>Medicines guide</a></li>
+          <li><a href="#/monitoring" data-link>Monitoring guide</a></li>
+          <li><a href="#/add-on-therapies" data-link>Add-on therapies</a></li>
           <li><a href="#/using" data-link>How-to-use guide</a></li>
           <li><a href="#/pharmacy" data-link>Pharmacy guide</a></li>
           <li><a href="#/easy" data-link>Easy Read guides</a></li>
@@ -1888,6 +1939,8 @@
       <div>
         <h2>About</h2>
         <ul role="list">
+          <li class="ft-about"><a href="#/about" data-link>About GAMSA</a></li>
+          <li><a href="#/changes" data-link>What’s changed</a></li>
           <li><a href="#/disclaimer" data-link>Disclaimer</a></li>
           <li><a href="#/privacy" data-link>Privacy</a></li>
           <li><a href="#/accessibility" data-link>Accessibility</a></li>
@@ -1907,11 +1960,12 @@
       <div class="foot-about">
         <p class="help-now"><strong>Need help now?</strong> Emergency <a href="tel:000">000</a> &middot; SA Mental Health Triage <a href="tel:131465">13 14 65</a> (24 hours) &middot; Lifeline <a href="tel:131114">13 11 14</a> &middot; QLife <a href="tel:1800184527">1800 184 527</a> (3pm to 9pm, every day) &middot; 13YARN <a href="tel:139276">13 92 76</a> (for Aboriginal and Torres Strait Islander people) &middot; <a href="https://www.accesshub.gov.au/about-the-nrs/how-to-make-an-emergency-call-using-the-nrs" target="_blank" rel="noopener">National Relay Service: call 000 by chat, SMS, voice relay or TTY</a></p>
         <p class="rev" id="rev"></p>
+        <p class="foot-copy"><a href="#/disclaimer#{{COPYRIGHT_SEC}}" data-link>© 2026 GAMSA</a></p>
       </div>
     </div>
   </div>
 </footer>
-<button class="x-help" id="xHelpBtn" type="button" aria-expanded="false" aria-controls="xHelp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.5s-7.5-4.6-7.5-10.4A4.3 4.3 0 0 1 12 7.4a4.3 4.3 0 0 1 7.5 2.7c0 5.8-7.5 10.4-7.5 10.4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Need help now?</span></button>
+<button class="x-help" id="xHelpBtn" type="button" aria-expanded="false" aria-controls="xHelp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.5s-7.5-4.6-7.5-10.4A4.3 4.3 0 0 1 12 7.4a4.3 4.3 0 0 1 7.5 2.7c0 5.8-7.5 10.4-7.5 10.4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="hf">Need help now?</span><span class="hs">Help</span></button>
 <div class="x-helpp" id="xHelp" role="dialog" aria-labelledby="xHelpH" hidden><div class="x-helpp-h"><h2 id="xHelpH">Need help now?</h2><button class="x-close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button></div><ul><li><a href="tel:000"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 3.5h3l1.5 4-2 1.3a10 10 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Emergency</b><small>000</small></span></a></li><li><a href="tel:131465"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 3.5h3l1.5 4-2 1.3a10 10 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>SA Mental Health Triage</b><small>13 14 65 (24 hours)</small></span></a></li><li><a href="tel:131114"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 3.5h3l1.5 4-2 1.3a10 10 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Lifeline</b><small>13 11 14</small></span></a></li><li><a href="tel:1800184527"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 3.5h3l1.5 4-2 1.3a10 10 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>QLife</b><small>1800 184 527 (3pm to 9pm, every day)</small></span></a></li><li><a href="tel:139276"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 3.5h3l1.5 4-2 1.3a10 10 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>13YARN</b><small>13 92 76 (Aboriginal and Torres Strait Islander crisis support, any time)</small></span></a></li><li><a href="https://www.accesshub.gov.au/about-the-nrs/how-to-make-an-emergency-call-using-the-nrs" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span><b>National Relay Service</b><small>Call 000 by chat, SMS, voice relay or TTY (106)<span class="sr-only"> (opens in a new tab)</span></small></span></a></li></ul></div>
 
 <button class="totop-fab" id="toTop" type="button" hidden>↑ Top</button>
@@ -1963,6 +2017,7 @@
   "use strict";
   var DATA = __MEDS__, CONTENT = __CONTENT__, MEDINFO = __MEDINFO__;
   var PREMIUMS = __PREMIUMS__;
+  var FILES = __FILES__;   /* build.py: type and size of each download in static/clinicians and static/allies, e.g. {"/clinicians/x.pdf":{"type":"PDF","size":"182 KB"}} */
   var BY_ID = {}, SUPPLY2MED = {}, RECENT = [], CURRENT_MED = "";
   MEDINFO.medicines.forEach(function(m){
     BY_ID[m.id]=m; (m.supplyIds||[]).forEach(function(sid){SUPPLY2MED[sid]=m.id;});
@@ -1972,11 +2027,20 @@
 
   function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){
     return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];});}
+  /* a download's type and size from FILES: "PDF, 182 KB" ("" if the file is not listed) */
+  function fileMeta(h){ var f=FILES[String(h||"").split("#")[0]]; return f ? f.type+", "+f.size : ""; }
+  /* link text (already escaped) with the file type and size: "Card (PDF, 1 page)" -> "Card (PDF, 1 page, 182 KB)", "Package" -> "Package (ZIP, 834 KB)" */
+  function fileLabel(t, h){
+    var f=FILES[String(h||"").split("#")[0]]; if(!f || t.indexOf(f.size)>-1) return t;
+    var m=/\s*\(([^()]*)\)\s*$/.exec(t);
+    if(m && m[1].toUpperCase().indexOf(f.type)===0) return t.slice(0,m.index)+' <span class="dl-meta">('+m[1]+', '+f.size+')</span>';
+    return t+' <span class="dl-meta">('+f.type+', '+f.size+')</span>';
+  }
   /* internal links in content: [text](#/route) — only same-site hash routes */
   function ilink(t){
     return String(t).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/`([^`<]+)`/g,'<code>$1</code>')
       .replace(/\[(?!\d[\d,\s]*\])([^\]]+)\]\((#\/[a-z0-9\/-]*(?:#[a-z0-9-]+)?)\)/g,'<a href="$2">$1</a>')
-      .replace(/\[(?!\d[\d,\s]*\])([^\]]+)\]\((\/(?:clinicians|allies)\/[a-z0-9-]+\.(?:pdf|zip))\)/g,'<a href="$2" class="dl" download>$1</a>')
+      .replace(/\[(?!\d[\d,\s]*\])([^\]]+)\]\((\/(?:clinicians|allies)\/[a-z0-9-]+\.(?:pdf|zip))\)/g,function(_,txt,href){ return '<a href="'+href+'" class="dl" download>'+fileLabel(txt,href)+'</a>'; })
       .replace(/\[(?!\d[\d,\s]*\])([^\]]+)\]\((https:\/\/[^\s)]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>')
       .replace(/\[(?!\d[\d,\s]*\])([^\]]+)\]\((\/medicines\/[a-z0-9-]+(?:#[a-z0-9-]+)?)\)/g, function(_,txt,href){
         return '<a href="'+(PATHMODE?href:"#"+href.replace(/^\/medicines\//,"/med/"))+'">'+txt+'</a>'; });
@@ -2076,7 +2140,7 @@
       (c.references.length?'<div class="refs"><h2>References</h2><ol>':'<div hidden><ol>')+
         c.references.map(function(r){
           var host=r.url?r.url.replace(/^https?:\/\/(www\.)?/,"").split("/")[0]:"";
-          if(r.url&&r.url.charAt(0)==="/") return '<li id="ref-'+v+'-'+r.n+'" tabindex="-1">'+esc(r.text)+' <a href="'+esc(r.url)+'" class="dl" download>Download: '+esc(fileName(r.url))+' (PDF)</a></li>';
+          if(r.url&&r.url.charAt(0)==="/") return '<li id="ref-'+v+'-'+r.n+'" tabindex="-1">'+esc(r.text)+' <a href="'+esc(r.url)+'" class="dl" download>'+fileLabel('Download: '+esc(fileName(r.url))+' (PDF)', r.url)+'</a></li>';
           return '<li id="ref-'+v+'-'+r.n+'" tabindex="-1">'+esc(r.text)+
             (r.url?' <a href="'+esc(r.url)+'" target="_blank" rel="noopener">View on '+esc(host)+
               '<span class="sr-only"> (opens in a new tab)</span></a>':'')+'</li>';
@@ -2158,7 +2222,7 @@
     D.guides.forEach(function(x){ if(x.id===id) g=x; });
     if(!g) return false;
     CURRENT_GUIDE=g.title;
-    var h=['<div class="er-cover"><p class="er-kick">'+esc(D.kicker)+'</p><h1>'+esc(g.title)+'</h1><p class="er-sub">'+esc(g.subtitle)+'</p>'+erActions()+'</div>',
+    var h=['<div class="er-cover"><p class="er-kick">'+esc(D.kicker)+'</p><h1>'+esc(g.title)+'</h1><p class="er-sub">'+esc(g.subtitle)+'</p>'+(g.updated?'<p class="er-upd">Updated '+niceDate(g.updated)+'</p>':'')+erActions()+'</div>',
       '<div class="er-help"><div class="er-ic">'+icon("help")+'</div><div><p>You can ask someone to help you read this guide.</p>'+
       '<p>You can press <b>Listen to this guide</b> to hear it read out.</p>'+
       '<p>If you need an interpreter, ring TIS National on <b>131 450</b>. It is free.</p></div></div>'];
@@ -2236,7 +2300,19 @@
       prWidget=null, prLoaded=false;
   var PR_LABEL={in_stock:["t-green","In stock"],low:["t-amber","Low stock"],order:["t-amber","Can order"],none:["t-red","None"]};
   function prSay(t,cls){ prMsg.textContent=t; prMsg.className="muted small "+(cls||""); }
+  /* A-14 (WCAG 3.3.7): the pharmacist's own details are kept for the next report, in this browser only (localStorage, not with
+     Discreet browsing on); the report itself (medicine, stock position, note) and the email never are. "Forget them" clears it. */
+  var PR_ME=["prAhpra","prName","prPharm","prLoc","prKey"];
+  function prMeGet(){ try{ return JSON.parse(localStorage.getItem("gamsa.prMe")||"null"); }catch(_){ return null; } }
+  function prMeShow(){ document.getElementById("prRem").hidden=!prMeGet(); }
+  function prMeLoad(){ var d=prMeGet(); if(d) PR_ME.forEach(function(id){ var el=document.getElementById(id); if(el && !el.value && typeof d[id]==="string") el.value=d[id]; }); prMeShow(); }
+  function prMeKeep(){ var d={}; PR_ME.forEach(function(id){ d[id]=document.getElementById(id).value.trim(); });
+    if(!DISCREET){ try{ localStorage.setItem("gamsa.prMe",JSON.stringify(d)); }catch(_){} }
+    return d; }
+  document.getElementById("prForget").addEventListener("click",function(){ try{ localStorage.removeItem("gamsa.prMe"); }catch(_){}
+    PR_ME.forEach(function(id){ document.getElementById(id).value=""; }); prMeShow(); prSay("Your details are no longer kept on this device."); document.getElementById("prAhpra").focus(); });
   function prOpen(){
+    prMeLoad();
     prLoad();
     if(!document.getElementById("prMedList").children.length)
       document.getElementById("prMedList").innerHTML=MEDINFO.medicines.map(function(m){ return '<option value="'+esc(m.name)+'">'; }).join("");
@@ -2314,13 +2390,15 @@
       ahpra:ahpra, name:document.getElementById("prName").value.trim(), pharmacy:document.getElementById("prPharm").value.trim(),
       suburb:document.getElementById("prLoc").value.trim(), medicine:document.getElementById("prMed").value.trim(),
       status:document.getElementById("prStat").value, note:document.getElementById("prNote").value.trim(),
-      email:document.getElementById("prEmail").value.trim(), website:document.getElementById("prSite").value, token:token})})
+      email:document.getElementById("prEmail").value.trim(), key:document.getElementById("prKey").value.trim(), website:document.getElementById("prSite").value, token:token})})
     .then(function(r){ return r.json().then(function(j){ return {ok:r.ok, j:j}; }); })
     .then(function(x){
       if(!x.ok) throw x.j;
-      prForm.reset();
-      prSay(x.j.published ? "Thank you \u2014 your report is live." :
-        "Thank you. Because this is the first report from your registration number, it will appear once the number has been checked against the AHPRA register, usually within a day.","ok");
+      var me=prMeKeep(); prForm.reset(); PR_ME.forEach(function(id){ document.getElementById(id).value=me[id]||""; }); prMeShow();
+      prSay((x.j.published ? "Thank you \u2014 your report is live." :
+        x.j.held==="key" ? "Thank you. Your report will appear once it has been checked, because the report key was missing or did not match. Check the key in the email sent after your first approved report." :
+        "Thank you. Because this is the first report from your registration number, it will appear once the number has been checked against the AHPRA register, usually within a day.") +
+        (x.j.noteRemoved ? " Your note was left off because it mentioned a price, an offer or contact details." : ""),"ok");
       if(x.j.published) prLoad();
     })
     .catch(function(j){ prSay((j&&j.error==="blocked")?"Posting from this registration number has been paused. Use the feedback page if you think that is a mistake.":"Sorry, that did not send. Please try again in a moment.","err"); })
@@ -2329,6 +2407,8 @@
 
   var LAZY = {
     "v-doses":    function(){ renderContent("v-doses", CONTENT.dosing); },
+    "v-monitoring": function(){ renderContent("v-monitoring", CONTENT.monitoring); },
+    "v-add-on-therapies": function(){ renderContent("v-add-on-therapies", CONTENT.addons); },
     "v-using":    function(){ renderContent("v-using", CONTENT.administration); },
     "v-pharmacy": function(){ renderContent("v-pharmacy", CONTENT.pharmacy); },
     "v-costs":    function(){ renderContent("v-costs", CONTENT.costs); },
@@ -2337,6 +2417,8 @@
     "v-ally-guide": function(){ renderContent("v-ally-guide", CONTENT.allies); },
     "v-trans":    function(){ renderHub("v-trans", HUBS.trans); },
     "v-alerts":   function(){ renderAlerts(); },
+    "v-changes":  function(){ renderChanges(); },
+    "v-about":    function(){ renderAbout(); },
     "v-privacy":  function(){ renderContent("v-privacy", CONTENT.privacy); },
     "v-accessibility": function(){ renderContent("v-accessibility", CONTENT.accessibility); },
     "v-disclaimer": function(){ renderContent("v-disclaimer", CONTENT.disclaimer); },
@@ -2350,7 +2432,9 @@
         {t:"Supply & shortages", h:"#/supply", d:"Which medicines are hard to get right now, what to do about it, and what pharmacists and patients report in stock.", live:"Updated daily"},
         {t:"Medicines A\u2013Z", h:"#/medicines", d:"One page per medicine: how it works, doses used here, side effects, monitoring, cost and current supply."},
         {t:"Costs and the PBS", h:"#/costs", d:"What you pay at the counter, the Safety Net, Closing the Gap, 60-day scripts, and what to do if cost is a barrier.", live:"Updated monthly"},
-        {t:"Doses and formulations", h:"#/doses", d:"The forms each hormone comes in, the dose ranges Australian prescribers work within, and getting blood tests timed right."},
+        {t:"Medicines, doses and formulations", h:"#/doses", d:"The forms each hormone comes in and the dose ranges Australian prescribers work within."},
+        {t:"Monitoring and related care", h:"#/monitoring", d:"Blood tests and reviews, getting the timing of a blood test right, fertility, sexual function, PrEP, and hormones around surgery."},
+        {t:"Add-on therapies", h:"#/add-on-therapies", d:"Medicines sometimes used for acne, scalp hair loss, periods that continue on testosterone, and vaginal dryness."},
         {t:"How to use your medicine", h:"#/using", d:"Patches, gels, injections, tablets and implants: how to use, store and dispose of them."},
         {t:"Working with your pharmacy", h:"#/pharmacy", d:"What to bring, what to say, what to do if you run out, and getting your name right on the label."},
         {t:"Easy Read guides", h:"#/easy", d:"Short guides in easy words with pictures. Each one prints or saves as a PDF."},
@@ -2388,15 +2472,19 @@
   }
   function renderStats(){
     var el=document.getElementById("homeLive"); if(!el) return;
-    var n=DATA.medicines.filter(function(m){ return m.status!=="in_supply" && m.status!=="unverified"; }).length;
-    el.innerHTML='<span class="dot"></span><span><b>'+n+' medicine'+(n===1?"":"s")+'</b> under a TGA shortage notice \u00b7 checked '+esc(DATA.generatedAt)+' \u2192</span>';
+    /* v19: count medicines, not rows (each brand and strength is its own supply row; isotretinoin alone has 8) */
+    var rows=DATA.medicines.filter(function(m){ return m.status!=="in_supply" && m.status!=="unverified"; }), seen={};
+    rows.forEach(function(m){ seen[SUPPLY2MED[m.id]||m.id]=1; });
+    var n=Object.keys(seen).length, p=rows.length;
+    el.innerHTML='<span class="dot"></span><span><b>'+n+' medicine'+(n===1?"":"s")+'</b>'+(p!==n?' ('+p+' product'+(p===1?"":"s")+')':'')+' under a TGA shortage notice \u00b7 checked '+esc(DATA.generatedAt)+' \u2192</span>';
   }
   function renderHub(id, h){
     document.getElementById(id).classList.add("hubv");
     document.getElementById(id).innerHTML =
       '<div class="page-head"><p class="kicker">'+esc(h.kicker)+'</p><h1 tabindex="-1">'+esc(h.title)+'</h1><p class="lede">'+esc(h.lede)+'</p></div>'+
       '<div class="tiles hub">'+h.items.map(function(i){
-        return '<a class="tile" href="'+i.h+'"'+(i.file?' target="_blank" rel="noopener"':'')+'><span class="t">'+esc(i.t)+(i.file?'<span class="sr-only"> (PDF, 1 page, opens in a new tab)</span>':'')+'</span><span class="d">'+esc(i.d)+'</span>'+(i.live?'<span class="live">'+esc(i.live)+'</span>':'')+'</a>';
+        var live=i.file&&FILES[i.h] ? i.live+", "+FILES[i.h].size : i.live;   /* "PDF, 1 page, 182 KB": the size comes from the file (build.py) */
+        return '<a class="tile" href="'+i.h+'"'+(i.file?' target="_blank" rel="noopener"':'')+'><span class="t">'+esc(i.t)+(i.file?'<span class="sr-only"> ('+esc(live)+', opens in a new tab)</span>':'')+'</span><span class="d">'+esc(i.d)+'</span>'+(live?'<span class="live">'+esc(live)+'</span>':'')+'</a>';
       }).join("")+'</div>';
   }
   function ensureRendered(id){ if(LAZY[id]){ LAZY[id](); delete LAZY[id]; } }
@@ -2494,7 +2582,7 @@
   function cl(v){return v<0?0:v>1?1:v;}
   function view(){return $("#main > .view.on");}
   function R(el){var r=el.getBoundingClientRect();return {x:r.left,y:r.top+scrollY,w:r.width,h:r.height,r:r.right,b:r.bottom+scrollY};}
-  var B=null,KQ=.5523,tmp=null,LINE=.85,K=.4,V=1100,TAU=.2,raf=0,last=0,lam=0,vel=0;   /* B3 refined: reading line 85 % (tip stays above the floating buttons), 1100 px/s, softer ease */
+  var B=null,KQ=.5523,tmp=null,LINE=.85,K=.15,V=1100,TAU=.2,raf=0,last=0,lam=0,vel=0;   /* B3 refined: reading line 85 % (tip stays above the floating buttons), 1100 px/s, softer ease */
   function tp(d){if(!tmp){var h=document.createElementNS(NS,"svg");h.setAttribute("aria-hidden","true");h.setAttribute("width","0");h.setAttribute("height","0");h.style.position="absolute";bd.appendChild(h);
     tmp=document.createElementNS(NS,"path");h.appendChild(tmp);}tmp.setAttribute("d",d);return tmp;}
   function plen(d){return tp(d).getTotalLength();}
@@ -2520,20 +2608,20 @@
     for(k=0;k<4;k++){var c=C[k],nb=null;C.forEach(function(o){if(Math.abs(o.y-c.y)<4&&o.x>c.r-1&&(!nb||o.x<nb.x))nb=o;});
       var t={k:k,c:c,m:!nb,xd:nb?(c.r+nb.x)/2:gx};if(nb&&Math.abs(c.y-top)<4)t.xd=Math.max(t.xd,tR+32+w/2);   /* keep 32 px clear of the heading text */
       t.xd=sn(t.xd);t.ye=Math.ceil(c.y+hw+.5-o)+o;t.yv=t.ye-ry;tg.push(t);rx=Math.max(rx,t.xd-c.r+14);   /* the landing ends behind the card: band top 0.5 px under its top edge */
-      if(nb&&t.xd>nb.x-hw-1){t.o=1;t.r=Math.max(8,Math.min(20,(t.xd-c.r+24)/2-2));t.yr=Math.floor(Math.min(c.y,nb.y)-hw-2-o)+o;t.yv=t.yr-t.r;t.xe=sn(c.r-24);}}   /* drop is over the next card (heading clearance): run left 2 px above the card tops, then turn down into the card */
+      }   /* v19.2: every card, the first included, lands with the same curl from the column gap (short heading "Guides": no heading clearance needed) */
     rx=Math.min(rx,90);
     var bus=tg.filter(function(t){return !t.m;}),yb=sn(T?(T.b+hr.y)/2:hr.y-30),xmax=Math.max.apply(null,bus.map(function(t){return t.xd;}).concat([0])),
       Rp=Math.max(10,Math.min(40,Math.min.apply(null,bus.map(function(t){return t.yv;}).concat([1e9]))-yb-4)),Rc=Math.max(12,Math.min(56,gx-xmax-Rp*1.6-8));
     tg.forEach(function(t){var c=t.c;t.xl=Math.max(c.x+40,Math.min(c.r-12,t.xd-rx));t.yf=t.m?t.yv:yb-Rc;t.px=t.xd+Rp*1.6;});
     var art=$("#heroArt svg",v),Ar=art&&art.getBoundingClientRect().width>0?R(art):null,sp,Ro;
-    if(Ar&&Ar.r<gx-w){var sx=Ar.x+Ar.w*.8,sy=sn(Ar.y+Ar.h*.5);Ro=Math.max(16,Math.min(70,gx-Ar.x-Ar.w*.95));sp=["M"+P2(sx,sy),Ln(gx-Ro,sy),rd(gx-Ro,sy,Ro)];}
+    if(Ar&&Ar.r<gx-w){var k5=Ar.w/400,sx=Ar.x+(293+.88*96)*k5,sy=Ar.y+(314-.88*185)*k5,dx=gx-sx,H=Math.max(40,Math.round(dx*1.7));sp=["M"+P2(sx-1,sy),Ln(sx,sy),"C"+P2(sx+dx*.62,sy)+" "+P2(gx,sy+H*.42)+" "+P2(gx,sy+H)];}
     else{var y0=sn(hero.y+8);Ro=Math.min(36,W+40-gx);sp=["M"+P2(W+40,y0),Ln(gx+Ro,y0),ld(gx+Ro,y0,Ro)];}
     /* each strand's whole route as segments, with a vertex wherever another strand leaves the run, so shared runs compare equal */
     function route(t){var s=sp.slice();function add(g){if(s[s.length-1]!==g)s.push(g);}
       tg.map(function(u){return u.yf;}).sort(function(a,b){return a-b;}).forEach(function(y){if(y<=t.yf)add(Ln(gx,y));});
       if(!t.m){s.push(dl(gx,t.yf,Rc,Rc));bus.map(function(u){return u.px;}).sort(function(a,b){return b-a;}).forEach(function(x){if(x>=t.px)add(Ln(x,yb));});
         s.push(ld2(t.px,yb,Rp*1.6,Rp));bus.filter(function(u){return u.xd===t.xd;}).map(function(u){return u.yv;}).sort(function(a,b){return a-b;}).forEach(function(y){if(y<=t.yv)add(Ln(t.xd,y));});}
-      if(t.o)s.push(dl(t.xd,t.yv,t.r,t.r),Ln(t.xe+t.r,t.yr),ld(t.xe+t.r,t.yr,t.r),Ln(t.xe,t.yr+t.r+6));else s.push(dl(t.xd,t.yv,t.xd-t.xl,ry),Ln(t.xl-6,t.ye));return s;}
+      s.push(dl(t.xd,t.yv,t.xd-t.xl,ry),Ln(t.xl-6,t.ye));return s;}
     tg.forEach(function(t){t.s=route(t);t.L=plen(t.s.join(" "));});
     var th=[];if(tk){var ln={},lx={};$$(".x-task",v).map(R).forEach(function(r){var y=Math.round(r.y);ln[y]=Math.min(ln[y]==null?1e9:ln[y],r.x);lx[y]=Math.max(lx[y]||0,r.x);});
       Object.keys(ln).forEach(function(y){var yy=+y-.75,x0=ln[y];x0=lx[y]>x0+20?lx[y]:x0+(gx-x0)*.4;   /* the thread stays in the right-hand column (one column: right 60 %) */
@@ -2554,9 +2642,11 @@
     var old=$(".rb-home");if(old)old.remove();B=null;
     var v=view();if(!v||v.id!=="v-home"||has("hc")||bd.classList.contains("dys")||bd.classList.contains("easy"))return;
     var g=homeGeo(v);if(!g)return;
-    var D=[],TH=[],ST=[],GS=[],gx=g.gx;
+    var D=[],TH=[],ST=[],GS=[],gx=g.gx,SPK=[],mi=-1;
+    function spk(di,x,y,R,f,c,d){var r=R*.26;return '<g class="spk '+c+'" data-i="'+di+'" style="--f:'+f+';--d:'+f2(d)+'s" transform="translate('+f2(x)+' '+f2(y)+')"><circle class="h" r="'+f2(R*.62)+'"/>'+
+      '<path d="M0 '+f2(-R)+'C'+f2(r)+' '+f2(-r)+' '+f2(r)+' '+f2(-r)+' '+f2(R)+' 0C'+f2(r)+' '+f2(r)+' '+f2(r)+' '+f2(r)+' 0 '+f2(R)+'C'+f2(-r)+' '+f2(r)+' '+f2(-r)+' '+f2(r)+' '+f2(-R)+' 0C'+f2(-r)+' '+f2(-r)+' '+f2(-r)+' '+f2(-r)+' 0 '+f2(-R)+'Z"/></g>';}
     function add(s,n){var q={a:pts(s.join(" "),6),s0:n?plen(s.slice(0,n).join(" ")):0,els:[],p:-9};ymap(q,q.a[0][1]);GS.push(q);return GS.length-1;}
-    g.th.forEach(function(h,i){var n=g.sp.length+1;
+    [].forEach(function(h,i){var n=g.sp.length+1;
       D.push('<linearGradient id="rbt'+i+'" gradientUnits="userSpaceOnUse" x1="'+f2(gx)+'" y1="0" x2="'+f2(h.x0)+'" y2="0"><stop offset="0" class="t1"/><stop offset=".55" class="t1" stop-opacity=".55"/><stop offset="1" class="t1" stop-opacity="0"/></linearGradient>');
       TH.push('<path class="t" data-i="'+add(h.s,n)+'" pathLength="1" stroke="url(#rbt'+i+')" d="'+sub(h.s,n)+'"/>');});
     g.tg.slice().sort(function(p,q){return (p===g.m)-(q===g.m)||g.dep(q)-g.dep(p)||p.L-q.L;}).forEach(function(t){   /* children under the strand they leave, trunk last (on top) */
@@ -2564,13 +2654,15 @@
       if(t.par){var a=pt(t.s[t.n-1]),b=pt(t.par.s[t.n]),q=g.w/2+2,W=g.W,H=f2(g.H);   /* splits are always on a straight run of the parent: clip that run's band + 1 px out of the branch's edge */
         D.push('<clipPath id="rbm'+t.k+'" clipPathUnits="userSpaceOnUse">'+(Math.abs(a[0]-b[0])<.01?'<rect width="'+f2(a[0]-q)+'" height="'+H+'"/><rect x="'+f2(a[0]+q)+'" width="'+f2(W-a[0]-q)+'" height="'+H+'"/>':'<rect width="'+W+'" height="'+f2(a[1]-q)+'"/><rect y="'+f2(a[1]+q)+'" width="'+W+'" height="'+f2(H-a[1]-q)+'"/>')+"</clipPath>");}
       ["e","a","b","c"].forEach(function(l,j){D.push('<linearGradient id="rbk'+t.k+l+'" gradientUnits="userSpaceOnUse" x1="0" y1="'+f2(t.yv)+'" x2="0" y2="'+f2(t.c.y)+'"><stop offset="0" style="stop-color:var(--rb-'+(j||"edge2")+')"/><stop offset="1" style="stop-color:var(--x-c'+(t.k+1)+')"/></linearGradient>');
-        ST.push('<path class="'+l+'" style="stroke:url(#rbk'+t.k+l+')"'+(!j&&t.par?' clip-path="url(#rbm'+t.k+')"':"")+o);});});   /* a branch's edge stays 1 px clear of the strand it leaves, so the two edges never sit side by side as one thick line */
+        ST.push('<path class="'+l+'" style="stroke:url(#rbk'+t.k+l+')"'+(!j&&t.par?' clip-path="url(#rbm'+t.k+')"':"")+o);});var di=+o.match(/data-i="(\d+)"/)[1],R=g.w+7;if(t===g.m)mi=di;
+        SPK.push(spk(di,t.xd,t.yv,R,.9,(t.k%2?"b":""),t.k*.6));});
+      if(mi>=0){var md=sub(g.m.s,g.m.n),mL=plen(md);[.22,.45,.68].forEach(function(f,i){var q=tp(md).getPointAtLength(f*mL);SPK.push(spk(mi,q.x,q.y,g.w+5,f,(i%2?"":"b"),.9+i*.7));});}   /* a branch's edge stays 1 px clear of the strand it leaves, so the two edges never sit side by side as one thick line */
     var s=document.createElementNS(NS,"svg");s.setAttribute("class","rb-home rb-tasks2");s.setAttribute("aria-hidden","true");s.setAttribute("focusable","false");
     s.setAttribute("viewBox","0 0 "+g.W+" "+f2(g.H));s.style.width=g.W+"px";s.style.height=f2(g.H)+"px";
-    s.innerHTML="<defs>"+D.join("")+'</defs><g class="rb th">'+TH.join("")+'</g><g class="rb" style="--w:'+g.w+'">'+ST.join("")+"</g>";
+    s.innerHTML="<defs>"+D.join("")+'</defs><g class="rb th">'+TH.join("")+'</g><g class="rb" style="--w:'+g.w+'">'+["e","a","b","c"].map(function(l){return ST.filter(function(x){return x.indexOf('<path class="'+l+'"')===0;}).join("");}).join("")+'<path class="rb-sheen" pathLength="1" d="'+g.sp.join(" ")+'"/>'+"</g>";
     $$("[data-i]",s).forEach(function(e){GS[+e.getAttribute("data-i")].els.push(e);});
     var lo=Math.min.apply(null,GS.map(function(q){return q.Y[0];})),hi=Math.max.apply(null,GS.map(function(q){return q.Y[q.Y.length-1];})),first=!homeBuild.done;homeBuild.done=1;
-    B={s:s,gs:GS,lo:lo,hi:hi};lam=still()?hi:first?lo:Math.max(lo,Math.min(hi,lam));if(first)vel=0;   /* first view draws out from the logo; rebuilds keep the reading position */
+    B={s:s,gs:GS,lo:lo,hi:hi};lam=still()?hi:first?lo:Math.max(lo,Math.min(hi,lam));if(first){vel=0;homeBuild.h5=0;var ha=$("#heroArt"),hr5=ha&&ha.getBoundingClientRect();if(!still()&&ha&&ha.offsetWidth&&hr5.bottom>0&&hr5.top<de.clientHeight){homeBuild.h5=1;var rx5=/(^| )(st|sh|lg-w)( |$)/,st5=/(^| )st( |$)/,seen=st5.test(ha.className),T0=performance.now(),done5=0,mo,go=function(){if(done5||!homeBuild.h5)return;done5=1;mo.disconnect();setTimeout(function(){ha.classList.add("pp");setTimeout(function(){ha.classList.remove("pp");},700);setTimeout(function(){homeBuild.h5=0;var q=$(".rb-home");if(q)q.classList.add("rb-pour");kick();},240);},400);},ck=function(){if(st5.test(ha.className))seen=1;if(seen&&!rx5.test(ha.className))go();};mo=new MutationObserver(ck);mo.observe(ha,{attributes:true,attributeFilter:["class"]});ck();setTimeout(function(){if(!seen)go();},900);setTimeout(go,T0<2600?2600-T0:2600);}else{s.classList.add("rb-pour");if(!still()&&scrollY>0)lam=Math.max(lo,Math.min(hi,scrollY+de.clientHeight*LINE));}}   /* first view (v19.2 Option 5): held at the pump nozzle until the drawing's intro ends, then the head presses and the ribbon pours; rebuilds keep the reading position */
     bd.appendChild(s);paint();kick();
   }
   /* Y[n] = reading-line position at which sample n is drawn: never above the sample, and rising at least K px per px of ribbon, so flat runs and curls
@@ -2582,7 +2674,7 @@
   function tick(now){
     raf=0;if(!B)return;var dt=last?Math.min(.034,(now-last)/1000):1/60,tg=B.hi;last=now;
     if(still()){lam=tg;vel=0;}
-    else{tg=Math.max(B.lo,Math.min(B.hi,scrollY+innerHeight*LINE));vel+=(V*Math.tanh((tg-lam)/(TAU*V))-vel)*(1-Math.exp(-4*dt/TAU));lam+=vel*dt;
+    else if(homeBuild.h5){lam=tg=B.lo;vel=0;}else{tg=Math.max(B.lo,Math.min(B.hi,scrollY+de.clientHeight*LINE));   /* A-12: clientHeight, not innerHeight: a phone's toolbar hiding on scroll changes innerHeight and made the tip jump */vel+=(V*Math.tanh((tg-lam)/(TAU*V))-vel)*(1-Math.exp(-4*dt/TAU));lam+=vel*dt;
       if(Math.abs(tg-lam)<.3&&Math.abs(vel)<5){lam=tg;vel=0;}}
     paint();if(vel||lam!==tg)kick();else last=0;
   }
@@ -2591,7 +2683,7 @@
   function build(){sync();homeBuild();}
   addEventListener("scroll",kick,{passive:true});
   var rt=0;function soon(){clearTimeout(rt);rt=setTimeout(build,120);}
-  addEventListener("resize",soon);addEventListener("load",soon);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(soon);
+  var rw=de.clientWidth;addEventListener("resize",function(){if(de.clientWidth!==rw){rw=de.clientWidth;soon();}else kick();});   /* A-12: height-only resizes (toolbar on scroll) keep the ribbon */addEventListener("load",soon);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(soon);
   if(mq.addEventListener)mq.addEventListener("change",build);
   var cur=null,ro=window.ResizeObserver?new ResizeObserver(soon):null;
   function viewChanged(){var v=view();if(v===cur)return;cur=v;homeBuild.done=0;if(ro){ro.disconnect();if(v)ro.observe(v);}setTimeout(build,0);setTimeout(build,140);}
@@ -2663,13 +2755,25 @@
 
 
   /* ---------- medicines A-Z ---------- */
-  function supplyFor(m){
+  function supplyRows(m){
     var rows=(m.supplyIds||[]).map(function(sid){
       return DATA.medicines.filter(function(d){return d.id===sid;})[0];}).filter(Boolean);
     var live=rows.filter(function(r){return r.status!=="discontinued";});
-    if(live.length) rows=live;
+    return live.length?live:rows;
+  }
+  function supplyFor(m){
     var rank={discontinued:4,shortage:3,limited:2,delisting:2,unverified:1,in_supply:0};
-    return rows.sort(function(a,b){return (rank[b.status]||0)-(rank[a.status]||0);})[0];
+    return supplyRows(m).sort(function(a,b){return (rank[b.status]||0)-(rank[a.status]||0);})[0];
+  }
+  /* B-10 (24 Oct 2026): every medicine page says, with the date, whether it is available in Australia, from the daily TGA data */
+  function availLine(m){
+    var rows=supplyRows(m), r=supplyFor(m), st=r?(ST[r.status]||ST.unverified):null,
+        some=r&&HIT[r.status]&&rows.some(function(x){return !HIT[x.status];});
+    return '<p class="statusline"><span class="sl-h">Available in Australia?</span>'+
+      (st?'<span class="tag '+st.c+'">'+esc(st.l)+'</span><span class="sl-d">'+(some?'Not every brand or strength. ':'')+'TGA records checked '+esc(DATA.generatedAt)+'.</span>'+
+          '<a href="#/supply">See supply detail</a>'
+         :'<span class="sl-d">Not in the daily TGA check (last run '+esc(DATA.generatedAt)+'). Ask your pharmacist.</span>'+
+          '<a href="#/supply">Supply &amp; shortages</a>')+'</p>';
   }
   function medTag(m){
     var r=supplyFor(m); if(!r) return "";
@@ -2706,40 +2810,25 @@
   renderMedIndex();
 
 
-  /* figures reused from the guides on medicine pages: [section of the medicine page, figure id], with the guide caption
-     (citation markers dropped: the numbers belong to the guide's reference list). Hormone medicines show the review
-     rhythm under "What is monitored"; the medicines used alongside (adjuncts) have no hormone blood-test rhythm of their
-     own, so they show "What else might be prescribed" under "What it is" instead (17 Oct 2026). */
+  /* figures reused from the guides on medicine pages, keyed by figure id: [heading of the medicine-page section it sits under, medicine ids],
+     with the guide caption (citation markers dropped: the numbers belong to the guide's reference list). Hormone medicines show the review
+     rhythm under "What is monitored"; the medicines used alongside (adjuncts) have no hormone blood-test rhythm of their own, so they show
+     "What else might be prescribed" under "What it is" instead (17 Oct 2026). B-11 (24 Oct 2026): placed by section heading, not by section
+     number, so a figure stays with its section if sections are added or moved; figures in one section keep this order. */
   var FIGS = {
-    "estradiol-patches":[[1,"patch-sites"]],
-    "estradiol-tablets":[[1,"estradiol-forms"]],
-    "testosterone-undecanoate":[[1,"vg-site"],[1,"injection-appointment"]],
-    "testosterone-esters":[[1,"sc-vs-im"],[1,"injection-rotation"]],
-    "testosterone-gel":[[1,"gel-sites"]],
-    "testosterone-cream":[[1,"gel-sites"]],
-    "cyproterone-acetate":[[5,"review-rhythm"]],
-    "spironolactone":[[5,"review-rhythm"]],
-    "micronised-progesterone":[[5,"review-rhythm"]],
-    "estradiol-gel":[[1,"estradiol-forms"]],
-    "gnrh-analogues":[[5,"review-rhythm"]],
-    "estalis-patches":[[1,"patch-sites"]],
-    "kliogest-kliovance":[[1,"estradiol-forms"]],
-    "trisequens":[[1,"estradiol-forms"]],
-    "femoston":[[1,"estradiol-forms"]],
-    "angeliq":[[1,"estradiol-forms"]],
-    "vaginal-oestrogen":[[0,"effects-medicines"]],
-    "norethisterone":[[0,"effects-medicines"]],
-    "medroxyprogesterone-acetate":[[0,"effects-medicines"]],
-    "levonorgestrel-iud":[[0,"effects-medicines"]],
-    "isotretinoin":[[0,"effects-medicines"]],
-    "doxycycline":[[0,"effects-medicines"]],
-    "finasteride":[[0,"effects-medicines"]],
-    "minoxidil-topical":[[0,"effects-medicines"]],
-    "topical-retinoid-bpo":[[0,"effects-medicines"]]
+    "patch-sites":["How it is used",["estradiol-patches","estalis-patches"]],
+    "estradiol-forms":["How it is used",["estradiol-tablets","estradiol-gel","kliogest-kliovance","trisequens","femoston","angeliq"]],
+    "vg-site":["How it is used",["testosterone-undecanoate"]],
+    "injection-appointment":["How it is used",["testosterone-undecanoate"]],
+    "sc-vs-im":["How it is used",["testosterone-esters"]],
+    "injection-rotation":["How it is used",["testosterone-esters"]],
+    "gel-sites":["How it is used",["testosterone-gel","testosterone-cream"]],
+    "review-rhythm":["What is monitored",["cyproterone-acetate","spironolactone","micronised-progesterone","gnrh-analogues"]],
+    "effects-medicines":["What it is",["vaginal-oestrogen","norethisterone","medroxyprogesterone-acetate","levonorgestrel-iud","isotretinoin","doxycycline","finasteride","minoxidil-topical","topical-retinoid-bpo"]]
   };
-  function figsFor(medId, sectionIndex){
-    return (FIGS[medId]||[]).filter(function(f){ return f[0]===sectionIndex; }).map(function(f){
-      var fg=figById(f[1]);
+  function figsFor(medId, heading){
+    return Object.keys(FIGS).filter(function(id){ return FIGS[id][0]===heading && FIGS[id][1].indexOf(medId)!==-1; }).map(function(id){
+      var fg=figById(id);
       return fg ? gfHTML(fg, "m-"+medId, esc(fg.cap.replace(/\s*(\[\d+\])+/g,""))) : "";
     }).join("");
   }
@@ -2756,7 +2845,6 @@
   function renderMedPage(id){
     var m=BY_ID[id]; if(!m) return false;
     CURRENT_MED=m.name;
-    var r=supplyFor(m), st=r?(ST[r.status]||ST.unverified):null;
     var seen={}; seen[m.id]=1;
     function C(t){return linkMeds(cite(ilink(esc(t)), "med-"+m.id), seen);}
     document.getElementById("v-med").innerHTML =
@@ -2764,8 +2852,9 @@
       '<div class="page-head"><h1 tabindex="-1">'+esc(m.name).replace(/Medroxyprogesterone/g,"Medroxy&shy;progesterone")+'</h1>'+
         '<p class="lede">'+C(m.summary)+'</p>'+
         ((m.brands||[]).length?'<p class="stamp">'+esc(m.generic)+' \u00b7 sold as '+esc(m.brands.join(", "))+'</p>':'')+
-        (st?'<p class="statusline"><span class="tag '+st.c+'">'+esc(st.l)+'</span>'+
-            '<a href="#/supply">See supply detail</a></p>':'')+
+        availLine(m)+
+        '<div class="pr-tools"><button type="button" class="pr-btn" data-print><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 8.5V3.5h10v5M7 17.5H5a1.5 1.5 0 0 1-1.5-1.5v-6A1.5 1.5 0 0 1 5 8.5h14a1.5 1.5 0 0 1 1.5 1.5v6a1.5 1.5 0 0 1-1.5 1.5h-2M7 14h10v6.5H7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Print or save as PDF</button>'+
+          '<button type="button" class="pr-btn" data-listen><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18 6.5a7.8 7.8 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Read aloud</button></div>'+
       '</div>'+
       '<div class="ticker" id="medPr" hidden></div>'+
       '<div class="ticker" id="medTicker" hidden></div>'+
@@ -2780,7 +2869,8 @@
           (s.body||[]).map(function(x){return '<p>'+C(x)+'</p>';}).join("")+
           (s.h==="Cost and PBS" ? (s.__med=m.id, pbsBlock(s)) : '')+
           (s.list&&s.list.length?'<ul>'+s.list.map(function(li){return '<li>'+C(li)+'</li>';}).join("")+'</ul>':'')+
-          figsFor(m.id, i)+
+          figsFor(m.id, s.h)+
+          (s.note?'<p class="note">'+C(s.note)+'</p>':'')+
           '</section>';}).join("")+
       ((m.links||[]).length?'<section class="block" id="sec-med-links" tabindex="-1">'+
         '<h2>Links and resources</h2>'+
@@ -2798,7 +2888,7 @@
             (rf.url?' <a href="'+esc(rf.url)+'" target="_blank" rel="noopener">View on '+esc(host)+
               '<span class="sr-only"> (opens in a new tab)</span></a>':'')+'</li>';}).join("")+
         '</ol></div>':'')+
-      '<p class="reviewed">Written and reviewed by Theodore South, BPharm (Hons), registered pharmacist. Last reviewed {{REVIEWED}}.</p>'+
+      '<p class="reviewed">Written and reviewed by Theodore South, BPharm (Hons), registered pharmacist. Last reviewed '+(m.reviewed?esc(m.reviewed):'{{REVIEWED}}')+'.</p>'+
       '<p class="totop"><a href="#main" data-top>\u2191 Back to top</a></p>';
     renderTicker(m); prMed(m);
     return true;
@@ -2889,7 +2979,8 @@
   }
 
   /* ---------- routing ---------- */
-  var VIEWS={"/":"v-home","/supply":"v-supply","/medicines":"v-medicines","/med":"v-med","/sightings":"v-sightings","/doses":"v-doses","/using":"v-using","/pharmacy":"v-pharmacy","/costs":"v-costs","/easy":"v-easy","/easy-guide":"v-easy-guide","/feedback":"v-feedback","/pharmacy-reports":"v-pharmacy-reports","/trans":"v-trans","/clinicians":"v-clinicians","/allies":"v-allies","/clinician-guide":"v-clinician-guide","/ally-guide":"v-ally-guide","/resources":"v-resources","/alerts":"v-alerts","/privacy":"v-privacy","/accessibility":"v-accessibility","/disclaimer":"v-disclaimer","/search":"v-search"};
+  var VIEWS={"/":"v-home","/changes":"v-changes","/supply":"v-supply","/medicines":"v-medicines","/med":"v-med","/sightings":"v-sightings","/doses":"v-doses","/monitoring":"v-monitoring","/add-on-therapies":"v-add-on-therapies","/using":"v-using","/pharmacy":"v-pharmacy","/costs":"v-costs","/easy":"v-easy","/easy-guide":"v-easy-guide","/feedback":"v-feedback","/pharmacy-reports":"v-pharmacy-reports","/trans":"v-trans","/clinicians":"v-clinicians","/allies":"v-allies","/clinician-guide":"v-clinician-guide","/ally-guide":"v-ally-guide","/resources":"v-resources","/alerts":"v-alerts","/privacy":"v-privacy","/accessibility":"v-accessibility","/disclaimer":"v-disclaimer","/search":"v-search"};
+  if(CONTENT.about) VIEWS["/about"]="v-about";   /* B-09: only when build.py found content/about.json */
   var nav=document.getElementById("nav"), navbtn=document.getElementById("navbtn");
   /* Routing. The hosted site uses real paths (/costs, /medicines/<id>) so each page
      can be indexed; the single-file preview keeps #/ hash routes. */
@@ -2940,10 +3031,10 @@
     });
   }
   var lastRoute=null;
-  var VIEWGRP={"/trans":"trans","/supply":"trans","/medicines":"trans","/med":"trans","/sightings":"trans","/costs":"trans","/doses":"trans","/using":"trans","/pharmacy":"trans","/easy":"trans","/easy-guide":"trans",
+  var VIEWGRP={"/trans":"trans","/supply":"trans","/medicines":"trans","/med":"trans","/sightings":"trans","/costs":"trans","/doses":"trans","/monitoring":"trans","/add-on-therapies":"trans","/using":"trans","/pharmacy":"trans","/easy":"trans","/easy-guide":"trans",
     "/clinicians":"clin","/clinician-guide":"clin","/pharmacy-reports":"clin","/alerts":"clin","/allies":"allies","/ally-guide":"allies",
-    "/resources":"res","/search":"res","/privacy":"res","/accessibility":"res","/disclaimer":"res","/feedback":"res"};
-  var TITLES={"/":"Gender-Affirming Medicines South Australia","/supply":"Supply & shortages","/doses":"Doses and formulations",
+    "/resources":"res","/changes":"res","/about":"res","/search":"res","/privacy":"res","/accessibility":"res","/disclaimer":"res","/feedback":"res"};
+  var TITLES={"/":"Gender-Affirming Medicines South Australia","/changes":"What\u2019s changed","/about":(CONTENT.about||{}).title||"About GAMSA","/supply":"Supply & shortages","/doses":"Medicines, doses and formulations","/monitoring":"Monitoring and related care","/add-on-therapies":"Add-on therapies",
     "/using":"How to use your medicine","/pharmacy":"Working with your pharmacy","/costs":"Costs and the PBS","/easy":"Easy Read guides","/easy-guide":"Easy Read","/feedback":"Send feedback","/pharmacy-reports":"Pharmacy stock reports","/trans":"Trans and gender diverse people","/clinicians":"Clinicians and pharmacists","/allies":"Family, friends and allies","/clinician-guide":"For clinicians and pharmacists","/ally-guide":"For family, friends and allies","/resources":"Resources","/alerts":"Shortage alerts","/privacy":"Privacy","/accessibility":"Accessibility","/disclaimer":"Disclaimer","/search":"Search","/medicines":"Medicines A\u2013Z","/med":"Medicine","/sightings":"Patient sightings"};
   function route(){
     var h=curRoute(), anchor=curAnchor(), qs="";
@@ -2966,6 +3057,7 @@
     if(vEl && grp && !vEl.classList.contains("c-"+grp)) vEl.classList.add("acc","c-"+grp);
     var navKey = (h==="/med") ? "/medicines" : (h==="/easy-guide" ? "/easy" : h);
     navCurrent(navKey);
+    chgNote();   /* B-14: "Updated <date>: ..." under the page heading, drawn before the page is shown */
     // leaving a page clears its search and filters, so it opens fresh next time
     if(qEl && qEl.value){ qEl.value=""; term=""; }
     if(filter!=="all"){ filter="all";
@@ -2987,7 +3079,7 @@
     feedFor(h);
     if(h==="/") renderStats();
     setCite();
-    document.title = notFound ? "Page not found \u2014 GAMSA" : (h==="/med"?((function(n){n=n.split(" (")[0];return n+(n.length<34?": doses, cost and supply":"");})(CURRENT_MED||"Medicine")):h==="/easy-guide"?(CURRENT_GUIDE+" (Easy Read)"):TITLES[h]) + " \u2014 GAMSA";
+    document.title = notFound ? "Page not found \u2014 GAMSA" : fullTitle(h==="/med"?(CURRENT_MED||"Medicine").split(" (")[0]:h==="/easy-guide"?(CURRENT_GUIDE+" (Easy Read)"):TITLES[h]);
     nav.classList.remove("open");navbtn.setAttribute("aria-expanded","false"); ngClose();
     /* unknown address: say so above the page shown instead (the server already answered 404) */
     var nfOld=document.getElementById("x404"); if(nfOld) nfOld.remove();
@@ -3038,7 +3130,7 @@
   var NAVCFG = {
     tgd: [
       {h:"Start here", l:[{t:"Overview", h:"#/trans"}, {t:"Medicines A\u2013Z", h:"#/medicines"}, {t:"Supply & shortages", h:"#/supply"}, {t:"Patient sightings", h:"#/sightings"}]},
-      {h:"Guides", l:[{t:"Costs and the PBS", h:"#/costs"}, {t:"Doses and formulations", h:"#/doses"}, {t:"How to use your medicine", h:"#/using"}, {t:"Working with your pharmacy", h:"#/pharmacy"}]},
+      {h:"Guides", l:[{t:"Costs and the PBS", h:"#/costs"}, {t:"Medicines, doses and formulations", h:"#/doses"}, {t:"Monitoring and related care", h:"#/monitoring"}, {t:"Add-on therapies", h:"#/add-on-therapies"}, {t:"How to use your medicine", h:"#/using"}, {t:"Working with your pharmacy", h:"#/pharmacy"}]},
       {h:"Easy Read", l:ER("you").slice(0,5).map(function(g){ return {t:g.title, h:"#/easy/"+g.id}; }).concat([{t:"All Easy Read guides", h:"#/easy", more:true}])}
     ],
     clin: [
@@ -3053,14 +3145,14 @@
     ],
     res: [
       {h:"Resources", l:[{t:"All resources", h:"#/resources"}, {t:"Supply and medicines", h:"#/resources#sec-resources-0"}, {t:"Costs and the PBS", h:"#/resources#sec-resources-1"}, {t:"Care and support in SA", h:"#/resources#sec-resources-2"}, {t:"National information", h:"#/resources#sec-resources-3"}]},
-      {h:"This site", l:[{t:"Search", h:"#/search"}, {t:"Send feedback", h:"#/feedback"}, {t:"Accessibility", h:"#/accessibility"}, {t:"Privacy", h:"#/privacy"}, {t:"Disclaimer", h:"#/disclaimer"}]}
+      {h:"This site", l:(CONTENT.about?[{t:"About GAMSA", h:"#/about"}]:[]).concat([{t:"Search", h:"#/search"}, {t:"Send feedback", h:"#/feedback"}, {t:"What\u2019s changed", h:"#/changes"}, {t:"Accessibility", h:"#/accessibility"}, {t:"Privacy", h:"#/privacy"}, {t:"Disclaimer", h:"#/disclaimer"}])}
     ]
   };
   (function(){
     nav.querySelectorAll(".ng").forEach(function(g){
       var grid=g.querySelector(".ng-grid");
       grid.innerHTML=(NAVCFG[g.dataset.g]||[]).map(function(col){
-        return '<div class="ng-col"><h3>'+esc(col.h)+'</h3><ul>'+col.l.map(function(s){ return '<li><a href="'+s.h+'"'+(s.more?' class="ng-more-link"':'')+(/\.pdf$/.test(s.h)?' download':'')+'>'+esc(s.t)+(s.more?' \u2192':'')+'</a></li>'; }).join("")+'</ul></div>';
+        return '<div class="ng-col"><h3>'+esc(col.h)+'</h3><ul>'+col.l.map(function(s){ return '<li><a href="'+s.h+'"'+(s.more?' class="ng-more-link"':'')+(/\.pdf$/.test(s.h)?' download':'')+'>'+fileLabel(esc(s.t), s.h)+(s.more?' \u2192':'')+'</a></li>'; }).join("")+'</ul></div>';
       }).join("");
     });
     fixLinks(nav);
@@ -3122,7 +3214,7 @@
   function buildIndex(){
     var ix=[];
     function add(kind, title, route, text, sub){ ix.push({k:kind, t:title, h:route, x:plain(text), s:sub||""}); }
-    var GUIDES={dosing:["/doses","Doses guide"],administration:["/using","How-to-use guide"],costs:["/costs","Costs guide"],pharmacy:["/pharmacy","Pharmacy guide"],clinicians:["/clinician-guide","Clinicians"],allies:["/ally-guide","Allies"],privacy:["/privacy","About this site"],accessibility:["/accessibility","About this site"],disclaimer:["/disclaimer","About this site"],resources:["/resources","Resources"]};
+    var GUIDES={dosing:["/doses","Medicines guide"],monitoring:["/monitoring","Monitoring guide"],addons:["/add-on-therapies","Add-on therapies"],administration:["/using","How-to-use guide"],costs:["/costs","Costs guide"],pharmacy:["/pharmacy","Pharmacy guide"],clinicians:["/clinician-guide","Clinicians"],allies:["/ally-guide","Allies"],privacy:["/privacy","About this site"],accessibility:["/accessibility","About this site"],disclaimer:["/disclaimer","About this site"],resources:["/resources","Resources"]};
     Object.keys(GUIDES).forEach(function(k){
       var c=CONTENT[k], r=GUIDES[k][0], v=r.slice(1);
       add(GUIDES[k][1], c.title, "#"+r, c.intro);
@@ -3138,7 +3230,18 @@
     add("Supply", "Supply & shortages", "#/supply", "shortage short supply out of stock TGA pharmacy stock reports patient sightings substitution alternative brand");
     add("Site", "Pharmacist stock register", "#/pharmacy-reports", "pharmacists post stock reports register AHPRA");
     add("Site", "Send feedback", "#/feedback", "report a mistake something missing accessibility problem contact");
+    add("Site", "What\u2019s changed", "#/changes", "updated changes new dated list "+chgAll().map(function(c){ return c.text; }).join(" "));
+    if(CONTENT.about){ var ab=CONTENT.about; add("About this site", ab.title||"About GAMSA", "#/about", [].concat(ab.intro||[]).join(" "));
+      (ab.sections||[]).forEach(function(s,i){ add("About this site", s.h, "#/about#sec-about-"+i, (s.paras||[]).join(" ")+" "+(s.bullets||[]).join(" "), ab.title||"About GAMSA"); }); }
     return ix;
+  }
+  /* B-28 (23 Oct 2026): the page or medicine name first, then what the site is and where, within 60 characters where it fits;
+     the same rule as full_title() in build.py, so a page keeps its title once the script runs */
+  function fullTitle(n){
+    if(/South Australia/.test(n)) return "GAMSA \u00B7 "+n;
+    var a=[n+" \u00B7 Gender-affirming medicines, South Australia \u00B7 GAMSA", n+" \u00B7 Gender-affirming medicines SA \u00B7 GAMSA", n+" \u00B7 GAMSA, South Australia"];
+    for(var i=0;i<a.length;i++) if(a[i].length<=60) return a[i];
+    return n+" \u00B7 GAMSA";
   }
   function renderSearch(q){
     var out=document.getElementById("srOut"), inp=document.getElementById("srq");
@@ -3210,14 +3313,14 @@
       hd=document.querySelector("body>header"), nv=document.getElementById("nav"), rmq=matchMedia("(prefers-reduced-motion: reduce)"), raf=0, cur=null, last=0, gap=0, lt=0, top=0, open=0, fy=null, mc=new MessageChannel();
     mc.port1.onmessage=function(){ open=0; };
     function target(){ if(hd && !(nv && nv.classList.contains("open"))) top=Math.max(0,hd.getBoundingClientRect().bottom);
-      var h=de.scrollHeight-innerHeight, f=h>0?Math.min(1,Math.max(0,scrollY/h)):0; return top+f*Math.max(0,innerHeight-top-22); }
+      var H=de.clientHeight, h=de.scrollHeight-H, f=h>0?Math.min(1,Math.max(0,scrollY/h)):0; return top+f*Math.max(0,H-top-22); }   /* A-12: clientHeight stays put while a phone's toolbar hides */
     function upd(now){ if(raf){ cancelAnimationFrame(raf); raf=0; } now=now||performance.now(); var T=target(), y=T, k=Math.min(1,Math.max(.05,(now-lt)/16.7));
       if(!open || fy===null){ open=1; fy=cur; mc.port2.postMessage(0); }   /* all calls before the next paint (scroll, resize observer) share one 40 px budget */
       if(cur!==null && !rmq.matches && !de.classList.contains("rm")){ if(Math.abs(T-last)>40) gap+=T-last;
         if(gap){ var s=gap*(1-Math.exp(-k*16.7/70)); gap-=Math.max(-36*k,Math.min(36*k,s)); if(Math.abs(gap)<.5) gap=0; }
         y=T-gap; var d=y-fy; if(Math.abs(d)>40){ y=fy+(d>0?40:-40); gap=T-y; } } else gap=0;
       last=T; lt=now; cur=y=Math.max(top,y);
-      fb.style.top=top+"px"; fb.style.height=(y-top)+"px"; tr.style.transform="translateY("+top+"px)"; pl.style.transform="translateY("+(y-10)+"px)";
+      fb.style.transform="translateY("+top+"px) scaleY("+((y-top)/Math.max(1,fb.offsetHeight)).toFixed(5)+")"; tr.style.transform="translateY("+top+"px)"; pl.style.transform="translateY("+(y-10)+"px)";
       if(gap) raf=requestAnimationFrame(upd); }
     function req(){ if(!raf) raf=requestAnimationFrame(upd); }
     addEventListener("scroll", req, {passive:true}); addEventListener("resize", req); addEventListener("load", req); if(document.fonts) document.fonts.ready.then(req);
@@ -3228,7 +3331,7 @@
   function fileName(u){ var s=(u||"").split("/").pop().replace(/\.(pdf|zip)$/i,"").replace(/-/g," ");
     s=s.replace(/\bim\b/g,"IM").replace(/\bpbs\b/g,"PBS").replace(/\bsop\b/g,"SOP"); return s.charAt(0).toUpperCase()+s.slice(1); }
   var TRANSRES=[{h:"#/easy",t:"Easy Read guides: short guides with pictures, each prints as a PDF",int:1},{h:"/allies/pharmacy-visit-checklist.pdf",t:"Pharmacy visit checklist (PDF, 1 page)"},{h:"/clinicians/pbs-authority-wording-card.pdf",t:"PBS Authority wording card, to show your prescriber (PDF, 1 page)"},{h:"https://transhealthsa.com/directory/",t:"Find a prescriber: Trans Health SA directory (on transhealthsa.com)",ext:1},{h:"https://shinesa.org.au/media/2023/09/Referral-Pathways-for-Trans-and-Gender-Diverse-Care.pdf",t:"Referral pathways for trans and gender diverse care (PDF, on shinesa.org.au)",ext:1},{h:"#/resources",t:"All resources: support in South Australia and nationally",int:1}];
-  var TRAINING=[["sop-and-training-guide","Injection training: SOP and training guide (PDF, 7 pages)"],["treatment-room-card","Injection training: treatment-room card (PDF, 1 page)"],["competency-checklist","Injection training: competency checklist (PDF, 2 pages)"],["adverse-event-form","Injection training: adverse event form (PDF, 2 pages)"],["clinic-audit-tool","Injection training: clinic audit tool (PDF, 2 pages)"],["training-package","Injection training: whole package (zip file)"]].map(function(x){ return {h:"/clinicians/testosterone-undecanoate-im-"+x[0]+(x[0]==="training-package"?".zip":".pdf"), t:x[1]}; });
+  var TRAINING=[["sop-and-training-guide","Injection training: SOP and training guide (PDF, 6 pages)"],["treatment-room-card","Injection training: treatment-room card (PDF, 1 page)"],["competency-checklist","Injection training: competency checklist (PDF, 2 pages)"],["adverse-event-form","Injection training: adverse event form (PDF, 2 pages)"],["clinic-audit-tool","Injection training: clinic audit tool (PDF, 2 pages)"],["training-package","Injection training: whole package (zip file)"]].map(function(x){ return {h:"/clinicians/testosterone-undecanoate-im-"+x[0]+(x[0]==="training-package"?".zip":".pdf"), t:x[1]}; });
   function resLabel(a){
     var t=((a.querySelector("b,strong,.t")||a).innerText||a.textContent||"").split("\n")[0].replace(/\s+/g," ").trim(), h=a.getAttribute("href")||"";
     if(!t || /^(view on|download)\b/i.test(t) || t.length<4){
@@ -3252,7 +3355,7 @@
       if(v.id==="v-trans") TRANSRES.forEach(function(x){ if(!seen[x.h]){ seen[x.h]=1; dl.push(x); } });
       if(v.id==="v-clinicians") TRAINING.forEach(function(x){ if(!seen[x.h]){ seen[x.h]=1; dl.push(x); } });
       if(dl.length){ var box=document.createElement("nav"); box.className="side-res"; box.setAttribute("aria-label","Resources on this page");
-        box.innerHTML='<h2>Resources</h2><ul>'+dl.map(function(x){ return '<li><a href="'+esc(x.h)+'"'+(x.ext?' target="_blank" rel="noopener"':x.int?' class="x-int" data-link':' download')+'>'+esc(x.t)+'</a></li>'; }).join("")+'</ul>';
+        box.innerHTML='<h2>Resources</h2><ul>'+dl.map(function(x){ return '<li><a href="'+esc(x.h)+'"'+(x.ext?' target="_blank" rel="noopener"':x.int?' class="x-int" data-link':' download')+'>'+fileLabel(esc(x.t), x.h)+'</a></li>'; }).join("")+'</ul>';
         if(!ot) box.classList.add("always"); side.appendChild(box); fixLinks(box); }
     });
   }
@@ -3521,7 +3624,7 @@
       if(isCite(n)) continue;
       if(n.matches(".refs")){ B.refs=[].slice.call(n.querySelectorAll("li")); continue; }
       if(n.matches(".reviewed")){ B.end=n; continue; }
-      if(n.matches(".statusline")){ var tg0=n.querySelector(".tag"); if(tg0){ flush(); B.pre="Supply status: "; B.stack.push(n); walk(tg0); flush(); B.stack.pop(); } continue; }
+      if(n.matches(".statusline")){ flush(); B.pre="Available in Australia? "; B.stack.push(n); [".tag",".sl-d"].forEach(function(q){ var e=n.querySelector(q); if(e){ walk(e); addV(" "); } }); flush(); B.stack.pop(); continue; }
       if(inlineEl(n)){
         if(tg==="A"){ var keep=B.link; B.link=n; walk(n); B.link=keep; if(isDl(n)) B.seg.push({n:null, t:" (download)", dl:true}); }
         else if(tg==="IMG"){ if(n.alt) addV(" "+n.alt+" "); }
@@ -4158,7 +4261,7 @@
     mn.innerHTML='<div class="x-menu-bg"></div><div class="x-menu-p" role="dialog" aria-modal="true" aria-label="Site menu"><div class="x-menu-top"><p class="x-menu-h">Menu</p>'+
       '<form class="x-msearch" role="search" aria-label="Search, in menu"><label class="sr-only" for="xmq">Search this site</label>'+IS+'<input id="xmq" type="search" autocomplete="off" placeholder="Search the whole site"><button type="submit" aria-label="Search">'+IA+'</button></form>'+
       '<button class="x-close" type="button" aria-label="Close menu">'+IX+'</button></div><div class="x-menu-g">'+
-      G.map(function(g){ return '<section class="x-mg '+g.cls+'"><h2>'+esc(g.name)+'</h2><p class="x-mg-d">'+esc(GD[g.k]||"")+'</p>'+g.cols.map(function(c){ return '<h3>'+esc(c.h)+'</h3><ul>'+c.l.map(function(l){ return '<li><a href="'+l.h+'"'+(/\.pdf$/.test(l.h)?' download':'')+'>'+esc(l.t)+'</a></li>'; }).join("")+'</ul>'; }).join("")+'</section>'; }).join("")+
+      G.map(function(g){ return '<section class="x-mg '+g.cls+'"><h2>'+esc(g.name)+'</h2><p class="x-mg-d">'+esc(GD[g.k]||"")+'</p>'+g.cols.map(function(c){ return '<h3>'+esc(c.h)+'</h3><ul>'+c.l.map(function(l){ return '<li><a href="'+l.h+'"'+(/\.pdf$/.test(l.h)?' download':'')+'>'+fileLabel(esc(l.t), l.h)+'</a></li>'; }).join("")+'</ul>'; }).join("")+'</section>'; }).join("")+
       '</div><p class="x-menu-foot"><a href="#/">Home</a><a href="#/search">Search</a><a href="#/feedback">Send feedback</a><a href="#/accessibility">Accessibility</a><a href="#/privacy">Privacy</a><a href="#/disclaimer">Disclaimer</a></p></div>';
     document.body.appendChild(mn); fixLinks(mn); fixLinks(nav);
     navbtn.setAttribute("aria-controls","xMenu"); navbtn.setAttribute("aria-haspopup","dialog");
@@ -4240,6 +4343,12 @@
       if(links.length && "IntersectionObserver" in window){ var map={}; links.forEach(function(a){ map[(a.getAttribute("href")||"").split("#").pop()]=a; });
         io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ var a=map[e.target.id]; if(a){ links.forEach(function(x){ x.classList.remove("x-here"); }); a.classList.add("x-here"); } } }); },{rootMargin:"-20% 0px -70% 0px"});
         v.querySelectorAll(":scope > section.block[id]").forEach(function(s){ io.observe(s); }); }
+      if(!me && v.id==="v-med" && !v.querySelector(".x-pager")){   /* A-12: previous/next medicine at the foot, in Medicines A-Z order */
+        var ML=MEDINFO.medicines.slice().sort(function(a,b){ return a.name.localeCompare(b.name); }), mi=-1;
+        ML.forEach(function(x,i){ if(x.name===CURRENT_MED) mi=i; });
+        if(mi>=0){ var mp=ML[mi-1], mn2=ML[mi+1], mg=document.createElement("nav"); mg.className="x-pager"; mg.setAttribute("aria-label","Previous and next medicine");
+          mg.innerHTML=(mp?'<a class="p" href="#/med/'+esc(mp.id)+'">'+IB+'<span><small>Previous medicine</small><b>'+esc(mp.name)+'</b></span></a>':'<i></i>')+(mn2?'<a class="n" href="#/med/'+esc(mn2.id)+'"><span><small>Next medicine</small><b>'+esc(mn2.name)+'</b></span>'+IA+'</a>':'');
+          v.appendChild(mg); fixLinks(mg); } }
       if(me && !v.querySelector(".x-pager")){ var p=ALL[k-1], nx=ALL[k+1], pg=document.createElement("nav"); pg.className="x-pager"; pg.setAttribute("aria-label","Previous and next page");
         pg.innerHTML=(p?'<a class="p" href="'+p.h+'">'+IB+'<span><small>Previous</small><b>'+esc(p.t)+'</b></span></a>':'<i></i>')+(nx?'<a class="n" href="'+nx.h+'"><span><small>Next</small><b>'+esc(nx.t)+'</b></span>'+IA+'</a>':'');
         v.appendChild(pg); fixLinks(pg); }
@@ -4248,5 +4357,64 @@
     /* run once straight away (before first paint) so the breadcrumb, folded contents, pager and feedback line do not push the page and footer down later (layout shift); the 60 ms pass catches views drawn after the route event */
     onNav(function(){ furnish(); setTimeout(furnish,60); }); furnish(); setTimeout(furnish,60);
   })();
+  /* ---------- B-14: dated "Updated" notes and the What's changed page, both from content/changes.json ---------- */
+  /* content/changes.json is one list: [{"date":"YYYY-MM-DD","version":"v19.0","pages":["/doses","/medicines/<id>"],"text":"..."}].
+     Functions only (no top-level vars): the first route() runs before this point of the script. */
+  function chgAll(){ return [].concat(CONTENT.changes||[]).sort(function(a,b){ return a.date<b.date?1:a.date>b.date?-1:0; }); }
+  function chgShort(d){ var p=d.split("-"); return (+p[2])+" "+["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][+p[1]-1]+" "+p[0]; }
+  function chgLong(d){ var p=d.split("-"); return (+p[2])+" "+["January","February","March","April","May","June","July","August","September","October","November","December"][+p[1]-1]+" "+p[0]; }
+  /* "/medicines/spironolactone" -> "Spironolactone"; "/easy/helping" -> "Helping someone (Easy Read)"; "/doses" -> "Medicines, doses and formulations" */
+  function chgTitle(p){
+    var m=/^\/medicines\/([a-z0-9-]+)$/.exec(p), e=/^\/easy\/([a-z0-9-]+)$/.exec(p), g=null;
+    if(m) return BY_ID[m[1]] ? BY_ID[m[1]].name.split(" (")[0] : "";
+    if(e){ (CONTENT.easyread.guides||[]).forEach(function(x){ if(x.id===e[1]) g=x; }); return g ? g.title+" (Easy Read)" : ""; }
+    return TITLES[p]||"";
+  }
+  function renderChanges(){
+    var g={}, o=[]; chgAll().forEach(function(c){ if(!g[c.date]){ g[c.date]=[]; o.push(c.date); } g[c.date].push(c); });
+    var el=document.getElementById("v-changes");
+    el.innerHTML='<div class="page-head"><p class="kicker">About this site</p><h1 tabindex="-1">What’s changed</h1><p class="lede">Dated changes to the information on this site, newest first. Small fixes to spelling or layout are not listed.</p></div>'+
+      o.map(function(d){ return '<section class="block chg-day" id="chg-'+d+'" tabindex="-1"><h2>'+chgLong(d)+'</h2><ul class="chg-list" role="list">'+
+        g[d].map(function(c){
+          var L=(c.pages||[]).map(function(p){ var t=chgTitle(p); return t ? '<a href="#'+esc(fromPath(p))+'">'+esc(t)+'</a>' : ''; }).filter(Boolean);
+          return '<li>'+(L.length?'<p class="chg-pg">'+L.join(", ")+'</p>':'')+'<p>'+esc(c.text)+'</p></li>'; }).join("")+'</ul></section>'; }).join("")+
+      '<p class="stamp">Each change also shows as a dated note at the top of its page for 3 months.</p>';
+    fixLinks(el);
+  }
+  /* the latest change for this page, as a note under its heading, for 3 months after the change. Called from route(), before the
+     page is first shown, so the note never pushes the page down after it is on screen (layout shift) */
+  function chgNote(){
+    var v=document.querySelector("#main > .view.on"); if(!v) return;
+    var old=v.querySelector(".upd"); if(old) old.remove();
+    if(v.id==="v-changes") return;
+    var r=toPath(curRoute().split("#")[0].split("?")[0]), now=Date.now();
+    var L=chgAll().filter(function(c){ return (c.pages||[]).indexOf(r)>-1 && now-Date.parse(c.date+"T00:00:00")<=92*864e5; }); if(!L.length) return;
+    var c=L[0], ph=v.querySelector(":scope > .page-head, :scope > .er-cover"); if(!ph) return;
+    var x=document.createElement("aside"); x.className="upd upd-b"; x.setAttribute("aria-label","Recent change");
+    x.innerHTML='<span class="upd-tag">Updated</span><p><b>'+chgShort(c.date)+':</b> '+esc(c.text)+' <a href="#/changes">What’s changed</a></p>';
+    ph.parentNode.insertBefore(x, ph.nextSibling);
+    fixLinks(x);
+  }
+  /* ---------- B-09: About page, from content/about.json (optional: no file, no page) ---------- */
+  function renderAbout(){
+    var a=CONTENT.about||{}, el=document.getElementById("v-about"), intro=[].concat(a.intro||[]), S=a.sections||[];
+    function C(t){ return ilink(esc(t)); }
+    el.innerHTML='<div class="page-head"><p class="kicker">About this site</p><h1 tabindex="-1">'+esc(a.title||"About GAMSA")+'</h1>'+
+        intro.map(function(p,i){ return '<p'+(i?'':' class="lede"')+'>'+C(p)+'</p>'; }).join("")+'</div>'+
+      (S.length>1?'<nav class="onthis" id="onthis-about" tabindex="-1" aria-label="On this page"><h2>On this page</h2><ol>'+
+        S.map(function(s,i){ return '<li><a href="#sec-about-'+i+'">'+esc(s.h)+'</a></li>'; }).join("")+'</ol></nav>':'')+
+      S.map(function(s,i){ return '<section class="block" id="sec-about-'+i+'" tabindex="-1"><h2>'+esc(s.h)+'</h2>'+
+        (s.paras||[]).map(function(p){ return '<p>'+C(p)+'</p>'; }).join("")+
+        ((s.bullets||[]).length?'<ul>'+s.bullets.map(function(b){ return '<li>'+C(b)+'</li>'; }).join("")+'</ul>':'')+'</section>'; }).join("")+
+      (/^\d{4}-\d{2}-\d{2}$/.test(a.updated||"")?'<p class="reviewed">Last reviewed '+chgLong(a.updated)+'.</p>':'');
+    fixLinks(el);
+  }
+  /* B-03: every [data-print] button opens the device's print sheet (phones and iPads: Print or Save to Files / PDF) */
+  document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("[data-print]");if(b){e.preventDefault();window.print();}
+    var l=e.target.closest&&e.target.closest("[data-listen]");if(l){var tb=document.getElementById("ttsBtn");if(tb)tb.click();}});
+  /* C-11 option 3: "reading" once the page has scrolled (on above 240 px, off below 140 px); the header and help button slim down */
+  (function(){var de=document.documentElement,hdr=document.querySelector("header"),on=false;
+    function f(){var y=scrollY,v=on?y>140:y>240;if(v!==on){on=v;de.classList.toggle("x-reading",on);requestAnimationFrame(function(){if(hdr)de.style.setProperty("--x-hh",hdr.offsetHeight+"px");});}}
+    addEventListener("scroll",f,{passive:true});f();})();
 })();
 </script>

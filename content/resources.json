@@ -45,6 +45,21 @@
       ]
     },
     {
+      "h": "Getting care: Medicare, prescribers, surgery and testosterone scripts",
+      "nav": "Getting care",
+      "body": [
+        "**Medicare.** A GP visit at the clinic that lasts at least 60 minutes can be billed as MBS item 123, which started on 1 November 2023 [1]. Some telehealth items are for blood-borne virus, sexual or reproductive health care: video items 92715 to 92726 and phone items 92731 to 92742. They can be used even if you have not seen that GP before [2]. Australia's 2026 standards of care say visits about gender-affirming hormones can use these items [3].",
+        "GP chronic condition management plans (item 965 to prepare one, item 967 to review it) are for conditions that have lasted, or are likely to last, at least 6 months [4]. The standards of care say people on gender-affirming hormones are eligible for GP chronic care items [3]. MBS rules change over time, and the item pages on MBS Online show the current rules [1][4].",
+        "**Finding a prescriber.** The [TransHub directory of affirming health professionals](https://www.transhub.org.au/doctor/) covers all of Australia, and its Treatment filter includes telehealth gender affirmation services. The [Trans Health SA directory](https://transhealthsa.com/directory/) lists practitioners across South Australia, including some who offer telehealth.",
+        "Autism, ADHD and other neurodivergence do not prevent access to gender-affirming care. Australia's 2026 standards of care suggest adjustments that can help, such as written summaries, printed scripts and a support person at appointments [5].",
+        "**Surgery.** Most gender-affirming surgery is not covered by the MBS, and the operations that are covered are rarely done in the public system, so costs are often high. Some surgeons ask for an assessment by a mental health professional, especially for genital surgery [6]. TransHub has plain-language pages on [each gender-affirming surgery](https://www.transhub.org.au/trans-folk/#surgeries) and a [surgical readiness referral, with a template letter for clinicians](https://www.transhub.org.au/clinicians/surgical-readiness-referral/). The [Trans Health SA directory](https://transhealthsa.com/directory/) lists South Australian surgeons. The [AusPATH standards of care](https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf) describe common surgeries in Tables 12 and 13, on pages 60 and 61 [6]. Whether to stop hormones before an operation is covered in [Hormones around surgery](#/monitoring#sec-monitoring-5) on the Monitoring and related care page.",
+        "**Can testosterone be an e-script?** Electronic prescriptions can be used for any medicine anywhere in Australia, and you can still ask for a paper script. An e-script arrives as a token, usually a QR code, by SMS or email [7].",
+        "**Why does testosterone need a PBS Authority?** Every PBS testosterone product is listed as Authority Required [8][9]. For gender-affirming care, the prescriber needs a one-off second opinion from an endocrinologist, urologist or sexual health physician. It can be in person or by telehealth, and that specialist's name is then used on later scripts. A script can also be written once an appointment with the specialist is booked [9]. The [Authority wording card](#/clinician-guide) explains the wording for prescribers and pharmacists.",
+        "**Which testosterone injections are there?** The long-acting testosterone undecanoate injection, 1,000 mg in 4 mL, is on the PBS under four brands: Reandron 1000, Gonadron, Rejunon 1000 and Testosterone ADVZ 1000 [8]. Two shorter-acting injections, Primoteston Depot and Sustanon 250, are not PBS-subsidised [9].",
+        "**Are there testosterone patches?** Not at present. The TGA cancelled the Androderm testosterone patches at the sponsor's request: the 12.2 mg patch from 29 June 2022 and the 24.3 mg patch from 26 June 2025 [10][11]. Australia's 2026 standards of care list testosterone as gels, a cream and injections [9]."
+      ]
+    },
+    {
       "h": "On this site",
       "list": [
         "[Trans and gender diverse people: all guides](#/trans)",
@@ -53,9 +68,66 @@
         "[Easy Read guides](#/easy)",
         "[Search this site](#/search)",
         "[Send feedback](#/feedback)"
-      ]
+      ],
+      "note": "To suggest a correction to these listings or a resource to add, use the [feedback page](#/feedback), which is preferred, or email gamsaenquiries@gmail.com."
     }
   ],
-  "references": [],
+  "references": [
+    {
+      "n": 1,
+      "text": "Medicare Benefits Schedule. Item 123: professional attendance by a general practitioner at consulting rooms lasting at least 60 minutes (item start date 1 November 2023; schedule fee updated 1 July 2026). MBS Online, Department of Health, Disability and Ageing. Accessed 24 October 2026.",
+      "url": "https://www9.health.gov.au/mbs/fullDisplay.cfm?type=item&q=123&qt=item"
+    },
+    {
+      "n": 2,
+      "text": "Medicare Benefits Schedule. Note AN.40.5: MBS items for blood borne virus, sexual and reproductive health services (video items 92715–92726, phone items 92731–92742; no established clinical relationship required). MBS Online, Department of Health, Disability and Ageing. Accessed 24 October 2026.",
+      "url": "https://www9.health.gov.au/mbs/fullDisplay.cfm?type=note&q=AN.40.5&qt=noteID"
+    },
+    {
+      "n": 3,
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"), page 51 (Medicare Benefits Schedule and Pharmaceutical Benefits Scheme considerations). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 24 October 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 4,
+      "text": "Medicare Benefits Schedule. Item 965: GP chronic condition management plan, preparation (item start date 1 July 2025; review item 967; explanatory note AN.0.47). MBS Online, Department of Health, Disability and Ageing. Accessed 24 October 2026.",
+      "url": "https://www9.health.gov.au/mbs/fullDisplay.cfm?type=item&q=965&qt=item"
+    },
+    {
+      "n": 5,
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"), pages 51–52 (Neurodivergence in gender-affirming care). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 24 October 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 6,
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"), page 59 (Surgery), page 60 (Table 12. Common feminisation procedures) and page 61 (Table 13. Common masculinisation procedures). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 24 October 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 7,
+      "text": "Department of Health, Disability and Ageing. Electronic prescribing (date last updated 9 July 2026). Accessed 24 October 2026.",
+      "url": "https://www.health.gov.au/our-work/electronic-prescribing"
+    },
+    {
+      "n": 8,
+      "text": "Pharmaceutical Benefits Scheme. Testosterone undecanoate 1 g/4 mL modified release injection, PBS item 10205D, General Schedule, Authority Required; brands Gonadron, Rejunon 1000, Reandron 1000 and Testosterone ADVZ 1000. Accessed 24 October 2026.",
+      "url": "https://www.pbs.gov.au/medicine/item/10205D"
+    },
+    {
+      "n": 9,
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"), page 33 (PBS authority for testosterone) and page 34 (Table 6. Testosterones). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 24 October 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 10,
+      "text": "Therapeutic Goods Administration. Androderm testosterone 12.2 mg per patch transdermal drug delivery system sachet (ARTG 61818), cancelled under Section 30(1)(c) of the Act, date of effect 29 June 2022. Cancellations by sponsors. Accessed 24 October 2026.",
+      "url": "https://www.tga.gov.au/resources/cancellations-by-sponsors/androderm-testosterone-122-mg-patch-transdermal-drug-delivery-system-sachet-cancelled-under-section-301c-act"
+    },
+    {
+      "n": 11,
+      "text": "Therapeutic Goods Administration. Androderm testosterone 24.3 mg per patch transdermal drug delivery system sachet (ARTG 82398), cancelled under Section 30(1)(c) of the Act, date of effect 26 June 2025. Cancellations by sponsors. Accessed 24 October 2026.",
+      "url": "https://www.tga.gov.au/resources/cancellations-by-sponsors/androderm-testosterone-243-mg-patch-transdermal-drug-delivery-system-sachet-cancelled-under-section-301c-act"
+    }
+  ],
   "kicker": "Links in one place"
 }

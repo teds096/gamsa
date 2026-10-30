@@ -54,7 +54,7 @@
       "list": [
         "No independent audit yet.",
         "The PDFs are not fully tagged for screen readers; the same content is on the web pages, which are.",
-        "The Turnstile bot check on forms is Cloudflare's widget and is outside this site's control.",
+        "The Turnstile bot check on forms is Cloudflare's widget and is outside this site's control. If it blocks you, email gamsaenquiries@gmail.com instead.",
         "Read aloud reads the main part of the page you are on, one sentence at a time, and highlights each sentence as it goes. The bar at the bottom of the screen shows which section you are in. Back and Next move a section at a time (Next also skips the rest of a table or diagram), Menu reads the site menu and then goes back to where you were, Speed changes how fast it reads, and Stop closes it. Reference numbers are left out of sentences; the references are offered at the end of the page. It depends on the voices installed on your device; quality varies, and some browsers pause it when the screen locks. If you use a screen reader such as VoiceOver or TalkBack, that will usually work better.",
         "Documents linked from other organisations (TGA, PBS, guidelines) may not be accessible; tell us and we will look for an alternative."
       ]

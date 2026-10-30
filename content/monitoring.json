@@ -1,0 +1,383 @@
+{
+  "title": "Monitoring and related care",
+  "intro": "The care that goes with gender-affirming hormone therapy: blood tests and reviews, getting the timing of a blood test right, fertility, sexual function, PrEP, and hormones around surgery. It is background reading, not a prescription. The forms each medicine comes in and the dose ranges are on the [Medicines, doses and formulations](#/doses) page.",
+  "sections": [
+    {
+      "h": "Blood tests and reviews",
+      "body": [
+        "Blood tests are not something you pass or fail. They tell your prescriber whether the dose is doing what you both want, and whether anything needs watching.",
+        "For feminising therapy, Australia's 2026 standards of care recommend keeping trough oestradiol above about 250 pmol/L, without a fixed upper limit, and total testosterone below 2 nmol/L for people who want full suppression [1]. The 2019 position statement suggested 250–600 pmol/L [2].",
+        "For masculinising therapy, the usual target is a trough total testosterone of about 10–20 nmol/L [1]. Other guidance: the 2019 position statement and the 2020 Australian GP guides suggest 10–15 nmol/L [2][3][4]; Australia's 2026 standards of care, which this site follows, give about 10–20 [1]. Testosterone also thickens the blood, so haematocrit is checked; above about 0.50 the dose or the interval is usually reviewed [2][3]. The product information for several testosterone injections now also warns about SGLT-2 inhibitors, medicines for diabetes, heart failure or kidney disease such as empagliflozin or dapagliflozin. Taken with testosterone, they have been linked to too many red blood cells, so the blood count is checked more closely [5]. This warning is not yet in every product information, so tell your prescriber if you take one, whatever form of testosterone you use [6].",
+        "Reviews cover more than levels: blood pressure, weight, smoking, and how you are going in yourself — mood, energy, sleep, and whether the changes match what you hoped for [2][7].",
+        "Screening follows the organs you have, not your gender and not your hormones [2][7]. If you have a cervix, screening is still due every five years, and collecting your own swab is an option that many people find far easier than a speculum examination [8]. The same logic applies to breast or chest tissue, and to prostate tissue, which genital surgery does not remove [7]."
+      ],
+      "list": [
+        "Feminising — oestradiol and total testosterone; electrolytes and kidney function if you take spironolactone; liver function if you take cyproterone [2][3]",
+        "Masculinising — total testosterone, and a full blood count for haematocrit; liver function and lipids as your prescriber decides [2][3]",
+        "Either therapy — blood pressure and weight at each review; glucose or HbA1c and lipids periodically, particularly if you have other risk factors [2][7]",
+        "Puberty blockers — bone health is monitored, because blockers pause the bone strengthening that puberty normally provides [2][7]",
+        "Before starting — baseline bloods, and a conversation about fertility and about contraception if pregnancy is possible, since neither testosterone nor oestrogen is reliable contraception [2][7]",
+        "Sexual health — STI and blood-borne virus testing as relevant to you, the same as for anyone [7]",
+        "Timing — review roughly every three months through the first year, then every six to twelve months, indefinitely [2][7]. Other guidance: Australia's 2026 standards of care suggest yearly reviews once things are stable [1]. After a change to oestrogen, levels are rechecked six to eight weeks later rather than straight away; after a change to the long-acting testosterone injection, the Equinox guide waits two more injections [3]"
+      ],
+      "note": "Screening and monitoring are easy to lose track of when you move between services. Ask your GP to keep a written list of what is due and when, and ask for a copy yourself.",
+      "nav": "Blood tests and reviews",
+      "figure": {
+        "id": "review-rhythm",
+        "type": "chart-timeline",
+        "form": "milestones",
+        "title": "The usual rhythm of reviews",
+        "sub": "Months after starting, drawn to scale",
+        "alt": "Timeline: blood tests before starting, reviews at 3, 6, 9 and 12 months, then every 6 to 12 months",
+        "long": "Drawn to scale from the start to 12 months: a ring at the start for baseline blood tests, a dot at each review, and a dotted line after 12 months for the reviews that carry on.",
+        "axis": {
+          "to": 12,
+          "more": 3,
+          "label": "Months after starting",
+          "moreLabel": "then every 6–12 months"
+        },
+        "events": [
+          {
+            "at": 0,
+            "ring": true,
+            "tick": "Start"
+          },
+          {
+            "at": 3,
+            "tick": "3"
+          },
+          {
+            "at": 6,
+            "tick": "6"
+          },
+          {
+            "at": 9,
+            "tick": "9"
+          },
+          {
+            "at": 12,
+            "tick": "12"
+          }
+        ],
+        "items": [
+          {
+            "lead": "Before you start:",
+            "text": "baseline blood tests."
+          },
+          {
+            "lead": "First year:",
+            "text": "a review roughly every 3 months, at 3, 6, 9 and 12 months."
+          },
+          {
+            "lead": "After that:",
+            "text": "every 6 to 12 months, indefinitely."
+          },
+          {
+            "lead": "After a dose change:",
+            "text": "levels are rechecked once the new dose has settled: 6 to 8 weeks later for oestrogen, two injections later for the long-acting testosterone injection."
+          }
+        ],
+        "legend": [
+          {
+            "mark": "ring",
+            "text": "Baseline blood tests"
+          },
+          {
+            "mark": "dot",
+            "text": "A review, usually with blood tests"
+          },
+          {
+            "mark": "cont",
+            "text": "Reviews carry on, indefinitely"
+          }
+        ],
+        "easyTitle": "Check-ups and blood tests",
+        "easy": [
+          {
+            "pic": "tube",
+            "text": "You have blood tests before you start."
+          },
+          {
+            "pic": "calendar",
+            "text": "In the first year, you see your doctor about every 3 months."
+          },
+          {
+            "pic": "cycle",
+            "text": "After that, you go every 6 to 12 months (some guides say once a year)."
+          },
+          {
+            "pic": "clock",
+            "text": "If your dose changes, you have a blood test some weeks later. Your doctor tells you when."
+          }
+        ],
+        "caption": "The usual schedule of reviews and blood tests, from the Australian position statement, WPATH Standards of Care version 8 and the Equinox prescribing guide, with Australia's 2026 standards of care for comparison [2][7][3][1].",
+        "note": "Other guidance: Australia's 2026 standards of care suggest a yearly review once things are stable."
+      }
+    },
+    {
+      "h": "Getting the timing of the blood test right",
+      "body": [
+        "When the sample is taken matters as much as what is measured. Most targets in the guidelines are trough levels — the lowest point, just before the next dose is due [2][3].",
+        "A sample drawn at the wrong point can look far too high or too low when nothing is wrong, and lead to a dose change you did not need.",
+        "For Testogel or testosterone cream, your prescriber will usually want the sample in the morning before you apply that day's dose [3][1]. For Testavan, it is taken 2 to 4 hours after applying [1]. For the long-acting injection, the test is booked just before the next injection is due rather than soon after one."
+      ],
+      "note": "Ask for the required timing to be written on your pathology form, and tell the collection centre when your last dose was. It takes ten seconds and it saves repeat tests.",
+      "nav": "Timing your blood test",
+      "figure": {
+        "id": "trough-timing",
+        "type": "chart-timeline",
+        "form": "curve",
+        "title": "Why the timing of the blood test matters",
+        "sub": "The shape of the level after one dose. A picture of the pattern, not real numbers.",
+        "alt": "Curve: the hormone level rises after a dose, then falls to its lowest just before the next dose",
+        "long": "A curve of hormone level against time since the dose. It rises soon after the dose (1), then falls slowly to its lowest point, the trough, just before the next dose is due (2). After the next dose it rises again.",
+        "curve": {
+          "points": [
+            {
+              "x": 3,
+              "y": 90.0
+            },
+            {
+              "x": 6.1,
+              "y": 65.5
+            },
+            {
+              "x": 10.0,
+              "y": 45.2
+            },
+            {
+              "x": 15.3,
+              "y": 30.7
+            },
+            {
+              "x": 24.5,
+              "y": 24.0
+            },
+            {
+              "x": 34.7,
+              "y": 27.8
+            },
+            {
+              "x": 47.0,
+              "y": 36.5
+            },
+            {
+              "x": 60.2,
+              "y": 46.0
+            },
+            {
+              "x": 73.4,
+              "y": 54.2
+            },
+            {
+              "x": 84.0,
+              "y": 59.7
+            },
+            {
+              "x": 91.0,
+              "y": 62.9
+            },
+            {
+              "x": 93.2,
+              "y": 45.4
+            },
+            {
+              "x": 95.4,
+              "y": 32.2
+            },
+            {
+              "x": 97.6,
+              "y": 22.5
+            }
+          ],
+          "base": 92,
+          "guides": [
+            {
+              "x": 3
+            },
+            {
+              "x": 91
+            }
+          ],
+          "xlabel": "Time since the dose",
+          "ylabel": "Hormone level",
+          "ticks": [
+            {
+              "x": 3,
+              "text": "Dose"
+            },
+            {
+              "x": 91,
+              "text": "Next dose"
+            }
+          ]
+        },
+        "key": [
+          {
+            "n": "1",
+            "at": {
+              "x": 24.5,
+              "y": 24.0,
+              "dx": 0,
+              "dy": -24
+            },
+            "lead": "Soon after a dose:",
+            "text": "the level is near its highest. A sample taken here can look far too high."
+          },
+          {
+            "n": "2",
+            "at": {
+              "x": 91,
+              "y": 62.9,
+              "dx": -18,
+              "dy": -26
+            },
+            "here": true,
+            "lead": "Trough:",
+            "text": "the lowest level, just before the next dose is due. Most targets are trough levels, so this is when the sample is usually taken."
+          }
+        ],
+        "note": [
+          "Testogel or cream: the sample is taken in the morning, before that day's dose. Testavan: 2 to 4 hours after applying.",
+          "Ask for the timing to be written on your pathology form."
+        ],
+        "easyTitle": "When to have the blood test",
+        "easy": [
+          {
+            "pic": "curve",
+            "text": "The amount of hormone in your blood goes up and down."
+          },
+          {
+            "pic": "tube",
+            "text": "The blood test is usually just before your next dose."
+          },
+          {
+            "pic": "doc",
+            "text": "Ask for the time to be written on your form."
+          }
+        ],
+        "caption": "Where a trough level sits in a dosing cycle, and why the timing of the sample changes the result. Based on the trough-level targets in the Australian position statement, the Equinox prescribing guide and Australia's 2026 standards of care [2][3][1]."
+      }
+    },
+    {
+      "h": "Fertility: what to know before you start",
+      "body": [
+        "Hormones can lower fertility, and the loss may be permanent, although there is not enough evidence to say how often. Stopping hormones may bring fertility back, but this is not guaranteed and varies from person to person [9].",
+        "Hormones are not contraception. If a pregnancy is possible, contraception is still needed [9]."
+      ],
+      "list": [
+        "Storing sperm or eggs before starting hormones is an option to talk through with your prescriber [9]",
+        "It is not required: you can start hormones without storing sperm or eggs [9]",
+        "If you choose to store them, starting hormones may need to wait [9]",
+        "Storing eggs and storing sperm differ in cost and in how invasive they are [9]",
+        "Adoption is possible in Australia, but it is complex and can take careful planning [9]"
+      ],
+      "note": "The [Trans Health SA directory](https://transhealthsa.com/directory/) lists South Australian practitioners, and its listings show which ones offer fertility services.",
+      "nav": "Fertility"
+    },
+    {
+      "h": "Sexual function on oestrogen and blockers",
+      "body": [
+        "Reduced libido, fewer spontaneous erections and reduced erectile function are recognised effects of oestrogen and androgen blockers. Some people welcome these changes; for others they cause distress [10].",
+        "Australia's 2026 standards of care describe the following options, each considered with your prescriber in light of your own goals [10]."
+      ],
+      "list": [
+        "Reducing the dose of oestrogen or of the androgen blocker, allowing testosterone to rise slightly; this may also bring back some masculinising effects [10]",
+        "Sildenafil or tadalafil, which improve erectile function but do not affect libido [10]",
+        "Low-dose testosterone after an orchidectomy or when testosterone is fully suppressed, with the dose guided by blood tests [10]",
+        "Low-dose testosterone cream applied to the genitals for penile pain associated with oestrogen; the standards note that this is based on clinical experience rather than research [10]",
+        "Support from a mental health professional experienced in gender-affirming care, addressing body image and the emotional aspects of sexual function [10]"
+      ],
+      "nav": "Sexual function"
+    },
+    {
+      "h": "PrEP and hormones",
+      "body": [
+        "PrEP (pre-exposure prophylaxis) is a medicine that prevents HIV. It does not interact with feminising or masculinising hormones, so the two can be taken together [11].",
+        "Australian guidelines suggest that anyone on hormones (including those with a vagina) should take PrEP every day, not only around the time of sex (\"on-demand\") [11].",
+        "PrEP needs regular kidney tests, HIV tests and STI checks. The kidney test matters even more if you also take spironolactone [11]."
+      ],
+      "nav": "PrEP"
+    },
+    {
+      "h": "Hormones around surgery",
+      "body": [
+        "People often ask whether to stop oestrogen or testosterone before an operation, how long before, and when to restart. The question applies to any surgery, not only gender-affirming surgery: any major operation raises the risk of blood clots (venous thromboembolism) [12].",
+        "Australia's 2026 standards of care say there is not enough evidence to stop oestradiol-based therapy routinely around surgery, and that withholding gender-affirming hormones can have significant negative effects. Continuing hormones is particularly important during and after removal of the testes or ovaries (gonadectomy) [12].",
+        "Instead, the plan is individual. It weighs your risk of bleeding and of clots against the effects of going without hormones, and it is made with the surgical team. People at intermediate to high clot risk are recommended clot-prevention medicine, and whether to pause hormones is a shared decision based on your own goals [12].",
+        "Older Australian guidance differs: the 2019 position statement says oestradiol is typically stopped around the time of surgery to avoid clots, and that a blocker is not needed after an orchidectomy [2].",
+        "**Where to read more.** TransHub (ACON) has plain-language pages on each [gender-affirming surgery](https://www.transhub.org.au/trans-folk/#surgeries): facial surgery, orchidectomy, genital reconfiguration surgery, top surgery, breast implants, hysterectomy and vocal surgery. Its [genital reconfiguration surgery page](https://www.transhub.org.au/medical/grs/) notes that some surgeons ask for oestrogen to be reduced for a period before vaginoplasty, and that people with oestradiol implants may time surgery for when blood levels are low. The [Trans Health SA directory](https://transhealthsa.com/directory/) lists South Australian practitioners, including surgeons; it has no surgery information pages."
+      ],
+      "list": [
+        "Tell your surgeon and your prescriber about every medicine you take, including any blocker, progesterone, testosterone injection or implant, and PrEP",
+        "For blockers, progesterone or implants, ask your surgeon and prescriber what to do around your operation",
+        "If you are told to stop a hormone, ask why, for how long, and when you can restart",
+        "Do not stop any other medicine unless your surgeon or prescriber asks you to"
+      ],
+      "note": "Your surgeon and prescriber decide the plan for your operation together. Costs and referrals for gender-affirming surgery are on the [Resources page](#/resources).",
+      "nav": "Around surgery"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 2,
+      "text": "Cheung AS, Wynne K, Erasmus J, Murray S, Zajac JD. Position statement on the hormonal management of adult transgender and gender diverse individuals. Med J Aust. 2019;211(3):127-33. Accessed 17 October 2026.",
+      "url": "https://www.mja.com.au/journal/2019/211/3/position-statement-hormonal-management-adult-transgender-and-gender-diverse"
+    },
+    {
+      "n": 3,
+      "text": "Cundill P, Wong P, Cheung A. Hormone therapy prescribing guide for general practitioners working with trans, gender diverse and non-binary patients, version 3.0. Equinox Gender Diverse Health Centre, Thorne Harbour Health; July 2020 (AusPATH-endorsed). Accessed 16 October 2026.",
+      "url": "https://equinox.org.au/wp-content/uploads/2021/07/ht-prescribing-guideline-v3-aug-2020.pdf"
+    },
+    {
+      "n": 4,
+      "text": "Cundill P. Hormone therapy for trans and gender diverse patients in the general practice setting. Aust J Gen Pract. 2020;49(7):385-90. Accessed 17 October 2026.",
+      "url": "https://www1.racgp.org.au/getattachment/d0c29d2a-ee67-4ef0-a125-65c2694f3cb2/Hormone-therapy-for-trans-and-gender-diverse-patie.aspx"
+    },
+    {
+      "n": 5,
+      "text": "Reandron 1000 (testosterone undecanoate) injection, Australian Product Information, section 4.5 Interactions (date of revision 11 December 2025); the same wording is in the Gonadron (25 February 2026), Rejunon 1000 (17 March 2026) and Sustanon 250 (23 February 2026) product information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/reandron-1000"
+    },
+    {
+      "n": 6,
+      "text": "Testosterone product information without the SGLT-2 inhibitor warning in section 4.5 Interactions (checked 17 October 2026): Testosterone ADVZ 1000 (first approved 13 December 2023, not revised since), Primoteston Depot (date of revision 13 January 2026), Testogel (7 October 2025), Testavan (22 April 2026), AndroForte 5 (10 August 2023) and AndroFeme 1 (19 August 2026). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/testosterone-advz-1000"
+    },
+    {
+      "n": 7,
+      "text": "Coleman E, Radix AE, Bouman WP, et al. Standards of Care for the Health of Transgender and Gender Diverse People, Version 8. Int J Transgend Health. 2022;23(Suppl 1):S1-259. Accessed 24 October 2026.",
+      "url": "https://doi.org/10.1080/26895269.2022.2100644"
+    },
+    {
+      "n": 8,
+      "text": "Australian Centre for the Prevention of Cervical Cancer. Cervical screening for trans and gender diverse people. Canberra: Department of Health, Disability and Ageing; 2025. Accessed 17 October 2026.",
+      "url": "https://www.health.gov.au/sites/default/files/2025-06/cervical-screening-for-trans-and-gender-diverse-people.pdf"
+    },
+    {
+      "n": 9,
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"), page 22 (Effects of GAHT on fertility; GAHT is not a contraceptive). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 24 October 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 10,
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"), pages 53–54 (Penile pain and erectile dysfunction). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 24 October 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 11,
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"), page 36 (Ongoing monitoring of GAHT: kidney function with spironolactone or PrEP) and page 58 (Pre-exposure prophylaxis, citing the ASHM Australian PrEP Guidelines). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 24 October 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 12,
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"), page 59 (Surgery: hormone therapy and clot prevention around surgery). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 24 October 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    }
+  ]
+}

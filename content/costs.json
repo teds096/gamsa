@@ -241,7 +241,7 @@
         "Spironolactone is PBS-listed with no restriction [9]. So is cyproterone acetate 50 mg (item 1270W); its 60-day version, item 14023C, is a restricted benefit, where the restriction is only about the quantity dispensed [8].",
         "Testosterone is different. All the main testosterone products are PBS-listed but need an Authority prescription: the long-acting undecanoate injection, Testogel 1%, Testavan 2% and AndroForte 5 cream [6][10]. Primoteston Depot was deleted from the PBS on 1 February 2018 at the manufacturer's request [28], and Sustanon is not PBS-subsidised, so both are private prescriptions [10][11].",
         "Since 1 October 2026, one GnRH analogue, triptorelin 3.75 mg (Diphereline), has been on the PBS with no restriction (item 9378N), but its listing carries a note that it \"is not for use in gender dysphoria in minors\" [25]. So no GnRH analogue is PBS-subsidised for puberty suppression: goserelin, leuprorelin and the longer-acting triptorelin strengths are PBS-listed only for other conditions. For puberty suppression they are private prescriptions. SA Health's model of care, written in 2023, describes a cost of several thousand dollars a year for a young person who has to buy them privately [12].",
-        "Goserelin 3.6 mg (Zoladex) was due to leave the PBS on 1 November 2026, with a free Zoladex Continuity Program to follow [13]. The sponsor has since told the TGA it will keep supplying the implant and extend PBS access, and goserelin is not on the PBS list of deletions for 1 November 2026 [26][27]. Ask your pharmacist for the current position.",
+        "Goserelin 3.6 mg (Zoladex) was due to leave the PBS on 1 November 2026, with a free Zoladex Continuity Program planned in its place [13]. On 23 September 2026 the sponsor, AstraZeneca, said instead that Zoladex 3.6 mg will stay on the PBS until 1 May 2027, that PBS prescriptions written by 30 April 2027 can be filled until 1 May 2028, and that the Continuity Program will not go ahead [31]. The TGA shortage record still shows the earlier date [26], but goserelin is not on the PBS list of deletions for 1 November 2026 [27]. Ask your pharmacist for the current position.",
         "Compounded products — testosterone or oestradiol implants, some creams — are never PBS-subsidised, because compounded medicines sit outside the scheme [11]."
       ],
       "list": [
@@ -377,11 +377,11 @@
         "id": "brand-premium",
         "type": "chart-bar",
         "title": "What a brand premium adds",
-        "sub": "Example: one script of spironolactone 25 mg, with a concession card",
+        "sub": "Example only: one script of spironolactone 25 mg, with a concession card (PBS list of 17 October 2026)",
         "alt": "Bar chart: the brand with no premium costs the co-payment; a premium brand adds the premium on top",
-        "long": "Two bars on one dollar scale from $0 to $15. Spironolactone Viatris 25, the benchmark brand, costs the $7.70 co-payment. Spiractin 25 costs the same co-payment plus a $4.42 brand premium, {t2} in all; the premium part is hatched.",
+        "long": "Two bars on one dollar scale from $0 to $20. Spironolactone Viatris 25, a brand with no premium, costs the $7.70 co-payment. Aldactone costs the same co-payment plus a $7.33 brand premium, {t2} in all; the premium part is hatched.",
         "axis": {
-          "to": 15,
+          "to": 20,
           "step": 5,
           "pre": "$",
           "label": "What you pay for one script"
@@ -395,10 +395,10 @@
                 "v": "$7.70"
               }
             ],
-            "text": "**$7.70**, the co-payment. No premium: it is the benchmark brand."
+            "text": "**$7.70**, the co-payment. No premium: it is a benchmark brand."
           },
           {
-            "label": "Spiractin 25:",
+            "label": "Aldactone:",
             "segs": [
               {
                 "k": "bar",
@@ -406,10 +406,10 @@
               },
               {
                 "k": "acc",
-                "v": "$4.42"
+                "v": "$7.33"
               }
             ],
-            "text": "$7.70 co-payment + **$4.42** brand premium = **{total}**."
+            "text": "$7.70 co-payment + **$7.33** brand premium = **{total}**."
           }
         ],
         "legend": [
@@ -570,7 +570,7 @@
     },
     {
       "n": 20,
-      "text": "Department of Health. PBS listing change documents for testosterone, July 2024 (FOI 25-0097).",
+      "text": "Department of Health. PBS listing change documents for testosterone, July 2024 (FOI 25-0097). Accessed 24 October 2026.",
       "url": "https://www.health.gov.au/sites/default/files/2025-02/foi-25-0097-ld-documents-for-pbs-listing-change.pdf"
     },
     {
@@ -620,8 +620,13 @@
     },
     {
       "n": 30,
-      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). Published 30 April 2026. Accessed 17 October 2026.",
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 17 October 2026.",
       "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 31,
+      "text": "AstraZeneca Australia. AstraZeneca to extend PBS access to Zoladex (goserelin) monthly (3.6mg) implant (media release): PBS-listed until 1 May 2027; PBS prescriptions written by 30 April 2027 can be filled until 1 May 2028; the Zoladex continuity program will not proceed. Macquarie Park: AstraZeneca; 23 September 2026. Accessed 23 October 2026.",
+      "url": "https://www.astrazeneca.com.au/news/media-releases/2026/ASTRAZENECA-TO-EXTEND-PBS-ACCESS-TO-ZOLADEX-goserelin-MONTHLY-3_6mg-IMPLANT.html"
     }
   ],
   "pbsFigures": {
@@ -629,6 +634,6 @@
     "conc_copay": "7.70",
     "sn_general": "1,748.20",
     "sn_conc": "277.20",
-    "checkedAt": "17 Oct 2026"
+    "checkedAt": "9 Oct 2026"
   }
 }

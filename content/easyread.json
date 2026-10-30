@@ -12,7 +12,7 @@
           "h": "How to use this guide",
           "blocks": [
             {
-              "icon": "people",
+              "icon": "person",
               "lines": [
                 "A pharmacist in Adelaide made this guide.",
                 "When you see the word **we**, it means the pharmacist who runs this website."
@@ -101,7 +101,8 @@
           ]
         }
       ],
-      "audience": "you"
+      "audience": "you",
+      "updated": "2026-10-24"
     },
     {
       "id": "getting",
@@ -167,14 +168,14 @@
           "h": "If you live far from the city",
           "blocks": [
             {
-              "icon": "clock",
+              "icon": "calendar",
               "lines": [
                 "Country pharmacies keep less medicine on the shelf.",
                 "Ask for your medicine a week before you run out."
               ]
             },
             {
-              "icon": "web",
+              "icon": "phone",
               "lines": [
                 "An **e-script** is a prescription on your phone.",
                 "You can send it to any pharmacy in Australia.",
@@ -182,17 +183,25 @@
               ]
             },
             {
-              "icon": "doc",
+              "icon": "phone",
               "lines": [
-                "Your doctor can see you by phone or video. This is called **telehealth**.",
-                "If you must travel a long way to see a specialist, you may get help with the cost.",
+                "Your doctor can see you by phone or video.",
+                "This is called **telehealth**."
+              ]
+            },
+            {
+              "icon": "money",
+              "lines": [
+                "Sometimes you must travel a long way to see a specialist.",
+                "If so, you may get help with the cost.",
                 "In South Australia this help is called **PATS**."
               ]
             }
           ]
         }
       ],
-      "audience": "you"
+      "audience": "you",
+      "updated": "2026-10-24"
     },
     {
       "id": "shortage",
@@ -237,7 +246,8 @@
           ]
         }
       ],
-      "audience": "you"
+      "audience": "you",
+      "updated": "2026-10-24"
     },
     {
       "id": "cost",
@@ -252,13 +262,14 @@
               "lines": [
                 "The government pays for most of the cost of many medicines.",
                 "This is called the **PBS**.",
-                "You pay the rest. This part is called a **co-payment**."
+                "You pay the rest.",
+                "This part is called a **co-payment**."
               ]
             },
             {
               "icon": "card",
               "lines": [
-                "Most people pay up to **$25.00** for a PBS medicine.",
+                "In 2026, most people pay up to **$25.00** for a PBS medicine.",
                 "If you have a concession card, you pay up to **$7.70**."
               ]
             },
@@ -312,7 +323,8 @@
           ]
         }
       ],
-      "audience": "you"
+      "audience": "you",
+      "updated": "2026-10-24"
     },
     {
       "id": "patches-gel",
@@ -353,14 +365,15 @@
           "h": "Gel",
           "blocks": [
             {
-              "icon": "pills",
+              "icon": "patch",
               "lines": [
                 "**Gel** is medicine you rub on your skin, usually once a day.",
-                "Put it where the box says. Let it dry before you get dressed."
+                "Put it where the box says.",
+                "Let it dry before you get dressed."
               ]
             },
             {
-              "icon": "help",
+              "icon": "shield",
               "lines": [
                 "Wash your hands straight after.",
                 "Keep other people and pets away from the gel.",
@@ -377,13 +390,15 @@
             {
               "icon": "question",
               "lines": [
-                "Ask your pharmacist to show you. You can ask to talk somewhere private."
+                "Ask your pharmacist to show you.",
+                "You can ask to talk somewhere private."
               ]
             }
           ]
         }
       ],
-      "audience": "you"
+      "audience": "you",
+      "updated": "2026-10-24"
     },
     {
       "id": "injections",
@@ -394,10 +409,11 @@
           "h": "Before the injection",
           "blocks": [
             {
-              "icon": "doc",
+              "icon": "calendar",
               "lines": [
                 "Some hormone medicines are given as an **injection**.",
-                "Some you have every few weeks. Some you have every few months."
+                "Some you have every few weeks.",
+                "Some you have every few months."
               ]
             },
             {
@@ -426,7 +442,8 @@
               "lines": [
                 "The long-acting testosterone injection is given slowly, into the side of your hip.",
                 "You then wait in the clinic for at least 30 minutes.",
-                "This is normal. It is so staff can help if you have a rare reaction."
+                "This is normal.",
+                "It is so staff can help if you have a rare reaction."
               ]
             },
             {
@@ -448,11 +465,12 @@
               ]
             },
             {
-              "icon": "help",
+              "icon": "warn",
               "lines": [
                 "Some injections and implants pause your body's own sex hormones.",
                 "Zoladex, Lucrin, Eligard and Diphereline work this way.",
-                "They can change your mood. Some people feel very low.",
+                "They can change your mood.",
+                "Some people feel very low.",
                 "A very small number of people have thoughts of suicide.",
                 "Tell your doctor if your mood changes.",
                 "If you feel low or unsafe, ring Lifeline on **13 11 14**, any time."
@@ -465,7 +483,7 @@
           "h": "Injecting at home",
           "blocks": [
             {
-              "icon": "help",
+              "icon": "person",
               "lines": [
                 "Some people learn to give their own injections.",
                 "Only do this after a nurse or doctor has taught you.",
@@ -484,7 +502,8 @@
           "figure": "injection-rotation"
         }
       ],
-      "audience": "you"
+      "audience": "you",
+      "updated": "2026-10-24"
     },
     {
       "id": "tablets",
@@ -504,7 +523,8 @@
             {
               "icon": "question",
               "lines": [
-                "Some tablets go under your tongue instead of being swallowed. The label will say.",
+                "Some tablets go under your tongue instead of being swallowed.",
+                "The label will say.",
                 "If you are not sure, ask your pharmacist."
               ]
             },
@@ -525,7 +545,8 @@
           ]
         }
       ],
-      "audience": "you"
+      "audience": "you",
+      "updated": "2026-10-24"
     },
     {
       "id": "doses",
@@ -547,7 +568,9 @@
               "lines": [
                 "The numbers are in **milligrams (mg)** or **micrograms (mcg)**.",
                 "A microgram is a thousand times smaller than a milligram.",
-                "That is why a patch says 50 mcg and a tablet says 2 mg. They are different ways of taking the medicine, so the amounts are different."
+                "That is why a patch says 50 mcg and a tablet says 2 mg.",
+                "They are different ways of taking the medicine.",
+                "So the amounts are different."
               ]
             }
           ]
@@ -585,7 +608,8 @@
             {
               "icon": "doc",
               "lines": [
-                "You will have **blood tests** from time to time. They show your doctor if the dose is right."
+                "You will have **blood tests** from time to time.",
+                "They show your doctor if the dose is right."
               ]
             },
             {
@@ -599,7 +623,8 @@
           "figure": "review-rhythm"
         }
       ],
-      "audience": "you"
+      "audience": "you",
+      "updated": "2026-10-24"
     },
     {
       "id": "help",
@@ -610,7 +635,7 @@
           "h": "Using your medicine safely",
           "blocks": [
             {
-              "icon": "calendar",
+              "icon": "clock",
               "lines": [
                 "Take your medicine the way your doctor told you.",
                 "Take it at about the same time each day."
@@ -669,10 +694,28 @@
             {
               "icon": "phone",
               "lines": [
-                "SA Mental Health Triage helps in a mental health crisis in South Australia. Ring **13 14 65**, any time.",
-                "If you feel low or unsafe, ring Lifeline on **13 11 14**, any time.",
-                "QLife is for LGBTIQ+ people. Ring **1800 184 527**, 3pm to 9pm, every day.",
-                "13YARN is for Aboriginal and Torres Strait Islander people. Ring **13 92 76**, any time."
+                "SA Mental Health Triage helps in a mental health crisis in South Australia.",
+                "Ring **13 14 65**, any time."
+              ]
+            },
+            {
+              "icon": "phone",
+              "lines": [
+                "If you feel low or unsafe, ring Lifeline on **13 11 14**, any time."
+              ]
+            },
+            {
+              "icon": "phone",
+              "lines": [
+                "QLife is for LGBTIQ+ people.",
+                "Ring **1800 184 527**, 3pm to 9pm, every day."
+              ]
+            },
+            {
+              "icon": "phone",
+              "lines": [
+                "13YARN is for Aboriginal and Torres Strait Islander people.",
+                "Ring **13 92 76**, any time."
               ]
             },
             {
@@ -685,7 +728,8 @@
           ]
         }
       ],
-      "audience": "you"
+      "audience": "you",
+      "updated": "2026-10-24"
     },
     {
       "id": "helping",
@@ -776,7 +820,7 @@
               ]
             },
             {
-              "icon": "phone",
+              "icon": "speak",
               "lines": [
                 "Ask the pharmacist when more is coming.",
                 "Ask if a different brand is OK.",
@@ -809,7 +853,7 @@
           "h": "When to get help",
           "blocks": [
             {
-              "icon": "help",
+              "icon": "phone",
               "lines": [
                 "If something seems wrong, call the doctor or the pharmacist.",
                 "In an emergency call **000**."
@@ -826,7 +870,8 @@
           ]
         }
       ],
-      "audience": "allies"
+      "audience": "allies",
+      "updated": "2026-10-24"
     },
     {
       "id": "ally-medicines",
@@ -849,7 +894,8 @@
               "icon": "shield",
               "lines": [
                 "These are ordinary medicines.",
-                "Doctors use the same medicines for menopause and for people whose bodies make too little hormone."
+                "Doctors use the same medicines for menopause.",
+                "They also use them for people whose bodies make too little hormone."
               ]
             }
           ]
@@ -866,7 +912,7 @@
               ]
             },
             {
-              "icon": "doc",
+              "icon": "calendar",
               "lines": [
                 "Some are injections.",
                 "A nurse or doctor gives the long-acting injection every few months.",
@@ -908,7 +954,8 @@
             }
           ]
         }
-      ]
+      ],
+      "updated": "2026-10-24"
     },
     {
       "id": "ally-problems",
@@ -954,12 +1001,13 @@
           "h": "Signs to act on",
           "blocks": [
             {
-              "icon": "help",
+              "icon": "warn",
               "lines": [
                 "A swollen, painful leg.",
                 "Sudden trouble breathing or chest pain.",
                 "Feeling very unwell after an injection.",
-                "These need urgent help. Call **000**."
+                "These need urgent help.",
+                "Call **000**."
               ]
             },
             {
@@ -990,7 +1038,8 @@
             }
           ]
         }
-      ]
+      ],
+      "updated": "2026-10-24"
     },
     {
       "id": "ally-support",
@@ -1009,7 +1058,7 @@
               ]
             },
             {
-              "icon": "people",
+              "icon": "person",
               "lines": [
                 "Let the person lead.",
                 "They decide what to share and with whom."
@@ -1061,14 +1110,16 @@
             {
               "icon": "phone",
               "lines": [
-                "QLife is a free phone line for LGBTIQ+ people and the people who care about them.",
+                "QLife is a free phone line for LGBTIQ+ people.",
+                "It is also for the people who care about them.",
                 "Call **1800 184 527**, 3pm to 9pm, every day.",
                 "Or chat online at qlife.org.au."
               ]
             }
           ]
         }
-      ]
+      ],
+      "updated": "2026-10-24"
     }
   ],
   "wordlist": [

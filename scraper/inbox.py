@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """Daily inbox check: new feedback messages, pending pharmacist registrations and new patient sightings.
 
-Reads the three admin endpoints with ADMIN_TOKEN (sightings publish immediately, so Ted is told the next day
-and can remove spam with /api/reports?token=…&delete=ID), compares with data/inbox-state.json,
+Reads /api/admin with ADMIN_TOKEN sent in the Authorization header (v19: never in a URL), compares with
+data/inbox-state.json,
 writes an issue body to /tmp/inbox.md when there is anything new, and updates the
 state file. Prints INBOX_NEW when an issue should be opened. Exits 0 always; with no
 token it does nothing.
 
 Privacy: the repository is public, so the issue body, the title, the log and the committed state file hold
-counts and row ids only: never a message, email, name, AHPRA number, pharmacy, suburb or note. Ted reads the
-details in the admin endpoints with his ADMIN_TOKEN. Pending pharmacists have no id, so the state file keeps a
+counts and row ids only: never a message, email, name, AHPRA number, pharmacy, suburb or note. The links in the
+issue open the admin page (https://gamsa.au/admin?feedback=ID …) with ids only; Ted pastes his admin key there once
+per browser tab and acts on each item with a button. Pending pharmacists have no id, so the state file keeps a
 keyed hash of the AHPRA number (HMAC with ADMIN_TOKEN), which cannot be turned back into the number.
 """
 import hashlib, hmac, json, os, pathlib, re, sys
@@ -48,17 +49,36 @@ def ids(rows):
     return ", ".join(str(int(r["id"])) for r in rows if str(r.get("id", "")).strip().isdigit())
 
 
-def body(new_fb, new_pd, new_si=()):
-    """Issue body for the public repository: counts and row ids only, plus where to read the details.
+def new_held(held, state):
+    """Pharmacist reports held for a missing or wrong report key, newer than the last ones reported."""
+    ids_ = [int(x["id"]) for x in held]
+    if "lastHeldId" not in state: return sorted(held, key=lambda x: int(x["id"])), max(ids_, default=0)
+    last = int(state["lastHeldId"])
+    return sorted([x for x in held if int(x["id"]) > last], key=lambda x: int(x["id"])), max([last] + ids_)
+
+
+def link(**q):
+    """Admin page link carrying ids only (never the token)."""
+    return f"{SITE}/admin?" + "&".join(f"{k}={v}" for k, v in q.items())
+
+
+def body(new_fb, new_pd, new_si=(), new_hd=()):
+    """Issue body for the public repository: counts and row ids only, plus admin-page links with ids only.
     Never a message, email, name, AHPRA number, pharmacy, suburb or note (see the module docstring)."""
-    out = ["Counts only: the details stay in the site's database. Open the links below and add your ADMIN_TOKEN in place of …\n"]
+    out = ["Counts only: the details stay in the site's database. Each link opens the admin page; paste your admin key "
+           "(ADMIN_TOKEN) there once, then follow the steps on screen.\n"]
     if new_fb:
-        out.append(f"- **New feedback: {len(new_fb)}** (ids {ids(new_fb)}). Read: {SITE}/api/feedback?token=… · remove one: …&delete=ID")
+        out.append(f"- **New feedback: {len(new_fb)}** (ids {ids(new_fb)}). Read or delete: {link(feedback=ids(new_fb).replace(', ', ','))}")
     if new_pd:
-        out.append(f"- **Pharmacist registrations waiting: {len(new_pd)}**. Read, check on AHPRA, then approve or block: {SITE}/api/pharmacy?token=…")
+        out.append(f"- **Pharmacist registrations waiting: {len(new_pd)}**. Check on AHPRA, then approve or block: {link(show='pharmacists')}")
+    if new_hd:
+        out.append(f"- **Pharmacist reports held (report key missing or wrong): {len(new_hd)}** (ids {ids(new_hd)}). "
+                   f"Publish, send a key, or leave: {link(report=int(new_hd[0]['id'])) if len(new_hd) == 1 else link(show='pharmacists')}")
     if new_si:
-        out.append(f"- **New patient sightings: {len(new_si)}** (ids {ids(new_si)}), already live on the supply page. "
-                   f"Read: {SITE}/api/reports?token=… · remove a wrong or spam one: …&delete=ID")
+        waiting = [x for x in new_si if str(x.get("published", 1)) in ("0", "False", "false")]
+        out.append(f"- **New patient sightings: {len(new_si)}** (ids {ids(new_si)}), "
+                   + (f"{len(waiting)} waiting for you to publish. " if waiting else "already live on the supply page, marked unverified. ")
+                   + f"Check or delete: {link(sighting=int(new_si[0]['id'])) if len(new_si) == 1 else link(show='sightings')}")
     # Never put the admin token in the issue: the repository is public.
     return "\n".join(out) + "\n"
 
@@ -73,9 +93,11 @@ def main():
     if not token:
         print("inbox: ADMIN_TOKEN not set — skipping"); return 0
     out = {}
+    auth = {"Authorization": f"Bearer {token}"}
     try:
-        for key, path, extra in (("feedback", "feedback", {"new": "1"}), ("pending", "pharmacy", {}), ("sightings", "reports", {})):
-            r = requests.get(f"{SITE}/api/{path}", params={"token": token, **extra}, timeout=30)
+        for key, lst, extra in (("feedback", "feedback", {"new": "1"}), ("pending", "pharmacists", {}), ("sightings", "sightings", {})):
+            r = requests.get(f"{SITE}/api/admin", params={"list": lst, **extra}, headers=auth, timeout=30)
+            path = f"admin?list={lst}"
             if r.status_code in (401, 403, 404):
                 # the site rejected the token: GitHub's ADMIN_TOKEN secret does not match Cloudflare's — fail the step so status.json shows it
                 msg = (f"The site rejected GitHub's ADMIN_TOKEN at /api/{path} (HTTP {r.status_code}), so new feedback, pharmacist "
@@ -85,23 +107,28 @@ def main():
                 pathlib.Path("/tmp/inbox.md").write_text(msg + "\n")
                 pathlib.Path("/tmp/inbox-title.txt").write_text("Inbox cannot be read: admin token mismatch")
                 print("INBOX_NEW"); return 0   # opens/comments the "inbox" issue, which GitHub emails to Ted
-            out[key] = r.json().get(key, [])
+            r.raise_for_status()   # e.g. 429 after too many wrong tokens: report it, do not treat it as "nothing new"
+            j = r.json()
+            out[key] = j.get(key, [])
+            if key == "pending": out["held"] = j.get("held", [])
     except Exception as exc:
         print(f"inbox: could not read admin endpoints ({safe(exc)})", file=sys.stderr); return 0
     fb, pd, si = out["feedback"], out["pending"], out["sightings"]
     state = json.loads(STATE.read_text()) if STATE.exists() else {}
     new_fb, new_pd, new_state = diff(fb, pd, state, token)
     new_si, new_state["lastSightingId"] = new_sightings(si, state)
+    new_hd, new_state["lastHeldId"] = new_held(out.get("held", []), state)
     STATE.write_text(json.dumps(new_state, indent=1) + "\n")
-    if not new_fb and not new_pd and not new_si:
-        print("inbox: nothing new (token accepted by all three admin endpoints)"); return 0
-    pathlib.Path("/tmp/inbox.md").write_text(body(new_fb, new_pd, new_si))
+    if not new_fb and not new_pd and not new_si and not new_hd:
+        print("inbox: nothing new (token accepted by the admin endpoint for all three lists)"); return 0
+    pathlib.Path("/tmp/inbox.md").write_text(body(new_fb, new_pd, new_si, new_hd))
     spam = len(new_si) >= 10 or len(new_pd) >= 5 or len(new_fb) >= 15   # far above normal daily volume: possible spam or a bot
     pathlib.Path("/tmp/inbox-title.txt").write_text(("UNUSUAL VOLUME — check for spam: " if spam else "") +
         " / ".join(x for x in [f"New feedback ({len(new_fb)})" if new_fb else "", f"pending pharmacist ({len(new_pd)})" if new_pd else "",
+                            f"held pharmacist reports ({len(new_hd)})" if new_hd else "",
                             f"New sightings ({len(new_si)})" if new_si else ""] if x))
     if new_fb:   # mark as reported so tomorrow's run (or a restored state file) never repeats them
-        try: requests.get(f"{SITE}/api/feedback", params={"token": token, "ack": ",".join(str(f["id"]) for f in new_fb)}, timeout=30)
+        try: requests.post(f"{SITE}/api/admin", json={"action": "ack", "ids": [int(f["id"]) for f in new_fb]}, headers=auth, timeout=30)
         except Exception as exc: print(f"inbox: could not ack ({safe(exc)})", file=sys.stderr)
     print("INBOX_NEW"); return 0
 
