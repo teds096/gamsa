@@ -1,0 +1,90 @@
+name: Monthly check
+
+# Hub item B-13 (shipped in v19, 24 Oct 2026; drafted 23 Oct). Needs no secrets.
+# On the 2nd of each month at about 09:00 Adelaide time it runs the scripted checks that work on a
+# GitHub runner and posts the result to a "monthly" issue, so GitHub emails everyone watching the repo:
+#   1. tools/live_check.py against the live gamsa.au (pages, 404s, headers, script hashes, cookies,
+#      outside services, downloads, redirects, /api/reports). tools/site_check.py is not run: it has no
+#      live part (it builds and tests the site locally with Chromium, axe and the iPhone/iPad checks).
+#   2. data/status.json: did the daily refresh finish in the last 36 hours, and did it pass?
+#   3. A list of every open alert issue (scraper, inbox, pbs, links, pi, down, live, browsers, backup).
+# The judgement parts of the monthly check (PI safety updates, Search Console figures) stay with Claude.
+#
+# GitHub cron runs in UTC. Adelaide is UTC+10:30 in daylight time (early Oct to early Apr) and UTC+9:30
+# otherwise, so there are two lines. In the odd year when daylight time starts or ends on the 1st or 2nd,
+# the run is an hour early or late.
+on:
+  schedule:
+    - cron: '30 22 1 1-4,11,12 *'   # 2nd of Nov-Apr, 09:00 ACDT
+    - cron: '30 23 1 5-10 *'        # 2nd of May-Oct, 09:00 ACST
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  monthly:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Live site check
+        id: live
+        continue-on-error: true
+        env:
+          LIVE_NOWAIT: "1"   # no release to wait for: check what is live now
+        run: |
+          python tools/live_check.py | tee /tmp/live.log
+          grep -q "^FAIL" /tmp/live.log && echo "failed=true" >> "$GITHUB_OUTPUT" || true
+
+      - name: Daily refresh still running
+        id: status
+        continue-on-error: true
+        run: |
+          python - <<'PY' | tee /tmp/status.log
+          import json, datetime, pathlib
+          p = pathlib.Path("data/status.json")
+          if not p.exists():
+              print("FAIL data/status.json is missing")
+          else:
+              s = json.loads(p.read_text())
+              t = datetime.datetime.fromisoformat(s["finishedAt"].replace("Z", "+00:00"))
+              age = (datetime.datetime.now(datetime.timezone.utc) - t).total_seconds() / 3600
+              print(("PASS" if age < 36 else "FAIL") + f" last refresh finished {s['finishedAt']} ({age:.0f} h ago)")
+              print(("PASS" if s.get("ok") else "FAIL") + " last refresh result: " + ("ok" if s.get("ok") else "failed steps " + ", ".join(s.get("failedSteps", []))))
+              print(("FAIL" if s.get("linksBroken") else "PASS") + " outside links (last monthly run)")
+          PY
+          grep -q "^FAIL" /tmp/status.log && echo "failed=true" >> "$GITHUB_OUTPUT" || true
+
+      - name: Post the result to the monthly issue
+        uses: actions/github-script@v8
+        env:
+          LIVE_FAILED: ${{ steps.live.outputs.failed || steps.live.outcome == 'failure' }}
+          STATUS_FAILED: ${{ steps.status.outputs.failed || steps.status.outcome == 'failure' }}
+        with:
+          script: |
+            const fs = require("fs"), o = context.repo.owner, r = context.repo.repo;
+            const read = f => { try { return fs.readFileSync(f, "utf8"); } catch (e) { return "(no output: " + e.message + ")"; } };
+            const bad = process.env.LIVE_FAILED === "true" || process.env.STATUS_FAILED === "true";
+            const labels = ["scraper", "inbox", "pbs", "links", "pi", "down", "live", "browsers", "backup"];
+            const {data: all} = await github.rest.issues.listForRepo({owner: o, repo: r, state: "open", per_page: 100});
+            const alerts = all.filter(i => !i.pull_request && i.labels.some(l => labels.includes(l.name)));
+            const month = new Date().toISOString().slice(0, 7);
+            const body = [
+              (bad ? "**Something needs a look.**" : "**All scripted checks passed.**") + " Monthly check " + month + ".",
+              "", "### Live site", "```", read("/tmp/live.log").trim(), "```",
+              "", "### Daily refresh", "```", read("/tmp/status.log").trim(), "```",
+              "", "### Open alert issues: " + alerts.length,
+              ...(alerts.length ? alerts.map(i => `- #${i.number} ${i.title} (${i.labels.map(l => l.name).join(", ")})`) : ["None."]),
+              "", "Still done by hand each month: PI safety updates and Search Console figures (Claude), pharmacist approvals and backups (Ted).",
+              "Close this issue once read; next month opens a new one."
+            ].join("\n");
+            const {data: open} = await github.rest.issues.listForRepo({owner: o, repo: r, state: "open", labels: "monthly"});
+            if (open.length) await github.rest.issues.createComment({owner: o, repo: r, issue_number: open[0].number, body});
+            else await github.rest.issues.create({owner: o, repo: r, labels: ["monthly"],
+              title: `Monthly check ${month}: ` + (bad ? "needs a look" : "all passed"), body});
