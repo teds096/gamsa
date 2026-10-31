@@ -1,0 +1,12 @@
+# A-05 (24 Oct 2026): Dependabot checks the GitHub Actions used in .github/workflows once a week
+# (actions/checkout, actions/setup-python, actions/github-script and so on) and opens a pull request
+# when a newer version is out. Nothing changes on the site until Ted merges a pull request.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "Actions"
