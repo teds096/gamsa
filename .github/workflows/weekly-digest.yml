@@ -1,215 +1,85 @@
-name: Refresh site data
+name: Weekly digest
 
+# Hub item B-13 (v19, 24 Oct 2026). Needs no secrets.
+# Once a week (Monday about 09:00 Adelaide time) it gathers, for the last 7 days:
+#   1. every failed or timed-out workflow run, grouped by workflow, with a link to the latest one,
+#   2. every open issue (alerts such as scraper, down, live, backup, inbox ...), newest first,
+#   3. issues opened during the week that are already closed again,
+# and writes them into ONE new "Weekly digest" issue (label "digest"). The previous digest issue is closed.
+# GitHub emails new issues to everyone watching the repo; this workflow sends no email itself.
 on:
   schedule:
-    - cron: "0 19 * * *"
-    - cron: "30 19 1 * *"
+    - cron: '30 22 * * 0'   # Sunday 22:30 UTC = Monday 09:00 ACDT / 08:00 ACST
   workflow_dispatch:
 
-permissions: {contents: write, issues: write}
+permissions:
+  actions: read
+  issues: write
+
+concurrency:
+  group: digest
+  cancel-in-progress: false
 
 jobs:
-  refresh:
-    runs-on: ubuntu-24.04   # pinned: ubuntu-latest moves to Ubuntu 26 from 19 Oct 2026
+  digest:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-python@v6
-        with: {python-version: "3.12"}
-      - run: pip install requests beautifulsoup4 rjsmin rcssmin
-
-      - name: Supply data (daily)
-        id: supply
-        timeout-minutes: 15
-        run: python scraper/refresh.py
-
-      - name: Costs and PBS figures (monthly)
-        continue-on-error: true
-        id: costs
-        if: github.event.schedule == '30 19 1 * *' || github.event_name == 'workflow_dispatch'
-        run: python scraper/costs.py
-
-      - name: Brand premiums, listings and substitution (monthly)
-        if: github.event.schedule == '30 19 1 * *' || github.event_name == 'workflow_dispatch'
-        continue-on-error: true
-        id: premiums
-        run: |
-          python scraper/premiums.py | tee /tmp/premiums.log
-          grep -q PREMIUMS_CHANGED /tmp/premiums.log && echo "changed=true" >> "$GITHUB_OUTPUT" || true
-
-      - name: Inbox — new feedback or pending pharmacists (daily)
-        continue-on-error: true
-        id: inbox
-        env:
-          ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
-        run: |
-          python scraper/inbox.py | tee /tmp/inbox.log
-          grep -q INBOX_NEW /tmp/inbox.log && echo "new=true" >> "$GITHUB_OUTPUT" || true
-
-      - name: Check the data still matches the content pages
-        id: check
-        run: python scraper/check.py
-
-      - name: Rebuild the site
-        id: build
-        run: python build.py
-
-      - name: Outside links still work (monthly)
-        if: github.event.schedule == '30 19 1 * *' || github.event_name == 'workflow_dispatch'
-        continue-on-error: true
-        id: links
-        run: |
-          python scraper/links.py | tee /tmp/links.log
-          grep -q LINKS_BROKEN /tmp/links.log && echo "broken=true" >> "$GITHUB_OUTPUT" || true
-
-      - name: Product information revisions (monthly)
-        if: github.event.schedule == '30 19 1 * *' || github.event_name == 'workflow_dispatch'
-        continue-on-error: true
-        timeout-minutes: 10
-        id: pi
-        run: |
-          python scraper/pi_check.py | tee /tmp/pi.log
-          grep -q PI_CHANGED /tmp/pi.log && echo "changed=true" >> "$GITHUB_OUTPUT" || true
-
-      - name: Commit if anything changed
-        id: commit
-        run: |
-          git config user.name "site-bot"
-          git config user.email "actions@github.com"
-          if git diff --quiet; then echo "No change."; else
-            git add -A && git commit -m "Refresh data ($(date -u +%Y-%m-%d))" && git push
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Tell search engines what changed (IndexNow)
-        if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
-        continue-on-error: true
-        run: |
-          sleep 120   # give Cloudflare Pages time to publish the new build
-          python scraper/indexnow.py ${{ github.event_name == 'workflow_dispatch' && 'all' || 'data' }}
-
-      - name: Open an issue if a refresh broke
-        if: (failure() || steps.costs.outcome == 'failure' || steps.premiums.outcome == 'failure') && !cancelled()
+      - name: Write the weekly digest issue
         uses: actions/github-script@v8
         with:
           script: |
-            const {data: open} = await github.rest.issues.listForRepo({
-              owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "scraper"});
-            if (open.length) return;
-            await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo,
-              title: "Data refresh failed - site figures are going stale", labels: ["scraper"],
-              body: "A scheduled refresh failed, so the site is serving its last good data. Usual cause: the TGA or PBS changed their page layout. The site degrades rather than breaking - nothing is overwritten with bad data."});
+            const o = context.repo.owner, r = context.repo.repo;
+            const now = new Date(), since = new Date(now.getTime() - 7 * 864e5);
+            const day = d => new Date(d).toISOString().slice(0, 10);
+            const labelsOf = i => i.labels.map(l => typeof l === "string" ? l : l.name);
+            const isDigest = i => labelsOf(i).includes("digest");
 
-      - name: Close the refresh issue once data refreshes again
-        if: success() && steps.supply.outcome == 'success' && steps.check.outcome == 'success'
-        uses: actions/github-script@v8
-        with:
-          script: |
-            const {data: open} = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "scraper"});
-            for (const i of open) {
-              await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: i.number, body: "Data refreshed successfully again. Closing."});
-              await github.rest.issues.update({owner: context.repo.owner, repo: context.repo.repo, issue_number: i.number, state: "closed"});
+            // 1. failed runs: one query per bad result keeps each list small (the API caps a search at 1,000 runs)
+            const runs = [];
+            for (const status of ["failure", "timed_out", "startup_failure"]) {
+              try {
+                runs.push(...await github.paginate(github.rest.actions.listWorkflowRunsForRepo,
+                  {owner: o, repo: r, status, created: ">=" + day(since), per_page: 100}));
+              } catch (e) { core.warning(`could not list ${status} runs: ${e.message}`); }
             }
+            const failed = runs.filter(x => new Date(x.created_at) >= since && x.name !== "Weekly digest");
+            const byWf = {};
+            for (const x of failed) (byWf[x.name] = byWf[x.name] || []).push(x);
+            const wfLines = Object.entries(byWf)
+              .sort((a, b) => b[1].length - a[1].length)
+              .map(([name, xs]) => {
+                xs.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+                return `- **${name}**: ${xs.length} failed run${xs.length > 1 ? "s" : ""}, latest ${day(xs[0].created_at)} ([open it](${xs[0].html_url}))`;
+              });
 
-      - name: Note when brand premiums or listings changed
-        if: steps.premiums.outputs.changed == 'true'
-        uses: actions/github-script@v8
-        with:
-          script: |
-            const log = require("fs").readFileSync("/tmp/premiums.log", "utf8");
-            const {data: open} = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "pbs"});
-            if (open.length) { core.info("pbs issue already open — not opening another"); return; }
-            await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo,
-              title: "PBS brand premiums or listings changed — check the costs wording", labels: ["pbs"],
-              body: "The monthly PBS check found changes. The figures on the site have updated automatically; read the costs page prose and the affected medicine pages in case the wording needs a human touch.\n\n```\n" + log + "\n```"});
+            // 2. and 3. issues (pull requests are left out)
+            const open = (await github.paginate(github.rest.issues.listForRepo, {owner: o, repo: r, state: "open", per_page: 100}))
+              .filter(i => !i.pull_request && !isDigest(i));
+            const recent = (await github.paginate(github.rest.issues.listForRepo, {owner: o, repo: r, state: "closed", since: since.toISOString(), per_page: 100}))
+              .filter(i => !i.pull_request && !isDigest(i) && new Date(i.created_at) >= since);
+            const line = i => `- #${i.number} ${i.title}` + (labelsOf(i).length ? ` (${labelsOf(i).join(", ")})` : "") +
+              `, opened ${day(i.created_at)}` + (new Date(i.created_at) >= since ? " **new this week**" : "");
 
-      - name: Report broken outside links
-        if: steps.links.outputs.broken == 'true'
-        uses: actions/github-script@v8
-        with:
-          script: |
-            const body = require("fs").readFileSync("/tmp/links.md", "utf8");
-            const {data: open} = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "links"});
-            if (open.length) { await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: open[0].number, body}); return; }
-            await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo, title: "Some outside links on gamsa.au are broken", labels: ["links"], body});
+            const quiet = !failed.length && !open.length;
+            const summary = quiet ? "all quiet" :
+              `${failed.length} failed run${failed.length === 1 ? "" : "s"}, ${open.length} open issue${open.length === 1 ? "" : "s"}`;
+            const body = [
+              quiet ? "**All quiet this week:** no failed workflow runs and no open issues." :
+                "**Something may need a look.** Start with the failed runs, then the open issues.",
+              `Week ${day(since)} to ${day(now)} (UTC).`,
+              "", "### Failed workflow runs", ...(wfLines.length ? wfLines : ["None."]),
+              "", "### Open issues", ...(open.length ? open.map(line) : ["None."]),
+              "", "### Opened and closed again this week", ...(recent.length ? recent.map(line) : ["None."]),
+              "", "Nothing to do on this issue itself: next week's digest closes it.",
+              `Made by the Weekly digest workflow: ${context.serverUrl}/${o}/${r}/actions/runs/${context.runId}`
+            ].join("\n");
 
-      - name: Close the links issue once links are fixed
-        if: steps.links.outcome == 'success' && steps.links.outputs.broken != 'true'
-        uses: actions/github-script@v8
-        with:
-          script: |
-            const {data: open} = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "links"});
-            for (const i of open) {
-              await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: i.number, body: "Latest outside link check found no broken links. Closing."});
-              await github.rest.issues.update({owner: context.repo.owner, repo: context.repo.repo, issue_number: i.number, state: "closed"});
+            const {data: prev} = await github.rest.issues.listForRepo({owner: o, repo: r, state: "open", labels: "digest", per_page: 100});
+            const {data: made} = await github.rest.issues.create({owner: o, repo: r, labels: ["digest"],
+              title: `Weekly digest ${day(now)}: ${summary}`, body});
+            for (const i of prev) {
+              await github.rest.issues.createComment({owner: o, repo: r, issue_number: i.number, body: `Replaced by #${made.number}. Closing.`});
+              await github.rest.issues.update({owner: o, repo: r, issue_number: i.number, state: "closed"});
             }
-
-      - name: Report revised product information
-        if: steps.pi.outputs.changed == 'true'
-        uses: actions/github-script@v8
-        with:
-          script: |
-            const body = require("fs").readFileSync("/tmp/pi.md", "utf8");
-            const {data: open} = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "pi"});
-            if (open.length) { await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: open[0].number, body}); return; }
-            await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo, title: "Product information revised - re-check medicine pages", labels: ["pi"], body});
-
-      - name: Tell Ted about new feedback or registrations
-        if: steps.inbox.outputs.new == 'true'
-        uses: actions/github-script@v8
-        with:
-          script: |
-            const fs = require("fs");
-            const body = fs.readFileSync("/tmp/inbox.md", "utf8"), title = fs.readFileSync("/tmp/inbox-title.txt", "utf8").trim();
-            const {data: open} = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "inbox"});
-            if (open.length) {
-              await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: open[0].number, body: "**" + title + "**\n\n" + body});
-            } else {
-              await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo, title, body, labels: ["inbox"]});
-            }
-
-      # Run metadata for the external health check. Written and committed on every run,
-      # success or failure. Never read by build.py and never a drift-guard input.
-      - name: Write run status
-        if: always()
-        uses: actions/github-script@v8
-        with:
-          script: |
-            const fs = require("fs");
-            const outcomes = {supply: "${{ steps.supply.outcome }}", costs: "${{ steps.costs.outcome }}", premiums: "${{ steps.premiums.outcome }}",
-              inbox: "${{ steps.inbox.outcome }}", check: "${{ steps.check.outcome }}", build: "${{ steps.build.outcome }}", links: "${{ steps.links.outcome }}", commit: "${{ steps.commit.outcome }}"};
-            const failed = Object.keys(outcomes).filter(k => outcomes[k] === "failure");
-            let issue = null;
-            try {
-              const {data: open} = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "scraper"});
-              if (open.length) issue = open[0].html_url;
-            } catch (e) { core.warning("could not list issues: " + e.message); }
-            const status = {finishedAt: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"), ok: failed.length === 0, failedSteps: failed,
-              issue, monthlyCostsRun: outcomes.costs !== "skipped", linksBroken: "${{ steps.links.outputs.broken }}" === "true"};
-            fs.mkdirSync("data", {recursive: true});
-            fs.writeFileSync("data/status.json", JSON.stringify(status, null, 2) + "\n");
-            core.info(JSON.stringify(status));
-
-      - name: Commit run status
-        if: always()
-        continue-on-error: true
-        run: |
-          git config user.name "site-bot"
-          git config user.email "actions@github.com"
-          git add data/status.json
-          git diff --cached --quiet || (git commit -m "Run status ($(date -u +%Y-%m-%dT%H:%MZ))" && git push)
-
-      # Hub item B-13 (v19). Healthchecks.io emails when a daily run is missed or fails (a run that never
-      # starts opens no issue). Secret HEALTHCHECKS_URL (the ping address); without it this step skips.
-      - name: Tell Healthchecks.io the run finished
-        if: always()
-        continue-on-error: true
-        env:
-          HC_URL: ${{ secrets.HEALTHCHECKS_URL }}
-          JOB_STATUS: ${{ job.status }}
-        run: |
-          [ -n "$HC_URL" ] || { echo "Secret HEALTHCHECKS_URL not set, skipping"; exit 0; }
-          if [ "$JOB_STATUS" = "success" ]; then
-            curl -fsS -m 10 --retry 3 -o /dev/null "$HC_URL"
-          else
-            curl -fsS -m 10 --retry 3 -o /dev/null "$HC_URL/fail"
-          fi
+            await core.summary.addRaw(`Weekly digest #${made.number}: ${summary}`).write();
