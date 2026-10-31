@@ -102,8 +102,8 @@ with sync_playwright() as pw:
         chk(pg.evaluate("document.querySelector('.view.on h1').textContent").strip()!="" and pg.evaluate("(document.querySelectorAll('.view.on section.block').length>=3||document.querySelectorAll('.view.on .tile').length>=3)"), f"{r} renders sections or tiles")
     chk(pg.evaluate("document.querySelector('.ack p').textContent").startswith("GAMSA acknowledges the Kaurna"), "acknowledgement of country in footer")
     # read-aloud + figure window still work in path mode
-    pg.goto(B+"/doses"); pg.wait_for_timeout(600)   # a figure with a drawing (Costs has only words and charts)
-    pg.query_selector_all("#v-doses figure .gf-art")[0].click(); pg.wait_for_timeout(300)
+    pg.goto(B+"/monitoring"); pg.wait_for_timeout(600)   # a figure with a drawing (Costs has only words and charts)
+    pg.query_selector_all("#v-monitoring figure .gf-art")[0].click(); pg.wait_for_timeout(300)
     chk(pg.locator("#figZoom").is_visible(), "diagram window opens in path mode")
     wf=pg.evaluate(WHOLE_FIG); chk(wf=="ok", "path mode: the figure window shows the whole figure ("+wf+")")
     inside=[]

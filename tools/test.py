@@ -98,8 +98,8 @@ with sync_playwright() as pw:
     pg.evaluate("document.getElementById('ttsStop').click()")
 
     # figure window on mobile (touch)
-    pg.goto(url+"#/doses"); pg.wait_for_timeout(900)   # the Costs figures are words and charts now (no drawing to enlarge)
-    figs=pg.query_selector_all("#v-doses figure .gf-art")
+    pg.goto(url+"#/monitoring"); pg.wait_for_timeout(900)   # the Costs figures are words and charts now (no drawing to enlarge)
+    figs=pg.query_selector_all("#v-monitoring figure .gf-art")
     figs[0].tap(); pg.wait_for_timeout(500)
     chk(pg.locator("#figZoom").is_visible(), "diagram window opens on tap")
     lbb=pg.locator("#figZoom").bounding_box()

@@ -220,7 +220,7 @@ def figures():
         import socket; s_ = socket.socket(); up = s_.connect_ex(("127.0.0.1", 8767)) == 0; s_.close()
         if not up: raise RuntimeError("local server not running")
         from playwright.sync_api import sync_playwright
-        routes = sorted({"/using", "/costs", "/doses"} | {"/easy/" + g["id"] for g in c["easyread"]["guides"] for s in g["sections"] if s.get("figure")}
+        routes = sorted({"/using", "/costs", "/doses", "/monitoring"} | {"/easy/" + g["id"] for g in c["easyread"]["guides"] for s in g["sections"] if s.get("figure")}
                         | {"/medicines/estradiol-patches", "/medicines/estradiol-tablets", "/medicines/cyproterone-acetate"})
         with sync_playwright() as p:
             b = p.chromium.launch(**({"executable_path": CHROME} if CHROME else {}))
@@ -311,6 +311,22 @@ def browser_checks():
         out(not bad, "print", "; ".join(bad) or "A4 print layout OK")
         b.close()
 
+def _engine_route(r):
+    """Serve only the local test server. WebKit obeys the page's 'upgrade-insecure-requests' rule even for
+    127.0.0.1 (Chromium and Firefox exempt localhost), so it tried https on the http test server, the site
+    script never loaded and every JS-rendered page looked empty (GitHub issue 19, 31 Oct 2026). Strip that
+    one directive from the HTML and the CSP header before the engine sees it; the live https site is unaffected."""
+    import re
+    if "127.0.0.1" not in r.request.url: return r.abort()
+    resp = r.fetch()
+    headers = {k: v for k, v in resp.headers.items() if k.lower() not in ("content-encoding", "content-length", "transfer-encoding")}
+    for k in list(headers):
+        if k.lower() == "content-security-policy": headers[k] = re.sub(r"\s*upgrade-insecure-requests;?", "", headers[k])
+    if "text/html" in resp.headers.get("content-type", ""):
+        r.fulfill(status=resp.status, headers=headers, body=re.sub(r"\s*upgrade-insecure-requests;?", "", resp.text()))
+    else:
+        r.fulfill(response=resp)
+
 def engines():
     from playwright.sync_api import sync_playwright
     with sync_playwright() as p:
@@ -320,7 +336,7 @@ def engines():
                 out(None, f"engine {name}", "not installed (python3 -m playwright install " + name + ")"); continue
             bad = []
             for w, h in ((390, 844), (1280, 900)):
-                c = eb.new_context(viewport={"width": w, "height": h}); c.route("**/*", lambda r: r.abort() if "127.0.0.1" not in r.request.url else r.continue_())
+                c = eb.new_context(viewport={"width": w, "height": h}); c.route("**/*", _engine_route)
                 q = c.new_page(); errs = []; q.on("pageerror", lambda e: errs.append(str(e)[:80]))
                 for r in ("/", "/clinicians", "/costs", "/supply", "/medicines/estradiol-patches", "/easy/helping"):
                     q.goto(B + r); q.evaluate("document.fonts.ready.then(()=>1)"); q.wait_for_timeout(300)
@@ -333,6 +349,8 @@ def engines():
                           +' buttons ['+[...document.querySelectorAll('nav.main > *, .bar-r > *')].map(W).join(',')+']'
                           +' font '+(document.fonts.check('16px "Public Sans"')?'loaded':'NOT loaded')+' cur '+[...document.querySelectorAll('.ng.cur')].length;})()""")
                         bad.append(f"overflow {w}px {r}: {who}; {hdr}")
+                    try: q.wait_for_selector(".view.on h1", timeout=8000)  # WebKit can take over 300 ms to show the view (issue 19)
+                    except Exception: pass
                     if not q.evaluate("!!document.querySelector('.view.on h1')"): bad.append(f"no content {w}px {r}")
                 try:
                     q.goto(B + "/"); q.wait_for_timeout(300); q.click("#a11yBtn"); q.wait_for_timeout(300)
@@ -341,7 +359,7 @@ def engines():
                 if errs: bad.append(f"JS error {w}px: {errs[0]}")
                 c.close()
             eb.close()
-            out(not bad, f"engine {name}", "; ".join(bad[:4]) or "renders cleanly at phone and desktop width")
+            out(not bad, f"engine {name}", "; ".join(bad[:8]) or "renders cleanly at phone and desktop width")
 
 if __name__ == "__main__":
     if "--engines-only" in sys.argv: engines(); sys.exit(0)
