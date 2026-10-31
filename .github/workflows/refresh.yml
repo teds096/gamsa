@@ -197,3 +197,19 @@ jobs:
           git config user.email "actions@github.com"
           git add data/status.json
           git diff --cached --quiet || (git commit -m "Run status ($(date -u +%Y-%m-%dT%H:%MZ))" && git push)
+
+      # Hub item B-13 (v19). Healthchecks.io emails when a daily run is missed or fails (a run that never
+      # starts opens no issue). Secret HEALTHCHECKS_URL (the ping address); without it this step skips.
+      - name: Tell Healthchecks.io the run finished
+        if: always()
+        continue-on-error: true
+        env:
+          HC_URL: ${{ secrets.HEALTHCHECKS_URL }}
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          [ -n "$HC_URL" ] || { echo "Secret HEALTHCHECKS_URL not set, skipping"; exit 0; }
+          if [ "$JOB_STATUS" = "success" ]; then
+            curl -fsS -m 10 --retry 3 -o /dev/null "$HC_URL"
+          else
+            curl -fsS -m 10 --retry 3 -o /dev/null "$HC_URL/fail"
+          fi
