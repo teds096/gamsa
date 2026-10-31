@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-24.04   # pinned: ubuntu-latest moves to Ubuntu 26 from 19 Oct 2026
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         with: {python-version: "3.12"}
       - run: pip install requests beautifulsoup4 rjsmin rcssmin
 
