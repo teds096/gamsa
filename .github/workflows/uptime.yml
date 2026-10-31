@@ -37,7 +37,7 @@ jobs:
           echo "Failed:$fail"
 
       - name: Open or close the down issue
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         env:
           FAIL: ${{ steps.c.outputs.fail }}
         with:

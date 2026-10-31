@@ -62,7 +62,7 @@ jobs:
           grep -q "^FAIL" /tmp/status.log && echo "failed=true" >> "$GITHUB_OUTPUT" || true
 
       - name: Post the result to the monthly issue
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         env:
           LIVE_FAILED: ${{ steps.live.outputs.failed || steps.live.outcome == 'failure' }}
           STATUS_FAILED: ${{ steps.status.outputs.failed || steps.status.outcome == 'failure' }}
