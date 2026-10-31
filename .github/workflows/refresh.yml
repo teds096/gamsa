@@ -89,7 +89,7 @@ jobs:
 
       - name: Open an issue if a refresh broke
         if: (failure() || steps.costs.outcome == 'failure' || steps.premiums.outcome == 'failure') && !cancelled()
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const {data: open} = await github.rest.issues.listForRepo({
@@ -101,7 +101,7 @@ jobs:
 
       - name: Close the refresh issue once data refreshes again
         if: success() && steps.supply.outcome == 'success' && steps.check.outcome == 'success'
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const {data: open} = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "scraper"});
@@ -112,7 +112,7 @@ jobs:
 
       - name: Note when brand premiums or listings changed
         if: steps.premiums.outputs.changed == 'true'
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const log = require("fs").readFileSync("/tmp/premiums.log", "utf8");
@@ -124,7 +124,7 @@ jobs:
 
       - name: Report broken outside links
         if: steps.links.outputs.broken == 'true'
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const body = require("fs").readFileSync("/tmp/links.md", "utf8");
@@ -134,7 +134,7 @@ jobs:
 
       - name: Close the links issue once links are fixed
         if: steps.links.outcome == 'success' && steps.links.outputs.broken != 'true'
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const {data: open} = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "links"});
@@ -145,7 +145,7 @@ jobs:
 
       - name: Report revised product information
         if: steps.pi.outputs.changed == 'true'
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const body = require("fs").readFileSync("/tmp/pi.md", "utf8");
@@ -155,7 +155,7 @@ jobs:
 
       - name: Tell Ted about new feedback or registrations
         if: steps.inbox.outputs.new == 'true'
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const fs = require("fs");
@@ -171,7 +171,7 @@ jobs:
       # success or failure. Never read by build.py and never a drift-guard input.
       - name: Write run status
         if: always()
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const fs = require("fs");

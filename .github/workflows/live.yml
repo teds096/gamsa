@@ -32,7 +32,7 @@ jobs:
           python tools/live_check.py | tee /tmp/live.log
           grep -q "^FAIL" /tmp/live.log && echo "failed=true" >> "$GITHUB_OUTPUT" || true
       - name: Open or close the live issue
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         env:
           FAILED: ${{ steps.c.outputs.failed }}
         with:

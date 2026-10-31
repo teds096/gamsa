@@ -34,7 +34,7 @@ jobs:
           python tools/extra_checks.py --engines-only | tee /tmp/engines.log
           grep -q "^FAIL" /tmp/engines.log && echo "failed=true" >> "$GITHUB_OUTPUT" || true
       - name: Open or close the browsers issue
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         env:
           FAILED: ${{ steps.e.outputs.failed }}
         with:
