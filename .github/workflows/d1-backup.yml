@@ -114,7 +114,7 @@ jobs:
 
       - name: Open or close the backup issue
         if: always() && !cancelled()
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         env:
           OK: ${{ job.status == 'success' }}
           DB: ${{ steps.secrets.outputs.ready }}
