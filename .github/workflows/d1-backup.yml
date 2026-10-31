@@ -1,70 +1,135 @@
-name: Weekly analytics
+name: Monthly backup
 
-# Hub item B-23 (v19, 24 Oct 2026). Secrets, by name only: CLOUDFLARE_ANALYTICS_TOKEN (read-only Cloudflare
-# token: Account > Account Analytics > Read) and CLOUDFLARE_ACCOUNT_ID. Until both exist the run says
-# "secret ... not set, skipping" and stays green.
-# Every Monday it asks Cloudflare Web Analytics for last week's totals (Monday to Sunday, Adelaide time) and
-# writes data/analytics.json: page views, visits, top pages, outside referrer hosts and countries. Totals only:
-# no IP addresses or visitor-level data, and anything under 3 page views is folded into "(other)".
-# data/analytics.json is a data file for the hub: never in a release zip and never read by build.py.
-# Runs at a quiet hour so its commit does not race the daily refresh (19:00 UTC).
-# A failed run shows up in the Weekly digest issue.
+# Hub item A-09 (shipped in v19, 24 Oct 2026; drafted 23 Oct). Secrets, by name only:
+# CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID and BACKUP_PASSPHRASE (see tools-local/workflow-drafts/README.md).
+# Until all three exist the database part says "secret ... not set, skipping" and the run stays green;
+# the repo zip is made either way.
+#
+# Once a month, at a quiet hour, it:
+#   1. exports the D1 database "gamsa" with wrangler (feedback, pharmacists, reports, sightings),
+#   2. encrypts it with gpg (AES-256, BACKUP_PASSPHRASE), checks it decrypts again, and destroys the plain copy,
+#   3. uploads the encrypted file as a workflow artifact kept for 90 days,
+#   4. uploads a zip of the repo (public anyway) as a second artifact, also kept for 90 days.
+# PRIVACY: the database holds feedback emails and pharmacists' names, AHPRA numbers and emails. The repo is
+# public and anyone signed in to GitHub can download its artifacts, so only the ENCRYPTED file is ever
+# uploaded, and nothing is ever committed (this workflow has read-only access to the repo).
+# The export briefly blocks other database requests, so it runs at about 03:15 Adelaide time (02:15 in winter).
 on:
   schedule:
-    - cron: '40 2 * * 1'   # Monday 02:40 UTC = 13:10 ACDT / 12:10 ACST
+    - cron: '45 16 1 * *'   # 1st 16:45 UTC = 2nd 03:15 ACDT / 02:15 ACST
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  issues: write
 
 concurrency:
-  group: analytics
+  group: backup
   cancel-in-progress: false
 
 jobs:
-  analytics:
+  backup:
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
-      - name: Check the analytics secrets are set
+      - name: Check the backup secrets are set
         id: secrets
         env:
-          CLOUDFLARE_ANALYTICS_TOKEN: ${{ secrets.CLOUDFLARE_ANALYTICS_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          BACKUP_PASSPHRASE: ${{ secrets.BACKUP_PASSPHRASE }}
         run: |
           missing=""
-          [ -n "$CLOUDFLARE_ANALYTICS_TOKEN" ] || missing="$missing CLOUDFLARE_ANALYTICS_TOKEN"
+          [ -n "$CLOUDFLARE_API_TOKEN" ] || missing="$missing CLOUDFLARE_API_TOKEN"
           [ -n "$CLOUDFLARE_ACCOUNT_ID" ] || missing="$missing CLOUDFLARE_ACCOUNT_ID"
+          [ -n "$BACKUP_PASSPHRASE" ] || missing="$missing BACKUP_PASSPHRASE"
           if [ -n "$missing" ]; then
-            echo "Secret(s)$missing not set, skipping. Nothing was fetched or committed."
-            echo "Weekly analytics skipped: secret(s)$missing not set." >> "$GITHUB_STEP_SUMMARY"
+            echo "Secret(s)$missing not set, skipping the database backup (the repo zip still runs)."
+            echo "Database backup skipped: secret(s)$missing not set. The repo zip was still made." >> "$GITHUB_STEP_SUMMARY"
             echo "ready=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "ready=true" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+          echo "ready=true" >> "$GITHUB_OUTPUT"
+          # set but too short: a real mistake, so this fails and opens the backup issue
+          if [ "${#BACKUP_PASSPHRASE}" -lt 20 ]; then echo "::error::BACKUP_PASSPHRASE must be at least 20 characters"; exit 1; fi
 
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v7
         if: steps.secrets.outputs.ready == 'true'
+        with:
+          node-version: "22"
 
-      - uses: actions/setup-python@v7
-        if: steps.secrets.outputs.ready == 'true'
-        with: {python-version: "3.12"}
-
-      - name: Fetch last week's totals
+      - name: Export, encrypt and check the database backup
         if: steps.secrets.outputs.ready == 'true'
         env:
-          CLOUDFLARE_ANALYTICS_TOKEN: ${{ secrets.CLOUDFLARE_ANALYTICS_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          CLOUDFLARE_ANALYTICS_SITE_TAG: ${{ vars.CLOUDFLARE_ANALYTICS_SITE_TAG }}
-        run: python tools/analytics.py
-
-      - name: Commit if anything changed
-        if: steps.secrets.outputs.ready == 'true'
+          BACKUP_PASSPHRASE: ${{ secrets.BACKUP_PASSPHRASE }}
+          WRANGLER_SEND_METRICS: "false"
         run: |
-          git config user.name "site-bot"
-          git config user.email "actions@github.com"
-          git add data/analytics.json
-          if git diff --cached --quiet; then echo "No change."; else
-            git commit -m "Weekly analytics ($(date -u +%Y-%m-%d))"
-            git push || (git pull --rebase && git push)
+          set -euo pipefail
+          umask 077
+          day=$(date -u +%Y-%m-%d)
+          plain="$RUNNER_TEMP/plain"; out="$RUNNER_TEMP/backup-d1"
+          mkdir -p "$plain" "$out"
+          trap 'shred -u "$plain"/* 2>/dev/null || rm -f "$plain"/*' EXIT
+          # wrangler finds the database by name with the account token; the output is never printed
+          npx --yes wrangler@4 d1 export gamsa --remote --output "$plain/gamsa.sql" > /dev/null
+          [ -s "$plain/gamsa.sql" ] || { echo "::error::The export is empty"; exit 1; }
+          gpg --batch --yes --pinentry-mode loopback --passphrase-file <(printf '%s' "$BACKUP_PASSPHRASE") \
+              --symmetric --cipher-algo AES256 --output "$out/gamsa-d1-$day.sql.gpg" "$plain/gamsa.sql"
+          # prove the file decrypts with the passphrase before the plain copy is destroyed
+          a=$(sha256sum < "$plain/gamsa.sql")
+          b=$(gpg --batch --quiet --pinentry-mode loopback --passphrase-file <(printf '%s' "$BACKUP_PASSPHRASE") \
+              --decrypt "$out/gamsa-d1-$day.sql.gpg" | sha256sum)
+          [ "$a" = "$b" ] || { echo "::error::The encrypted backup did not decrypt to the same file"; exit 1; }
+          if head -c 200 "$out/gamsa-d1-$day.sql.gpg" | grep -aqiE "create table|insert into|pragma"; then
+            echo "::error::The backup file looks unencrypted; not uploading"; exit 1
           fi
+          echo "Encrypted backup: $(du -h "$out/gamsa-d1-$day.sql.gpg" | cut -f1), tables: $(grep -c '^CREATE TABLE' "$plain/gamsa.sql")"
+
+      - name: Upload the encrypted database backup
+        if: steps.secrets.outputs.ready == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: gamsa-d1-encrypted
+          path: ${{ runner.temp }}/backup-d1/*.sql.gpg
+          retention-days: 90
+          if-no-files-found: error
+          compression-level: 0
+
+      - name: Zip the repo
+        run: |
+          mkdir -p "$RUNNER_TEMP/backup-repo"
+          git archive --format=zip --prefix=gamsa/ -o "$RUNNER_TEMP/backup-repo/gamsa-repo-$(date -u +%Y-%m-%d).zip" HEAD
+
+      - name: Upload the repo zip
+        uses: actions/upload-artifact@v7
+        with:
+          name: gamsa-repo
+          path: ${{ runner.temp }}/backup-repo/*.zip
+          retention-days: 90
+          if-no-files-found: error
+
+      - name: Open or close the backup issue
+        if: always() && !cancelled()
+        uses: actions/github-script@v8
+        env:
+          OK: ${{ job.status == 'success' }}
+          DB: ${{ steps.secrets.outputs.ready }}
+        with:
+          script: |
+            const o = context.repo.owner, r = context.repo.repo;
+            const run = `${context.serverUrl}/${o}/${r}/actions/runs/${context.runId}`;
+            const {data: open} = await github.rest.issues.listForRepo({owner: o, repo: r, state: "open", labels: "backup"});
+            if (process.env.OK !== "true") {
+              const body = "The monthly backup failed, so there is no new database copy this month. Details: " + run;
+              if (open.length) await github.rest.issues.createComment({owner: o, repo: r, issue_number: open[0].number, body});
+              else await github.rest.issues.create({owner: o, repo: r, labels: ["backup"], title: "Monthly backup failed", body});
+            } else if (process.env.DB !== "true") {
+              core.info("Database backup skipped (secrets not set); leaving any backup issue as it is.");
+            } else for (const i of open) {
+              await github.rest.issues.createComment({owner: o, repo: r, issue_number: i.number, body: "Backup worked again: " + run + ". Closing."});
+              await github.rest.issues.update({owner: o, repo: r, issue_number: i.number, state: "closed"});
+            }
