@@ -1,7 +1,7 @@
 {
- "generatedAt": "29 Oct 2026",
+ "generatedAt": "3 Nov 2026",
  "source": "TGA medicine shortage records + manually maintained entries",
- "scrapedCount": 11,
+ "scrapedCount": 24,
  "medicines": [
   {
    "id": "premarin",
@@ -22,7 +22,7 @@
     "Premarin"
    ],
    "ingredient": "conjugated-estrogens",
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "androcur",
@@ -43,7 +43,7 @@
     "Androcur"
    ],
    "ingredient": "cyproterone-acetate",
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "cyprostat",
@@ -71,21 +71,21 @@
    "brand": "Estraderm MX 100",
    "strengthLabel": "100 mcg/24h patch",
    "category": "estrogen",
-   "status": "limited",
-   "statusLabel": "Limited availability",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
    "since": "\u2014",
-   "expectedReturn": "30 Oct 2026",
+   "expectedReturn": "\u2014",
    "mechanism": "SSSI substitution allowed to 28 Feb 2027",
-   "note": "The TGA shortage database lists Estraderm MX 100 as in limited supply until 30 October 2026. Estraderm MX 50 was resolved on 14 October 2026.",
-   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/estradiol-hemihydrate",
-   "sourceLabel": "TGA shortage database",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/estradiol",
+   "sourceLabel": "TGA shortage database (no notice)",
    "genericName": "Estradiol",
    "form": "transdermal patch",
    "brands": [
     "Estraderm MX"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-10-16",
+   "lastVerified": "2026-11-03",
    "pin": true,
    "pinUntil": "2026-10-30"
   },
@@ -107,7 +107,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "estradot-25",
@@ -127,7 +127,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "estradot-50",
@@ -147,7 +147,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "estradot-75",
@@ -167,7 +167,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "estrogel",
@@ -189,7 +189,7 @@
     "Sandrena"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "estalis-50-140",
@@ -210,7 +210,7 @@
     "Estalis Continuous"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "estalis-50-250",
@@ -231,7 +231,7 @@
     "Estalis Continuous"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "progynova",
@@ -252,7 +252,91 @@
     "Progynova"
    ],
    "ingredient": "estradiol-valerate",
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
+  },
+  {
+   "id": "apo-finasteride-1",
+   "brand": "APO-Finasteride 1",
+   "strengthLabel": "1 mg tablet",
+   "category": "adjunct",
+   "status": "in_supply",
+   "statusLabel": "Available",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "Automatically pulled from the TGA shortage record.",
+   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/finasteride",
+   "sourceLabel": "TGA shortage record",
+   "genericName": "Finasteride",
+   "form": "oral tablet",
+   "brands": [
+    "APO-Finasteride 1"
+   ],
+   "ingredient": "finasteride",
+   "lastVerified": "2026-11-03"
+  },
+  {
+   "id": "finapen-1",
+   "brand": "Finapen 1 mg",
+   "strengthLabel": "1 mg tablet",
+   "category": "adjunct",
+   "status": "limited",
+   "statusLabel": "Limited availability",
+   "since": "27 Aug 2026",
+   "expectedReturn": "29 Jan 2027",
+   "mechanism": "\u2014",
+   "note": "Automatically pulled from the TGA shortage record.",
+   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/finasteride",
+   "sourceLabel": "TGA shortage record",
+   "genericName": "Finasteride",
+   "form": "oral tablet",
+   "brands": [
+    "Finapen"
+   ],
+   "ingredient": "finasteride",
+   "lastVerified": "2026-11-03"
+  },
+  {
+   "id": "finasteride-gh-1",
+   "brand": "Finasteride GH 1",
+   "strengthLabel": "1 mg tablet",
+   "category": "adjunct",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/finasteride",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Finasteride",
+   "form": "oral tablet",
+   "brands": [
+    "Finasteride GH 1"
+   ],
+   "ingredient": "finasteride",
+   "lastVerified": "2026-11-03"
+  },
+  {
+   "id": "propecia",
+   "brand": "Propecia",
+   "strengthLabel": "1 mg tablet",
+   "category": "adjunct",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/finasteride",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Finasteride",
+   "form": "oral tablet",
+   "brands": [
+    "Propecia"
+   ],
+   "ingredient": "finasteride",
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "zoladex",
@@ -260,22 +344,235 @@
    "strengthLabel": "Goserelin monthly implant",
    "category": "gnrh-analogue",
    "status": "delisting",
-   "statusLabel": "PBS access being extended (was due to end 1 Nov 2026)",
-   "since": "announced 16 Jul 2026; sponsor update Sep 2026",
+   "statusLabel": "PBS-listed until 1 May 2027 (was due to end 1 Nov 2026)",
+   "since": "announced 16 Jul 2026; AstraZeneca update 23 Sep 2026",
    "expectedReturn": "access change, not a manufacturing shortage",
-   "mechanism": "PBS funding/access change, per TGA/PBS and AstraZeneca notices",
-   "note": "Zoladex 3.6 mg was due to leave the PBS on 1 November 2026. AstraZeneca has since told the TGA it will keep supplying it and extend PBS access, and it is not on the PBS deletions list for 1 November 2026; ask the pharmacist for the current position. This site will check this again after 1 November 2026. Triptorelin 3.75 mg (Diphereline) has had no PBS restriction since 1 October 2026, but its listing is not for use in gender dysphoria in minors.",
-   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/goserelin",
-   "sourceLabel": "TGA shortage database (sponsor update)",
+   "mechanism": "PBS funding/access change, per PBS and AstraZeneca notices",
+   "note": "Zoladex 3.6 mg was due to leave the PBS on 1 November 2026. On 23 September 2026 AstraZeneca said it will stay on the PBS until 1 May 2027, that PBS prescriptions written by 30 April 2027 can be filled until 1 May 2028, and that the free Zoladex Continuity Program will not go ahead. The TGA shortage record still shows the earlier 1 November 2026 date. Ask the pharmacist for the current position. Triptorelin 3.75 mg (Diphereline) has had no PBS restriction since 1 October 2026, but its listing is not for use in gender dysphoria in minors.",
+   "sourceUrl": "https://www.astrazeneca.com.au/news/media-releases/2026/ASTRAZENECA-TO-EXTEND-PBS-ACCESS-TO-ZOLADEX-goserelin-MONTHLY-3_6mg-IMPLANT.html",
+   "sourceLabel": "AstraZeneca media release, 23 Sep 2026",
    "genericName": "Goserelin",
    "form": "subcutaneous implant",
    "brands": [
     "Zoladex"
    ],
-   "lastVerified": "2026-10-29",
+   "lastVerified": "2026-11-03",
    "ingredient": "goserelin",
    "pin": true,
-   "pinUntil": "2026-10-31"
+   "pinUntil": "2027-04-30"
+  },
+  {
+   "id": "isotretinoin-apo-10",
+   "brand": "APO-Isotretinoin 10 mg",
+   "strengthLabel": "10 mg capsule",
+   "category": "adjunct",
+   "status": "shortage",
+   "statusLabel": "Current shortage",
+   "since": "28 Mar 2025",
+   "expectedReturn": "25 Dec 2026",
+   "mechanism": "\u2014",
+   "note": "Automatically pulled from the TGA shortage record.",
+   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/isotretinoin",
+   "sourceLabel": "TGA shortage record",
+   "genericName": "Isotretinoin",
+   "form": "oral capsule",
+   "brands": [
+    "APO-Isotretinoin"
+   ],
+   "ingredient": "isotretinoin",
+   "tgaMatch": [
+    "apo-isotretinoin isotretinoin 10mg"
+   ],
+   "lastVerified": "2026-11-03"
+  },
+  {
+   "id": "isotretinoin-apo-20",
+   "brand": "APO-Isotretinoin 20 mg",
+   "strengthLabel": "20 mg capsule",
+   "category": "adjunct",
+   "status": "shortage",
+   "statusLabel": "Current shortage",
+   "since": "11 Jul 2025",
+   "expectedReturn": "25 Dec 2026",
+   "mechanism": "\u2014",
+   "note": "Automatically pulled from the TGA shortage record.",
+   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/isotretinoin",
+   "sourceLabel": "TGA shortage record",
+   "genericName": "Isotretinoin",
+   "form": "oral capsule",
+   "brands": [
+    "APO-Isotretinoin"
+   ],
+   "ingredient": "isotretinoin",
+   "tgaMatch": [
+    "apo-isotretinoin isotretinoin 20mg"
+   ],
+   "lastVerified": "2026-11-03"
+  },
+  {
+   "id": "isotretinoin-gx-10",
+   "brand": "Isotretinoin Gx 10 mg",
+   "strengthLabel": "10 mg capsule",
+   "category": "adjunct",
+   "status": "shortage",
+   "statusLabel": "Current shortage",
+   "since": "27 Jul 2025",
+   "expectedReturn": "22 Feb 2027",
+   "mechanism": "\u2014",
+   "note": "Automatically pulled from the TGA shortage record.",
+   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/isotretinoin",
+   "sourceLabel": "TGA shortage record",
+   "genericName": "Isotretinoin",
+   "form": "oral capsule",
+   "brands": [
+    "Isotretinoin Gx"
+   ],
+   "ingredient": "isotretinoin",
+   "tgaMatch": [
+    "isotretinoin gx isotretinoin 10mg"
+   ],
+   "lastVerified": "2026-11-03"
+  },
+  {
+   "id": "isotretinoin-gx-20",
+   "brand": "Isotretinoin Gx 20 mg",
+   "strengthLabel": "20 mg capsule",
+   "category": "adjunct",
+   "status": "shortage",
+   "statusLabel": "Current shortage",
+   "since": "08 Jan 2026",
+   "expectedReturn": "26 Feb 2027",
+   "mechanism": "\u2014",
+   "note": "Automatically pulled from the TGA shortage record.",
+   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/isotretinoin",
+   "sourceLabel": "TGA shortage record",
+   "genericName": "Isotretinoin",
+   "form": "oral capsule",
+   "brands": [
+    "Isotretinoin Gx"
+   ],
+   "ingredient": "isotretinoin",
+   "tgaMatch": [
+    "isotretinoin gx isotretinoin 20mg"
+   ],
+   "lastVerified": "2026-11-03"
+  },
+  {
+   "id": "isotretinoin-lupin-10",
+   "brand": "Isotretinoin Lupin 10 mg",
+   "strengthLabel": "10 mg capsule",
+   "category": "adjunct",
+   "status": "shortage",
+   "statusLabel": "Current shortage",
+   "since": "27 May 2025",
+   "expectedReturn": "30 Dec 2026",
+   "mechanism": "\u2014",
+   "note": "Automatically pulled from the TGA shortage record.",
+   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/isotretinoin",
+   "sourceLabel": "TGA shortage record",
+   "genericName": "Isotretinoin",
+   "form": "oral capsule",
+   "brands": [
+    "Isotretinoin Lupin"
+   ],
+   "ingredient": "isotretinoin",
+   "tgaMatch": [
+    "isotretinoin lupin isotretinoin 10 mg"
+   ],
+   "lastVerified": "2026-11-03"
+  },
+  {
+   "id": "isotretinoin-lupin-20",
+   "brand": "Isotretinoin Lupin 20 mg",
+   "strengthLabel": "20 mg capsule",
+   "category": "adjunct",
+   "status": "shortage",
+   "statusLabel": "Current shortage",
+   "since": "05 Nov 2025",
+   "expectedReturn": "30 Dec 2026",
+   "mechanism": "\u2014",
+   "note": "Automatically pulled from the TGA shortage record.",
+   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/isotretinoin",
+   "sourceLabel": "TGA shortage record",
+   "genericName": "Isotretinoin",
+   "form": "oral capsule",
+   "brands": [
+    "Isotretinoin Lupin"
+   ],
+   "ingredient": "isotretinoin",
+   "tgaMatch": [
+    "isotretinoin lupin isotretinoin 20 mg"
+   ],
+   "lastVerified": "2026-11-03"
+  },
+  {
+   "id": "isotretinoin-wgr-10",
+   "brand": "Isotretinoin-WGR 10 mg",
+   "strengthLabel": "10 mg capsule",
+   "category": "adjunct",
+   "status": "shortage",
+   "statusLabel": "Current shortage",
+   "since": "01 Dec 2025",
+   "expectedReturn": "08 Oct 2027",
+   "mechanism": "\u2014",
+   "note": "Automatically pulled from the TGA shortage record.",
+   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/isotretinoin",
+   "sourceLabel": "TGA shortage record",
+   "genericName": "Isotretinoin",
+   "form": "oral capsule",
+   "brands": [
+    "Isotretinoin-WGR"
+   ],
+   "ingredient": "isotretinoin",
+   "tgaMatch": [
+    "isotretinoin-wgr isotretinoin 10mg"
+   ],
+   "lastVerified": "2026-11-03"
+  },
+  {
+   "id": "isotretinoin-wgr-20",
+   "brand": "Isotretinoin-WGR 20 mg",
+   "strengthLabel": "20 mg capsule",
+   "category": "adjunct",
+   "status": "shortage",
+   "statusLabel": "Current shortage",
+   "since": "21 Oct 2025",
+   "expectedReturn": "08 Oct 2027",
+   "mechanism": "\u2014",
+   "note": "Automatically pulled from the TGA shortage record.",
+   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/isotretinoin",
+   "sourceLabel": "TGA shortage record",
+   "genericName": "Isotretinoin",
+   "form": "oral capsule",
+   "brands": [
+    "Isotretinoin-WGR"
+   ],
+   "ingredient": "isotretinoin",
+   "tgaMatch": [
+    "isotretinoin-wgr isotretinoin 20mg"
+   ],
+   "lastVerified": "2026-11-03"
+  },
+  {
+   "id": "oratane",
+   "brand": "Oratane",
+   "strengthLabel": "5 mg to 40 mg capsules",
+   "category": "adjunct",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/isotretinoin",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Isotretinoin",
+   "form": "oral capsule",
+   "brands": [
+    "Oratane"
+   ],
+   "ingredient": "isotretinoin",
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "eligard",
@@ -296,7 +593,7 @@
     "Eligard"
    ],
    "ingredient": "leuprorelin",
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "lucrin",
@@ -318,7 +615,7 @@
     "Eligard"
    ],
    "ingredient": "leuprorelin",
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "provera",
@@ -326,9 +623,9 @@
    "strengthLabel": "Medroxyprogesterone acetate, tablets & injection",
    "category": "progestogen",
    "status": "in_supply",
-   "statusLabel": "Available now; a shortage is expected from 07 Dec 2026",
-   "since": "07 Dec 2026",
-   "expectedReturn": "15 Feb 2027",
+   "statusLabel": "Available",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
    "mechanism": "\u2014",
    "note": "Automatically pulled from the TGA shortage record.",
    "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/medroxyprogesterone-acetate",
@@ -340,7 +637,7 @@
     "Depo-Provera"
    ],
    "ingredient": "medroxyprogesterone-acetate",
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "primolut-n",
@@ -361,7 +658,7 @@
     "Primolut N"
    ],
    "ingredient": "norethisterone",
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "prometrium",
@@ -384,7 +681,7 @@
     "PROGESTERONE-APX"
    ],
    "ingredient": "progesterone",
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "spironolactone",
@@ -407,7 +704,7 @@
     "Spironolactone Viatris"
    ],
    "ingredient": "spironolactone",
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "androforte",
@@ -428,7 +725,7 @@
     "AndroForte 5"
    ],
    "ingredient": "testosterone",
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "testogel",
@@ -449,7 +746,7 @@
     "Testogel"
    ],
    "ingredient": "testosterone",
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
   },
   {
    "id": "reandron",
@@ -470,7 +767,28 @@
     "Reandron 1000"
    ],
    "ingredient": "testosterone-undecanoate",
-   "lastVerified": "2026-10-29"
+   "lastVerified": "2026-11-03"
+  },
+  {
+   "id": "diphereline",
+   "brand": "Diphereline 3.75 mg",
+   "strengthLabel": "Triptorelin 3.75 mg monthly injection",
+   "category": "gnrh-analogue",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Triptorelin",
+   "form": "intramuscular injection",
+   "brands": [
+    "Diphereline"
+   ],
+   "ingredient": "triptorelin",
+   "lastVerified": "2026-11-03"
   }
  ]
 }
