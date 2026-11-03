@@ -1,7 +1,7 @@
 {
  "generatedAt": "3 Nov 2026",
  "source": "TGA medicine shortage records + manually maintained entries",
- "scrapedCount": 24,
+ "scrapedCount": 25,
  "medicines": [
   {
    "id": "premarin",
@@ -759,7 +759,7 @@
    "expectedReturn": "\u2014",
    "mechanism": "No substitution instrument in effect",
    "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
-   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/testosterone-undecanoate",
    "sourceLabel": "TGA shortage database (no notice)",
    "genericName": "Testosterone undecanoate",
    "form": "intramuscular depot injection",
