@@ -1,5 +1,5 @@
 {
- "checkedAt": "17 Oct 2026",
+ "checkedAt": "5 Nov 2026",
  "rows": [
   {
    "brand": "Aldactone",
@@ -139,28 +139,6 @@
    "premium": "4.82",
    "benchmark": [
     "Doryx"
-   ]
-  },
-  {
-   "brand": "Provera",
-   "product": "medroxyprogesterone acetate 5 mg tablet, 56",
-   "packs": "1",
-   "units": "56",
-   "repeats": "2",
-   "premium": "4.42",
-   "benchmark": [
-    "Ralovera"
-   ]
-  },
-  {
-   "brand": "Provera",
-   "product": "medroxyprogesterone acetate 5 mg tablet, 56",
-   "packs": "2",
-   "units": "112",
-   "repeats": "2",
-   "premium": "8.84",
-   "benchmark": [
-    "Ralovera"
    ]
   },
   {
@@ -597,11 +575,11 @@
    "general": "$24.03",
    "brands": [
     {
-     "name": "Ralovera",
+     "name": "Provera",
      "sub": true
     },
     {
-     "name": "Provera",
+     "name": "Ralovera",
      "sub": true
     }
    ]
