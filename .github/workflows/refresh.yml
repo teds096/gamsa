@@ -17,8 +17,12 @@ jobs:
         with: {python-version: "3.12"}
       - run: pip install requests beautifulsoup4 rjsmin rcssmin
 
+      # continue-on-error (v19.4, 2 Nov 2026): a TGA outage (503 from 31 Oct) used to skip the inbox
+      # alert, build and commit too. refresh.py writes nothing when it fails, so later steps are safe;
+      # the failure still opens the scraper issue, marks status.json and pings Healthchecks /fail.
       - name: Supply data (daily)
         id: supply
+        continue-on-error: true
         timeout-minutes: 15
         run: python scraper/refresh.py
 
@@ -36,11 +40,14 @@ jobs:
           python scraper/premiums.py | tee /tmp/premiums.log
           grep -q PREMIUMS_CHANGED /tmp/premiums.log && echo "changed=true" >> "$GITHUB_OUTPUT" || true
 
-      - name: Inbox — new feedback or pending pharmacists (daily)
+      # B-08 (v19.4): on the monthly run (the 1st) the same step also runs the 12-month clean-up (dry-run count, then delete);
+      # a manual run only counts. Same ADMIN_TOKEN, no new secret; numbers only in the log and the run summary.
+      - name: Inbox — new feedback or pending pharmacists (daily); 12-month clean-up (monthly)
         continue-on-error: true
         id: inbox
         env:
           ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
+          TIDY: ${{ github.event.schedule == '30 19 1 * *' && 'run' || (github.event_name == 'workflow_dispatch' && 'dry' || '') }}
         run: |
           python scraper/inbox.py | tee /tmp/inbox.log
           grep -q INBOX_NEW /tmp/inbox.log && echo "new=true" >> "$GITHUB_OUTPUT" || true
@@ -88,7 +95,7 @@ jobs:
           python scraper/indexnow.py ${{ github.event_name == 'workflow_dispatch' && 'all' || 'data' }}
 
       - name: Open an issue if a refresh broke
-        if: (failure() || steps.costs.outcome == 'failure' || steps.premiums.outcome == 'failure') && !cancelled()
+        if: (failure() || steps.supply.outcome == 'failure' || steps.costs.outcome == 'failure' || steps.premiums.outcome == 'failure') && !cancelled()
         uses: actions/github-script@v9
         with:
           script: |
@@ -206,9 +213,10 @@ jobs:
         env:
           HC_URL: ${{ secrets.HEALTHCHECKS_URL }}
           JOB_STATUS: ${{ job.status }}
+          SUPPLY: ${{ steps.supply.outcome }}
         run: |
           [ -n "$HC_URL" ] || { echo "Secret HEALTHCHECKS_URL not set, skipping"; exit 0; }
-          if [ "$JOB_STATUS" = "success" ]; then
+          if [ "$JOB_STATUS" = "success" ] && [ "$SUPPLY" != "failure" ]; then
             curl -fsS -m 10 --retry 3 -o /dev/null "$HC_URL"
           else
             curl -fsS -m 10 --retry 3 -o /dev/null "$HC_URL/fail"
