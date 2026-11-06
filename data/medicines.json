@@ -1,28 +1,28 @@
 {
  "generatedAt": "6 Nov 2026",
  "source": "TGA medicine shortage records + manually maintained entries",
- "scrapedCount": 24,
+ "scrapedCount": 25,
  "medicines": [
   {
    "id": "premarin",
    "brand": "Premarin",
    "strengthLabel": "Conjugated equine estrogens",
    "category": "estrogen",
-   "status": "unverified",
-   "statusLabel": "Not independently confirmed",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
    "since": "\u2014",
    "expectedReturn": "\u2014",
    "mechanism": "\u2014",
-   "note": "Checked daily against the TGA shortage database.",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
    "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/conjugated-estrogens",
-   "sourceLabel": "TGA shortage record (unverified)",
+   "sourceLabel": "TGA shortage database (no notice)",
    "genericName": "Conjugated estrogens",
    "form": "oral tablet",
    "brands": [
     "Premarin"
    ],
    "ingredient": "conjugated-estrogens",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "androcur",
