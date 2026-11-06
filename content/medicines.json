@@ -137,8 +137,9 @@
           "body": [
             "Estradiol patches are PBS-listed on the General Schedule with no restriction attached, so any prescriber can write them and no authority is needed. You pay the standard co-payment [5].",
             "Estradot is listed at 25, 37.5, 50, 75 and 100 micrograms per 24 hours (items 8761D, 8762E, 8763F, 8764G and 8765H). Estraderm MX is listed at 25, 50 and 100 micrograms per 24 hours (items 8311K, 8140K and 8312L) [5].",
-            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70. Once a household's PBS spending reaches the safety net threshold for the calendar year — $1,748.20 for general patients, $277.20 for concession card holders — remaining scripts cost less or nothing for the rest of that year [8].",
-            "If a substitute or imported product is supplied during a shortage, ask your pharmacist whether that specific product is subsidised, because not all of them are [6]."
+            "In 2026 the PBS general patient co-payment is ${{PBS:general_copay}} per script, and the concessional co-payment is ${{PBS:conc_copay}}. Once a household's PBS spending reaches the safety net threshold for the calendar year — ${{PBS:sn_general}} for general patients, ${{PBS:sn_conc}} for concession card holders — remaining scripts cost less or nothing for the rest of that year [8].",
+            "If a substitute or imported product is supplied during a shortage, ask your pharmacist whether that specific product is subsidised, because not all of them are [6].",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 17 October 2026."
           ]
         },
         {
@@ -363,9 +364,10 @@
         {
           "h": "Cost and PBS",
           "body": [
-            "Both brands are PBS-listed on the General Schedule with no restriction, so no authority is needed. Their full price is below $25.00, so general patients pay a little less than the standard co-payment; the PBS box below shows the current charge [6].",
+            "Both brands are PBS-listed on the General Schedule with no restriction, so no authority is needed. Their full price is below ${{PBS:general_copay}}, so general patients pay a little less than the standard co-payment; the PBS box below shows the current charge [6].",
             "Progynova is listed as estradiol valerate 1 mg (item 1663M) and 2 mg (item 1664N) in packs of 56. Zumenon is listed as estradiol 2 mg, 56 tablets (item 8274L) [6].",
-            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70. Once a household's PBS spending reaches the safety net threshold for the year — $1,748.20 for general patients, $277.20 for concession card holders — remaining scripts cost less or nothing for the rest of the calendar year [8]."
+            "In 2026 the PBS general patient co-payment is ${{PBS:general_copay}} per script, and the concessional co-payment is ${{PBS:conc_copay}}. Once a household's PBS spending reaches the safety net threshold for the year — ${{PBS:sn_general}} for general patients, ${{PBS:sn_conc}} for concession card holders — remaining scripts cost less or nothing for the rest of the calendar year [8].",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 17 October 2026."
           ]
         },
         {
@@ -585,7 +587,8 @@
             "Sandrena is PBS-listed on the General Schedule with no restriction — estradiol 0.1% gel, 28 x 1 g sachets, item 8286D [5].",
             "The PBS also lists estradiol 0.1% gel in 28 x 500 mg sachets, and estradiol 0.06% gel at 750 micrograms per actuation in a 64-actuation pack, which is the Estrogel presentation [5].",
             "Gel listings have changed over time and not every gel product has been subsidised in every year, so confirm the current price for the specific product you are being given rather than assuming [5].",
-            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70. Once a household's PBS spending reaches the safety net threshold for the year — $1,748.20 general, $277.20 concessional — remaining scripts cost less or nothing for the rest of the calendar year [7]."
+            "In 2026 the PBS general patient co-payment is ${{PBS:general_copay}} per script, and the concessional co-payment is ${{PBS:conc_copay}}. Once a household's PBS spending reaches the safety net threshold for the year — ${{PBS:sn_general}} general, ${{PBS:sn_conc}} concessional — remaining scripts cost less or nothing for the rest of the calendar year [7].",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 17 October 2026."
           ]
         },
         {
@@ -788,7 +791,8 @@
             "Micronised progesterone 100 mg capsules are PBS-listed on the General Schedule with no restrictions — progesterone 100 mg capsule, 30, item 14730G. The brands listed against that item include Prometrium, Progesterone ADVZ 100 and PROGESTERONE-APX [4].",
             "Because several brands share the item, ask your pharmacist for one with no brand premium if cost matters.",
             "Vaginal progesterone products, including pessaries and gel, are listed separately [4]. The Australian PBS listings for progesterone are not written for gender-affirming care specifically — the General Schedule listing means no authority is required.",
-            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [4][6]."
+            "In 2026 the PBS general patient co-payment is ${{PBS:general_copay}} per script, and the concessional co-payment is ${{PBS:conc_copay}} [4][6].",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 17 October 2026."
           ]
         },
         {
@@ -998,9 +1002,10 @@
           "h": "Cost and PBS",
           "body": [
             "Cyproterone acetate 50 mg tablets (packs of 50) are PBS-listed with no authority needed. Item 1270W (up to 100 tablets a script) has no restriction. Item 14023C (up to 200 tablets, a two-month supply) is a Restricted Benefit. The 100 mg tablets (packs of 50) are listed the same way: item 8019C (up to 50 tablets) has no restriction and item 14022B (up to 100 tablets, a two-month supply) is a Restricted Benefit [5].",
-            "That restriction is about quantity, not about who may have the medicine. The wording is: \"The condition must be stable for the prescriber to consider the listed maximum quantity of this medicine suitable for this patient\" [5].",
-            "Several brands share these items. Anterone and Cyproterone Sandoz are benchmark-priced; Androcur and Androcur-100 carry a small brand premium (PBS, 17 Oct 2026, Androcur 50 mg $1.90 on a two-pack script and $4.00 on a four-pack script; Androcur-100 $1.17 on a one-pack script and $2.34 on a two-pack script), which you pay on top of your co-payment and which does not count towards the Safety Net [5]. Ask your pharmacist for a brand with no premium if cost matters.",
-            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [5][8]."
+            "That restriction is about quantity, not about who may have the medicine. The wording is: \"The condition must be stable for the prescriber to consider the listed maximum quantity of this medicine suitable for this patient.\" [5].",
+            "Several brands share these items. Anterone and Cyproterone Sandoz are benchmark-priced; Androcur and Androcur-100 carry a small brand premium (PBS, 5 Nov 2026, Androcur 50 mg $1.90 on a two-pack script and $4.00 on a four-pack script; Androcur-100 $1.17 on a one-pack script and $2.34 on a two-pack script), which you pay on top of your co-payment and which does not count towards the Safety Net [5]. Ask your pharmacist for a brand with no premium if cost matters.",
+            "In 2026 the PBS general patient co-payment is ${{PBS:general_copay}} per script, and the concessional co-payment is ${{PBS:conc_copay}} [5][8].",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 5 November 2026 (brand premiums) and 6 November 2026 (restriction wording)."
           ]
         },
         {
@@ -1218,9 +1223,10 @@
           "h": "Cost and PBS",
           "body": [
             "Spironolactone is PBS-listed on the General Schedule with no restrictions, so no authority is needed and the standard co-payment applies. The 25 mg tablet, 100 pack, is item 2339D, and the 100 mg tablet, 100 pack, is item 2340E [5].",
-            "Three brands share each item, and two of them carry a brand premium you pay on top of your co-payment. At the PBS check on 17 October 2026, Spironolactone Viatris had no premium; on a one-pack script Spiractin carried $4.42 (25 mg) or $4.37 (100 mg) and Aldactone $7.33 (25 mg) or $7.28 (100 mg) [5].",
+            "Three brands share each item, and two of them carry a brand premium you pay on top of your co-payment. At the PBS check on 5 November 2026, Spironolactone Viatris had no premium; on a one-pack script Spiractin carried $4.42 (25 mg) or $4.37 (100 mg) and Aldactone $7.33 (25 mg) or $7.28 (100 mg) [5].",
             "Brand premiums do not count towards the Safety Net and you still pay them after you have passed it. Ask your pharmacist for the benchmark brand if cost matters — swapping brands of the same medicine is routine.",
-            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70; the yearly Safety Net thresholds are $1,748.20 general and $277.20 concessional [7]."
+            "In 2026 the PBS general patient co-payment is ${{PBS:general_copay}} per script, and the concessional co-payment is ${{PBS:conc_copay}}; the yearly Safety Net thresholds are ${{PBS:sn_general}} general and ${{PBS:sn_conc}} concessional [7].",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 5 November 2026."
           ]
         },
         {
@@ -1238,7 +1244,7 @@
             "Would cyproterone suit me better, given my own health history?",
             "If I need surgery or a general anaesthetic, does spironolactone need to be stopped or adjusted beforehand?",
             "What symptoms of high potassium should I actually watch for day to day?",
-            "Is there a cheaper brand at my strength that avoids the premium I'm currently paying?"
+            "Is there a cheaper brand at my strength with no brand premium?"
           ]
         }
       ],
@@ -1439,8 +1445,9 @@
             "The listed indications on the item are androgen deficiency, micropenis, pubertal induction, and constitutional delay of growth or puberty [4]. Prescribers apply under androgen deficiency, where the PBS criteria read \"Patient must have an established pituitary or testicular disorder\", with prescribing by or in consultation with a specialist (general paediatrician, paediatric endocrinologist, urologist, endocrinologist or sexual health physician), whose name goes on the authority application [4][1]. Australian standards note the specialist consultation only needs to happen once, and the same specialist's name can be used on later applications [7].",
             "The PBS also lists testosterone for a second kind of androgen deficiency: in people aged 40 or over, confirmed by two morning blood tests, and not caused by a pituitary or testicular disorder. That is not the pathway used in gender-affirming care, so if you see it on the item page, it is not the one your prescriber applies under [11][7].",
             "If the authority is missing or expired, the pharmacy cannot charge you the PBS price. The fix is a phone call to your prescriber, not a private price — ask before you pay.",
-            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [4][6].",
-            "The PBS Authority for testosterone, the four PBS brands of the long-acting injection, why there are no testosterone patches, and e-scripts are explained in the [testosterone section of the doses guide](#/doses#sec-doses-4)."
+            "In 2026 the PBS general patient co-payment is ${{PBS:general_copay}} per script, and the concessional co-payment is ${{PBS:conc_copay}} [4][6].",
+            "The PBS Authority for testosterone, the four PBS brands of the long-acting injection, why there are no testosterone patches, and e-scripts are explained in the [testosterone section of the doses guide](#/doses#sec-doses-4).",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 6 November 2026."
           ],
           "note": "Every PBS testosterone item is listed for androgen deficiency and related conditions, not for gender affirmation, so the wording on the screen will not describe you. It is a quirk of a listing written before anyone was thinking about gender-affirming care, and it does not change your entitlement or your price."
         },
@@ -1915,8 +1922,9 @@
             "Testogel is listed as 1% (50 mg/5 g) gel, 30 x 5 g sachets (items 8830R and 13983Y) and as 1% (12.5 mg/actuation) gel, 2 x 60 actuations (items 10380H and 13924W). Testavan is listed as 2% (23 mg/actuation) gel, 56 actuations (items 11740X and 14025E) [5].",
             "The listed indications on these items are androgen deficiency, micropenis, pubertal induction, and constitutional delay of growth or puberty [5].",
             "If the authority is missing or has expired, the pharmacy cannot charge you the PBS price. The fix is a phone call to your prescriber, not a private price — ask before you pay.",
-            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [5][7].",
-            "The PBS Authority for testosterone, the four PBS brands of the long-acting injection, why there are no testosterone patches, and e-scripts are explained in the [testosterone section of the doses guide](#/doses#sec-doses-4)."
+            "In 2026 the PBS general patient co-payment is ${{PBS:general_copay}} per script, and the concessional co-payment is ${{PBS:conc_copay}} [5][7].",
+            "The PBS Authority for testosterone, the four PBS brands of the long-acting injection, why there are no testosterone patches, and e-scripts are explained in the [testosterone section of the doses guide](#/doses#sec-doses-4).",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 17 October 2026."
           ],
           "note": "Every PBS testosterone item is listed for androgen deficiency and related conditions, not for gender affirmation, so the wording on the screen will not describe you. It is a quirk of a listing written before anyone was thinking about gender-affirming care, and it does not change your entitlement or your price."
         },
@@ -2158,8 +2166,9 @@
             "AndroForte 5 is PBS-listed, but Authority Required — testosterone 5% (50 mg/mL) cream, 50 mL, items 10378F and 14563L. Your prescriber arranges the authority before you get to the pharmacy [5].",
             "The listed indications are androgen deficiency, micropenis, pubertal induction, and constitutional delay of growth or puberty [5].",
             "AndroFeme 1 is registered in Australia but is not PBS-subsidised, so it is a private prescription and you pay the pharmacy's full price. The PBAC considered a submission for it in November 2025 and did not recommend listing [6].",
-            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 — this applies to AndroForte 5, not to the private AndroFeme 1 [5][8].",
-            "The PBS Authority for testosterone, the four PBS brands of the long-acting injection, why there are no testosterone patches, and e-scripts are explained in the [testosterone section of the doses guide](#/doses#sec-doses-4)."
+            "In 2026 the PBS general patient co-payment is ${{PBS:general_copay}} per script, and the concessional co-payment is ${{PBS:conc_copay}} — this applies to AndroForte 5, not to the private AndroFeme 1 [5][8].",
+            "The PBS Authority for testosterone, the four PBS brands of the long-acting injection, why there are no testosterone patches, and e-scripts are explained in the [testosterone section of the doses guide](#/doses#sec-doses-4).",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 17 October 2026."
           ],
           "note": "Every PBS testosterone item is listed for androgen deficiency and related conditions, not for gender affirmation, so the wording on the screen will not describe you. It is a quirk of a listing written before anyone was thinking about gender-affirming care, and it does not change your entitlement or your price."
         },
@@ -2405,10 +2414,11 @@
         {
           "h": "Cost and PBS",
           "body": [
-            "Since 1 October 2026, triptorelin 3.75 mg (Diphereline), a monthly injection, has been on the PBS General Schedule with no restriction (item 9378N). Its listing carries a PBS note: \"The listing of this medicine is not for use in gender dysphoria in minors\" [8]. So it does not make puberty suppression PBS-subsidised. Goserelin (Zoladex), leuprorelin (Lucrin, Eligard) and the longer-acting triptorelin strengths (11.25 mg and 22.5 mg) are PBS-listed only for other conditions, such as prostate cancer, endometriosis or central precocious puberty. For puberty suppression, all of them are private prescriptions. SA Health's model of care, written in 2023, noted that a young person who could not get them through a hospital faced a cost of several thousand dollars a year [5].",
+            "Since 1 October 2026, triptorelin 3.75 mg (Diphereline), a monthly injection, has been on the PBS General Schedule with no restriction (item 9378N). Its listing carries a PBS note: \"The listing of this medicine is not for use in gender dysphoria in minors.\" [8]. So it does not make puberty suppression PBS-subsidised. Goserelin (Zoladex), leuprorelin (Lucrin, Eligard) and the longer-acting triptorelin strengths (11.25 mg and 22.5 mg) are PBS-listed only for other conditions, such as prostate cancer, endometriosis or central precocious puberty. For puberty suppression, all of them are private prescriptions. SA Health's model of care, written in 2023, noted that a young person who could not get them through a hospital faced a cost of several thousand dollars a year [5].",
             "Because these medicines have PBS listings for other conditions, a pharmacist may see a subsidised price on screen. That does not make a prescription for puberty suppression a PBS one — ask your prescriber directly whether yours is PBS or private.",
-            "Access to goserelin has been changing. In July 2026 the PBS announced that the goserelin 3.6 mg implant (Zoladex) would leave the PBS on 1 November 2026, with the sponsor supplying it free through a Zoladex Continuity Program [6]. On 23 September 2026 the sponsor, AstraZeneca, said instead that the implant will stay on the PBS until 1 May 2027, that PBS prescriptions written by 30 April 2027 can be filled until 1 May 2028, and that the Continuity Program will not go ahead [15]. The TGA shortage record still shows the earlier date [9], but goserelin is not on the PBS list of deletions for 1 November 2026 [10]. Ask your prescriber or pharmacist for the current position before the next dose is due. This site will check this again after 1 November 2026.",
-            "If this affects you or your child, raise it with your prescriber and your pharmacist well before the next dose is due, not in the week it falls due."
+            "Access to goserelin has been changing. In July 2026 the PBS announced that the goserelin 3.6 mg implant (Zoladex) would leave the PBS on 1 November 2026, with the sponsor supplying it free through a Zoladex Continuity Program [6]. On 23 September 2026 the sponsor, AstraZeneca, said instead that the implant will stay on the PBS until 1 May 2027, that PBS prescriptions written by 30 April 2027 can be filled until 1 May 2028, and that the Continuity Program will not go ahead [15]. It did not leave: in November 2026 it is still PBS-listed, for other conditions only, and the PBS Summary of Changes for 1 November 2026 lists no change to it and no deletion notice for 1 December 2026 or 1 January 2027 [9][10]. The 1 May 2027 date is the sponsor's; the PBS has not yet published an end date. Ask your prescriber or pharmacist for the current position before the next dose is due.",
+            "If this affects you or your child, raise it with your prescriber and your pharmacist well before the next dose is due, not in the week it falls due.",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 6 November 2026."
           ]
         },
         {
@@ -2434,8 +2444,8 @@
       ],
       "links": [
         {
-          "label": "Zoladex 3.6 mg implant Consumer Medicine Information (ACSQHC Medicine Finder)",
-          "url": "https://www.safetyandquality.gov.au/medicine-finder/zoladex-3-6-mg-implant"
+          "label": "Zoladex 3.6 mg implant Product Information and Consumer Medicine Information (TGA search: goserelin)",
+          "url": "https://www.ebs.tga.gov.au/ebs/picmi/picmirepository.nsf/PICMI?OpenForm&t=&q=goserelin"
         },
         {
           "label": "Eligard Consumer Medicine Information (ACSQHC Medicine Finder)",
@@ -2474,8 +2484,8 @@
         },
         {
           "n": 2,
-          "text": "Zoladex 3.6 mg implant SafeSystem (goserelin acetate), Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
-          "url": "https://www.safetyandquality.gov.au/medicine-finder/zoladex-3-6-mg-implant"
+          "text": "Zoladex 3.6 mg implant SafeSystem (goserelin acetate), Australian Consumer Medicine Information. Therapeutic Goods Administration Product Information and Consumer Medicine Information search (goserelin). Accessed 6 November 2026.",
+          "url": "https://www.ebs.tga.gov.au/ebs/picmi/picmirepository.nsf/PICMI?OpenForm&t=&q=goserelin"
         },
         {
           "n": 3,
@@ -2509,23 +2519,23 @@
         },
         {
           "n": 9,
-          "text": "Therapeutic Goods Administration. Medicine Shortage Reports Database: goserelin (Zoladex 3.6 mg implant) — \"Deletion from market: 01 Nov 2026\"; the sponsor has advised that the product will continue to be supplied, with a link to its release on extending PBS access. Canberra: TGA. Accessed 17 October 2026.",
-          "url": "https://apps.tga.gov.au/prod/msi/Search/Details/goserelin"
-        },
-        {
-          "n": 10,
           "text": "Pharmaceutical Benefits Scheme. Summary of Changes, 1 October 2026: triptorelin 3.75 mg (9378N) changed from restricted to unrestricted, with a note added; advance notices of deletions for 1 November 2026 (goserelin is not listed). Canberra: Department of Health, Disability and Ageing. Accessed 17 October 2026.",
           "url": "https://www.pbs.gov.au/changes"
         },
         {
+          "n": 10,
+          "text": "Pharmaceutical Benefits Scheme. Summary of Changes, 1 November 2026: no change to goserelin 3.6 mg implant (1454M) or triptorelin 3.75 mg (9378N); advance notices of deletions for 1 December 2026 and 1 January 2027 do not include goserelin. Canberra: Department of Health, Disability and Ageing. Accessed 6 November 2026.",
+          "url": "https://www.pbs.gov.au/changes"
+        },
+        {
           "n": 11,
-          "text": "Telfer MM, Tollit MA, Pace CC, Pang KC. Australian Standards of Care and Treatment Guidelines for Trans and Gender Diverse Children and Adolescents, version 1.3 (appendices 3 and 4: goserelin, leuprorelin and triptorelin). Melbourne: The Royal Children's Hospital; 2020. Accessed 17 October 2026.",
-          "url": "https://www.rch.org.au/uploadedFiles/Main/Content/adolescent-medicine/australian-standards-of-care-and-treatment-guidelines-for-trans-and-gender-diverse-children-and-adolescents.pdf"
+          "text": "Telfer MM, Tollit MA, Pace CC, Pang KC. Australian Standards of Care and Treatment Guidelines for Trans and Gender Diverse Children and Adolescents, version 1.4 (appendices 3 and 4: goserelin, leuprorelin and triptorelin). Melbourne: The Royal Children's Hospital; 2023. Accessed 2 November 2026.",
+          "url": "https://www.rch.org.au/uploadedFiles/Main/Content/adolescent-medicine/230242%20RCH%20Gender%20Standards%20Booklet%201.4_Nov%202023_WEB.pdf"
         },
         {
           "n": 12,
           "text": "Zoladex 3.6 mg implant (goserelin), Australian Product Information, sections 4.4 and 4.5, QT/QTc interval prolongation (date of revision 6 March 2026); the Zoladex 10.8 mg (28 August 2026), Eligard (22 December 2025), Lucrin Depot (21 February 2025) and Diphereline (8 April 2026) product information carry the same warning in section 4.4. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
-          "url": "https://www.safetyandquality.gov.au/medicine-finder/zoladex-3-6-mg-implant"
+          "url": "https://www.ebs.tga.gov.au/ebs/picmi/picmirepository.nsf/PICMI?OpenForm&t=&q=goserelin"
         },
         {
           "n": 13,
@@ -2645,7 +2655,8 @@
           "body": [
             "Doxycycline is PBS-listed as a Restricted Benefit rather than unrestricted: it can be prescribed on the PBS only for the listed conditions, which are bronchiectasis, chronic bronchitis and severe acne. No phone approval is needed [5][8].",
             "For severe acne the PBS subsidises both strengths: 50 mg plain tablets (item 2711Q, several generic brands, and item 9106G, Doxycycline Sandoz), 50 mg modified-release capsules (item 2707L: Doryx and Mayne Pharma Doxycycline, which both carry a brand premium, $4.74 and $2.41 on a one-pack script, PBS, 17 Oct 2026) and 100 mg tablets (item 10779H). The PBS treats the 50 mg tablets and capsules as interchangeable, so ask for a brand without a premium if cost matters. Other 100 mg listings are for other infections [5].",
-            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [5][7]."
+            "In 2026 the PBS general patient co-payment is ${{PBS:general_copay}} per script, and the concessional co-payment is ${{PBS:conc_copay}} [5][7].",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 17 October 2026."
           ]
         },
         {
@@ -2826,7 +2837,8 @@
           "body": [
             "Epiduo (adapalene 0.1% / benzoyl peroxide 2.5% gel, 30 g) is PBS-listed as a Restricted Benefit for severe acne vulgaris: item 8954G for a course of acute treatment used together with an oral antibiotic, and item 8955H for maintenance treatment [4].",
             "Epiduo Forte (adapalene 0.3%) is not PBS-listed, so it is a private prescription and you pay the pharmacy's price [4].",
-            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [4][5]."
+            "In 2026 the PBS general patient co-payment is ${{PBS:general_copay}} per script, and the concessional co-payment is ${{PBS:conc_copay}} [4][5].",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 17 October 2026."
           ]
         },
         {
@@ -3023,9 +3035,10 @@
         {
           "h": "Cost and PBS",
           "body": [
-            "Isotretinoin is PBS-listed, Authority Required (Streamlined), for \"severe cystic acne\" — for example, the 30 mg capsule, 60 pack, item 11921K [5].",
+            "Isotretinoin is PBS-listed, Authority Required (Streamlined), for \"Severe cystic acne\" — for example, the 30 mg capsule, 60 pack, item 11921K [5].",
             "The streamlined authority means your prescriber writes an authority code on the script instead of phoning for approval. The acne must not have responded to other treatment, and up to three repeats can be written [5].",
-            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [5][7]."
+            "In 2026 the PBS general patient co-payment is ${{PBS:general_copay}} per script, and the concessional co-payment is ${{PBS:conc_copay}} [5][7].",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 6 November 2026."
           ]
         },
         {
@@ -3210,7 +3223,8 @@
           "h": "Cost and PBS",
           "body": [
             "Norethisterone is PBS-listed on the General Schedule with no restrictions — norethisterone 5 mg tablet, 30 pack, item 2993M, brand Primolut N [5].",
-            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [5][6]."
+            "In 2026 the PBS general patient co-payment is ${{PBS:general_copay}} per script, and the concessional co-payment is ${{PBS:conc_copay}} [5][6].",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 17 October 2026."
           ]
         },
         {
@@ -3391,8 +3405,9 @@
           "h": "Cost and PBS",
           "body": [
             "Depo-Provera is PBS-listed on the General Schedule with no restrictions — medroxyprogesterone acetate 150 mg/mL injection, 1 mL pre-filled syringe, item 14160G [4].",
-            "The tablets are also listed with no restrictions: 5 mg tablet, 56 (item 2323G) and 10 mg tablet, 30 (item 2321E), one pack with two repeats. Two brands share these items: Ralovera is benchmark-priced and Provera carries a brand premium (PBS, 17 Oct 2026, $4.42 for 5 mg and $6.50 for 10 mg on a one-pack script), which you pay on top of your co-payment and which does not count towards the Safety Net. Ask your pharmacist for a brand with no premium if cost matters [4].",
-            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [4][6]."
+            "The tablets are also listed with no restrictions: 5 mg tablet, 56 (item 2323G) and 10 mg tablet, 30 (item 2321E), one pack with two repeats. Two brands share these items: Ralovera is benchmark-priced and Provera carries a brand premium on the 10 mg tablet (PBS, 5 Nov 2026, $6.50 on a one-pack script; none on the 5 mg tablet), which you pay on top of your co-payment and which does not count towards the Safety Net. Ask your pharmacist for a brand with no premium if cost matters [4].",
+            "In 2026 the PBS general patient co-payment is ${{PBS:general_copay}} per script, and the concessional co-payment is ${{PBS:conc_copay}} [4][6].",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 5 November 2026."
           ]
         },
         {
@@ -3580,7 +3595,8 @@
           "body": [
             "Mirena is PBS-listed as a Restricted Benefit: item 14705Y for contraception and item 8633J for heavy menstrual bleeding with no known cause (idiopathic menorrhagia). No phone approval is needed, and a doctor or nurse practitioner can prescribe it [4]. Ask the clinic whether to fill the script at a pharmacy and bring the device to your fitting appointment.",
             "The device itself is subsidised on the PBS, but the insertion procedure is usually billed separately by the clinic or through Medicare, so ask about the total cost of the appointment, not just the device [4].",
-            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [4][6]."
+            "In 2026 the PBS general patient co-payment is ${{PBS:general_copay}} per script, and the concessional co-payment is ${{PBS:conc_copay}} [4][6].",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 17 October 2026."
           ]
         },
         {
@@ -3749,7 +3765,8 @@
           "h": "Cost and PBS",
           "body": [
             "Vagifem Low is PBS-listed on the General Schedule with no restrictions — estradiol 10 microgram modified-release pessary, 18 pack, item 10203B, shared with the brand Estro-Pess [5].",
-            "In 2026 the PBS general patient co-payment is $25.00 per script, and the concessional co-payment is $7.70 [5][6]."
+            "In 2026 the PBS general patient co-payment is ${{PBS:general_copay}} per script, and the concessional co-payment is ${{PBS:conc_copay}} [5][6].",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 17 October 2026."
           ]
         },
         {
@@ -3943,7 +3960,8 @@
           "h": "Cost and PBS",
           "body": [
             "Finasteride 1 mg for hair loss is not PBS-subsidised. The only listing for finasteride at all is the unrelated 5 mg strength on the Repatriation PBS, for eligible veterans with benign prostatic hyperplasia (Authority Required) [3].",
-            "This means a private script and the pharmacy's own price for the 1 mg strength, which varies between brands and pharmacies, so ask your pharmacist."
+            "This means a private script and the pharmacy's own price for the 1 mg strength, which varies between brands and pharmacies, so ask your pharmacist.",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 16 October 2026."
           ]
         },
         {
@@ -4252,7 +4270,8 @@
           "h": "Cost and PBS",
           "body": [
             "All four Estalis products — Continuous 50/140, Continuous 50/250, Sequi 50/140 and Sequi 50/250 — are PBS-listed on the General Schedule with no restriction, so any prescriber can write them and no authority is needed [4].",
-            "You pay the standard PBS co-payment — currently $25.00 per script for general patients, $7.70 for concession card holders — and scripts count toward the PBS Safety Net thresholds ($1,748.20 general, $277.20 concessional) for the calendar year [5]."
+            "You pay the standard PBS co-payment — currently ${{PBS:general_copay}} per script for general patients, ${{PBS:conc_copay}} for concession card holders — and scripts count toward the PBS Safety Net thresholds (${{PBS:sn_general}} general, ${{PBS:sn_conc}} concessional) for the calendar year [5].",
+            "PBS information (not GAMSA's own): the PBS item numbers, listings, restriction wording, brands and prices in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 17 October 2026."
           ]
         },
         {

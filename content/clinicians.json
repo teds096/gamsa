@@ -5,7 +5,8 @@
     {
       "h": "Testosterone undecanoate injection: training package",
       "body": [
-        "A free package for clinics giving the long-acting testosterone injection by the ventrogluteal route: a standard operating procedure and training guide, a one-page treatment-room card, a competency checklist, an adverse event form and a clinic audit tool. It was checked against the Australian Product Information for Reandron 1000 and Testosterone ADVZ 1000, a UK manufacturer's administration guidance for the same formulation, SA Health's ventrogluteal brochure, the SESLHD intramuscular injection guideline and the ASCIA anaphylaxis guideline. All five documents are version 2.4 (31 October 2026), and each has a document ID, an amendment table and a next review date (24 October 2027). Version 2.4 asks for observation for at least 30 minutes after each injection, and recommends, but does not require, a pregnancy test before each injection for anyone who could become pregnant, because testosterone must not be used in pregnancy [1]. Download it from the [testosterone undecanoate page](#/med/testosterone-undecanoate#sec-med-9). To report an error in the training documents, the [feedback page](#/feedback) is preferred; you can also email gamsaenquiries@gmail.com."
+        "A free package for clinics giving the long-acting testosterone injection by the ventrogluteal route: a standard operating procedure and training guide, a one-page treatment-room card, a competency checklist, an adverse event form and a clinic audit tool. It was checked against the Australian Product Information for Reandron 1000 and Testosterone ADVZ 1000, a UK manufacturer's administration guidance for the same formulation, SA Health's ventrogluteal brochure, the SESLHD intramuscular injection guideline and the ASCIA anaphylaxis guideline. The standard operating procedure and the competency checklist are version 2.5 (6 November 2026): they add three patient identifiers, hand hygiene at the 5 Moments, and what to do after a needlestick or blood splash. The other three documents are version 2.4 (31 October 2026). Each has a document ID, an amendment table and a next review date (24 October 2027). The package asks for observation for at least 30 minutes after each injection, and recommends, but does not require, a pregnancy test before each injection for anyone who could become pregnant, because testosterone must not be used in pregnancy [1]. Download it from the [testosterone undecanoate page](#/med/testosterone-undecanoate#sec-med-9). To report an error in the training documents, the [feedback page](#/feedback) is preferred; you can also email gamsaenquiries@gmail.com.",
+        "Clinics that would like editable versions of these documents, to adapt to their own procedures, can email gamsaenquiries@gmail.com."
       ],
       "nav": "Training package"
     },
@@ -30,7 +31,7 @@
         "Easy Read guides on [this site](#/easy) can be printed for patients with low literacy or English as a second language; TIS National on 131 450 for interpreters."
       ],
       "nav": "At the counter",
-      "note": "Bicalutamide is not first-line for gender-affirming care: check liver function regularly, stop it for jaundice or ALT above 2 × the upper limit of normal, and note the new interstitial lung disease precaution [11, 12, 13]. Bicalutamide potentiates warfarin (monitor PT/INR closely and consider anticoagulant dose adjustment) and inhibits CYP3A4 (midazolam levels up to 80% higher): terfenadine, astemizole and cisapride are contraindicated, and use caution with other CYP3A4 substrates such as ciclosporin, calcium channel blockers, HIV antivirals and statins. Photosensitivity reactions are a rare adverse effect [11]. On hormones and PrEP? They do not interact. Australian guidelines suggest that anyone on hormones (including those with a vagina) should take PrEP daily rather than on-demand; keep up kidney function tests, especially with spironolactone [12]. Patient wording is in the doses guide for [bicalutamide](#/doses#sec-doses-2) and on the monitoring page for [PrEP and hormones](#/monitoring#sec-monitoring-4)."
+      "note": "Bicalutamide is not first-line for gender-affirming care: check liver function regularly, stop it for jaundice or ALT above 2 × the upper limit of normal, and note the new interstitial lung disease precaution [11, 12, 13]. Bicalutamide potentiates warfarin (monitor PT/INR closely and consider anticoagulant dose adjustment) and inhibits CYP3A4 (midazolam levels up to 80% higher): terfenadine, astemizole and cisapride are contraindicated, and use caution with other CYP3A4 substrates such as ciclosporin, calcium channel blockers, HIV antivirals and statins. Photosensitivity reactions are a rare adverse effect [11]. On hormones and PrEP? They do not interact. Australian guidelines suggest that anyone on hormones (including those with a vagina) should take PrEP daily rather than on-demand; keep up kidney function tests, especially with spironolactone [12]. Patient wording is in the doses guide for [bicalutamide](#/doses#sec-doses-2) and on the monitoring page for [PrEP and hormones](#/monitoring#sec-monitoring-13)."
     },
     {
       "h": "Monitoring schedule at a glance",
@@ -66,14 +67,14 @@
           ]
         ]
       },
-      "note": "Blood test timing in patient terms is in the [monitoring guide](#/monitoring#sec-monitoring-1). Sources: AusPATH 2026 baseline and review sections and Tables 5 and 7 [1]; position statement sections on baseline investigations, monitoring and polycythaemia [2]. GnRH analogues (puberty suppression, or lowering testosterone in adults): androgen deprivation may prolong the QT interval. Weigh this with congenital long QT, heart failure, frequent electrolyte abnormalities or QT-prolonging medicines, correct electrolytes, and consider periodic ECG and electrolytes (Zoladex PI s4.4/4.5; the same warning is in the Eligard, Lucrin and Diphereline PIs) [5]. Severe cutaneous adverse reactions (SJS/TEN, and DRESS and AGEP with triptorelin) are reported with triptorelin and leuprorelin [6]. Mood changes and depression, sometimes severe (very rare suicidal ideation or attempts), are reported with GnRH agonists; monitor patients with known depression closely. Convulsions are reported, mostly with risk factors [10]. Other interactions that need monitoring: testosterone may increase ciclosporin levels and the risk of nephrotoxicity [7], and Prometrium may raise ciclosporin levels [8]; oestradiol lowers lamotrigine levels and may reduce seizure control, so review the lamotrigine dose when oestradiol is started, changed or stopped [9]."
+      "note": "Blood test timing in patient terms is in the [monitoring guide](#/monitoring#sec-monitoring-10). Sources: AusPATH 2026 baseline and review sections and Tables 5 and 7 [1]; position statement sections on baseline investigations, monitoring and polycythaemia [2]. GnRH analogues (puberty suppression, or lowering testosterone in adults): androgen deprivation may prolong the QT interval. Weigh this with congenital long QT, heart failure, frequent electrolyte abnormalities or QT-prolonging medicines, correct electrolytes, and consider periodic ECG and electrolytes (Zoladex PI s4.4/4.5; the same warning is in the Eligard, Lucrin and Diphereline PIs) [5]. Severe cutaneous adverse reactions (SJS/TEN, and DRESS and AGEP with triptorelin) are reported with triptorelin and leuprorelin [6]. Mood changes and depression, sometimes severe (very rare suicidal ideation or attempts), are reported with GnRH agonists; monitor patients with known depression closely. Convulsions are reported, mostly with risk factors [10]. Other interactions that need monitoring: testosterone may increase ciclosporin levels and the risk of nephrotoxicity [7], and Prometrium may raise ciclosporin levels [8]; oestradiol lowers lamotrigine levels and may reduce seizure control, so review the lamotrigine dose when oestradiol is started, changed or stopped [9]."
     },
     {
       "h": "Authority wording card",
       "nav": "Authority wording card",
       "body": [
         "A printable one-page card on how PBS testosterone prescriptions are worded for gender-affirming care: the indication the Australian position statement tells prescribers to use, who has to be named on the application, and a line to say to the patient at the counter.",
-        "[Authority wording card, version 1.5 (31 October 2026): one page to print (PDF)](/clinicians/pbs-authority-wording-card.pdf)",
+        "[Authority wording card, version 1.6 (6 November 2026): one page to print (PDF)](/clinicians/pbs-authority-wording-card.pdf)",
         "Patients: the plain-language explanation is in the [costs guide](#/costs#sec-costs-7)."
       ]
     },
@@ -87,17 +88,31 @@
     {
       "h": "Prescribing references",
       "body": [
-        "The patient pages cite their sources on every page. The ones prescribers ask for most:"
+        "The patient pages cite their sources on every page. These are the ones clinicians ask for most, grouped by role. Most apply to every role."
       ],
       "list": [
         "[AusPATH Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy (2026)](https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf)",
+        "[AusPATH and ACON: Providing GAHT in General Practice](https://auspath.org.au/wp-content/uploads/2026/08/ACON_GAHT_GP_Infographic_v4.pdf), a one-page guide to Australian resources for GPs prescribing hormones to adults under the informed consent model (version 4, current as of September 2026). It notes that testosterone a GP starts is only PBS-eligible when the 'Principles of testosterone-based GAHT' in the AusPATH 2026 standards are met.",
         "[Position statement on the hormonal management of adult transgender and gender diverse individuals, MJA 2019](https://www.mja.com.au/journal/2019/211/3/position-statement-hormonal-management-adult-transgender-and-gender-diverse)",
         "[RACGP: Hormone therapy for trans and gender diverse patients in the general practice setting](https://www1.racgp.org.au/getattachment/d0c29d2a-ee67-4ef0-a125-65c2694f3cb2/Hormone-therapy-for-trans-and-gender-diverse-patie.aspx)",
         "[Equinox hormone therapy prescribing guide for GPs (AusPATH-endorsed)](https://equinox.org.au/wp-content/uploads/2021/07/ht-prescribing-guideline-v3-aug-2020.pdf)",
         "[SA Health State-wide Gender Diversity Model of Care](https://www.sahealth.sa.gov.au/wps/wcm/connect/d70c3a24-a054-4f6a-b56c-17152faa9d5c/Model+of+care_Gender+Diversity_Jul2023_FINAL_FOR+PUBLICATION.pdf?MOD=AJPERES)",
         "[SHINE SA referral pathways for trans and gender diverse care](https://shinesa.org.au/media/2023/09/Referral-Pathways-for-Trans-and-Gender-Diverse-Care.pdf)",
         "[PBS: testosterone items and the Authority wording](#/costs#sec-costs-7)",
-        "[TGA Medicine Shortages Information Initiative](https://apps.tga.gov.au/prod/msi/search)"
+        "[TGA Medicine Shortages Information Initiative](https://apps.tga.gov.au/prod/msi/search)",
+        "**GPs and prescribers:** [ASHM: Advanced Gender Affirming Hormone Therapy](https://ashm.org.au/education/advanced-gender-affirming-hormone-therapy), a free live online course for prescribers (RACGP and ACRRM CPD)",
+        "**GPs and prescribers:** [SHINE SA courses and events for health professionals](https://shinesa.org.au/courses-events/)",
+        "**GPs and prescribers:** [WPATH Standards of Care, Version 8 (2022)](https://doi.org/10.1080/26895269.2022.2100644)",
+        "**GPs and prescribers:** [TransHub: surgical readiness referral, with a template letter](https://www.transhub.org.au/clinicians/surgical-readiness-referral/)",
+        "**GPs and prescribers:** [MBS item 123](https://www9.health.gov.au/mbs/fullDisplay.cfm?type=item&q=123&qt=item), [MBS note AN.40.5: phone and video items for blood borne virus, sexual and reproductive health](https://www9.health.gov.au/mbs/fullDisplay.cfm?type=note&q=AN.40.5&qt=noteID) and [item 965](https://www9.health.gov.au/mbs/fullDisplay.cfm?type=item&q=965&qt=item) on MBS Online",
+        "**GPs and prescribers:** [Electronic prescribing](https://www.health.gov.au/our-work/electronic-prescribing) and [Eligibility for 60-day prescriptions (updated January 2026)](https://www.health.gov.au/cheaper-medicines/60-day-prescriptions), Department of Health, Disability and Ageing",
+        "**GPs and prescribers:** [TGA Product Information safety updates](https://www.tga.gov.au/news/safety-updates), published as topics arise",
+        "**Nurses and anyone giving injections:** [RCH nursing guideline: intramuscular injections (children's hospital; general technique)](https://www.rch.org.au/rchcpg/hospital_clinical_guideline_index/Intramuscular_Injections/)",
+        "**Nurses and anyone giving injections:** [Cervical screening for trans and gender diverse people (2025)](https://www.health.gov.au/sites/default/files/2025-06/cervical-screening-for-trans-and-gender-diverse-people.pdf)",
+        "**Referral and directories (all roles):** [TransHub: find a doctor](https://www.transhub.org.au/doctor/) and [Trans Health SA directory](https://transhealthsa.com/directory/)",
+        "**Referral and directories (all roles):** [TransHub Downloads Hub: fact sheets, templates and guides](https://www.transhub.org.au/downloads-hub/)",
+        "**Referral and directories (all roles):** [Indigenous HealthInfoNet: LGBTQIA+SB resources](https://healthinfonet.ecu.edu.au/learn/population-groups/lgbtqisb/) and the [Aboriginal Health Council of South Australia (AHCSA)](https://ahcsa.org.au/)",
+        "**Pharmacists:** [PSA guidelines and quick reference guides](https://www.psa.org.au/practice-support-industry/guidelines-and-quick-reference-guides/)"
       ],
       "nav": "References"
     },
@@ -133,7 +148,7 @@
     {
       "n": 5,
       "text": "Zoladex 3.6 mg implant (goserelin), Australian Product Information, sections 4.4 and 4.5, QT/QTc interval prolongation (date of revision 6 March 2026); the Zoladex 10.8 mg (28 August 2026), Eligard (22 December 2025), Lucrin Depot (21 February 2025) and Diphereline (8 April 2026) product information carry the same warning in section 4.4. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/zoladex-3-6-mg-implant"
+      "url": "https://www.ebs.tga.gov.au/ebs/picmi/picmirepository.nsf/PICMI?OpenForm&t=&q=goserelin"
     },
     {
       "n": 6,

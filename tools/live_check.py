@@ -91,7 +91,7 @@ def main():
                 or (can and re.sub(r"^https?://[^/]+", "", can) != p):
             bad.append(f"{p} ({s})")
         titles.setdefault(title, []).append(p)
-        dl.update(re.findall(r'(?<![\w.])(/(?:clinicians|allies)/[A-Za-z0-9._-]+\.(?:pdf|zip))', t))
+        dl.update(re.findall(r'(?<![\w.])(/(?:clinicians|allies|guides)/[A-Za-z0-9._-]+\.(?:pdf|zip))', t))
         if "set-cookie" in {k.lower() for k in h}:
             bad.append(f"{p} sets a cookie")
     dup = [ps for ps in titles.values() if len(ps) > 1]

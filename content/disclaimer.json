@@ -21,7 +21,8 @@
       "h": "How the information is kept current",
       "nav": "Currency",
       "body": [
-        "Supply status is read from the TGA shortages database every morning. PBS co-payments, Safety Net thresholds, brand premiums and listings are read from the PBS at the start of each month, just after the PBS schedule changes on the 1st. Clinical content is checked against the Australian Product Information, the AusPATH standards of care and the sources listed under References on each page, and medicine pages show the date they were last reviewed. The footer of every page shows when supply and PBS figures were last checked. Even so, prices, listings, guidelines and supply change, sometimes quickly; confirm anything important with your pharmacist or an official source before relying on it."
+        "Supply status is read from the TGA shortages database every morning. PBS co-payments, Safety Net thresholds, brand premiums and listings are read from the PBS at the start of each month, just after the PBS schedule changes on the 1st. Clinical content is checked against the Australian Product Information, the AusPATH standards of care and the sources listed under References on each page, and medicine pages show the date they were last reviewed. The footer of every page shows when supply and PBS figures were last checked. Even so, prices, listings, guidelines and supply change, sometimes quickly; confirm anything important with your pharmacist or an official source before relying on it.",
+        "PBS Schedule information on this site (item numbers, listings, restriction and Authority wording, co-payments, Safety Net amounts, brands and prices) is reproduced with permission of the Australian Government Department of Health, Disability and Ageing. It is shown as the PBS publishes it and is not GAMSA's own information. Each place it appears is marked \"PBS information (not GAMSA's own)\", with the source and the date it was extracted from www.pbs.gov.au. The PBS Schedule changes often, so check www.pbs.gov.au or ask your pharmacist for the current position."
       ]
     },
     {
@@ -49,7 +50,7 @@
     {
       "h": "Liability",
       "body": [
-        "This site is provided in good faith and free of charge. To the extent the law allows, the author accepts no liability for loss or harm arising from reliance on information here or from dealings with any pharmacy or service mentioned. Nothing on this page limits rights under the Australian Consumer Law that cannot be excluded. Last reviewed 15 October 2026."
+        "This site is provided in good faith and free of charge. To the extent the law allows, the author accepts no liability for loss or harm arising from reliance on information here or from dealings with any pharmacy or service mentioned. Nothing on this page limits rights under the Australian Consumer Law that cannot be excluded. Last reviewed 6 November 2026."
       ]
     }
   ],

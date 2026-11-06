@@ -1,21 +1,39 @@
 {
   "title": "About GAMSA",
   "intro": [
-    "Who makes this site, how the pages are written and checked, and what to do if something is wrong."
+    "Why this site was made, who makes it, how the pages are written and checked, and what to do if something is wrong."
   ],
-  "updated": "2026-10-24",
+  "updated": "2026-11-06",
   "sections": [
     {
-      "h": "Who runs this site",
+      "h": "Why this site was made",
       "paras": [
-        "GAMSA is written and kept up to date by Theodore South, BPharm (Hons), a registered pharmacist in Adelaide. It is an independent, non-commercial project, and it is free to use."
+        "GAMSA was established by Theodore South, BPharm (Hons), a registered pharmacist in Adelaide, in response to two recurring problems: a lack of clear, accessible information on gender-affirming hormone therapy, and repeated shortages of the medicines used for it and alongside it. It exists to fill those gaps for trans and gender diverse people in South Australia, and for the families, friends and clinicians who support them. It brings reliable information together in one place, written in plain language and referenced to the Australian standards of care, the Product Information, the PBS and the TGA. GAMSA is independent, non-commercial and free to use. Built for the community, by a member of the community."
       ],
       "bullets": []
     },
     {
-      "h": "Funding",
+      "h": "Who this site is for",
       "paras": [
-        "GAMSA has no funding, no advertising and no sponsors. It is not linked to any clinic, pharmacy, drug company, government body or advocacy group."
+        "The pages describe how medicines are generally used. They are not advice for one person. Please speak with your prescriber or pharmacist about your own care."
+      ],
+      "bullets": [
+        "People who take, or are thinking about, gender-affirming hormone therapy, and their families and supporters.",
+        "Pharmacists, nurses, GPs and other prescribers who want a clear, sourced reference. See [For clinicians](#/clinicians)."
+      ]
+    },
+    {
+      "h": "Who runs this site",
+      "paras": [
+        "Theodore South writes and checks every page and keeps the site up to date.",
+        "Theodore South is registered with the Pharmacy Board of Australia, Ahpra registration number PHA0002819751. You can check this on the [Ahpra register of practitioners](https://www.ahpra.gov.au/Registration/Registers-of-Practitioners.aspx) by searching for that number."
+      ],
+      "bullets": []
+    },
+    {
+      "h": "Independence and no advertising",
+      "paras": [
+        "GAMSA is independent and non-commercial, and it is free to use. It has no funding, no advertising and no sponsors. It is not linked to any clinic, pharmacy, drug company, government body or advocacy group. No brand or company pays to be mentioned, and no brand is promoted over another."
       ],
       "bullets": []
     },
@@ -26,6 +44,7 @@
         "Clinical pages are based on the Australian standards of care (AusPATH), the Australian Product Information for each medicine, the PBS, the TGA and published research. Each page lists its sources under References.",
         "Pages use plain words and short sentences. They describe how medicines are generally used. They are not advice for one person.",
         "Supply status is read from the TGA every morning. PBS prices and listings are read at the start of each month.",
+        "PBS Schedule information is reproduced with permission of the Australian Government Department of Health, Disability and Ageing. It is PBS information, not GAMSA's own, and it is shown with the date it was extracted from www.pbs.gov.au.",
         "**AI-assisted drafting:** some text is first drafted with an AI writing tool. A pharmacist checks every statement against its source before it goes on the site. Nothing is published without that check."
       ]
     },
@@ -48,7 +67,7 @@
     {
       "h": "Complaints",
       "paras": [
-        "Please tell us first, using the [feedback form](#/feedback). If you are not happy with the reply, you can go to:"
+        "Please send any complaint about this site through the [feedback form](#/feedback). It is the only way to make a complaint to GAMSA, so that every complaint is recorded and answered. If you are not satisfied with the reply, you can go to:"
       ],
       "bullets": [
         "**Health and Community Services Complaints Commissioner (HCSCC SA)**: independent complaints about health services in South Australia, including pharmacists. [HCSCC website](https://www.hcscc.sa.gov.au/).",

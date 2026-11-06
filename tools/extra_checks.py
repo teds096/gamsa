@@ -79,7 +79,7 @@ def pdfs():
         p = subprocess.run(["pdfinfo", str(f)], capture_output=True, text=True)
         n = int((re.search(r"Pages:\s+(\d+)", p.stdout) or [0, 0])[1])
         if n == 0: bad.append(f"unreadable {f.name}"); continue
-        limit = 8 if "sop" in f.name else 2
+        limit = 9 if "monitoring-schedule" in f.name else 8 if "sop" in f.name else 2
         if n > limit: bad.append(f"{f.name} {n} pages")
         info.append(n)
         if "gamsa-brand-5b" not in p.stdout and "gamsa-logo-5b" not in p.stdout: bad.append(f"no logo/stripe on {f.name} - run python3 tools/brand.py")
@@ -195,6 +195,21 @@ def figures():
     c = {p.stem: json.loads(p.read_text()) for p in (ROOT / "content").glob("*.json")}
     old = [f"{k}:{i}" for k, v in c.items() if isinstance(v, dict) for i, s in enumerate(v.get("sections", [])) if s.get("svg")]
     bad = [f"{x} has an old svg diagram, which the site no longer shows: convert it to a figure" for x in old]
+    # the costs brand-premium figure has empty bar values until build.py fills them from data/premiums.json; give them a dummy value here
+    def _fill(o):
+        if isinstance(o, dict):
+            if o.get("k") in ("bar", "acc") and o.get("v") == "": o["v"] = "$1"
+            for v in o.values(): _fill(v)
+        elif isinstance(o, list):
+            for v in o: _fill(v)
+    _fill(c)
+    _pbs = c.get("costs", {}).get("pbsFigures", {})
+    def _sub(o):
+        if isinstance(o, dict): return {k: _sub(v) for k, v in o.items()}
+        if isinstance(o, list): return [_sub(v) for v in o]
+        if isinstance(o, str): return re.sub(r"\{\{PBS:([A-Za-z_]+)\}\}", lambda m: str(_pbs.get(m.group(1), "1")), o)
+        return o
+    c = _sub(c)
     try: done = F.render_content(c)
     except Exception as e: return out(False, "figures", f"definition error: {e}")
     for page in c.values():

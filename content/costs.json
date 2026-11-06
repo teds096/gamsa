@@ -14,14 +14,15 @@
     {
       "h": "What you pay at the counter",
       "body": [
-        "From 1 January 2026, the maximum PBS co-payment is $25.00 per prescription for general patients and $7.70 for people with a concession card [1][2][3].",
-        "The general co-payment came down from $31.60 to $25.00, and will be adjusted in line with the consumer price index each year after that. The concession co-payment is frozen at $7.70 until 1 January 2030 [2].",
-        "The optional $1 discount for general patients has been phased out and is nil in 2026, although a pharmacy may still choose to discount some general scripts whose full price is between $25.00 and $51.10. For concession patients an allowable discount of up to $0.60 applies [3].",
-        "Concession cards that count include the Pensioner Concession Card, the Health Care Card, the Low Income Health Care Card, the Commonwealth Seniors Health Card and DVA cards [18]. If you are on a low income and do not have one, check your eligibility with Services Australia — it makes the single biggest difference to what you pay."
+        "From 1 January 2026, the maximum PBS co-payment is ${{PBS:general_copay}} per prescription for general patients and ${{PBS:conc_copay}} for people with a concession card [1][2][3].",
+        "The general co-payment came down from $31.60 to ${{PBS:general_copay}}, and will be adjusted in line with the consumer price index each year after that. The concession co-payment is frozen at ${{PBS:conc_copay}} until 1 January 2030 [2].",
+        "The optional $1 discount for general patients has been phased out and is nil in 2026, although a pharmacy may still choose to discount some general scripts whose full price is between ${{PBS:general_copay}} and $51.10. For concession patients an allowable discount of up to $0.60 applies [3].",
+        "Concession cards that count include the Pensioner Concession Card, the Health Care Card, the Low Income Health Care Card, the Commonwealth Seniors Health Card and DVA cards [18]. If you are on a low income and do not have one, check your eligibility with Services Australia — it makes the single biggest difference to what you pay.",
+        "PBS information (not GAMSA's own): the co-payment amounts. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on {{PBS:checkedAtLong}}."
       ],
       "list": [
-        "General patient: up to $25.00 per PBS prescription",
-        "Concession card holder: $7.70 per PBS prescription, less an allowable discount of up to $0.60",
+        "General patient: up to ${{PBS:general_copay}} per PBS prescription",
+        "Concession card holder: ${{PBS:conc_copay}} per PBS prescription, less an allowable discount of up to $0.60",
         "Non-PBS (private) prescription: the full price, whatever the pharmacy charges"
       ],
       "note": "These amounts change. They were last checked on {{PBS_CHECKED}} and apply from 1 January 2026. Your pharmacy can always tell you the current figure.",
@@ -51,11 +52,11 @@
             "opts": [
               {
                 "a": "Yes:",
-                "text": "**$7.70** a script. A pharmacy may take up to $0.60 off that."
+                "text": "**${{PBS:conc_copay}}** a script. A pharmacy may take up to $0.60 off that."
               },
               {
                 "a": "No:",
-                "text": "up to **$25.00** a script. A pharmacy may choose to discount some."
+                "text": "up to **${{PBS:general_copay}}** a script. A pharmacy may choose to discount some."
               }
             ]
           },
@@ -77,7 +78,7 @@
             "opts": [
               {
                 "a": "Yes:",
-                "text": "**$7.70** a script, or free with a concession card. A brand premium is still added."
+                "text": "**${{PBS:conc_copay}}** a script, or free with a concession card. A brand premium is still added."
               },
               {
                 "a": "Not yet:",
@@ -90,11 +91,11 @@
         "easy": [
           {
             "pic": "money",
-            "text": "A PBS medicine costs up to $25.00."
+            "text": "A PBS medicine costs up to ${{PBS:general_copay}}."
           },
           {
             "pic": "card",
-            "text": "With a concession card, it costs up to $7.70."
+            "text": "With a concession card, it costs up to ${{PBS:conc_copay}}."
           },
           {
             "pic": "tag",
@@ -112,10 +113,11 @@
       "h": "The PBS Safety Net",
       "body": [
         "The Safety Net protects people who need a lot of medicines in one year. Every PBS prescription you fill counts towards a running total, which resets on 1 January [16].",
-        "For 2026, the general Safety Net threshold is $1,748.20 and the concession threshold is $277.20 [1][3]. In scripts, that is about 36 prescriptions at the concession rate, or about 70 at the general rate.",
-        "Once you pass it, general patients can apply for a Safety Net concession card and pay $7.70 a script for the rest of the calendar year. Concession card holders can apply for a Safety Net entitlement card and receive PBS medicines free of charge for the rest of the year [16].",
+        "For 2026, the general Safety Net threshold is ${{PBS:sn_general}} and the concession threshold is ${{PBS:sn_conc}} [1][3]. In scripts, that is about 36 prescriptions at the concession rate, or about 70 at the general rate.",
+        "Once you pass it, general patients can apply for a Safety Net concession card and pay ${{PBS:conc_copay}} a script for the rest of the calendar year. Concession card holders can apply for a Safety Net entitlement card and receive PBS medicines free of charge for the rest of the year [16].",
         "Your pharmacy keeps a record, but only of what you buy there. If you use more than one pharmacy, ask each for a Prescription Record Form so the totals can be combined — and ask for your Safety Net card as soon as you qualify, because it is not automatic [16].",
-        "Three things do not count towards the Safety Net: brand premiums, therapeutic group premiums and special patient contributions. Private prescriptions do not count either, because they are not PBS supplies [16]."
+        "Three things do not count towards the Safety Net: brand premiums, therapeutic group premiums and special patient contributions. Private prescriptions do not count either, because they are not PBS supplies [16].",
+        "PBS information (not GAMSA's own): the Safety Net amounts. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on {{PBS:checkedAtLong}}."
       ],
       "note": "If you take several PBS medicines, keeping all your scripts at one pharmacy makes the Safety Net much easier to reach and to claim.",
       "nav": "The Safety Net",
@@ -139,15 +141,15 @@
               {
                 "k": "bar",
                 "v": {
-                  "total": "$277.20",
-                  "per": "$7.70"
+                  "total": "${{PBS:sn_conc}}",
+                  "per": "${{PBS:conc_copay}}"
                 }
               },
               {
                 "k": "rest"
               }
             ],
-            "text": "the threshold is **$277.20**, about {n} scripts at $7.70.",
+            "text": "the threshold is **${{PBS:sn_conc}}**, about {n} scripts at ${{PBS:conc_copay}}.",
             "then": "Then PBS scripts are free for the rest of the year."
           },
           {
@@ -157,16 +159,16 @@
               {
                 "k": "bar",
                 "v": {
-                  "total": "$1,748.20",
-                  "per": "$25.00"
+                  "total": "${{PBS:sn_general}}",
+                  "per": "${{PBS:general_copay}}"
                 }
               },
               {
                 "k": "rest"
               }
             ],
-            "text": "the threshold is **$1,748.20**, about {n} scripts at $25.00.",
-            "then": "Then **$7.70** a script for the rest of the year."
+            "text": "the threshold is **${{PBS:sn_general}}**, about {n} scripts at ${{PBS:general_copay}}.",
+            "then": "Then **${{PBS:conc_copay}}** a script for the rest of the year."
           }
         ],
         "legend": [
@@ -199,7 +201,7 @@
           },
           {
             "pic": "money",
-            "text": "Without a card: after about {r2} scripts, they cost $7.70."
+            "text": "Without a card: after about {r2} scripts, they cost ${{PBS:conc_copay}}."
           },
           {
             "pic": "speak",
@@ -214,7 +216,7 @@
       "body": [
         "Closing the Gap is the national agreement between Australian governments and Aboriginal and Torres Strait Islander peak bodies to close the gap in health and life expectancy. One part of it is a PBS program, running since 2010, that makes prescription medicines cheaper for Aboriginal and Torres Strait Islander people [15].",
         "If you are Aboriginal or Torres Strait Islander, the Closing the Gap PBS Co-payment Program lowers what you pay for PBS medicines, or removes the cost entirely [15].",
-        "People who would normally pay the general co-payment pay the concessional amount instead — $7.70 rather than $25.00 — and people with a concession card pay nothing [15].",
+        "People who would normally pay the general co-payment pay the concessional amount instead — ${{PBS:conc_copay}} rather than ${{PBS:general_copay}} — and people with a concession card pay nothing [15].",
         "It covers every medicine listed on the PBS, which includes the PBS-listed hormone medicines on this site. It does not cover private prescriptions, and brand premiums still apply [15].",
         "Registration is a one-off, and you cannot do it yourself. Your GP or another PBS prescriber, or an Aboriginal Health Practitioner, registers you with Services Australia. You need to be enrolled in Medicare, and your prescriber needs to judge that cost could get in the way of you taking your medicine [15].",
         "Once you are registered, it applies at any pharmacy. Your pharmacist can see it in their dispensing system, so you do not need anything written on each prescription. [Department of Health: Closing the Gap PBS co-payment](https://www.health.gov.au/cheaper-medicines/first-nations)"
@@ -241,8 +243,9 @@
         "Spironolactone is PBS-listed with no restriction [9]. So is cyproterone acetate 50 mg (item 1270W); its 60-day version, item 14023C, is a restricted benefit, where the restriction is only about the quantity dispensed [8].",
         "Testosterone is different. All the main testosterone products are PBS-listed but need an Authority prescription: the long-acting undecanoate injection, Testogel 1%, Testavan 2% and AndroForte 5 cream [6][10]. Primoteston Depot was deleted from the PBS on 1 February 2018 at the manufacturer's request [28], and Sustanon is not PBS-subsidised, so both are private prescriptions [10][11].",
         "Since 1 October 2026, one GnRH analogue, triptorelin 3.75 mg (Diphereline), has been on the PBS with no restriction (item 9378N), but its listing carries a note that it \"is not for use in gender dysphoria in minors\" [25]. So no GnRH analogue is PBS-subsidised for puberty suppression: goserelin, leuprorelin and the longer-acting triptorelin strengths are PBS-listed only for other conditions. For puberty suppression they are private prescriptions. SA Health's model of care, written in 2023, describes a cost of several thousand dollars a year for a young person who has to buy them privately [12].",
-        "Goserelin 3.6 mg (Zoladex) was due to leave the PBS on 1 November 2026, with a free Zoladex Continuity Program planned in its place [13]. On 23 September 2026 the sponsor, AstraZeneca, said instead that Zoladex 3.6 mg will stay on the PBS until 1 May 2027, that PBS prescriptions written by 30 April 2027 can be filled until 1 May 2028, and that the Continuity Program will not go ahead [31]. The TGA shortage record still shows the earlier date [26], but goserelin is not on the PBS list of deletions for 1 November 2026 [27]. Ask your pharmacist for the current position.",
-        "Compounded products — testosterone or oestradiol implants, some creams — are never PBS-subsidised, because compounded medicines sit outside the scheme [11]."
+        "Goserelin 3.6 mg (Zoladex) was due to leave the PBS on 1 November 2026, with a free Zoladex Continuity Program planned in its place [13]. On 23 September 2026 the sponsor, AstraZeneca, said instead that Zoladex 3.6 mg will stay on the PBS until 1 May 2027, that PBS prescriptions written by 30 April 2027 can be filled until 1 May 2028, and that the Continuity Program will not go ahead [31]. It did not leave: in November 2026 it is still PBS-listed, for other conditions only, and the PBS Summary of Changes for 1 November 2026 lists no change to it and no deletion notice for 1 December 2026 or 1 January 2027 [26][27]. The 1 May 2027 date is the sponsor's; the PBS has not yet published an end date. Ask your pharmacist for the current position.",
+        "Compounded products — testosterone or oestradiol implants, some creams — are never PBS-subsidised, because compounded medicines sit outside the scheme [11].",
+        "PBS information (not GAMSA's own): the PBS item numbers, listings, brands and the listing note quoted in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 5 November 2026 (brands) and 6 November 2026 (listing wording)."
       ],
       "list": [
         "PBS, no restriction: estradiol tablets and patches, Sandrena gel, Estrogel, micronised progesterone 100 mg capsules, spironolactone, cyproterone acetate, and triptorelin 3.75 mg (Diphereline), whose listing is not for use in gender dysphoria in minors",
@@ -258,7 +261,7 @@
       "body": [
         "There is no PBS listing for gender affirmation. Every PBS testosterone item is listed for androgen deficiency, and each one needs an Authority prescription [20].",
         "The restriction requires that you are treated by, in consultation with, or waiting on an appointment with a specialist general paediatrician, paediatric endocrinologist, urologist, endocrinologist or a Fellow of the Australasian Chapter of Sexual Health Medicine. The specialist's name goes on the authority application. Once that is in place, a GP or nurse practitioner can write the PBS script [20][19].",
-        "This is the single biggest lever on what you pay. The same vial can cost a $25.00 PBS co-payment ($7.70 with a concession card) or the full private price; the PBS full price alone is $92.91 [3][6]. Which one you pay depends entirely on whether the paperwork is in place.",
+        "This is the single biggest lever on what you pay. The same vial can cost a ${{PBS:general_copay}} PBS co-payment (${{PBS:conc_copay}} with a concession card) or the full private price; the PBS full price alone is $92.91 [3][6]. Which one you pay depends entirely on whether the paperwork is in place.",
         "Estradiol, spironolactone and cyproterone (its packs of 50) are General Schedule items and need no authority [20]."
       ],
       "list": [
@@ -280,7 +283,8 @@
         "It is a quirk of a listing written years before anyone was thinking about gender-affirming care, and never rewritten. It does not mean your prescription is wrong, that your prescriber has made something up, or that your entitlement or price changes.",
         "It can still be jarring to see on a screen at the counter. If a pharmacist reacts, that is usually unfamiliarity rather than doubt — they are allowed to dispense it.",
         "If an Authority is missed or has expired, the pharmacy cannot charge you the PBS price. The fix is a quick call to your prescriber, not a private price. Ask before you pay.",
-        "The PBS also lists testosterone for a second kind of androgen deficiency: in people aged 40 or over, confirmed by two morning blood tests, and not caused by a pituitary or testicular disorder. That is not the pathway used in gender-affirming care, so if you see it on the item page, it is not the one your prescriber applies under [29][30]."
+        "The PBS also lists testosterone for a second kind of androgen deficiency: in people aged 40 or over, confirmed by two morning blood tests, and not caused by a pituitary or testicular disorder. That is not the pathway used in gender-affirming care, so if you see it on the item page, it is not the one your prescriber applies under [29][30].",
+        "PBS information (not GAMSA's own): the Authority indications and the restriction wording quoted in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 6 November 2026."
       ],
       "note": "Each PBS testosterone item page shows the full criteria under its restrictions (select Criteria). Your prescriber or pharmacist can read you the current wording from there.",
       "nav": "The Authority wording"
@@ -362,13 +366,14 @@
       }
     },
     {
-      "h": "Brand premiums, and how to avoid paying one",
+      "h": "Brand premiums: being aware of them",
       "body": [
         "Where several brands of the same medicine exist, the PBS subsidises up to the price of the cheapest one. That price is the benchmark.",
         "If you choose a dearer brand, you pay the difference yourself as a brand premium, on top of your co-payment. Brand premiums do not count towards the Safety Net, and you still pay them after you have passed it [16].",
-        "To avoid one, ask your pharmacist for a brand with no premium. Swapping brands of the same medicine is normal and safe, and for most medicines the pharmacist can do it without ringing your prescriber.",
+        "If you would rather not pay one, ask your pharmacist for a brand with no premium. Swapping brands of the same medicine is normal and safe, and for most medicines the pharmacist can do it without ringing your prescriber.",
         "The list at the top of this section comes from the PBS brand premium schedule for the medicines on this site, and is checked automatically at the start of each month, just after the PBS schedule changes on the 1st [17].",
-        "One caution with patches: if a particular brand's adhesive has not stayed on you before, say so. That is a clinical reason to prefer a brand, and worth raising even if the alternative carries a premium."
+        "One caution with patches: if a particular brand's adhesive has not stayed on you before, say so. That is a clinical reason to prefer a brand, and worth raising even if the alternative carries a premium.",
+        "PBS information (not GAMSA's own): the brand premium list and amounts in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on {{PREMIUMS_CHECKED}}."
       ],
       "note": "Brand premiums change whenever PBS prices are reset, which happens several times a year. Your pharmacy screen is always the current answer [17].",
       "premiums": true,
@@ -379,7 +384,7 @@
         "title": "What a brand premium adds",
         "sub": "Example only: one script of spironolactone 25 mg, with a concession card (PBS list of 17 October 2026)",
         "alt": "Bar chart: the brand with no premium costs the co-payment; a premium brand adds the premium on top",
-        "long": "Two bars on one dollar scale from $0 to $20. Spironolactone Viatris 25, a brand with no premium, costs the $7.70 co-payment. Aldactone costs the same co-payment plus a $7.33 brand premium, {t2} in all; the premium part is hatched.",
+        "long": "Two bars on one dollar scale from $0 to $20. Spironolactone Viatris 25, a brand with no premium, costs the ${{PBS:conc_copay}} co-payment. Aldactone costs the same co-payment plus a $7.33 brand premium, {t2} in all; the premium part is hatched.",
         "axis": {
           "to": 20,
           "step": 5,
@@ -392,24 +397,24 @@
             "segs": [
               {
                 "k": "bar",
-                "v": "$7.70"
+                "v": "${{PBS:conc_copay}}"
               }
             ],
-            "text": "**$7.70**, the co-payment. No premium: it is a benchmark brand."
+            "text": "**${{PBS:conc_copay}}**, the co-payment. No premium: it is a benchmark brand."
           },
           {
             "label": "Aldactone:",
             "segs": [
               {
                 "k": "bar",
-                "v": "$7.70"
+                "v": "${{PBS:conc_copay}}"
               },
               {
                 "k": "acc",
                 "v": "$7.33"
               }
             ],
-            "text": "$7.70 co-payment + **$7.33** brand premium = **{total}**."
+            "text": "${{PBS:conc_copay}} co-payment + **$7.33** brand premium = **{total}**."
           }
         ],
         "legend": [
@@ -422,7 +427,7 @@
             "text": "The brand premium: never counts towards the Safety Net, and you still pay it after you pass it"
           }
         ],
-        "note": "Ask your pharmacist for a brand with no premium. Premiums change, so the list on this page is checked each month.",
+        "note": "If you would rather not pay a premium, ask your pharmacist about brands with none. Premiums change, so the list on this page is checked each month.",
         "easyTitle": "Brands that cost more",
         "easy": [
           {
@@ -445,7 +450,7 @@
       "h": "If cost is a barrier",
       "body": [
         "Cost is a real barrier to gender-affirming care in Australia, not a personal failing. Several things are worth trying, and your pharmacist can help with most of them.",
-        "Check whether you are eligible for a concession card through Services Australia [18]. Moving from $25.00 to $7.70 a script, and from a $1,748.20 Safety Net threshold to $277.20, changes the arithmetic completely [1].",
+        "Check whether you are eligible for a concession card through Services Australia [18]. Moving from ${{PBS:general_copay}} to ${{PBS:conc_copay}} a script, and from a ${{PBS:sn_general}} Safety Net threshold to ${{PBS:sn_conc}}, changes the arithmetic completely [1].",
         "If you are Aboriginal or Torres Strait Islander, ask your prescriber about the Closing the Gap PBS Co-payment Program. Eligible patients pay the concession rate instead of the general one, or nothing at all if they already hold a concession card. Your prescriber registers you once, and the lower price then applies at any pharmacy [15].",
         "Keep your prescriptions at one pharmacy and ask them to track your Safety Net total — or for a Prescription Record Form if you have used more than one pharmacy this year [16].",
         "And if you are about to skip doses or stop because you cannot afford the script, tell your pharmacist. Stopping is the outcome everyone wants to avoid, and there is usually something that can be done."
@@ -454,7 +459,7 @@
         "Check concession card eligibility with Services Australia [18]",
         "Ask about the Closing the Gap PBS Co-payment Program if you are eligible [15]",
         "Use one pharmacy and claim the Safety Net [16]",
-        "Ask for a brand with no premium [17]",
+        "Ask about a brand with no premium [17]",
         "Ask whether a PBS-listed alternative would suit you",
         "Ask about a 60-day prescription [4]",
         "Ask about hospital supply if you attend a public clinic"
@@ -600,12 +605,12 @@
     },
     {
       "n": 26,
-      "text": "Therapeutic Goods Administration. Medicine Shortage Reports Database: goserelin (Zoladex 3.6 mg implant) — \"Deletion from market: 01 Nov 2026\"; the sponsor has advised that the product will continue to be supplied, with a link to its release on extending PBS access. Canberra: TGA. Accessed 17 October 2026.",
-      "url": "https://apps.tga.gov.au/prod/msi/Search/Details/goserelin"
+      "text": "Pharmaceutical Benefits Scheme. Summary of Changes, 1 October 2026: triptorelin 3.75 mg (9378N) changed from restricted to unrestricted, with a note added; advance notices of deletions for 1 November 2026 (goserelin is not listed). Canberra: Department of Health, Disability and Ageing. Accessed 17 October 2026.",
+      "url": "https://www.pbs.gov.au/changes"
     },
     {
       "n": 27,
-      "text": "Pharmaceutical Benefits Scheme. Summary of Changes, 1 October 2026: triptorelin 3.75 mg (9378N) changed from restricted to unrestricted, with a note added; advance notices of deletions for 1 November 2026 (goserelin is not listed). Canberra: Department of Health, Disability and Ageing. Accessed 17 October 2026.",
+      "text": "Pharmaceutical Benefits Scheme. Summary of Changes, 1 November 2026: no change to goserelin 3.6 mg implant (1454M) or triptorelin 3.75 mg (9378N); advance notices of deletions for 1 December 2026 and 1 January 2027 do not include goserelin. Canberra: Department of Health, Disability and Ageing. Accessed 6 November 2026.",
       "url": "https://www.pbs.gov.au/changes"
     },
     {

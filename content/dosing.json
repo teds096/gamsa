@@ -108,7 +108,7 @@
         "Two are used in Australia: spironolactone and cyproterone acetate. There is no good head-to-head evidence that one is better than the other, so the choice comes down to your health history and how you tolerate it [1].",
         "The advice is to use the lowest effective dose of cyproterone. The Australian product information reports meningioma with long-term use at doses of 25 mg a day and above, with the risk rising as the total dose taken over the years adds up. If a meningioma is diagnosed, cyproterone must be stopped permanently. Prolactinoma has also been reported [1][11].",
         "Bicalutamide, a prostate cancer medicine, is sometimes used as a blocker. Australia's 2026 standards of care say it should not be a first choice, because there is very little evidence for it in gender-affirming care [12]. Liver damage, liver failure and lung damage, including deaths, have been reported, so anyone taking it needs regular liver blood tests for as long as they take it [12]. The Australian product information says most liver changes happen in the first 6 months, and that it is stopped for jaundice or if the liver test ALT rises above twice the upper limit of normal [13]. In July 2026 it added a warning about interstitial lung disease, a lung inflammation that has caused deaths. Bicalutamide is stopped if this is diagnosed [13, 14]. It can make warfarin work more strongly, so anyone on warfarin needs closer INR blood tests, and in rare cases it can make skin burn more easily in the sun [13].",
-        "After an orchidectomy a blocker is no longer needed [1]. Whether to stop hormones before an operation is covered in [Hormones around surgery](#/monitoring#sec-monitoring-5) on the Monitoring and related care page."
+        "After an orchidectomy a blocker is no longer needed [1]. Whether to stop hormones before an operation is covered in [Hormones around surgery](#/monitoring#sec-monitoring-14) on the Monitoring and related care page."
       ],
       "list": [
         "Spironolactone (Spiractin, Aldactone and generics) — a daily tablet, usually 50–200 mg daily in Australian guidance [4], and 100–200 mg in the 2019 position statement [1]",
@@ -248,7 +248,8 @@
         "These medicines pause puberty by switching off the signal from the brain that drives it. They are given as an implant or a depot injection, always under specialist care.",
         "Australia's standards of care for children and adolescents name goserelin (Zoladex), leuprorelin (Lucrin, Eligard) and triptorelin (Diphereline), repeated every one to six months, depending on the product [26].",
         "Since 1 October 2026, triptorelin 3.75 mg (Diphereline), a monthly injection, has been on the PBS with no restriction (item 9378N), but its listing carries a note that it \"is not for use in gender dysphoria in minors\" [27]. So, like goserelin and leuprorelin, which are PBS-listed only for other conditions, it is a private prescription for puberty suppression. SA Health's model of care (2023) notes that a young person who cannot get them through a hospital faces a cost of several thousand dollars a year [28].",
-        "Access to goserelin has been changing. The 3.6 mg implant was due to leave the PBS on 1 November 2026, with a free Zoladex Continuity Program planned in its place [29]. On 23 September 2026 the sponsor, AstraZeneca, said instead that the implant will stay on the PBS until 1 May 2027, that PBS prescriptions written by 30 April 2027 can be filled until 1 May 2028, and that the Continuity Program will not go ahead [30]. The TGA shortage record still shows the earlier date [31], but goserelin is not on the PBS list of deletions for 1 November 2026 [32]. If this affects you or your child, ask your prescriber and your pharmacist well before the next dose is due."
+        "Access to goserelin has been changing. The 3.6 mg implant was due to leave the PBS on 1 November 2026, with a free Zoladex Continuity Program planned in its place [29]. On 23 September 2026 the sponsor, AstraZeneca, said instead that the implant will stay on the PBS until 1 May 2027, that PBS prescriptions written by 30 April 2027 can be filled until 1 May 2028, and that the Continuity Program will not go ahead [30]. It did not leave: in November 2026 it is still PBS-listed, for other conditions only, and the PBS Summary of Changes for 1 November 2026 lists no change to it and no deletion notice for 1 December 2026 or 1 January 2027 [31][32]. The 1 May 2027 date is the sponsor's; the PBS has not yet published an end date. If this affects you or your child, ask your prescriber and your pharmacist well before the next dose is due.",
+        "PBS information (not GAMSA's own): the triptorelin listing and the PBS note quoted in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 6 November 2026."
       ],
       "nav": "Puberty blockers"
     },
@@ -399,8 +400,8 @@
     },
     {
       "n": 26,
-      "text": "Telfer MM, Tollit MA, Pace CC, Pang KC. Australian Standards of Care and Treatment Guidelines for Trans and Gender Diverse Children and Adolescents, version 1.3 (appendices 3 and 4: goserelin, leuprorelin and triptorelin). Melbourne: The Royal Children's Hospital; 2020. Accessed 17 October 2026.",
-      "url": "https://www.rch.org.au/uploadedFiles/Main/Content/adolescent-medicine/australian-standards-of-care-and-treatment-guidelines-for-trans-and-gender-diverse-children-and-adolescents.pdf"
+      "text": "Telfer MM, Tollit MA, Pace CC, Pang KC. Australian Standards of Care and Treatment Guidelines for Trans and Gender Diverse Children and Adolescents, version 1.4 (appendices 3 and 4: goserelin, leuprorelin and triptorelin). Melbourne: The Royal Children's Hospital; 2023. Accessed 2 November 2026.",
+      "url": "https://www.rch.org.au/uploadedFiles/Main/Content/adolescent-medicine/230242%20RCH%20Gender%20Standards%20Booklet%201.4_Nov%202023_WEB.pdf"
     },
     {
       "n": 27,
@@ -424,12 +425,12 @@
     },
     {
       "n": 31,
-      "text": "Therapeutic Goods Administration. Medicine Shortage Reports Database: goserelin (Zoladex 3.6 mg implant) — \"Deletion from market: 01 Nov 2026\"; the sponsor has advised that the product will continue to be supplied, with a link to its release on extending PBS access. Canberra: TGA. Accessed 17 October 2026.",
-      "url": "https://apps.tga.gov.au/prod/msi/Search/Details/goserelin"
+      "text": "Pharmaceutical Benefits Scheme. Summary of Changes, 1 October 2026: triptorelin 3.75 mg (9378N) changed from restricted to unrestricted, with a note added; advance notices of deletions for 1 November 2026 (goserelin is not listed). Canberra: Department of Health, Disability and Ageing. Accessed 17 October 2026.",
+      "url": "https://www.pbs.gov.au/changes"
     },
     {
       "n": 32,
-      "text": "Pharmaceutical Benefits Scheme. Summary of Changes, 1 October 2026: triptorelin 3.75 mg (9378N) changed from restricted to unrestricted, with a note added; advance notices of deletions for 1 November 2026 (goserelin is not listed). Canberra: Department of Health, Disability and Ageing. Accessed 17 October 2026.",
+      "text": "Pharmaceutical Benefits Scheme. Summary of Changes, 1 November 2026: no change to goserelin 3.6 mg implant (1454M) or triptorelin 3.75 mg (9378N); advance notices of deletions for 1 December 2026 and 1 January 2027 do not include goserelin. Canberra: Department of Health, Disability and Ageing. Accessed 6 November 2026.",
       "url": "https://www.pbs.gov.au/changes"
     },
     {

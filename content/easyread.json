@@ -269,8 +269,8 @@
             {
               "icon": "card",
               "lines": [
-                "In 2026, most people pay up to **$25.00** for a PBS medicine.",
-                "If you have a concession card, you pay up to **$7.70**."
+                "In 2026, most people pay up to **${{PBS:general_copay}}** for a PBS medicine.",
+                "If you have a concession card, you pay up to **${{PBS:conc_copay}}**."
               ]
             },
             {

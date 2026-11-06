@@ -12,6 +12,9 @@ counts and row ids only: never a message, email, name, AHPRA number, pharmacy, s
 issue open the admin page (https://gamsa.au/admin?feedback=ID …) with ids only; Ted pastes his admin key there once
 per browser tab and acts on each item with a button. Pending pharmacists have no id, so the state file keeps a
 keyed hash of the AHPRA number (HMAC with ADMIN_TOKEN), which cannot be turned back into the number.
+
+B-08 (v19.4): with TIDY=run (the monthly run on the 1st) it also calls the 12-month clean-up (/api/admin action
+"tidy"): a dry-run count first, then the clean-up; TIDY=dry (manual runs) only counts. Counts only in the log.
 """
 import hashlib, hmac, json, os, pathlib, re, sys
 import requests
@@ -88,12 +91,43 @@ def safe(exc):
     return re.sub(r"\?[^\s'\")]*", "?…", f"{type(exc).__name__}: {exc}")[:300]
 
 
+def tidy(auth, mode):
+    """B-08 (v19.4): 12-month clean-up through /api/admin action "tidy". mode "dry" counts only (manual runs);
+    "run" (the monthly run on the 1st) counts first, then deletes. Prints numbers only, never the token or any row."""
+    if mode not in ("dry", "run"):
+        return
+    names = (("feedback", "feedback"), ("sightings", "sightings"), ("reports", "stock reports"), ("csp", "CSP reports"),
+             ("pharmacists", "inactive pharmacist registrations"), ("blockedTrimmed", "blocked registrations trimmed to the number"))
+    lines = []
+    for dry in ((True, False) if mode == "run" else (True,)):
+        try:
+            r = requests.post(f"{SITE}/api/admin", json={"action": "tidy", "dry": dry}, headers=auth, timeout=60)
+            r.raise_for_status()
+            j = r.json()
+        except Exception as exc:
+            print(f"tidy: could not run ({safe(exc)})", file=sys.stderr); lines.append(f"Tidy {'dry run' if dry else 'clean-up'} failed."); break
+        c = j.get("counts", {})
+        line = (("Tidy dry run" if dry else "Tidy deleted") + f" (older than {j.get('before', '?')}): " +
+                ", ".join(f"{label} {int(c.get(k, 0))}" for k, label in names))
+        print("tidy: " + line); lines.append(line)
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary and lines:
+        with open(summary, "a", encoding="utf-8") as f:
+            f.write("\n".join(["### 12-month clean-up"] + [f"- {x}" for x in lines]) + "\n")
+
+
 def main():
     token = os.environ.get("ADMIN_TOKEN", "").strip()
     if not token:
         print("inbox: ADMIN_TOKEN not set — skipping"); return 0
-    out = {}
     auth = {"Authorization": f"Bearer {token}"}
+    rc = inbox(token, auth)
+    tidy(auth, os.environ.get("TIDY", "").strip().lower())   # set by refresh.yml: "run" on the 1st, "dry" on a manual run
+    return rc
+
+
+def inbox(token, auth):
+    out = {}
     try:
         for key, lst, extra in (("feedback", "feedback", {"new": "1"}), ("pending", "pharmacists", {}), ("sightings", "sightings", {})):
             r = requests.get(f"{SITE}/api/admin", params={"list": lst, **extra}, headers=auth, timeout=30)

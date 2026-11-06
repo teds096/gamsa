@@ -97,7 +97,10 @@ def main():
             return 1
         if old == new:
             continue
-        if f"${old}" not in raw:
+        # D-03 (v19.4): pages may write the amount as {{PBS:key}}; build.py fills it from pbsFigures, so updating
+        # pbsFigures is enough. Literal "$old" copies in costs.json are still swapped below.
+        placed = any("{{PBS:" + key + "}}" in f.read_text() for f in COSTS.parent.glob("*.json"))
+        if f"${old}" not in raw and not placed:
             print(f"FAIL: {key} changed ${old} -> ${new} but ${old} does not appear in the page copy. "
                   f"Update content/costs.json by hand.", file=sys.stderr)
             return 1

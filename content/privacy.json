@@ -37,7 +37,7 @@
       "nav": "Storage",
       "list": [
         "**Where**: Cloudflare, a US company, runs the database in its Oceania region; it offers no setting that keeps data inside Australia only ([Cloudflare: D1 data location](https://developers.cloudflare.com/d1/configuration/data-location/)).",
-        "**How long**: there is no fixed deletion date yet. The author deletes what is no longer needed, and anything you sent sooner if you ask through the [feedback page](#/feedback).",
+        "**How long**: feedback, patient sightings, pharmacists' stock reports and pharmacist registrations are kept for up to 12 months. A registration counts as inactive when the pharmacist has posted no report for 12 months. A clean-up on the first of each month deletes anything older than that. If a number is blocked, only the registration number is kept, so the block keeps working. You can ask for anything you sent to be deleted sooner through the [feedback page](#/feedback).",
         "**Access and correction**: ask through the [feedback page](#/feedback) to see, correct or delete what you sent.",
         "**Backup**: a monthly backup is being set up but has not started. It will be encrypted, kept for 90 days on GitHub (a US company) so the database can be restored, and only the author will be able to unlock it. This page will say when it starts."
       ]
@@ -70,7 +70,7 @@
     {
       "h": "Changes and contact",
       "body": [
-        "This page changes whenever data collection is added or removed. Questions or removal requests: [send feedback](#/feedback). Last reviewed 31 October 2026.",
+        "This page changes whenever data collection is added or removed. Questions or removal requests: [send feedback](#/feedback). Last reviewed 6 November 2026.",
         "If you are unhappy with how your information has been handled, tell the author first through the [feedback page](#/feedback). To ask about or correct your personal information, you can also email gamsaenquiries@gmail.com. If that does not resolve it, contact the Office of the Australian Information Commissioner (OAIC) at [oaic.gov.au](https://www.oaic.gov.au). For a concern about a health service, including a pharmacist, contact South Australia's Health and Community Services Complaints Commissioner (HCSCC) at [hcscc.sa.gov.au](https://www.hcscc.sa.gov.au)."
       ]
     }

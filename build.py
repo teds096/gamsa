@@ -4,6 +4,15 @@ import json, re, pathlib
 R = pathlib.Path(__file__).parent
 KEEP = ("id","genericName","brand","brands","form","strengthLabel","category","status","statusLabel","expectedReturn","sourceUrl")
 meds = json.loads((R/"data/medicines.json").read_text())
+# Supply and shortage lists (Ted, 6 Nov 2026): newest first (latest date in "since"), then A-Z; rows with no date go last, A-Z.
+def _since(m):
+    import datetime
+    ds = []
+    for d, mo, y in re.findall(r"(\d{1,2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* (\d{4})", str(m.get("since", ""))):
+        ds.append(datetime.datetime.strptime(f"{d} {mo} {y}", "%d %b %Y").toordinal())
+    return max(ds) if ds else 0
+def _nat(t): return [(0, int(x), "") if x.isdigit() else (1, 0, x.lower()) for x in re.split(r"(\d+)", str(t or ""))]
+meds["medicines"].sort(key=lambda m: (-_since(m), (m.get("genericName") or m.get("brand") or "").lower(), (m.get("brand") or "").lower(), _nat(m.get("strengthLabel"))))
 payload = {"generatedAt": meds["generatedAt"],
            "medicines": [{k:m[k] for k in KEEP if k in m} for m in meds["medicines"]]}
 content = {k: json.loads((R/f"content/{k}.json").read_text()) for k in ("dosing","administration","costs","easyread","pharmacy","clinicians","allies","resources","privacy","accessibility","disclaimer","addons","monitoring")}
@@ -43,7 +52,7 @@ except (FileNotFoundError, ValueError): pass
 _disc = content["disclaimer"]["sections"]
 if not any(s.get("h") == "Sources and copyright" for s in _disc):
     _disc.append({"h": "Sources and copyright", "body": [
-        "The words, pictures and figures on this site are © 2026 GAMSA, unless a page says otherwise.",
+        "The words, pictures and figures on this site are © 2026 GAMSA, unless a page says otherwise. All rights reserved.",
         "The Product Information (PI) and Consumer Medicine Information (CMI) for each medicine belong to the company that supplies that medicine in Australia (the sponsor). This site does not copy them: it puts what they say into plain words, and each medicine page links to the full documents.",
         "Prices, PBS listings and supply status come from the Pharmaceutical Benefits Scheme (PBS) and the Therapeutic Goods Administration (TGA), which are Australian Government (Commonwealth of Australia) sources. Each page names its sources, with the date they were checked, and links to them.",
         "To ask about using something from this site, [send feedback](#/feedback)."]})
@@ -52,7 +61,7 @@ COPYRIGHT_SEC = "sec-disclaimer-" + str(next(i for i, s in enumerate(_disc) if s
 def _files():
     out = {}
     for f in sorted((R/"static").glob("*/*")):
-        if f.parent.name in ("clinicians", "allies") and f.suffix.lower() in (".pdf", ".zip"):
+        if f.parent.name in ("clinicians", "allies", "guides") and f.suffix.lower() in (".pdf", ".zip"):
             n = f.stat().st_size
             size = f"{n/1e6:.1f} MB" if n >= 1e6 else f"{max(1, round(n/1e3))} KB"
             out[f"/{f.parent.name}/{f.name}"] = {"type": f.suffix[1:].upper(), "size": size}
@@ -90,9 +99,22 @@ def _stamp_refs(obj):
     elif isinstance(obj, list):
         for v in obj: _stamp_refs(v)
     return obj
+# D-03 (v19.4, 6 Nov 2026): PBS amounts in content/*.json are written as {{PBS:field}} and filled from
+# content/costs.json "pbsFigures", which the monthly scraper/costs.py updates, so a new PBS year needs no text edits.
+# Fields: general_copay, conc_copay, sn_general, sn_conc (numbers without "$", e.g. "25.00"; write "$" before the
+# placeholder), checkedAt ("9 Oct 2026") and checkedAtLong ("9 October 2026"). An unknown field stops the build, and the
+# build fails if any {{NAME}} placeholder is left anywhere in dist/ (check at the end of this file).
+_PBS = content["costs"].get("pbsFigures", {})
+_PBS_RX = re.compile(r"\{\{PBS:([A-Za-z_]+)\}\}")
+def _pbs_val(m):
+    k = m.group(1)
+    if k == "checkedAtLong" and _PBS.get("checkedAt"): return _longdate(_PBS["checkedAt"])
+    if isinstance(_PBS.get(k), str) and _PBS[k]: return _PBS[k]
+    raise SystemExit(f"FAIL: {{{{PBS:{k}}}}} has no value in content/costs.json pbsFigures (fields: {', '.join(sorted(_PBS))}, checkedAtLong)")
 def _tok(obj):
     s = json.dumps(obj, ensure_ascii=False)
     for k, v in _dates.items(): s = s.replace(k, v)
+    s = _PBS_RX.sub(_pbs_val, s)
     return _stamp_refs(json.loads(s))
 content = _tok(content); medinfo = _tok(medinfo)
 import figures   # figure definitions in content/*.json -> HTML + inline SVG (page view + Easy Read view); see figures.py
@@ -144,7 +166,7 @@ def _dl_sizes(x):
         else:
             t += f' <span class="dl-meta">({meta["type"]}, {meta["size"]})</span>'
         return m.group(1) + t + "</a>"
-    return re.sub(r'(<a [^>]*href="(/(?:clinicians|allies)/[^"#]+)"[^>]*>)([^<]*)</a>', f, x)
+    return re.sub(r'(<a [^>]*href="(/(?:clinicians|allies|guides)/[^"#]+)"[^>]*>)([^<]*)</a>', f, x)
 _m = re.search(r"<script>(.*?)</script>", html, re.S)
 html = _dl_sizes(html[:_m.start()]) + _m.group(0) + _dl_sizes(html[_m.end():])
 if "about" not in content: html = re.sub(r'\s*<li class="ft-about">.*?</li>', "", html)   # no about.json: no footer link
@@ -229,7 +251,7 @@ def sentence(t, n=158):
 def full_title(name):
     if "South Australia" in name: return "GAMSA \u00b7 " + name
     for t in (name + " \u00b7 Gender-affirming medicines, South Australia \u00b7 GAMSA",
-              name + " \u00b7 Gender-affirming medicines SA \u00b7 GAMSA",
+              name + " \u00b7 Gender-Affirming Medicines South Australia",
               name + " \u00b7 GAMSA, South Australia"):
         if len(t) <= 60: return t
     return name + " \u00b7 GAMSA"
@@ -480,4 +502,9 @@ csp_trial = "; ".join([d for d in CSP_BASE if d != "upgrade-insecure-requests"] 
     "",
 ]))
 n = sum(1 for _ in D.rglob("*.html")) - 1
+# D-03: nothing like {{NAME}} or {{PBS:field}} may reach the published files
+_left = [str(f) for f in [R/"index.html", R/"preview.html"] + sorted(D.rglob("*"))
+         if f.is_file() and f.suffix in (".html", ".js", ".xml", ".json", ".txt", ".css")
+         and re.search(r"\{\{[A-Za-z_][A-Za-z0-9_:]*\}\}", f.read_text(errors="ignore"))]
+if _left: raise SystemExit("FAIL: unreplaced {{...}} placeholder in: " + ", ".join(_left[:10]))
 print(f"Built dist/: {n} pages, sitemap with {len(urls)} URLs, {len(_FIGS)} figures; preview.html for local viewing")

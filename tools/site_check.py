@@ -39,7 +39,7 @@ except Exception as e: step("feed.xml valid", False, str(e))
 step("CSP script hashes", (D/"_headers").read_text().count("sha256-") >= 2)
 tok = [f.name for f in D.rglob("*.html") if re.search(r"\{\{|__[A-Z]+__", f.read_text())]
 step("no leftover template tokens", not tok, ", ".join(tok[:5]))
-pat = re.compile(r"\[(?!\d[\d,\s]*\])[^\]]+\]\((#/[a-z0-9/-]*(#[a-z0-9-]+)?|/(clinicians|allies)/[a-z0-9-]+\.(pdf|zip)|https://[^\s)]+|/medicines/[a-z0-9-]+(#[a-z0-9-]+)?)\)")
+pat = re.compile(r"\[(?!\d[\d,\s]*\])[^\]]+\]\((#/[a-z0-9/-]*(#[a-z0-9-]+)?|/(clinicians|allies|guides)/[a-z0-9-]+\.(pdf|zip)|https://[^\s)]+|/medicines/[a-z0-9-]+(#[a-z0-9-]+)?)\)")
 badlinks, badrefs = [], []
 for f in glob.glob("content/*.json"):
     c = json.load(open(f)); txt = json.dumps(c, ensure_ascii=False)

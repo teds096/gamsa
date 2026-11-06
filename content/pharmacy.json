@@ -5,10 +5,73 @@
     {
       "h": "Guides you can print or take to an appointment",
       "body": [
-        "Australian and manufacturer sources you can read or take to an appointment. They are general information, not instructions for your dose.",
+        "GAMSA printables and Australian or manufacturer sources you can read or take to an appointment. They are general information, not instructions for your dose.",
         "Every product you are dispensed also comes with a Consumer Medicine Information leaflet. If yours went missing, your pharmacist can print another one.",
         "If you have the long-acting testosterone injection, there is also a [training package for the clinicians who give it](/medicines/testosterone-undecanoate#sec-med-9) — a procedure, a competency checklist and an adverse event form — that you can pass on to your clinic."
       ],
+      "downloads": [
+        {
+          "t": "Pharmacy visit checklist",
+          "u": "/allies/pharmacy-visit-checklist.pdf",
+          "p": "1 page",
+          "d": "What to take, what to ask, and what to do if your medicine is out of stock."
+        },
+        {
+          "t": "Monitoring schedule",
+          "u": "/guides/monitoring-schedule.pdf",
+          "p": "9 pages",
+          "d": "Which blood tests and checks to expect, for each medicine."
+        },
+        {
+          "t": "PBS Authority wording card",
+          "u": "/clinicians/pbs-authority-wording-card.pdf",
+          "p": "1 page",
+          "d": "How PBS testosterone scripts are worded, to give your prescriber."
+        },
+        {
+          "t": "Treatment room card",
+          "u": "/clinicians/testosterone-undecanoate-im-treatment-room-card.pdf",
+          "p": "1 page",
+          "d": "For the clinic that gives your long-acting testosterone injection."
+        },
+        {
+          "t": "Inclusive environment checklist",
+          "u": "/guides/inclusive-environment.pdf",
+          "p": "2 pages",
+          "d": "For clinics and pharmacies that want to be welcoming."
+        },
+        {
+          "t": "Dose and symptom logs",
+          "d": "To fill in and bring to appointments. One for each medicine:",
+          "items": [
+            {
+              "t": "Short-acting testosterone",
+              "u": "/guides/log-testosterone-short-acting.pdf"
+            },
+            {
+              "t": "Long-acting testosterone injection",
+              "u": "/guides/log-testosterone-undecanoate.pdf"
+            },
+            {
+              "t": "Oestradiol patches",
+              "u": "/guides/log-oestradiol-patch.pdf"
+            },
+            {
+              "t": "Implants",
+              "u": "/guides/log-implant.pdf"
+            },
+            {
+              "t": "GnRH analogues",
+              "u": "/guides/log-gnrh.pdf"
+            },
+            {
+              "t": "Blood tests",
+              "u": "/guides/log-blood-tests.pdf"
+            }
+          ]
+        }
+      ],
+      "listh": "Other leaflets and guides",
       "list": [
         "Royal Children's Hospital Melbourne — illustrated oestrogen patch information sheet [1]",
         "Besins Healthcare Australia — Testogel patient information booklet [2]",

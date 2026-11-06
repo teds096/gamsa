@@ -10,6 +10,10 @@
 //   block    {ahpra}                             stop and hide all reports from that number
 //   newkey   {ahpra}                             replace a lost or leaked report key (approved pharmacists only)
 //   publish  {kind:"report"|"sighting", id}      publish one held report or sighting
+//   tidy     {dry:true|false}                    B-08 (v19.4): 12-month clean-up, run by the monthly refresh on the 1st.
+//            Deletes feedback, sightings, stock reports and CSP reports older than 12 months, and pending or approved
+//            pharmacist registrations with no report for 12 months. A blocked number keeps only its AHPRA number and
+//            state (name and email emptied), so the block still works. dry:true only counts. Returns counts only.
 // A new report key is returned once, in the reply to approve/newkey; only its SHA-256 hash is stored.
 import { json, readJson, isAdmin, tooMany, ensureSchema, sha256hex, newReportKey } from "../_lib/util.js";
 
@@ -143,6 +147,36 @@ export async function onRequestPost({ request, env }) {
     if (!p.key_hash) out.key = await issueKey(DB, ahpra);
     return json(out);
   }
+  if (action === "tidy") return json(await tidy(DB, b.dry !== false));
   return json({ ok: false, error: "action" }, 400);
+}
+
+// B-08 retention: 12 calendar months back from now (UTC). Every statement takes the same cut-off, so a dry run
+// counts exactly what a real run would remove.
+export function cutoff(now = new Date()) {
+  const d = new Date(now.getTime());
+  d.setUTCMonth(d.getUTCMonth() - 12);
+  return d.toISOString();
+}
+const INACTIVE = "state IN ('pending','approved') AND COALESCE(decided, created) < ?1 " +
+  "AND NOT EXISTS (SELECT 1 FROM pharmacy_reports r WHERE r.ahpra = pharmacists.ahpra AND r.created >= ?1)";
+const BLOCKED_OLD = "state = 'blocked' AND COALESCE(decided, created) < ?1 AND (name <> '' OR email IS NOT NULL)";
+const TIDY = [
+  ["feedback", "FROM feedback WHERE created < ?1", "DELETE"],
+  ["sightings", "FROM sightings WHERE created < ?1", "DELETE"],
+  ["reports", "FROM pharmacy_reports WHERE created < ?1", "DELETE"],
+  ["csp", "FROM csp_reports WHERE day < substr(?1, 1, 10)", "DELETE"],
+  ["pharmacists", "FROM pharmacists WHERE " + INACTIVE, "DELETE"],
+  ["blockedTrimmed", "pharmacists SET name = '', email = NULL WHERE " + BLOCKED_OLD, "UPDATE"],
+];
+export async function tidy(DB, dry = true) {
+  const cut = cutoff(), counts = {};
+  // counts first (pharmacists before reports are removed, so "no report for 12 months" is judged on the same data)
+  for (const [k, tail, verb] of TIDY) {
+    const from = verb === "UPDATE" ? "FROM " + tail.replace(/ SET .*? WHERE /, " WHERE ") : tail;
+    counts[k] = ((await DB.prepare("SELECT COUNT(*) AS n " + from).bind(cut).first()) || {}).n || 0;
+  }
+  if (!dry) await DB.batch(TIDY.map(([, tail, verb]) => DB.prepare((verb === "UPDATE" ? "UPDATE " : "DELETE ") + tail).bind(cut)));
+  return { ok: true, dry, before: cut.slice(0, 10), counts };
 }
 

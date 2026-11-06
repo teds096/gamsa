@@ -1,6 +1,6 @@
 {
   "title": "Monitoring and related care",
-  "intro": "The care that goes with gender-affirming hormone therapy: blood tests and reviews, getting the timing of a blood test right, fertility, sexual function, PrEP, and hormones around surgery. It is background reading, not a prescription. The forms each medicine comes in and the dose ranges are on the [Medicines, doses and formulations](#/doses) page.",
+  "intro": "The care that goes with gender-affirming hormone therapy: blood tests and reviews, the tests for each medicine, getting the timing of a blood test right, fertility, sexual function, PrEP, and hormones around surgery. It is background reading, not a prescription. The forms each medicine comes in and the dose ranges are on the [Medicines, doses and formulations](#/doses) page.",
   "sections": [
     {
       "h": "Blood tests and reviews",
@@ -113,6 +113,315 @@
         "caption": "The usual schedule of reviews and blood tests, from the Australian position statement, WPATH Standards of Care version 8 and the Equinox prescribing guide, with Australia's 2026 standards of care for comparison [2][7][3][1].",
         "note": "Other guidance: Australia's 2026 standards of care suggest a yearly review once things are stable."
       }
+    },
+    {
+      "h": "Blood tests for each medicine",
+      "nav": "Tests for each medicine",
+      "group": "Blood tests for each medicine",
+      "body": [
+        "These tables show the tests usually done for each medicine: before starting, in the first year, and after that. They are a guide to what to expect, not a schedule to follow on your own. Your prescriber sets the actual timing, and it can change with your health, other medicines and how you are going [1][2].",
+        "In the first year, reviews are usually every three to four months [1] (three-monthly in the 2019 position statement [2]). Once things are stable, Australia's 2026 standards of care suggest a yearly review [1]; the position statement suggests every six to twelve months [2]. The tables use \"Each year\" for the stable stage, with the position statement range alongside.",
+        "Every review, whatever the medicine, also covers blood pressure, weight, mood and how the changes are going for you [2][7]."
+      ],
+      "note": "Bring this page to your appointment, or [print the PDF](/guides/monitoring-schedule.pdf), and ask your prescriber to mark which tests apply to you."
+    },
+    {
+      "h": "Tests for oestradiol (tablets, patches, gel; implants)",
+      "body": [],
+      "table": {
+        "head": [
+          "Test",
+          "Before starting",
+          "First year",
+          "Each year after"
+        ],
+        "rows": [
+          [
+            "Oestradiol level (trough, just before the next dose; for patches, just before a new patch)",
+            "Yes",
+            "At each review, every 3–4 months; and 6–8 weeks after a dose change",
+            "At each review (yearly, or every 6–12 months)"
+          ],
+          [
+            "Total testosterone",
+            "Yes",
+            "At each review; under 2 nmol/L if full suppression is wanted",
+            "At each review"
+          ],
+          [
+            "Full blood count, kidney function and electrolytes, liver function",
+            "Yes",
+            "At each review",
+            "At each review"
+          ],
+          [
+            "LH and FSH",
+            "Yes",
+            "Not routine. LH may be checked to see whether your hormone levels are high enough to protect your bones (this does not work on cyproterone)",
+            "Same"
+          ],
+          [
+            "Prolactin",
+            "Yes",
+            "Only if your prescriber chooses to check it, or if you have symptoms such as new headaches, vision changes or a lot of milky nipple discharge",
+            "Same"
+          ],
+          [
+            "Lipids and glucose (or HbA1c)",
+            "Yes, especially with heart risk factors",
+            "—",
+            "Periodically, especially with other risk factors"
+          ],
+          [
+            "Implants only",
+            "Not used to start therapy",
+            "Usually every 3 months after the first implant, to plan the next one",
+            "Less often; the blood level guides when the next implant is due"
+          ]
+        ]
+      },
+      "note": "Sources: [1][2][3]; LH, prolactin and bone [22]; implants [13].",
+      "nav": "Oestradiol tests",
+      "group": "Blood tests for each medicine"
+    },
+    {
+      "h": "Tests for spironolactone (androgen blocker)",
+      "body": [],
+      "table": {
+        "head": [
+          "Test",
+          "Before starting",
+          "First year",
+          "Each year after"
+        ],
+        "rows": [
+          [
+            "Potassium (electrolytes) and kidney function",
+            "Yes",
+            "Product information: weekly at the start, then monthly for 3 months, then every 3 months for the rest of the first year. Other guidance: at each review, and especially important with spironolactone",
+            "Product information: every 6 months. Other guidance: at each review"
+          ],
+          [
+            "Also tell your prescriber",
+            "If you take ACE inhibitors, ARBs, anti-inflammatories (NSAIDs), potassium supplements or salt substitutes",
+            "—",
+            "—"
+          ]
+        ]
+      },
+      "note": "Sources: Spiractin and Aldactone CMI [14] (Product information); AusPATH and the position statement [1][2] (Other guidance). Kidney checks matter even more if you also take PrEP [1][11].",
+      "nav": "Spironolactone tests",
+      "group": "Blood tests for each medicine"
+    },
+    {
+      "h": "Tests for cyproterone acetate (androgen blocker)",
+      "body": [],
+      "table": {
+        "head": [
+          "Test",
+          "Before starting",
+          "First year",
+          "Each year after"
+        ],
+        "rows": [
+          [
+            "Liver function",
+            "Yes",
+            "Regularly during treatment, and at once if you have signs of liver trouble (yellow skin or eyes, dark urine)",
+            "Regularly"
+          ],
+          [
+            "Full blood count (red cells)",
+            "Yes (part of everyone's first tests)",
+            "Regularly",
+            "Regularly"
+          ],
+          [
+            "Adrenal function",
+            "—",
+            "The product information says it is checked regularly during treatment",
+            "As your prescriber decides"
+          ]
+        ]
+      },
+      "note": "Sources: AusPATH baseline tests and liver monitoring [1][22]; Androcur PI s4.4 (liver, adrenocortical function and red cells) [15]. Liver deaths have been reported at doses of 100 mg a day and above, mostly in men treated for prostate cancer; Australian guidance for feminising therapy gives 12.5 mg once a week up to 25 mg a day [15][22].",
+      "nav": "Cyproterone tests",
+      "group": "Blood tests for each medicine"
+    },
+    {
+      "h": "Tests for bicalutamide (not first-line)",
+      "body": [],
+      "table": {
+        "head": [
+          "Test",
+          "Before starting",
+          "First year",
+          "Each year after"
+        ],
+        "rows": [
+          [
+            "Liver function",
+            "Yes",
+            "Regularly",
+            "Regularly"
+          ],
+          [
+            "Tell your prescriber at once",
+            "—",
+            "New cough, breathlessness or fever (lung inflammation is listed in the product information)",
+            "Same"
+          ]
+        ]
+      },
+      "note": "Sources: AusPATH p28 (not first-line; liver and lung toxicity, including deaths; regular liver tests) [16]; Cosudex PI s4.4, interstitial lung disease added August 2026 [17].",
+      "nav": "Bicalutamide tests",
+      "group": "Blood tests for each medicine"
+    },
+    {
+      "h": "Tests for micronised progesterone",
+      "body": [],
+      "table": {
+        "head": [
+          "Test",
+          "Before starting",
+          "First year",
+          "Each year after"
+        ],
+        "rows": [
+          [
+            "Blood tests",
+            "No test specific to progesterone",
+            "Reviewed with your oestradiol",
+            "Reviewed with your oestradiol"
+          ],
+          [
+            "Review",
+            "—",
+            "A check after 3–6 months to see whether it is helping and whether to continue",
+            "At each review"
+          ],
+          [
+            "Mood",
+            "Discussed",
+            "Watched, because low mood is a possible side effect",
+            "Watched"
+          ]
+        ]
+      },
+      "note": "Sources: AusPATH p56 [22]. The Prometrium product information also advises caution with depression, epilepsy, diabetes, asthma or fluid retention, and says it may raise ciclosporin levels [18].",
+      "nav": "Progesterone tests",
+      "group": "Blood tests for each medicine"
+    },
+    {
+      "h": "Tests for testosterone (all forms)",
+      "body": [
+        "When the testosterone sample is taken depends on the form [1]:"
+      ],
+      "table": {
+        "head": [
+          "Test",
+          "Before starting",
+          "First year",
+          "Each year after"
+        ],
+        "rows": [
+          [
+            "Total testosterone (trough)",
+            "Yes",
+            "At each review, every 3–4 months; target about 10–20 nmol/L",
+            "At each review"
+          ],
+          [
+            "Full blood count (haemoglobin and haematocrit)",
+            "Yes",
+            "At each review",
+            "At each review; above about 0.50, the dose or interval is reviewed"
+          ],
+          [
+            "Lipids and glucose",
+            "Yes",
+            "As your prescriber decides",
+            "Periodically"
+          ],
+          [
+            "Liver function",
+            "Yes",
+            "At each review",
+            "At each review"
+          ]
+        ]
+      },
+      "note": "Sources: [1][2][3]. If you take an SGLT-2 inhibitor (such as empagliflozin or dapagliflozin), the blood count is checked more closely [5][6].",
+      "nav": "Testosterone tests",
+      "group": "Blood tests for each medicine",
+      "list": [
+        "Long-acting injection (undecanoate): just before the next injection; the dose is not changed until after three injections",
+        "Short-acting injection (enantate, mixed esters): midway between injections, or as a peak and a trough",
+        "1% gel (Testogel) or 5% cream: in the morning, before that day's dose",
+        "2% gel (Testavan): 2 to 4 hours after applying"
+      ]
+    },
+    {
+      "h": "Tests for GnRH analogues (goserelin, leuprorelin, triptorelin)",
+      "body": [],
+      "table": {
+        "head": [
+          "Test",
+          "Before starting",
+          "First year",
+          "Each year after"
+        ],
+        "rows": [
+          [
+            "Bone health",
+            "A bone density scan is not routine; it may be considered if you have risk factors",
+            "Watched, because blockers pause bone strengthening; long-term use is itself a risk factor, so a scan may be considered",
+            "Watched; a scan may be considered with long-term use, or if you take a blocker without oestrogen or testosterone"
+          ],
+          [
+            "Heart tracing (ECG) and electrolytes",
+            "If you have a heart rhythm condition, heart failure or take medicines that affect heart rhythm",
+            "Considered periodically in those situations",
+            "Same"
+          ],
+          [
+            "Mood",
+            "Discussed",
+            "At each review",
+            "At each review"
+          ]
+        ]
+      },
+      "note": "Sources: bone [2][7][22]; QT and electrolytes, Zoladex PI s4.4/4.5 (same warning in Eligard, Lucrin and Diphereline) [19]; mood changes reported with GnRH agonists [19].",
+      "nav": "GnRH analogue tests",
+      "group": "Blood tests for each medicine"
+    },
+    {
+      "h": "Tests for medicines used alongside",
+      "nav": "Add-on medicine tests",
+      "group": "Blood tests for each medicine",
+      "body": [],
+      "table": {
+        "head": [
+          "Medicine",
+          "Tests"
+        ],
+        "rows": [
+          [
+            "Isotretinoin",
+            "Liver function and lipids before starting, monthly, and at the end of the course; mood watched throughout [20]"
+          ],
+          [
+            "Finasteride",
+            "No routine blood test; it lowers PSA results by about half, so tell whoever orders a prostate test [21]"
+          ],
+          [
+            "PrEP",
+            "Kidney function, HIV and STI tests regularly; kidney tests matter more with spironolactone [1][11]"
+          ]
+        ]
+      },
+      "note": "These are on the [Add-on therapies](#/add-on-therapies) page."
     },
     {
       "h": "Getting the timing of the blood test right",
@@ -377,6 +686,56 @@
     {
       "n": 12,
       "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"), page 59 (Surgery: hormone therapy and clot prevention around surgery). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 24 October 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 13,
+      "text": "AusPATH 2026, pages 26 (Choice of oestrogen formulation: estradiol implants) and 32 (Table 5, Estradiol monitoring: implants). Accessed 24 October 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 14,
+      "text": "Spiractin (spironolactone) tablets, Australian Consumer Medicine Information (blood tests: weekly at the start, monthly for 3 months, every 3 months for a year, then every 6 months) (July 2025); Aldactone CMI (June 2025). ACSQHC Medicine Finder. Accessed 17 October 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/spiractin-tablets"
+    },
+    {
+      "n": 15,
+      "text": "Androcur (cyproterone acetate) Australian Product Information, section 4.4 (liver function, adrenocortical function and red cells; liver deaths at 100 mg and above) (date of revision 25 November 2024). ACSQHC Medicine Finder. Accessed 17 October 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/androcur-tablets"
+    },
+    {
+      "n": 16,
+      "text": "AusPATH 2026, page 28 (bicalutamide). Accessed 23 October 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 17,
+      "text": "Therapeutic Goods Administration. Product Information safety updates – August 2026 (Cosudex: interstitial lung disease added to section 4.4). Accessed 23 October 2026.",
+      "url": "https://www.tga.gov.au/news/safety-updates/product-information-safety-updates-august-2026"
+    },
+    {
+      "n": 18,
+      "text": "Prometrium (progesterone) capsules, Australian Product Information, sections 4.4 and 4.5. ACSQHC Medicine Finder. Accessed 17 October 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/prometrium"
+    },
+    {
+      "n": 19,
+      "text": "Zoladex 3.6 mg implant (goserelin), Australian Product Information, sections 4.4 and 4.5 (date of revision 6 March 2026); the same QT warning is in the Eligard, Lucrin Depot and Diphereline PIs; Diphereline PI s4.4 mood changes. TGA Product Information and Consumer Medicine Information search (goserelin). Accessed 6 November 2026.",
+      "url": "https://www.ebs.tga.gov.au/ebs/picmi/picmirepository.nsf/PICMI?OpenForm&t=&q=goserelin"
+    },
+    {
+      "n": 20,
+      "text": "Oratane (isotretinoin) capsules, Australian Product Information, section 4.4 (liver function and lipids before, monthly and at the end; depression) (date of revision 26 March 2025). ACSQHC Medicine Finder. Accessed 17 October 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/oratane"
+    },
+    {
+      "n": 21,
+      "text": "Finasteride GH 1 (finasteride 1 mg) tablets, Australian Consumer Medicine Information and Product Information (PSA lowered by about 50%). ACSQHC Medicine Finder. Accessed September 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/finasteride-gh-1-tablets"
+    },
+    {
+      "n": 22,
+      "text": "AusPATH 2026, pages 21 (Initial investigations), 30 (cyproterone dose), 36 (Ongoing monitoring of GAHT), 42–43 (Bone health; osteoporosis risk factors), 54 (Prolactinoma) and 56 (Progesterone). Accessed 6 November 2026.",
       "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
     }
   ]
