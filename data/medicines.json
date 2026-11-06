@@ -1,21 +1,21 @@
 {
- "generatedAt": "5 Nov 2026",
+ "generatedAt": "6 Nov 2026",
  "source": "TGA medicine shortage records + manually maintained entries",
- "scrapedCount": 25,
+ "scrapedCount": 24,
  "medicines": [
   {
    "id": "premarin",
    "brand": "Premarin",
    "strengthLabel": "Conjugated equine estrogens",
    "category": "estrogen",
-   "status": "in_supply",
-   "statusLabel": "No shortage reported to the TGA",
+   "status": "unverified",
+   "statusLabel": "Not independently confirmed",
    "since": "\u2014",
    "expectedReturn": "\u2014",
    "mechanism": "\u2014",
-   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "note": "Checked daily against the TGA shortage database.",
    "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/conjugated-estrogens",
-   "sourceLabel": "TGA shortage database (no notice)",
+   "sourceLabel": "TGA shortage record (unverified)",
    "genericName": "Conjugated estrogens",
    "form": "oral tablet",
    "brands": [
@@ -43,7 +43,7 @@
     "Androcur"
    ],
    "ingredient": "cyproterone-acetate",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "cyprostat",
@@ -71,14 +71,14 @@
    "brand": "Estraderm MX 100",
    "strengthLabel": "100 mcg/24h patch",
    "category": "estrogen",
-   "status": "in_supply",
-   "statusLabel": "No shortage reported to the TGA",
+   "status": "limited",
+   "statusLabel": "Limited availability",
    "since": "\u2014",
-   "expectedReturn": "\u2014",
+   "expectedReturn": "TGA date of 30 Oct 2026 passed; check with your pharmacist",
    "mechanism": "SSSI substitution allowed to 28 Feb 2027",
-   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
-   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/estradiol",
-   "sourceLabel": "TGA shortage database (no notice)",
+   "note": "The TGA shortage database listed Estraderm MX 100 as in limited supply until 30 October 2026; that date has passed and the record has not yet been updated. Estraderm MX 50 was resolved on 14 October 2026. The TGA page on the HRT patch shortage (updated 19 October 2026) says Estradot patches are in limited supply until 31 December 2026, that the TGA has approved an overseas brand, Estramon, for supply in Australia during the shortage, and that pharmacists may substitute another patch without a new prescription until 28 February 2027. Ask your pharmacist what is in stock.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/estradiol-hemihydrate",
+   "sourceLabel": "TGA shortage database",
    "genericName": "Estradiol",
    "form": "transdermal patch",
    "brands": [
@@ -87,7 +87,7 @@
    "ingredient": "estradiol",
    "lastVerified": "2026-11-05",
    "pin": true,
-   "pinUntil": "2026-10-30"
+   "pinUntil": "2026-12-31"
   },
   {
    "id": "estradot-100",
@@ -107,7 +107,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "estradot-25",
@@ -127,7 +127,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "estradot-50",
@@ -147,7 +147,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "estradot-75",
@@ -167,7 +167,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "estrogel",
@@ -189,7 +189,7 @@
     "Sandrena"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "estalis-50-140",
@@ -210,7 +210,7 @@
     "Estalis Continuous"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "estalis-50-250",
@@ -231,7 +231,7 @@
     "Estalis Continuous"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "progynova",
@@ -252,7 +252,7 @@
     "Progynova"
    ],
    "ingredient": "estradiol-valerate",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "apo-finasteride-1",
@@ -273,7 +273,7 @@
     "APO-Finasteride 1"
    ],
    "ingredient": "finasteride",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "finapen-1",
@@ -294,7 +294,7 @@
     "Finapen"
    ],
    "ingredient": "finasteride",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "finasteride-gh-1",
@@ -315,7 +315,7 @@
     "Finasteride GH 1"
    ],
    "ingredient": "finasteride",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "propecia",
@@ -336,7 +336,7 @@
     "Propecia"
    ],
    "ingredient": "finasteride",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "zoladex",
@@ -344,11 +344,11 @@
    "strengthLabel": "Goserelin monthly implant",
    "category": "gnrh-analogue",
    "status": "delisting",
-   "statusLabel": "PBS-listed until 1 May 2027 (was due to end 1 Nov 2026)",
-   "since": "announced 16 Jul 2026; AstraZeneca update 23 Sep 2026",
+   "statusLabel": "Still PBS-listed; sponsor says until 1 May 2027",
+   "since": "announced 16 Jul 2026; AstraZeneca update 23 Sep 2026; still listed after 1 Nov 2026",
    "expectedReturn": "access change, not a manufacturing shortage",
    "mechanism": "PBS funding/access change, per PBS and AstraZeneca notices",
-   "note": "Zoladex 3.6 mg was due to leave the PBS on 1 November 2026. On 23 September 2026 AstraZeneca said it will stay on the PBS until 1 May 2027, that PBS prescriptions written by 30 April 2027 can be filled until 1 May 2028, and that the free Zoladex Continuity Program will not go ahead. The TGA shortage record still shows the earlier 1 November 2026 date. Ask the pharmacist for the current position. Triptorelin 3.75 mg (Diphereline) has had no PBS restriction since 1 October 2026, but its listing is not for use in gender dysphoria in minors.",
+   "note": "Zoladex 3.6 mg is still on the PBS (item 1454M, for other conditions, not gender dysphoria). It was due to leave on 1 November 2026, but the PBS Summary of Changes for 1 November 2026 lists no change to it and no deletion notice. AstraZeneca says it will stay on the PBS until 1 May 2027, that PBS prescriptions written by 30 April 2027 can be filled until 1 May 2028, and that the free Zoladex Continuity Program will not go ahead. Ask the pharmacist for the current position. Triptorelin 3.75 mg (Diphereline) has had no PBS restriction since 1 October 2026, but its listing is \"not for use in gender dysphoria in minors\".",
    "sourceUrl": "https://www.astrazeneca.com.au/news/media-releases/2026/ASTRAZENECA-TO-EXTEND-PBS-ACCESS-TO-ZOLADEX-goserelin-MONTHLY-3_6mg-IMPLANT.html",
    "sourceLabel": "AstraZeneca media release, 23 Sep 2026",
    "genericName": "Goserelin",
@@ -356,7 +356,7 @@
    "brands": [
     "Zoladex"
    ],
-   "lastVerified": "2026-11-05",
+   "lastVerified": "2026-11-06",
    "ingredient": "goserelin",
    "pin": true,
    "pinUntil": "2027-04-30"
@@ -383,7 +383,7 @@
    "tgaMatch": [
     "apo-isotretinoin isotretinoin 10mg"
    ],
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "isotretinoin-apo-20",
@@ -407,7 +407,7 @@
    "tgaMatch": [
     "apo-isotretinoin isotretinoin 20mg"
    ],
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "isotretinoin-gx-10",
@@ -431,7 +431,7 @@
    "tgaMatch": [
     "isotretinoin gx isotretinoin 10mg"
    ],
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "isotretinoin-gx-20",
@@ -455,7 +455,7 @@
    "tgaMatch": [
     "isotretinoin gx isotretinoin 20mg"
    ],
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "isotretinoin-lupin-10",
@@ -479,7 +479,7 @@
    "tgaMatch": [
     "isotretinoin lupin isotretinoin 10 mg"
    ],
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "isotretinoin-lupin-20",
@@ -503,7 +503,7 @@
    "tgaMatch": [
     "isotretinoin lupin isotretinoin 20 mg"
    ],
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "isotretinoin-wgr-10",
@@ -527,7 +527,7 @@
    "tgaMatch": [
     "isotretinoin-wgr isotretinoin 10mg"
    ],
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "isotretinoin-wgr-20",
@@ -551,7 +551,7 @@
    "tgaMatch": [
     "isotretinoin-wgr isotretinoin 20mg"
    ],
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "oratane",
@@ -572,7 +572,7 @@
     "Oratane"
    ],
    "ingredient": "isotretinoin",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "eligard",
@@ -593,7 +593,7 @@
     "Eligard"
    ],
    "ingredient": "leuprorelin",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "lucrin",
@@ -615,7 +615,7 @@
     "Eligard"
    ],
    "ingredient": "leuprorelin",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "provera",
@@ -637,7 +637,7 @@
     "Depo-Provera"
    ],
    "ingredient": "medroxyprogesterone-acetate",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "primolut-n",
@@ -658,7 +658,7 @@
     "Primolut N"
    ],
    "ingredient": "norethisterone",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "prometrium",
@@ -681,7 +681,7 @@
     "PROGESTERONE-APX"
    ],
    "ingredient": "progesterone",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "spironolactone",
@@ -704,7 +704,7 @@
     "Spironolactone Viatris"
    ],
    "ingredient": "spironolactone",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "androforte",
@@ -725,7 +725,7 @@
     "AndroForte 5"
    ],
    "ingredient": "testosterone",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "testogel",
@@ -746,7 +746,7 @@
     "Testogel"
    ],
    "ingredient": "testosterone",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "reandron",
@@ -767,7 +767,7 @@
     "Reandron 1000"
    ],
    "ingredient": "testosterone-undecanoate",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   },
   {
    "id": "diphereline",
@@ -788,7 +788,7 @@
     "Diphereline"
    ],
    "ingredient": "triptorelin",
-   "lastVerified": "2026-11-05"
+   "lastVerified": "2026-11-06"
   }
  ]
 }

@@ -1,1 +1,16 @@
-{}
+{
+  "https://www.ebs.tga.gov.au/ebs/picmi/picmirepository.nsf/PICMI?OpenForm&t=&q=goserelin": {
+    "title": "Zoladex 3.6 mg implant SafeSystem (goserelin acetate)",
+    "medicines": [
+      "gnrh-analogues",
+      "gnrh-analogues"
+    ],
+    "dates": {
+      "PI revised": null,
+      "MIMS revised": null,
+      "CMI prepared": null,
+      "Published": null
+    },
+    "checked": "2026-11-06"
+  }
+}
