@@ -31,7 +31,7 @@ with sync_playwright() as p:
                 n=pg.evaluate("document.querySelectorAll('.view.on h1').length")
                 if n!=1: res["h1"].append((r,n))
                 t=pg.title()
-                if not t or "undefined" in t or "GAMSA" not in t: res["title"].append((r,t))
+                if not t or "undefined" in t or ("GAMSA" not in t and "Gender-Affirming" not in t): res["title"].append((r,t))
                 bad=pg.evaluate("Array.from(document.querySelectorAll('.view.on a[target=_blank]')).filter(a=>!/noopener/.test(a.rel)).length")
                 if bad: res["noopener"].append((r,bad))
         ctx.close()

@@ -4,7 +4,7 @@
 Builds the site, then runs every local check and prints a PASS/FAIL summary:
   1. data drift guard (scraper/check.py) and build
   2. static checks: sitemap files exist, feed.xml valid, CSP hashes, no template tokens,
-     every markdown link in content renders, references consistent, dist file sizes
+     every markdown link in content renders, references consistent, Easy Read guides in step (easy_sync.py), dist file sizes
   3. behaviour tests on the single-file preview (tools/test.py) and real paths (tools/pathtest.py)
   4. axe (WCAG 2.0/2.1 A+AA + best practice) on every route, light and dark; JS errors;
      one h1; titles; noopener; overflow at 360px (tools/audit.py)
@@ -43,6 +43,9 @@ pat = re.compile(r"\[(?!\d[\d,\s]*\])[^\]]+\]\((#/[a-z0-9/-]*(#[a-z0-9-]+)?|/(cl
 badlinks, badrefs = [], []
 for f in glob.glob("content/*.json"):
     c = json.load(open(f)); txt = json.dumps(c, ensure_ascii=False)
+    if isinstance(c, dict) and any(s.get("levels") for s in c.get("sections", [])):   # B-34: tables and their references come from monitoring-levels.json
+        sys.path.insert(0, "."); import levels
+        levels.apply(c, {"medicines": []}, json.load(open("content/monitoring-levels.json")))
     badlinks += [f+": "+x.group(0)[:60] for x in re.finditer(r"\[[^\]]*\]\([^)]*\)", txt) if not pat.fullmatch(x.group(0))]
     if "sections" in c:
         refs = {r["n"] for r in c.get("references", [])}; cited = set()
@@ -51,6 +54,8 @@ for f in glob.glob("content/*.json"):
         if refs - cited: badrefs.append(f"{f} never cites {sorted(refs-cited)}")
 step("content links render", not badlinks, "; ".join(badlinks[:3]))
 step("references consistent", not badrefs, "; ".join(badrefs[:3]))
+sys.path.insert(0, "."); import easy_sync; _er = easy_sync.stale()   # B-36: Easy Read guides changed after their sources?
+step("Easy Read guides in step with their pages", not _er, "; ".join(_er[:4]) + (" (update the guide, then python3 easy_sync.py --sync ID)" if _er else ""))
 for f in pathlib.Path("static").rglob("*"):
     if f.is_file() and f.suffix in (".pdf", ".zip", ".png", ".ico"):
         d = D/f.relative_to("static")
@@ -65,7 +70,7 @@ try:
     step("accessibility + errors, every route, light and dark", c == 0 and not bad, "; ".join(x[:150] for x in bad) or o.strip().splitlines()[0])
     c, o = run("python3 tools/devices.py", 900); bad = [l for l in o.splitlines() if "'ok'" not in l]
     step("phones and iPads", c == 0 and not bad, "; ".join(x[:150] for x in bad))
-    c, o = run("python3 tools/extra_checks.py" + (" --update-weights" if "--update-weights" in sys.argv else ""), 900)
+    c, o = run("python3 tools/extra_checks.py" + (" --update-weights" if "--update-weights" in sys.argv else ""), 2400)
     for l in o.splitlines():
         if l.startswith(("PASS ", "FAIL ")): k, rest = l[:4], l[5:]; name, _, det = rest.partition(" — "); step(name, k == "PASS", det)
         elif l.startswith(("SKIP ", "NOTE ")): print(l)

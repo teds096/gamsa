@@ -219,7 +219,8 @@
         "People who would normally pay the general co-payment pay the concessional amount instead — ${{PBS:conc_copay}} rather than ${{PBS:general_copay}} — and people with a concession card pay nothing [15].",
         "It covers every medicine listed on the PBS, which includes the PBS-listed hormone medicines on this site. It does not cover private prescriptions, and brand premiums still apply [15].",
         "Registration is a one-off, and you cannot do it yourself. Your GP or another PBS prescriber, or an Aboriginal Health Practitioner, registers you with Services Australia. You need to be enrolled in Medicare, and your prescriber needs to judge that cost could get in the way of you taking your medicine [15].",
-        "Once you are registered, it applies at any pharmacy. Your pharmacist can see it in their dispensing system, so you do not need anything written on each prescription. [Department of Health: Closing the Gap PBS co-payment](https://www.health.gov.au/cheaper-medicines/first-nations)"
+        "Once you are registered, it applies at any pharmacy. Your pharmacist can see it in their dispensing system, so you do not need anything written on each prescription. [Department of Health: Closing the Gap PBS co-payment](https://www.health.gov.au/cheaper-medicines/first-nations)",
+        "PBS information (not GAMSA's own): the co-payment amounts. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on {{PBS:checkedAtLong}}."
       ],
       "nav": "Closing the Gap"
     },
@@ -239,13 +240,13 @@
         "Estradiol tablets and patches are ordinary General Schedule listings with no restriction attached, so any prescriber can write them and you pay the standard co-payment. The listings cover estradiol valerate tablets (Progynova), estradiol tablets (Zumenon), patches including Estradot and Estraderm MX, and Sandrena gel sachets [5][7].",
         "Both registered estradiol gels are listed too. Estrogel — estradiol 0.06%, 750 micrograms per actuation, 64 actuations in a pump pack — is a General Schedule listing with no restrictions, item 14719Q, one pack with five repeats [21]. Listings still change several times a year, so check the current price with your pharmacist rather than assuming [5][21].",
         "Micronised progesterone 100 mg capsules are also on the General Schedule with no restrictions — progesterone 100 mg capsule, 30, item 14730G, one pack with five repeats. Several brands share that item, including Prometrium, Progesterone ADVZ 100 and PROGESTERONE-APX, so you can ask your pharmacist for one without a brand premium [22].",
-        "The 60-day versions of the gel and the capsules — items 14741W and 14733K, two packs for one co-payment — are written as restricted benefits, but the restriction is only the standard wording about your condition being stable enough for a two-month supply. It is not a restriction on who may have the medicine [21][22].",
+        "The 60-day versions of the gel and the capsules — items 14741W and 14733K, two packs for one co-payment — are Restricted Benefit listings. The PBS restriction reads: \"The condition must be stable for the prescriber to consider the listed maximum quantity of this medicine suitable for this patient.\" In plain words, it is about the quantity dispensed, not about who may have the medicine [21][22].",
         "Spironolactone is PBS-listed with no restriction [9]. So is cyproterone acetate 50 mg (item 1270W); its 60-day version, item 14023C, is a restricted benefit, where the restriction is only about the quantity dispensed [8].",
         "Testosterone is different. All the main testosterone products are PBS-listed but need an Authority prescription: the long-acting undecanoate injection, Testogel 1%, Testavan 2% and AndroForte 5 cream [6][10]. Primoteston Depot was deleted from the PBS on 1 February 2018 at the manufacturer's request [28], and Sustanon is not PBS-subsidised, so both are private prescriptions [10][11].",
         "Since 1 October 2026, one GnRH analogue, triptorelin 3.75 mg (Diphereline), has been on the PBS with no restriction (item 9378N), but its listing carries a note that it \"is not for use in gender dysphoria in minors\" [25]. So no GnRH analogue is PBS-subsidised for puberty suppression: goserelin, leuprorelin and the longer-acting triptorelin strengths are PBS-listed only for other conditions. For puberty suppression they are private prescriptions. SA Health's model of care, written in 2023, describes a cost of several thousand dollars a year for a young person who has to buy them privately [12].",
         "Goserelin 3.6 mg (Zoladex) was due to leave the PBS on 1 November 2026, with a free Zoladex Continuity Program planned in its place [13]. On 23 September 2026 the sponsor, AstraZeneca, said instead that Zoladex 3.6 mg will stay on the PBS until 1 May 2027, that PBS prescriptions written by 30 April 2027 can be filled until 1 May 2028, and that the Continuity Program will not go ahead [31]. It did not leave: in November 2026 it is still PBS-listed, for other conditions only, and the PBS Summary of Changes for 1 November 2026 lists no change to it and no deletion notice for 1 December 2026 or 1 January 2027 [26][27]. The 1 May 2027 date is the sponsor's; the PBS has not yet published an end date. Ask your pharmacist for the current position.",
         "Compounded products — testosterone or oestradiol implants, some creams — are never PBS-subsidised, because compounded medicines sit outside the scheme [11].",
-        "PBS information (not GAMSA's own): the PBS item numbers, listings, brands and the listing note quoted in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 5 November 2026 (brands) and 6 November 2026 (listing wording)."
+        "PBS information (not GAMSA's own): the PBS item numbers, listings, brands, and the restriction and listing note quoted in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 5 November 2026 (brands), 6 November 2026 (listing note) and 7 November 2026 (restriction wording)."
       ],
       "list": [
         "PBS, no restriction: estradiol tablets and patches, Sandrena gel, Estrogel, micronised progesterone 100 mg capsules, spironolactone, cyproterone acetate, and triptorelin 3.75 mg (Diphereline), whose listing is not for use in gender dysphoria in minors",
@@ -260,9 +261,10 @@
       "h": "Getting testosterone on the PBS: the Authority pathway",
       "body": [
         "There is no PBS listing for gender affirmation. Every PBS testosterone item is listed for androgen deficiency, and each one needs an Authority prescription [20].",
-        "The restriction requires that you are treated by, in consultation with, or waiting on an appointment with a specialist general paediatrician, paediatric endocrinologist, urologist, endocrinologist or a Fellow of the Australasian Chapter of Sexual Health Medicine. The specialist's name goes on the authority application. Once that is in place, a GP or nurse practitioner can write the PBS script [20][19].",
+        "The PBS treatment criteria for the androgen deficiency restriction read: \"Must be treated by a specialist general paediatrician, specialist paediatric endocrinologist, specialist urologist, specialist endocrinologist or a Fellow of the Australasian Chapter of Sexual Health Medicine; or in consultation with one of these specialists; or have an appointment to be assessed by one of these specialists.\" The prescribing instructions add: \"The name of the specialist must be included in the authority application.\" In plain words, once a specialist is involved and named, a GP or nurse practitioner can write the PBS script [29][19].",
         "This is the single biggest lever on what you pay. The same vial can cost a ${{PBS:general_copay}} PBS co-payment (${{PBS:conc_copay}} with a concession card) or the full private price; the PBS full price alone is $92.91 [3][6]. Which one you pay depends entirely on whether the paperwork is in place.",
-        "Estradiol, spironolactone and cyproterone (its packs of 50) are General Schedule items and need no authority [20]."
+        "Estradiol, spironolactone and cyproterone (its packs of 50) are General Schedule items and need no authority [20].",
+        "PBS information (not GAMSA's own): the treatment criteria and prescribing instruction quoted in this section, and the dispensed price. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 7 November 2026."
       ],
       "list": [
         "Ask your prescriber: is this script being written as a PBS Authority item?",
@@ -278,13 +280,13 @@
         "An Authority prescription is one where the prescriber has to get approval before the PBS will subsidise it. Approval is usually granted immediately, over the phone or online, and it happens before you get to the pharmacy. It is a funding step, not a judgement about you.",
         "The uncomfortable part is the wording, because there is no PBS indication written for gender affirmation.",
         "The PBS item pages for the testosterone products list the possible Authority indications as androgen deficiency, micropenis, pubertal induction, and constitutional delay of growth or puberty [6][10].",
-        "The PBS restriction used is for androgen deficiency: \"Patient must have an established pituitary or testicular disorder\". Prescribing must be by, in consultation with, or after booking an appointment with a specialist general paediatrician, paediatric endocrinologist, urologist, endocrinologist or a Fellow of the Australasian Chapter of Sexual Health Medicine, whose name goes on the authority application [20][11].",
+        "The PBS restriction used is for androgen deficiency. Its clinical criterion reads: \"Patient must have an established pituitary or testicular disorder.\" Its treatment criteria and prescribing instructions are quoted in the section above [29][11].",
         "Read plainly, that wording does not describe a trans patient at all. It describes a pituitary or testicular disorder that stops the body making enough testosterone.",
         "It is a quirk of a listing written years before anyone was thinking about gender-affirming care, and never rewritten. It does not mean your prescription is wrong, that your prescriber has made something up, or that your entitlement or price changes.",
         "It can still be jarring to see on a screen at the counter. If a pharmacist reacts, that is usually unfamiliarity rather than doubt — they are allowed to dispense it.",
         "If an Authority is missed or has expired, the pharmacy cannot charge you the PBS price. The fix is a quick call to your prescriber, not a private price. Ask before you pay.",
         "The PBS also lists testosterone for a second kind of androgen deficiency: in people aged 40 or over, confirmed by two morning blood tests, and not caused by a pituitary or testicular disorder. That is not the pathway used in gender-affirming care, so if you see it on the item page, it is not the one your prescriber applies under [29][30].",
-        "PBS information (not GAMSA's own): the Authority indications and the restriction wording quoted in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 6 November 2026."
+        "PBS information (not GAMSA's own): the Authority indications and the restriction wording quoted in this section. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on 7 November 2026."
       ],
       "note": "Each PBS testosterone item page shows the full criteria under its restrictions (select Criteria). Your prescriber or pharmacist can read you the current wording from there.",
       "nav": "The Authority wording"
@@ -453,7 +455,8 @@
         "Check whether you are eligible for a concession card through Services Australia [18]. Moving from ${{PBS:general_copay}} to ${{PBS:conc_copay}} a script, and from a ${{PBS:sn_general}} Safety Net threshold to ${{PBS:sn_conc}}, changes the arithmetic completely [1].",
         "If you are Aboriginal or Torres Strait Islander, ask your prescriber about the Closing the Gap PBS Co-payment Program. Eligible patients pay the concession rate instead of the general one, or nothing at all if they already hold a concession card. Your prescriber registers you once, and the lower price then applies at any pharmacy [15].",
         "Keep your prescriptions at one pharmacy and ask them to track your Safety Net total — or for a Prescription Record Form if you have used more than one pharmacy this year [16].",
-        "And if you are about to skip doses or stop because you cannot afford the script, tell your pharmacist. Stopping is the outcome everyone wants to avoid, and there is usually something that can be done."
+        "And if you are about to skip doses or stop because you cannot afford the script, tell your pharmacist. Stopping is the outcome everyone wants to avoid, and there is usually something that can be done.",
+        "PBS information (not GAMSA's own): the co-payment and Safety Net amounts. Source: Pharmaceutical Benefits Scheme (PBS) Schedule, reproduced with permission of the Australian Government Department of Health, Disability and Ageing. Extracted from www.pbs.gov.au on {{PBS:checkedAtLong}}."
       ],
       "list": [
         "Check concession card eligibility with Services Australia [18]",
@@ -639,6 +642,6 @@
     "conc_copay": "7.70",
     "sn_general": "1,748.20",
     "sn_conc": "277.20",
-    "checkedAt": "6 Nov 2026"
+    "checkedAt": "5 Nov 2026"
   }
 }

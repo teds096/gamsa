@@ -7,13 +7,14 @@
       "h": "The short version",
       "nav": "Short version",
       "body": [
-        "Using GAMSA needs no name, account or cookie. The only measurement is a cookie-free page-view count, and nothing collected is sold, shared with advertisers or used except to run the site."
+        "Using GAMSA needs no name, account or cookie. The only measurements are cookie-free totals of page views and downloads, and nothing collected is sold, shared with advertisers or used except to run the site."
       ]
     },
     {
       "h": "Analytics",
       "body": [
-        "Each page loads a small Cloudflare Web Analytics script recording the page, the referring page, your country, browser and device type, and page speed. It sets no cookies, uses no fingerprinting, does not track you between sites or build a profile, and reports only totals. Blocking static.cloudflareinsights.com stops it without affecting the site."
+        "Each page loads a small Cloudflare Web Analytics script recording the page, the referring page, your country, browser and device type, and page speed. It sets no cookies, uses no fingerprinting, does not track you between sites or build a profile, and reports only totals. Blocking static.cloudflareinsights.com stops it without affecting the site.",
+        "The site also counts how many times each file is downloaded and which outreach link tag (such as ?ref=newsletter) brought a visit, as daily totals only. Nothing about you is kept with them: no IP address, browser details, cookie or the page you came from."
       ]
     },
     {

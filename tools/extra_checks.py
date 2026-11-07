@@ -7,6 +7,10 @@ Prints one line per check: "PASS name — detail", "FAIL name — detail" or "SK
   downloads      every link to a .pdf/.zip carries download or opens in a new tab (never routed by the app)
   pdfs           every PDF in static/ opens, page count (clinician package SOP 7, others 1-2), QR codes decode
                  to https://gamsa.au/... (needs opencv-python-headless and pdftoppm; else SKIP)
+  pbs            PBS permission (6 Nov 2026): every page section (built no-JS text, Easy Read included) and every PDF that
+                 shows PBS figures (a $ amount with cents or an item code next to "PBS", or quoted restriction wording) also shows a
+                 source line naming www.pbs.gov.au with a date; the live PBS boxes in template.html carry the dated credit
+  pills          a download pill ends its paragraph or list item: no text after it (content, template, no-JS pages, every built page in the browser; self-test)
   wording        content/*.json has no leftover phrases (this session, our clinic, lorem, TODO) or US spellings
   weight         gzip size of every built page vs tools/weights.json; flags >10% growth (--update-weights resets)
   search         key searches return the right page first
@@ -20,7 +24,7 @@ Prints one line per check: "PASS name — detail", "FAIL name — detail" or "SK
                  or overflow at phone and desktop width (SKIP if the engines are not installed:
                  python3 -m playwright install webkit firefox)
 """
-import gzip, json, os, pathlib, re, subprocess, sys
+import html as H, gzip, json, os, pathlib, re, subprocess, sys
 ROOT = pathlib.Path(__file__).resolve().parents[1]; os.chdir(ROOT)
 D = ROOT / "dist"; B = "http://127.0.0.1:8767"; CHROME = os.environ.get("CHROME") or None
 def out(ok, name, detail=""):
@@ -33,7 +37,7 @@ def pages():
         yield ("/" if rel == "/index" else rel), f.read_text()
 
 def seo():
-    bad, descs = [], {}
+    bad, descs, titles = [], {}, {}
     sm = (D/"sitemap.xml").read_text()
     for path, h in pages():
         t = (re.search(r"<title>(.*?)</title>", h) or [None, ""])[1]
@@ -41,6 +45,11 @@ def seo():
         if not 10 <= len(t) <= 70: bad.append(f"title {len(t)} {path}")
         if path != "/search" and not 70 <= len(d) <= 170: bad.append(f"desc {len(d)} {path}")
         descs.setdefault(d, []).append(path)
+        titles.setdefault(t, []).append(path)
+        if path.startswith("/medicines/"):   # v19.5 R5b: search titles under 60, whole-sentence descriptions 120-160
+            if len(H.unescape(t)) > 60: bad.append(f"medicine title {len(H.unescape(t))} {path}")
+            dd = H.unescape(d)
+            if not 120 <= len(dd) <= 160 or not dd.endswith(".") or dd.endswith("…"): bad.append(f"medicine desc {len(dd)} {path}")
         if f'rel="canonical" href="https://gamsa.au{path if path != "/" else "/"}"' not in h: bad.append(f"canonical {path}")
         for k in ("og:title", "og:description", "og:image", "og:url"):
             if f'property="{k}"' not in h: bad.append(f"{k} {path}")
@@ -49,6 +58,8 @@ def seo():
             except Exception: bad.append(f"json-ld {path}")
     dups = [v for v in descs.values() if len(v) > 1]
     if dups: bad.append(f"duplicate descriptions {dups[:2]}")
+    tdups = [v for v in titles.values() if len(v) > 1]
+    if tdups: bad.append(f"duplicate titles {tdups[:2]}")
     s = (D/"search.html").read_text() if (D/"search.html").exists() else ""
     if 'name="robots" content="noindex"' not in s or "gamsa.au/search<" in sm: bad.append("search should be noindex and out of the sitemap")
     for _p in ("/sightings", "/feedback"):
@@ -59,8 +70,9 @@ def seo():
 def downloads():
     bad = set()
     for f in list(ROOT.glob("content/*.json")):
-        for m in re.finditer(r"\]\((/[^)]+\.(?:pdf|zip))\)", f.read_text()):
-            if not (ROOT/"static"/m.group(1).lstrip("/")).exists(): bad.add("missing file " + m.group(1))
+        for m in re.finditer(r"\]\((/[^)]+\.(?:pdf|zip))\)|\"u\": \"(/[^\"]+\.(?:pdf|zip))\"", f.read_text()):
+            u = m.group(1) or m.group(2)
+            if not (ROOT/"static"/u.lstrip("/")).exists(): bad.add("missing file " + u)
     tpl = (ROOT/"template.html").read_text()
     for m in re.finditer(r'<a[^>]+href="(/[^"]+\.(?:pdf|zip|xml))"[^>]*>', tpl):
         if "download" not in m.group(0) and "_blank" not in m.group(0) and not m.group(1).endswith(".xml"): bad.add("no download/new-tab " + m.group(1))
@@ -68,6 +80,18 @@ def downloads():
         if not (ROOT/"static"/m.group(1).lstrip("/")).exists(): bad.add("missing file " + m.group(1))
     if "a.hasAttribute(\"download\")" not in tpl or "pdf|zip" not in tpl: bad.add("router no longer skips file links")
     out(not bad, "downloads", "; ".join(sorted(bad)[:5]) or "file links exist and bypass the router")
+
+def downloads_page():
+    """R4 (Ted, 7 Nov 2026): /downloads ("Guides and printables") must list every PDF and zip in static/ (build.py adds any
+    file content/downloads.json does not name under "More downloads"; this FAILs if the built page still misses one)."""
+    f = D/"downloads.html"
+    if not f.exists(): return out(False, "downloads page", "dist/downloads.html missing")
+    m = re.search(r"<noscript>(.*?)</noscript>", f.read_text(), re.S); h = m.group(1) if m else ""
+    files = sorted("/" + str(x.relative_to(ROOT/"static")) for x in (ROOT/"static").glob("*/*") if x.suffix.lower() in (".pdf", ".zip"))
+    miss = [u for u in files if f'href="{u}"' not in h]
+    auto = "More downloads" in h
+    out(not miss, "downloads page", ("not on /downloads: " + ", ".join(miss[:6])) if miss else
+        f"all {len(files)} PDFs and zips listed" + (" (some only under More downloads: add them to content/downloads.json)" if auto else ""))
 
 def pdfs():
     try:
@@ -79,7 +103,7 @@ def pdfs():
         p = subprocess.run(["pdfinfo", str(f)], capture_output=True, text=True)
         n = int((re.search(r"Pages:\s+(\d+)", p.stdout) or [0, 0])[1])
         if n == 0: bad.append(f"unreadable {f.name}"); continue
-        limit = 9 if "monitoring-schedule" in f.name else 8 if "sop" in f.name else 2
+        limit = 9 if "sop" in f.name else 2  # SOP v2.6 is 9 pages (quiz and answer key)
         if n > limit: bad.append(f"{f.name} {n} pages")
         info.append(n)
         if "gamsa-brand-5b" not in p.stdout and "gamsa-logo-5b" not in p.stdout: bad.append(f"no logo/stripe on {f.name} - run python3 tools/brand.py")
@@ -131,7 +155,7 @@ def assets():
             f2 = line.split()
             if len(f2) >= 2 and not line.startswith("#"):
                 tgt = f2[1].replace(":splat", "estradiol-patches")
-                if tgt not in real and not (D / (tgt.strip("/") + ".html")).exists(): bad.append(f"redirect target missing {f2[1]}")
+                if tgt not in real and not (D / (tgt.strip("/") + ".html")).exists() and not (D / tgt.strip("/")).is_file(): bad.append(f"redirect target missing {f2[1]}")
                 if f2[0].rstrip("*").rstrip("/") in real: bad.append(f"redirect hides a real page {f2[0]}")
     out(not bad, "assets", "; ".join(bad[:4]) or "own fonts, page share images, icons, linked files, FAQ markup and IndexNow key in place")
 
@@ -142,6 +166,38 @@ def review_date():
     except ValueError: return out(False, "review date", f"content/medicines.json reviewed {r!r} is not like '3 October 2026'")
     if age > 365: return out(False, "review date", f"medicine pages say last reviewed {r} ({age} days ago) — re-review and update")
     print(f"{'NOTE' if age > 90 else 'PASS'} review date — last reviewed {r} ({age} days ago){'; quarterly evidence review due' if age > 90 else ''}")
+
+_PBS_FIG = re.compile(r"\$\s?\d[\d,]*\.\d\d\b|\bitems? \d{4,5}[A-Z]\b|\(\d{4,5}[A-Z]\)|\b\d{4,5}[A-Z] \(|criteri(?:on|a) reads?|restriction reads|instructions? add")
+_PBS_SRC = re.compile(r"pbs\.gov\.au[^<]{0,400}?\b\d{1,2} (?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* 20\d\d", re.S)
+def pbs():
+    """PBS permission (PBS Webmaster, 6 Nov 2026; claude/pbs-permission-2026-11-06.md): PBS material must be credited with
+    its source and the date it was extracted from www.pbs.gov.au. A section that shows PBS figures without that line FAILs."""
+    bad, n = [], 0
+    for route, h in pages():
+        m = re.search(r"<noscript>(.*?)</noscript>", h, re.S)
+        if not m: continue
+        for chunk in re.split(r"<h2[ >]", m.group(1)):
+            txt = re.sub(r"<[^>]+>", " ", chunk)
+            if re.match(r"(?:[^<>]*>)?\s*(Links and resources|References)\b", chunk): continue   # links to the PBS pages themselves
+            if "PBS" not in txt or not _PBS_FIG.search(txt): continue
+            n += 1
+            if not _PBS_SRC.search(txt): bad.append(f"{route} \u00a7{txt.strip()[:40]!r}")
+    tpl = (ROOT / "template.html").read_text()
+    for fn_ in ("pbsBlock", "premiumList"):
+        i = tpl.find("function " + fn_ + "("); body = tpl[i:tpl.find("\n  function ", i + 10)]
+        if "pbsSrc(" not in body: bad.append(f"template.html {fn_}: no pbsSrc() credit")
+    if "www.pbs.gov.au, extracted '+d+'" not in tpl or "pbsNote(what" not in tpl or "esc(d)" not in tpl[tpl.find("function pbsSrc("):][:300]:
+        bad.append("template.html pbsNote/pbsSrc: no dated source credit")
+    try:
+        import fitz
+        for f in sorted((ROOT / "static").glob("*/*.pdf")):
+            t = "".join(pg.get_text() for pg in fitz.open(f))
+            if "PBS" in t and _PBS_FIG.search(t):
+                n += 1
+                if not _PBS_SRC.search(re.sub(r"\s+", " ", t)): bad.append(f"{f.parent.name}/{f.name}")
+    except ImportError:
+        bad.append("pymupdf missing: PDFs not checked")
+    out(not bad, "pbs", "; ".join(bad[:6]) or f"{n} page sections and PDFs with PBS figures all show the PBS source and extraction date")
 
 def wording():
     pat = re.compile(r"\b(colou?rs?|behavior|favorite|labeled|analyze|pediatric|hemoglobin|anemia|center|fiber|liter|gray)\b|this session|\bour clinic\b|at this clinic|lorem|TODO|\bTBD\b", re.I)
@@ -324,6 +380,7 @@ def browser_checks():
             if not st[1]: bad.append(f"sticky header prints over content {r}")
             pp.emulate_media(media="screen")
         out(not bad, "print", "; ".join(bad) or "A4 print layout OK")
+        pill_punct_rendered(pg)
         b.close()
 
 def _engine_route(r):
@@ -376,10 +433,164 @@ def engines():
             eb.close()
             out(not bad, f"engine {name}", "; ".join(bad[:8]) or "renders cleanly at phone and desktop width")
 
+# Ted, 7-8 Nov 2026: a download pill ENDS its paragraph or list item: no text or punctuation after it in the same block
+# (the sentence before it carries its own full stop or colon). Round 5c widened the old "no punctuation after" rule.
+PILL_MD = re.compile(r"\[(?!\d[\d,\s]*\])([^\]]+)\]\((/(?:clinicians|allies|guides)/[a-z0-9-]+\.(?:pdf|zip))\)(?!\s*(?:\"|\\n))\s*(.{0,20})")
+PILL_HTML = re.compile(r'<a\b[^>]*class="dl\b[^"]*"[^>]*>(?:(?!</a>|<a\b).){0,300}</a>(?!\s*(?:<|[\'"]))(.{0,30})', re.S)
+PILL_STATIC = re.compile(r'<a\b[^>]*href="/(?:clinicians|allies|guides)/[^"]+\.(?:pdf|zip)"[^>]*>.*?</a>', re.S)
+PILL_JS = """() => { const out=[], BL=/^(block|list-item|table-cell|table|flex|grid|flow-root)$/;
+  for (const a of document.querySelectorAll('.view.on a.dl')) {
+    let k=a.parentElement; while (k && !BL.test(getComputedStyle(k).display)) k=k.parentElement;
+    if (!k || (/flex|grid/.test(getComputedStyle(k).display) && !k.matches('p,li,dd,td'))) continue;
+    const g=document.createRange(); g.setStartAfter(a); g.setEnd(k, k.childNodes.length);
+    const t=g.toString().replace(/[\\s\\u00a0]+/g,' ').trim();
+    if (t) out.push(a.textContent.trim().slice(0,50)+' |'+t.slice(0,24)); } return out; }"""
+
+def pill_tail_static(html):
+    """Text after the last download link in each built <p>/<li>/<td>/<dd> block (no-JS pages)."""
+    bad = []
+    for _, s in re.findall(r'<(p|li|td|dd)\b[^>]*>(.*?)</\1>', html, re.S):
+        ms = list(PILL_STATIC.finditer(s))
+        if ms:
+            t = re.sub(r"<[^>]+>", "", s[ms[-1].end():]).strip()
+            if t: bad.append(H.unescape(re.sub(r"<[^>]+>", "", ms[-1].group(0)))[:40] + " |" + H.unescape(t)[:24])
+    return bad
+
+def pill_punct():
+    """Source check: content/*.json download links [text](/guides|clinicians|allies/x.pdf) end their string or line,
+    template.html a.dl pills are followed only by markup, and every built no-JS page has no text after a download link in its block."""
+    bad = []
+    for f in sorted(ROOT.glob("content/*.json")):
+        s = f.read_text()
+        bad += [f"{f.name}: …{m.group(1)[:40]}]({m.group(2)}) |{m.group(3)}" for m in PILL_MD.finditer(s)]
+    t = (ROOT / "template.html").read_text()
+    bad += [f"template.html: …|{m.group(1)}" for m in PILL_HTML.finditer(t)]
+    for r, h in pages(): bad += [f"no-JS {r}: {x}" for x in pill_tail_static(h)]
+    out(not bad, "pill at end (source)", "; ".join(bad[:6]) or "every download pill ends its paragraph or list item in content, template and no-JS pages")
+
+def pill_punct_rendered(pg):
+    """Same, on every built page as drawn by the browser (catches pills made by the template's own code)."""
+    bad, n = [], 0
+    for r, _ in pages():
+        try: pg.goto(B + r); pg.wait_for_timeout(150); v = pg.evaluate(PILL_JS); n += 1
+        except Exception as e: bad.append(f"{r}: {str(e)[:40]}"); continue
+        bad += [f"{r}: {x}" for x in v]
+    out(not bad, "pill at end (pages)", "; ".join(bad[:6]) or f"{n} pages: every download pill ends its block")
+
+def pill_selftest():
+    """Proves the pill rules FAIL on a pill with text after it (python3 tools/extra_checks.py --pills-selftest)."""
+    md = PILL_MD.search('"See [Card (PDF)](/allies/x.pdf). The same steps are in Easy Read."')
+    st = pill_tail_static('<p>Take this. <a href="/allies/x.pdf">Card (PDF)</a>. The same steps.</p><li>Ok. <a href="/guides/y.pdf">Y</a></li>')
+    ok = bool(md) and len(st) == 1 and not PILL_MD.search('"See this: [Card (PDF)](/allies/x.pdf)"')
+    from playwright.sync_api import sync_playwright
+    with sync_playwright() as p:
+        b = p.chromium.launch(**({"executable_path": CHROME} if CHROME else {})); q = b.new_page()
+        q.set_content('<div class="view on"><p>Take this. <a class="dl" href="/x.pdf">Card</a>. The same steps.</p><p>Fine: <a class="dl" href="/y.pdf">Y</a></p></div>')
+        v = q.evaluate(PILL_JS); b.close()
+    ok = ok and len(v) == 1
+    out(ok, "pill self-test", f"bad cases caught: md {bool(md)}, no-JS {len(st)}, rendered {len(v)}; good cases pass")
+
+def pdf_locks():
+    """Ted, 7 Nov 2026: every downloadable PDF is locked but fillable (opens without a password, can be printed and filled, cannot be edited)."""
+    try:
+        import fitz
+    except Exception:
+        return out(None, "PDFs locked", "pymupdf not installed")
+    bad, n = [], 0
+    for f in sorted((ROOT/"static").rglob("*.pdf")):
+        n += 1
+        d = fitz.open(f); pm = d.permissions
+        if d.needs_pass or not (d.metadata or {}).get("encryption") or (pm & fitz.PDF_PERM_MODIFY) or not (pm & fitz.PDF_PERM_PRINT) or not (pm & fitz.PDF_PERM_FORM):
+            bad.append(str(f.relative_to(ROOT/"static")))
+    out(not bad, "PDFs locked but fillable", f"{n} checked" + (f"; not locked: {', '.join(bad[:8])}" if bad else ""))
+
+def layout_shift():
+    """v19.5 (7 Nov 2026): lab Core Web Vitals. Every sitemap route at 390x844 and 1280x800, light mode, CPU slowed 4x,
+    loaded, settled and scrolled to the bottom (tools/cwv.py). FAILs when any route's CLS is over 0.1; LCP over 2.5 s is
+    named in the detail. Field data showed /supply at CLS 0.81 before the A-12 and v19.5 fixes."""
+    import socket; s_ = socket.socket(); up = s_.connect_ex(("127.0.0.1", 8767)) == 0; s_.close()
+    if not up: return out(None, "layout shift", "local server not running")
+    sys.path.insert(0, str(ROOT / "tools")); import cwv
+    from playwright.sync_api import sync_playwright
+    with sync_playwright() as p:
+        b = p.chromium.launch(**({"executable_path": CHROME} if CHROME else {}))
+        res = cwv.measure(b, cwv.routes_from_sitemap(), settle=800); b.close()
+    bad = [f'{x["vp"]} {x["route"]} CLS {x["cls"]}' for x in res if x["cls"] is None or x["cls"] > 0.1]
+    slow = [f'{x["vp"]} {x["route"]} LCP {x["lcp"]}s' for x in res if (x["lcp"] or 0) > 2.5]
+    worst = max(res, key=lambda x: x["cls"] or 0)
+    out(not bad, "layout shift", "; ".join(bad[:6]) or f'{len(res)} loads, worst CLS {worst["cls"]} ({worst["vp"]} {worst["route"]})'
+        + (f'; slow LCP: {"; ".join(slow[:4])}' if slow else f'; LCP max {max(x["lcp"] or 0 for x in res)} s'))
+
+def hc_sweep(routes=None, limit=None):
+    """Round 5e (Ted, 8 Nov 2026, "Text in high contrast needs checking"): high contrast, light and dark, at 1280 and 390 px.
+    axe color-contrast on every built route, then on the home page with a header menu (1280) or the Menu (390) open and with
+    the Accessibility panel open. FAILs on any contrast failure. Header icons (chevrons, search, accessibility) are also
+    measured against the bar for 3:1, since axe skips non-text marks."""
+    ax = ROOT / "node_modules/axe-core/axe.min.js"
+    if not ax.exists(): return out(None, "high contrast sweep", "axe-core not found")
+    AX = ax.read_text() + ";0"
+    RUN = """async s=>{const r=await axe.run(s?document.querySelector(s)||document:document,{runOnly:['color-contrast']});
+      return r.violations.flatMap(v=>v.nodes.map(n=>n.target.join(' ').slice(-50)+' '+((n.any[0]||{}).message||'').replace(/^Element has insufficient color contrast of /,'').slice(0,40)))}"""
+    ICONS = """()=>{const P=c=>(c.match(/[\\d.]+/g)||[]).map(Number), L=c=>{const m=P(c);const f=x=>(x/=255)<=.03928?x/12.92:((x+.055)/1.055)**2.4;return .2126*f(m[0])+.7152*f(m[1])+.0722*f(m[2])},
+      R=(a,z)=>(Math.max(a,z)+.05)/(Math.min(a,z)+.05), BG=e=>{for(;e;e=e.parentElement){const c=getComputedStyle(e).backgroundColor,m=P(c);if(m.length&&(m.length<4||m[3]>.5))return c;}return 'rgb(255,255,255)'}, bad=[];
+      for(const e of document.querySelectorAll('.bar .ng-btn, .bar nav.main a.x-q, .bar-r .a11y-btn svg, .bar-r .srch-btn svg, .bar-r .hs-ico, .bar-r .hsb button svg, .bar .navbtn svg, .bar .navbtn, #exitBtn svg, #themeBtn button svg')){
+        const b=e.getBoundingClientRect(); if(!b.width) continue; const cs=getComputedStyle(e), col=e.tagName==='svg'||e.closest('svg')?(cs.color):cs.color;
+        const r=R(L(col),L(BG(e))); if(r<3) bad.push(((e.closest('[id]')||{}).id||'')+' '+(e.className.baseVal!==undefined?'svg in '+e.parentElement.className:e.className)+' '+r.toFixed(2));
+        if(e.matches('.ng-btn')){const a=getComputedStyle(e,'::after'); if(a.content!=='none'){const r2=R(L(a.borderRightColor),L(BG(e))); if(r2<3) bad.push('chevron '+r2.toFixed(2));}} }
+      const f=document.activeElement; if(f&&f!==document.body&&f.closest('.bar')){const o=getComputedStyle(f); if(o.outlineStyle!=='none'){const r=R(L(o.outlineColor),L(BG(f.parentElement))); if(r<3) bad.push('focus ring '+(f.id||f.className)+' '+r.toFixed(2));}}
+      return bad;}"""
+    from playwright.sync_api import sync_playwright
+    bad, n = [], 0
+    rl = routes or [r for r, _ in pages()]
+    with sync_playwright() as p:
+        b = p.chromium.launch(**({"executable_path": CHROME} if CHROME else {}))
+        for th in ("light", "dark"):
+            for w, h in ((1280, 900), (390, 844)):
+                c = b.new_context(viewport={"width": w, "height": h}); c.route("**/*", lambda r: r.abort() if "127.0.0.1" not in r.request.url else r.continue_())
+                c.add_init_script(f"try{{localStorage.setItem('gamsa.hc','1');localStorage.setItem('gamsa.theme','{th}')}}catch(e){{}}")
+                pg = c.new_page()
+                for r in rl[:limit]:
+                    try:
+                        pg.goto(B + r); pg.wait_for_timeout(200); pg.evaluate(AX); v = pg.evaluate(RUN, None); n += 1
+                        bad += [f"{th} {w} {r}: {x}" for x in v[:2]]
+                    except Exception as e: bad.append(f"{th} {w} {r}: {str(e)[:50]}")
+                pg.goto(B + "/"); pg.wait_for_timeout(250); pg.evaluate(AX)
+                bad += [f"{th} {w} header icon {x}" for x in pg.evaluate(ICONS)]
+                for f_ in (".bar .ng-btn", "#a11yBtn", "#hsq", "#exitBtn", "#navbtn"):
+                    try:
+                        if pg.locator(f_).first.is_visible(): pg.focus(f_); pg.keyboard.press("Shift+Tab"); pg.keyboard.press("Tab"); bad += [f"{th} {w} {x}" for x in pg.evaluate(ICONS) if x.startswith("focus")]
+                    except Exception: pass
+                for opener, sel in (((".ng-btn", ".ng.open") if w > 860 else ("#navbtn", None)), ("#a11yBtn", "#a11yPanel")):
+                    try:
+                        pg.click(opener); pg.wait_for_timeout(250); v = pg.evaluate(RUN, sel)
+                        bad += [f"{th} {w} {opener} open: {x}" for x in v[:3]]
+                        if opener == ".ng-btn": bad += [f"{th} {w} open menu icon {x}" for x in pg.evaluate(ICONS)]
+                        pg.keyboard.press("Escape"); pg.wait_for_timeout(150)
+                    except Exception as e: bad.append(f"{th} {w} {opener}: {str(e)[:50]}")
+                c.close()
+        b.close()
+    out(not bad, "high contrast sweep", "; ".join(bad[:8]) + (f" (+{len(bad)-8} more)" if len(bad) > 8 else "") if bad else
+        f"{n} page loads (HC light and dark, 1280 and 390 px), menus and Accessibility panel open: no contrast failures")
+
 if __name__ == "__main__":
     if "--engines-only" in sys.argv: engines(); sys.exit(0)
     if "--figures-only" in sys.argv: figures(); sys.exit(0)
-    seo(); downloads(); assets(); review_date(); pdfs(); wording(); figures(); weight("--update-weights" in sys.argv)
+    if "--pbs-only" in sys.argv: pbs(); sys.exit(0)
+    if "--cls-only" in sys.argv: layout_shift(); sys.exit(0)
+    if "--hc-only" in sys.argv: hc_sweep(limit=int(sys.argv[sys.argv.index("--hc-only")+1]) if len(sys.argv) > sys.argv.index("--hc-only")+1 else None); sys.exit(0)
+    if "--pills-selftest" in sys.argv: pill_selftest(); sys.exit(0)
+    if "--pills-only" in sys.argv:
+        pill_punct()
+        from playwright.sync_api import sync_playwright
+        with sync_playwright() as p:
+            b = p.chromium.launch(**({"executable_path": CHROME} if CHROME else {})); c = b.new_context(viewport={"width": 1280, "height": 900})
+            c.route("**/*", lambda r: r.abort() if "127.0.0.1" not in r.request.url else r.continue_()); pill_punct_rendered(c.new_page()); b.close()
+        sys.exit(0)
+    seo(); downloads(); downloads_page(); assets(); review_date(); pdfs(); pdf_locks(); pbs(); wording(); pill_punct(); pill_selftest(); figures(); weight("--update-weights" in sys.argv)
     try: browser_checks()
     except Exception as e: out(False, "browser checks", str(e)[:200])
+    try: hc_sweep()
+    except Exception as e: out(False, "high contrast sweep", str(e)[:200])
+    try: layout_shift()
+    except Exception as e: out(False, "layout shift", str(e)[:200])
     engines()

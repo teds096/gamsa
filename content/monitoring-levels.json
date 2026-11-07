@@ -1,0 +1,1226 @@
+{
+  "reviewed": "2026-11-07",
+  "about": "B-34 (v19.5, 7 Nov 2026). One place for blood-test timing, aims and when to talk to the prescriber. build.py draws the tables on /monitoring (sections with \"levels\": group id), the 'Blood tests' box on each medicine page, and the blood-test record printable reads the rows marked printable. 'aim' and 'talkIf' are patient wording; 'clinician' is one line under 'For clinicians'; 'other' shows as 'Other guidance'. Sources are cited by id; build.py turns them into each page's reference numbers (an existing reference with the same URL, and the 'match' words if given, is reused; otherwise the source's own text is added). Research: claude/monitoring-research-2026-11-07.md. v19.5 R2 (7 Nov 2026): 'sheets' = one /monitoring section, one printable (file) and the box on its medicine 'pages' per medicine and route; a /monitoring section names its sheet with \"levels\": sheet id; 'key' is the printable's Key points line.",
+  "sources": {
+    "AUS26": {
+      "name": "AusPATH 2026",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf",
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). First published 1 December 2025; this PDF is dated 30 April 2026. Accessed 7 November 2026."
+    },
+    "MJA19": {
+      "name": "2019 position statement",
+      "url": "https://www.mja.com.au/journal/2019/211/3/position-statement-hormonal-management-adult-transgender-and-gender-diverse",
+      "text": "Cheung AS, Wynne K, Erasmus J, Murray S, Zajac JD. Position statement on the hormonal management of adult transgender and gender diverse individuals. Med J Aust. 2019;211(3):127-33. Accessed 7 November 2026."
+    },
+    "EQX20": {
+      "name": "Equinox guide 2020",
+      "url": "https://equinox.org.au/wp-content/uploads/2021/07/ht-prescribing-guideline-v3-aug-2020.pdf",
+      "text": "Cundill P, Wong P, Cheung A. Hormone therapy prescribing guide for general practitioners working with trans, gender diverse and non-binary patients, version 3.0. Equinox Gender Diverse Health Centre, Thorne Harbour Health; July 2020. Accessed 7 November 2026."
+    },
+    "ES17": {
+      "name": "Endocrine Society 2017",
+      "url": "https://doi.org/10.1210/jc.2017-01658",
+      "text": "Hembree WC, Cohen-Kettenis PT, Gooren L, et al. Endocrine treatment of gender-dysphoric/gender-incongruent persons: an Endocrine Society clinical practice guideline. J Clin Endocrinol Metab. 2017;102(11):3869-903 (Tables 14 and 15). Accessed 7 November 2026."
+    },
+    "SOC8": {
+      "name": "WPATH SOC8",
+      "url": "https://doi.org/10.1080/26895269.2022.2100644",
+      "text": "Coleman E, Radix AE, Bouman WP, et al. Standards of Care for the Health of Transgender and Gender Diverse People, Version 8. Int J Transgend Health. 2022;23(Suppl 1):S1-259. Accessed 7 November 2026."
+    },
+    "RCH23": {
+      "name": "RCH standards 2023",
+      "url": "https://www.rch.org.au/uploadedFiles/Main/Content/adolescent-medicine/230242%20RCH%20Gender%20Standards%20Booklet%201.4_Nov%202023_WEB.pdf",
+      "match": [
+        "appendices 1 and 2"
+      ],
+      "text": "Telfer MM, Tollit MA, Pace CC, Pang KC. Australian Standards of Care and Treatment Guidelines for Trans and Gender Diverse Children and Adolescents, version 1.4 (appendices 1 and 2: monitoring on puberty blockers and on gender-affirming hormones). Melbourne: The Royal Children's Hospital; 2023. Accessed 7 November 2026."
+    },
+    "PI-REA": {
+      "name": "Reandron 1000 PI",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/reandron-1000",
+      "match": [
+        "4.4"
+      ],
+      "text": "Reandron 1000 (testosterone undecanoate) injection, Australian Product Information, sections 4.2 Dose and method of administration and 4.4 Special warnings and precautions (haemoglobin and haematocrit checked periodically) (date of revision 11 December 2025). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 7 November 2026."
+    },
+    "PI-TGL": {
+      "name": "Testogel PI",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/testogel",
+      "match": [
+        "4.2"
+      ],
+      "text": "Testogel (testosterone 1%) gel, Australian Product Information, sections 4.2 Dose and method of administration (testosterone measured in the morning before application) and 4.4 Special warnings and precautions (date of revision 7 October 2025). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 7 November 2026."
+    },
+    "PI-TVN": {
+      "name": "Testavan PI",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/testavan",
+      "match": [
+        "4.2"
+      ],
+      "text": "Testavan (testosterone 2% w/w) gel, Australian Product Information, section 4.2 Dose and method of administration (testosterone measured 2 to 4 hours after application, about 14 and 35 days after starting or a dose change) (date of revision 22 April 2026). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 7 November 2026."
+    },
+    "PI-AF5": {
+      "name": "AndroForte 5 PI",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/andro-forte-5-transdermal-cream",
+      "match": [
+        "4.2"
+      ],
+      "text": "AndroForte 5 (testosterone 5%) transdermal cream, Australian Product Information, section 4.2 Dose and method of administration (monitoring: trough testosterone) (date of revision 10 August 2023). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 7 November 2026."
+    },
+    "PI-PRI": {
+      "name": "Primoteston Depot and Sustanon 250 PI",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/primoteston-depot",
+      "match": [
+        "4.2"
+      ],
+      "text": "Primoteston Depot (testosterone enantate; date of revision 13 January 2026) section 4.2 Dose and method of administration and 4.4 Special warnings and precautions, and Sustanon 250 (testosterone esters; 23 February 2026) section 4.4, Australian Product Information (testosterone measured before and during treatment; haemoglobin and haematocrit checked periodically). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 7 November 2026."
+    },
+    "PI-CPA": {
+      "name": "Androcur PI",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/androcur-tablets",
+      "match": [
+        "4.4",
+        "meningioma"
+      ],
+      "text": "Androcur (cyproterone acetate) tablets, Australian Product Information, sections 4.3 Contraindications (meningioma) and 4.4 Special warnings and precautions (liver function, adrenocortical function and red cells; liver deaths at 100 mg a day and above; meningioma with long-term use at 25 mg a day and above) (date of revision 25 November 2024). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 7 November 2026."
+    },
+    "PI-SPI": {
+      "name": "Spiractin CMI and Aldactone PI",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/spiractin-tablets",
+      "match": [
+        "hyperkalaemia"
+      ],
+      "text": "Spiractin (spironolactone) tablets, Australian Consumer Medicine Information (blood tests: weekly at the start, monthly for 3 months, every 3 months for a year, then every 6 months) (July 2025); Aldactone Product Information sections 4.3 and 4.4 (hyperkalaemia) (date of revision 18 June 2025). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 7 November 2026."
+    },
+    "PI-BIC": {
+      "name": "Cosudex PI",
+      "url": "https://www.medsinfo.com.au/api/documents/Cosudex_PI?format=pdf",
+      "text": "AstraZeneca Pty Ltd. Cosudex (bicalutamide) Australian Product Information, section 4.4 Special warnings and precautions for use (liver; QT interval; interstitial lung disease; glucose tolerance with LHRH agonists) and section 4.5 Interactions (warfarin). Date of revision 9 July 2026. Accessed 7 November 2026."
+    },
+    "PI-ZOL": {
+      "name": "Zoladex PI",
+      "url": "https://www.ebs.tga.gov.au/ebs/picmi/picmirepository.nsf/PICMI?OpenForm&t=&q=goserelin",
+      "match": [
+        "4.4"
+      ],
+      "text": "Zoladex 3.6 mg implant (goserelin), Australian Product Information, sections 4.4 and 4.5, QT/QTc interval prolongation (date of revision 6 March 2026); the same QT warning is in the Eligard, Lucrin Depot and Diphereline PIs. Therapeutic Goods Administration. Accessed 7 November 2026."
+    },
+    "PI-E2": {
+      "name": "Oestradiol PI",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/estradot-transdermal-patch",
+      "match": [
+        "4.4"
+      ],
+      "text": "Estradot (estradiol) transdermal patch, Australian Product Information, section 4.4 Special warnings and precautions (high triglycerides; liver impairment) (date of revision 8 July 2024). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 7 November 2026."
+    },
+    "PI-PRO": {
+      "name": "Prometrium PI",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/prometrium",
+      "match": [
+        "4.4"
+      ],
+      "text": "Prometrium (progesterone) capsules, Australian Product Information, sections 4.4 and 4.5. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 7 November 2026."
+    },
+    "FIN": {
+      "name": "Finasteride PI",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/finasteride-gh-1-tablets",
+      "text": "Finasteride GH 1 (finasteride 1 mg) tablets, Australian Consumer Medicine Information and Product Information (PSA lowered by about 50%). ACSQHC Medicine Finder. Accessed 7 November 2026."
+    }
+  },
+  "groups": [
+    {
+      "id": "oestradiol",
+      "title": "Oestradiol",
+      "forms": {
+        "tablets": "Tablets",
+        "patches": "Patches",
+        "gel": "Gel",
+        "implants": "Implants",
+        "injections": "Injections"
+      },
+      "rows": [
+        {
+          "id": "e2-level-tablets",
+          "forms": [
+            "tablets"
+          ],
+          "test": "Oestradiol level (tablets)",
+          "when": "Before starting, then at each review. Take the sample just before your next tablet (the lowest point). Splitting the dose or letting tablets dissolve under the tongue changes the result. Rechecked 6 to 8 weeks after a dose change.",
+          "aim": "Above about 250 pmol/L, with no fixed upper limit",
+          "other": [
+            {
+              "src": "MJA19",
+              "text": "250 to 600 pmol/L"
+            }
+          ],
+          "talkIf": "It is below about 250 pmol/L, or much higher than expected: the timing of the test is checked first",
+          "clinician": "Trough target; high results: check timing, contamination and biotin, ask about side effects and weigh risk factors before a gradual, shared dose reduction. Bone loss likely below about 180 pmol/L. ES17/SOC8: 367 to 734 pmol/L (100 to 200 pg/mL).",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "pp31-32 (Table 5), p42"
+            },
+            {
+              "id": "EQX20",
+              "loc": "p9 (6 to 8 weeks)"
+            },
+            {
+              "id": "ES17",
+              "loc": "Table 15"
+            }
+          ],
+          "printable": true,
+          "short": "Oestradiol, tablets: just before the next tablet; above about 250 pmol/L"
+        },
+        {
+          "id": "e2-level-patches",
+          "forms": [
+            "patches"
+          ],
+          "test": "Oestradiol level (patches)",
+          "when": "Before starting, then at each review. Take the sample just before you put on a new patch. Rechecked 6 to 8 weeks after a dose change.",
+          "aim": "Above about 250 pmol/L, with no fixed upper limit",
+          "other": [
+            {
+              "src": "MJA19",
+              "text": "250 to 600 pmol/L"
+            }
+          ],
+          "talkIf": "It is below about 250 pmol/L, or much higher than expected: the timing of the test is checked first",
+          "clinician": "AusPATH: limited guidance for patches; consider testing before a new patch is applied (level peaks after a new patch).",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p31, p32 (Table 5)"
+            },
+            {
+              "id": "EQX20",
+              "loc": "p9"
+            }
+          ],
+          "printable": true,
+          "short": "Oestradiol, patches: just before a new patch; above about 250 pmol/L"
+        },
+        {
+          "id": "e2-level-gel",
+          "forms": [
+            "gel"
+          ],
+          "test": "Oestradiol level (gel)",
+          "when": "Before starting, then at each review, after at least 3 to 5 days on the same dose. Take the sample before that day's gel, from the arm you did not put gel on. Rechecked 6 to 8 weeks after a dose change.",
+          "aim": "Above about 250 pmol/L, with no fixed upper limit",
+          "other": [
+            {
+              "src": "MJA19",
+              "text": "250 to 600 pmol/L"
+            }
+          ],
+          "talkIf": "It is much higher than expected: gel left on the skin where the blood was taken can make the result look far too high",
+          "clinician": "Trough; steady state 3 to 5 days; venipuncture from the non-application arm (contamination from topical oestrogen at the collection site gives falsely high results); split dosing changes the level.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p31, p32 (Table 5)"
+            }
+          ],
+          "printable": true,
+          "short": "Oestradiol, gel: before the day's gel, from the other arm; above about 250 pmol/L"
+        },
+        {
+          "id": "e2-level-implants",
+          "forms": [
+            "implants"
+          ],
+          "test": "Oestradiol level (implants)",
+          "when": "Usually every 3 months for the first year after the first implant, then less often. Implants are not used to start therapy.",
+          "aim": "Above about 250 pmol/L; the level guides when the next implant is due",
+          "talkIf": "The level is falling towards 250 pmol/L: ask when the next implant is due",
+          "clinician": "No data to guide testing; levels above 600 to 734 pmol/L are more likely with implants and injections. Modelled fall to about 250 pmol/L about 4 months after a first 100 mg implant and 13 months after later ones.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p26, pp31-32 (Table 5)"
+            }
+          ],
+          "printable": true,
+          "short": "Oestradiol, implants: about every 3 months in the first year; above about 250 pmol/L"
+        },
+        {
+          "id": "e2-level-injections",
+          "forms": [
+            "injections"
+          ],
+          "test": "Oestradiol level (injections)",
+          "when": "At each review, midway between injections, or as a pair of tests (just after and just before an injection) if your prescriber asks. Oestradiol injections are rarely used in Australia.",
+          "aim": "Above about 250 pmol/L",
+          "talkIf": "It is much higher or lower than expected",
+          "clinician": "No data to guide testing; consider peak and trough, or mid-interval. Clot risk similar to oral oestradiol.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "pp26-27, p32 (Table 5)"
+            }
+          ],
+          "box": false
+        },
+        {
+          "id": "e2-testosterone",
+          "test": "Total testosterone",
+          "when": "Before starting, then at each review (every 3 to 4 months in the first year, then about once a year)",
+          "aim": "Below 2 nmol/L, if you want full suppression",
+          "talkIf": "It stays above 2 nmol/L when you want full suppression: the blocker or the dose is usually reviewed",
+          "clinician": "On spironolactone, testosterone may not fall below 2 nmol/L; judge its effect clinically. For bone protection keep endogenous testosterone above 7 nmol/L or oestradiol above 180 pmol/L (LH suppression shows adequacy, but not on cyproterone). ES17/SOC8: below 1.7 nmol/L (50 ng/dL).",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p31, p42"
+            },
+            {
+              "id": "MJA19",
+              "loc": "Monitoring"
+            }
+          ],
+          "printable": true,
+          "short": "Testosterone (on oestradiol): at each review; below 2 nmol/L if full suppression is wanted"
+        },
+        {
+          "id": "e2-bloods",
+          "test": "Full blood count, kidney function and electrolytes, liver function",
+          "when": "Before starting, then at each review",
+          "aim": "Within the range that fits your body on hormones (see Reading your results)",
+          "talkIf": "Your prescriber flags a result. Kidney checks matter more if you take spironolactone or PrEP",
+          "clinician": "Use affirmed-gender ranges for Hb/Hct (haematocrit aligns after about 6 months on oestradiol); eGFR uses the recorded sex, so read the trend. Liver: oestradiol is poorly metabolised in liver impairment.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p21, p36, Table 8 p37"
+            },
+            {
+              "id": "PI-E2",
+              "loc": "s4.4"
+            }
+          ],
+          "box": false
+        },
+        {
+          "id": "e2-lh",
+          "test": "LH and FSH",
+          "when": "Before starting. After that, not routine",
+          "aim": "No fixed aim. LH may be checked to see whether your hormone levels are high enough to protect your bones (this does not work on cyproterone)",
+          "talkIf": "—",
+          "clinician": "LH suppression indicates adequate sex-steroid exposure for bone, except on cyproterone.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p21, p42"
+            }
+          ],
+          "box": false
+        },
+        {
+          "id": "e2-prolactin",
+          "test": "Prolactin",
+          "when": "Before starting. After that, only if your prescriber chooses to check it, or if you have symptoms. Best taken in the morning, about 3 to 4 hours after waking, with no hard exercise beforehand",
+          "aim": "Within the lab's range",
+          "talkIf": "You have new headaches, changes in your vision, or a lot of milky nipple discharge",
+          "clinician": "No clear evidence for routine monitoring; strongly recommended with galactorrhoea, new headaches, visual disturbance or pituitary hormone deficiency; rises mainly with cyproterone. Other guidance: ES17 suggests periodic prolactin monitoring on oestrogen.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p54"
+            },
+            {
+              "id": "ES17",
+              "loc": "s4.2"
+            }
+          ],
+          "box": false
+        },
+        {
+          "id": "e2-lipids",
+          "test": "Lipids and glucose (or HbA1c)",
+          "when": "Before starting, especially with heart risk factors; then periodically. Ask whether you need to fast: most hormone tests do not need it",
+          "aim": "Within the lab's range",
+          "talkIf": "Your prescriber flags a change",
+          "clinician": "Pre-existing high triglycerides can rise further on oestrogen, with a risk of pancreatitis. MJA19 lists fasting lipids and glucose at baseline; AusPATH lists fasting glucose with risk factors.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p21"
+            },
+            {
+              "id": "MJA19",
+              "loc": "Baseline"
+            },
+            {
+              "id": "PI-E2",
+              "loc": "s4.4"
+            }
+          ],
+          "box": false
+        },
+        {
+          "id": "e2-psa",
+          "test": "PSA (prostate test)",
+          "when": "Not a routine hormone test. Hormones and genital surgery leave the prostate in place",
+          "aim": "Read knowing that hormones lower PSA (and finasteride roughly halves it)",
+          "talkIf": "Anyone orders a PSA test: tell them you take hormones, and finasteride if you do",
+          "clinician": "GAHT lowers PSA to levels like androgen deprivation; risk is lower but remains; no consensus PSA thresholds.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "Table 8 p37"
+            },
+            {
+              "id": "FIN",
+              "loc": "PI"
+            }
+          ],
+          "box": false
+        }
+      ]
+    },
+    {
+      "id": "spironolactone",
+      "title": "Spironolactone",
+      "rows": [
+        {
+          "id": "spiro-potassium",
+          "test": "Potassium, sodium and kidney function (eGFR)",
+          "when": "Before starting, then at each review. The product leaflet suggests more often at first: weekly, then monthly for 3 months, then every 3 months for a year, then every 6 months",
+          "aim": "Within the lab's range",
+          "other": [
+            {
+              "src": "ES17",
+              "text": "potassium every 3 months in the first year, then yearly"
+            }
+          ],
+          "talkIf": "Potassium is flagged high, your kidney result drops, or you start a blood-pressure tablet (ACE inhibitor or ARB), an anti-inflammatory (NSAID), a potassium supplement or a salt substitute",
+          "clinician": "Hyperkalaemia contraindicates spironolactone. eGFR uses the recorded sex; read the trend. Upper GI bleeding signal, especially at 100 mg and age 55 to 75.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p27, p28, p36, Table 8 p37, p53"
+            },
+            {
+              "id": "PI-SPI",
+              "loc": "CMI; PI s4.3-4.4"
+            }
+          ],
+          "printable": true
+        },
+        {
+          "id": "spiro-hormones",
+          "test": "Oestradiol and total testosterone",
+          "when": "At each review, as in the oestradiol table",
+          "aim": "Spironolactone may not bring testosterone below 2 nmol/L; its effect is judged by your body changes",
+          "talkIf": "The changes are not what you hoped for",
+          "clinician": "Efficacy should be assessed clinically, not by serum testosterone alone.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p27, p31"
+            }
+          ]
+        },
+        {
+          "id": "spiro-bp",
+          "test": "Blood pressure",
+          "when": "At each review",
+          "aim": "Not too low for you",
+          "talkIf": "You feel dizzy or light-headed, especially when you stand up",
+          "clinician": "Monitor electrolytes/eGFR and low BP.",
+          "sources": [
+            {
+              "id": "EQX20",
+              "loc": "p12"
+            }
+          ],
+          "box": false
+        }
+      ]
+    },
+    {
+      "id": "cyproterone",
+      "title": "Cyproterone acetate",
+      "rows": [
+        {
+          "id": "cpa-liver",
+          "test": "Liver function",
+          "when": "Before starting, regularly during treatment, and at once if you have signs of liver trouble",
+          "aim": "Within the lab's range",
+          "talkIf": "You have yellow skin or eyes, or dark urine: get checked straight away",
+          "clinician": "Fatal hepatotoxicity reported at 100 mg a day and above (dose related); stop if liver injury is confirmed. Australian feminising doses: 12.5 mg once a week up to 25 mg a day.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p27, p30"
+            },
+            {
+              "id": "PI-CPA",
+              "loc": "s4.4"
+            }
+          ],
+          "printable": true
+        },
+        {
+          "id": "cpa-meningioma",
+          "test": "Headaches and vision (meningioma watch)",
+          "when": "No routine scan. Your prescriber keeps your dose, and your total dose over the years, as low as works",
+          "aim": "The lowest dose that works",
+          "talkIf": "You have new or worsening headaches, changes in your vision, a seizure, or new weakness: tell your prescriber promptly",
+          "clinician": "Meningioma with long-term use at 25 mg a day and above (PI s4.4; contraindicated with present or past meningioma, s4.3); AusPATH: association with more than 50 mg a day or more than 10 g cumulative, monitor cumulative lifetime dose. The PI threshold equals the top of the AusPATH dose range.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p27, p53"
+            },
+            {
+              "id": "PI-CPA",
+              "loc": "s4.3, s4.4"
+            },
+            {
+              "id": "MJA19",
+              "loc": "lowest effective dose"
+            }
+          ]
+        },
+        {
+          "id": "cpa-testosterone",
+          "test": "Total testosterone (and oestradiol)",
+          "when": "At each review; this is how cyproterone's effect is checked",
+          "aim": "Below 2 nmol/L, if you want full suppression",
+          "talkIf": "It stays above 2 nmol/L when you want full suppression",
+          "clinician": "LH is not a valid check of bone adequacy on cyproterone.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p27, p31, p42"
+            }
+          ],
+          "printable": true
+        },
+        {
+          "id": "cpa-other",
+          "test": "Full blood count, adrenal function and prolactin",
+          "when": "Full blood count before starting and regularly; adrenal function as the product information advises; prolactin if you have symptoms",
+          "aim": "Within the lab's range",
+          "talkIf": "You have new headaches, vision changes or milky nipple discharge (prolactin), or low mood",
+          "clinician": "PI: monitor liver, adrenocortical function and red cell count. Prolactin rises mainly with cyproterone. Depression reported.",
+          "sources": [
+            {
+              "id": "PI-CPA",
+              "loc": "s4.4"
+            },
+            {
+              "id": "AUS26",
+              "loc": "p54, Table 4"
+            }
+          ],
+          "box": false
+        }
+      ]
+    },
+    {
+      "id": "bicalutamide",
+      "title": "Bicalutamide",
+      "rows": [
+        {
+          "id": "bic-liver",
+          "test": "Liver function",
+          "when": "Before starting, and regularly during treatment. It matters most in the first 6 months, when most liver changes happen",
+          "aim": "Within the lab's range",
+          "talkIf": "You have yellow skin or eyes, or dark urine: get checked straight away",
+          "clinician": "PI: consider periodic LFTs, most changes within the first 6 months; stop if jaundice. AusPATH: not first-line; regular LFTs throughout. Serum testosterone does not reflect its effect (median 7.7 nmol/L on 25 to 50 mg in a case series).",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p28"
+            },
+            {
+              "id": "PI-BIC",
+              "loc": "s4.4"
+            }
+          ]
+        },
+        {
+          "id": "bic-ecg",
+          "test": "Heart tracing (ECG) and electrolytes; INR",
+          "when": "ECG and electrolytes if you have a heart rhythm condition or take medicines that affect heart rhythm. INR checks if you take warfarin",
+          "aim": "—",
+          "talkIf": "You take warfarin, or start a medicine that affects heart rhythm",
+          "clinician": "QT prolongation: consider periodic ECG and electrolytes. Warfarin effect increased; monitor INR. Reduced glucose tolerance reported with LHRH agonists.",
+          "sources": [
+            {
+              "id": "PI-BIC",
+              "loc": "s4.4, s4.5"
+            }
+          ]
+        },
+        {
+          "id": "bic-lung",
+          "test": "Breathing (lung inflammation)",
+          "when": "No routine test",
+          "aim": "—",
+          "talkIf": "You have a new cough, breathlessness or fever: tell your prescriber at once",
+          "clinician": "Interstitial lung disease, including fatal cases, added to PI s4.4 (rev 9 July 2026; TGA safety update August 2026).",
+          "sources": [
+            {
+              "id": "PI-BIC",
+              "loc": "s4.4"
+            },
+            {
+              "id": "AUS26",
+              "loc": "p28"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "progesterone",
+      "title": "Micronised progesterone",
+      "rows": [
+        {
+          "id": "pro-review",
+          "test": "Review (no blood test specific to progesterone)",
+          "when": "A check after 3 to 6 months to see whether it is helping and whether to continue; then at each review with your oestradiol tests",
+          "aim": "No blood level to aim for",
+          "talkIf": "You have low mood, or it is not doing what you hoped",
+          "clinician": "Clinical review after 3 to 6 months to assess effectiveness. PI: caution with depression, epilepsy, migraine, asthma, diabetes, hypertension, fluid retention; may raise ciclosporin levels.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p55"
+            },
+            {
+              "id": "PI-PRO",
+              "loc": "s4.4, s4.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "testosterone",
+      "title": "Testosterone",
+      "forms": {
+        "undecanoate": "Long-acting injection (undecanoate)",
+        "esters": "Short-acting injection (enantate, mixed esters)",
+        "testogel": "1% gel (Testogel)",
+        "testavan": "2% gel (Testavan)",
+        "cream": "5% cream (AndroForte 5)"
+      },
+      "rows": [
+        {
+          "id": "t-level-undecanoate",
+          "forms": [
+            "undecanoate"
+          ],
+          "test": "Testosterone level (long-acting injection: Reandron and other undecanoate brands)",
+          "when": "Just before the next injection is due. Not tested or changed until after the first 3 injections; after a dose or interval change, usually 2 more injections before the next test",
+          "aim": "About 10 to 20 nmol/L just before the injection",
+          "other": [
+            {
+              "src": "MJA19",
+              "text": "10 to 15 nmol/L"
+            }
+          ],
+          "talkIf": "It is below about 10 nmol/L or above about 20 nmol/L just before the injection: the interval or dose may change",
+          "clinician": "Trough target. Interval usually 10 to 14 weeks (range 7 to more than 20 weeks). ES17: if trough below 13.9 nmol/L (400 ng/dL), shorten the interval.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p35 (Tables 6-7)"
+            },
+            {
+              "id": "EQX20",
+              "loc": "p7"
+            },
+            {
+              "id": "ES17",
+              "loc": "Table 14"
+            }
+          ],
+          "printable": true,
+          "short": "Testosterone, long-acting injection: just before the next injection; about 10 to 20 nmol/L"
+        },
+        {
+          "id": "t-level-esters",
+          "forms": [
+            "esters"
+          ],
+          "test": "Testosterone level (short-acting injection: enantate or mixed esters)",
+          "when": "Midway between injections, or as a pair of tests (peak and trough) if your prescriber asks",
+          "aim": "Within the male reference range on the lab report. The 10 to 20 nmol/L trough figure does not apply to a midway sample",
+          "other": [
+            {
+              "src": "ES17",
+              "text": "midway, about 14 to 24 nmol/L (400 to 700 ng/dL)"
+            }
+          ],
+          "talkIf": "It is outside the male reference range",
+          "clinician": "Mid-interval or peak and trough, kept within cisgender male reference ranges. Equinox (2020) differs: morning before the injection (trough) for Primoteston. Short-acting IM testosterone carries the highest polycythaemia risk.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p35 (Table 7), p55"
+            },
+            {
+              "id": "SOC8",
+              "loc": "Appendix C"
+            },
+            {
+              "id": "EQX20",
+              "loc": "p7"
+            },
+            {
+              "id": "PI-PRI",
+              "loc": "s4.2, s4.4"
+            }
+          ],
+          "printable": true,
+          "short": "Testosterone, short-acting injection: midway between injections; within the male range"
+        },
+        {
+          "id": "t-level-testogel",
+          "forms": [
+            "testogel"
+          ],
+          "test": "Testosterone level (1% gel: Testogel)",
+          "when": "In the morning, before that day's gel, after at least a week on the same dose",
+          "aim": "About 10 to 20 nmol/L before the day's gel",
+          "other": [
+            {
+              "src": "MJA19",
+              "text": "10 to 15 nmol/L"
+            }
+          ],
+          "talkIf": "It is below about 10 nmol/L or above about 20 nmol/L",
+          "clinician": "Trough, morning before application from the 3rd day on (one week seems reasonable). Contamination from the application site is possible: a reasonable precaution (clinical practice, not stated in the sources) is to collect from skin the gel has not touched.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p35 (Table 7)"
+            },
+            {
+              "id": "PI-TGL",
+              "loc": "s4.2"
+            },
+            {
+              "id": "EQX20",
+              "loc": "p7"
+            }
+          ],
+          "printable": true,
+          "short": "Testosterone, Testogel: morning, before the day's gel; about 10 to 20 nmol/L"
+        },
+        {
+          "id": "t-level-testavan",
+          "forms": [
+            "testavan"
+          ],
+          "test": "Testosterone level (2% gel: Testavan)",
+          "when": "2 to 4 hours after putting the gel on. About 2 and 5 weeks after starting or a dose change, then at each review",
+          "aim": "17.3 to 36.4 nmol/L at that time (for a full dose). The 10 to 20 nmol/L trough figure does not apply",
+          "talkIf": "It is below 17.3 nmol/L or above 36.4 nmol/L: your prescriber may change the dose by one pump",
+          "clinician": "PI and AusPATH Table 7 titration bands, measured near peak (about 14 and 35 days after a start or change). ES17/SOC8: transdermal no sooner than 1 week of use, at least 2 hours after application.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p35 (Table 7)"
+            },
+            {
+              "id": "PI-TVN",
+              "loc": "s4.2"
+            },
+            {
+              "id": "ES17",
+              "loc": "Table 14"
+            }
+          ],
+          "printable": true,
+          "short": "Testosterone, Testavan: 2 to 4 hours after the gel; 17.3 to 36.4 nmol/L"
+        },
+        {
+          "id": "t-level-cream",
+          "forms": [
+            "cream"
+          ],
+          "test": "Testosterone level (5% cream: AndroForte 5)",
+          "when": "In the morning, before that day's cream, after at least 15 days on the same dose",
+          "aim": "About 10 to 20 nmol/L before the day's cream",
+          "other": [
+            {
+              "src": "MJA19",
+              "text": "10 to 15 nmol/L"
+            }
+          ],
+          "talkIf": "It is below about 10 nmol/L or above about 20 nmol/L",
+          "clinician": "Trough before the day's dose. PI: trough within the lower part of the reference interval for eugonadal men.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p35 (Table 7)"
+            },
+            {
+              "id": "EQX20",
+              "loc": "p7"
+            },
+            {
+              "id": "PI-AF5",
+              "loc": "s4.2"
+            }
+          ],
+          "printable": true,
+          "short": "Testosterone, cream: morning, before the day's cream; about 10 to 20 nmol/L"
+        },
+        {
+          "id": "t-haematocrit",
+          "test": "Full blood count (haemoglobin and haematocrit)",
+          "when": "Before starting, then at each review. Checked more closely if you take an SGLT-2 inhibitor (such as empagliflozin or dapagliflozin)",
+          "aim": "Haematocrit below 0.50 L/L (50%), read against the male range",
+          "talkIf": "It is 0.50 L/L (50%) or more: smoking, sleep apnoea and lung or kidney problems are checked, and the interval or dose may be changed, or a gel or cream used instead",
+          "clinician": "Use cisgender male reference ranges for Hb/Hct on testosterone (Hct aligns after about 3 months). Venesection: AusPATH reserves it for primary polycythaemia, with no evidence for use in TGD people (differs from Equinox 2020, which suggests haematology referral for venesection if persistent).",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p35, p36, p55"
+            },
+            {
+              "id": "MJA19",
+              "loc": "Monitoring"
+            },
+            {
+              "id": "EQX20",
+              "loc": "p6"
+            },
+            {
+              "id": "PI-REA",
+              "loc": "s4.4"
+            }
+          ],
+          "printable": true,
+          "short": "Haematocrit on testosterone: at each review; below 0.50 L/L (50%)"
+        },
+        {
+          "id": "t-liver-lipids",
+          "test": "Liver function, lipids and glucose",
+          "when": "Before starting, then at each review or as your prescriber decides",
+          "aim": "Within the lab's range",
+          "talkIf": "Your prescriber flags a change",
+          "clinician": "Testosterone lowers HDL and raises triglycerides and LDL. If bone health is a concern, keep testosterone above 7 nmol/L.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p36, p42"
+            },
+            {
+              "id": "MJA19",
+              "loc": "Monitoring"
+            }
+          ],
+          "box": false
+        },
+        {
+          "id": "t-pregnancy",
+          "test": "Pregnancy test",
+          "when": "Before starting, if a pregnancy is possible. Testosterone is not contraception",
+          "aim": "—",
+          "talkIf": "You could be pregnant: testosterone can harm a developing baby, so tell your prescriber straight away",
+          "clinician": "hCG at baseline if indicated; testosterone is teratogenic.",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "p21, p22"
+            },
+            {
+              "id": "MJA19",
+              "loc": "Contraception"
+            }
+          ],
+          "box": false
+        }
+      ]
+    },
+    {
+      "id": "gnrh",
+      "title": "GnRH analogues",
+      "rows": [
+        {
+          "id": "gnrh-bone-young",
+          "test": "Bone density scan and bone age (young people)",
+          "when": "Before starting, then as the specialist team decides during treatment",
+          "aim": "To track bone strength while puberty is paused",
+          "talkIf": "A scan is overdue, or you have questions about your bones",
+          "clinician": "RCH: baseline BMD and bone age; BMD at commencement and regular monitoring during treatment recommended; every 12 months as required.",
+          "sources": [
+            {
+              "id": "RCH23",
+              "loc": "Appendix 1, pp27-28"
+            }
+          ]
+        },
+        {
+          "id": "gnrh-hormones-young",
+          "test": "Hormone levels: LH, FSH, and oestradiol or testosterone (young people)",
+          "when": "Before starting; at 6 months, just before the third dose of goserelin or leuprorelin, to check puberty is paused; then every 12 months",
+          "aim": "LH and FSH low, showing the blocker is working",
+          "talkIf": "You notice signs of puberty restarting, or a dose was late",
+          "clinician": "RCH App 1: 6-month LH, FSH and sex steroid just prior to the third dose; yearly FBE, UEC, LFT, lipids, BSL, LH/FSH and sex steroid. Height, weight, BMI and BP every 3 months.",
+          "sources": [
+            {
+              "id": "RCH23",
+              "loc": "Appendix 1, pp27-28"
+            }
+          ]
+        },
+        {
+          "id": "gnrh-bone-adult",
+          "test": "Bone density scan (adults)",
+          "when": "Not routine. Considered with risk factors, including long-term use, or a blocker taken without oestrogen or testosterone",
+          "aim": "—",
+          "talkIf": "You have been on a blocker for a long time without oestrogen or testosterone",
+          "clinician": "DXA does not need to be performed routinely but may be considered with risk factors (prolonged GnRHa, blocker without oestrogen, inadequate oestrogen).",
+          "sources": [
+            {
+              "id": "AUS26",
+              "loc": "pp42-43"
+            }
+          ]
+        },
+        {
+          "id": "gnrh-ecg",
+          "test": "Heart tracing (ECG) and electrolytes",
+          "when": "If you have a heart rhythm condition or heart failure, or take medicines that affect heart rhythm; then considered periodically",
+          "aim": "—",
+          "talkIf": "You start a medicine that affects heart rhythm",
+          "clinician": "QT prolongation: correct electrolytes; consider periodic ECG and electrolytes.",
+          "sources": [
+            {
+              "id": "PI-ZOL",
+              "loc": "s4.4, s4.5"
+            }
+          ],
+          "box": false
+        }
+      ]
+    }
+  ],
+  "sheets": [
+    {
+      "id": "oestradiol-tablets",
+      "h": "Oestradiol tablets",
+      "group": "oestradiol",
+      "forms": [
+        "tablets"
+      ],
+      "pages": [
+        "estradiol-tablets",
+        "kliogest-kliovance",
+        "trisequens",
+        "femoston",
+        "angeliq"
+      ],
+      "key": "Take the blood sample just before your next tablet. Aim: oestradiol above about 250 pmol/L. Testosterone below 2 nmol/L if you want full suppression.",
+      "file": "/guides/blood-test-guide-oestradiol-tablets.pdf",
+      "t": "Oestradiol tablets",
+      "reading": [
+        "range",
+        "flag",
+        "units",
+        "timing",
+        "biotin",
+        "split",
+        "hct",
+        "egfr"
+      ]
+    },
+    {
+      "id": "oestradiol-patches",
+      "h": "Oestradiol patches",
+      "group": "oestradiol",
+      "forms": [
+        "patches"
+      ],
+      "pages": [
+        "estradiol-patches",
+        "estalis-patches"
+      ],
+      "key": "Take the blood sample just before you put on a new patch. Aim: oestradiol above about 250 pmol/L. Testosterone below 2 nmol/L if you want full suppression.",
+      "file": "/guides/blood-test-guide-oestradiol-patches.pdf",
+      "t": "Oestradiol patches",
+      "reading": [
+        "range",
+        "flag",
+        "units",
+        "timing",
+        "biotin",
+        "hct",
+        "egfr"
+      ]
+    },
+    {
+      "id": "oestradiol-gel",
+      "h": "Oestradiol gel",
+      "group": "oestradiol",
+      "forms": [
+        "gel"
+      ],
+      "pages": [
+        "estradiol-gel"
+      ],
+      "key": "Take the blood sample before that day's gel, from the arm you did not put gel on. Aim: oestradiol above about 250 pmol/L.",
+      "file": "/guides/blood-test-guide-oestradiol-gel.pdf",
+      "t": "Oestradiol gel",
+      "reading": [
+        "range",
+        "flag",
+        "units",
+        "timing",
+        "gelarm",
+        "biotin",
+        "hct",
+        "egfr"
+      ]
+    },
+    {
+      "id": "oestradiol-implants",
+      "h": "Oestradiol implants",
+      "group": "oestradiol",
+      "forms": [
+        "implants"
+      ],
+      "pages": [],
+      "key": "Oestradiol is usually checked every 3 months in the first year. The level guides when the next implant is due. Aim: above about 250 pmol/L.",
+      "file": "/guides/blood-test-guide-oestradiol-implants.pdf",
+      "t": "Oestradiol implants",
+      "reading": [
+        "range",
+        "flag",
+        "units",
+        "timing",
+        "biotin",
+        "hct",
+        "egfr"
+      ]
+    },
+    {
+      "id": "oestradiol-injections",
+      "h": "Oestradiol injections",
+      "group": "oestradiol",
+      "forms": [
+        "injections"
+      ],
+      "pages": [],
+      "key": "Rarely used in Australia. Oestradiol is checked midway between injections, or before and after one. Aim: above about 250 pmol/L.",
+      "file": "/guides/blood-test-guide-oestradiol-injections.pdf",
+      "t": "Oestradiol injections",
+      "reading": [
+        "range",
+        "flag",
+        "units",
+        "timing",
+        "biotin",
+        "hct",
+        "egfr"
+      ]
+    },
+    {
+      "id": "spironolactone",
+      "h": "Spironolactone (androgen blocker)",
+      "group": "spironolactone",
+      "forms": [
+        "all"
+      ],
+      "pages": [
+        "spironolactone"
+      ],
+      "key": "Potassium and kidney tests, more often at first. Your oestradiol tests carry on as usual.",
+      "file": "/guides/blood-test-guide-spironolactone.pdf",
+      "t": "Spironolactone",
+      "reading": [
+        "range",
+        "flag",
+        "egfr"
+      ]
+    },
+    {
+      "id": "cyproterone",
+      "h": "Cyproterone acetate (androgen blocker)",
+      "group": "cyproterone",
+      "forms": [
+        "all"
+      ],
+      "pages": [
+        "cyproterone-acetate"
+      ],
+      "key": "Liver tests before and during treatment. Tell your prescriber about new headaches or changes in your vision.",
+      "file": "/guides/blood-test-guide-cyproterone.pdf",
+      "t": "Cyproterone acetate",
+      "reading": [
+        "range",
+        "flag",
+        "units",
+        "hct"
+      ]
+    },
+    {
+      "id": "bicalutamide",
+      "h": "Bicalutamide (not first-line)",
+      "group": "bicalutamide",
+      "forms": [
+        "all"
+      ],
+      "pages": [],
+      "key": "Liver tests, most of all in the first 6 months. A new cough or breathlessness needs checking at once.",
+      "file": "/guides/blood-test-guide-bicalutamide.pdf",
+      "t": "Bicalutamide",
+      "reading": [
+        "flag"
+      ]
+    },
+    {
+      "id": "progesterone",
+      "h": "Micronised progesterone",
+      "group": "progesterone",
+      "forms": [
+        "all"
+      ],
+      "pages": [
+        "micronised-progesterone"
+      ],
+      "key": "No blood test for progesterone itself. A review after 3 to 6 months to see whether it is helping.",
+      "file": "/guides/blood-test-guide-progesterone.pdf",
+      "t": "Micronised progesterone",
+      "reading": []
+    },
+    {
+      "id": "testosterone-undecanoate",
+      "h": "Testosterone long-acting injection (undecanoate)",
+      "group": "testosterone",
+      "forms": [
+        "undecanoate"
+      ],
+      "pages": [
+        "testosterone-undecanoate"
+      ],
+      "key": "Take the blood sample just before the next injection is due. Aim: about 10 to 20 nmol/L. Haematocrit below 0.50 L/L (50%).",
+      "file": "/guides/blood-test-guide-testosterone-undecanoate.pdf",
+      "t": "Testosterone long-acting injection",
+      "reading": [
+        "range",
+        "flag",
+        "units",
+        "timing",
+        "hct",
+        "egfr",
+        "iron"
+      ]
+    },
+    {
+      "id": "testosterone-esters",
+      "h": "Testosterone short-acting injection (enantate, mixed esters)",
+      "group": "testosterone",
+      "forms": [
+        "esters"
+      ],
+      "pages": [
+        "testosterone-esters"
+      ],
+      "key": "Take the blood sample midway between injections. Aim: within the male range on the lab report. Haematocrit below 0.50 L/L (50%).",
+      "file": "/guides/blood-test-guide-testosterone-esters.pdf",
+      "t": "Testosterone short-acting injection",
+      "reading": [
+        "range",
+        "flag",
+        "units",
+        "timing",
+        "hct",
+        "egfr",
+        "iron"
+      ]
+    },
+    {
+      "id": "testosterone-gel",
+      "h": "Testosterone gel (Testogel 1%, Testavan 2%)",
+      "group": "testosterone",
+      "forms": [
+        "testogel",
+        "testavan"
+      ],
+      "pages": [
+        "testosterone-gel"
+      ],
+      "key": "Testogel: in the morning before that day's gel, about 10 to 20 nmol/L. Testavan: 2 to 4 hours after the gel, 17.3 to 36.4 nmol/L.",
+      "file": "/guides/blood-test-guide-testosterone-gel.pdf",
+      "t": "Testosterone gel",
+      "reading": [
+        "range",
+        "flag",
+        "units",
+        "timing",
+        "gelarm",
+        "hct",
+        "egfr",
+        "iron"
+      ]
+    },
+    {
+      "id": "testosterone-cream",
+      "h": "Testosterone cream (AndroForte 5)",
+      "group": "testosterone",
+      "forms": [
+        "cream"
+      ],
+      "pages": [
+        "testosterone-cream"
+      ],
+      "key": "Take the blood sample in the morning before that day's cream. Aim: about 10 to 20 nmol/L. Haematocrit below 0.50 L/L (50%).",
+      "file": "/guides/blood-test-guide-testosterone-cream.pdf",
+      "t": "Testosterone cream",
+      "reading": [
+        "range",
+        "flag",
+        "units",
+        "timing",
+        "gelarm",
+        "hct",
+        "egfr",
+        "iron"
+      ]
+    },
+    {
+      "id": "gnrh",
+      "h": "GnRH analogues (goserelin, leuprorelin, triptorelin)",
+      "group": "gnrh",
+      "forms": [
+        "all"
+      ],
+      "pages": [
+        "gnrh-analogues"
+      ],
+      "key": "Young people: a bone scan before starting and hormone checks at 6 months. Adults: a bone scan only with risk factors.",
+      "file": "/guides/blood-test-guide-gnrh.pdf",
+      "t": "GnRH analogues",
+      "reading": [
+        "range",
+        "flag",
+        "units"
+      ]
+    }
+  ],
+  "reading": {
+    "_about": "v19.5 R3 (Ted, 7 Nov 2026): each sheet's 'reading' names the points from the general 'Reading your results' section of content/monitoring.json that apply to it; levels.py copies the exact wording (matched by these opening words) into the medicine's /monitoring section and its blood test guide PDF. 'units' uses the first sentence only.",
+    "range": "Lab reports mark results",
+    "flag": "A single flagged result",
+    "units": "Units:",
+    "timing": "A sample taken at a different time",
+    "gelarm": "Oestradiol gel on the skin",
+    "biotin": "High-dose biotin",
+    "split": "Splitting the dose",
+    "hct": "Haemoglobin and haematocrit",
+    "egfr": "Kidney function (eGFR)",
+    "iron": "Iron studies"
+  }
+}

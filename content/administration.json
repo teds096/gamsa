@@ -227,7 +227,7 @@
     {
       "h": "Your long-acting injection: finding the right spot",
       "body": [
-        "Testosterone undecanoate (Reandron 1000 and other brands) is 1,000 mg of testosterone undecanoate in 4 mL of oil [8]. It is a large, thick injection, and in Australia a doctor or nurse gives it. It is not a medicine you inject yourself [9][10].",
+        "Testosterone undecanoate (Reandron 1000 and other brands) is 1,000 mg of testosterone undecanoate in 4 mL of oil [8]. It is a large, thick injection, and in Australia a doctor, nurse or, in some places, a trained pharmacist gives it. It is not a medicine you inject yourself [9][10].",
         "The recommended site is ventrogluteal: the side of your hip, over the gluteus medius muscle, rather than the back of the buttock. SA Health's brochure on long-acting intramuscular injections recommends this site, and it is the site the clinician training package on this site teaches [12][11].",
         "SA Health describes the side of the hip as safer than other sites, with large muscles that absorb medicine well. Injecting into the buttock carries a chance of hitting a large nerve or blood vessel, which sit close to that site [12][11].",
         "The clinician does not guess where it goes. You lie on your side with the upper hip uncovered, or on your back with that hip bent a little. They put the heel of the opposite hand on the top of your thigh bone, point their index finger towards the bony point at the front of your hip, and run their middle finger along the rim of your hip bone. The injection goes into the middle of the V their fingers make [11].",
@@ -236,7 +236,7 @@
         "If you have had this injection into the buttock before and a clinic now gives it on the side of your hip, that is a deliberate change in practice, not a mistake."
       ],
       "list": [
-        "Given by a doctor or nurse, into the side of the hip, not the buttock",
+        "Given by a doctor, nurse or trained pharmacist, into the side of the hip, not the buttock",
         "You lie on your side with the upper hip uncovered, or on your back with the hip slightly bent",
         "The spot is found from the bony points of your hip, every time",
         "The needle goes in at ninety degrees and the 4 mL is injected very slowly",
@@ -659,6 +659,45 @@
         "Old medicines: hand them in at any pharmacy, free of charge"
       ],
       "nav": "Needles and disposal"
+    },
+    {
+      "h": "Dose and symptom logs to print",
+      "nav": "Logs to print",
+      "body": [
+        "A log helps you keep track of each dose, patch change or injection, and any symptoms, to bring to your appointments."
+      ],
+      "downloads": [
+        {
+          "t": "Dose and symptom logs",
+          "d": "To fill in and bring to appointments. One for each medicine:",
+          "items": [
+            {
+              "t": "Short-acting testosterone",
+              "u": "/guides/log-testosterone-short-acting.pdf"
+            },
+            {
+              "t": "Long-acting testosterone injection",
+              "u": "/guides/log-testosterone-undecanoate.pdf"
+            },
+            {
+              "t": "Oestradiol patches",
+              "u": "/guides/log-oestradiol-patch.pdf"
+            },
+            {
+              "t": "Implants",
+              "u": "/guides/log-implant.pdf"
+            },
+            {
+              "t": "GnRH analogues",
+              "u": "/guides/log-gnrh.pdf"
+            },
+            {
+              "t": "Blood tests",
+              "u": "/guides/log-blood-tests.pdf"
+            }
+          ]
+        }
+      ]
     }
   ],
   "references": [
@@ -714,7 +753,7 @@
     },
     {
       "n": 11,
-      "text": "South T. Testosterone undecanoate IM injection: standard operating procedure and training guide, version 2.4. GAMSA — Gender-Affirming Medicines South Australia; 5 October 2025, revised 31 October 2026. Accessed 31 October 2026.",
+      "text": "South T. Testosterone undecanoate IM injection: standard operating procedure and training guide, version 2.6. GAMSA — Gender-Affirming Medicines South Australia; 5 October 2025, revised 7 November 2026. Accessed 7 November 2026.",
       "url": "/clinicians/testosterone-undecanoate-im-sop-and-training-guide.pdf"
     },
     {

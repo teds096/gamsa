@@ -15,8 +15,18 @@ def _nat(t): return [(0, int(x), "") if x.isdigit() else (1, 0, x.lower()) for x
 meds["medicines"].sort(key=lambda m: (-_since(m), (m.get("genericName") or m.get("brand") or "").lower(), (m.get("brand") or "").lower(), _nat(m.get("strengthLabel"))))
 payload = {"generatedAt": meds["generatedAt"],
            "medicines": [{k:m[k] for k in KEEP if k in m} for m in meds["medicines"]]}
-content = {k: json.loads((R/f"content/{k}.json").read_text()) for k in ("dosing","administration","costs","easyread","pharmacy","clinicians","allies","resources","privacy","accessibility","disclaimer","addons","monitoring")}
+content = {k: json.loads((R/f"content/{k}.json").read_text()) for k in ("dosing","administration","costs","easyread","pharmacy","clinicians","allies","resources","privacy","accessibility","disclaimer","addons","monitoring","related","downloads")}
 medinfo = json.loads((R/"content/medicines.json").read_text())
+# v19.5 R5b (7 Nov 2026): search titles, descriptions and extra FAQ questions per medicine page live in content/seo.json
+# (so medicines.json and the Easy Read sources stay as they are). seoTitle is copied in so the app keeps the same title.
+SEO = json.loads((R/"content/seo.json").read_text()).get("medicines", {}) if (R/"content/seo.json").exists() else {}
+for _m in medinfo["medicines"]:
+    if SEO.get(_m["id"], {}).get("title"): _m["seoTitle"] = SEO[_m["id"]]["title"]
+# B-36 (v19.5, 7 Nov 2026): each Easy Read guide lists the content it summarises ("sources") and a fingerprint from the day it
+# was last checked ("synced"); see easy_sync.py. A changed source is a WARN here and a FAIL in tools/site_check.py and quick_check.py.
+import easy_sync
+for _m in easy_sync.stale(content["easyread"]["guides"]): print("WARN Easy Read out of step: " + _m + " (update the guide, then python3 easy_sync.py --sync ID)")
+for _g in content["easyread"]["guides"]: _g.pop("sources", None); _g["checked"] = (_g.pop("synced", None) or {}).get("date", "")
 
 # B-14 (24 Oct 2026): ONE list of dated changes, content/changes.json: [{"date","version","pages":[...],"text"}].
 # It feeds the "Updated <date>: ..." note at the top of each page and the What's changed page (/changes).
@@ -54,7 +64,7 @@ if not any(s.get("h") == "Sources and copyright" for s in _disc):
     _disc.append({"h": "Sources and copyright", "body": [
         "The words, pictures and figures on this site are © 2026 GAMSA, unless a page says otherwise. All rights reserved.",
         "The Product Information (PI) and Consumer Medicine Information (CMI) for each medicine belong to the company that supplies that medicine in Australia (the sponsor). This site does not copy them: it puts what they say into plain words, and each medicine page links to the full documents.",
-        "Prices, PBS listings and supply status come from the Pharmaceutical Benefits Scheme (PBS) and the Therapeutic Goods Administration (TGA), which are Australian Government (Commonwealth of Australia) sources. Each page names its sources, with the date they were checked, and links to them.",
+        "Supply status comes from the Therapeutic Goods Administration (TGA). Prices and PBS listings come from the Pharmaceutical Benefits Scheme (PBS) Schedule, www.pbs.gov.au; that material is © Commonwealth of Australia, reproduced with permission of the Department of Health, Disability and Ageing, and is not GAMSA's own: it is shown unaltered, marked \"PBS information\", with the date it was extracted. The PBS Schedule in force on the day governs. Each page names its sources, with the date they were checked, and links to them.",
         "To ask about using something from this site, [send feedback](#/feedback)."]})
 COPYRIGHT_SEC = "sec-disclaimer-" + str(next(i for i, s in enumerate(_disc) if s.get("h") == "Sources and copyright"))
 # /clinicians (and /allies) downloads: file type and size from the files themselves, e.g. "PDF, 182 KB" (24 Oct 2026)
@@ -65,8 +75,32 @@ def _files():
             n = f.stat().st_size
             size = f"{n/1e6:.1f} MB" if n >= 1e6 else f"{max(1, round(n/1e3))} KB"
             out[f"/{f.parent.name}/{f.name}"] = {"type": f.suffix[1:].upper(), "size": size}
+            if f.suffix.lower() == ".pdf":   # real page count from the file itself (7 Nov 2026), never typed
+                try:
+                    import fitz
+                    out[f"/{f.parent.name}/{f.name}"]["pages"] = len(fitz.open(f))
+                except Exception: pass
     return out
 FILES = _files()
+# R4 (Ted, 7 Nov 2026): /downloads lists every file GAMSA made. Groups come from content/downloads.json; any PDF or zip in
+# static/ that no group names is added at the end ("More downloads", title from the PDF itself), so a new file shows up by itself.
+def _dl_listed(secs):
+    for s in secs:
+        for x in s.get("downloads", []):
+            if x.get("u"): yield x["u"]
+            for y in x.get("items", []): yield y["u"]
+def _dl_auto():
+    have, extra = set(_dl_listed(content["downloads"]["sections"])), []
+    for u in sorted(FILES):
+        if u in have: continue
+        t = u.rsplit("/", 1)[1].rsplit(".", 1)[0].replace("-", " ").capitalize()
+        try:
+            import fitz
+            t = (fitz.open(R/("static" + u)).metadata.get("title") or t).split(" — ")[0]
+        except Exception: pass
+        extra.append({"t": t, "u": u})
+    if extra: content["downloads"]["sections"].append({"h": "More downloads", "downloads": extra})
+_dl_auto()
 CFG = json.loads((R/"site-config.json").read_text()) if (R/"site-config.json").exists() else {}
 _tpl = (R/"template.html").read_text()
 try:   # smaller pages when the minifiers are installed (pip install rjsmin rcssmin); fine without
@@ -117,6 +151,10 @@ def _tok(obj):
     s = _PBS_RX.sub(_pbs_val, s)
     return _stamp_refs(json.loads(s))
 content = _tok(content); medinfo = _tok(medinfo)
+# B-34 (v19.5, 7 Nov 2026): blood-test tables on /monitoring and the "Blood tests" box on medicine pages come from
+# content/monitoring-levels.json (see levels.py); reference numbers are worked out here, never typed.
+import levels
+levels.apply(content["monitoring"], medinfo, json.loads((R/"content/monitoring-levels.json").read_text()))
 import figures   # figure definitions in content/*.json -> HTML + inline SVG (page view + Easy Read view); see figures.py
 def _premium_example(costs, prem):
     """B-11 (24 Oct 2026): figure F10 "What a brand premium adds" is drawn from the monthly PBS brand-premium data
@@ -159,7 +197,8 @@ def _dl_sizes(x):
     template.html fileLabel() does the same for the links the script draws."""
     def f(m):
         meta, t = FILES.get(m.group(2)), m.group(3)
-        if not meta or meta["size"] in t: return m.group(0)
+        if meta and meta.get("pages"): t = re.sub(r"\b\d+ pages?\b", f'{meta["pages"]} page' + ("" if meta["pages"] == 1 else "s"), t)
+        if not meta or meta["size"] in t: return m.group(0) if t == m.group(3) else m.group(1) + t + "</a>"
         p = re.search(r"\s*\(([^()]*)\)\s*$", t)
         if p and p.group(1).upper().startswith(meta["type"]):
             t = t[:p.start()] + f' <span class="dl-meta">({p.group(1)}, {meta["size"]})</span>'
@@ -262,6 +301,7 @@ def where_desc(d, n=158):
     return WHERE + sentence(d, n - len(WHERE))
 
 VIEWDESC = {
+ "/downloads": "Every free GAMSA guide, checklist, log and form to download and print: blood test guides, pharmacy checklists and clinic injection documents.",
  "/": BASE_DESC,
  "/supply": "Which gender-affirming hormone medicines are in short supply in Australia right now, checked daily against TGA records, and what to do about it.",
  "/medicines": "Every medicine used in gender-affirming hormone therapy in Australia, with a page for each: how it is used, cost, monitoring and current supply.",
@@ -276,18 +316,18 @@ VIEWDESC = {
  "/easy": "Easy Read guides to gender-affirming hormone medicines: getting your medicine, shortages, costs, doses and using it safely, in short sentences with pictures.",
  "/changes": "Dated changes to the information on GAMSA, newest first: doses, costs, supply, safety points and downloads for gender-affirming medicines in South Australia.",
 }
-CVIEW = {"/doses": "dosing", "/using": "administration", "/costs": "costs", "/pharmacy": "pharmacy", "/clinician-guide": "clinicians", "/ally-guide": "allies", "/resources": "resources", "/add-on-therapies": "addons", "/monitoring": "monitoring", "/privacy": "privacy", "/accessibility": "accessibility", "/disclaimer": "disclaimer", "/about": "about"}
+CVIEW = {"/downloads": "downloads", "/doses": "dosing", "/using": "administration", "/costs": "costs", "/pharmacy": "pharmacy", "/clinician-guide": "clinicians", "/ally-guide": "allies", "/resources": "resources", "/add-on-therapies": "addons", "/monitoring": "monitoring", "/related-care": "related", "/privacy": "privacy", "/accessibility": "accessibility", "/disclaimer": "disclaimer", "/about": "about"}
 TITLES = {"/": "Gender-Affirming Medicines South Australia", "/supply": "Supply & shortages",
           "/medicines": "Medicines A–Z", "/sightings": "Patient sightings", "/easy": "Easy Read guides",
-          "/doses": "Medicines, doses and formulations", "/monitoring": "Monitoring and related care", "/add-on-therapies": "Add-on therapies", "/using": "How to use your medicine",
+          "/doses": "Medicines, doses and formulations", "/monitoring": "Blood tests and monitoring", "/related-care": "Related care and considerations", "/add-on-therapies": "Add-on therapies", "/using": "How to use your medicine",
           "/pharmacy": "Working with your pharmacy", "/costs": "Costs and the PBS", "/feedback": "Send feedback", "/pharmacy-reports": "Pharmacy stock reports",
           "/trans": "Trans and gender diverse people", "/clinicians": "Clinicians and pharmacists", "/allies": "Family, friends and allies",
-          "/clinician-guide": "For clinicians and pharmacists", "/ally-guide": "For family, friends and allies", "/resources": "Resources", "/alerts": "Shortage alerts", "/changes": "What’s changed", "/privacy": "Privacy", "/accessibility": "Accessibility", "/disclaimer": "Disclaimer", "/search": "Search"}
+          "/clinician-guide": "For clinicians and pharmacists", "/ally-guide": "For family, friends and allies", "/resources": "Resources", "/downloads": "Guides and printables", "/alerts": "Shortage alerts", "/changes": "What’s changed", "/privacy": "Privacy", "/accessibility": "Accessibility", "/disclaimer": "Disclaimer", "/search": "Search"}
 if "about" in content: TITLES["/about"] = content["about"].get("title") or "About GAMSA"   # B-09: only with content/about.json
 VIEWID = {"/": "v-home", "/supply": "v-supply", "/medicines": "v-medicines", "/sightings": "v-sightings",
-          "/easy": "v-easy", "/doses": "v-doses", "/monitoring": "v-monitoring", "/add-on-therapies": "v-add-on-therapies", "/using": "v-using", "/pharmacy": "v-pharmacy",
+          "/easy": "v-easy", "/doses": "v-doses", "/monitoring": "v-monitoring", "/related-care": "v-related-care", "/add-on-therapies": "v-add-on-therapies", "/using": "v-using", "/pharmacy": "v-pharmacy",
           "/costs": "v-costs", "/feedback": "v-feedback", "/pharmacy-reports": "v-pharmacy-reports",
-          "/trans": "v-trans", "/clinicians": "v-clinicians", "/allies": "v-allies", "/clinician-guide": "v-clinician-guide", "/ally-guide": "v-ally-guide", "/resources": "v-resources", "/alerts": "v-alerts", "/changes": "v-changes", "/about": "v-about", "/privacy": "v-privacy", "/accessibility": "v-accessibility", "/disclaimer": "v-disclaimer", "/search": "v-search"}
+          "/trans": "v-trans", "/clinicians": "v-clinicians", "/allies": "v-allies", "/clinician-guide": "v-clinician-guide", "/ally-guide": "v-ally-guide", "/resources": "v-resources", "/downloads": "v-downloads", "/alerts": "v-alerts", "/changes": "v-changes", "/about": "v-about", "/privacy": "v-privacy", "/accessibility": "v-accessibility", "/disclaimer": "v-disclaimer", "/search": "v-search"}
 
 def ld(obj):
     return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False).replace("</", "<\\/") + "</script>\n"
@@ -303,16 +343,40 @@ def _md(t):
         u = _hp(u)
         return f'<a href="{u}">{m.group(1)}</a>'
     return re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", a, s)
+_PBS_LINE = re.compile(r"^PBS information \(not GAMSA[’']s own\):\s*")
+_PBS_LONG = re.compile(r"^(.*?)\.?\s*Source: Pharmaceutical Benefits Scheme \(PBS\) Schedule, reproduced with permission of the Australian Government "
+                       r"Department of Health, Disability and Ageing\. Extracted from www\.pbs\.gov\.au on (.+?)\.?\s*$", re.S)
+_PBS_REST = " The rest of this section is GAMSA’s own explanation."
+_PBS_SAID = [False]   # "Pharmaceutical Benefits Scheme" spelled out once per page, as pbsName() does
+def _nj_p(b):   # PBS permission (6 Nov 2026), short form (R4, 7 Nov 2026): same text as pbsP() on the JS page
+    m = _PBS_LINE.match(b)
+    if not m:
+        if "Pharmaceutical Benefits Scheme" in b: _PBS_SAID[0] = True
+        return f"<p>{_md(b)}</p>"
+    b = b[m.end():]; L = _PBS_LONG.match(b)
+    nm = "PBS Schedule" if _PBS_SAID[0] else "Pharmaceutical Benefits Scheme (PBS) Schedule"; _PBS_SAID[0] = True
+    if not L: return f'<p class="pbs-src"><strong>From the PBS:</strong> {_md(b)}{_PBS_REST}</p>'
+    return (f'<p class="pbs-src"><strong>From the PBS:</strong> {_md(L.group(1))}. Source: {nm}, www.pbs.gov.au, extracted {_md(L.group(2))}; '
+            f"reproduced with permission of the Australian Government Department of Health, Disability and Ageing.{_PBS_REST}</p>")
 def _nj_secs(secs):
     o = ""
     for s in secs:
         o += f"<h2>{H.escape(s.get('h', ''))}</h2>"
-        o += "".join(f"<p>{_md(b)}</p>" for b in (s.get("body") or s.get("paras") or []) if isinstance(b, str))
+        o += "".join(_nj_p(b) for b in (s.get("body") or s.get("paras") or []) if isinstance(b, str))
+        for x in s.get("downloads", []):   # R4: group cards list each file; a "link" entry is a plain link to another page
+            if x.get("u"): o += f'<p><a href="{H.escape(x["u"])}">{H.escape(x["t"])} ({x["u"].rsplit(".", 1)[1].upper()})</a></p>'
+            elif x.get("items"):
+                o += f'<p>{H.escape(x["t"])} (PDF):</p><ul>' + "".join(f'<li><a href="{H.escape(y["u"])}">{H.escape(y["t"])}</a></li>' for y in x["items"]) + "</ul>"  # r5c: a pill ends its block
+            elif x.get("link"): o += f'<p><a href="{H.escape(_hp(x["link"]))}">{H.escape(x["t"])}</a></p>'
         li = s.get("list") or s.get("bullets") or []
         if li: o += "<ul>" + "".join(f"<li>{_md(x)}</li>" for x in li if isinstance(x, str)) + "</ul>"
         tb = s.get("table")
         if tb: o += ("<table><tr>" + "".join(f"<th>{_md(h)}</th>" for h in tb["head"]) + "</tr>" +
                      "".join("<tr>" + "".join(f"<td>{_md(c)}</td>" for c in r) + "</tr>" for r in tb["rows"]) + "</table>")
+        rd = s.get("read")   # v19.5 R3: the "Reading your results" points for this medicine
+        if rd: o += ("<h3>Reading your results</h3>" + ("<ul>" + "".join(f"<li>{_md(x)}</li>" for x in rd["points"]) + "</ul>" if rd["points"] else "") +
+                     (f"<p>{H.escape(rd['listh'])}</p><ul>" + "".join(f"<li>{_md(x)}</li>" for x in rd["wrong"]) + "</ul>" if rd["wrong"] else ""))
+        if s.get("clin"): o += "<h3>For clinicians</h3><ul>" + "".join(f"<li><strong>{H.escape(c['t'])}:</strong> {_md(c['x'])}</li>" for c in s["clin"]) + "</ul>"
         if (s.get("fig") or {}).get("cap"): o += f"<p>{_md(s['fig']['cap'])}</p>"
         if s.get("note"): o += f"<p>{_md(s['note'])}</p>"
     return o
@@ -320,12 +384,18 @@ def _nj_refs(refs):
     if not refs: return ""
     return "<h2>References</h2><ol>" + "".join(f"<li>{_md(r.get('text', ''))}" + (f' <a href="{H.escape(r["url"])}">{H.escape(r["url"])}</a>' if r.get("url") else "") + "</li>" for r in refs) + "</ol>"
 def _nj_content(c):
-    intro = c.get("intro", "")
+    intro = c.get("intro", ""); _PBS_SAID[0] = "Pharmaceutical Benefits Scheme" in str(intro)
     return (f"<h1>{H.escape(c.get('title', ''))}</h1>" + "".join(f"<p>{_md(p)}</p>" for p in (intro if isinstance(intro, list) else [intro])) +
             _nj_secs(c.get("sections", [])) + _nj_refs(c.get("references", [])) +
             (f"<p>Last reviewed {datetime.date.fromisoformat(c['updated']).strftime('%-d %B %Y')}.</p>" if re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(c.get("updated", ""))) else ""))
 def _nj_med(m):
-    return (f"<h1>{H.escape(m['name'])}</h1><p>{_md(m.get('summary', ''))}</p>" + _nj_secs(m.get("sections", [])) +
+    bt = m.get("bloodTests"); _PBS_SAID[0] = "Pharmaceutical Benefits Scheme" in m.get("summary", "")
+    box = ("<h2>Blood tests</h2><ul>" + "".join(f"<li><strong>{H.escape(r['t'])}.</strong> When: {_md(r['w'])}" + (f" Aim: {_md(r['a'])}" if r['a'] else "") + "</li>" for r in bt["rows"]) +
+           "".join(f'<p><a href="{H.escape(x["u"])}">{H.escape(x["t"])} (PDF)</a></p>' for x in bt.get("dl", [])) +
+           f'<p><a href="{_hp(bt["href"].split("#sec")[0])}">Blood tests and monitoring: every medicine</a></p>') if bt else ""
+    secs = m.get("sections", [])
+    k = next((i for i, x in enumerate(secs) if x.get("h") == "What is monitored"), len(secs))  # box sits where the page shows it
+    return (f"<h1>{H.escape(m['name'])}</h1><p>{_md(m.get('summary', ''))}</p>" + _nj_secs(secs[:k]) + box + _nj_secs(secs[k:]) +
             ("<h2>Links and resources</h2><ul>" + "".join(f'<li><a href="{H.escape(l["url"])}">{H.escape(l["label"])}</a></li>' for l in m["links"]) + "</ul>" if m.get("links") else "") +
             _nj_refs(m.get("references", [])))
 def _nj_easy(g):
@@ -345,7 +415,8 @@ def _nj_hubs():
     src, out = (R/"template.html").read_text(), {}
     u = lambda s: json.loads('"' + s + '"')
     for k, kick, tit, lede, items in re.findall(r'(trans|clinicians|allies): \{kicker:"([^"]*)", title:"([^"]*)", lede:"([^"]*)",\s*items:\[(.*?)\]\}', src, re.S):
-        li = "".join(f'<li><a href="{_hp(h)}">{H.escape(u(t))}</a>: {H.escape(u(d))}</li>'
+        li = "".join((f'<li>{H.escape(u(d))} <a href="{_hp(h)}">{H.escape(u(t))} (PDF)</a></li>' if re.search(r"\.(pdf|zip)$", h) else  # r5c: a file link ends its item
+                      f'<li><a href="{_hp(h)}">{H.escape(u(t))}</a>: {H.escape(u(d))}</li>')
                      for t, h, d in re.findall(r'\{t:"([^"]*)", h:"([^"]*)", d:"([^"]*)"', items))
         out["/" + k] = f"<h1>{H.escape(u(tit))}</h1><p>{H.escape(u(lede))}</p><ul>{li}</ul>"
     return out
@@ -367,13 +438,38 @@ NOJS["/alerts"] = ("<h1>Shortage alerts</h1><p>Medicines under a current TGA sho
                    '. Feed: <a href="/feed.xml">gamsa.au/feed.xml</a>.</p><ul>' + "".join(f'<li>{H.escape(r.get("brand", ""))} {H.escape(r.get("strengthLabel", ""))}: {H.escape(r.get("statusLabel") or str(r.get("status")))}</li>'
                    for r in meds["medicines"] if r.get("status") not in (None, "in_supply", "unverified")) + "</ul>")
 
-def write(path, title, desc, view, schema, noindex=False, nojs=None):
-    full = full_title(title)   # home too: the same title the app sets after in-app navigation (B-28, 23 Oct 2026)
+# v19.5 R5 (7 Nov 2026, layout shift): the "Updated" note under a page's heading is also written into the static page, as
+# chgNote() in template.html draws it, so it is on screen from the first paint instead of pushing the page down when the
+# script runs (/sightings CLS 0.18 on phones). chgNote() still redraws it (same node, same place) and drops it after 3 months.
+def _upd_static(body, view, path):
+    start = body.find(f'<div class="view on" id="{view}">')
+    if start < 0: return body
+    nxt = body.find('<div class="view', start + 10)
+    ph = body.find('<div class="page-head">', start)
+    if ph < 0 or (nxt > -1 and ph > nxt): return body
+    i, depth = ph, 0
+    for m in re.finditer(r"<div\b|</div>", body[ph:]):
+        depth += 1 if m.group(0) != "</div>" else -1
+        if depth == 0: i = ph + m.end(); break
+    else: return body
+    today = datetime.date.today()
+    L = sorted([c for c in content["changes"] if path in (c.get("pages") or [])
+                and (today - datetime.date.fromisoformat(c["date"])).days <= 92], key=lambda c: c["date"], reverse=True)
+    if not L: return body
+    c = L[0]; y, mo, d = c["date"].split("-")
+    short = f'{int(d)} {["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][int(mo)-1]} {y}'
+    note = (f'<aside class="upd upd-b" aria-label="Recent change"><span class="upd-tag">Updated</span><p><b>{short}:</b> '
+            f'{H.escape(c["text"])} <a href="/changes">What’s changed</a></p></aside>')
+    return body[:i] + note + body[i:]
+
+def write(path, title, desc, view, schema, noindex=False, nojs=None, full=None):
+    full = full or full_title(title)   # home too: the same title the app sets after in-app navigation (B-28, 23 Oct 2026)
     extra = ld(schema) + ('<meta name="robots" content="noindex">\n' if noindex else "")
     top = head(full, desc, path, PRELOAD + extra).replace("__ROUTING__", ' data-routing="path"')
     nj = NOJS.get(path) if nojs is None else nojs
     body = page.replace("__TITLE__", H.escape(full), 1) \
                .replace(f'<div class="view" id="{view}">', f'<div class="view on" id="{view}">' + (f"<noscript>{_dl_sizes(nj)}</noscript>" if nj else ""), 1)
+    body = _upd_static(body, view, path)
     # Cloudflare Pages serves /costs from costs.html (and /costs/ needs a redirect if it were a folder)
     out = D/"index.html" if path == "/" else D/(path.strip("/") + ".html")
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -399,7 +495,8 @@ for m in medinfo["medicines"]:
     path = "/medicines/" + m["id"]
     short = m["name"].split(" (")[0]
     title = short   # B-28: the site and place now follow the name (full_title), in place of ": doses, cost and supply"
-    desc = where_desc(sentence(m.get("summary", "")))
+    seo = SEO.get(m["id"], {})
+    desc = seo.get("description") or where_desc(sentence(m.get("summary", "")))
     page_ld = {"@type": "MedicalWebPage", "name": m["name"],
               "url": SITE + path, "description": desc, "inLanguage": "en-AU",
               "about": {"@type": "Substance", "name": m["name"], "activeIngredient": m["generic"]},   # B-16: not "Drug" (a Product type: Google then wants offers/reviews)
@@ -417,8 +514,10 @@ for m in medinfo["medicines"]:
         txt = " ".join(b for b in (sec or {}).get("body", []) if isinstance(b, str))[:900]
         txt = re.sub(r"\s*\[\d+(?:[,\s]*\d+)*\]", "", re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", txt)).strip()
         if txt: faq.append({"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": txt}})
+    for x in seo.get("faq", []):   # v19.5 R5b: questions people search for, answered from facts already on the page
+        faq.append({"@type": "Question", "name": x["q"], "acceptedAnswer": {"@type": "Answer", "text": x["a"]}})
     schema = {"@context": "https://schema.org", "@graph": [page_ld] + ([{"@type": "FAQPage", "mainEntity": faq}] if faq else [])}
-    write(path, title, desc, "v-med", schema, nojs=_nj_med(m))
+    write(path, title, desc, "v-med", schema, nojs=_nj_med(m), full=seo.get("title"))
     urls.append(path)
 
 for g in content["easyread"]["guides"]:
@@ -460,6 +559,14 @@ if (R/"static").exists():
     shutil.copytree(R/"static", D, dirs_exist_ok=True)
 if "/about" in TITLES and (D/"_redirects").exists():   # B-09: the About page takes over /about (static/_redirects sends it to /disclaimer otherwise)
     (D/"_redirects").write_text("".join(l for l in (D/"_redirects").read_text().splitlines(True) if l.split()[:1] != ["/about"]))
+# v19.5: the download counter (functions/_lib/download.js) answers /guides|clinicians|allies/<file>, where _redirects may not
+# reach, so the old file names there are copied into a small module it reads.
+if (D/"_redirects").exists():
+    _fr = {p[0]: p[1] for p in (l.split() for l in (D/"_redirects").read_text().splitlines())
+           if len(p) >= 2 and re.match(r"^/(guides|clinicians|allies)/[^/]+\.(pdf|zip)$", p[0], re.I)}
+    _frs = "// Written by build.py from static/_redirects (v19.5). Do not edit by hand.\nexport const FILE_REDIRECTS = " + json.dumps(_fr, indent=1, sort_keys=True) + ";\n"
+    _frf = R/"functions/_lib/file_redirects.js"
+    if not _frf.exists() or _frf.read_text() != _frs: _frf.write_text(_frs)
 
 # v19 security (24 Oct 2026). Browsers report anything this policy blocks to /api/csp-report (functions/api/csp-report.js);
 # Ted reads the totals on /admin -> "Blocked-content reports". 'unsafe-inline' stays in style-src because the pages and

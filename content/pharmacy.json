@@ -17,10 +17,10 @@
           "d": "What to take, what to ask, and what to do if your medicine is out of stock."
         },
         {
-          "t": "Monitoring schedule",
-          "u": "/guides/monitoring-schedule.pdf",
-          "p": "9 pages",
-          "d": "Which blood tests and checks to expect, for each medicine."
+          "t": "Inclusive environment checklist",
+          "u": "/guides/inclusive-environment.pdf",
+          "p": "2 pages",
+          "d": "For pharmacies and clinics that want to be welcoming."
         },
         {
           "t": "PBS Authority wording card",
@@ -29,46 +29,8 @@
           "d": "How PBS testosterone scripts are worded, to give your prescriber."
         },
         {
-          "t": "Treatment room card",
-          "u": "/clinicians/testosterone-undecanoate-im-treatment-room-card.pdf",
-          "p": "1 page",
-          "d": "For the clinic that gives your long-acting testosterone injection."
-        },
-        {
-          "t": "Inclusive environment checklist",
-          "u": "/guides/inclusive-environment.pdf",
-          "p": "2 pages",
-          "d": "For clinics and pharmacies that want to be welcoming."
-        },
-        {
-          "t": "Dose and symptom logs",
-          "d": "To fill in and bring to appointments. One for each medicine:",
-          "items": [
-            {
-              "t": "Short-acting testosterone",
-              "u": "/guides/log-testosterone-short-acting.pdf"
-            },
-            {
-              "t": "Long-acting testosterone injection",
-              "u": "/guides/log-testosterone-undecanoate.pdf"
-            },
-            {
-              "t": "Oestradiol patches",
-              "u": "/guides/log-oestradiol-patch.pdf"
-            },
-            {
-              "t": "Implants",
-              "u": "/guides/log-implant.pdf"
-            },
-            {
-              "t": "GnRH analogues",
-              "u": "/guides/log-gnrh.pdf"
-            },
-            {
-              "t": "Blood tests",
-              "u": "/guides/log-blood-tests.pdf"
-            }
-          ]
+          "t": "All our guides and printables",
+          "link": "#/downloads"
         }
       ],
       "listh": "Other leaflets and guides",

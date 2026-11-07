@@ -95,14 +95,25 @@
               "lines": [
                 "There is one Easy Read guide for each thing you might need to do.",
                 "You can read them in any order.",
-                "Each one can be printed or saved as a PDF."
+                "Each one can be printed or saved as a PDF.",
+                "We check the guides when the website changes.",
+                "Each guide shows the date we last checked it."
               ]
             }
           ]
         }
       ],
       "audience": "you",
-      "updated": "2026-10-24"
+      "updated": "2026-11-07",
+      "sources": [
+        "content/about.json#Who runs this site"
+      ],
+      "synced": {
+        "date": "2026-11-07",
+        "fp": {
+          "content/about.json#Who runs this site": "8f5b24a5d013"
+        }
+      }
     },
     {
       "id": "getting",
@@ -201,7 +212,20 @@
         }
       ],
       "audience": "you",
-      "updated": "2026-10-24"
+      "updated": "2026-10-24",
+      "sources": [
+        "content/pharmacy.json#If you live outside Adelaide",
+        "content/pharmacy.json#Getting your name right on the label",
+        "content/pharmacy.json#What to tell the pharmacist, and what to avoid"
+      ],
+      "synced": {
+        "date": "2026-11-07",
+        "fp": {
+          "content/pharmacy.json#If you live outside Adelaide": "d206a54448d6",
+          "content/pharmacy.json#Getting your name right on the label": "a1088a6c05c2",
+          "content/pharmacy.json#What to tell the pharmacist, and what to avoid": "e1396a120972"
+        }
+      }
     },
     {
       "id": "shortage",
@@ -227,6 +251,15 @@
               ]
             },
             {
+              "icon": "web",
+              "lines": [
+                "The **shortage** page has one card for each medicine and strength.",
+                "The card lists each **brand** that is hard to get.",
+                "It says when each brand should be back.",
+                "The newest changes are at the top."
+              ]
+            },
+            {
               "icon": "clock",
               "lines": [
                 "If your medicine is hard to get:",
@@ -247,7 +280,20 @@
         }
       ],
       "audience": "you",
-      "updated": "2026-10-24"
+      "updated": "2026-11-07",
+      "sources": [
+        "content/dosing.json#If your medicine is hard to get",
+        "content/pharmacy.json#If you run out and have no script",
+        "template.html#renderMeds"
+      ],
+      "synced": {
+        "date": "2026-11-07",
+        "fp": {
+          "content/dosing.json#If your medicine is hard to get": "8346c3f8f5a4",
+          "content/pharmacy.json#If you run out and have no script": "01935db5b95b",
+          "template.html#renderMeds": "fa48f16dd19e"
+        }
+      }
     },
     {
       "id": "cost",
@@ -270,7 +316,10 @@
               "icon": "card",
               "lines": [
                 "In 2026, most people pay up to **${{PBS:general_copay}}** for a PBS medicine.",
-                "If you have a concession card, you pay up to **${{PBS:conc_copay}}**."
+                "If you have a concession card, you pay up to **${{PBS:conc_copay}}**.",
+                "These amounts are from the PBS website, not from GAMSA: www.pbs.gov.au.",
+                "We checked them on {{PBS:checkedAtLong}}.",
+                "We check them again every month."
               ]
             },
             {
@@ -287,6 +336,15 @@
                 "Some medicines are not on the PBS.",
                 "These cost more.",
                 "The website has a page that explains each one."
+              ]
+            },
+            {
+              "icon": "money",
+              "lines": [
+                "Some brands cost a bit more than others.",
+                "The extra cost is called a **brand premium**.",
+                "If you would rather not pay it, ask your pharmacist for a brand with no premium.",
+                "Swapping brands of the same medicine is normal and safe."
               ]
             },
             {
@@ -324,7 +382,26 @@
         }
       ],
       "audience": "you",
-      "updated": "2026-10-24"
+      "updated": "2026-11-07",
+      "sources": [
+        "content/costs.json#What the PBS is",
+        "content/costs.json#What you pay at the counter",
+        "content/costs.json#The PBS Safety Net",
+        "content/costs.json#Closing the Gap: lower costs for Aboriginal and Torres Strait Islander people",
+        "content/costs.json#Brand premiums: being aware of them",
+        "content/costs.json#If cost is a barrier"
+      ],
+      "synced": {
+        "date": "2026-11-07",
+        "fp": {
+          "content/costs.json#What the PBS is": "a5f99ce59998",
+          "content/costs.json#What you pay at the counter": "2d89a8efae04",
+          "content/costs.json#The PBS Safety Net": "ae3d7decd24e",
+          "content/costs.json#Closing the Gap: lower costs for Aboriginal and Torres Strait Islander people": "5c5550989bb6",
+          "content/costs.json#Brand premiums: being aware of them": "2b8054f682b8",
+          "content/costs.json#If cost is a barrier": "c279bfafda79"
+        }
+      }
     },
     {
       "id": "patches-gel",
@@ -398,7 +475,18 @@
         }
       ],
       "audience": "you",
-      "updated": "2026-10-24"
+      "updated": "2026-10-24",
+      "sources": [
+        "content/administration.json#Putting on and changing a patch",
+        "content/administration.json#Applying gel, and keeping it off other people"
+      ],
+      "synced": {
+        "date": "2026-11-07",
+        "fp": {
+          "content/administration.json#Putting on and changing a patch": "c0ceeafba4ec",
+          "content/administration.json#Applying gel, and keeping it off other people": "046db4a10b21"
+        }
+      }
     },
     {
       "id": "injections",
@@ -419,7 +507,7 @@
             {
               "icon": "speak",
               "lines": [
-                "Tell the nurse or doctor if you feel unwell.",
+                "Tell the person giving the injection if you feel unwell.",
                 "Also tell them if an injection has made you sick before."
               ]
             },
@@ -441,6 +529,8 @@
               "icon": "clock",
               "lines": [
                 "The long-acting testosterone injection is given slowly, into the side of your hip.",
+                "A doctor or nurse gives it.",
+                "In some places, a trained pharmacist can give it.",
                 "You then wait in the clinic for at least 30 minutes.",
                 "This is normal.",
                 "It is so staff can help if you have a rare reaction."
@@ -462,6 +552,13 @@
               "lines": [
                 "Ask when your next injection is due before you leave.",
                 "Write it down."
+              ]
+            },
+            {
+              "icon": "doc",
+              "lines": [
+                "The clinic may give you a page to take home.",
+                "It says what to look out for after the injection."
               ]
             },
             {
@@ -487,7 +584,8 @@
               "lines": [
                 "Some people learn to give their own injections.",
                 "Only do this after a nurse or doctor has taught you.",
-                "Practise with them first."
+                "Practise with them first.",
+                "The long-acting testosterone injection is not one you give yourself."
               ]
             },
             {
@@ -503,7 +601,26 @@
         }
       ],
       "audience": "you",
-      "updated": "2026-10-24"
+      "updated": "2026-11-07",
+      "sources": [
+        "content/administration.json#Your long-acting injection: finding the right spot",
+        "content/administration.json#What happens at the injection appointment",
+        "content/administration.json#Learning to inject testosterone yourself",
+        "content/administration.json#Disposing of needles and leftover medicine",
+        "content/medicines.json#gnrh-analogues",
+        "content/medicines.json#testosterone-undecanoate"
+      ],
+      "synced": {
+        "date": "2026-11-07",
+        "fp": {
+          "content/administration.json#Your long-acting injection: finding the right spot": "a12fa3c4fc6d",
+          "content/administration.json#What happens at the injection appointment": "177efbccba38",
+          "content/administration.json#Learning to inject testosterone yourself": "11b6b10ca4e3",
+          "content/administration.json#Disposing of needles and leftover medicine": "7426cfa28c7d",
+          "content/medicines.json#gnrh-analogues": "d391c5f7fd59",
+          "content/medicines.json#testosterone-undecanoate": "2d4a00c39c35"
+        }
+      }
     },
     {
       "id": "tablets",
@@ -546,7 +663,20 @@
         }
       ],
       "audience": "you",
-      "updated": "2026-10-24"
+      "updated": "2026-10-24",
+      "sources": [
+        "content/administration.json#Taking tablets and capsules",
+        "content/administration.json#When you miss a dose",
+        "content/administration.json#Storing your medicine safely at home"
+      ],
+      "synced": {
+        "date": "2026-11-07",
+        "fp": {
+          "content/administration.json#Taking tablets and capsules": "49bf7394c2c4",
+          "content/administration.json#When you miss a dose": "44cd0ee61315",
+          "content/administration.json#Storing your medicine safely at home": "e2c961fda73a"
+        }
+      }
     },
     {
       "id": "doses",
@@ -609,7 +739,34 @@
               "icon": "doc",
               "lines": [
                 "You will have **blood tests** from time to time.",
-                "They show your doctor if the dose is right."
+                "They show your doctor if the dose is right.",
+                "A blood test is not something you pass or fail."
+              ]
+            },
+            {
+              "icon": "clock",
+              "lines": [
+                "When you have the test matters.",
+                "For many medicines, it is just before your next dose.",
+                "Your doctor will tell you the right time for you."
+              ]
+            },
+            {
+              "icon": "warn",
+              "lines": [
+                "The lab may mark a result as high or low.",
+                "It uses the sex on your Medicare or lab record.",
+                "On hormones, this may not fit your body.",
+                "Talk to your doctor about the result.",
+                "Do not change your dose on your own."
+              ]
+            },
+            {
+              "icon": "web",
+              "lines": [
+                "Our Blood tests and **monitoring** page has a part for each medicine.",
+                "It shows which tests you may have, when, and what they aim for.",
+                "Each part has a blood test guide you can print."
               ]
             },
             {
@@ -618,13 +775,38 @@
                 "If you want your dose changed, talk to your doctor.",
                 "That is a normal thing to ask."
               ]
+            },
+            {
+              "icon": "book",
+              "lines": [
+                "You can print a log from our website.",
+                "Write down your doses, your blood tests and how you feel.",
+                "Bring it to your appointments."
+              ]
             }
           ],
           "figure": "review-rhythm"
         }
       ],
       "audience": "you",
-      "updated": "2026-10-24"
+      "updated": "2026-11-07",
+      "sources": [
+        "content/dosing.json#Start here: the dose is yours, and only your prescriber sets it",
+        "content/monitoring.json#Blood tests and reviews",
+        "content/monitoring.json#Getting the timing of the blood test right",
+        "content/monitoring.json#Reading your results",
+        "content/administration.json#Dose and symptom logs to print"
+      ],
+      "synced": {
+        "date": "2026-11-07",
+        "fp": {
+          "content/dosing.json#Start here: the dose is yours, and only your prescriber sets it": "48d8ab243ca1",
+          "content/monitoring.json#Blood tests and reviews": "5c2b500cd54e",
+          "content/monitoring.json#Getting the timing of the blood test right": "c18b7660f2e6",
+          "content/monitoring.json#Reading your results": "02b8e0681dc4",
+          "content/administration.json#Dose and symptom logs to print": "ce683aefdada"
+        }
+      }
     },
     {
       "id": "help",
@@ -729,7 +911,18 @@
         }
       ],
       "audience": "you",
-      "updated": "2026-10-24"
+      "updated": "2026-10-24",
+      "sources": [
+        "content/resources.json#Care and support in South Australia",
+        "content/resources.json#National information"
+      ],
+      "synced": {
+        "date": "2026-11-07",
+        "fp": {
+          "content/resources.json#Care and support in South Australia": "059d6fd56ca0",
+          "content/resources.json#National information": "0f0dd6050ba4"
+        }
+      }
     },
     {
       "id": "helping",
@@ -816,7 +1009,8 @@
               "icon": "web",
               "lines": [
                 "Look at the shortage page on this website.",
-                "It says which medicines are hard to get right now."
+                "It says which medicines are hard to get right now.",
+                "Each card lists the brands and when each one should be back."
               ]
             },
             {
@@ -871,7 +1065,20 @@
         }
       ],
       "audience": "allies",
-      "updated": "2026-10-24"
+      "updated": "2026-11-07",
+      "sources": [
+        "content/allies.json#How to help with their medicines",
+        "content/allies.json#Pharmacy visit checklist",
+        "template.html#renderMeds"
+      ],
+      "synced": {
+        "date": "2026-11-07",
+        "fp": {
+          "content/allies.json#How to help with their medicines": "5e75fac9f027",
+          "content/allies.json#Pharmacy visit checklist": "96ca6f5d4b71",
+          "template.html#renderMeds": "fa48f16dd19e"
+        }
+      }
     },
     {
       "id": "ally-medicines",
@@ -915,7 +1122,8 @@
               "icon": "calendar",
               "lines": [
                 "Some are injections.",
-                "A nurse or doctor gives the long-acting injection every few months.",
+                "A doctor or nurse gives the long-acting injection every few months.",
+                "In some places, a trained pharmacist can give it.",
                 "Some people learn to give their own injection."
               ]
             }
@@ -955,7 +1163,20 @@
           ]
         }
       ],
-      "updated": "2026-10-24"
+      "updated": "2026-11-07",
+      "sources": [
+        "content/allies.json#What the medicines are",
+        "content/administration.json#What happens at the injection appointment",
+        "content/administration.json#Your long-acting injection: finding the right spot"
+      ],
+      "synced": {
+        "date": "2026-11-07",
+        "fp": {
+          "content/allies.json#What the medicines are": "7129f29d26f8",
+          "content/administration.json#What happens at the injection appointment": "177efbccba38",
+          "content/administration.json#Your long-acting injection: finding the right spot": "a12fa3c4fc6d"
+        }
+      }
     },
     {
       "id": "ally-problems",
@@ -992,7 +1213,8 @@
               "lines": [
                 "Serious problems are rare.",
                 "Regular **blood tests** find them early.",
-                "Help the person keep their doctor visits and blood tests."
+                "Help the person keep their doctor visits and blood tests.",
+                "Our Blood tests and **monitoring** page lists the usual tests for each medicine."
               ]
             }
           ]
@@ -1039,7 +1261,18 @@
           ]
         }
       ],
-      "updated": "2026-10-24"
+      "updated": "2026-11-07",
+      "sources": [
+        "content/allies.json#What actually goes wrong",
+        "content/monitoring.json#Blood tests and reviews"
+      ],
+      "synced": {
+        "date": "2026-11-07",
+        "fp": {
+          "content/allies.json#What actually goes wrong": "2c3f3ea5f747",
+          "content/monitoring.json#Blood tests and reviews": "5c2b500cd54e"
+        }
+      }
     },
     {
       "id": "ally-support",
@@ -1119,7 +1352,18 @@
           ]
         }
       ],
-      "updated": "2026-10-24"
+      "updated": "2026-10-24",
+      "sources": [
+        "content/allies.json#Being an ally more broadly",
+        "content/allies.json#Local services"
+      ],
+      "synced": {
+        "date": "2026-11-07",
+        "fp": {
+          "content/allies.json#Being an ally more broadly": "e902e0e06705",
+          "content/allies.json#Local services": "0068e9e00931"
+        }
+      }
     }
   ],
   "wordlist": [
@@ -1142,6 +1386,10 @@
     {
       "w": "Brand",
       "d": "The name a company puts on a medicine. Two brands can be the same medicine."
+    },
+    {
+      "w": "Brand premium",
+      "d": "An extra amount you pay for some brands, on top of the PBS price."
     },
     {
       "w": "Closing the Gap",
@@ -1194,6 +1442,10 @@
     {
       "w": "Milligram",
       "d": "A way to measure how much medicine. It is written mg."
+    },
+    {
+      "w": "Monitoring",
+      "d": "Checking how a medicine is working, and keeping you safe, with blood tests and check-ups."
     },
     {
       "w": "Oestrogen",

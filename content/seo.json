@@ -1,0 +1,279 @@
+{
+ "_note": "v19.5 (7 Nov 2026): search titles, meta descriptions and extra FAQ questions for each medicine page. build.py uses them for <title>, the meta and Open Graph description and the FAQPage JSON-LD; template.html keeps the same title after the script runs. Every fact here is already on that medicine's page (content/medicines.json). The visible h1 and page are unchanged.",
+ "medicines": {
+  "estradiol-patches": {
+   "title": "Estradiol patches (Estradot): doses, PBS, supply · GAMSA",
+   "description": "How estradiol patches are used in feminising hormone therapy in Australia: usual doses (50 to 200 micrograms a day), side effects, blood tests and PBS cost.",
+   "faq": [
+    {
+     "q": "What is a usual estradiol patch dose?",
+     "a": "Australia's 2026 standards of care give a common range of 50 to 200 micrograms per 24 hours, with patches changed twice a week. Many prescribers start low to mid-range and increase every two to three months."
+    },
+    {
+     "q": "What strengths do estradiol patches come in?",
+     "a": "Estradot comes in 25, 37.5, 50, 75 and 100 micrograms per 24 hours, and Estraderm MX in 25, 50, 75 and 100. At the upper end of the dose range, that can mean wearing more than one patch at a time."
+    }
+   ]
+  },
+  "estradiol-tablets": {
+   "title": "Estradiol tablets (Progynova): doses, PBS, supply · GAMSA",
+   "description": "How estradiol tablets are used in feminising hormone therapy in Australia: usual doses (2 to 8 mg daily), side effects, clot risk, blood tests and PBS cost.",
+   "faq": [
+    {
+     "q": "What is a usual estradiol tablet dose?",
+     "a": "Australia's 2026 standards of care give a common range of 2 to 8 mg daily, taken as a single dose or split across the day. Progynova comes as 1 mg and 2 mg tablets, and Zumenon as 2 mg."
+    }
+   ]
+  },
+  "estradiol-gel": {
+   "title": "Estradiol gel (Sandrena): doses, side effects, PBS · GAMSA",
+   "description": "How estradiol gel (Sandrena and Estrogel) is used in feminising hormone therapy in Australia: usual daily doses, side effects, blood test timing and PBS cost.",
+   "faq": [
+    {
+     "q": "How many pumps of Estrogel are used a day?",
+     "a": "Australia's 2026 standards of care give one to four pumps daily, each delivering 0.75 mg of estradiol. For Sandrena, the same standards give one to two 1 g sachets daily."
+    }
+   ]
+  },
+  "micronised-progesterone": {
+   "title": "Progesterone (Prometrium): doses, side effects, PBS · GAMSA",
+   "description": "How micronised progesterone (Prometrium) is used in gender-affirming care in Australia: the usual dose (100 to 200 mg at night), side effects and PBS cost.",
+   "faq": [
+    {
+     "q": "Is 200 mg of progesterone a usual dose?",
+     "a": "Australia's 2026 standards of care describe 100 to 200 mg nightly as the commonly used dose, taken at night because it can cause sleepiness. They advise a review after three to six months."
+    },
+    {
+     "q": "Is Prometrium 100 mg on the PBS?",
+     "a": "Yes. Progesterone 100 mg capsules (30) are on the PBS General Schedule with no restrictions, item 14730G, shared by Prometrium, Progesterone ADVZ 100 and PROGESTERONE-APX."
+    }
+   ]
+  },
+  "cyproterone-acetate": {
+   "title": "Cyproterone acetate (Androcur): doses, side effects · GAMSA",
+   "description": "How cyproterone acetate is used in feminising therapy in Australia: usual doses (12.5 mg weekly up to 25 mg daily), side effects, liver tests and PBS cost.",
+   "faq": [
+    {
+     "q": "What is a usual cyproterone acetate dose?",
+     "a": "Australia's 2026 standards of care give a range from 12.5 mg once a week up to 25 mg daily, well below the doses it was first registered for. The smallest tablet is 50 mg, so a quarter tablet (12.5 mg) every second day or twice a week is commonly used."
+    }
+   ]
+  },
+  "spironolactone": {
+   "title": "Spironolactone (Aldactone): doses, side effects, PBS · GAMSA",
+   "description": "How spironolactone is used in feminising hormone therapy in Australia: usual doses (50 to 200 mg daily), side effects, potassium and kidney tests, and PBS cost.",
+   "faq": [
+    {
+     "q": "Is 100 mg of spironolactone a usual dose?",
+     "a": "Australia's 2026 standards of care give a usual range of 50 to 200 mg daily, and the 2019 position statement gave 100 to 200 mg daily. Spironolactone comes as 25 mg and 100 mg tablets, both PBS-listed with no restrictions."
+    },
+    {
+     "q": "What blood tests are needed on spironolactone?",
+     "a": "Potassium and other electrolytes and kidney function are checked, along with blood pressure. The Spiractin leaflet describes tests possibly weekly at first, then monthly for three months, quarterly for a year, then every six months."
+    }
+   ]
+  },
+  "testosterone-undecanoate": {
+   "title": "Testosterone undecanoate (Reandron): doses, PBS · GAMSA",
+   "description": "How the long-acting testosterone undecanoate injection (Reandron 1000) is used in Australia: 1,000 mg every 10 to 14 weeks, side effects, blood tests and PBS.",
+   "faq": [
+    {
+     "q": "How often is a Reandron injection given?",
+     "a": "The dose is 1,000 mg in 4 mL deep into muscle, a second dose about six weeks after the first, then one every ten to fourteen weeks. The interval can range from about 7 weeks to more than 20 weeks, depending on your trough level."
+    },
+    {
+     "q": "What testosterone level is aimed for on Reandron?",
+     "a": "Australia's 2026 standards of care give a trough total testosterone of about 10 to 20 nmol/L, measured just before the next injection. They advise not testing or changing the dose until after the first three injections."
+    }
+   ]
+  },
+  "testosterone-esters": {
+   "title": "Testosterone enantate and Sustanon 250: doses, cost · GAMSA",
+   "description": "How the shorter-acting testosterone injections Primoteston Depot and Sustanon 250 are used in Australia: 125 to 250 mg every 2 to 4 weeks, and the cost.",
+   "faq": [
+    {
+     "q": "What is a usual Sustanon 250 dose?",
+     "a": "Australian standards give 125 to 250 mg (0.5 to 1 mL) every two to four weeks for the shorter-acting esters in gender-affirming care. The blood sample is taken midway between injections, or as a peak and trough pair."
+    },
+    {
+     "q": "Is Sustanon 250 on the PBS?",
+     "a": "No. Neither Sustanon 250 nor Primoteston Depot is PBS-subsidised, so both are private prescriptions and you pay the pharmacy's full price."
+    }
+   ]
+  },
+  "testosterone-gel": {
+   "title": "Testosterone gel (Testogel): doses, blood tests, PBS · GAMSA",
+   "description": "How testosterone gel (Testogel and Testavan) is used in masculinising therapy in Australia: usual daily doses, side effects, blood test timing and the PBS.",
+   "faq": [
+    {
+     "q": "What is a usual testosterone gel dose?",
+     "a": "Testogel's usual starting dose is one 5 g sachet (50 mg) a day, and Australian standards give one to eight pump presses (12.5 to 100 mg) a day. Testavan starts at one 23 mg press a day, up to three presses."
+    },
+    {
+     "q": "When is the blood test taken on testosterone gel?",
+     "a": "For Testogel, in the morning before that day's gel, aiming for about 10 to 20 nmol/L. For Testavan, 2 to 4 hours after applying, aiming for 17.3 to 36.4 nmol/L."
+    }
+   ]
+  },
+  "testosterone-cream": {
+   "title": "Testosterone cream (AndroForte 5): doses, PBS · GAMSA",
+   "description": "How testosterone cream (AndroForte 5) is used in masculinising therapy in Australia: usual doses (1 to 4 mL of 5% cream daily), side effects and PBS cost.",
+   "faq": [
+    {
+     "q": "How much AndroForte 5 cream is used a day?",
+     "a": "Australian standards give 1 to 4 mL of 5% cream (50 to 200 mg) daily, and note that 2 mL is often enough to reach the target range for full masculinisation. Scrotal skin absorbs far more, so the leaflet's scrotal starting dose is 0.5 mL a day."
+    }
+   ]
+  },
+  "gnrh-analogues": {
+   "title": "GnRH analogues (puberty blockers): doses, PBS · GAMSA",
+   "description": "How GnRH analogues (puberty blockers such as Zoladex, Lucrin and Eligard) are used in Australia: dosing intervals, bone health checks, PBS status and cost.",
+   "faq": [
+    {
+     "q": "Are puberty blockers on the PBS?",
+     "a": "Not for puberty suppression: goserelin, leuprorelin and the longer-acting triptorelin strengths are PBS-listed only for other conditions, and the triptorelin 3.75 mg listing is not for use in gender dysphoria in minors. For puberty suppression, all of them are private prescriptions."
+    }
+   ]
+  },
+  "doxycycline": {
+   "title": "Doxycycline for acne on testosterone: doses, PBS · GAMSA",
+   "description": "How doxycycline is used for acne on testosterone in Australia: the usual 50 mg daily acne dose, side effects, the PBS listing for severe acne, cost and supply.",
+   "faq": [
+    {
+     "q": "What doxycycline dose is used for acne?",
+     "a": "For acne, 50 mg once daily is the dose described in the Australian leaflet, run for a defined course rather than continued indefinitely. Doses up to 200 mg daily are used for other infections, not for acne."
+    }
+   ]
+  },
+  "topical-retinoid-bpo": {
+   "title": "Epiduo (adapalene, benzoyl peroxide): acne, PBS · GAMSA",
+   "description": "How Epiduo gel (adapalene with benzoyl peroxide) is used for acne on testosterone in Australia: once-daily use, side effects, the PBS listing and what it costs.",
+   "faq": [
+    {
+     "q": "Is Epiduo Forte on the PBS?",
+     "a": "No. Epiduo (adapalene 0.1%) is PBS-listed as a Restricted Benefit for severe acne vulgaris, but Epiduo Forte (adapalene 0.3%) is not, so it is a private prescription."
+    }
+   ]
+  },
+  "isotretinoin": {
+   "title": "Isotretinoin (Oratane): doses, side effects, PBS · GAMSA",
+   "description": "How isotretinoin (Oratane) is used for severe acne on testosterone in Australia: weight-based doses, side effects, monthly blood tests and the PBS Authority.",
+   "faq": [
+    {
+     "q": "What is the usual isotretinoin dose?",
+     "a": "Standard Australian dosing is weight-based, roughly 0.5 to 1 mg per kg daily, adjusted by your dermatologist through the course. Liver function and blood fats are checked before starting and monthly through the course."
+    }
+   ]
+  },
+  "norethisterone": {
+   "title": "Norethisterone (Primolut N): doses, periods, PBS · GAMSA",
+   "description": "How norethisterone (Primolut N) is used to stop periods on testosterone in Australia: usual doses, side effects, what is monitored, PBS cost and supply.",
+   "faq": [
+    {
+     "q": "What norethisterone dose stops periods on testosterone?",
+     "a": "Australian standards suggest starting at 5 to 10 mg twice daily and reducing to the lowest dose that keeps periods stopped, ideally 5 mg once daily. They also note it is not a contraceptive."
+    }
+   ]
+  },
+  "medroxyprogesterone-acetate": {
+   "title": "Depo-Provera (medroxyprogesterone): doses, PBS · GAMSA",
+   "description": "How medroxyprogesterone acetate (Depo-Provera, Provera) is used to stop periods on testosterone in Australia: usual doses, side effects and PBS cost.",
+   "faq": [
+    {
+     "q": "How often is the Depo-Provera injection given?",
+     "a": "150 mg every three months is the standard Australian dose for Depo-Provera, used for contraception and period suppression together. The tablets (Provera) come as 5 mg and 10 mg."
+    }
+   ]
+  },
+  "levonorgestrel-iud": {
+   "title": "Mirena (levonorgestrel IUD): side effects, PBS · GAMSA",
+   "description": "How the Mirena hormonal IUD is used to stop or lighten periods on testosterone in Australia: fitting, side effects, thread checks, the PBS listing and cost.",
+   "faq": [
+    {
+     "q": "Is Mirena on the PBS?",
+     "a": "Yes. Mirena is PBS-listed as a Restricted Benefit for contraception and for heavy menstrual bleeding with no known cause, with no phone approval needed. The fitting is usually billed separately, so ask about the total cost of the appointment."
+    }
+   ]
+  },
+  "vaginal-oestrogen": {
+   "title": "Vaginal oestrogen (Vagifem Low): doses, PBS · GAMSA",
+   "description": "How vaginal oestrogen (Vagifem Low) is used for dryness and irritation on testosterone in Australia: the usual dose, side effects, review and PBS cost.",
+   "faq": [
+    {
+     "q": "How often is Vagifem Low used?",
+     "a": "Daily for an initial two weeks, then twice weekly, as described in the product leaflet and Australian gender-affirming guidance. Each pessary holds 10 micrograms of estradiol."
+    }
+   ]
+  },
+  "finasteride": {
+   "title": "Finasteride 1 mg (Propecia): hair loss, side effects · GAMSA",
+   "description": "How finasteride 1 mg is used for hair loss in gender-affirming care in Australia: the usual dose, side effects, its effect on the PSA test and private cost.",
+   "faq": [
+    {
+     "q": "Is finasteride 1 mg on the PBS?",
+     "a": "No. Finasteride 1 mg for hair loss is not PBS-subsidised, so it is a private script at the pharmacy's own price. The registered dose for hair loss is 1 mg once daily."
+    }
+   ]
+  },
+  "minoxidil-topical": {
+   "title": "Topical minoxidil (Regaine): hair loss, side effects · GAMSA",
+   "description": "How topical minoxidil (Regaine) is used for hair thinning in gender-affirming care in Australia: strengths, how often to apply it, side effects and cost.",
+   "faq": [
+    {
+     "q": "How long does minoxidil take to work?",
+     "a": "It generally takes at least four months of consistent twice-daily use before noticeable regrowth appears. Women's Regaine foam (5%) is applied once a day rather than twice."
+    }
+   ]
+  },
+  "estalis-patches": {
+   "title": "Estalis patches (estradiol, norethisterone): PBS · GAMSA",
+   "description": "Background on Estalis and Estalis Sequi combined patches in Australia: what they contain, strengths, side effects, monitoring and PBS cost.",
+   "faq": [
+    {
+     "q": "What strengths do Estalis patches come in?",
+     "a": "Estalis Continuous and Estalis Sequi both come as 50/140 and 50/250: estradiol 50 micrograms a day with norethisterone acetate 140 or 250 micrograms a day. The patches are changed twice a week."
+    }
+   ]
+  },
+  "kliogest-kliovance": {
+   "title": "Kliogest and Kliovance: strengths, side effects · GAMSA",
+   "description": "Background on Kliogest and Kliovance (estradiol with norethisterone tablets) in Australia: strengths, side effects, monitoring and private cost.",
+   "faq": [
+    {
+     "q": "Are Kliogest and Kliovance on the PBS?",
+     "a": "No. Both are private prescriptions; a February 2026 report listed Kliogest and Kliovance at around $47 each. The price can vary between pharmacies."
+    }
+   ]
+  },
+  "trisequens": {
+   "title": "Trisequens (estradiol, norethisterone): cost · GAMSA",
+   "description": "Background on Trisequens sequential estradiol and norethisterone tablets in Australia: the three-tablet pack, side effects, monitoring and private cost.",
+   "faq": [
+    {
+     "q": "Is Trisequens on the PBS?",
+     "a": "No. Trisequens is a private prescription; a February 2026 report listed it at around $42. The price can vary between pharmacies."
+    }
+   ]
+  },
+  "femoston": {
+   "title": "Femoston and Femoston-Conti: strengths, PBS · GAMSA",
+   "description": "Background on Femoston and Femoston-Conti (estradiol with dydrogesterone tablets) in Australia: strengths, side effects, monitoring, PBS listing and cost.",
+   "faq": [
+    {
+     "q": "Is Femoston-Conti on the PBS?",
+     "a": "No. Femoston 1/10 and Femoston 2/10 are PBS-listed with no restriction, but Femoston-Conti is not PBS-subsidised; a February 2026 report listed it at around $15 as a private script."
+    }
+   ]
+  },
+  "angeliq": {
+   "title": "Angeliq (estradiol, drospirenone): side effects · GAMSA",
+   "description": "Background on Angeliq (estradiol with drospirenone tablets) in Australia: its single strength, side effects, potassium checks and private cost.",
+   "faq": [
+    {
+     "q": "Is Angeliq on the PBS?",
+     "a": "No. Angeliq is a private prescription; a February 2026 report listed Angeliq 1/2 at around $52. The price can vary between pharmacies."
+    }
+   ]
+  }
+ }
+}

@@ -5,7 +5,8 @@
 Finds each PDF's teal title band, puts the logo (vector, from static/logo.svg) at its right end where no
 text is, and draws the gradient stripe under it, as on the site header. Safe to re-run: stamped files are
 skipped. Sets each PDF's document title (shown in the browser tab, read by screen readers). Also rebuilds the
-training package zip from the stamped PDFs.
+training package zip from the stamped PDFs. Locked PDFs (R2, 7 Nov 2026: fill and print only) are
+checked and skipped, never re-saved, so the lock stays.
 """
 import pathlib, zipfile
 import pymupdf as fitz
@@ -21,6 +22,7 @@ def brand(path, logo):
     d = fitz.open(path)
     kw = d.metadata.get("keywords") or ""
     if MARK in kw: return "already done"
+    if d.metadata.get("encryption"): return "locked (fill and print only) - rebuild it unlocked, brand, then lock again; skipped"
     if "gamsa-logo-5b" in kw: return "logo built into the Word original (tools/docx_brand.py) - nothing to add"
     pg = d[0]
     bands = [dr["rect"] for dr in pg.get_drawings() if dr.get("fill") and dr["rect"].width > pg.rect.width * .5
@@ -58,6 +60,7 @@ def title(path):
     want += " \u2014 GAMSA"
     d = fitz.open(path); m = d.metadata; cat = d.pdf_catalog()
     if m.get("title") == want and "DisplayDocTitle" in (d.xref_get_key(cat, "ViewerPreferences")[1] or ""): d.close(); return "title already set"
+    if m.get("encryption"): d.close(); return "locked - title not changed"
     m["title"] = want; m["author"] = m.get("author") or "GAMSA (gamsa.au)"; d.set_metadata(m)
     d.xref_set_key(cat, "ViewerPreferences", "<</DisplayDocTitle true>>")
     tmp = path.with_suffix(".tmp.pdf"); d.save(tmp, garbage=3, deflate=True); d.close(); tmp.replace(path)

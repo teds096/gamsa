@@ -67,3 +67,16 @@ CREATE TABLE IF NOT EXISTS csp_reports (
 --   ALTER TABLE pharmacists ADD COLUMN key_issued TEXT;
 --   ALTER TABLE sightings ADD COLUMN published INTEGER NOT NULL DEFAULT 1;
 --   (and the CREATE TABLE csp_reports statement above)
+
+-- v19.5 (7 Nov 2026): privacy-safe daily totals. kind = 'file' (key = PDF or zip path) or 'ref' (key = outreach tag).
+-- Only a number per day; no IP, user agent, cookie or referrer. The functions also create it themselves on first use
+-- (functions/_lib/counts.js), so nothing has to be run by hand.
+CREATE TABLE IF NOT EXISTS counts (
+  day  TEXT NOT NULL,      -- YYYY-MM-DD (UTC)
+  kind TEXT NOT NULL,      -- file | ref
+  key  TEXT NOT NULL,
+  n    INTEGER NOT NULL DEFAULT 0,
+  PRIMARY KEY (day, kind, key)
+);
+-- Read the totals (D1 console or connector):
+--   SELECT kind, key, SUM(n) AS total FROM counts WHERE day >= date('now','-30 days') GROUP BY kind, key ORDER BY kind, total DESC;

@@ -1,0 +1,184 @@
+{
+ "title": "Guides and printables",
+ "kicker": "Resources",
+ "intro": "Every guide, checklist, log and form GAMSA has made, in one place. They are free to download and print. They are general information, not instructions for your dose.",
+ "sections": [
+  {
+   "h": "For you",
+   "body": [
+    "Each [Easy Read guide](#/easy) also prints or saves as a PDF from its own page."
+   ],
+   "downloads": [
+    {
+     "t": "Pharmacy visit checklist",
+     "u": "/allies/pharmacy-visit-checklist.pdf",
+     "d": "What to take, what to ask, and what to do if your medicine is out of stock."
+    },
+    {
+     "t": "Dose and symptom logs",
+     "d": "To fill in and bring to appointments. One for each medicine:",
+     "items": [
+      {
+       "t": "Short-acting testosterone",
+       "u": "/guides/log-testosterone-short-acting.pdf"
+      },
+      {
+       "t": "Long-acting testosterone injection",
+       "u": "/guides/log-testosterone-undecanoate.pdf"
+      },
+      {
+       "t": "Oestradiol patches",
+       "u": "/guides/log-oestradiol-patch.pdf"
+      },
+      {
+       "t": "Implants",
+       "u": "/guides/log-implant.pdf"
+      },
+      {
+       "t": "GnRH analogues",
+       "u": "/guides/log-gnrh.pdf"
+      },
+      {
+       "t": "Blood tests",
+       "u": "/guides/log-blood-tests.pdf"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Blood test guides",
+   "body": [
+    "Which blood tests and checks to expect, with the timing and aims. More on the [blood tests page](#/monitoring)."
+   ],
+   "downloads": [
+    {
+     "t": "Blood test guides",
+     "d": "One page for each medicine and form:",
+     "items": [
+      {
+       "t": "Oestradiol tablets",
+       "u": "/guides/blood-test-guide-oestradiol-tablets.pdf"
+      },
+      {
+       "t": "Oestradiol patches",
+       "u": "/guides/blood-test-guide-oestradiol-patches.pdf"
+      },
+      {
+       "t": "Oestradiol gel",
+       "u": "/guides/blood-test-guide-oestradiol-gel.pdf"
+      },
+      {
+       "t": "Oestradiol implants",
+       "u": "/guides/blood-test-guide-oestradiol-implants.pdf"
+      },
+      {
+       "t": "Oestradiol injections",
+       "u": "/guides/blood-test-guide-oestradiol-injections.pdf"
+      },
+      {
+       "t": "Spironolactone",
+       "u": "/guides/blood-test-guide-spironolactone.pdf"
+      },
+      {
+       "t": "Cyproterone acetate",
+       "u": "/guides/blood-test-guide-cyproterone.pdf"
+      },
+      {
+       "t": "Bicalutamide",
+       "u": "/guides/blood-test-guide-bicalutamide.pdf"
+      },
+      {
+       "t": "Micronised progesterone",
+       "u": "/guides/blood-test-guide-progesterone.pdf"
+      },
+      {
+       "t": "Testosterone long-acting injection",
+       "u": "/guides/blood-test-guide-testosterone-undecanoate.pdf"
+      },
+      {
+       "t": "Testosterone short-acting injection",
+       "u": "/guides/blood-test-guide-testosterone-esters.pdf"
+      },
+      {
+       "t": "Testosterone gel",
+       "u": "/guides/blood-test-guide-testosterone-gel.pdf"
+      },
+      {
+       "t": "Testosterone cream",
+       "u": "/guides/blood-test-guide-testosterone-cream.pdf"
+      },
+      {
+       "t": "GnRH analogues",
+       "u": "/guides/blood-test-guide-gnrh.pdf"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Clinicians, pharmacists, clinics and pharmacies",
+   "body": [
+    "The injection documents are explained on the [long-acting testosterone page](/medicines/testosterone-undecanoate#sec-med-9)."
+   ],
+   "downloads": [
+    {
+     "t": "Inclusive environment checklist",
+     "u": "/guides/inclusive-environment.pdf",
+     "d": "Practical checks for clinics and pharmacies that want to be welcoming."
+    },
+    {
+     "t": "PBS Authority wording card",
+     "u": "/clinicians/pbs-authority-wording-card.pdf",
+     "d": "How PBS testosterone scripts are worded, and what to say at the counter."
+    },
+    {
+     "t": "Long-acting testosterone injection: training package",
+     "u": "/clinicians/testosterone-undecanoate-im-training-package.zip",
+     "d": "All six injection documents below in one zip file."
+    },
+    {
+     "t": "Long-acting testosterone injection documents",
+     "d": "For clinics that give the injection:",
+     "items": [
+      {
+       "t": "Procedure and training guide",
+       "u": "/clinicians/testosterone-undecanoate-im-sop-and-training-guide.pdf"
+      },
+      {
+       "t": "Treatment room card",
+       "u": "/clinicians/testosterone-undecanoate-im-treatment-room-card.pdf"
+      },
+      {
+       "t": "After-injection handout",
+       "u": "/clinicians/testosterone-undecanoate-im-after-injection-handout.pdf"
+      },
+      {
+       "t": "Competency checklist",
+       "u": "/clinicians/testosterone-undecanoate-im-competency-checklist.pdf"
+      },
+      {
+       "t": "Adverse event form",
+       "u": "/clinicians/testosterone-undecanoate-im-adverse-event-form.pdf"
+      },
+      {
+       "t": "Clinic audit tool",
+       "u": "/clinicians/testosterone-undecanoate-im-clinic-audit-tool.pdf"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Family and allies",
+   "downloads": [
+    {
+     "t": "Pharmacy visit checklist",
+     "u": "/allies/pharmacy-visit-checklist.pdf",
+     "d": "The same checklist, for anyone helping at the pharmacy."
+    }
+   ]
+  }
+ ],
+ "references": []
+}

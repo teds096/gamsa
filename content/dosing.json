@@ -1,6 +1,6 @@
 {
   "title": "Medicines, doses and formulations",
-  "intro": "A plain-language guide to the medicines used for gender-affirming hormone therapy in Australia: what each one is, what forms it comes in, and the ranges Australian prescribers work within. It is background reading, not a prescription. Blood tests, fertility, PrEP and surgery are on the [Monitoring and related care](#/monitoring) page.",
+  "intro": "A plain-language guide to the medicines used for gender-affirming hormone therapy in Australia: what each one is, what forms it comes in, and the ranges Australian prescribers work within. It is background reading, not a prescription. Blood tests are on the [Blood tests and monitoring](#/monitoring) page; fertility, PrEP and surgery are on the [Related care and considerations](#/related-care) page.",
   "sections": [
     {
       "h": "Start here: the dose is yours, and only your prescriber sets it",
@@ -108,7 +108,7 @@
         "Two are used in Australia: spironolactone and cyproterone acetate. There is no good head-to-head evidence that one is better than the other, so the choice comes down to your health history and how you tolerate it [1].",
         "The advice is to use the lowest effective dose of cyproterone. The Australian product information reports meningioma with long-term use at doses of 25 mg a day and above, with the risk rising as the total dose taken over the years adds up. If a meningioma is diagnosed, cyproterone must be stopped permanently. Prolactinoma has also been reported [1][11].",
         "Bicalutamide, a prostate cancer medicine, is sometimes used as a blocker. Australia's 2026 standards of care say it should not be a first choice, because there is very little evidence for it in gender-affirming care [12]. Liver damage, liver failure and lung damage, including deaths, have been reported, so anyone taking it needs regular liver blood tests for as long as they take it [12]. The Australian product information says most liver changes happen in the first 6 months, and that it is stopped for jaundice or if the liver test ALT rises above twice the upper limit of normal [13]. In July 2026 it added a warning about interstitial lung disease, a lung inflammation that has caused deaths. Bicalutamide is stopped if this is diagnosed [13, 14]. It can make warfarin work more strongly, so anyone on warfarin needs closer INR blood tests, and in rare cases it can make skin burn more easily in the sun [13].",
-        "After an orchidectomy a blocker is no longer needed [1]. Whether to stop hormones before an operation is covered in [Hormones around surgery](#/monitoring#sec-monitoring-14) on the Monitoring and related care page."
+        "After an orchidectomy a blocker is no longer needed [1]. Whether to stop hormones before an operation is covered in [Hormones around surgery](#/related-care#sec-related-care-3) on the Related care and considerations page."
       ],
       "list": [
         "Spironolactone (Spiractin, Aldactone and generics) — a daily tablet, usually 50–200 mg daily in Australian guidance [4], and 100–200 mg in the 2019 position statement [1]",
@@ -151,7 +151,7 @@
         "Testosterone 1% gel (Testogel) — a metered pump delivering 12.5 mg per press, or 5 g sachets, applied daily. Australian standards give one to eight pumps, or one to two sachets, daily; four pumps is often enough for full masculinisation [4][17]",
         "Testosterone 2% gel (Testavan), 23 mg per press, one to three presses daily, and 5% cream (AndroForte 5), 1–4 mL daily, often 2 mL [4][17]",
         "Shorter-acting esters — testosterone enantate (Primoteston Depot) and Sustanon, usually 125–250 mg every two to four weeks [4]. Primoteston Depot was removed from the PBS on 1 February 2018 at the manufacturer's request and is now a private prescription [24]; Sustanon is not PBS-subsidised either [17][25]",
-        "Monitoring — trough total testosterone and haematocrit; see the [blood tests section](#/monitoring#sec-monitoring-0) on the Monitoring and related care page [1][8]"
+        "Monitoring — trough total testosterone and haematocrit; see the [blood tests section](#/monitoring#sec-monitoring-0) on the Blood tests and monitoring page [1][8]"
       ],
       "note": "Testosterone can harm a developing pregnancy and does not reliably stop ovulation. If pregnancy is possible for you, contraception is worth a specific conversation with your prescriber — do not assume testosterone covers it [1].",
       "nav": "Testosterone",
