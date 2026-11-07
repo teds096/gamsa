@@ -1,10 +1,8 @@
 {
-  "finishedAt": "2026-11-07T21:01:53Z",
-  "ok": false,
-  "failedSteps": [
-    "supply"
-  ],
-  "issue": null,
-  "monthlyCostsRun": true,
-  "linksBroken": true
+  "finishedAt": "2026-11-07T22:38:16Z",
+  "ok": true,
+  "failedSteps": [],
+  "issue": "https://github.com/teds096/gamsa/issues/30",
+  "monthlyCostsRun": false,
+  "linksBroken": false
 }
