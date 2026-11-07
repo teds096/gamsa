@@ -1,0 +1,548 @@
+{
+  "about": "Weekly totals from Cloudflare Web Analytics for gamsa.au, newest week first. Estimates (Cloudflare samples). Totals only: no IP addresses or visitor-level data; entries under 3 page views are folded into (other). Written by tools/analytics.py.",
+  "site": "gamsa.au and www.gamsa.au",
+  "weekStarts": "Monday 00:00 Adelaide time",
+  "updated": "2026-11-07T11:53:07Z",
+  "weeks": [
+    {
+      "week": "2026-10-26",
+      "from": "2026-10-25T13:30:00Z",
+      "to": "2026-11-01T13:30:00Z",
+      "pageViews": 110,
+      "visits": 80,
+      "botsExcluded": true,
+      "topPages": [
+        {
+          "path": "/",
+          "views": 40,
+          "visits": 30
+        },
+        {
+          "path": "/doses",
+          "views": 30,
+          "visits": 30
+        },
+        {
+          "path": "/monitoring",
+          "views": 10,
+          "visits": 10
+        },
+        {
+          "path": "/clinicians",
+          "views": 10,
+          "visits": 10
+        },
+        {
+          "path": "/changes",
+          "views": 10,
+          "visits": 0
+        },
+        {
+          "path": "/search",
+          "views": 10,
+          "visits": 0
+        }
+      ],
+      "topReferrers": [
+        {
+          "host": "(none or direct)",
+          "views": 70,
+          "visits": 70
+        },
+        {
+          "host": "(inside gamsa.au)",
+          "views": 30,
+          "visits": 0
+        },
+        {
+          "host": "www.facebook.com",
+          "views": 10,
+          "visits": 10
+        }
+      ],
+      "topCountries": [
+        {
+          "country": "AU",
+          "views": 100,
+          "visits": 70
+        },
+        {
+          "country": "SE",
+          "views": 10,
+          "visits": 10
+        }
+      ]
+    },
+    {
+      "week": "2026-10-19",
+      "from": "2026-10-18T13:30:00Z",
+      "to": "2026-10-25T13:30:00Z",
+      "pageViews": 290,
+      "visits": 100,
+      "botsExcluded": true,
+      "topPages": [
+        {
+          "path": "/",
+          "views": 90,
+          "visits": 70
+        },
+        {
+          "path": "/clinician-guide",
+          "views": 40,
+          "visits": 0
+        },
+        {
+          "path": "/doses",
+          "views": 20,
+          "visits": 0
+        },
+        {
+          "path": "/clinicians",
+          "views": 20,
+          "visits": 0
+        },
+        {
+          "path": "/trans",
+          "views": 20,
+          "visits": 0
+        },
+        {
+          "path": "/medicines/finasteride",
+          "views": 20,
+          "visits": 20
+        },
+        {
+          "path": "/medicines/estradiol-patches",
+          "views": 10,
+          "visits": 0
+        },
+        {
+          "path": "/easy",
+          "views": 10,
+          "visits": 0
+        },
+        {
+          "path": "/feedback",
+          "views": 10,
+          "visits": 0
+        },
+        {
+          "path": "/medicines/testosterone-undecanoate",
+          "views": 10,
+          "visits": 0
+        },
+        {
+          "path": "(other)",
+          "views": 40,
+          "visits": 10
+        }
+      ],
+      "topReferrers": [
+        {
+          "host": "(inside gamsa.au)",
+          "views": 190,
+          "visits": 0
+        },
+        {
+          "host": "(none or direct)",
+          "views": 60,
+          "visits": 60
+        },
+        {
+          "host": "www.facebook.com",
+          "views": 20,
+          "visits": 20
+        },
+        {
+          "host": "facebook.com",
+          "views": 10,
+          "visits": 10
+        },
+        {
+          "host": "www.google.com",
+          "views": 10,
+          "visits": 10
+        }
+      ],
+      "topCountries": [
+        {
+          "country": "AU",
+          "views": 270,
+          "visits": 80
+        },
+        {
+          "country": "US",
+          "views": 10,
+          "visits": 10
+        },
+        {
+          "country": "SE",
+          "views": 10,
+          "visits": 10
+        }
+      ]
+    },
+    {
+      "week": "2026-10-12",
+      "from": "2026-10-11T13:30:00Z",
+      "to": "2026-10-18T13:30:00Z",
+      "pageViews": 440,
+      "visits": 150,
+      "botsExcluded": true,
+      "topPages": [
+        {
+          "path": "/",
+          "views": 220,
+          "visits": 140
+        },
+        {
+          "path": "/clinician-guide",
+          "views": 40,
+          "visits": 0
+        },
+        {
+          "path": "/trans",
+          "views": 30,
+          "visits": 0
+        },
+        {
+          "path": "/using",
+          "views": 20,
+          "visits": 0
+        },
+        {
+          "path": "/pharmacy",
+          "views": 20,
+          "visits": 0
+        },
+        {
+          "path": "/medicines",
+          "views": 20,
+          "visits": 10
+        },
+        {
+          "path": "/medicines/angeliq",
+          "views": 10,
+          "visits": 0
+        },
+        {
+          "path": "/medicines/estradiol-patches",
+          "views": 10,
+          "visits": 0
+        },
+        {
+          "path": "/easy/ally-support",
+          "views": 10,
+          "visits": 0
+        },
+        {
+          "path": "/supply",
+          "views": 10,
+          "visits": 0
+        },
+        {
+          "path": "(other)",
+          "views": 50,
+          "visits": 0
+        }
+      ],
+      "topReferrers": [
+        {
+          "host": "(inside gamsa.au)",
+          "views": 290,
+          "visits": 0
+        },
+        {
+          "host": "(none or direct)",
+          "views": 150,
+          "visits": 150
+        }
+      ],
+      "topCountries": [
+        {
+          "country": "AU",
+          "views": 420,
+          "visits": 130
+        },
+        {
+          "country": "US",
+          "views": 20,
+          "visits": 20
+        }
+      ]
+    },
+    {
+      "week": "2026-10-05",
+      "from": "2026-10-04T13:30:00Z",
+      "to": "2026-10-11T13:30:00Z",
+      "pageViews": 180,
+      "visits": 150,
+      "botsExcluded": true,
+      "topPages": [
+        {
+          "path": "/",
+          "views": 160,
+          "visits": 150
+        },
+        {
+          "path": "/supply",
+          "views": 10,
+          "visits": 0
+        },
+        {
+          "path": "/trans",
+          "views": 10,
+          "visits": 0
+        }
+      ],
+      "topReferrers": [
+        {
+          "host": "(none or direct)",
+          "views": 150,
+          "visits": 150
+        },
+        {
+          "host": "(inside gamsa.au)",
+          "views": 30,
+          "visits": 0
+        }
+      ],
+      "topCountries": [
+        {
+          "country": "US",
+          "views": 140,
+          "visits": 140
+        },
+        {
+          "country": "AU",
+          "views": 20,
+          "visits": 0
+        },
+        {
+          "country": "TR",
+          "views": 20,
+          "visits": 10
+        }
+      ]
+    },
+    {
+      "week": "2026-09-28",
+      "from": "2026-09-27T14:30:00Z",
+      "to": "2026-10-04T13:30:00Z",
+      "pageViews": 410,
+      "visits": 220,
+      "botsExcluded": true,
+      "topPages": [
+        {
+          "path": "/",
+          "views": 250,
+          "visits": 180
+        },
+        {
+          "path": "/feedback",
+          "views": 30,
+          "visits": 20
+        },
+        {
+          "path": "/using",
+          "views": 20,
+          "visits": 10
+        },
+        {
+          "path": "/clinician-guide",
+          "views": 20,
+          "visits": 0
+        },
+        {
+          "path": "/medicines/testosterone-undecanoate",
+          "views": 20,
+          "visits": 0
+        },
+        {
+          "path": "/allies",
+          "views": 20,
+          "visits": 10
+        },
+        {
+          "path": "/pharmacy",
+          "views": 20,
+          "visits": 0
+        },
+        {
+          "path": "/easy",
+          "views": 10,
+          "visits": 0
+        },
+        {
+          "path": "/trans",
+          "views": 10,
+          "visits": 0
+        },
+        {
+          "path": "/pharmacy-reports",
+          "views": 10,
+          "visits": 0
+        }
+      ],
+      "topReferrers": [
+        {
+          "host": "(none or direct)",
+          "views": 220,
+          "visits": 220
+        },
+        {
+          "host": "(inside gamsa.au)",
+          "views": 150,
+          "visits": 0
+        },
+        {
+          "host": "(inside gamsa.au)",
+          "views": 40,
+          "visits": 0
+        }
+      ],
+      "topCountries": [
+        {
+          "country": "AU",
+          "views": 340,
+          "visits": 150
+        },
+        {
+          "country": "US",
+          "views": 60,
+          "visits": 60
+        },
+        {
+          "country": "CA",
+          "views": 10,
+          "visits": 10
+        }
+      ]
+    },
+    {
+      "week": "2026-09-21",
+      "from": "2026-09-20T14:30:00Z",
+      "to": "2026-09-27T14:30:00Z",
+      "pageViews": 630,
+      "visits": 180,
+      "botsExcluded": true,
+      "topPages": [
+        {
+          "path": "/",
+          "views": 630,
+          "visits": 180
+        }
+      ],
+      "topReferrers": [
+        {
+          "host": "(inside gamsa.au)",
+          "views": 240,
+          "visits": 0
+        },
+        {
+          "host": "(inside gamsa.au)",
+          "views": 210,
+          "visits": 0
+        },
+        {
+          "host": "(none or direct)",
+          "views": 110,
+          "visits": 110
+        },
+        {
+          "host": "facebook.com",
+          "views": 40,
+          "visits": 40
+        },
+        {
+          "host": "lm.facebook.com",
+          "views": 20,
+          "visits": 20
+        },
+        {
+          "host": "l.facebook.com",
+          "views": 10,
+          "visits": 10
+        }
+      ],
+      "topCountries": [
+        {
+          "country": "AU",
+          "views": 600,
+          "visits": 150
+        },
+        {
+          "country": "US",
+          "views": 30,
+          "visits": 30
+        }
+      ]
+    },
+    {
+      "week": "2026-09-14",
+      "from": "2026-09-13T14:30:00Z",
+      "to": "2026-09-20T14:30:00Z",
+      "pageViews": 0,
+      "visits": 0,
+      "botsExcluded": true,
+      "topPages": [],
+      "topReferrers": [],
+      "topCountries": []
+    },
+    {
+      "week": "2026-09-07",
+      "from": "2026-09-06T14:30:00Z",
+      "to": "2026-09-13T14:30:00Z",
+      "pageViews": 0,
+      "visits": 0,
+      "botsExcluded": true,
+      "topPages": [],
+      "topReferrers": [],
+      "topCountries": []
+    },
+    {
+      "week": "2026-08-31",
+      "from": "2026-08-30T14:30:00Z",
+      "to": "2026-09-06T14:30:00Z",
+      "pageViews": 0,
+      "visits": 0,
+      "botsExcluded": true,
+      "topPages": [],
+      "topReferrers": [],
+      "topCountries": []
+    },
+    {
+      "week": "2026-08-24",
+      "from": "2026-08-23T14:30:00Z",
+      "to": "2026-08-30T14:30:00Z",
+      "pageViews": 0,
+      "visits": 0,
+      "botsExcluded": true,
+      "topPages": [],
+      "topReferrers": [],
+      "topCountries": []
+    },
+    {
+      "week": "2026-08-17",
+      "from": "2026-08-16T14:30:00Z",
+      "to": "2026-08-23T14:30:00Z",
+      "pageViews": 0,
+      "visits": 0,
+      "botsExcluded": true,
+      "topPages": [],
+      "topReferrers": [],
+      "topCountries": []
+    },
+    {
+      "week": "2026-08-10",
+      "from": "2026-08-09T14:30:00Z",
+      "to": "2026-08-16T14:30:00Z",
+      "pageViews": 0,
+      "visits": 0,
+      "botsExcluded": true,
+      "topPages": [],
+      "topReferrers": [],
+      "topCountries": []
+    }
+  ]
+}
