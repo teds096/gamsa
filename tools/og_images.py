@@ -82,7 +82,7 @@ def main():
         im.save(path, **({"quality": 85, "optimize": True, "progressive": True} if str(path).endswith(".jpg") else {"optimize": True}))
     make(S / "og-image.png", "Gender-affirming medicines in South Australia", "Supply, costs and how to use each medicine", FLAG)
     pages = {"trans": ("For trans and gender diverse people", "Medicines, supply, costs and support in SA", HUB["trans"]),
-             "clinicians": ("For clinicians and pharmacists", "Prescribing, PBS Authority, monitoring and supply", HUB["clinicians"]),
+             "clinicians": ("For clinicians", "Prescribing, PBS Authority, monitoring and supply", HUB["clinicians"]),
              "allies": ("For family, friends and allies", "How to help someone get and use their medicines", HUB["allies"]),
              "resources": ("Resources and support", "Services, guides and downloads in South Australia", HUB["resources"]),
              "supply": ("Medicine supply and shortages", "Checked every day against the TGA", FLAG),

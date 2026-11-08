@@ -5,6 +5,8 @@ import { tooMany } from "../_lib/util.js";
 import { addCount } from "../_lib/counts.js";
 
 const TAG = /^[a-z0-9-]{1,30}$/;
+// Same robot filter as the download counter: link previewers, crawlers and our own check tools are not counted.
+const BOT = /bot|crawl|spider|slurp|preview|monitor|headless|lighthouse|curl|wget|python|httpx|go-http|java\/|gamsa/i;
 
 export async function onRequestPost(context) {
   const { request, env } = context;
@@ -13,6 +15,7 @@ export async function onRequestPost(context) {
     if (Number(request.headers.get("Content-Length") || 0) > 64) return done;
     const tag = (await request.text()).trim();
     if (!TAG.test(tag)) return done;
+    if (BOT.test(request.headers.get("User-Agent") || "")) return done;
     if (await tooMany(request, "ref", 5, 10 * 60e3)) return done;   // a visitor counts at most 5 times in 10 minutes
     context.waitUntil(addCount(env, "ref", tag, 200).catch((e) => console.error("ref count failed:", String(e && e.message).slice(0, 200))));
   } catch { /* ignore */ }

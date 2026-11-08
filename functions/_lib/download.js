@@ -9,7 +9,7 @@ import { addCount } from "./counts.js";
 import { FILE_REDIRECTS } from "./file_redirects.js";
 
 const FILE = /\.(pdf|zip)$/i;
-const BOT = /bot|crawl|spider|slurp|preview|monitor|headless|lighthouse|curl|wget|python|httpx|go-http|java\//i;
+const BOT = /bot|crawl|spider|slurp|preview|monitor|headless|lighthouse|curl|wget|python|httpx|go-http|java\/|gamsa/i;  // gamsa: our own check tools (live check, after-release check)
 // The site's _headers rules may not reach Function replies, so the ones that matter for a file are added here if missing.
 const HEADERS = {
   "X-Content-Type-Options": "nosniff",

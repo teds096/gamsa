@@ -321,8 +321,8 @@ TITLES = {"/": "Gender-Affirming Medicines South Australia", "/supply": "Supply 
           "/medicines": "Medicines A–Z", "/sightings": "Patient sightings", "/easy": "Easy Read guides",
           "/doses": "Medicines, doses and formulations", "/monitoring": "Blood tests and monitoring", "/related-care": "Related care and considerations", "/add-on-therapies": "Add-on therapies", "/using": "How to use your medicine",
           "/pharmacy": "Working with your pharmacy", "/costs": "Costs and the PBS", "/feedback": "Send feedback", "/pharmacy-reports": "Pharmacy stock reports",
-          "/trans": "Trans and gender diverse people", "/clinicians": "Clinicians and pharmacists", "/allies": "Family, friends and allies",
-          "/clinician-guide": "For clinicians and pharmacists", "/ally-guide": "For family, friends and allies", "/resources": "Resources", "/downloads": "Guides and printables", "/alerts": "Shortage alerts", "/changes": "What’s changed", "/privacy": "Privacy", "/accessibility": "Accessibility", "/disclaimer": "Disclaimer", "/search": "Search"}
+          "/trans": "Trans and gender diverse people", "/clinicians": "Clinicians", "/allies": "Family, friends and allies",
+          "/clinician-guide": "For clinicians", "/ally-guide": "For family, friends and allies", "/resources": "Resources", "/downloads": "Guides and printables", "/alerts": "Shortage alerts", "/changes": "What’s changed", "/privacy": "Privacy", "/accessibility": "Accessibility", "/disclaimer": "Disclaimer", "/search": "Search"}
 if "about" in content: TITLES["/about"] = content["about"].get("title") or "About GAMSA"   # B-09: only with content/about.json
 VIEWID = {"/": "v-home", "/supply": "v-supply", "/medicines": "v-medicines", "/sightings": "v-sightings",
           "/easy": "v-easy", "/doses": "v-doses", "/monitoring": "v-monitoring", "/related-care": "v-related-care", "/add-on-therapies": "v-add-on-therapies", "/using": "v-using", "/pharmacy": "v-pharmacy",
