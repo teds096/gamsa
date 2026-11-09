@@ -2,8 +2,117 @@
   "about": "Weekly totals from Cloudflare Web Analytics for gamsa.au, newest week first. Estimates (Cloudflare samples). Totals only: no IP addresses or visitor-level data; entries under 3 page views are folded into (other). Written by tools/analytics.py.",
   "site": "gamsa.au and www.gamsa.au",
   "weekStarts": "Monday 00:00 Adelaide time",
-  "updated": "2026-11-07T11:53:07Z",
+  "updated": "2026-11-09T10:21:13Z",
   "weeks": [
+    {
+      "week": "2026-11-02",
+      "from": "2026-11-01T13:30:00Z",
+      "to": "2026-11-08T13:30:00Z",
+      "pageViews": 126,
+      "visits": 76,
+      "botsExcluded": true,
+      "topPages": [
+        {
+          "path": "/",
+          "views": 46,
+          "visits": 44
+        },
+        {
+          "path": "/about",
+          "views": 4,
+          "visits": 0
+        },
+        {
+          "path": "/medicines/micronised-progesterone",
+          "views": 4,
+          "visits": 2
+        },
+        {
+          "path": "/medicines",
+          "views": 4,
+          "visits": 0
+        },
+        {
+          "path": "/clinician-guide",
+          "views": 4,
+          "visits": 1
+        },
+        {
+          "path": "/supply",
+          "views": 4,
+          "visits": 1
+        },
+        {
+          "path": "/search",
+          "views": 3,
+          "visits": 0
+        },
+        {
+          "path": "/doses",
+          "views": 3,
+          "visits": 2
+        },
+        {
+          "path": "/pharmacy",
+          "views": 3,
+          "visits": 1
+        },
+        {
+          "path": "/medicines/estradiol-patches",
+          "views": 3,
+          "visits": 3
+        },
+        {
+          "path": "(other)",
+          "views": 48,
+          "visits": 22
+        }
+      ],
+      "topReferrers": [
+        {
+          "host": "(none or direct)",
+          "views": 68,
+          "visits": 68
+        },
+        {
+          "host": "(inside gamsa.au)",
+          "views": 50,
+          "visits": 0
+        },
+        {
+          "host": "www.google.com",
+          "views": 3,
+          "visits": 3
+        },
+        {
+          "host": "(other)",
+          "views": 5,
+          "visits": 5
+        }
+      ],
+      "topCountries": [
+        {
+          "country": "AU",
+          "views": 95,
+          "visits": 45
+        },
+        {
+          "country": "US",
+          "views": 22,
+          "visits": 22
+        },
+        {
+          "country": "CO",
+          "views": 3,
+          "visits": 3
+        },
+        {
+          "country": "(other)",
+          "views": 6,
+          "visits": 6
+        }
+      ]
+    },
     {
       "week": "2026-10-26",
       "from": "2026-10-25T13:30:00Z",
