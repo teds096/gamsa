@@ -87,7 +87,7 @@ def main():
         t = b.decode("utf-8", "replace")
         title = (re.search(r"<title>([^<]*)</title>", t) or [None, ""])[1]
         can = (re.search(r'rel="canonical" href="([^"]+)"', t) or [None, ""])[1]
-        if s != 200 or 'class="view on"' not in t or "{{" in t or "__TOKEN__" in t \
+        if s != 200 or not re.search(r'class="view on[ "]', t) or "{{" in t or "__TOKEN__" in t \
                 or (can and re.sub(r"^https?://[^/]+", "", can) != p):
             bad.append(f"{p} ({s})")
         titles.setdefault(title, []).append(p)
