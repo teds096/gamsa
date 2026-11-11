@@ -1,8 +1,50 @@
 {
- "generatedAt": "10 Nov 2026",
+ "generatedAt": "11 Nov 2026",
  "source": "TGA medicine shortage records + manually maintained entries",
- "scrapedCount": 23,
+ "scrapedCount": 26,
  "medicines": [
+  {
+   "id": "epiduo",
+   "brand": "Epiduo",
+   "strengthLabel": "0.1% / 2.5% gel",
+   "category": "adjunct",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Adapalene and benzoyl peroxide",
+   "form": "topical gel",
+   "brands": [
+    "Epiduo"
+   ],
+   "ingredient": "adapalene",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "epiduo-forte",
+   "brand": "Epiduo Forte",
+   "strengthLabel": "0.3% / 2.5% gel",
+   "category": "adjunct",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Adapalene and benzoyl peroxide",
+   "form": "topical gel",
+   "brands": [
+    "Epiduo Forte"
+   ],
+   "ingredient": "adapalene",
+   "lastVerified": "2026-11-11"
+  },
   {
    "id": "premarin",
    "brand": "Premarin",
@@ -22,7 +64,7 @@
     "Premarin"
    ],
    "ingredient": "conjugated-estrogens",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "androcur",
@@ -43,7 +85,49 @@
     "Androcur"
    ],
    "ingredient": "cyproterone-acetate",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "androcur-100",
+   "brand": "Androcur-100",
+   "strengthLabel": "Cyproterone acetate 100 mg",
+   "category": "anti-androgen",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/cyproterone-acetate",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Cyproterone acetate",
+   "form": "oral tablet",
+   "brands": [
+    "Androcur-100"
+   ],
+   "ingredient": "cyproterone-acetate",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "anterone",
+   "brand": "Anterone",
+   "strengthLabel": "Cyproterone acetate 50 mg / 100 mg",
+   "category": "anti-androgen",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/cyproterone-acetate",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Cyproterone acetate",
+   "form": "oral tablet",
+   "brands": [
+    "Anterone"
+   ],
+   "ingredient": "cyproterone-acetate",
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "cyprostat",
@@ -67,6 +151,111 @@
    "pin": true
   },
   {
+   "id": "cyproterone-sandoz",
+   "brand": "Cyproterone Sandoz",
+   "strengthLabel": "Cyproterone acetate 50 mg / 100 mg",
+   "category": "anti-androgen",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/cyproterone-acetate",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Cyproterone acetate",
+   "form": "oral tablet",
+   "brands": [
+    "Cyproterone Sandoz"
+   ],
+   "ingredient": "cyproterone-acetate",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "apx-doxycycline",
+   "brand": "APX-Doxycycline",
+   "strengthLabel": "50 mg / 100 mg tablet",
+   "category": "adjunct",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Doxycycline",
+   "form": "oral tablet",
+   "brands": [
+    "APX-Doxycycline"
+   ],
+   "ingredient": "doxycycline",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "doryx",
+   "brand": "Doryx",
+   "strengthLabel": "50 mg / 100 mg modified-release tablet",
+   "category": "adjunct",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Doxycycline",
+   "form": "modified-release tablet",
+   "brands": [
+    "Doryx"
+   ],
+   "ingredient": "doxycycline",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "doxsig",
+   "brand": "Doxsig",
+   "strengthLabel": "100 mg tablet",
+   "category": "adjunct",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Doxycycline",
+   "form": "oral tablet",
+   "brands": [
+    "Doxsig"
+   ],
+   "ingredient": "doxycycline",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "doxycycline-sandoz",
+   "brand": "Doxycycline Sandoz",
+   "strengthLabel": "50 mg / 100 mg tablet or capsule",
+   "category": "adjunct",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Doxycycline",
+   "form": "oral tablet or capsule",
+   "brands": [
+    "Doxycycline Sandoz"
+   ],
+   "ingredient": "doxycycline",
+   "lastVerified": "2026-11-11"
+  },
+  {
    "id": "estraderm-mx-100",
    "brand": "Estraderm MX 100",
    "strengthLabel": "100 mcg/24h patch",
@@ -85,9 +274,72 @@
     "Estraderm MX"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-11-05",
+   "lastVerified": "2026-11-11",
    "pin": true,
    "pinUntil": "2026-12-31"
+  },
+  {
+   "id": "estraderm-mx-25",
+   "brand": "Estraderm MX 25",
+   "strengthLabel": "25 mcg/24h patch",
+   "category": "estrogen",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/estradiol-hemihydrate",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Estradiol",
+   "form": "transdermal patch",
+   "brands": [
+    "Estraderm MX"
+   ],
+   "ingredient": "estradiol-hemihydrate",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "estraderm-mx-50",
+   "brand": "Estraderm MX 50",
+   "strengthLabel": "50 mcg/24h patch",
+   "category": "estrogen",
+   "status": "in_supply",
+   "statusLabel": "Available",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "Automatically pulled from the TGA shortage record.",
+   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/estradiol-hemihydrate",
+   "sourceLabel": "TGA shortage record",
+   "genericName": "Estradiol",
+   "form": "transdermal patch",
+   "brands": [
+    "Estraderm MX"
+   ],
+   "ingredient": "estradiol-hemihydrate",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "estraderm-mx-75",
+   "brand": "Estraderm MX 75",
+   "strengthLabel": "75 mcg/24h patch",
+   "category": "estrogen",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/estradiol-hemihydrate",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Estradiol",
+   "form": "transdermal patch",
+   "brands": [
+    "Estraderm MX"
+   ],
+   "ingredient": "estradiol-hemihydrate",
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "estradot-100",
@@ -107,7 +359,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "estradot-25",
@@ -127,7 +379,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "estradot-50",
@@ -147,7 +399,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "estradot-75",
@@ -167,7 +419,28 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "estro-pess",
+   "brand": "Estro-Pess",
+   "strengthLabel": "10 mcg vaginal pessary",
+   "category": "estrogen",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/estradiol-hemihydrate",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Estradiol",
+   "form": "vaginal pessary",
+   "brands": [
+    "Estro-Pess"
+   ],
+   "ingredient": "estradiol-hemihydrate",
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "estrogel",
@@ -189,7 +462,49 @@
     "Sandrena"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "vagifem-low",
+   "brand": "Vagifem Low",
+   "strengthLabel": "10 mcg vaginal tablet",
+   "category": "estrogen",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/estradiol-hemihydrate",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Estradiol",
+   "form": "vaginal tablet",
+   "brands": [
+    "Vagifem Low"
+   ],
+   "ingredient": "estradiol-hemihydrate",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "zumenon-2",
+   "brand": "Zumenon 2 mg",
+   "strengthLabel": "2 mg tablet",
+   "category": "estrogen",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/estradiol-hemihydrate",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Estradiol",
+   "form": "oral tablet",
+   "brands": [
+    "Zumenon"
+   ],
+   "ingredient": "estradiol-hemihydrate",
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "estalis-50-140",
@@ -210,7 +525,7 @@
     "Estalis Continuous"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "estalis-50-250",
@@ -231,7 +546,154 @@
     "Estalis Continuous"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "angeliq-1-2",
+   "brand": "Angeliq 1/2",
+   "strengthLabel": "1 mg / 2 mg tablet",
+   "category": "estrogen",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Estradiol and drospirenone",
+   "form": "oral tablet",
+   "brands": [
+    "Angeliq 1/2"
+   ],
+   "ingredient": "drospirenone",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "femoston-1-10",
+   "brand": "Femoston 1/10",
+   "strengthLabel": "1 mg / 10 mg tablet",
+   "category": "estrogen",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Estradiol and dydrogesterone",
+   "form": "oral tablet",
+   "brands": [
+    "Femoston 1/10"
+   ],
+   "ingredient": "dydrogesterone",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "femoston-2-10",
+   "brand": "Femoston 2/10",
+   "strengthLabel": "2 mg / 10 mg tablet",
+   "category": "estrogen",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Estradiol and dydrogesterone",
+   "form": "oral tablet",
+   "brands": [
+    "Femoston 2/10"
+   ],
+   "ingredient": "dydrogesterone",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "femoston-conti",
+   "brand": "Femoston-Conti",
+   "strengthLabel": "tablet (continuous)",
+   "category": "estrogen",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Estradiol and dydrogesterone",
+   "form": "oral tablet",
+   "brands": [
+    "Femoston-Conti"
+   ],
+   "ingredient": "dydrogesterone",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "kliogest",
+   "brand": "Kliogest",
+   "strengthLabel": "2 mg / 1 mg tablet",
+   "category": "estrogen",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Estradiol and norethisterone",
+   "form": "oral tablet",
+   "brands": [
+    "Kliogest"
+   ],
+   "ingredient": "norethisterone",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "kliovance",
+   "brand": "Kliovance",
+   "strengthLabel": "1 mg / 0.5 mg tablet",
+   "category": "estrogen",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Estradiol and norethisterone",
+   "form": "oral tablet",
+   "brands": [
+    "Kliovance"
+   ],
+   "ingredient": "norethisterone",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "trisequens",
+   "brand": "Trisequens",
+   "strengthLabel": "sequential tablet pack",
+   "category": "estrogen",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Estradiol and norethisterone",
+   "form": "oral tablet",
+   "brands": [
+    "Trisequens"
+   ],
+   "ingredient": "norethisterone",
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "progynova",
@@ -252,7 +714,7 @@
     "Progynova"
    ],
    "ingredient": "estradiol-valerate",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "apo-finasteride-1",
@@ -273,7 +735,7 @@
     "APO-Finasteride 1"
    ],
    "ingredient": "finasteride",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "finapen-1",
@@ -294,7 +756,7 @@
     "Finapen"
    ],
    "ingredient": "finasteride",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "finasteride-gh-1",
@@ -315,7 +777,7 @@
     "Finasteride GH 1"
    ],
    "ingredient": "finasteride",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "propecia",
@@ -336,7 +798,7 @@
     "Propecia"
    ],
    "ingredient": "finasteride",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "zoladex",
@@ -356,7 +818,7 @@
    "brands": [
     "Zoladex"
    ],
-   "lastVerified": "2026-11-10",
+   "lastVerified": "2026-11-11",
    "ingredient": "goserelin",
    "pin": true,
    "pinUntil": "2027-04-30"
@@ -383,7 +845,7 @@
    "tgaMatch": [
     "apo-isotretinoin isotretinoin 10mg"
    ],
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "isotretinoin-apo-20",
@@ -407,7 +869,7 @@
    "tgaMatch": [
     "apo-isotretinoin isotretinoin 20mg"
    ],
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "isotretinoin-gx-10",
@@ -431,7 +893,7 @@
    "tgaMatch": [
     "isotretinoin gx isotretinoin 10mg"
    ],
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "isotretinoin-gx-20",
@@ -455,7 +917,7 @@
    "tgaMatch": [
     "isotretinoin gx isotretinoin 20mg"
    ],
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "isotretinoin-lupin-10",
@@ -479,7 +941,7 @@
    "tgaMatch": [
     "isotretinoin lupin isotretinoin 10 mg"
    ],
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "isotretinoin-lupin-20",
@@ -503,7 +965,7 @@
    "tgaMatch": [
     "isotretinoin lupin isotretinoin 20 mg"
    ],
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "isotretinoin-wgr-10",
@@ -527,7 +989,7 @@
    "tgaMatch": [
     "isotretinoin-wgr isotretinoin 10mg"
    ],
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "isotretinoin-wgr-20",
@@ -551,7 +1013,7 @@
    "tgaMatch": [
     "isotretinoin-wgr isotretinoin 20mg"
    ],
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "oratane",
@@ -572,7 +1034,7 @@
     "Oratane"
    ],
    "ingredient": "isotretinoin",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "eligard",
@@ -593,7 +1055,7 @@
     "Eligard"
    ],
    "ingredient": "leuprorelin",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "lucrin",
@@ -615,7 +1077,28 @@
     "Eligard"
    ],
    "ingredient": "leuprorelin",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "mirena",
+   "brand": "Mirena",
+   "strengthLabel": "52 mg intrauterine system",
+   "category": "progestogen",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/levonorgestrel",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Levonorgestrel",
+   "form": "intrauterine device",
+   "brands": [
+    "Mirena"
+   ],
+   "ingredient": "levonorgestrel",
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "provera",
@@ -637,7 +1120,49 @@
     "Depo-Provera"
    ],
    "ingredient": "medroxyprogesterone-acetate",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "mens-regaine-extra-strength",
+   "brand": "Men's Regaine Extra Strength",
+   "strengthLabel": "5% foam",
+   "category": "adjunct",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Minoxidil",
+   "form": "topical foam",
+   "brands": [
+    "Men's Regaine Extra Strength"
+   ],
+   "ingredient": "minoxidil",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "womens-regaine",
+   "brand": "Women's Regaine",
+   "strengthLabel": "5% foam",
+   "category": "adjunct",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Minoxidil",
+   "form": "topical foam",
+   "brands": [
+    "Women's Regaine"
+   ],
+   "ingredient": "minoxidil",
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "primolut-n",
@@ -658,7 +1183,7 @@
     "Primolut N"
    ],
    "ingredient": "norethisterone",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "prometrium",
@@ -681,7 +1206,28 @@
     "PROGESTERONE-APX"
    ],
    "ingredient": "progesterone",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "utrogestan",
+   "brand": "Utrogestan",
+   "strengthLabel": "200 mg / 300 mg / 400 mg vaginal capsules",
+   "category": "progestogen",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Progesterone (micronised)",
+   "form": "vaginal capsule",
+   "brands": [
+    "Utrogestan"
+   ],
+   "ingredient": "progesterone",
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "spironolactone",
@@ -704,7 +1250,28 @@
     "Spironolactone Viatris"
    ],
    "ingredient": "spironolactone",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "androfeme-1",
+   "brand": "AndroFeme 1",
+   "strengthLabel": "1% (10 mg/mL) cream",
+   "category": "testosterone",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Testosterone",
+   "form": "transdermal cream",
+   "brands": [
+    "AndroFeme 1"
+   ],
+   "ingredient": "testosterone",
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "androforte",
@@ -725,7 +1292,28 @@
     "AndroForte 5"
    ],
    "ingredient": "testosterone",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "testavan",
+   "brand": "Testavan",
+   "strengthLabel": "2% gel (metered pump)",
+   "category": "testosterone",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Testosterone",
+   "form": "transdermal gel",
+   "brands": [
+    "Testavan"
+   ],
+   "ingredient": "testosterone",
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "testogel",
@@ -746,7 +1334,70 @@
     "Testogel"
    ],
    "ingredient": "testosterone",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "primoteston-depot",
+   "brand": "Primoteston Depot",
+   "strengthLabel": "250 mg/1 mL pre-filled syringe",
+   "category": "testosterone",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Testosterone enantate",
+   "form": "intramuscular injection",
+   "brands": [
+    "Primoteston Depot"
+   ],
+   "ingredient": "testosterone",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "sustanon-250",
+   "brand": "Sustanon 250",
+   "strengthLabel": "250 mg/1 mL ampoule (mixed esters)",
+   "category": "testosterone",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/search",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Testosterone esters",
+   "form": "intramuscular injection",
+   "brands": [
+    "Sustanon 250"
+   ],
+   "ingredient": "testosterone",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "gonadron",
+   "brand": "Gonadron",
+   "strengthLabel": "1000 mg/4 mL injection",
+   "category": "testosterone",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/testosterone-undecanoate",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Testosterone undecanoate",
+   "form": "intramuscular depot injection",
+   "brands": [
+    "Gonadron"
+   ],
+   "ingredient": "testosterone-undecanoate",
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "reandron",
@@ -767,7 +1418,49 @@
     "Reandron 1000"
    ],
    "ingredient": "testosterone-undecanoate",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "rejunon-1000",
+   "brand": "Rejunon 1000",
+   "strengthLabel": "1000 mg/4 mL injection",
+   "category": "testosterone",
+   "status": "in_supply",
+   "statusLabel": "No shortage reported to the TGA",
+   "since": "\u2014",
+   "expectedReturn": "\u2014",
+   "mechanism": "\u2014",
+   "note": "No shortage or discontinuation notice is listed for this product on the TGA's medicine shortages database. Sponsors must report shortages, so this is a good sign, but it is not a guarantee that your pharmacy has it on the shelf.",
+   "sourceUrl": "https://apps.tga.gov.au/prod/msi/Search/Details/testosterone-undecanoate",
+   "sourceLabel": "TGA shortage database (no notice)",
+   "genericName": "Testosterone undecanoate",
+   "form": "intramuscular depot injection",
+   "brands": [
+    "Rejunon 1000"
+   ],
+   "ingredient": "testosterone-undecanoate",
+   "lastVerified": "2026-11-11"
+  },
+  {
+   "id": "testosterone-advz-1000",
+   "brand": "Testosterone ADVZ 1000",
+   "strengthLabel": "1000 mg/4 mL injection",
+   "category": "testosterone",
+   "status": "limited",
+   "statusLabel": "Limited availability",
+   "since": "09 Nov 2026",
+   "expectedReturn": "07 Dec 2026",
+   "mechanism": "\u2014",
+   "note": "Automatically pulled from the TGA shortage record.",
+   "sourceUrl": "https://apps.tga.gov.au/shortages/search/Details/testosterone-undecanoate",
+   "sourceLabel": "TGA shortage record",
+   "genericName": "Testosterone undecanoate",
+   "form": "intramuscular depot injection",
+   "brands": [
+    "Testosterone ADVZ 1000"
+   ],
+   "ingredient": "testosterone-undecanoate",
+   "lastVerified": "2026-11-11"
   },
   {
    "id": "diphereline",
@@ -788,7 +1481,7 @@
     "Diphereline"
    ],
    "ingredient": "triptorelin",
-   "lastVerified": "2026-11-10"
+   "lastVerified": "2026-11-11"
   }
  ]
 }
