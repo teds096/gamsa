@@ -16,6 +16,9 @@
         "estradot-50",
         "estradot-75",
         "estradot-100",
+        "estraderm-mx-25",
+        "estraderm-mx-50",
+        "estraderm-mx-75",
         "estraderm-mx-100"
       ],
       "summary": "A small sticky patch that releases estradiol through the skin. You change it twice a week. It is one of the three registered ways of taking oestrogen in Australia, alongside tablets and gel.",
@@ -26,7 +29,7 @@
             "Estradiol is the oestrogen used in feminising hormone therapy in Australia. It is chemically the same as the estradiol a body makes naturally [1][2]. So it acts on the body the same way the body's own hormone does [1][2].",
             "It works by attaching to oestrogen receptors (parts of cells that respond to oestrogen) [2][3]. These are in breast or chest tissue, skin, bone, blood vessels and the brain [2][3]. This switches on the changes linked with feminisation, over months to years of use [2][3].",
             "A patch delivers it through the skin straight into the bloodstream. So it does not go through the liver first. Australian guidance says patches or gel may be preferred for people at higher risk of blood clots [9]. For example, this includes people over 45 and people who smoke [9]. It also includes people with obesity, diabetes, high blood fats, a clotting disorder or a past clot [9]. This is based on studies in cisgender women [9]. They show transdermal (through the skin) estradiol does not raise clot risk like oral (by mouth) estradiol does [9].",
-            "Two brands are registered here: Estradot, in five strengths, and Estraderm MX, in four [2][3]. You cannot assume the two swap milligram-for-milligram at every strength. So check with a pharmacist before swapping brands, rather than assuming they match.",
+            "Two brands are registered here: Estradot, in five strengths, and Estraderm MX, in four [2][3]. Both are labelled by how much oestradiol they release each day, so the same labelled strength gives the same daily dose [2][3]. They differ in patch size and adhesive, and not every strength is made in both brands. Your pharmacist can swap you to the same strength of the other brand; say so if one brand has not stayed on well for you.",
             "Before starting, a prescriber should take a general medical and family history. Oestrogen reduces sperm production over time [1][2]. If having biological children later matters to you, discuss fertility before the first dose [1][2]. That includes sperm freezing (cryopreservation) [1][2]."
           ],
           "list": [
@@ -262,7 +265,8 @@
       "category": "oestrogen",
       "forms": "Oral tablet. Progynova 1 mg and 2 mg estradiol valerate; Zumenon 2 mg estradiol",
       "supplyIds": [
-        "progynova"
+        "progynova",
+        "zumenon-2"
       ],
       "summary": "A daily tablet that supplies estradiol by mouth. It is usually the lowest-cost oestrogen and the simplest to take, and the form Australian guidance is most cautious about where the risk of blood clots is raised.",
       "sections": [
@@ -692,7 +696,8 @@
       "category": "progestogen",
       "forms": "Prometrium: soft capsules, 100 mg and 200 mg. Utrogestan: soft capsules, 200 mg, 300 mg and 400 mg, registered in Australia for vaginal use",
       "supplyIds": [
-        "prometrium"
+        "prometrium",
+        "utrogestan"
       ],
       "summary": "A progestogen that some people take alongside oestrogen. It is also used the other way around, to manage bleeding for people on testosterone.",
       "reviewed": "24 October 2026",
@@ -898,7 +903,10 @@
       "forms": "Oral tablet, 50 mg and 100 mg",
       "supplyIds": [
         "androcur",
-        "cyprostat"
+        "cyprostat",
+        "androcur-100",
+        "anterone",
+        "cyproterone-sandoz"
       ],
       "summary": "A tablet that strongly lowers the effect of testosterone, and a progestogen in its own right. It is one of the two androgen blockers used in Australia, and the one with the most important long-term safety limit.",
       "sections": [
@@ -1147,7 +1155,7 @@
           "list": [
             "Usual range — 50 to 200 mg daily [8]",
             "100 to 200 mg daily in the 2019 position statement [1]",
-            "Potassium and kidney tests about one week after starting, then as your prescriber sets [2]",
+            "Potassium and kidney tests before you start and at your regular reviews, usually every 3 to 4 months in the first year, then yearly once stable [8][10]. Your prescriber may check sooner if you have kidney problems or take medicines that raise potassium, such as ACE inhibitors or ARBs [3][8]",
             "Oestradiol levels rechecked six to eight weeks after a change to oestrogen [4]"
           ],
           "note": "Only your prescriber can set or change your dose. The figures above are the ranges Australian guidance works within, not a recommendation for you."
@@ -1325,7 +1333,10 @@
       "category": "testosterone",
       "forms": "Deep intramuscular injection, 1,000 mg in 4 mL oily solution",
       "supplyIds": [
-        "reandron"
+        "reandron",
+        "gonadron",
+        "rejunon-1000",
+        "testosterone-advz-1000"
       ],
       "summary": "A long-acting testosterone injection given by a clinician, usually every 10 to 14 weeks. After each dose, you wait at the clinic for at least 30 minutes. This is because the oil can very rarely reach the lungs.",
       "reviewed": "24 October 2026",
@@ -1570,7 +1581,10 @@
       ],
       "category": "testosterone",
       "forms": "Intramuscular injection. Primoteston Depot 250 mg/1 mL pre-filled syringe; Sustanon 250, 250 mg of mixed esters in 1 mL ampoule",
-      "supplyIds": [],
+      "supplyIds": [
+        "primoteston-depot",
+        "sustanon-250"
+      ],
       "summary": "Shorter-acting testosterone injections given every two to four weeks. Both are registered in Australia but neither is PBS-subsidised, so they are private prescriptions.",
       "reviewed": "24 October 2026",
       "sections": [
@@ -1794,7 +1808,8 @@
       "category": "testosterone",
       "forms": "Transdermal gel. Testogel 1% — 5 g sachets containing 50 mg, and a metered pump delivering 12.5 mg per press. Testavan 2% — metered pump with cap applicator delivering 23 mg per press",
       "supplyIds": [
-        "testogel"
+        "testogel",
+        "testavan"
       ],
       "summary": "A testosterone gel you rub into the skin once a day. It suits people who like a daily routine. It also suits people who want the dose changed in small steps, rather than every few months. The gel can pass to other people through skin contact. So wash your hands, and cover the area once it is dry.",
       "reviewed": "24 October 2026",
@@ -2035,7 +2050,8 @@
       "category": "testosterone",
       "forms": "Transdermal cream. AndroForte 5 — 5% (50 mg/mL), 50 mL tube with measured applicator. AndroFeme 1 — 1% (10 mg/mL), tube with measured applicator",
       "supplyIds": [
-        "androforte"
+        "androforte",
+        "androfeme-1"
       ],
       "summary": "A testosterone cream measured by the millilitre and rubbed into the skin daily. The 5% cream (AndroForte 5) is the strength used in masculinising therapy; the 1% cream (AndroFeme 1) is a much lower strength registered for a different purpose. It can pass to other people through skin contact, so keep the area covered.",
       "reviewed": "24 October 2026",
@@ -2289,7 +2305,7 @@
         "zoladex",
         "diphereline"
       ],
-      "summary": "Injections or implants that pause puberty by switching off the hormone signal from the brain. They are always used under specialist care. None of them is PBS-subsidised for puberty suppression: triptorelin 3.75 mg (Diphereline) has had no PBS restriction since 1 October 2026, but its listing is not for use in gender dysphoria in people under 18.",
+      "summary": "Injections or implants that pause puberty by switching off the hormone signal from the brain. Their main effect is a pause rather than a permanent change, giving time before puberty goes further. They are always used under specialist care. None of them is PBS-subsidised for puberty suppression: triptorelin 3.75 mg (Diphereline) has had no PBS restriction since 1 October 2026, but its listing is not for use in gender dysphoria in people under 18.",
       "sections": [
         {
           "h": "What it is",
@@ -2543,7 +2559,12 @@
       ],
       "category": "adjunct",
       "forms": "Oral tablet or capsule. 50 mg and 100 mg immediate-release tablets (several brands); Doryx is a 50 mg or 100 mg modified-release capsule",
-      "supplyIds": [],
+      "supplyIds": [
+        "doxsig",
+        "doxycycline-sandoz",
+        "doryx",
+        "apx-doxycycline"
+      ],
       "summary": "An oral tetracycline antibiotic. In gender-affirming care it is the step up once topical treatment is not controlling acne that has become moderate to severe on testosterone.",
       "sections": [
         {
@@ -2726,7 +2747,10 @@
       ],
       "category": "adjunct",
       "forms": "Topical gel. Epiduo — adapalene 0.1% and benzoyl peroxide 2.5%; Epiduo Forte — adapalene 0.3% and benzoyl peroxide 2.5%",
-      "supplyIds": [],
+      "supplyIds": [
+        "epiduo",
+        "epiduo-forte"
+      ],
       "summary": "A once-daily gel combining a retinoid (a vitamin A derivative) with benzoyl peroxide. Usually the first treatment tried for acne that develops on testosterone, before anything taken by mouth.",
       "sections": [
         {
@@ -3487,7 +3511,9 @@
       ],
       "category": "adjunct",
       "forms": "Intrauterine device, 52 mg levonorgestrel, releasing about 20 micrograms per day initially, fitted by a clinician",
-      "supplyIds": [],
+      "supplyIds": [
+        "mirena"
+      ],
       "summary": "A small hormone-releasing device fitted inside the uterus that stops or lightens periods and provides long-acting contraception at the same time. For menstrual suppression on testosterone, it avoids a daily tablet or a repeat appointment every few months. It needs a fitting in a clinic, and thread checks after each period while periods continue.",
       "reviewed": "24 October 2026",
       "sections": [
@@ -3655,7 +3681,10 @@
       ],
       "category": "adjunct",
       "forms": "Vaginal pessary (tablet), 10 micrograms estradiol, inserted with an applicator",
-      "supplyIds": [],
+      "supplyIds": [
+        "vagifem-low",
+        "estro-pess"
+      ],
       "summary": "A very low, local dose of oestrogen inserted into the vagina, with little reaching the rest of the body. Treats the dryness and irritation testosterone can cause in vaginal tissue over time.",
       "reviewed": "24 October 2026",
       "sections": [
@@ -4006,7 +4035,10 @@
       ],
       "category": "adjunct",
       "forms": "Topical solution or foam, 2% or 5%, applied to the scalp",
-      "supplyIds": [],
+      "supplyIds": [
+        "mens-regaine-extra-strength",
+        "womens-regaine"
+      ],
       "summary": "A pharmacy medicine applied to the scalp to encourage regrowth, without acting on testosterone or DHT. A non-hormonal option for hair thinning, used by some people on testosterone and, separately, sometimes considered in feminising care.",
       "sections": [
         {
@@ -4354,7 +4386,10 @@
       ],
       "category": "oestrogen",
       "forms": "Oral tablet, one per day from a 28-day calendar dial pack, taken continuously with no break between packs. Kliogest — estradiol 2 mg + norethisterone acetate 1 mg per tablet. Kliovance — a lower-dose version, estradiol 1 mg + norethisterone acetate 0.5 mg per tablet",
-      "supplyIds": [],
+      "supplyIds": [
+        "kliogest",
+        "kliovance"
+      ],
       "summary": "A tablet that combines two hormones in one pill — estradiol (an oestrogen) and norethisterone acetate (a progestogen) — taken once a day with no tablet-free break. It is registered in Australia for menopausal hormone therapy in someone with a uterus, not for gender-affirming care, and Australian guidance on feminising hormone therapy does not recommend routinely adding a progestogen. This entry is background for someone who has already been prescribed it — it is not an argument against your prescriber's choice.",
       "sections": [
         {
@@ -4519,7 +4554,9 @@
       ],
       "category": "oestrogen",
       "forms": "Oral tablet, one per day from a 28-day calendar dial pack, taken continuously with no break between packs. Three tablet colours in sequence — blue (estradiol 2 mg alone, days 1 to 12), white (estradiol 2 mg + norethisterone acetate 1 mg, days 13 to 22), red (estradiol 1 mg alone, days 23 to 28)",
-      "supplyIds": [],
+      "supplyIds": [
+        "trisequens"
+      ],
       "summary": "A tablet pack that cycles through three combinations of two hormones — estradiol (an oestrogen) alone, then estradiol with norethisterone acetate (a progestogen) added, then estradiol alone again — designed to produce a monthly bleed. It is registered in Australia for menopausal hormone therapy in someone with a uterus, not for gender-affirming care, and Australian guidance on feminising hormone therapy does not recommend routinely adding a progestogen. This entry is background for someone who has already been prescribed it — it is not an argument against your prescriber's choice.",
       "sections": [
         {
@@ -4667,7 +4704,11 @@
       ],
       "category": "oestrogen",
       "forms": "Oral tablet, one per day, taken continuously with no break. Femoston 1/10 and 2/10 are sequential packs of 28 — 14 oestrogen-only tablets followed by 14 tablets combining estradiol with dydrogesterone (a progestogen), at either the 1 mg or 2 mg estradiol strength. Femoston-Conti is a single continuous-combined tablet (estradiol 1 mg + dydrogesterone 5 mg) taken every day with no phases",
-      "supplyIds": [],
+      "supplyIds": [
+        "femoston-1-10",
+        "femoston-2-10",
+        "femoston-conti"
+      ],
       "summary": "A tablet that combines two hormones — estradiol (an oestrogen) and dydrogesterone (a progestogen) — either in a sequential pack that produces a monthly bleed, or in a single continuous tablet that doesn't. It is registered in Australia for menopausal hormone therapy in someone with a uterus, not for gender-affirming care, and Australian guidance on feminising hormone therapy does not recommend routinely adding a progestogen. This entry is background for someone who has already been prescribed it — it is not an argument against your prescriber's choice.",
       "sections": [
         {
@@ -4852,7 +4893,9 @@
       ],
       "category": "oestrogen",
       "forms": "Oral tablet, one per day, taken continuously with no break. Angeliq 1/2 — estradiol 1 mg + drospirenone 2 mg per tablet",
-      "supplyIds": [],
+      "supplyIds": [
+        "angeliq-1-2"
+      ],
       "summary": "A tablet that combines two hormones: estradiol (an oestrogen) and drospirenone (a progestogen). Drospirenone also has its own mild diuretic-like effect (it helps the body shed fluid). It is taken once a day, with no tablet-free break. It is registered in Australia for menopausal hormone therapy in someone with a uterus (womb). It is not registered for gender-affirming care. Australian guidance on feminising hormone therapy does not recommend routinely adding a progestogen. This entry is background for someone who has already been prescribed it. It is not an argument against your prescriber's choice. But if you also take spironolactone, the drospirenone part specifically is worth flagging with a pharmacist.",
       "sections": [
         {

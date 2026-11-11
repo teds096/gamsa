@@ -155,7 +155,7 @@
   .clear-box h3{font-size:13.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2);margin-bottom:8px;}
   .clear-box ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0 22px;}
   .clear-box li{font-size:15px;padding:7px 0;border-bottom:1px solid var(--line);}
-  .clear-box li span{color:var(--ink-2);font-size:13.5px;}
+  .clear-box li span{color:var(--ink-2);font-size:13.5px;} .clear-box li .exp{display:block;font-size:13.5px;}
 
   /* ---- sightings ---- */
   .sight{margin-top:34px;border-top:1px solid var(--line);padding-top:24px;}
@@ -202,7 +202,7 @@
   .tiles{margin-top:0;gap:16px;}
   .tile{border-radius:16px;padding:22px;transition:transform .14s ease,box-shadow .14s ease,border-color .14s ease;}
   .tile:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(11,93,122,.13);border-color:var(--brand);}
-  .tile .t::after{content:" \2192";opacity:.55;}
+  .tile .t::after{content:"\00a0\2192";opacity:.55;}
   .callout{border-radius:16px;}
   .block{margin-top:34px;}
   .block h2{padding:0 0 0 16px;background:linear-gradient(180deg,var(--acstops)) left top/4px 100% no-repeat;}
@@ -570,7 +570,7 @@
      the supply list over a page already on screen. Until it runs, the breadcrumb's row (54 px) and the stamp's line are kept free and the
      supply list holds a screen's height, so what sits below it starts off-screen; the scroll bar waits until the script has placed it. */
   /* v19.5 R5: also views that start with a "Back to" link or a noscript list before the page head (/sightings, /pharmacy-reports, /medicines); 56 px = the drawn breadcrumb */
-  html[data-routing="path"]:not(.ready) #main>.view.on:not(#v-home):is(:has(>.page-head:first-child),:has(>.backlink:first-child+.page-head),:has(>noscript:first-child+.page-head))::before{content:"";display:block;height:56px;}
+  html[data-routing="path"]:not(.ready) #main>.view.on:not(#v-home):is(:has(>.page-head:first-child),:has(>.er-cover:first-child),:has(>.backlink:first-child+.page-head),:has(>noscript:first-child+.page-head))::before{content:"";display:block;height:56px;}   /* CWV r2 (10 Nov 2026): Easy Read covers are in the HTML too */
   #stamp:empty::before{content:"\00a0";}
   html[data-routing="path"]:not(.ready) #affected{min-height:100vh;}
   html:not(.ready) .fbtrack,html:not(.ready) .fbpill,html:not(.ready) .flagbar{visibility:hidden;}
@@ -757,7 +757,7 @@
   .aud::after{content:"";position:absolute;right:-40px;bottom:-40px;width:150px;height:150px;border-radius:50%;background:var(--ac);opacity:.09;}
   .aud:hover{transform:translateY(-2px);border-color:var(--ac);box-shadow:0 14px 30px -16px rgba(16,24,31,.35);}
   .aud .ic{width:46px;height:46px;border-radius:12px;background:var(--card);color:var(--ac);box-shadow:0 1px 3px rgba(16,24,31,.12);display:flex;align-items:center;justify-content:center;} .aud .ic svg{width:26px;height:26px;}
-  .aud .t{font-size:21px;font-weight:700;color:var(--ac);line-height:1.2;text-decoration:none;} .aud .t::before{content:"";position:absolute;inset:0;} .aud .t:focus-visible{outline:none;} .aud:has(.t:focus-visible){outline:3px solid var(--ac);outline-offset:2px;} .aud .t::after{content:" \2192";color:var(--ac);}
+  .aud .t{font-size:21px;font-weight:700;color:var(--ac);line-height:1.2;text-decoration:none;} .aud .t::before{content:"";position:absolute;inset:0;} .aud .t:focus-visible{outline:none;} .aud:has(.t:focus-visible){outline:3px solid var(--ac);outline-offset:2px;} .aud .t::after{content:"\00a0\2192";color:var(--ac);}
   .aud .d{font-size:15px;color:var(--ink-2);}
   .c-trans{--ac:#2A6F92;--acs:#EAF1F4;} .c-clin{--ac:#2D6E62;--acs:#EAF1EF;} .c-allies{--ac:#8C4A86;--acs:#F4EDF3;} .c-res{--ac:#5E5A9C;--acs:#EFEFF5;}
   html.dark .c-trans{--ac:#8CC8E6;--acs:#142C38;} html.dark .c-clin{--ac:#8FD1C0;--acs:#142D29;} html.dark .c-allies{--ac:#E3A5DC;--acs:#33212F;} html.dark .c-res{--ac:#BCB6F0;--acs:#26253D;}
@@ -886,9 +886,9 @@
   .side-res{display:none;} .side-res.always{display:block;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px 16px;margin:0 0 22px;}
   .side-res.always h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);margin:0 0 6px;} .side-res.always ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:4px 18px;} .side-res.always a{display:block;padding:4px 0;} .side-res.always a::before{content:"\2193  ";font-weight:700;color:var(--brand);}
   @media (min-width:1100px){
-    .view.on:has(>.side){display:grid;grid-template-columns:240px minmax(0,1fr);column-gap:36px;align-items:start;}
-    .view.on:has(>.side)>*{grid-column:2;}
-    .view.on>.side{grid-column:1;grid-row:1/span 80;position:sticky;top:76px;max-height:calc(100vh - 92px);overflow:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:12px;padding-bottom:6px;}
+    .view.on:has(>.side),.view.on:has(>.onthis){display:grid;grid-template-columns:240px minmax(0,1fr);column-gap:36px;align-items:start;}
+    .view.on:has(>.side)>*,.view.on:has(>.onthis)>*{grid-column:2;}
+    /* the On this page box takes the side column from first paint, before sideBuild wraps it (Supply CLS, 10 Nov 2026) */.view.on>.side,.view.on>.onthis{grid-column:1;grid-row:1/span 80;position:sticky;top:76px;max-height:calc(100vh - 92px);overflow:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:12px;padding-bottom:6px;}
     .side .onthis{margin:0;padding:12px 14px;} .side .onthis ol{columns:auto;} .side .onthis li{margin:0;} .side .onthis a{padding:3px 0;font-size:13.5px;line-height:1.3;}
     .side .onthis h2,.side-res h2{margin:0 0 6px;}
     .side-res{display:block;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px 14px;}
@@ -996,7 +996,12 @@
   @media (min-width:861px) and (max-width:1060px){.bar nav.main .ng-btn,nav.main a.x-q{padding-inline:8px!important;font-size:14px!important;} .bar nav.main .ng-btn::before{left:8px;right:8px;} nav.main a.x-q[href="#/supply"]{display:none!important;}}
   /* r5d (Ted, 8 Nov 2026): narrower header search; the Accessibility pill shows its word beside the icon, icon only on phones (<=560 px) and at 861-1180 px,
      where the search box shares the top row and would shrink below ~180 px with the word showing (the word stays for screen readers) */
-  .bar .bar-r>.hsb{max-width:260px!important;}
+  .bar .bar-r>.hsb{max-width:248px!important;}
+  @media (min-width:701px){.bar .logo-s{max-width:162px!important;}} /* Ted, 10 Nov 2026: room to spare so the subtitle stays on 2 lines even where fonts render wider */
+  /* Ted, 10 Nov 2026: with Text spacing on, the wider word gaps pushed the logo subtitle to 3 lines; give it 20 px more and take them from the search box */
+  /* Ted, 10 Nov 2026, "reduce the overall height of the header bar slightly": 3 px less above and below the top row */
+  @media (min-width:561px){.bar .bar-in{padding-top:7px!important;} .bar .logo,.bar .bar-r{padding-bottom:7px!important;}}
+  @media (min-width:701px){html.sp1 .bar .logo-s,html.sp2 .bar .logo-s{max-width:172px!important;}} html.sp1 .bar .bar-r>.hsb,html.sp2 .bar .bar-r>.hsb{max-width:238px!important;}
   .bar .bar-r .a11y-btn .lbl{display:inline!important;position:static;}
   .bar .bar-r .a11y-btn{width:auto!important;padding:0 15px 0 12px!important;}
   @media (max-width:560px),(min-width:861px) and (max-width:1180px){.bar .bar-r .a11y-btn .lbl{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;} .bar .bar-r .a11y-btn{width:44px!important;padding:0!important;}}
@@ -1063,7 +1068,7 @@
   body:has(#ttsBar:not([hidden])) .totop-fab{display:none;}
   @media (max-width:560px){.x-help{padding:10px 14px 10px 12px;font-size:13.5px;right:12px;bottom:12px;} .x-help svg{width:18px;height:18px;}}
   /* home */
-  .x-hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);gap:clamp(24px,5vw,72px);align-items:center;padding:clamp(36px,6vw,84px) 0 clamp(28px,4vw,48px);}
+  .x-hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);gap:clamp(24px,5vw,72px);align-items:center;padding:clamp(28px,4vw,52px) 0 clamp(20px,3vw,32px);}
   .x-hero h1{font-size:clamp(40px,6vw,76px)!important;line-height:1.02;letter-spacing:-.035em;margin:0;font-weight:800;color:var(--x-ink)!important;}
   .x-hero h1 .hl{color:var(--x-brand);background:none!important;-webkit-text-fill-color:currentColor;}
   .x-lede{font-size:clamp(18px,1.6vw,21px);line-height:1.6;color:var(--x-ink2);max-width:56ch;margin:22px 0 28px;}
@@ -1084,8 +1089,8 @@
   .x-live .live-line{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;text-decoration:none;color:var(--x-ink);background:#FFF7E6;border:1px solid #F3DBA4;border-radius:14px;padding:14px 18px;font-size:16px;}
   .x-live .live-line::before{content:"Supply today";font:800 11.5px/1 var(--x-fb);letter-spacing:.12em;text-transform:uppercase;color:#7A4F00;background:#FCE7B6;border-radius:999px;padding:6px 10px;}
   .x-live .live-line .dot{width:10px;height:10px;border-radius:50%;background:#E8A317;box-shadow:0 0 0 5px rgba(232,163,23,.22);flex:none;}
-  html.dark .x-live .live-line{background:#2A2210;border-color:#4D3F1D;} html.dark .x-live .live-line::before{background:#4D3F1D;color:#F7D486;}
-  .x-sec{margin-top:clamp(48px,7vw,88px);}
+  html.dark .x-live .live-line{background:#2A2210;border-color:#4D3F1D;} html.dark .x-live .live-line::before{background:#4D3F1D;color:#E1C076;} html.dark .x-live .live-line .dot{background:#E1C076;box-shadow:0 0 0 5px rgba(225,192,118,.22);}
+  .x-sec{margin-top:clamp(26px,3.2vw,40px);}
   .x-h2{font-size:clamp(26px,3vw,36px)!important;letter-spacing:-.025em;margin:0 0 22px!important;font-weight:800;}
   .x-tasks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px;border-top:1px solid var(--x-line);}
   .x-task{display:flex;align-items:center;gap:16px;padding:22px 4px;border-bottom:1px solid var(--x-line);text-decoration:none;color:var(--x-ink);}
@@ -1106,12 +1111,12 @@
   .x-path li{margin:0;} .x-path li a{display:block;border-bottom:1px solid var(--x-line);padding:9px 0;font-size:15px;font-weight:700;text-decoration:none;color:var(--x-ink);}
   .x-path li:last-child a{border-bottom:0;} .x-path li a:hover{color:var(--pc);text-decoration:underline;}
   .x-pmore{display:inline-flex;align-items:center;gap:6px;padding:8px 0;font-weight:800;font-size:14.5px;color:var(--pc);text-decoration:none;} .x-pmore svg{width:18px;height:18px;}
-  .x-tsec{background:var(--x-surface);border:1px solid var(--x-line);border-radius:var(--x-r-lg);padding:30px clamp(20px,3vw,40px);}
+  .x-tsec{background:var(--x-surface);border:1px solid var(--x-line);border-radius:var(--x-r-lg);padding:22px clamp(20px,3vw,36px);}
   .x-trust{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;}
   .x-trust li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--x-ink2);line-height:1.4;margin:0;}
   .x-trust li svg{width:26px;height:26px;flex:none;color:var(--x-brand);}
   .x-trust b{display:block;color:var(--x-ink);font-size:16px;margin-bottom:2px;}
-  #v-home>.callout{margin-top:clamp(40px,6vw,72px);}
+  #v-home>.callout{margin-top:clamp(26px,3.2vw,40px);}
   @media (max-width:1100px){.x-paths{grid-template-columns:repeat(2,minmax(0,1fr));}}
   @media (max-width:900px){.x-trust{grid-template-columns:repeat(2,minmax(0,1fr));}}
   @media (max-width:860px){.x-hero{grid-template-columns:minmax(0,1fr);} .x-hero-a{display:none;} .x-tasks{grid-template-columns:minmax(0,1fr);}}
@@ -1158,7 +1163,9 @@
   .side-res a{padding:4px 0 4px 1.3em!important;text-indent:-1.3em!important;}
   .side .side-res ul{display:block!important;}
   @media (min-width:1100px){
-    .view.on:has(>.side){grid-template-columns:250px minmax(0,1fr)!important;column-gap:clamp(40px,5vw,72px)!important;}
+    .view.on:has(>.side),.view.on:has(>.onthis){grid-template-columns:250px minmax(0,1fr)!important;column-gap:clamp(40px,5vw,72px)!important;}
+    /* medicine pages: the side column is reserved from first paint, before the page script adds its contents (desktop CLS, 10 Nov 2026) */
+    #v-med.view.on{display:grid;grid-template-columns:250px minmax(0,1fr)!important;column-gap:clamp(40px,5vw,72px)!important;align-items:start;} #v-med.view.on>*{grid-column:2;} #v-med.view.on>.side{grid-column:1;}
     .view.on>.side{top:calc(var(--x-hh) + 20px)!important;max-height:calc(100vh - var(--x-hh) - 36px)!important;margin-top:24px;padding-bottom:16px!important;}
     .side .onthis ol{border-left:2px solid var(--x-line);}
     .side .onthis a{padding:5px 0 5px 14px!important;margin-left:-2px;border-left:2px solid transparent;font-size:14px!important;}
@@ -1238,7 +1245,7 @@
   .rb .e{stroke:var(--rb-edge2);stroke-width:calc(var(--w)*1px + 2px);} .rb .a{stroke:var(--rb-1);stroke-width:calc(var(--w)*1px);}
   .rb .b{stroke:var(--rb-2);stroke-width:calc(var(--w)*.6px);} .rb .c{stroke:var(--rb-3);stroke-width:calc(var(--w)*.2px);}
   .rb-home{position:absolute;left:0;top:0;pointer-events:none;z-index:-1;overflow:hidden;}
-  html.dark .rb-home{opacity:.9;}
+  html.dark .rb-home{opacity:1;}
   html.hc .rb-home,body.dys .rb-home,body.easy .rb-home{display:none;}
   @media print{.rb-home{display:none!important;}}
   /* ===== v19.2 ribbon "Option 5 + B" (Ted, 31 Oct 2026; mock-ups in claude/design/ribbon-2026-10-31) =====
@@ -1256,10 +1263,8 @@
   .rb-home.rb-pour .rb-sheen{animation:rbSheen 1.1s cubic-bezier(.4,0,.2,1) .15s both;}
   @keyframes rbSheen{0%{stroke-dashoffset:.16;opacity:0;}20%{opacity:.85;}100%{stroke-dashoffset:-1;opacity:0;}}
   html.dark .rb-home .rb-sheen{stroke:#fff;}
-  .rb-home>g.rb{filter:drop-shadow(0 1px 2px rgba(0,0,0,.2));}
-  html.dark .rb-home>g.rb{filter:drop-shadow(0 1px 2px rgba(0,0,0,.45));}
   /* v19.2 layout (Ted, 31 Oct): the "Guides" section sits 14 px closer to "What do you need today?"; the gap to the cards is unchanged */
-  .x-sec:has(>#hPath){margin-top:calc(clamp(48px,7vw,88px) - 14px);}
+  .x-sec:has(>#hPath){margin-top:calc(clamp(26px,3.2vw,40px) - 10px);}
   /* smoother pour (31 Oct): the ribbon leaves the nozzle as a thin lead that widens to full width over its first 0.35 s */
   @property --rbk{syntax:"<number>";inherits:true;initial-value:1;}
   .rb-home .rb .e{stroke-width:calc(var(--w)*var(--rbk)*1px + 2px);} .rb-home .rb .a{stroke-width:calc(var(--w)*var(--rbk)*1px);}
@@ -1580,6 +1585,20 @@
     html.x-reading .bar .logo-n{display:none!important;} html.x-reading .bar .logo svg{width:34px!important;height:34px!important;}}
   .x-help .hs{display:none;} html.x-reading .x-help .hf{display:none;} html.x-reading .x-help .hs{display:inline;}
   html.x-reading .x-help{padding:0 17px 0 14px!important;}
+  /* Ted, 10 Nov 2026, help option C: "Need help now?" sits in the header beside Quick exit, so it never covers text; heart only on phones */
+  html body .bar .x-help{position:static;box-shadow:none;min-height:44px;height:44px;padding:0 16px 0 12px!important;font-size:14.5px!important;flex:none;background:var(--x-surface);color:var(--x-help-ink);border:2px solid var(--x-help);box-sizing:border-box;}
+  .bar .x-help .hf{display:none;} .bar .x-help .hs{display:inline!important;} .x-helpp{top:76px;bottom:auto;} .totop-fab{bottom:16px!important;}
+  @media (max-width:640px){html body .bar .x-help{width:44px;padding:0!important;justify-content:center;border-radius:50%;gap:0;} .bar .x-help .hs{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important;display:block!important;}}
+  html.hc .bar .x-help{border-color:currentColor;}
+  /* Ted, 10 Nov 2026, phone menu option A: five groups, tap one to open it */
+  @media (max-width:640px){#xMenu .x-mg{padding:0;border-top-width:4px;} #xMenu .x-mg h2{margin:0;font-size:19px;}
+    .x-acc-b{all:unset;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:52px;padding:12px 16px 2px;font:inherit;font-weight:800;color:inherit;cursor:pointer;}
+    .x-acc-b svg{width:24px;height:24px;flex:none;color:var(--x-ink2);transition:transform .2s;} .x-mg.open .x-acc-b svg{transform:rotate(180deg);}
+    .x-acc-b:focus-visible{outline:3px solid var(--x-focus);outline-offset:-3px;border-radius:12px;}
+    #xMenu .x-mg-d{margin:0;padding:0 16px 12px;} .x-acc-body{padding:0 16px 12px;} .x-acc-body[hidden]{display:none;} html.rm .x-acc-b svg{transition:none;}}
+  /* Ted, 10 Nov 2026, menu panel option A: five equal columns on desktop */
+  .x-menu-p{width:min(1320px,calc(100vw - 32px));}
+  @media (min-width:1001px){.x-menu-g{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;} .x-mg{padding:16px 15px 10px;}}
   /* ===== B-03 Print button (design option 1, 24 Oct 2026) ===== */
   .pr-btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px 0 14px;border-radius:999px;cursor:pointer;
     font:700 15px/1 var(--x-fb);color:var(--x-brand);background:var(--x-surface);border:1.5px solid var(--x-line);}
@@ -1652,6 +1671,79 @@
   @container (max-width:520px){.dlc>a{grid-template-columns:minmax(0,1fr);} .dlc>a .m{grid-column:1;grid-row:3;justify-self:start;padding-top:4px!important;}}
   @supports not (container-type:inline-size){@media (max-width:560px){.dlc>a{grid-template-columns:minmax(0,1fr);} .dlc>a .m{grid-column:1;grid-row:3;justify-self:start;}}}
 .own-note{display:none}.own .own-note{display:block}
+/* v19.6 preview: Supply and About menu colours */
+:root{--x-c5:#7A4F00;--x-c6:#5650A4;} html.dark{--x-c5:#F7D486;--x-c6:#BCB6F0;}
+html.cb{--x-c5:#7A4F00;--x-c6:#5650A4;} html.cb.dark{--x-c5:#F7D486;--x-c6:#BCB6F0;} html.hc .x-menu-p{--x-c5:#7A4F00;--x-c6:#5650A4;}
+.c-sup{--ac:#7A4F00;--acs:#FFF7E6;} .c-about{--ac:#5E5A9C;--acs:#EFEFF5;}
+html.dark .c-sup{--ac:#E1C076;--acs:#2A2210;} html.dark .c-about{--ac:#BCB6F0;--acs:#26253D;}
+.acc.c-sup{--acstops:#F3DBA4,#E8A317;} .acc.c-about{--acstops:#7FD8FB,#BCB6F0,#F7B6C3;} html.dark .acc.c-sup{--acstops:#E1C076,#F2D48E;} html.dark .acc.c-about{--acstops:#7FD8FB,#BCB6F0,#F7B6C3;}
+html.cb .c-sup{--ac:var(--x-c5);} html.cb .c-about{--ac:var(--x-c6);}
+nav.main .c-sup{--ac2:var(--x-c5);} nav.main .c-about{--ac2:var(--x-c6);}
+.x-mg.c-sup{--mc:var(--x-c5);} .x-mg.c-about{--mc:var(--x-c6);}
+.view.c-sup{--pc2:#7A4F00;} html.dark .view.c-sup{--pc2:#E1C076;}  /* text stays dark brown / pale yellow; only the menu lines use #E8A317 */ .view.c-about{--pc2:var(--x-c6);}
+:root{--x-c5:#E8A317;} html.dark{--x-c5:#E1C076;} html.cb{--x-c5:#E8A317;} html.cb.dark{--x-c5:#E1C076;} html.hc .x-menu-p{--x-c5:#E8A317;}
+.ng.c-sup .ng-col h3{border-bottom-color:var(--x-c5);} .ng.c-sup .ng-col li a[aria-current="page"]{color:var(--ink);}
+.x-mg.c-sup h2,.x-mg.c-sup a:hover,.x-mg.c-sup a[aria-current]{color:var(--x-ink);}
+
+/* ===== v19.6 home Guides, layout D "Directory" (Ted, 8 Nov 2026) ===== */
+:root{--sup-a:#E8A317;--sup-t:#7A4F00;--sup-p:#F3DBA4;} html.dark{--sup-a:#E1C076;--sup-t:#E1C076;--sup-p:#E1C076;}
+/* five Guides groups, in the menu's colours and order. --pc = group colour (lines, icons), --pt = group text colour (Supply: --sup-t) */
+.x5 .c-sup,.ge .c-sup{--pc:var(--x-c5);--pt:var(--sup-t);} .x5 .c-about,.ge .c-about{--pc:var(--x-c6);}
+.ge-p{--pc:var(--x-c1);} .ge-p.c-clin{--pc:var(--x-c2);} .ge-p.c-allies{--pc:var(--x-c3);}
+.x5 .x-path,.ge-p{--pt:var(--pc);} .x5 .x-path.c-sup,.ge-p.c-sup{--pt:var(--sup-t);}
+.x5 .x-path :is(h3 a,.x-pmore),.ge-p :is(h3 a,.x-pmore){color:var(--pt);} .x5 .x-path li a:hover,.ge-p li a:hover{color:var(--pt);}
+.x5 .x-path.c-sup .x-pi{color:var(--sup-t);} :is(.gc,.ge-p) li{margin:0;}
+.x5 .x-path,.x5 .x-path:hover{transform:none;box-shadow:none;transition:border-color .15s,background-color .15s;} .x-path .nw{white-space:nowrap;}
+/* D "Directory": five slim columns on the page itself, no boxes; each starts with a rule in its colour (the ribbon runs into it) */
+.x-paths.gd{grid-template-columns:repeat(5,minmax(0,1fr));gap:0 28px;align-items:start;} main:has(#v-home.on)+footer{margin-top:clamp(40px,5vw,64px);} /* Ted, 10 Nov 2026: less dead space on the home page; each Guides bubble ends with its own list */
+.gd .x-path{display:flex;flex-direction:column;background:none;border:0;border-radius:0;position:relative;padding:calc(20px + var(--rbw,6px)) 0 0;} .gd .x-path::before{content:"";position:absolute;left:0;top:var(--rbt,0px);right:var(--rbe,0px);height:var(--rbw,6px);background:var(--pc);-webkit-mask-image:linear-gradient(to right,#000 calc(100% - var(--rbf,0px)),transparent);mask-image:linear-gradient(to right,#000 calc(100% - var(--rbf,0px)),transparent);box-shadow:0 1px 2px rgba(0,0,0,.2);}  html.hc .gd .x-path::before{box-shadow:none;}
+.gd h3{font-size:21px;margin:0 0 6px;} .gd .x-path>p{font-size:15px;line-height:1.45;margin:0 0 8px;}
+.gd li a{font-size:15px;font-weight:600;padding:8px 0;border-bottom:1px solid var(--x-line);line-height:1.3;} .gd li:last-child a{border-bottom:1px solid var(--x-line);}
+.gd .x-pmore{margin:0 0 4px;padding:0 0 2px;align-self:flex-start;}
+@media (max-width:1100px){.x-paths.gd{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 32px;} .gd .x-path>p{min-height:0;} .gd .c-about{grid-column:1/-1;}
+  .gd .c-about ul{display:block;columns:2;column-gap:32px;} .gd .c-about li{break-inside:avoid;}}   /* two columns line up, so no strand crosses a list */
+@media (max-width:600px){.x-paths.gd{grid-template-columns:minmax(0,1fr);gap:30px;} .gd .c-about{grid-column:auto;} .gd .c-about ul{display:flex;columns:auto;} .gd .x-path{padding-top:calc(16px + var(--rbw,6px));}
+  .gd ul{flex-flow:row wrap;gap:6px;} .gd li a{border:1px solid var(--x-line)!important;border-radius:999px;padding:6px 12px;font-size:14px;}}
+  /* Ted, 10 Nov 2026, "Can the guides have their own bubble that hovers like the current live site": each guide is a card again (live v19.5 look).
+     Top corners stay square so the top line still meets its ribbon flat; hover adds the live glow but no lift, so the join never breaks */
+  .gd .x-path{padding-left:14px!important;padding-right:14px!important;padding-bottom:14px!important;}
+  html body #v-home .gd .x-path>a.x-pmore{font-size:1.03em!important;gap:4px;display:inline-block;} html body #v-home .gd .x-path>a.x-pmore svg{vertical-align:-3px;margin-left:4px;} /* the card padding left "Shortages today" too little room at 1.15em */
+  .gd .x-path::after{content:"";position:absolute;inset:0;z-index:-2;background:var(--x-surface);border:1px solid var(--x-line);border-top:0;border-radius:var(--x-r,18px);transition:box-shadow .14s,border-color .14s;pointer-events:none;}
+  /* Ted, 10 Nov 2026, "round off the guides bubbles like the current live site": the top line curves round the top-left corner like the live card border */
+  .gd .x-path::before{background:none!important;height:var(--x-r,18px);border-top:var(--rbw,6px) solid var(--pc);border-left:1px solid var(--x-line);border-top-left-radius:var(--x-r,18px);box-shadow:none!important;box-sizing:border-box;transition:border-left-color .14s;} .gd .x-path::after{top:var(--rbt,0px);border-top-right-radius:calc(var(--rbw,6px) / 2);} .gd .x-path:hover::before,.gd .x-path:focus-within::before{border-left-color:color-mix(in srgb,var(--pc) 45%,var(--x-line));} /* Ted, 10 Nov 2026: line, bubble and hover outline share one edge */
+  html.hc .gd .x-path::before{border-left-color:currentColor;}
+  /* Ted, 10 Nov 2026, "I hate how it looks before the ribbon connects": until its strand arrives (and whenever there is no ribbon) each card is the whole live v19.5 card, line across the full top and both corners round; .rbj (set by the ribbon) switches to the joined shape */
+  .gd .x-path:not(.rbj)::before{right:0;top:0;border-right:1px solid var(--x-line);border-top-right-radius:var(--x-r,18px);-webkit-mask-image:none;mask-image:none;} .gd .x-path:not(.rbj)::after{top:0;border-top-right-radius:var(--x-r,18px);}
+  .gd .x-path:not(.rbj):hover::before,.gd .x-path:not(.rbj):focus-within::before{border-right-color:color-mix(in srgb,var(--pc) 45%,var(--x-line));} html.hc .gd .x-path:not(.rbj)::before{border-right-color:currentColor;}
+  .gd .x-path:hover::after,.gd .x-path:focus-within::after{box-shadow:0 22px 40px -22px color-mix(in srgb,var(--pc) 70%,transparent);border-color:color-mix(in srgb,var(--pc) 45%,var(--x-line));}
+  @media (prefers-reduced-motion:reduce){.gd .x-path::after{transition:none;}}
+
+/* Section colours option E "Dusty" chosen by Ted 10 Nov 2026 ("Go with option E but make supply in the light mode less brown"); high contrast and colour-blind modes keep their own colours */
+/* option E Dusty, Supply less brown (Ted, 10 Nov 2026): section colours only */
+html:not(.hc):not(.cb){--x-c1:#34667F;--x-c2:#2E6B5E;--x-c3:#884983;--x-c4:#5D589D;--x-c5:#D5B64D;--x-c6:#5D589D;--sup-a:#D5B64D;--sup-t:#735B0D;--sup-p:#ECDEAF;}
+html.dark:not(.hc):not(.cb){--x-c1:#84B4CD;--x-c2:#65BDAA;--x-c3:#CDA2C9;--x-c4:#ADAACF;--x-c5:#D8C297;--x-c6:#ADAACF;--sup-a:#D8C297;--sup-t:#D8C297;--sup-p:#D8C297;}
+html:not(.hc):not(.cb) .c-trans{--ac:#34667F;--acs:#EFF3F5;} html:not(.hc):not(.cb) .c-clin{--ac:#2E6B5E;--acs:#EEF3F2;} html:not(.hc):not(.cb) .c-allies{--ac:#884983;--acs:#F5F0F5;} html:not(.hc):not(.cb) :is(.c-res,.c-about){--ac:#5D589D;--acs:#F2F2F7;} html:not(.hc):not(.cb) .c-sup{--ac:#735B0D;--acs:#FCF9F1;}
+html.dark:not(.hc):not(.cb) .c-trans{--ac:#84B4CD;--acs:#21333D;} html.dark:not(.hc):not(.cb) .c-clin{--ac:#65BDAA;--acs:#1C3437;} html.dark:not(.hc):not(.cb) .c-allies{--ac:#CDA2C9;--acs:#2D303C;} html.dark:not(.hc):not(.cb) :is(.c-res,.c-about){--ac:#ADAACF;--acs:#27313D;} html.dark:not(.hc):not(.cb) .c-sup{--ac:#D8C297;--acs:#2E3534;}
+html:not(.hc):not(.cb) .view.c-sup{--pc2:#735B0D;} html.dark:not(.hc):not(.cb) .view.c-sup{--pc2:#D8C297;}
+html:not(.hc):not(.cb) .acc.c-trans{--acstops:#7FD8FB,#34667F;} html:not(.hc):not(.cb) .acc.c-clin{--acstops:#2E6B5E,#96B5AE;} html:not(.hc):not(.cb) .acc.c-allies{--acstops:#F7B6C3,#884983;} html:not(.hc):not(.cb) :is(.acc.c-res,.acc.c-about){--acstops:#7FD8FB,#AEACCE,#F7B6C3;} html:not(.hc):not(.cb) .acc.c-sup{--acstops:#ECDEAF,#D5B64D;}
+html.dark:not(.hc):not(.cb) .acc.c-trans{--acstops:#84B4CD,#7FD8FB;} html.dark:not(.hc):not(.cb) .acc.c-clin{--acstops:#65BDAA,#396C66;} html.dark:not(.hc):not(.cb) .acc.c-allies{--acstops:#CDA2C9,#F7B6C3;} html.dark:not(.hc):not(.cb) :is(.acc.c-res,.acc.c-about){--acstops:#7FD8FB,#ADAACF,#F7B6C3;} html.dark:not(.hc):not(.cb) .acc.c-sup{--acstops:#D8C297,#D8C297;}
+html:not(.hc):not(.cb) .x-live .live-line{background:#FBF7EA;border-color:#ECDEAF;} html:not(.hc):not(.cb) .x-live .live-line::before{color:#4A3A05;background:#F3EACB;} /* Ted, 11 Nov 2026: same bubble as before, darker text so it reads in light and dark */ html:not(.hc):not(.cb) .x-live .live-line .dot{background:#D5B64D;box-shadow:0 0 0 5px rgba(213,182,77,.25);}  html.dark:not(.hc):not(.cb) .x-live .live-line .dot{background:#D8C297;box-shadow:0 0 0 5px rgba(216,194,151,.22);}
+html.dark:not(.hc):not(.cb) .x-live .live-line{background:#2A2210;border-color:#4D3F1D;}
+
+/* Ted, 10 Nov 2026: Guides get the live card treatment (icon tile, lift and shadow on hover) and the doors get matching icons */
+.gd .x-pi{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:14px;background:color-mix(in srgb,var(--pc) 14%,var(--x-surface));color:var(--pc);margin-bottom:14px;align-self:flex-start;}
+.gd .x-pi svg{width:24px;height:24px;}
+html.hc .gd .x-pi{background:none;border:1.5px solid currentColor;}
+/* hover: the bubble's top edge and top line stay on the ribbon; everything below rises 3 px and the shadow deepens (a transform on the card would lift the line off the ribbon and paint the bubble over it) */
+.gd .x-path>*{transition:transform .14s;}
+.gd .x-path::after{transition:box-shadow .14s,border-color .14s,bottom .14s;}
+.gd .x-path:hover>*,.gd .x-path:focus-within>*{transform:translateY(-3px);}
+.gd .x-path:hover::after,.gd .x-path:focus-within::after{bottom:3px;box-shadow:0 22px 40px -26px color-mix(in srgb,var(--pc) 70%,transparent);}
+@media (prefers-reduced-motion:reduce){.gd .x-path>*,.gd .x-path::after{transition:none;} .gd .x-path:hover>*,.gd .x-path:focus-within>*{transform:none;} .gd .x-path:hover::after,.gd .x-path:focus-within::after{bottom:0;}}
+.x-task{--pc:var(--x-c1);}
+.x-task[href="#/supply"]{--pc:var(--sup-t);} .x-task[href="#/allies"]{--pc:var(--x-c3);} .x-task[href="#/clinicians"]{--pc:var(--x-c2);}
+html:not(.hc) .x-tasks .x-task .x-ti{background:color-mix(in srgb,var(--pc) 13%,var(--x-surface))!important;color:var(--pc)!important;}
+html.dark:not(.hc) .x-task[href="#/supply"]{--pc:var(--sup-a);}
 </style>
 <a class="skip" href="#main">Skip to content</a>
 <header>
@@ -1664,11 +1756,11 @@
     <nav class="main" id="nav" aria-label="Main">
       
       <a href="#/" data-link class="nav-home">Home</a>
-      <div class="ng c-trans" data-g="tgd"><button type="button" class="ng-btn" aria-expanded="false" aria-controls="ng-tgd">Trans &amp; gender diverse</button><div class="ng-panel" id="ng-tgd"><div class="wrap ng-grid"></div></div></div>
+      <div class="ng c-trans" data-g="tgd"><button type="button" class="ng-btn" aria-expanded="false" aria-controls="ng-tgd">Your medicines</button><div class="ng-panel" id="ng-tgd"><div class="wrap ng-grid"></div></div></div>
+      <div class="ng c-sup" data-g="sup"><button type="button" class="ng-btn" aria-expanded="false" aria-controls="ng-sup">Supply</button><div class="ng-panel" id="ng-sup"><div class="wrap ng-grid"></div></div></div>
+      <div class="ng c-allies" data-g="allies"><button type="button" class="ng-btn" aria-expanded="false" aria-controls="ng-allies">Family &amp; carers</button><div class="ng-panel" id="ng-allies"><div class="wrap ng-grid"></div></div></div>
       <div class="ng c-clin" data-g="clin"><button type="button" class="ng-btn" aria-expanded="false" aria-controls="ng-clin">Clinicians</button><div class="ng-panel" id="ng-clin"><div class="wrap ng-grid"></div></div></div>
-      <div class="ng c-allies" data-g="allies"><button type="button" class="ng-btn" aria-expanded="false" aria-controls="ng-allies">Family &amp; allies</button><div class="ng-panel" id="ng-allies"><div class="wrap ng-grid"></div></div></div>
-      <div class="ng c-res" data-g="res"><button type="button" class="ng-btn" aria-expanded="false" aria-controls="ng-res">Resources</button><div class="ng-panel" id="ng-res"><div class="wrap ng-grid"></div></div></div>
-      <a href="#/feedback" data-link class="nav-fb">Feedback</a>
+      <div class="ng c-about" data-g="res"><button type="button" class="ng-btn" aria-expanded="false" aria-controls="ng-res">About</button><div class="ng-panel" id="ng-res"><div class="wrap ng-grid"></div></div></div>
     </nav>
     <div class="bar-r">
       <button class="srch-btn" id="srchBtn" type="button" aria-expanded="false" aria-controls="hsq" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
@@ -1744,6 +1836,7 @@
         <p class="a11y-note">Your choices are remembered on this device and never sent anywhere. <a href="#/accessibility" data-link>Accessibility statement</a>.</p>
       </div>
     </div>
+      <button class="x-help" id="xHelpBtn" type="button" aria-expanded="false" aria-controls="xHelp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.5s-7.5-4.6-7.5-10.4A4.3 4.3 0 0 1 12 7.4a4.3 4.3 0 0 1 7.5 2.7c0 5.8-7.5 10.4-7.5 10.4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="hf">Need help now?</span><span class="hs">Help</span></button>
       <a class="top-btn exit" id="exitBtn" href="https://www.bom.gov.au/" title="Leave this site quickly (or press Esc twice): this page is replaced with the Bureau of Meteorology weather site">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 4h5a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-5M4 12h11m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span class="lbl">Quick exit</span><span class="lbl-s" aria-hidden="true">Exit</span><span class="sr-only">Leave this site quickly</span>
@@ -1789,7 +1882,7 @@
   <div class="view" id="v-sightings">
     <a class="backlink" href="#/supply">&larr; Back to supply &amp; shortages</a>
     <div class="page-head">
-      <h1 tabindex="-1">Patient sightings</h1>
+      <h1 tabindex="-1">Stock seen by patients</h1>
       <p class="lede">What people have reported seeing on pharmacy shelves, newest first and grouped by medicine. These are reports from the public, not verified stock levels &mdash; always ring the pharmacy before travelling. To have a report removed, use the <a href="#/feedback" data-link>feedback page</a> (preferred) or email gamsaenquiries@gmail.com.</p>
     </div>
     <div class="controls">
@@ -1825,8 +1918,8 @@
       <div class="x-hero-a" id="heroArt"><svg viewBox="0 0 400 400" aria-hidden="true" focusable="false" class="lg hg hgS hgvf"><defs><linearGradient id="hvfsg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><g class="hg-sol" style="--d:0s"><path class="hg-soft hg-card" d="M64 314V224A136 136 0 0 1 336 224V314Z"/></g><g class="hg-o" style="--d:0s;--sw:2.4" transform="translate(0 0)"><path class="hg-ln" pathLength="1" d="M34 314H374"/></g><g class="hg-o" style="--d:0.1s;--sw:2.86" transform="translate(50 314) scale(0.84)"><path class="hg-ln hg-bf" pathLength="1" d="M12 -190H56A6 6 0 0 1 62 -184V-166A6 6 0 0 1 56 -160H12A6 6 0 0 1 6 -166V-184A6 6 0 0 1 12 -190Z"/><path class="hg-ln" pathLength="1" d="M21 -183V-167M34 -183V-167M47 -183V-167"/><path class="hg-ln hg-bf" pathLength="1" d="M16 -160H52A2 2 0 0 1 54 -158V-150A2 2 0 0 1 52 -148H16A2 2 0 0 1 14 -150V-158A2 2 0 0 1 16 -160Z"/><path class="hg-ln hg-bf" pathLength="1" d="M14 -148H54C62 -148 68 -142 68 -134V-12C68 -5.14 62.86 0 56 0H12C5.14 0 0 -5.14 0 -12V-134C0 -142 6 -148 14 -148Z"/><path class="hg-ln" pathLength="1" d="M6 -114Q34 -107 62 -114"/><path class="hg-ln" pathLength="1" d="M17 -96H51A5 5 0 0 1 56 -91V-43A5 5 0 0 1 51 -38H17A5 5 0 0 1 12 -43V-91A5 5 0 0 1 17 -96Z"/><path class="hg-ln" pathLength="1" d="M20 -78H48M20 -66H40"/></g><g class="hg-o" style="--d:0.22s;--sw:2.73" transform="translate(293 314) scale(0.88)"><path class="hg-ln hg-bf" pathLength="1" d="M20 -142H66A20 20 0 0 1 86 -122V-20A20 20 0 0 1 66 0H20A20 20 0 0 1 0 -20V-122A20 20 0 0 1 20 -142Z"/><path class="hg-ln hg-bf" pathLength="1" d="M26 -158H60A4 4 0 0 1 64 -154V-146A4 4 0 0 1 60 -142H26A4 4 0 0 1 22 -146V-154A4 4 0 0 1 26 -158Z"/><path class="hg-ln" pathLength="1" d="M43 -178V-158"/><path class="hg-ln hg-bf hg-ph" pathLength="1" d="M30 -192H64A6 6 0 0 1 70 -186V-184A6 6 0 0 1 64 -178H30A6 6 0 0 1 24 -184V-186A6 6 0 0 1 30 -192Z"/><path class="hg-ln hg-ph hg-pn" pathLength="1" d="M24.8 -189H2A4 4 0 0 0 2 -181H24.8"/><path class="hg-ln" pathLength="1" d="M43 -92C43 -92 29 -76 29 -66A14 14 0 0 0 57 -66C57 -76 43 -92 43 -92Z"/></g><g class="hg-sol" style="--d:0.85s"><path class="hg-wf" d="M145.65 210.24H254.35A24.71 24.71 0 0 1 279.06 234.94A24.71 24.71 0 0 1 254.35 259.65H145.65A24.71 24.71 0 0 1 120.94 234.94A24.71 24.71 0 0 1 145.65 210.24Z"/></g><g class="hg-o" style="--d:0.3s;--sw:2.4" transform="translate(0 0)"><path class="hg-ln" pathLength="1" d="M145.65 210.24H254.35A24.71 24.71 0 0 1 279.06 234.94A24.71 24.71 0 0 1 254.35 259.65H145.65A24.71 24.71 0 0 1 120.94 234.94A24.71 24.71 0 0 1 145.65 210.24Z"/></g><clipPath id="hvfgc"><rect width="400" height="312.8"/></clipPath><g class="hg-cap" style="--cd:0.55s"><rect class="hg-gapt" clip-path="url(#hvfgc)" x="172" y="155.88" width="56" height="158.12" rx="28" stroke-width="14.49"/><g class=""><clipPath id="hvfc"><rect x="172" y="155.88" width="56" height="158.12" rx="28"/></clipPath><g clip-path="url(#hvfc)"><rect x="172" y="155.88" width="56" height="79.06" fill="#7FD8FB"/><rect x="172" y="234.94" width="56" height="79.06" fill="#F7B6C3"/><rect x="172" y="231.65" width="56" height="6.59" fill="#fff"/><g class="lg-shine" transform="rotate(20 200 200)"><rect x="-20" y="-40" width="56" height="480" fill="url(#hvfsg)"/></g></g><rect class="lg-hc" x="172" y="155.88" width="56" height="158.12" rx="28" fill="none"/></g><rect class="hg-out" x="172" y="155.88" width="56" height="158.12" rx="28"/></g><g class="hg-sol" style="--d:0.4s" clip-path="url(#hvfgc)"><path class="hg-gapt" transform="translate(254 288.15) rotate(10 0 0) scale(0.68)" stroke-width="10.59" d="M-19 -35H19A16 16 0 0 1 35 -19V19A16 16 0 0 1 19 35H-19A16 16 0 0 1 -35 19V-19A16 16 0 0 1 -19 -35Z"/></g><g class="hg-o" style="--d:0.4s;--sw:3.53" transform="translate(254 288.15) rotate(10 0 0) scale(0.68)"><path class="hg-ln hg-bf" pathLength="1" d="M-19 -35H19A16 16 0 0 1 35 -19V19A16 16 0 0 1 19 35H-19A16 16 0 0 1 -35 19V-19A16 16 0 0 1 -19 -35Z"/><path class="hg-dash" pathLength="189" d="M-17 -26H17A9 9 0 0 1 26 -17V17A9 9 0 0 1 17 26H-17A9 9 0 0 1 -26 17V-17A9 9 0 0 1 -17 -26Z"/><path class="hg-ln" pathLength="1" d="M0 -7A7 7 0 1 1 0 7A7 7 0 1 1 0 -7Z"/></g><g class="hg-o" style="--d:0.5s;--sw:2.4" transform="translate(14 314) rotate(-7)"><path class="hg-ln hg-bf" pathLength="1" d="M4 -84H30A4 4 0 0 1 34 -80V-4A4 4 0 0 1 30 0H4A4 4 0 0 1 0 -4V-80A4 4 0 0 1 4 -84Z"/><path class="hg-ln hg-acc" pathLength="1" d="M17 -74A6 6 0 1 1 17 -62A6 6 0 1 1 17 -74ZM17 -50A6 6 0 1 1 17 -38A6 6 0 1 1 17 -50ZM17 -26A6 6 0 1 1 17 -14A6 6 0 1 1 17 -26Z"/></g><g class="hg-o" style="--d:0.62s;--sw:2.4" transform="translate(70 300)"><path class="hg-ln hg-bf" pathLength="1" d="M3 0H89A3 3 0 0 1 92 3V11A3 3 0 0 1 89 14H3A3 3 0 0 1 0 11V3A3 3 0 0 1 3 0Z"/><path class="hg-ln" pathLength="1" d="M0 -4V18M-22 7H0M-26 -1V15M92 4H100V10H92M100 7H130M20 0V5M36 0V5M52 0V5M68 0V5"/><path class="hg-soft hg-nos" d="M46 2H90V12H46Z" style="opacity:.9"/></g></svg></div>
     </section>
     <div class="x-live"><a class="live-line" id="homeLive" href="#/supply" data-link>Medicine supply updates</a></div>
-    <section class="x-sec" aria-labelledby="hNeed"><h2 class="x-h2" id="hNeed">What do you need today?</h2><div class="x-tasks"><a class="x-task" href="#/supply" data-link><span class="x-ti"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 8l8-4 8 4v8l-8 4-8-4zM4 8l8 4 8-4M12 12v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="x-tt"><b>I need my medicine today</b><span>See what is in short supply and what pharmacists report in stock</span></span><span class="x-ta"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="x-task" href="#/costs" data-link><span class="x-ti"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM14.8 9.2c-.5-.9-1.6-1.4-2.8-1.4-1.6 0-2.8.8-2.8 2 0 2.9 5.8 1.5 5.8 4.4 0 1.2-1.3 2-2.9 2-1.3 0-2.4-.6-2.9-1.5M12 6.3v1.5m0 8.4v1.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="x-tt"><b>What will it cost?</b><span>PBS prices, the Safety Net, Closing the Gap and 60-day scripts</span></span><span class="x-ta"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="x-task" href="#/using" data-link><span class="x-ti"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 12V6.5a1.5 1.5 0 0 1 3 0V11m0-.5V5a1.5 1.5 0 0 1 3 0v6m0-4.5a1.5 1.5 0 0 1 3 0V12m0-3a1.5 1.5 0 0 1 3 0v5.5A6.5 6.5 0 0 1 12.5 21h-.9a6 6 0 0 1-4.6-2.2L3.6 14.7a1.6 1.6 0 0 1 2.4-2.1L7 13.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="x-tt"><b>How do I use it?</b><span>Patches, gels, injections and tablets, step by step</span></span><span class="x-ta"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="x-task" href="#/allies" data-link><span class="x-ti"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20s-7-4.3-7-9.6A4 4 0 0 1 12 8a4 4 0 0 1 7 2.4C19 15.7 12 20 12 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="x-tt"><b>I am helping someone</b><span>What to know and what to do at the pharmacy</span></span><span class="x-ta"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></section>
-    <section class="x-sec" aria-labelledby="hPath"><h2 class="x-h2" id="hPath">Guides</h2><div class="x-paths"><article class="x-path c-trans"><span class="x-pi"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 20a7 7 0 0 1 14 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><h3><a href="#/trans" data-link>Trans and gender diverse people</a></h3><p>Your medicines in plain language.</p><ul><li><a href="#/supply">Supply today</a></li><li><a href="#/medicines">Medicines A&ndash;Z</a></li><li><a href="#/costs">Costs and the PBS</a></li><li><a href="#/doses">Medicines guide</a></li><li><a href="#/monitoring">Blood tests</a></li><li><a href="#/related-care">Related care</a></li><li><a href="#/add-on-therapies">Add-on therapies</a></li><li><a href="#/using">How to use</a></li><li><a href="#/pharmacy">Pharmacy guide</a></li><li><a href="#/easy">Easy Read</a></li><li><a href="#/sightings">Patient sightings</a></li></ul><a class="x-pmore" href="#/trans" data-link>Overview<span class="sr-only">: Trans and gender diverse people</span> <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></article><article class="x-path c-clin"><span class="x-pi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v6a6 6 0 0 0 12 0V3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 15v2a4 4 0 0 0 8 0v-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="13" r="2" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><h3><a href="#/clinicians" data-link>Clinicians</a></h3><p>Tools behind the patient pages.</p><ul><li><a href="#/clinician-guide">Clinician guide</a></li><li><a href="#/pharmacy-reports">Stock register</a></li><li><a href="#/med/testosterone-undecanoate#sec-med-9">Injection training package</a></li><li><a href="#/clinician-guide#sec-clinician-guide-3">Monitoring schedule</a></li><li><a href="#/monitoring">Blood tests and monitoring</a></li><li><a href="/clinicians/pbs-authority-wording-card.pdf" target="_blank" rel="noopener">PBS Authority wording card (PDF, 1 page)</a></li><li><a href="#/alerts">Shortage alerts</a></li></ul><a class="x-pmore" href="#/clinicians" data-link>Overview<span class="sr-only">: Clinicians</span> <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></article><article class="x-path c-allies"><span class="x-pi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.5A3.5 3.5 0 0 1 12 8a3.5 3.5 0 0 1 7 2.5C19 15.6 12 20 12 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><h3><a href="#/allies" data-link>Family, friends and allies</a></h3><p>How to help without taking over.</p><ul><li><a href="#/ally-guide">Ally guide</a></li><li><a href="#/easy#er-allies">Easy Read for helpers</a></li><li><a href="/allies/pharmacy-visit-checklist.pdf" target="_blank" rel="noopener">Pharmacy visit checklist (PDF, 1 page)</a></li><li><a href="#/supply">Supply today</a></li><li><a href="#/costs">Costs and the PBS</a></li><li><a href="#/resources">Resources</a></li></ul><a class="x-pmore" href="#/allies" data-link>Overview<span class="sr-only">: Family, friends and allies</span> <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></article><article class="x-path c-res"><span class="x-pi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H4zM20 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><h3><a href="#/resources" data-link>Resources</a></h3><p>Australian bodies, guidelines and support.</p><ul><li><a href="#/resources#sec-resources-0">Supply and medicines</a></li><li><a href="#/resources#sec-resources-1">Costs and the PBS</a></li><li><a href="#/resources#sec-resources-2">Care and support in SA</a></li><li><a href="#/resources#sec-resources-3">National information</a></li><li><a href="#/search">Search</a></li><li><a href="#/feedback">Feedback</a></li></ul><a class="x-pmore" href="#/resources" data-link>Overview<span class="sr-only">: Resources</span> <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></article></div></section>
+    <section class="x-sec" aria-labelledby="hNeed"><h2 class="x-h2" id="hNeed">What do you need today?</h2><div class="x-tasks"><a class="x-task" href="#/supply" data-link><span class="x-ti"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 8h13l-.9 11.2a1.5 1.5 0 0 1-1.5 1.3H7.9a1.5 1.5 0 0 1-1.5-1.3z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8M12 11.5v5M9.5 14h5"/></g></svg></span><span class="x-tt"><b>I need my medicine today</b><span>See what is in short supply and what pharmacists report in stock</span></span><span class="x-ta"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="x-task" href="#/costs" data-link><span class="x-ti"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 4.5v6.3a1.5 1.5 0 0 0 .44 1.06l8.2 8.2a1.5 1.5 0 0 0 2.12 0l6.3-6.3a1.5 1.5 0 0 0 0-2.12l-8.2-8.2A1.5 1.5 0 0 0 11.3 3H5a1.5 1.5 0 0 0-1.5 1.5z"/><circle cx="8" cy="7.5" r="1.3"/></g></svg></span><span class="x-tt"><b>What will it cost?</b><span>PBS prices, the Safety Net, Closing the Gap and 60-day scripts</span></span><span class="x-ta"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="x-task" href="#/using" data-link><span class="x-ti"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4.5H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-13a2 2 0 0 0-2-2h-2"/><rect x="9" y="2.5" width="6" height="4" rx="1"/><path d="M8.5 12l1.2 1.2 2.1-2.2M8.5 17l1.2 1.2 2.1-2.2M14 12.2h2M14 17.2h2"/></g></svg></span><span class="x-tt"><b>How do I use it?</b><span>Patches, gels, injections and tablets, step by step</span></span><span class="x-ta"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="x-task" href="#/allies" data-link><span class="x-ti"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7.5" r="3"/><path d="M3.5 20v-1a5.5 5.5 0 0 1 11 0v1"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.1a4.5 4.5 0 0 1 4.5 4.4V20"/></g></svg></span><span class="x-tt"><b>I am helping someone</b><span>What to know and what to do at the pharmacy</span></span><span class="x-ta"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="x-task" href="#/clinicians" data-link><span class="x-ti"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="3" width="15" height="18" rx="2"/><path d="M8.5 16.5V8h2.8a2.2 2.2 0 0 1 0 4.4H8.5M10.5 12.4l5 5.6M15.5 13.5l-3.6 4"/></g></svg></span><span class="x-tt"><b>I am a clinician</b><span>Starting hormones, the clinician reference and the toolkit</span></span><span class="x-ta"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></section>
+    <section class="x-sec" aria-labelledby="hPath"><h2 class="x-h2" id="hPath">Guides</h2><div class="x-paths x5 gd"><article class="x-path c-trans"><span class="x-pi"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(-45 9.5 9.5)"><rect x="3" y="6.5" width="13" height="6" rx="3"/><path d="M9.5 6.5v6"/></g><circle cx="16.5" cy="16.5" r="4.5"/><path d="M13.3 19.7l6.4-6.4"/></g></svg></span><h3><a href="#/trans" data-link>Your medicines</a></h3><p>What your medicines are, what they cost and how to use them.</p><a class="x-pmore" href="#/trans" data-link>Start here<span class="sr-only">: Your medicines</span> <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><ul><li><a href="#/medicines">Medicines A&ndash;Z</a></li><li><a href="#/doses">Doses and formulations</a></li><li><a href="#/costs">Costs and the PBS</a></li><li><a href="#/pharmacy">Working with your pharmacy</a></li><li><a href="#/using">How to use your medicine</a></li><li><a href="#/monitoring">Blood tests</a></li><li><a href="#/add-on-therapies">Add-on therapies</a></li><li><a href="#/related-care">Fertility, PrEP and surgery</a></li><li><a href="#/easy">Easy Read guides</a></li><li><a href="#/downloads">Guides to print</a></li></ul></article><article class="x-path c-sup"><span class="x-pi"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M4 8.5 6 4h12l2 4.5M12 4v4.5M12 11.5v5M9.5 14h5"/></g></svg></span><h3><a href="#/supply" data-link>Supply</a></h3><p>What is short today, and where people have found stock.</p><a class="x-pmore" href="#/supply" data-link>Shortages<span class="sr-only">: Supply</span> <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><ul><li><a href="#/alerts">Shortage alerts (email or RSS)</a></li><li><a href="#/sightings">Stock seen by patients</a></li><li><a href="#/pharmacy-reports">Pharmacy stock reports</a></li></ul></article><article class="x-path c-allies"><span class="x-pi"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 11s-4-2.4-4-5.2A2.2 2.2 0 0 1 12 4.6a2.2 2.2 0 0 1 4 1.2C16 8.6 12 11 12 11z"/><path d="M3 15h3l3-1.2h4a1.5 1.5 0 0 1 0 3h-3"/><path d="M3 20.5h8.5l7.2-4.2a1.5 1.5 0 0 0-1.5-2.6L13 16.3"/></g></svg></span><h3><a href="#/allies" data-link>Family &amp; carers</a></h3><p>How to help with someone&#39;s medicines without taking over.</p><a class="x-pmore" href="#/allies" data-link>Start here<span class="sr-only">: Family &amp; carers</span> <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><ul><li><a href="#/parents">Parents and carers of <span class="nw">under-18s</span></a></li><li><a href="#/ally-guide">Helping an adult with their medicines</a></li><li><a href="#/easy#er-allies">Easy Read for helpers</a></li><li><a href="/allies/pharmacy-visit-checklist.pdf" target="_blank" rel="noopener">Pharmacy visit checklist (PDF, 1 page)</a></li></ul></article><article class="x-path c-clin"><span class="x-pi"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3H4a1.5 1.5 0 0 0-1.5 1.5V9a5.5 5.5 0 0 0 11 0V4.5A1.5 1.5 0 0 0 12 3h-1M5 2v2M11 2v2"/><path d="M8 14.5a5.5 5.5 0 0 0 11 0V12"/><circle cx="19" cy="10" r="2"/></g></svg></span><h3><a href="#/clinicians" data-link>Clinicians</a></h3><p>Prescribing references, monitoring schedules and training tools.</p><a class="x-pmore" href="#/clinicians" data-link>Start here<span class="sr-only">: Clinicians</span> <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><ul><li><a href="#/starting-hormones">Starting hormones: a GP guide</a></li><li><a href="#/clinician-guide">Clinician reference</a></li><li><a href="#/med/testosterone-undecanoate#injection-training">Injection training package</a></li><li><a href="#/clinician-guide#monitoring-schedule">Monitoring schedule</a></li><li><a href="#/monitoring">Blood tests</a></li><li><a href="#/pharmacy-reports">Pharmacy stock reports</a></li><li><a href="#/alerts">Shortage alerts</a></li><li><a href="/clinicians/pbs-authority-wording-card.pdf" target="_blank" rel="noopener">PBS Authority wording card (PDF, 1 page)</a></li></ul></article><article class="x-path c-about"><span class="x-pi"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></g></svg></span><h3><a href="#/about" data-link>About</a></h3><p>Who makes GAMSA, other services, updates and our policies.</p><a class="x-pmore" href="#/about" data-link>About GAMSA<span class="sr-only">: About</span> <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><ul><li><a href="#/resources">Other services and links</a></li><li><a href="#/changes">What&rsquo;s changed</a></li><li><a href="#/search">Search</a></li><li><a href="#/feedback">Contact and feedback</a></li><li><a href="#/accessibility">Accessibility</a></li><li><a href="#/privacy">Privacy</a></li><li><a href="#/disclaimer">Disclaimer</a></li></ul></article></div></section>
     <section class="x-sec x-tsec" aria-label="Why you can trust this site"><ul class="x-trust"><li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Referenced</b>Sources cited on every guide</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.6 3.9a4.6 4.6 0 0 1 6.5 6.5l-6.7 6.7a4.6 4.6 0 0 1-6.5-6.5zM7.3 7.2l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Pharmacist-written</b>By a registered pharmacist in Adelaide</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Kept current</b>Supply checked daily from TGA records; PBS prices monthly</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l7 3v5c0 4.6-3 8.4-7 10-4-1.6-7-5.4-7-10V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Private</b>No cookies, no tracking, Quick exit</span></li></ul></section>
     <div class="callout">
       <h2 class="h3">Looking for a prescriber?</h2>
@@ -1841,8 +1934,8 @@
       <p class="lede">Which hormone therapy medicines are hard to get in Australia right now, and what it means for you.</p>
       <span class="stamp" id="stamp"></span>
     </div>
-
-    <div class="controls">
+    <nav class="onthis" id="onthis-supply" tabindex="-1" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#sup-now">Shortages now</a></li><li><a href="#clearBox">No supply problems reported</a></li><li><a href="#sup-pharm">Pharmacy stock reports</a></li><li><a href="#sup-seen">Seen it in stock, or missed out?</a></li><li><a href="#sup-affected">If your medicine is affected</a></li></ol></nav>
+    <div class="controls" id="sup-now" tabindex="-1">
       <input id="q" type="search" placeholder="Search a medicine or brand — try Estradot" autocomplete="off" aria-label="Search by medicine or brand">
       <div class="chips" role="group" aria-label="Filter by type">
         <button class="chip" data-f="all" aria-pressed="true" type="button">All</button>
@@ -1923,6 +2016,8 @@
   <div class="view" id="v-privacy"></div>
   <div class="view" id="v-accessibility"></div>
   <div class="view" id="v-disclaimer"></div>
+  <div class="view" id="v-parents"></div>
+  <div class="view" id="v-starting-hormones"></div>
   <div class="view" id="v-search">
     <div class="page-head"><p class="kicker">Search</p><h1 tabindex="-1">Search this site</h1><p class="lede" id="srLede">Every page, guide and medicine, searched in your browser. Nothing is sent anywhere.</p></div>
     <form class="srch" id="srForm" role="search" action="#/search"><label class="sr-only" for="srq">Search this site</label><input id="srq" name="q" type="search" autocomplete="off" placeholder="e.g. Safety Net, patches, Reandron"><button type="submit">Search</button></form>
@@ -2000,48 +2095,57 @@
   <div class="wrap">
     <div class="foot-cols">
       <div>
-        <h2>Information</h2>
+        <h2>Your medicines</h2>
         <ul role="list">
+          <li><a href="#/trans" data-link>Start here</a></li>
           <li><a href="#/medicines" data-link>Medicines A&ndash;Z</a></li>
-          <li><a href="#/supply" data-link>Supply &amp; shortages</a></li>
+          <li><a href="#/doses" data-link>Doses and formulations</a></li>
           <li><a href="#/costs" data-link>Costs and the PBS</a></li>
-          <li><a href="#/doses" data-link>Medicines guide</a></li>
-          <li><a href="#/monitoring" data-link>Blood tests and monitoring</a></li>
-          <li><a href="#/related-care" data-link>Related care</a></li>
+          <li><a href="#/pharmacy" data-link>Working with your pharmacy</a></li>
+          <li><a href="#/using" data-link>How to use your medicine</a></li>
+          <li><a href="#/monitoring" data-link>Blood tests</a></li>
           <li><a href="#/add-on-therapies" data-link>Add-on therapies</a></li>
-          <li><a href="#/using" data-link>How-to-use guide</a></li>
-          <li><a href="#/pharmacy" data-link>Pharmacy guide</a></li>
+          <li><a href="#/related-care" data-link>Fertility, PrEP and surgery</a></li>
           <li><a href="#/easy" data-link>Easy Read guides</a></li>
+          <li><a href="#/downloads" data-link>Guides to print</a></li>
         </ul>
       </div>
       <div>
-        <h2>Who it is for</h2>
+        <h2>Supply</h2>
         <ul role="list">
-          <li><a href="#/trans" data-link>Trans and gender diverse people</a></li>
-          <li><a href="#/clinicians" data-link>Clinicians</a></li>
-          <li><a href="#/allies" data-link>Family, friends and allies</a></li>
-          <li><a href="#/resources" data-link>Resources</a></li>
-          <li><a href="#/downloads" data-link>Guides and printables</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Site</h2>
-        <ul role="list">
-          <li><a href="#/search" data-link>Search</a></li>
-          <li><a href="#/sightings" data-link>Patient sightings</a></li>
+          <li><a href="#/supply" data-link>Shortages today</a></li>
+          <li><a href="#/sightings" data-link>Stock seen by patients</a></li>
           <li><a href="#/pharmacy-reports" data-link>Pharmacy stock reports</a></li>
-          <li><a href="#/alerts" data-link>Shortage alerts (RSS)</a></li>
+          <li><a href="#/alerts" data-link>Shortage alerts (email or RSS)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Family &amp; carers</h2>
+        <ul role="list">
+          <li><a href="#/allies" data-link>Start here</a></li>
+          <li><a href="#/parents" data-link>Parents and carers of under-18s</a></li>
+          <li><a href="#/ally-guide" data-link>Helping an adult with their medicines</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Clinicians</h2>
+        <ul role="list">
+          <li><a href="#/clinicians" data-link>Start here</a></li>
+          <li><a href="#/starting-hormones" data-link>Starting hormones: a GP guide</a></li>
+          <li><a href="#/clinician-guide" data-link>Clinician reference</a></li>
         </ul>
       </div>
       <div>
         <h2>About</h2>
         <ul role="list">
           <li class="ft-about"><a href="#/about" data-link>About GAMSA</a></li>
+          <li><a href="#/resources" data-link>Other services and links</a></li>
           <li><a href="#/changes" data-link>What’s changed</a></li>
-          <li><a href="#/disclaimer" data-link>Disclaimer</a></li>
-          <li><a href="#/privacy" data-link>Privacy</a></li>
-          <li><a href="#/accessibility" data-link>Accessibility</a></li>
+          <li><a href="#/search" data-link>Search</a></li>
           <li><a href="#/feedback" data-link>Contact and feedback</a></li>
+          <li><a href="#/accessibility" data-link>Accessibility</a></li>
+          <li><a href="#/privacy" data-link>Privacy</a></li>
+          <li><a href="#/disclaimer" data-link>Disclaimer</a></li>
         </ul>
       </div>
     </div>
@@ -2062,7 +2166,6 @@
     </div>
   </div>
 </footer>
-<button class="x-help" id="xHelpBtn" type="button" aria-expanded="false" aria-controls="xHelp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.5s-7.5-4.6-7.5-10.4A4.3 4.3 0 0 1 12 7.4a4.3 4.3 0 0 1 7.5 2.7c0 5.8-7.5 10.4-7.5 10.4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="hf">Need help now?</span><span class="hs">Help</span></button>
 <div class="x-helpp" id="xHelp" role="dialog" aria-labelledby="xHelpH" hidden><div class="x-helpp-h"><h2 id="xHelpH">Need help now?</h2><button class="x-close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button></div><ul><li><a href="tel:000"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 3.5h3l1.5 4-2 1.3a10 10 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Emergency</b><small>000</small></span></a></li><li><a href="tel:131465"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 3.5h3l1.5 4-2 1.3a10 10 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>SA Mental Health Triage</b><small>13 14 65 (24 hours)</small></span></a></li><li><a href="tel:131114"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 3.5h3l1.5 4-2 1.3a10 10 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Lifeline</b><small>13 11 14</small></span></a></li><li><a href="tel:1800184527"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 3.5h3l1.5 4-2 1.3a10 10 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>QLife</b><small>1800 184 527 (3pm to 9pm, every day)</small></span></a></li><li><a href="tel:139276"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 3.5h3l1.5 4-2 1.3a10 10 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>13YARN</b><small>13 92 76 (Aboriginal and Torres Strait Islander crisis support, any time)</small></span></a></li><li><a href="https://www.accesshub.gov.au/about-the-nrs/how-to-make-an-emergency-call-using-the-nrs" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span><b>National Relay Service</b><small>Call 000 by chat, SMS, voice relay or TTY (106)<span class="sr-only"> (opens in a new tab)</span></small></span></a></li></ul></div>
 
 <button class="totop-fab" id="toTop" type="button" hidden>↑ Top</button>
@@ -2122,6 +2225,24 @@
   var SMOOTH = !(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   var API = document.documentElement.getAttribute("data-routing")==="path" ? "/api" : "";
 
+  /* CWV round 2 (10 Nov 2026): build.py writes each view's page head into the HTML so it paints before this script runs.
+     When the script redraws the view it keeps that head element (same words) and patches its children in place, instead of
+     replacing it: a replaced element is a new largest-contentful-paint candidate, which pushed LCP back to the script's time. */
+  function setView(el, html){
+    if(typeof el==="string") el=document.getElementById(el);
+    var old=el.querySelector(":scope > .page-head, :scope > .er-cover");
+    if(!old){ el.innerHTML=html; return; }
+    var t=document.createElement("template"); t.innerHTML=html;
+    var nh=t.content.querySelector(".page-head, .er-cover");
+    if(!nh || nh.parentNode!==t.content || nh.className!==old.className || old.textContent!==nh.textContent){ el.innerHTML=html; return; }
+    if(old.innerHTML!==nh.innerHTML){ var oc=old.children, nc=nh.children;
+      if(oc.length!==nc.length) old.innerHTML=nh.innerHTML;
+      else for(var i=0;i<oc.length;i++){ if(oc[i].outerHTML===nc[i].outerHTML) continue;
+        if(oc[i].tagName===nc[i].tagName && oc[i].className===nc[i].className) oc[i].innerHTML=nc[i].innerHTML; else old.replaceChild(nc[i].cloneNode(true), oc[i]); } }
+    [].slice.call(el.childNodes).forEach(function(k){ if(k!==old) el.removeChild(k); });
+    var before=true; [].slice.call(t.content.childNodes).forEach(function(n){ if(n===nh){ before=false; return; } if(before) el.insertBefore(n, old); else el.appendChild(n); });
+  }
+  function V(el){ return {set innerHTML(h){ setView(el, h); }}; }
   function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){
     return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];});}
   /* a download's type and size from FILES: "PDF, 182 KB" ("" if the file is not listed) */
@@ -2154,8 +2275,9 @@
       .replace(/\[(?!\d[\d,\s]*\])([^\]]+)\]\((\/medicines\/[a-z0-9-]+(?:#[a-z0-9-]+)?)\)/g, function(_,txt,href){
         return '<a href="'+(PATHMODE?href:"#"+href.replace(/^\/medicines\//,"/med/"))+'">'+txt+'</a>'; });
   }
-  function cite(t,v){var p=v?v+"-":"";return String(t).replace(/\s*\[(\d+)\]/g,
-    '<sup><a href="#ref-'+p+'$1" aria-label="Reference $1">[$1]</a></sup>');}
+  function cite(t,v){var p=v?v+"-":"";function L(n){return '<a href="#ref-'+p+n+'" aria-label="Reference '+n+'">'+n+'</a>';}
+    return String(t).replace(/\s*\[(\d+)\]/g,'<sup><a href="#ref-'+p+'$1" aria-label="Reference $1">[$1]</a></sup>').replace(/\s*\[(\d+(?:\s*,[^\]\[<>]*)+)\]/g,function(m,g){
+    return '<sup>['+g.split(",").map(function(x){var q=x.match(/^(\s*)(\d+)(\s*)$/);return q?q[1]+L(q[2])+q[3]:x;}).join(",")+']</sup>';});}
   /* figures built by figures.py: ids carry "gfU", made unique for each place the figure is shown; cap = caption HTML */
   function gfHTML(fg, ctx, cap){
     var h=fg.html.replace(/gfU/g, function(){ return "gf-"+ctx; });
@@ -2244,7 +2366,7 @@
     var el = document.getElementById(id), v = id.replace("v-",""), seen = {}; PBS_SAID=PBSFULL.test(c.intro||"");
     function C(t){return linkMeds(cite(ilink(esc(t)), v), seen);}
     function newSection(){ seen = {}; }
-    el.innerHTML =
+    V(el).innerHTML =
       '<div class="page-head"><p class="kicker">'+esc(c.kicker||"Overview guide")+'</p><h1 tabindex="-1">'+esc(c.title)+'</h1><p class="lede">'+C(c.intro)+
       '</p></div>'+
       (c.kicker?'':'<p class="quick"><a href="#/medicines">Looking for one medicine? See the A\u2013Z \u2192</a></p>')+
@@ -2254,12 +2376,13 @@
       '</ol></nav>'+
       c.sections.map(function(s,i){
         newSection();
-        return '<section class="block" id="sec-'+v+'-'+i+'" tabindex="-1"><h2>'+esc(s.h)+'</h2>'+
+        return '<section class="block" id="sec-'+v+'-'+i+'" tabindex="-1">'+(ANCH[v+"-"+i]?'<span id="'+ANCH[v+"-"+i]+'"></span>':'')+'<h2>'+esc(s.h)+'</h2>'+
           (s.premiums ? premiumList() : '')+
           (s.body||[]).map(function(p){return pbsP(p,C);}).join("")+
           (s.downloads?dlCards(s.downloads):'')+
           (s.listh&&s.list&&s.list.length?'<h3>'+esc(s.listh)+'</h3>':'')+
           (s.list&&s.list.length?'<ul>'+s.list.map(function(li){return '<li>'+C(li)+'</li>';}).join("")+'</ul>':'')+
+          (s.after||[]).map(function(p){return pbsP(p,C);}).join("")+
           (s.table?'<div class="tblwrap'+(s.table.stack?' stk':'')+'" role="region" tabindex="0" aria-label="'+esc((s.nav||s.h||"Table")+(s.table.stack?" (table)":" (table, scrolls sideways on small screens)"))+'"><table class="tbl'+(s.table.stack?' stk':'')+'"><thead><tr>'+s.table.head.map(function(h){return '<th scope="col">'+esc(h)+'</th>';}).join("")+'</tr></thead><tbody>'+
             s.table.rows.map(function(r){return '<tr>'+r.map(function(cell,j){return (j?'<td'+(s.table.stack?' data-label="'+esc(s.table.head[j])+'"':'')+'>':'<th scope="row">')+C(cell)+(j?'</td>':'</th>');}).join("")+'</tr>';}).join("")+'</tbody></table></div>':'')+
           (s.read?'<div class="rd"><h3>Reading your results</h3>'+(s.read.points.length?'<ul>'+s.read.points.map(function(li){return '<li>'+C(li)+'</li>';}).join("")+'</ul>':'')+
@@ -2337,7 +2460,7 @@
   /* index of guides */
   function renderEasyRead(){
     var D=CONTENT.easyread;
-    document.getElementById("v-easy").innerHTML =
+    V("v-easy").innerHTML =
       '<div class="er-cover"><p class="er-kick">'+esc(D.kicker)+'</p><h1>'+esc(D.title)+'</h1>'+
       '<p class="er-sub">Short guides in easy to read words, with pictures. Pick the one you need.</p></div>'+
       [["you","For you","er-you"],["allies","For family, friends and carers","er-allies"]].map(function(grp){
@@ -2366,7 +2489,7 @@
     });
     if(words.length) h.push('<section class="er-sec"><h2>Word list</h2><dl class="er-words">'+words.map(function(w){ return '<dt>'+esc(w.w)+'</dt><dd>'+esc(w.d)+'</dd>'; }).join("")+'</dl></section>');
     h.push('<div class="er-actions er-foot">'+erActions()+'</div>');
-    var el=document.getElementById("v-easy-guide"); el.innerHTML=h.join("");
+    var el=document.getElementById("v-easy-guide"); V(el).innerHTML=h.join("");
     el.querySelectorAll(".er-print").forEach(function(bt){ bt.addEventListener("click", function(){ window.print(); }); });
     el.querySelectorAll(".er-listen").forEach(function(bt){ bt.addEventListener("click", function(){
       var on=bt.getAttribute("aria-pressed")==="true";
@@ -2548,6 +2671,8 @@
     "v-easy":     function(){ renderEasyRead(); },
     "v-clinician-guide": function(){ renderContent("v-clinician-guide", CONTENT.clinicians); },
     "v-ally-guide": function(){ renderContent("v-ally-guide", CONTENT.allies); },
+    "v-parents": function(){ renderContent("v-parents", CONTENT.parents); },
+    "v-starting-hormones": function(){ renderContent("v-starting-hormones", CONTENT.startinghormones); },
     "v-trans":    function(){ renderHub("v-trans", HUBS.trans); },
     "v-alerts":   function(){ renderAlerts(); },
     "v-changes":  function(){ renderChanges(); },
@@ -2566,33 +2691,35 @@
         {t:"Supply & shortages", h:"#/supply", d:"Which medicines are hard to get right now, what to do about it, and what pharmacists and patients report in stock.", live:"Updated daily"},
         {t:"Medicines A\u2013Z", h:"#/medicines", d:"One page per medicine: how it works, doses used here, side effects, monitoring, cost and current supply."},
         {t:"Costs and the PBS", h:"#/costs", d:"What you pay at the counter, the Safety Net, Closing the Gap, 60-day scripts, and what to do if cost is a barrier.", live:"Updated monthly"},
-        {t:"Medicines, doses and formulations", h:"#/doses", d:"The forms each hormone comes in and the dose ranges Australian prescribers work within."},
-        {t:"Blood tests and monitoring", h:"#/monitoring", d:"The blood tests for each medicine: when the sample is taken, what it aims for, and how to read your results."},
-        {t:"Related care and considerations", h:"#/related-care", d:"Fertility before you start, sexual function, PrEP, and hormones around surgery."},
-        {t:"Add-on therapies", h:"#/add-on-therapies", d:"Medicines sometimes used for acne, scalp hair loss, periods that continue on testosterone, and vaginal dryness."},
-        {t:"How to use your medicine", h:"#/using", d:"Patches, gels, injections, tablets and implants: how to use, store and dispose of them."},
+        {t:"Doses and formulations", h:"#/doses", d:"The forms each hormone comes in and the dose ranges Australian prescribers work within."},
         {t:"Working with your pharmacy", h:"#/pharmacy", d:"What to bring, what to say, what to do if you run out, and getting your name right on the label."},
+        {t:"How to use your medicine", h:"#/using", d:"Patches, gels, injections, tablets and implants: how to use, store and dispose of them."},
+        {t:"Blood tests and monitoring", h:"#/monitoring", d:"The blood tests for each medicine: when the sample is taken, what it aims for, and how to read your results."},
+        {t:"Fertility, PrEP and surgery", h:"#/related-care", d:"Fertility before you start, sexual function, PrEP, and hormones around surgery."},
+        {t:"Add-on therapies", h:"#/add-on-therapies", d:"Medicines sometimes used for acne, scalp hair loss, periods that continue on testosterone, and vaginal dryness."},
         {t:"Easy Read guides", h:"#/easy", d:"Short guides in easy words with pictures. Each one prints or saves as a PDF."},
-        {t:"Patient sightings", h:"#/sightings", d:"What other people have seen in stock at South Australian pharmacies, and where to add your own."}]},
+        {t:"Stock seen by patients", h:"#/sightings", d:"What other people have seen in stock at South Australian pharmacies, and where to add your own."}]},
     clinicians: {kicker:"Clinicians", title:"For prescribers, nurses and pharmacists", lede:"The tools behind the patient pages: a training package for the long-acting testosterone injection, a stock register for pharmacists, a monitoring summary, and the PBS and prescribing references.",
       items:[
-        {t:"For clinicians", h:"#/clinician-guide", d:"Training package, counter notes, monitoring schedule, Authority wording, shortage alerts, references and how the data stays current."},
-        {t:"Pharmacist stock register", h:"#/pharmacy-reports", d:"Registered pharmacists post what is on their shelves. Checked once against AHPRA, then published immediately."},
-        {t:"Injection training package", h:"#/med/testosterone-undecanoate#sec-med-9", d:"SOP and training guide, treatment-room card, competency checklist, adverse event form and audit tool. Free to download."},
+        {t:"Starting hormones: a GP guide", h:"#/starting-hormones", d:"Assessment, baseline tests, starting doses, the PBS Authority and first-year monitoring for adult hormone therapy, from AusPATH 2026."},
+        {t:"Clinician reference", h:"#/clinician-guide", d:"Training package, counter notes, monitoring schedule, Authority wording, shortage alerts, references and how the data stays current."},
+        {t:"Pharmacy stock reports", h:"#/pharmacy-reports", d:"Registered pharmacists post what is on their shelves. Checked once against AHPRA, then published immediately."},
+        {t:"Injection training package", h:"#/med/testosterone-undecanoate#injection-training", d:"SOP and training guide, treatment-room card, competency checklist, adverse event form and audit tool. Free to download."},
         {t:"After-injection handout", h:"/clinicians/testosterone-undecanoate-im-after-injection-handout.pdf", d:"One page to give patients after the long-acting testosterone injection: what is normal, when to ring 000, and the next dose.", live:"PDF, 1 page", file:true},
-        {t:"Monitoring schedule", h:"#/clinician-guide#sec-clinician-guide-3", d:"Baseline, first year and ongoing monitoring for oestrogen- and testosterone-based therapy in one table."},
+        {t:"Monitoring schedule", h:"#/clinician-guide#monitoring-schedule", d:"Baseline, first year and ongoing monitoring for oestrogen- and testosterone-based therapy in one table."},
         {t:"Blood tests and monitoring", h:"#/monitoring", d:"For each medicine and form: the tests, sample timing, aims in pmol/L and nmol/L, and a \u201cFor clinicians\u201d line with source pages. A blood test guide to print for each."},
         {t:"PBS Authority wording card", h:"/clinicians/pbs-authority-wording-card.pdf", d:"One printable page on how PBS testosterone scripts are worded for gender-affirming care, and what to say at the counter.", live:"PDF, 1 page", file:true},
         {t:"Inclusive environment checklist", h:"/guides/inclusive-environment.pdf", d:"Two pages of practical checks for clinics and pharmacies that want to be welcoming to trans and gender diverse people.", live:"PDF, 2 pages", file:true},
         {t:"Shortage alerts", h:"#/alerts", d:"Every listed medicine under a current TGA shortage notice, and an RSS feed you can subscribe to. Rebuilt each morning.", live:"RSS"}]},
     allies: {kicker:"Family, friends and allies", title:"Supporting someone on hormone therapy", lede:"What the medicines are, what tends to go wrong in practice, and how to help with the medicines side without taking over.",
       items:[
-        {t:"For family, friends and allies", h:"#/ally-guide", d:"What the medicines are, the serious problems and how they are prevented, how to help, and where to learn more about allyship."},
+        {t:"Parents and carers of under-18s", h:"#/parents", d:"If your child or teenager has come out or is exploring their gender: first steps, care in South Australia, consent and support."},
+        {t:"Helping an adult with their medicines", h:"#/ally-guide", d:"What the medicines are, the serious problems and how they are prevented, how to help, and where to learn more about allyship."},
         {t:"Easy Read guides for helpers", h:"#/easy#er-allies", d:"Four short guides in easy words: what the medicines are, helping with their medicine, if something goes wrong, and being an ally."},
         {t:"Pharmacy visit checklist", h:"/allies/pharmacy-visit-checklist.pdf", d:"One page: what to take, what to ask at the counter, what to do if the medicine is out of stock.", live:"PDF, 1 page", file:true},
         {t:"Supply & shortages", h:"#/supply", d:"Check this before ringing around: which medicines are affected, and what pharmacists report in stock.", live:"Updated daily"},
         {t:"Costs and the PBS", h:"#/costs", d:"The PBS price, the Safety Net, and why a testosterone script is worded the way it is."},
-        {t:"Resources", h:"#/resources", d:"Australian bodies, guidelines and support services in one place."}]}
+        {t:"Other services and links", h:"#/resources", d:"Australian bodies, guidelines and support services in one place."}]}
   };
   function renderAlerts(){
     var feed = (PATHMODE ? location.origin : "https://gamsa.au") + "/feed.xml";
@@ -2627,7 +2754,7 @@
   }
   function renderHub(id, h){
     document.getElementById(id).classList.add("hubv");
-    document.getElementById(id).innerHTML =
+    V(id).innerHTML =
       '<div class="page-head"><p class="kicker">'+esc(h.kicker)+'</p><h1 tabindex="-1">'+esc(h.title)+'</h1><p class="lede">'+esc(h.lede)+'</p></div>'+
       '<div class="tiles hub">'+h.items.map(function(i){
         var live=tileLive(i);   /* every bubble comes from data: file size and pages from the file (build.py), page dates from content/changes.json or the data's own date */
@@ -2712,7 +2839,7 @@
     }).join("") : '<li class="med"><p class="muted">Nothing matches that search.</p></li>';
     cEl.innerHTML = clear.map(function(m){
       var b=(m.brands||[]).length===1 && m.brand && m.brand!==m.brands[0] && m.brand.indexOf(m.brands[0])===0 ? m.brand : (m.brands||[]).join(", ");
-      return '<li>'+esc(m.genericName||m.brand)+(b?' <span>'+esc(b)+'</span>':'')+'</li>';
+      return '<li>'+esc(m.genericName||m.brand)+(b?' <span>'+esc(b)+'</span>':'')+(expSoon(m)?' <b class="exp">'+esc(expSoon(m))+'</b>':'')+'</li>';
     }).join("");
     boxEl.hidden = clear.length===0;
   }
@@ -2773,17 +2900,18 @@
      the card's top-right corner; cards reached through a column gap travel along a run between the task rows and "Choose your path" */
   function homeGeo(v){
     var W=de.clientWidth,pe=$(".x-paths",v),h2=$("#hPath",v);if(!pe||!h2)return null;
-    var cs=["c-trans","c-clin","c-allies","c-res"].map(function(c){return $(".x-path."+c,v);});if(cs.some(function(c){return !c;}))return null;
+    var CV={"c-trans":1,"c-clin":2,"c-allies":3,"c-res":4,"c-sup":5,"c-about":6},cs=$$(".x-path",pe),cv=cs.map(function(e){for(var c in CV)if(e.classList.contains(c))return CV[c];return 1;});if(cs.length<2)return null;
     var P=R(pe),hr=R(h2),tk=$(".x-tasks",v),T=tk?R(tk):null,hero=R($(".x-hero",v)||h2),C=cs.map(R),mg=W-P.r;if(mg<14)return null;
     var rg=document.createRange();rg.selectNodeContents(h2);var tR=rg.getBoundingClientRect().right;
     var cg=C[1].x-C[0].r>2&&C[1].x-C[0].r<60?C[1].x-C[0].r:60,
-      w=Math.max(4,Math.min(8,Math.floor(Math.min(mg,cg)*.45))),   /* 8 px wherever margin and column gap allow (>= 17.8 px), else whole px */
+      w=Math.max(4,Math.min(5,Math.floor(Math.min(mg,cg)*.45))),   /* 8 px wherever margin and column gap allow (>= 17.8 px), else whole px */
       hw=w/2+1,o=hw%1,sn=function(n){return Math.round(n-o)+o;},   /* straight runs: band edges on whole pixels */
       gx=sn(Math.min(P.r+mg/2,W-w/2-3)),top=Math.min.apply(null,C.map(function(c){return c.y;})),
       ry=Math.max(24,Math.min(40,top+hw+.5-hr.b+4)),tg=[],rx=0,k;
-    for(k=0;k<4;k++){var c=C[k],nb=null;C.forEach(function(o){if(Math.abs(o.y-c.y)<4&&o.x>c.r-1&&(!nb||o.x<nb.x))nb=o;});
-      var t={k:k,c:c,m:!nb,xd:nb?(c.r+nb.x)/2:gx};if(nb&&Math.abs(c.y-top)<4)t.xd=Math.max(t.xd,tR+32+w/2);   /* keep 32 px clear of the heading text */
-      t.xd=sn(t.xd);t.ye=Math.ceil(c.y+hw+.5-o)+o;t.yv=t.ye-ry;tg.push(t);rx=Math.max(rx,t.xd-c.r+14);   /* the landing ends behind the card: band top 0.5 px under its top edge */
+    for(k=0;k<C.length;k++){var c=C[k],nb=null;C.forEach(function(o){if(Math.abs(o.y-c.y)<4&&o.x>c.r-1&&(!nb||o.x<nb.x))nb=o;});
+      var t={k:k,cv:cv[k],c:c,m:!nb,xd:nb?(c.r+nb.x)/2:gx};if(nb&&Math.abs(c.y-top)<4)t.xd=Math.max(t.xd,tR+32+w/2);   /* keep 32 px clear of the heading text */
+      t.xd=sn(t.xd);t.ye=Math.ceil(c.y+hw+.5-o)+o;t.yv=t.ye-ry;tg.push(t);if(!t.m)rx=Math.max(rx,t.xd-c.r+14);   /* Ted, 11 Nov 2026: no shadow under the home ribbon, so it meets the flat top lines with no grey patch */
+  /* Ted, 11 Nov 2026: the curl is sized by the gaps between cards, not by the last card's run in from the margin, so the line turns up tightly at each corner */   /* the landing ends behind the card: band top 0.5 px under its top edge */
       }   /* v19.2: every card, the first included, lands with the same curl from the column gap (short heading "Guides": no heading clearance needed) */
     rx=Math.min(rx,90);
     var bus=tg.filter(function(t){return !t.m;}),yb=sn(T?(T.b+hr.y)/2:hr.y-30),xmax=Math.max.apply(null,bus.map(function(t){return t.xd;}).concat([0])),
@@ -2813,15 +2941,17 @@
      at a split and a branch starts exactly as the strand it leaves passes the split, going down, and is back in when that strand returns there */
   function homeBuild(){
     var old=$(".rb-home");if(old)old.remove();B=null;
-    var v=view();if(!v||v.id!=="v-home"||has("hc")||bd.classList.contains("dys")||bd.classList.contains("easy"))return;
+    var v=view(),pw=v&&$(".x-paths",v);if(pw){pw.style.removeProperty("--rbw");$$(".x-path",pw).forEach(function(e){e.style.removeProperty("--rbe");e.style.removeProperty("--rbt");e.style.removeProperty("--rbf");e.classList.remove("rbj");});}
+    if(!v||v.id!=="v-home"||has("hc")||bd.classList.contains("dys")||bd.classList.contains("easy"))return;
     var g=homeGeo(v);if(!g)return;
+    if(pw){pw.style.setProperty("--rbw",(g.w+2)+"px");var pe2=$$(".x-path",pw);g.tg.forEach(function(t){var e=pe2[t.k];if(e){e.style.setProperty("--rbe",Math.max(0,Math.round(t.c.r-t.xl-2))+"px");e.style.setProperty("--rbf","0px");e.style.setProperty("--rbt",(t.ye-(g.w/2+1)-t.c.y).toFixed(2)+"px");}});}   /* each rule stops where its strand starts to curl, so the strand carries on from it */   /* design D: each column rule is as thick as the strand that lands on it */
     var D=[],ST=[],GS=[];
-    function add(s,n){var q={a:pts(s.join(" "),6),s0:n?plen(s.slice(0,n).join(" ")):0,els:[],p:-9};ymap(q,q.a[0][1]);GS.push(q);return GS.length-1;}
+    function add(s,n){var q={a:pts(s.join(" "),6),s0:n?plen(s.slice(0,n).join(" ")):0,els:[],p:-9};ymap(q,q.a[0][1]);GS.push(q);return GS.length-1;}     function tagc(i,t){GS[i].card=pw?$$(".x-path",pw)[t.k]:null;return i;}
     g.tg.slice().sort(function(p,q){return (p===g.m)-(q===g.m)||g.dep(q)-g.dep(p)||p.L-q.L;}).forEach(function(t){   /* children under the strand they leave, trunk last (on top) */
-      var o=' data-i="'+add(t.s,t.n)+'" pathLength="1" d="'+sub(t.s,t.n)+'"/>';   /* edge and stripes fade into the card's colour along the landing curl, complete at the card's edge */
+      var o=' data-i="'+tagc(add(t.s,t.n),t)+'" pathLength="1" d="'+sub(t.s,t.n)+'"/>';   /* edge and stripes fade into the card's colour along the landing curl, complete at the card's edge */
       if(t.par){var a=pt(t.s[t.n-1]),b=pt(t.par.s[t.n]),q=g.w/2+2,W=g.W,H=f2(g.H);   /* splits are always on a straight run of the parent: clip that run's band + 1 px out of the branch's edge */
         D.push('<clipPath id="rbm'+t.k+'" clipPathUnits="userSpaceOnUse">'+(Math.abs(a[0]-b[0])<.01?'<rect width="'+f2(a[0]-q)+'" height="'+H+'"/><rect x="'+f2(a[0]+q)+'" width="'+f2(W-a[0]-q)+'" height="'+H+'"/>':'<rect width="'+W+'" height="'+f2(a[1]-q)+'"/><rect y="'+f2(a[1]+q)+'" width="'+W+'" height="'+f2(H-a[1]-q)+'"/>')+"</clipPath>");}
-      ["e","a","b","c"].forEach(function(l,j){D.push('<linearGradient id="rbk'+t.k+l+'" gradientUnits="userSpaceOnUse" x1="0" y1="'+f2(t.yv)+'" x2="0" y2="'+f2(t.c.y)+'"><stop offset="0" style="stop-color:var(--rb-'+(j||"edge2")+')"/><stop offset="1" style="stop-color:var(--x-c'+(t.k+1)+')"/></linearGradient>');
+      ["e","a","b","c"].forEach(function(l,j){D.push('<linearGradient id="rbk'+t.k+l+'" gradientUnits="userSpaceOnUse" x1="0" y1="'+f2(t.yv)+'" x2="0" y2="'+f2(t.c.y)+'"><stop offset="0" style="stop-color:var(--rb-'+(j||"edge2")+')"/><stop offset="1" style="stop-color:var(--x-c'+t.cv+')"/></linearGradient>');
         ST.push('<path class="'+l+'" style="stroke:url(#rbk'+t.k+l+')"'+(!j&&t.par?' clip-path="url(#rbm'+t.k+')"':"")+o);});});
       /* a branch's edge stays 1 px clear of the strand it leaves, so the two edges never sit side by side as one thick line */
     var s=document.createElementNS(NS,"svg");s.setAttribute("class","rb-home rb-tasks2");s.setAttribute("aria-hidden","true");s.setAttribute("focusable","false");
@@ -2841,8 +2971,8 @@
      draw out over a stretch of scrolling instead of all at once; routes share their start, so shared runs have the same map */
   function ymap(q,y0){var a=q.a,Y=[y0],S=[0],m=a[0][1],n;for(n=1;n<a.length;n++){m=Math.max(m,a[n][1]);Y.push(Math.max(m,Y[n-1]+K*(a[n][2]-a[n-1][2])));S.push(a[n][2]);}q.Y=Y;q.S=S;q.L=S[S.length-1];}
   function ip(X,W,x){var l=0,h=X.length,m;while(l<h){m=(l+h)>>1;if(X[m]>x)h=m;else l=m+1;}if(!l)return W[0];if(l>=X.length)return W[X.length-1];return W[l-1]+(W[l]-W[l-1])*(x-X[l-1])/(X[l]-X[l-1]);}
-  function paint(){B.gs.forEach(function(q){var d=ip(q.Y,q.S,lam)-q.s0;if(Math.abs(d-q.p)<.05)return;q.p=d;var p=cl(d/Math.max(1,q.L-q.s0)),h=p>.002?"":"hidden";
-    q.els.forEach(function(e){e.style.setProperty("--p",p.toFixed(5));e.style.visibility=h;});});}
+  function paint(){B.gs.forEach(function(q){var d=ip(q.Y,q.S,lam)-q.s0;if(Math.abs(d-q.p)<.05)return;q.p=d;var p=cl(d/Math.max(1,q.L-q.s0)),h=p>.002?"":"hidden";/* Ted, 11 Nov 2026: once a strand is down at its card's top line it joins at once (its last flat run along the line no longer draws out slowly) */if(q.card){if(q.pj==null){var A=q.a,ey=A[A.length-1][1],j=A.length-1;while(j>0&&A[j-1][1]>=ey-3)j--;q.pj=cl((A[j][2]-q.s0)/Math.max(1,q.L-q.s0));}if(p>=q.pj&&p>.002)p=1;}
+    q.els.forEach(function(e){e.style.setProperty("--p",p.toFixed(5));e.style.visibility=h;});if(q.card)q.card.classList.toggle("rbj",p>=.995);});}
   function tick(now){
     raf=0;if(!B)return;var dt=last?Math.min(.034,(now-last)/1000):1/60,tg=B.hi;last=now;
     if(still()){lam=tg;vel=0;}
@@ -2852,7 +2982,14 @@
   }
   function kick(){if(!raf&&B)raf=requestAnimationFrame(tick);}
   function sync(){de.classList.toggle("rb-still",still());}
-  function build(){sync();homeBuild();}
+  /* CWV (9 Nov 2026): load, fonts-ready, ResizeObserver, class changes and the 0/140 ms view timers each called build(), and every call redrew the
+     ribbon (~35 ms on a laptop, ~140 ms on a throttled phone, three times in the first second). A rebuild with unchanged layout draws the same ribbon, so skip it:
+     the signature is the width, the root/body classes and the boxes homeGeo reads. A forced rebuild (homeBuild.done=0: new view, replayed intro) always runs. */
+  var lastSig="";
+  function sig(){var v=view();if(!v||v.id!=="v-home")return "";var q=[de.clientWidth,de.className,bd.className,mq.matches?1:0];
+    [$(".x-paths",v),$("#hPath",v),$(".x-tasks",v),$(".x-hero",v),$("#heroArt svg",v)].concat($$(".x-path",v)).forEach(function(e){if(!e){q.push("-");return;}var r=e.getBoundingClientRect();q.push(f2(r.left),f2(r.top+scrollY),f2(r.width),f2(r.height));});
+    return q.join();}
+  function build(){sync();var s=sig();if(s&&homeBuild.done&&s===lastSig)return;homeBuild();lastSig=sig();}
   function pour(){if(!hold)return;hold=0;clearTimeout(ht);var q=$(".rb-home");if(q)q.classList.add("rb-pour");kick();}
   addEventListener("gamsa:pour",pour);
   addEventListener("scroll",kick,{passive:true});
@@ -2940,11 +3077,13 @@
     return supplyRows(m).sort(function(a,b){return (rank[b.status]||0)-(rank[a.status]||0);})[0];
   }
   /* B-10 (24 Oct 2026): every medicine page says, with the date, whether it is available in Australia, from the daily TGA data */
+  /* the TGA lists some shortages before they start ("anticipated"): the row stays in supply until then, but says so */
+  function expSoon(m){ var x=/shortage is expected from (.+)$/.exec(m&&m.statusLabel||""); return x?"Shortage expected from "+x[1]+(m.expectedReturn&&m.expectedReturn!=="\u2014"?" to "+m.expectedReturn:"")+".":""; }
   function availLine(m){
-    var rows=supplyRows(m), r=supplyFor(m), st=r?(ST[r.status]||ST.unverified):null,
+    var rows=supplyRows(m), r=supplyFor(m), st=r?(ST[r.status]||ST.unverified):null, ex=rows.map(expSoon).filter(Boolean)[0]||"",
         some=r&&HIT[r.status]&&rows.some(function(x){return !HIT[x.status];});
     return '<p class="statusline"><span class="sl-h">Available in Australia?</span>'+
-      (st?'<span class="tag '+st.c+'">'+esc(st.l)+'</span><span class="sl-d">'+(some?'Not every brand or strength. ':'')+'TGA records checked '+esc(DATA.generatedAt)+'.</span>'+
+      (st?'<span class="tag '+st.c+'">'+esc(st.l)+'</span><span class="sl-d">'+(some?'Not every brand or strength. ':'')+(ex?'<b>'+esc(ex)+'</b> ':'')+'TGA records checked '+esc(DATA.generatedAt)+'.</span>'+
           '<a href="#/supply">See supply detail</a>'
          :'<span class="sl-d">Not in the daily TGA check (last run '+esc(DATA.generatedAt)+'). Ask your pharmacist.</span>'+
           '<a href="#/supply">Supply &amp; shortages</a>')+'</p>';
@@ -3027,7 +3166,7 @@
     CURRENT_MED=m.name; CURRENT_MED_T=m.seoTitle||""; PBS_SAID=PBSFULL.test(m.summary||"");
     var seen={}; seen[m.id]=1;
     function C(t){return linkMeds(cite(ilink(esc(t)), "med-"+m.id), seen);}
-    document.getElementById("v-med").innerHTML =
+    V("v-med").innerHTML =
       '<a class="backlink" href="#/medicines">\u2190 Back to all medicines</a>'+
       '<div class="page-head"><h1 tabindex="-1">'+esc(m.name).replace(/Medroxyprogesterone/g,"Medroxy&shy;progesterone")+'</h1>'+
         '<p class="lede">'+C(m.summary)+'</p>'+
@@ -3045,7 +3184,7 @@
         '</ol></nav>'+
       m.sections.map(function(s,i){
         seen = {}; seen[m.id]=1;
-        return '<section class="block'+(s.pro?' pro':'')+'" id="sec-med-'+i+'" tabindex="-1"><h2>'+esc(s.h)+'</h2>'+
+        return '<section class="block'+(s.pro?' pro':'')+'" id="sec-med-'+i+'" tabindex="-1">'+(/^For health professionals/.test(s.h)?'<span id="injection-training"></span>':'')+'<h2>'+esc(s.h)+'</h2>'+
           (s.h==="What is monitored"&&m.bloodTests?btBox(m.bloodTests,C):'')+
           (s.body||[]).map(function(x){return pbsP(x,C);}).join("")+
           (s.h==="Cost and PBS" ? (s.__med=m.id, pbsBlock(s)) : '')+
@@ -3160,7 +3299,9 @@
   }
 
   /* ---------- routing ---------- */
-  var VIEWS={"/":"v-home","/changes":"v-changes","/supply":"v-supply","/medicines":"v-medicines","/med":"v-med","/sightings":"v-sightings","/doses":"v-doses","/monitoring":"v-monitoring","/related-care":"v-related-care","/add-on-therapies":"v-add-on-therapies","/using":"v-using","/pharmacy":"v-pharmacy","/costs":"v-costs","/easy":"v-easy","/easy-guide":"v-easy-guide","/feedback":"v-feedback","/pharmacy-reports":"v-pharmacy-reports","/trans":"v-trans","/clinicians":"v-clinicians","/allies":"v-allies","/clinician-guide":"v-clinician-guide","/ally-guide":"v-ally-guide","/resources":"v-resources","/downloads":"v-downloads","/alerts":"v-alerts","/privacy":"v-privacy","/accessibility":"v-accessibility","/disclaimer":"v-disclaimer","/search":"v-search"};
+  var SEOT={"/costs":"Hormone costs and the PBS \u00B7 GAMSA, South Australia","/doses":"Hormone doses and formulations \u00B7 GAMSA, South Australia"};
+  var ANCH={"clinician-guide-0":"injection-training","clinician-guide-3":"monitoring-schedule","clinician-guide-4":"authority-card","clinician-guide-6":"prescribing-references","clinician-guide-7":"data-kept-current"};  /* named anchors for menu links; the numbered #sec-... ids keep working */
+  var VIEWS={"/":"v-home","/changes":"v-changes","/supply":"v-supply","/medicines":"v-medicines","/med":"v-med","/sightings":"v-sightings","/doses":"v-doses","/monitoring":"v-monitoring","/related-care":"v-related-care","/add-on-therapies":"v-add-on-therapies","/using":"v-using","/pharmacy":"v-pharmacy","/costs":"v-costs","/easy":"v-easy","/easy-guide":"v-easy-guide","/feedback":"v-feedback","/pharmacy-reports":"v-pharmacy-reports","/trans":"v-trans","/clinicians":"v-clinicians","/allies":"v-allies","/clinician-guide":"v-clinician-guide","/ally-guide":"v-ally-guide","/resources":"v-resources","/downloads":"v-downloads","/alerts":"v-alerts","/privacy":"v-privacy","/accessibility":"v-accessibility","/disclaimer":"v-disclaimer","/search":"v-search","/parents":"v-parents","/starting-hormones":"v-starting-hormones"};
   if(CONTENT.about) VIEWS["/about"]="v-about";   /* B-09: only when build.py found content/about.json */
   var nav=document.getElementById("nav"), navbtn=document.getElementById("navbtn");
   /* Routing. The hosted site uses real paths (/costs, /medicines/<id>) so each page
@@ -3212,11 +3353,11 @@
     });
   }
   var lastRoute=null;
-  var VIEWGRP={"/trans":"trans","/supply":"trans","/medicines":"trans","/med":"trans","/sightings":"trans","/costs":"trans","/doses":"trans","/monitoring":"trans","/related-care":"trans","/add-on-therapies":"trans","/using":"trans","/pharmacy":"trans","/easy":"trans","/easy-guide":"trans",
-    "/clinicians":"clin","/clinician-guide":"clin","/pharmacy-reports":"clin","/alerts":"clin","/allies":"allies","/ally-guide":"allies",
-    "/resources":"res","/downloads":"res","/changes":"res","/about":"res","/search":"res","/privacy":"res","/accessibility":"res","/disclaimer":"res","/feedback":"res"};
-  var TITLES={"/":"Gender-Affirming Medicines South Australia","/changes":"What\u2019s changed","/about":(CONTENT.about||{}).title||"About GAMSA","/supply":"Supply & shortages","/doses":"Medicines, doses and formulations","/monitoring":"Blood tests and monitoring","/related-care":"Related care and considerations","/add-on-therapies":"Add-on therapies",
-    "/using":"How to use your medicine","/pharmacy":"Working with your pharmacy","/costs":"Costs and the PBS","/easy":"Easy Read guides","/easy-guide":"Easy Read","/feedback":"Send feedback","/pharmacy-reports":"Pharmacy stock reports","/trans":"Trans and gender diverse people","/clinicians":"Clinicians","/allies":"Family, friends and allies","/clinician-guide":"For clinicians","/ally-guide":"For family, friends and allies","/resources":"Resources","/downloads":"Guides and printables","/alerts":"Shortage alerts","/privacy":"Privacy","/accessibility":"Accessibility","/disclaimer":"Disclaimer","/search":"Search","/medicines":"Medicines A\u2013Z","/med":"Medicine","/sightings":"Patient sightings"};
+  var VIEWGRP={"/trans":"trans","/supply":"sup","/medicines":"trans","/med":"trans","/sightings":"sup","/costs":"trans","/doses":"trans","/monitoring":"trans","/related-care":"trans","/add-on-therapies":"trans","/using":"trans","/pharmacy":"trans","/easy":"trans","/easy-guide":"trans",
+    "/clinicians":"clin","/clinician-guide":"clin","/pharmacy-reports":"sup","/alerts":"sup","/allies":"allies","/ally-guide":"allies","/parents":"allies","/starting-hormones":"clin",
+    "/resources":"about","/downloads":"trans","/changes":"about","/about":"about","/search":"about","/privacy":"about","/accessibility":"about","/disclaimer":"about","/feedback":"about"};
+  var TITLES={"/":"Gender-Affirming Medicines South Australia","/changes":"What\u2019s changed","/about":(CONTENT.about||{}).title||"About GAMSA","/supply":"Supply & shortages","/doses":"Doses and formulations","/monitoring":"Blood tests and monitoring","/related-care":"Fertility, PrEP and surgery","/add-on-therapies":"Add-on therapies",
+    "/using":"How to use your medicine","/pharmacy":"Working with your pharmacy","/costs":"Costs and the PBS","/easy":"Easy Read guides","/easy-guide":"Easy Read","/feedback":"Send feedback","/pharmacy-reports":"Pharmacy stock reports","/trans":"Your medicines: start here","/clinicians":"Clinicians","/allies":"Family & carers: start here","/clinician-guide":"Clinician reference","/ally-guide":"Helping an adult with their medicines","/resources":"Other services and links","/downloads":"Guides to print","/alerts":"Shortage alerts","/privacy":"Privacy","/accessibility":"Accessibility","/disclaimer":"Disclaimer","/search":"Search","/medicines":"Medicines A\u2013Z","/med":"Medicine","/sightings":"Stock seen by patients","/parents":"Parents and carers of under-18s","/starting-hormones":"Starting hormones: a GP guide"};
   function route(){
     var h=curRoute(), anchor=curAnchor(), qs="";
     if(!PATHMODE){ var ai=h.indexOf("#"); if(ai>-1) h=h.slice(0,ai); }
@@ -3260,7 +3401,7 @@
     feedFor(h);
     if(h==="/") renderStats();
     setCite();
-    document.title = notFound ? "Page not found \u2014 GAMSA" : (h==="/med"&&CURRENT_MED_T) ? CURRENT_MED_T : fullTitle(h==="/med"?(CURRENT_MED||"Medicine").split(" (")[0]:h==="/easy-guide"?(CURRENT_GUIDE+" (Easy Read)"):TITLES[h]);
+    document.title = notFound ? "Page not found \u2014 GAMSA" : (h==="/med"&&CURRENT_MED_T) ? CURRENT_MED_T : SEOT[h] ? SEOT[h] : fullTitle(h==="/med"?(CURRENT_MED||"Medicine").split(" (")[0]:h==="/easy-guide"?(CURRENT_GUIDE+" (Easy Read)"):TITLES[h]);
     nav.classList.remove("open");navbtn.setAttribute("aria-expanded","false"); ngClose();
     /* unknown address: say so above the page shown instead (the server already answered 404) */
     var nfOld=document.getElementById("x404"); if(nfOld) nfOld.remove();
@@ -3310,23 +3451,27 @@
   var ER = function(aud){ return (CONTENT.easyread.guides||[]).filter(function(g){ return (g.audience||"you")===aud; }); };
   var NAVCFG = {
     tgd: [
-      {h:"Start here", l:[{t:"Overview", h:"#/trans"}, {t:"Medicines A\u2013Z", h:"#/medicines"}, {t:"Supply & shortages", h:"#/supply"}, {t:"Patient sightings", h:"#/sightings"}]},
-      {h:"Guides", l:[{t:"Costs and the PBS", h:"#/costs"}, {t:"Medicines, doses and formulations", h:"#/doses"}, {t:"Blood tests and monitoring", h:"#/monitoring"}, {t:"Related care and considerations", h:"#/related-care"}, {t:"Add-on therapies", h:"#/add-on-therapies"}, {t:"How to use your medicine", h:"#/using"}, {t:"Working with your pharmacy", h:"#/pharmacy"}]},
-      {h:"Easy Read", l:ER("you").slice(0,5).map(function(g){ return {t:g.title, h:"#/easy/"+g.id}; }).concat([{t:"All Easy Read guides", h:"#/easy", more:true}])}
+      {h:"Start", l:[{t:"Start here", h:"#/trans"}, {t:"Medicines A\u2013Z", h:"#/medicines"}, {t:"Doses and formulations", h:"#/doses"}]},
+      {h:"Get it and pay for it", l:[{t:"Costs and the PBS", h:"#/costs"}, {t:"Working with your pharmacy", h:"#/pharmacy"}]},
+      {h:"Use it and check it", l:[{t:"How to use your medicine", h:"#/using"}, {t:"Blood tests", h:"#/monitoring"}]},
+      {h:"More", l:[{t:"Add-on therapies", h:"#/add-on-therapies"}, {t:"Fertility, PrEP and surgery", h:"#/related-care"}, {t:"Easy Read guides", h:"#/easy"}, {t:"Guides to print", h:"#/downloads"}]}
     ],
-    clin: [
-      {h:"Start here", l:[{t:"Overview", h:"#/clinicians"}, {t:"For clinicians", h:"#/clinician-guide"}, {t:"Pharmacist stock register", h:"#/pharmacy-reports"}]},
-      {h:"Tools", l:[{t:"Injection training package", h:"#/med/testosterone-undecanoate#sec-med-9"}, {t:"Monitoring schedule", h:"#/clinician-guide#sec-clinician-guide-3"}, {t:"Blood tests and monitoring", h:"#/monitoring"}, {t:"PBS Authority wording card (PDF, 1 page)", h:"/clinicians/pbs-authority-wording-card.pdf"}, {t:"Shortage alerts", h:"#/alerts"}]},
-      {h:"References", l:[{t:"Prescribing references", h:"#/clinician-guide#sec-clinician-guide-6"}, {t:"How the data is kept current", h:"#/clinician-guide#sec-clinician-guide-7"}, {t:"Costs and the PBS", h:"#/costs"}]}
+    sup: [
+      {h:"Supply today", l:[{t:"Shortages today", h:"#/supply"}, {t:"Shortage alerts (email or RSS)", h:"#/alerts"}]},
+      {h:"Stock reports", l:[{t:"Stock seen by patients", h:"#/sightings"}, {t:"Pharmacy stock reports", h:"#/pharmacy-reports"}]}
     ],
     allies: [
-      {h:"Start here", l:[{t:"Overview", h:"#/allies"}, {t:"For family, friends and allies", h:"#/ally-guide"}, {t:"Pharmacy visit checklist (PDF, 1 page)", h:"/allies/pharmacy-visit-checklist.pdf"}]},
-      {h:"Easy Read for helpers", l:ER("allies").map(function(g){ return {t:g.title, h:"#/easy/"+g.id}; })},
-      {h:"Also useful", l:[{t:"Supply & shortages", h:"#/supply"}, {t:"Costs and the PBS", h:"#/costs"}, {t:"Resources", h:"#/resources"}]}
+      {h:"Start here", l:[{t:"Start here", h:"#/allies"}, {t:"Parents and carers of under-18s", h:"#/parents"}, {t:"Helping an adult with their medicines", h:"#/ally-guide"}, {t:"Pharmacy visit checklist (PDF, 1 page)", h:"/allies/pharmacy-visit-checklist.pdf"}]},
+      {h:"Easy Read for helpers", l:ER("allies").slice(0,3).map(function(g){ return {t:g.title, h:"#/easy/"+g.id}; })}
+    ],
+    clin: [
+      {h:"Start here", l:[{t:"Start here", h:"#/clinicians"}, {t:"Starting hormones: a GP guide", h:"#/starting-hormones"}, {t:"Clinician reference", h:"#/clinician-guide"}]},
+      {h:"Toolkit", l:[{t:"PBS Authority wording card (PDF, 1 page)", h:"/clinicians/pbs-authority-wording-card.pdf"}, {t:"Injection training package", h:"#/med/testosterone-undecanoate#injection-training"}, {t:"Monitoring schedule", h:"#/clinician-guide#monitoring-schedule"}, {t:"Blood tests", h:"#/monitoring"}]},
+      {h:"Supply", l:[{t:"Pharmacy stock reports", h:"#/pharmacy-reports"}, {t:"Shortage alerts", h:"#/alerts"}]}
     ],
     res: [
-      {h:"Resources", l:[{t:"All resources", h:"#/resources"}, {t:"Guides and printables", h:"#/downloads"}, {t:"Supply and medicines", h:"#/resources#sec-resources-0"}, {t:"Costs and the PBS", h:"#/resources#sec-resources-1"}, {t:"Care and support in SA", h:"#/resources#sec-resources-2"}, {t:"National information", h:"#/resources#sec-resources-3"}]},
-      {h:"This site", l:(CONTENT.about?[{t:"About GAMSA", h:"#/about"}]:[]).concat([{t:"Search", h:"#/search"}, {t:"Send feedback", h:"#/feedback"}, {t:"What\u2019s changed", h:"#/changes"}, {t:"Accessibility", h:"#/accessibility"}, {t:"Privacy", h:"#/privacy"}, {t:"Disclaimer", h:"#/disclaimer"}])}
+      {h:"About", l:(CONTENT.about?[{t:"About GAMSA", h:"#/about"}]:[]).concat([{t:"Other services and links", h:"#/resources"}, {t:"What\u2019s changed", h:"#/changes"}, {t:"Search", h:"#/search"}, {t:"Contact and feedback", h:"#/feedback"}])},
+      {h:"Policies", l:[{t:"Accessibility", h:"#/accessibility"}, {t:"Privacy", h:"#/privacy"}, {t:"Disclaimer", h:"#/disclaimer"}]}
     ]
   };
   (function(){
@@ -3395,9 +3540,9 @@
   function buildIndex(){
     var ix=[];
     function add(kind, title, route, text, sub){ ix.push({k:kind, t:title, h:route, x:plain(text), s:sub||""}); }
-    var GUIDES={dosing:["/doses","Medicines guide"],monitoring:["/monitoring","Blood tests guide"],related:["/related-care","Related care"],addons:["/add-on-therapies","Add-on therapies"],administration:["/using","How-to-use guide"],costs:["/costs","Costs guide"],pharmacy:["/pharmacy","Pharmacy guide"],downloads:["/downloads","Guides and printables"],clinicians:["/clinician-guide","Clinicians"],allies:["/ally-guide","Allies"],privacy:["/privacy","About this site"],accessibility:["/accessibility","About this site"],disclaimer:["/disclaimer","About this site"],resources:["/resources","Resources"]};
+    var GUIDES={dosing:["/doses","Doses and formulations"],monitoring:["/monitoring","Blood tests guide"],related:["/related-care","Fertility, PrEP and surgery"],addons:["/add-on-therapies","Add-on therapies"],administration:["/using","How-to-use guide"],costs:["/costs","Costs guide"],pharmacy:["/pharmacy","Pharmacy guide"],downloads:["/downloads","Guides and printables"],clinicians:["/clinician-guide","Clinicians"],allies:["/ally-guide","Allies"],parents:["/parents","Parents and carers"],startinghormones:["/starting-hormones","Clinicians"],privacy:["/privacy","About this site"],accessibility:["/accessibility","About this site"],disclaimer:["/disclaimer","About this site"],resources:["/resources","Resources"]};
     Object.keys(GUIDES).forEach(function(k){
-      var c=CONTENT[k], r=GUIDES[k][0], v=r.slice(1);
+      var c=CONTENT[k], r=GUIDES[k][0], v=r.slice(1); if(!c) return;
       add(GUIDES[k][1], c.title, "#"+r, c.intro);
       c.sections.forEach(function(s,i){ add(GUIDES[k][1], s.h, "#"+r+"#sec-"+v+"-"+i, (s.body||[]).join(" ")+" "+(s.list||[]).join(" ")+" "+(s.note||"")+" "+(s.downloads||[]).map(function(d){ return d.t+" "+(d.d||"")+" "+(d.items||[]).map(function(y){ return y.t; }).join(" "); }).join(" "), c.title); });
     });
@@ -3409,7 +3554,7 @@
       add("Easy Read", g.title, "#/easy/"+g.id, g.subtitle+" "+(g.sections||[]).map(function(s){ return (s.h||"")+" "+(s.text||s.body||[]).toString(); }).join(" "));
     });
     add("Supply", "Supply & shortages", "#/supply", "shortage short supply out of stock TGA pharmacy stock reports patient sightings substitution alternative brand");
-    add("Site", "Pharmacist stock register", "#/pharmacy-reports", "pharmacists post stock reports register AHPRA");
+    add("Site", "Pharmacy stock reports", "#/pharmacy-reports", "pharmacists post stock reports register AHPRA");
     add("Site", "Send feedback", "#/feedback", "report a mistake something missing accessibility problem contact");
     add("Site", "What\u2019s changed", "#/changes", "updated changes new dated list "+chgAll().map(function(c){ return c.text; }).join(" "));
     if(CONTENT.about){ var ab=CONTENT.about; add("About this site", ab.title||"About GAMSA", "#/about", [].concat(ab.intro||[]).join(" "));
@@ -3519,7 +3664,7 @@
       var li=a.closest("li"); var c=li?li.textContent.replace(/View on \S+\s*\(opens in a new tab\)/g,"").replace(/Download[^)]*\)/g,"").replace(/\s+/g," ").trim():"";
       var sg=c.replace(/^\d+\.?\s*/,"").split(/\. (?=[A-Z0-9])/).slice(0,3).map(function(x){ return x.trim().replace(/\.$/,""); })
         .filter(function(x){ return x && !/^[A-Z][A-Za-z .]+: /.test(x) && !/^Accessed\b/.test(x); });   /* skip "City: Publisher; year" and "Accessed …" */
-      c=sg.reduce(function(m,x){ return x.length>m.length?x:m; },""); if(c.length>90) c=c.slice(0,88)+"\u2026";
+      c=sg.reduce(function(m,x){ return x.length>m.length?x:m; },""); var sl=/ht-prescribing-guideline/.test(h)?"Equinox hormone prescribing guide for GPs":/Standards_of_Care/.test(h)?"AusPATH Australian Standards of Care":/ACON_GAHT_GP_Infographic/.test(h)?"ACON hormone therapy guide for GPs":/Gender%20Standards%20Booklet/.test(h)?"RCH Standards of Care for trans children and adolescents":""; c=sl||(c.length>70?c.slice(0,c.lastIndexOf(" ",66))+"\u2026":c);   /* Ted, 10 Nov 2026: no labels cut mid-word */
       t=(c||fileName(h))+(/^https?:/.test(h)?" ("+(/\.pdf(\?|$)/i.test(h)?"PDF, ":"")+"on "+(h.split("/")[2]||"").replace(/^www\./,"")+")":/\.zip$/i.test(h)?" (zip file)":" (PDF)");
     } else if(!/pdf|zip/i.test(t)) t+=(/\.zip$/i.test(h)?" (zip file)":/\.pdf$/i.test(h)?" (PDF)":"");
     return t;
@@ -4425,7 +4570,7 @@
     var de=document.documentElement, hdr=document.querySelector("body>header");
     function sv(p,w){ return '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="'+p+'" fill="none" stroke="currentColor" stroke-width="'+(w||2.2)+'" stroke-linecap="round" stroke-linejoin="round"/></svg>'; }
     var IX=sv("M6 6l12 12M18 6 6 18"), IS=sv("M10.5 4a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM15.5 15.5 21 21"), IA=sv("M5 12h14m-6-6 6 6-6 6"), IB=sv("M19 12H5m6-6-6 6 6 6"), IC=sv("m9 6 6 6-6 6");
-    var GD={tgd:"Your medicines in plain language.",clin:"Tools behind the patient pages.",allies:"How to help without taking over.",res:"Australian bodies, guidelines and support."};
+    var GD={tgd:"Your medicines in plain language.",sup:"Shortages today and where stock has been seen.",clin:"Tools behind the patient pages.",allies:"How to help without taking over.",res:"Who runs GAMSA, other services and site policies."};
     var G=[].map.call(nav.querySelectorAll(".ng"),function(g){ return {k:g.dataset.g, name:g.querySelector(".ng-btn").textContent.trim(), cls:(g.className.match(/c-\w+/)||[""])[0], cols:NAVCFG[g.dataset.g]||[]}; });
     var ALL=[]; G.forEach(function(g){ g.cols.forEach(function(c){ c.l.forEach(function(l){ if(/^#\/[^#]*$/.test(l.h) && !ALL.some(function(x){return x.h===l.h;})) ALL.push({t:l.t.replace(/ →$/,""),h:l.h,g:g}); }); }); });
     /* a page that is also a group's overview (e.g. Resources) belongs to that group in the breadcrumb */
@@ -4436,19 +4581,29 @@
       ALL.splice.apply(ALL,[last+1,0].concat(add)); })();
     function cur(){ return "#"+(PATHMODE ? (location.pathname.replace(/\/$/,"")||"/") : (location.hash.split("#")[1]||"/").split("?")[0]); }
     /* audience bar: two quick links at the end */
-    nav.insertAdjacentHTML("beforeend",'<a class="x-q" href="#/medicines" data-link>Medicines A–Z</a><a class="x-q" href="#/supply" data-link>Supply today</a>');
+    nav.insertAdjacentHTML("beforeend",'<a class="x-q" href="#/medicines" data-link>Medicines A–Z</a>');
     /* pop-up menu */
     var mn=document.createElement("div"); mn.className="x-menu"; mn.id="xMenu"; mn.hidden=true;
     mn.innerHTML='<div class="x-menu-bg"></div><div class="x-menu-p" role="dialog" aria-modal="true" aria-label="Site menu"><div class="x-menu-top"><p class="x-menu-h">Menu</p>'+
       '<form class="x-msearch" role="search" aria-label="Search, in menu"><label class="sr-only" for="xmq">Search this site</label>'+IS+'<input id="xmq" type="search" autocomplete="off" placeholder="Search the whole site"><button type="submit" aria-label="Search">'+IA+'</button></form>'+
       '<button class="x-close" type="button" aria-label="Close menu">'+IX+'</button></div><div class="x-menu-g">'+
-      G.map(function(g){ return '<section class="x-mg '+g.cls+'"><h2>'+esc(g.name)+'</h2><p class="x-mg-d">'+esc(GD[g.k]||"")+'</p>'+g.cols.map(function(c){ return '<h3>'+esc(c.h)+'</h3><ul>'+c.l.map(function(l){ return '<li><a href="'+l.h+'"'+(/\.pdf$/.test(l.h)?' download':'')+'>'+fileLabel(esc(l.t), l.h)+'</a></li>'; }).join("")+'</ul>'; }).join("")+'</section>'; }).join("")+
+      G.map(function(g){ return '<section class="x-mg '+g.cls+'"><h2 data-n="'+esc(g.name)+'">'+esc(g.name)+'</h2><p class="x-mg-d">'+esc(GD[g.k]||"")+'</p><div class="x-acc-body">'+g.cols.map(function(c){ return '<h3>'+esc(c.h)+'</h3><ul>'+c.l.map(function(l){ return '<li><a href="'+l.h+'"'+(/\.pdf$/.test(l.h)?' download':'')+'>'+fileLabel(esc(l.t), l.h)+'</a></li>'; }).join("")+'</ul>'; }).join("")+'</div></section>'; }).join("")+
       '</div><p class="x-menu-foot"><a href="#/">Home</a><a href="#/search">Search</a><a href="#/feedback">Send feedback</a><a href="#/accessibility">Accessibility</a><a href="#/privacy">Privacy</a><a href="#/disclaimer">Disclaimer</a></p></div>';
     document.body.appendChild(mn); fixLinks(mn); fixLinks(nav);
+     /* Ted, 10 Nov 2026, phone menu option A: on phones each group opens on tap (one at a time, the current page's group open); desktop shows everything */
+     var accMq=window.matchMedia("(max-width:640px)"),accGs=[].slice.call(mn.querySelectorAll(".x-mg")),CHEV='<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+     function accSet(g,o){ var bt=g.querySelector(".x-acc-b"); g.classList.toggle("open",o); if(bt) bt.setAttribute("aria-expanded",o?"true":"false"); g.querySelector(".x-acc-body").hidden=!o; }
+     function accMode(){ var opened=0; accGs.forEach(function(g,i){ var h=g.querySelector("h2"), n=h.getAttribute("data-n"), w=g.querySelector(".x-acc-body"); w.id="xacc"+i;
+       if(accMq.matches){ if(!h.querySelector("button")){ h.innerHTML='<button type="button" class="x-acc-b" aria-controls="xacc'+i+'"><span>'+esc(n)+'</span>'+CHEV+'</button>';
+           h.querySelector("button").onclick=function(){ var o=!g.classList.contains("open"); accGs.forEach(function(x){ accSet(x,false); }); if(o) accSet(g,true); }; }
+         var c=cur(), cp=c.replace(/^#/,""); var hit=!opened && [].some.call(g.querySelectorAll("a"),function(a){ var hh=a.getAttribute("href"); return hh===c||hh===cp; }); if(hit) opened=1; accSet(g,hit); }
+       else { h.textContent=n; g.classList.remove("open"); w.hidden=false; } }); }
+     accMode(); if(accMq.addEventListener) accMq.addEventListener("change",accMode);
+
     navbtn.setAttribute("aria-controls","xMenu"); navbtn.setAttribute("aria-haspopup","dialog");
     navbtn.innerHTML=sv("M4 7h16M4 12h16M4 17h11")+"<span>Menu</span>";
     var lastY=0;
-    function menu(on){ mn.hidden=!on; de.classList.toggle("x-lock",on); navbtn.setAttribute("aria-expanded",on?"true":"false");
+    function menu(on){ if(on) accMode(); mn.hidden=!on; de.classList.toggle("x-lock",on); navbtn.setAttribute("aria-expanded",on?"true":"false");
       if(on){ ngClose(); setTimeout(function(){ mn.querySelector(".x-close").focus(); },20); } else if(mn.contains(document.activeElement)) navbtn.focus({preventScroll:true}); }
     navbtn.addEventListener("click",function(){ menu(mn.hidden); });
     mn.querySelector(".x-close").onclick=function(){ menu(false); };
@@ -4516,7 +4671,7 @@
       var ph=v.querySelector(":scope > .page-head, :scope > .er-cover");
       if(ph && !v.querySelector(":scope > .x-crumb")){ var g=me&&me.g, ov=g&&g.cols[0]&&g.cols[0].l[0];
         var bc=document.createElement("nav"); bc.className="x-crumb"; bc.setAttribute("aria-label","Breadcrumb");
-        bc.innerHTML='<ol><li><a href="#/">Home</a></li>'+(ov&&ov.h!==h?'<li><a href="'+ov.h+'">'+esc(g.name)+'</a></li>':'')+(v.id==="v-med"?'<li><a href="#/medicines">Medicines A–Z</a></li>':'')+'<li aria-current="page" title="'+esc(((ph.querySelector("h1")||{}).textContent||"").trim())+'">'+esc(((ph.querySelector("h1")||{}).textContent||"").trim())+'</li></ol>';
+        bc.innerHTML='<ol><li><a href="#/">Home</a></li>'+(ov&&ov.h!==h?'<li><a href="'+ov.h+'">'+esc(g.name)+'</a></li>':'')+(v.id==="v-med"?'<li><a href="#/medicines">Medicines A–Z</a></li>':'')+'<li aria-current="page">'+esc(me?(ov&&ov.h===h?g.name:me.t):((ph.querySelector("h1")||{}).textContent||"").trim())+'</li></ol>';   /* Ted, 10 Nov 2026 (Fable review): breadcrumb = menu name, so menu, breadcrumb and tab agree */
         v.querySelectorAll(".backlink").forEach(function(bl){ bl.hidden=true; });
         v.insertBefore(bc,v.firstChild); fixLinks(bc); }
       var ot=v.querySelector(".onthis");
@@ -4535,14 +4690,22 @@
         if(mi>=0){ var mp=ML[mi-1], mn2=ML[mi+1], mg=document.createElement("nav"); mg.className="x-pager"; mg.setAttribute("aria-label","Previous and next medicine");
           mg.innerHTML=(mp?'<a class="p" href="#/med/'+esc(mp.id)+'">'+IB+'<span><small>Previous medicine</small><b>'+esc(mp.name)+'</b></span></a>':'<i></i>')+(mn2?'<a class="n" href="#/med/'+esc(mn2.id)+'"><span><small>Next medicine</small><b>'+esc(mn2.name)+'</b></span>'+IA+'</a>':'');
           v.appendChild(mg); fixLinks(mg); } }
-      if(me && !v.querySelector(".x-pager")){ var p=ALL[k-1], nx=ALL[k+1], pg=document.createElement("nav"); pg.className="x-pager"; pg.setAttribute("aria-label","Previous and next page");
+      if(me && !v.querySelector(".x-pager")){ var p=ALL[k-1], nx=ALL[k+1]; if(p&&p.g!==me.g)p=null; if(nx&&nx.g!==me.g)nx=null; var pg=document.createElement("nav");   /* Ted, 10 Nov 2026: no jumping into another audience */ pg.className="x-pager"; pg.setAttribute("aria-label","Previous and next page");
         pg.innerHTML=(p?'<a class="p" href="'+p.h+'">'+IB+'<span><small>Previous</small><b>'+esc(p.t)+'</b></span></a>':'<i></i>')+(nx?'<a class="n" href="'+nx.h+'"><span><small>Next</small><b>'+esc(nx.t)+'</b></span>'+IA+'</a>':'');
-        v.appendChild(pg); fixLinks(pg); }
+        if(p||nx){ v.appendChild(pg); fixLinks(pg); } }
       if(!v.querySelector(".x-fb") && v.id!=="v-feedback"){ var fb=document.createElement("p"); fb.className="x-fb"; fb.innerHTML='Something missing or wrong on this page? <a href="#/feedback">Let us know</a>'; v.appendChild(fb); fixLinks(fb); }
     }
     /* run once straight away (before first paint) so the breadcrumb, folded contents, pager and feedback line do not push the page and footer down later (layout shift); the 60 ms pass catches views drawn after the route event */
     onNav(function(){ furnish(); setTimeout(furnish,60); }); furnish(); setTimeout(furnish,60);
   })();
+  /* Ted, 10 Nov 2026: the Guides "Start here" links line up across each row (any width or text size) */
+  (function(){var ro=null,w0=null;function eq(){var w=document.querySelector("#v-home .x-paths.gd");if(!w)return;var cs=w.querySelectorAll(".x-path"),rows={};
+    cs.forEach(function(c){var p=c.querySelector(":scope>p");if(p)p.style.minHeight="";});
+    if(getComputedStyle(w).gridTemplateColumns.split(" ").length<2)return;
+    cs.forEach(function(c){var p=c.querySelector(":scope>p"),a=c.querySelector(":scope>.x-pmore");if(!p||!a)return;var k=Math.round(c.offsetTop);(rows[k]=rows[k]||[]).push([p,a]);});
+    Object.keys(rows).forEach(function(k){var r=rows[k],m=0;r.forEach(function(x){m=Math.max(m,x[1].offsetTop);});r.forEach(function(x){var d=m-x[1].offsetTop;if(d>.5)x[0].style.minHeight=(x[0].offsetHeight+d)+"px";});});}
+    function hook(){var w=document.querySelector("#v-home .x-paths.gd");if(!w||w===w0)return eq();w0=w;if(ro)ro.disconnect();if(window.ResizeObserver){ro=new ResizeObserver(function(){requestAnimationFrame(eq);});ro.observe(w);}eq();}
+    onNav(function(){setTimeout(hook,0);});hook();})();
   /* ---------- B-14: dated "Updated" notes and the What's changed page, both from content/changes.json ---------- */
   /* content/changes.json is one list: [{"date":"YYYY-MM-DD","version":"v19.0","pages":["/doses","/medicines/<id>"],"text":"..."}].
      Functions only (no top-level vars): the first route() runs before this point of the script. */
@@ -4559,7 +4722,7 @@
   function renderChanges(){
     var g={}, o=[]; chgAll().forEach(function(c){ if(!g[c.date]){ g[c.date]=[]; o.push(c.date); } g[c.date].push(c); });
     var el=document.getElementById("v-changes");
-    el.innerHTML='<div class="page-head"><p class="kicker">About this site</p><h1 tabindex="-1">What’s changed</h1><p class="lede">Dated changes to the information on this site, newest first. Small fixes to spelling or layout are not listed.</p></div>'+
+    V(el).innerHTML='<div class="page-head"><p class="kicker">About this site</p><h1 tabindex="-1">What’s changed</h1><p class="lede">Dated changes to the information on this site, newest first. Small fixes to spelling or layout are not listed.</p></div>'+
       o.map(function(d){ return '<section class="block chg-day" id="chg-'+d+'" tabindex="-1"><h2>'+chgLong(d)+'</h2><ul class="chg-list" role="list">'+
         g[d].map(function(c){
           var L=(c.pages||[]).map(function(p){ var t=chgTitle(p); return t ? '<a href="#'+esc(fromPath(p))+'">'+esc(t)+'</a>' : ''; }).filter(Boolean);
@@ -4585,7 +4748,7 @@
   function renderAbout(){
     var a=CONTENT.about||{}, el=document.getElementById("v-about"), intro=[].concat(a.intro||[]), S=a.sections||[];
     function C(t){ return ilink(esc(t)); }
-    el.innerHTML='<div class="page-head"><p class="kicker">About this site</p><h1 tabindex="-1">'+esc(a.title||"About GAMSA")+'</h1>'+
+    V(el).innerHTML='<div class="page-head"><p class="kicker">About this site</p><h1 tabindex="-1">'+esc(a.title||"About GAMSA")+'</h1>'+
         intro.map(function(p,i){ return '<p'+(i?'':' class="lede"')+'>'+C(p)+'</p>'; }).join("")+'</div>'+
       (S.length>1?'<nav class="onthis" id="onthis-about" tabindex="-1" aria-label="On this page"><h2>On this page</h2><ol>'+
         S.map(function(s,i){ return '<li><a href="#sec-about-'+i+'">'+esc(s.h)+'</a></li>'; }).join("")+'</ol></nav>':'')+

@@ -49,7 +49,7 @@ for f in glob.glob("content/*.json"):
     badlinks += [f+": "+x.group(0)[:60] for x in re.finditer(r"\[[^\]]*\]\([^)]*\)", txt) if not pat.fullmatch(x.group(0))]
     if "sections" in c:
         refs = {r["n"] for r in c.get("references", [])}; cited = set()
-        for g in re.findall(r"\[(\d+(?:,\s*\d+)*)\]", json.dumps(c["sections"], ensure_ascii=False)): cited |= {int(x) for x in g.split(",")}
+        for g in re.findall(r"\[(\d+(?:,\s*(?:\d+|pp?\d[^\],()]*(?:\([^)]*\))?))*)\]", json.dumps(c["sections"], ensure_ascii=False)): cited |= {int(x) for x in re.split(r",\s*", g) if x.isdigit()}
         if cited - refs: badrefs.append(f"{f} cites missing {sorted(cited-refs)}")
         if refs - cited: badrefs.append(f"{f} never cites {sorted(refs-cited)}")
 step("content links render", not badlinks, "; ".join(badlinks[:3]))

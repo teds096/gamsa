@@ -15,7 +15,11 @@ def _nat(t): return [(0, int(x), "") if x.isdigit() else (1, 0, x.lower()) for x
 meds["medicines"].sort(key=lambda m: (-_since(m), (m.get("genericName") or m.get("brand") or "").lower(), (m.get("brand") or "").lower(), _nat(m.get("strengthLabel"))))
 payload = {"generatedAt": meds["generatedAt"],
            "medicines": [{k:m[k] for k in KEEP if k in m} for m in meds["medicines"]]}
+NEW_PAGES = True    # v19.6 switch: set True to ship /parents and /starting-hormones (menus, footer, sitemap, pages) once Ted approves; text is in content/parents.json, content/startinghormones.json and the Easy Read guide 'parents' (from claude/v19.6-prep/new-pages-draft.md)
+NEWP = ("/parents", "/starting-hormones")
 content = {k: json.loads((R/f"content/{k}.json").read_text()) for k in ("dosing","administration","costs","easyread","pharmacy","clinicians","allies","resources","privacy","accessibility","disclaimer","addons","monitoring","related","downloads")}
+if NEW_PAGES: content.update({k: json.loads((R/f"content/{k}.json").read_text()) for k in ("parents","startinghormones")})
+else: content["easyread"]["guides"] = [g for g in content["easyread"]["guides"] if g["id"] != "parents"]; content["easyread"]["wordlist"] = [w for w in content["easyread"]["wordlist"] if w["w"] != "Referral"]   # v19.6: the /easy/parents guide (and its word) ship with /parents
 medinfo = json.loads((R/"content/medicines.json").read_text())
 # v19.5 R5b (7 Nov 2026): search titles, descriptions and extra FAQ questions per medicine page live in content/seo.json
 # (so medicines.json and the Easy Read sources stay as they are). seoTitle is copied in so the app keeps the same title.
@@ -52,7 +56,7 @@ def _changes():
     if out != cur:
         f.write_text("[\n" + ",\n".join(" " + json.dumps(e, ensure_ascii=False) for e in out) + "\n]\n")
     return out
-content["changes"] = _changes()
+content["changes"] = [e for e in _changes() if NEW_PAGES or not set(e["pages"]) & set(NEWP)]   # v19.6: the two new-page lines show only with the switch on (the file keeps them)
 # B-09 (24 Oct 2026): the About page, content/about.json {"title","intro":[...],"updated","sections":[{"h","paras","bullets"}]}.
 # Optional: with no file (or a file that does not parse yet) the build skips /about and /about keeps redirecting to /disclaimer.
 try: content["about"] = json.loads((R/"content/about.json").read_text())
@@ -102,7 +106,18 @@ def _dl_auto():
     if extra: content["downloads"]["sections"].append({"h": "More downloads", "downloads": extra})
 _dl_auto()
 CFG = json.loads((R/"site-config.json").read_text()) if (R/"site-config.json").exists() else {}
-_tpl = (R/"template.html").read_text()
+def _np(s):
+    """With NEW_PAGES off, drop every trace of the two new routes from template text."""
+    if NEW_PAGES: return s
+    s = re.sub(r'  <div class="view" id="v-(?:parents|starting-hormones)"></div>\n', "", s)
+    s = re.sub(r'\n\s*"v-(?:parents|starting-hormones)": function\(\)\{[^\n]*\},?(?=\n)', "", s)
+    s = re.sub(r'\n\s*\{t:"[^"\n]*", h:"#/(?:parents|starting-hormones)", d:"[^\n]*?"\},?(?=\n)', "", s)
+    s = re.sub(r',(?:parents|startinghormones):\["/(?:parents|starting-hormones)","[^"]*"\]', "", s)
+    s = re.sub(r'\s*<li><a href="#/(?:parents|starting-hormones)" data-link>[^<]*</a></li>', "", s)
+    s = re.sub(r'\{t:"[^"]*", h:"#/(?:parents|starting-hormones)"\}, ?', "", s)
+    s = re.sub(r',"/(?:parents|starting-hormones)":"[^"]*"', "", s)
+    return s
+_tpl = _np((R/"template.html").read_text())
 try:   # smaller pages when the minifiers are installed (pip install rjsmin rcssmin); fine without
     import rjsmin, rcssmin, re as _re
     _tpl = _re.sub(r"<style>(.*?)</style>", lambda m: "<style>" + rcssmin.cssmin(m.group(1)) + "</style>", _tpl, count=1, flags=_re.S)
@@ -186,12 +201,17 @@ def _premium_example(costs, prem):
          "text": f"${cp} co-payment + **${pr}** brand premium = **{{total}}**."}]
 _premium_example(content["costs"], _prem)
 _FIGS = figures.render_content(content)
+def _jp(x):
+    """CWV (9 Nov 2026): data goes into the script as JSON.parse("...") not a JS object literal; V8 parses a JSON string
+    several times faster than the same text as code, which was the main-thread cost of every page. Same data, same result."""
+    j = json.dumps(x, separators=(",",":"))   # ASCII only (ensure_ascii), so no line separators; single quotes mean the many " need no escape
+    return "JSON.parse('" + j.replace("\\", "\\\\").replace("'", "\\'") + "')"
 html = _tpl.replace("{{REVIEWED}}", _dates["{{REVIEWED}}"]).replace("__TURNSTILE_SITEKEY__", CFG.get("turnstileSiteKey", "")) \
-    .replace("{{COPYRIGHT_SEC}}", COPYRIGHT_SEC).replace("__FILES__", json.dumps(FILES, separators=(",",":"))) \
-    .replace("__MEDS__", json.dumps(payload, separators=(",",":"))) \
-    .replace("__CONTENT__", json.dumps(content, separators=(",",":"))) \
-    .replace("__MEDINFO__", json.dumps(medinfo, separators=(",",":"))) \
-    .replace("__PREMIUMS__", json.dumps(json.loads((R/"data/premiums.json").read_text()), separators=(",",":")))
+    .replace("{{COPYRIGHT_SEC}}", COPYRIGHT_SEC).replace("__FILES__", _jp(FILES)) \
+    .replace("__MEDS__", _jp(payload)) \
+    .replace("__CONTENT__", _jp(content)) \
+    .replace("__MEDINFO__", _jp(medinfo)) \
+    .replace("__PREMIUMS__", _jp(json.loads((R/"data/premiums.json").read_text())))
 def _dl_sizes(x):
     """Static markup: <a href="/clinicians/x.pdf">Card (PDF, 1 page)</a> -> "Card (PDF, 1 page, 182 KB)".
     template.html fileLabel() does the same for the links the script draws."""
@@ -271,7 +291,7 @@ SCRIPT_HASH = "'sha256-" + base64.b64encode(hashlib.sha256(_th.encode()).digest(
 # rewrite #/ links in the static markup only (the script fixes the links it draws itself)
 _pre, _post = html.split("<script>" + script + "</script>")
 def _paths(x):
-    x = x.replace('href="#/med/', 'href="/medicines/').replace('href="#/"', 'href="/"')
+    x = x.replace('href="#/pharmacy-reports#prForm"', 'href="/pharmacy-reports#prForm"').replace('href="#/med/', 'href="/medicines/').replace('href="#/"', 'href="/"')
     return re.sub(r'href="#(/[a-z0-9-]+)(#[a-z0-9-]+)?"', r'href="\1\2"', x)
 page = _paths(_pre) + f'<script src="/{APP}"></script>' + _paths(_post)
 (D/"js").mkdir(); (D/APP).write_text(script)
@@ -303,6 +323,8 @@ def where_desc(d, n=158):
 VIEWDESC = {
  "/downloads": "Every free GAMSA guide, checklist, log and form to download and print: blood test guides, pharmacy checklists and clinic injection documents.",
  "/": BASE_DESC,
+ "/costs": "What gender-affirming hormones cost at the pharmacy in South Australia: PBS co-payments, private prices, the Safety Net and PBS Authority scripts.",
+ "/doses": "Gender-affirming hormone doses compared: oestradiol patches, gel and tablets, testosterone gel and injections, and blockers, as used in South Australia.",
  "/supply": "Which gender-affirming hormone medicines are in short supply in Australia right now, checked daily against TGA records, and what to do about it.",
  "/medicines": "Every medicine used in gender-affirming hormone therapy in Australia, with a page for each: how it is used, cost, monitoring and current supply.",
  "/sightings": "Reports from the public of gender-affirming medicines seen in stock at South Australian pharmacies.",
@@ -316,18 +338,25 @@ VIEWDESC = {
  "/easy": "Easy Read guides to gender-affirming hormone medicines: getting your medicine, shortages, costs, doses and using it safely, in short sentences with pictures.",
  "/changes": "Dated changes to the information on GAMSA, newest first: doses, costs, supply, safety points and downloads for gender-affirming medicines in South Australia.",
 }
+if NEW_PAGES: VIEWDESC.update({"/parents": "Gender-affirming care for under-18s in South Australia: first steps for parents and carers, the WCH service, consent and where to get support.",
+    "/starting-hormones": "A GP guide to starting gender-affirming hormones for adults in Australia: assessment, baseline tests, doses, PBS Authority and monitoring."})
 CVIEW = {"/downloads": "downloads", "/doses": "dosing", "/using": "administration", "/costs": "costs", "/pharmacy": "pharmacy", "/clinician-guide": "clinicians", "/ally-guide": "allies", "/resources": "resources", "/add-on-therapies": "addons", "/monitoring": "monitoring", "/related-care": "related", "/privacy": "privacy", "/accessibility": "accessibility", "/disclaimer": "disclaimer", "/about": "about"}
 TITLES = {"/": "Gender-Affirming Medicines South Australia", "/supply": "Supply & shortages",
-          "/medicines": "Medicines A–Z", "/sightings": "Patient sightings", "/easy": "Easy Read guides",
-          "/doses": "Medicines, doses and formulations", "/monitoring": "Blood tests and monitoring", "/related-care": "Related care and considerations", "/add-on-therapies": "Add-on therapies", "/using": "How to use your medicine",
+          "/medicines": "Medicines A–Z", "/sightings": "Stock seen by patients", "/easy": "Easy Read guides",
+          "/doses": "Doses and formulations", "/monitoring": "Blood tests and monitoring", "/related-care": "Fertility, PrEP and surgery", "/add-on-therapies": "Add-on therapies", "/using": "How to use your medicine",
           "/pharmacy": "Working with your pharmacy", "/costs": "Costs and the PBS", "/feedback": "Send feedback", "/pharmacy-reports": "Pharmacy stock reports",
-          "/trans": "Trans and gender diverse people", "/clinicians": "Clinicians", "/allies": "Family, friends and allies",
-          "/clinician-guide": "For clinicians", "/ally-guide": "For family, friends and allies", "/resources": "Resources", "/downloads": "Guides and printables", "/alerts": "Shortage alerts", "/changes": "What’s changed", "/privacy": "Privacy", "/accessibility": "Accessibility", "/disclaimer": "Disclaimer", "/search": "Search"}
+          "/trans": "Your medicines: start here", "/clinicians": "Clinicians", "/allies": "Family & carers: start here",
+          "/clinician-guide": "Clinician reference", "/ally-guide": "Helping an adult with their medicines", "/resources": "Other services and links", "/downloads": "Guides to print", "/alerts": "Shortage alerts", "/changes": "What’s changed", "/privacy": "Privacy", "/accessibility": "Accessibility", "/disclaimer": "Disclaimer", "/search": "Search"}
+if NEW_PAGES: CVIEW.update({"/parents": "parents", "/starting-hormones": "startinghormones"})
+if NEW_PAGES: TITLES.update({"/parents": "Parents and carers of under-18s", "/starting-hormones": "Starting hormones: a GP guide"})
 if "about" in content: TITLES["/about"] = content["about"].get("title") or "About GAMSA"   # B-09: only with content/about.json
+# v19.6: search titles for /costs and /doses (how Australians search); template.html SEOT is identical. Both within 60 characters.
+SEOT = {"/costs": "Hormone costs and the PBS \u00b7 GAMSA, South Australia", "/doses": "Hormone doses and formulations \u00b7 GAMSA, South Australia"}
 VIEWID = {"/": "v-home", "/supply": "v-supply", "/medicines": "v-medicines", "/sightings": "v-sightings",
           "/easy": "v-easy", "/doses": "v-doses", "/monitoring": "v-monitoring", "/related-care": "v-related-care", "/add-on-therapies": "v-add-on-therapies", "/using": "v-using", "/pharmacy": "v-pharmacy",
           "/costs": "v-costs", "/feedback": "v-feedback", "/pharmacy-reports": "v-pharmacy-reports",
           "/trans": "v-trans", "/clinicians": "v-clinicians", "/allies": "v-allies", "/clinician-guide": "v-clinician-guide", "/ally-guide": "v-ally-guide", "/resources": "v-resources", "/downloads": "v-downloads", "/alerts": "v-alerts", "/changes": "v-changes", "/about": "v-about", "/privacy": "v-privacy", "/accessibility": "v-accessibility", "/disclaimer": "v-disclaimer", "/search": "v-search"}
+if NEW_PAGES: VIEWID.update({"/parents": "v-parents", "/starting-hormones": "v-starting-hormones"})
 
 def ld(obj):
     return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False).replace("</", "<\\/") + "</script>\n"
@@ -370,6 +399,7 @@ def _nj_secs(secs):
             elif x.get("link"): o += f'<p><a href="{H.escape(_hp(x["link"]))}">{H.escape(x["t"])}</a></p>'
         li = s.get("list") or s.get("bullets") or []
         if li: o += "<ul>" + "".join(f"<li>{_md(x)}</li>" for x in li if isinstance(x, str)) + "</ul>"
+        o += "".join(_nj_p(b) for b in (s.get("after") or []) if isinstance(b, str))   # v19.6: paragraphs shown after the list
         tb = s.get("table")
         if tb: o += ("<table><tr>" + "".join(f"<th>{_md(h)}</th>" for h in tb["head"]) + "</tr>" +
                      "".join("<tr>" + "".join(f"<td>{_md(c)}</td>" for c in r) + "</tr>" for r in tb["rows"]) + "</table>")
@@ -412,13 +442,14 @@ def _nj_easy(g):
             if ul: o += "</ul>"
     return o
 def _nj_hubs():
-    src, out = (R/"template.html").read_text(), {}
+    src, out = _np((R/"template.html").read_text()), {}
     u = lambda s: json.loads('"' + s + '"')
     for k, kick, tit, lede, items in re.findall(r'(trans|clinicians|allies): \{kicker:"([^"]*)", title:"([^"]*)", lede:"([^"]*)",\s*items:\[(.*?)\]\}', src, re.S):
         li = "".join((f'<li>{H.escape(u(d))} <a href="{_hp(h)}">{H.escape(u(t))} (PDF)</a></li>' if re.search(r"\.(pdf|zip)$", h) else  # r5c: a file link ends its item
                       f'<li><a href="{_hp(h)}">{H.escape(u(t))}</a>: {H.escape(u(d))}</li>')
                      for t, h, d in re.findall(r'\{t:"([^"]*)", h:"([^"]*)", d:"([^"]*)"', items))
         out["/" + k] = f"<h1>{H.escape(u(tit))}</h1><p>{H.escape(u(lede))}</p><ul>{li}</ul>"
+        HEAD["/" + k] = _hd(u(kick), H.escape(u(tit)), H.escape(u(lede)))   # CWV r2: hub page head in the HTML
     return out
 def _nj_changes(L):
     days, o = {}, "<h1>What’s changed</h1><p>Dated changes to the information on this site, newest first.</p>"
@@ -427,6 +458,70 @@ def _nj_changes(L):
         o += f"<h2>{datetime.date.fromisoformat(d).strftime('%-d %B %Y')}</h2><ul>" + "".join(
             "<li>" + H.escape(e["text"]) + ("" if not e["pages"] else " (" + ", ".join(f'<a href="{H.escape(p)}">{H.escape(p)}</a>' for p in e["pages"]) + ")") + "</li>" for e in es) + "</ul>"
     return o
+# CWV round 2 (10 Nov 2026): every script-drawn view's page head (kicker, h1, lede; medicines add the stamp, status line and
+# print/listen buttons; Easy Read guides use their cover) is written into the built HTML, with the same markup and classes the
+# script draws, so the largest text paints with the HTML (LCP ~0.5 s) instead of after app.js (~2.2 s on a throttled phone).
+# The script redraws the whole view on load (same size, same place: the breadcrumb's 56 px row is reserved in the CSS until then).
+# The <noscript> copy that follows drops its own h1 and intro, which the head now carries.
+HEAD = {}
+def _hd(kicker, title, lede, extra=""):   # title and lede arrive escaped (title may carry &shy;)
+    return ('<div class="page-head">' + (f'<p class="kicker">{H.escape(kicker)}</p>' if kicker else "") +
+            f'<h1 tabindex="-1">{title}</h1><p class="lede">{lede}</p>{extra}</div>')
+def _ct(t, v=""):   # text as the script's C(): esc + ilink (bold, code, links) + cite ([n] -> superscript reference links)
+    s = H.escape(str(t))
+    s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
+    s = re.sub(r"`([^`<]+)`", r"<code>\1</code>", s)
+    s = re.sub(r"\[(?!\d[\d,\s]*\])([^\]]+)\]\((https://[^\s)]+)\)", r'<a href="\2" target="_blank" rel="noopener">\1</a>', s)
+    s = re.sub(r"\[(?!\d[\d,\s]*\])([^\]]+)\]\(([^)\s]+)\)", lambda m: f'<a href="{_hp(m.group(2))}">{m.group(1)}</a>', s)
+    p = v + "-" if v else ""
+    L = lambda n: f'<a href="#ref-{p}{n}" aria-label="Reference {n}">{n}</a>'
+    s = re.sub(r"\s*\[(\d+)\]", lambda m: f'<sup><a href="#ref-{p}{m.group(1)}" aria-label="Reference {m.group(1)}">[{m.group(1)}]</a></sup>', s)
+    return re.sub(r"\s*\[(\d+(?:\s*,[^\]\[<>]*)+)\]", lambda m: "<sup>[" + ",".join((q.group(1) + L(q.group(2)) + q.group(3)) if (q := re.fullmatch(r"(\s*)(\d+)(\s*)", x)) else x for x in m.group(1).split(",")) + "]</sup>", s)
+_PRTOOLS = ('<div class="pr-tools"><button type="button" class="pr-btn" data-print><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 8.5V3.5h10v5M7 17.5H5a1.5 1.5 0 0 1-1.5-1.5v-6A1.5 1.5 0 0 1 5 8.5h14a1.5 1.5 0 0 1 1.5 1.5v6a1.5 1.5 0 0 1-1.5 1.5h-2M7 14h10v6.5H7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Print or save as PDF</button>'
+            '<button type="button" class="pr-btn" data-listen><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18 6.5a7.8 7.8 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Read aloud</button></div>')
+_STL = {"shortage": ("t-red", "Short supply"), "limited": ("t-amber", "Limited supply"), "delisting": ("t-amber", "Funding change"), "discontinued": ("t-stop", "Discontinued"),
+        "in_supply": ("t-green", "Available"), "unverified": ("t-grey", "Supply not confirmed")}
+_HIT = {"shortage", "limited", "delisting", "discontinued"}
+def _hd_med(m):   # as renderMedPage() + availLine() in template.html
+    e = H.escape; GEN = e(str(meds.get("generatedAt", "")))
+    rows = [r for sid in m.get("supplyIds", []) for r in meds["medicines"] if r.get("id") == sid]
+    rows = [r for r in rows if r.get("status") != "discontinued"] or rows
+    rank = {"discontinued": 4, "shortage": 3, "limited": 2, "delisting": 2, "unverified": 1, "in_supply": 0}
+    r = sorted(rows, key=lambda x: -rank.get(x.get("status"), 0))[0] if rows else None
+    def exp(x):
+        q = re.search(r"shortage is expected from (.+)$", x.get("statusLabel") or "")
+        return ("Shortage expected from " + q.group(1) + (" to " + x["expectedReturn"] if x.get("expectedReturn") and x["expectedReturn"] != "—" else "") + ".") if q else ""
+    ex = next((y for y in (exp(x) for x in rows) if y), "")
+    if r:
+        c, l = _STL.get(r.get("status"), _STL["unverified"]); some = r.get("status") in _HIT and any(x.get("status") not in _HIT for x in rows)
+        sl = (f'<span class="tag {c}">{e(l)}</span><span class="sl-d">{"Not every brand or strength. " if some else ""}{f"<b>{e(ex)}</b> " if ex else ""}TGA records checked {GEN}.</span>'
+              '<a href="/supply">See supply detail</a>')
+    else: sl = f'<span class="sl-d">Not in the daily TGA check (last run {GEN}). Ask your pharmacist.</span><a href="/supply">Supply &amp; shortages</a>'
+    stamp = f'<p class="stamp">{e(m["generic"])} · sold as {e(", ".join(m["brands"]))}</p>' if m.get("brands") else ""
+    return '<a class="backlink" href="/medicines">\u2190 Back to all medicines</a>' + _hd("", e(m["name"]).replace("Medroxyprogesterone", "Medroxy&shy;progesterone"), _ct(m.get("summary", ""), "med-" + m["id"]),
+               stamp + f'<p class="statusline"><span class="sl-h">Available in Australia?</span>{sl}</p>' + _PRTOOLS)
+_ERACT = ('<div class="er-actions"><button type="button" class="er-listen" aria-pressed="false">▶ Listen to this guide</button><button type="button" class="er-print">Print or save as PDF</button>'
+          '<a class="er-back" href="/easy" data-link>All Easy Read guides</a><a class="er-back" href="/" data-link>Main website</a></div>')
+def _nice(s):
+    q = re.match(r"^(\d{4})-(\d{2})-(\d{2})", s or "")
+    return f'{int(q.group(3))} {["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][int(q.group(2))-1]} {q.group(1)}' if q else (s or "")
+def _hd_easy(g, sub, upd=None, act=True):   # as renderEasyGuide() / renderEasyRead(): the Easy Read cover
+    e = H.escape; D = content["easyread"]
+    return (f'<div class="er-cover"><p class="er-kick">{e(D.get("kicker", ""))}</p><h1>{e(g["title"])}</h1><p class="er-sub">{e(sub)}</p>' +
+            (f'<p class="er-upd">Last checked {e(_nice(upd))}</p>' if upd else "") + (_ERACT if act else "") + "</div>")
+_ju = lambda s: re.sub(r"\\u([0-9a-fA-F]{4})", lambda m: chr(int(m.group(1), 16)), s)
+for _p, _k in CVIEW.items():
+    if _k == "about" and "about" in content:
+        _a = content["about"]; _in = list(_a.get("intro") or []) if isinstance(_a.get("intro"), list) else [_a.get("intro") or ""]
+        HEAD[_p] = _hd("About this site", H.escape(_a.get("title") or "About GAMSA"), _ct(_in[0] if _in else "", "about"), "".join(f"<p>{_ct(x, 'about')}</p>" for x in _in[1:]))
+    elif _k in content:
+        _c = content[_k]; _i = _c.get("intro", ""); HEAD[_p] = _hd(_c.get("kicker") or "Overview guide", H.escape(_c.get("title", "")), _ct(" ".join(_i) if isinstance(_i, list) else _i, _p[1:]))
+HEAD["/easy"] = _hd_easy({"title": content["easyread"].get("title", "Easy Read guides")}, "Short guides in easy to read words, with pictures. Pick the one you need.", act=False)
+for _s in re.findall(r"'(<div class=\"page-head\"><p class=\"kicker\">About this site</p><h1 tabindex=\"-1\">What’s changed</h1>[^']*</div>)'", html): HEAD["/changes"] = _ju(_s)
+VIEWGRP = json.loads("{" + re.search(r"var VIEWGRP=\{(.*?)\};", html, re.S).group(1) + "}")   # the view's colour group class, as route() adds it
+def _nj_trim(nj):   # the head carries the h1 and intro; the noscript copy keeps the rest
+    return re.sub(r"^<h1>.*?</h1>(?:<p>(?:(?!<p>).)*?</p>)*", "", nj, count=1, flags=re.S)
+
 NOJS = {p: _nj_content(content[k]) for p, k in CVIEW.items() if k in content}
 NOJS.update(_nj_hubs())
 NOJS["/changes"] = _nj_changes(content["changes"])
@@ -446,6 +541,7 @@ def _upd_static(body, view, path):
     if start < 0: return body
     nxt = body.find('<div class="view', start + 10)
     ph = body.find('<div class="page-head">', start)
+    if ph < 0 or (nxt > -1 and ph > nxt): ph = body.find('<div class="er-cover">', start)   # CWV r2: Easy Read covers too (chgNote does)
     if ph < 0 or (nxt > -1 and ph > nxt): return body
     i, depth = ph, 0
     for m in re.finditer(r"<div\b|</div>", body[ph:]):
@@ -462,14 +558,73 @@ def _upd_static(body, view, path):
             f'{H.escape(c["text"])} <a href="/changes">What’s changed</a></p></aside>')
     return body[:i] + note + body[i:]
 
-def write(path, title, desc, view, schema, noindex=False, nojs=None, full=None):
+
+# v19.6 (review item 9): shortage cards, the checked date and the home "Supply today" strip are in the page HTML at build
+# time; the script still redraws them from the same data on load (template.html renderMeds / renderStats / the stamp).
+_S2M = {sid: m["id"] for m in medinfo["medicines"] for sid in m.get("supplyIds", [])}
+_ST = {"shortage": ("t-red", "Short supply", "In short supply across Australia. Your pharmacy may need to order it in, or supply an approved alternative."),
+       "limited": ("t-amber", "Limited supply", "Supply of this one is limited. It is worth speaking with your pharmacist early so they can track down stock for you, rather than leaving it to the last day."),
+       "delisting": ("t-amber", "Funding change", "Still made, but how it is subsidised is changing. Ask your prescriber what that means for what you pay."),
+       "discontinued": ("t-stop", "Discontinued", "No longer supplied in Australia. You will need a different brand or medicine \u2014 speak with your prescriber.")}
+def _ssr_supply():
+    e = H.escape; GEN = str(meds.get("generatedAt", ""))
+    hit = [m for m in meds["medicines"] if m.get("status") in _ST]
+    def back(m): return m.get("status") in ("shortage", "limited") and m.get("expectedReturn") and m["expectedReturn"] != "\u2014"
+    def due(m):
+        try: return datetime.datetime.strptime(m["expectedReturn"], "%d %B %Y").timestamp() if back(m) else float("inf")
+        except Exception:
+            try: return datetime.datetime.fromisoformat(m["expectedReturn"]).timestamp() if back(m) else float("inf")
+            except Exception: return float("inf")
+    groups, gi = [], {}
+    for m in hit:
+        k = "|".join([m.get("genericName") or m.get("brand") or "", m.get("strengthLabel") or "", m.get("form") or ""]).lower()
+        if k not in gi: gi[k] = len(groups); groups.append([])
+        groups[gi[k]].append(m)
+    rank = {"discontinued": 4, "shortage": 3, "limited": 2, "delisting": 2, "unverified": 1}
+    def link(m, label):
+        mid = _S2M.get(m["id"], "")
+        return f'<a href="/medicines/{e(mid)}">{label}</a>' if mid else label
+    out = []
+    for g in groups:
+        g = sorted(g, key=lambda m: (due(m), str(m.get("brand"))))
+        top = sorted(g, key=lambda m: -rank.get(m["status"], 0))[0]; c, l, say = _ST[top["status"]]
+        mid = _S2M.get(g[0]["id"], ""); name = top.get("genericName") or top.get("brand")
+        head = (f'<li class="med{" med-group" if len(g) > 1 else ""}"' + (f' data-href="#/med/{e(mid)}"' if mid else "") +
+                f'><div class="med-top"><div><div class="med-name">{link(g[0], e(name))}' +
+                (f' <span class="dose">{e(top["strengthLabel"])}</span>' if top.get("strengthLabel") else "") + "</div>")
+        if len(g) > 1:
+            head += f'<p class="med-brands">{len(g)} brands affected</p></div><span class="tag {c}">{l}</span></div><p class="med-say">{e(say)}</p><ul class="med-bl">'
+            for m in g:
+                n = (m.get("brands") or [m.get("brand")])[0]
+                head += f"<li><b>{e(n)}</b>" + (f", back around {e(m['expectedReturn'])}" if back(m) else "") + "</li>"
+            out.append(head + "</ul></li>")
+        else:
+            m = g[0]; b = ", ".join(m.get("brands") or [])
+            head += (f'<p class="med-brands">Sold as <b>{e(b)}</b></p>' if b else "") + f'</div><span class="tag {c}">{l}</span></div><p class="med-say">{e(say)}</p>'
+            if back(m): head += f'<p class="med-meta">Expected back in full supply around {e(m["expectedReturn"])}.</p>'
+            if m.get("sourceUrl"): head += f'<p class="med-meta"><a href="{e(m["sourceUrl"])}" target="_blank" rel="noopener">Official record</a></p>'
+            out.append(head + "</li>")
+    seen = {_S2M.get(m["id"], m["id"]) for m in hit}; n, p = len(seen), len(hit)
+    strip = f'<span class="dot"></span><span><b>{n} medicine{"" if n == 1 else "s"}</b>' + (f" ({p} product{'' if p == 1 else 's'})" if p != n else "") + f" under a TGA shortage notice \u00b7 checked {e(GEN)} \u2192</span>"
+    return "".join(out), f"Checked against TGA records on {e(GEN)}.", strip
+def _ssr(body):
+    cards, stamp, strip = _ssr_supply()
+    body = body.replace('<span class="stamp" id="stamp"></span>', f'<span class="stamp" id="stamp">{stamp}</span>', 1)
+    body = body.replace('<ul class="plain" id="affected" aria-live="polite"></ul>', f'<ul class="plain" id="affected" aria-live="polite">{cards}</ul>', 1)
+    return body.replace('id="homeLive" href="/supply" data-link>Medicine supply updates</a>', f'id="homeLive" href="/supply" data-link>{strip}</a>', 1)
+
+def write(path, title, desc, view, schema, noindex=False, nojs=None, full=None, hd=None):
     full = full or full_title(title)   # home too: the same title the app sets after in-app navigation (B-28, 23 Oct 2026)
     extra = ld(schema) + ('<meta name="robots" content="noindex">\n' if noindex else "")
     top = head(full, desc, path, PRELOAD + extra).replace("__ROUTING__", ' data-routing="path"')
     nj = NOJS.get(path) if nojs is None else nojs
+    hd = HEAD.get(path) if hd is None else hd   # CWV r2: the page head in the HTML, before the noscript copy
+    grp = VIEWGRP.get({"v-med": "/med", "v-easy-guide": "/easy-guide"}.get(view, path)) if hd else None   # only with a built head (static /supply measured a 0.03 shift with it)
+    cls = "view on" + (f" acc c-{grp}" if grp else "") + (" hubv" if view in ("v-trans", "v-clinicians", "v-allies") else "")
     body = page.replace("__TITLE__", H.escape(full), 1) \
-               .replace(f'<div class="view" id="{view}">', f'<div class="view on" id="{view}">' + (f"<noscript>{_dl_sizes(nj)}</noscript>" if nj else ""), 1)
+               .replace(f'<div class="view" id="{view}">', f'<div class="{cls}" id="{view}">' + (hd or "") + (f"<noscript>{_dl_sizes(_nj_trim(nj) if hd else nj)}</noscript>" if nj else ""), 1)
     body = _upd_static(body, view, path)
+    if view in ("v-supply", "v-home"): body = _ssr(body)
     # Cloudflare Pages serves /costs from costs.html (and /costs/ needs a redirect if it were a folder)
     out = D/"index.html" if path == "/" else D/(path.strip("/") + ".html")
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -488,7 +643,7 @@ for path, title in TITLES.items():
         schema = {"@context": "https://schema.org", "@type": "MedicalWebPage", "name": title,
                   "url": SITE + path, "description": desc, "inLanguage": "en-AU",
                   "author": AUTHOR, "publisher": ORG}
-    write(path, title, desc, VIEWID[path], schema, noindex=(path == "/search"))
+    write(path, title, desc, VIEWID[path], schema, noindex=(path == "/search"), full=SEOT.get(path))
     if path != "/search": urls.append(path)   # /sightings and /feedback indexed too (v18.1.1, Ted 15 Oct); /search stays noindex
 
 for m in medinfo["medicines"]:
@@ -517,7 +672,7 @@ for m in medinfo["medicines"]:
     for x in seo.get("faq", []):   # v19.5 R5b: questions people search for, answered from facts already on the page
         faq.append({"@type": "Question", "name": x["q"], "acceptedAnswer": {"@type": "Answer", "text": x["a"]}})
     schema = {"@context": "https://schema.org", "@graph": [page_ld] + ([{"@type": "FAQPage", "mainEntity": faq}] if faq else [])}
-    write(path, title, desc, "v-med", schema, nojs=_nj_med(m), full=seo.get("title"))
+    write(path, title, desc, "v-med", schema, nojs=_nj_med(m), full=seo.get("title"), hd=_hd_med(m))
     urls.append(path)
 
 for g in content["easyread"]["guides"]:
@@ -525,7 +680,8 @@ for g in content["easyread"]["guides"]:
     desc = where_desc(g["title"] + " — " + g["subtitle"] + ". An Easy Read guide in short sentences with pictures.")
     write(path, g["title"] + " (Easy Read)", desc, "v-easy-guide",
           {"@context": "https://schema.org", "@type": "MedicalWebPage", "name": g["title"] + " (Easy Read)",
-           "url": SITE + path, "description": desc, "inLanguage": "en-AU", "author": AUTHOR, "publisher": ORG}, nojs=_nj_easy(g))
+           "url": SITE + path, "description": desc, "inLanguage": "en-AU", "author": AUTHOR, "publisher": ORG}, nojs=_nj_easy(g),
+          hd=_hd_easy(g, g.get("subtitle", ""), g.get("checked") or g.get("updated")))
     urls.append(path)
 
 # unknown paths: the home page, marked noindex

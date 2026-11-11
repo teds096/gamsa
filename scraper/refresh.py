@@ -26,6 +26,7 @@ BASE = "https://apps.tga.gov.au/shortages/search/Details/{}"
 INGREDIENTS = {
     "estradiol": "estrogen",
     "estradiol-valerate": "estrogen",
+    "estradiol-hemihydrate": "estrogen",             # Estraderm MX patches and Zumenon (v19.6); TGA lists Estraderm MX 50 and 100 here
     "conjugated-estrogens": "estrogen",
     "dydrogesterone": "progestogen",
     "testosterone-undecanoate": "testosterone",
@@ -40,6 +41,11 @@ INGREDIENTS = {
     "triptorelin": "gnrh-analogue",                  # Diphereline (B-10, 24 Oct 2026); answers 500 = no notices
     "isotretinoin": "adjunct",                       # generic capsules (APO, Gx, Lupin, WGR) and Oratane
     "finasteride": "adjunct",                        # Finapen 1 mg and the other 1 mg brands
+    "doxycycline": "adjunct",                        # Doxsig, Doxycycline Sandoz, Doryx, APX-Doxycycline (v19.6); answers 500 = no notices
+    "adapalene": "adjunct",                          # Epiduo and Epiduo Forte; answers 500
+    "minoxidil": "adjunct",                          # Men's and Women's Regaine; answers 500
+    "levonorgestrel": "progestogen",                 # Mirena; the page lists only Leveth pills, which match no tracked row
+    "drospirenone": "progestogen",                   # Angeliq; answers 500
 }
 
 # A parse that returns fewer than this many rows across all ingredients means the page

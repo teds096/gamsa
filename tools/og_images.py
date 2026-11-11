@@ -81,10 +81,12 @@ def main():
         d.text((80, 560), "gamsa.au", font=font(1, 26), fill="white")
         im.save(path, **({"quality": 85, "optimize": True, "progressive": True} if str(path).endswith(".jpg") else {"optimize": True}))
     make(S / "og-image.png", "Gender-affirming medicines in South Australia", "Supply, costs and how to use each medicine", FLAG)
-    pages = {"trans": ("For trans and gender diverse people", "Medicines, supply, costs and support in SA", HUB["trans"]),
+    pages = {"trans": ("Your medicines: start here", "Medicines, supply, costs and support in SA", HUB["trans"]),
              "clinicians": ("For clinicians", "Prescribing, PBS Authority, monitoring and supply", HUB["clinicians"]),
              "allies": ("For family, friends and allies", "How to help someone get and use their medicines", HUB["allies"]),
-             "resources": ("Resources and support", "Services, guides and downloads in South Australia", HUB["resources"]),
+             "resources": ("Other services and links", "Services, guides and downloads in South Australia", HUB["resources"]),
+             "parents": ("Parents and carers of under-18s", "First steps, care in South Australia, consent and support", HUB["allies"]),
+             "starting-hormones": ("Starting hormones: a GP guide", "Assessment, baseline tests, doses and monitoring", HUB["clinicians"]),
              "supply": ("Medicine supply and shortages", "Checked every day against the TGA", FLAG),
              "costs": ("PBS costs", "What each medicine costs and how to pay less", FLAG),
              "medicines": ("Medicines A–Z", "Every gender-affirming medicine available in Australia", FLAG)}

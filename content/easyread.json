@@ -256,7 +256,9 @@
                 "The **shortage** page has one card for each medicine and strength.",
                 "The card lists each **brand** that is hard to get.",
                 "It says when each brand should be back.",
-                "The newest changes are at the top."
+                "The newest changes are at the top.",
+                "Sometimes a **shortage** is coming soon.",
+                "The page shows the date it is expected to start."
               ]
             },
             {
@@ -287,11 +289,11 @@
         "template.html#renderMeds"
       ],
       "synced": {
-        "date": "2026-11-07",
+        "date": "2026-11-10",
         "fp": {
-          "content/dosing.json#If your medicine is hard to get": "8346c3f8f5a4",
+          "content/dosing.json#If your medicine is hard to get": "cc9713f356ec",
           "content/pharmacy.json#If you run out and have no script": "01935db5b95b",
-          "template.html#renderMeds": "fa48f16dd19e"
+          "template.html#renderMeds": "60724375e9f2"
         }
       }
     },
@@ -611,14 +613,14 @@
         "content/medicines.json#testosterone-undecanoate"
       ],
       "synced": {
-        "date": "2026-11-07",
+        "date": "2026-11-09",
         "fp": {
           "content/administration.json#Your long-acting injection: finding the right spot": "a12fa3c4fc6d",
           "content/administration.json#What happens at the injection appointment": "177efbccba38",
           "content/administration.json#Learning to inject testosterone yourself": "11b6b10ca4e3",
           "content/administration.json#Disposing of needles and leftover medicine": "7426cfa28c7d",
-          "content/medicines.json#gnrh-analogues": "d391c5f7fd59",
-          "content/medicines.json#testosterone-undecanoate": "2d4a00c39c35"
+          "content/medicines.json#gnrh-analogues": "a4470ed14a11",
+          "content/medicines.json#testosterone-undecanoate": "6bded9226454"
         }
       }
     },
@@ -1072,11 +1074,11 @@
         "template.html#renderMeds"
       ],
       "synced": {
-        "date": "2026-11-07",
+        "date": "2026-11-10",
         "fp": {
           "content/allies.json#How to help with their medicines": "5e75fac9f027",
           "content/allies.json#Pharmacy visit checklist": "96ca6f5d4b71",
-          "template.html#renderMeds": "fa48f16dd19e"
+          "template.html#renderMeds": "60724375e9f2"
         }
       }
     },
@@ -1364,6 +1366,103 @@
           "content/allies.json#Local services": "0068e9e00931"
         }
       }
+    },
+    {
+      "id": "parents",
+      "title": "When your child tells you about their gender",
+      "subtitle": "For parents and carers",
+      "audience": "allies",
+      "sections": [
+        {
+          "h": "When your child tells you about their gender",
+          "blocks": [
+            {
+              "icon": "people",
+              "lines": [
+                "Your child may tell you they are trans, non-binary, or not sure about their gender."
+              ]
+            },
+            {
+              "icon": "speak",
+              "lines": [
+                "Listen to them.",
+                "Thank them for telling you."
+              ]
+            },
+            {
+              "icon": "nametag",
+              "lines": [
+                "If they ask, use the name and pronouns they want.",
+                "It is OK if you make a mistake. Say sorry and keep going."
+              ]
+            },
+            {
+              "icon": "help",
+              "lines": [
+                "You do not need to know all the answers."
+              ]
+            },
+            {
+              "icon": "pills",
+              "lines": [
+                "Not every young person wants medicine."
+              ]
+            },
+            {
+              "icon": "pharmacy",
+              "lines": [
+                "In South Australia, the Women's and Children's Hospital has a team for young people up to 17."
+              ]
+            },
+            {
+              "icon": "doc",
+              "lines": [
+                "Your GP can send a letter to the team. This is called a **referral**."
+              ]
+            },
+            {
+              "icon": "clock",
+              "lines": [
+                "There is usually a wait for the first appointment."
+              ]
+            },
+            {
+              "icon": "shield",
+              "lines": [
+                "If your child is under 16, a parent or legal guardian goes to the appointments and must agree before any medicine starts."
+              ]
+            },
+            {
+              "icon": "phone",
+              "lines": [
+                "You can call Kids Helpline any time on 1800 55 1800."
+              ]
+            },
+            {
+              "icon": "people",
+              "lines": [
+                "Parents can get support from groups like Transcend and PFLAG+."
+              ]
+            },
+            {
+              "icon": "warn",
+              "lines": [
+                "If your child is in danger, call 000."
+              ]
+            }
+          ]
+        }
+      ],
+      "updated": "2026-11-08",
+      "sources": [
+        "content/parents.json"
+      ],
+      "synced": {
+        "date": "2026-11-08",
+        "fp": {
+          "content/parents.json": "98be5f3063d8"
+        }
+      }
     }
   ],
   "wordlist": [
@@ -1432,6 +1531,10 @@
       "d": "A person who says what you say in another language, so you and your doctor understand each other."
     },
     {
+      "w": "Legal guardian",
+      "d": "The person the law says makes decisions for a child."
+    },
+    {
       "w": "Medicare card",
       "d": "The card that lets you get PBS prices."
     },
@@ -1470,6 +1573,10 @@
     {
       "w": "Prescription",
       "d": "A note from your doctor that lets you get a medicine."
+    },
+    {
+      "w": "Referral",
+      "d": "A letter from your GP to a team or service. It asks them to see you."
     },
     {
       "w": "Safety Net",

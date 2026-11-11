@@ -1,0 +1,157 @@
+{
+    "title": "Starting hormones: a GP guide",
+    "intro": "A short guide for GPs starting gender-affirming hormone therapy (GAHT) for adults (18 and over), covering estradiol-based (feminising) and testosterone-based (masculinising) care. It follows the AusPATH Australian Standards of Care for Informed Consent GAHT, version 2 (2026) [1], with page numbers. It is a prompt, not a protocol: check the current standards and each product's Product Information, and adjust for the individual.",
+    "sections": [
+        {
+            "h": "What does the informed consent model mean?",
+            "list": [
+                "The threshold for starting GAHT is informed consent. Mental health professionals are involved when the person asks, or when significant coexisting mental health concerns need management first [1, p12].",
+                "It is not \"hormones on demand\": the adult decides, with full information on benefits, risks and side effects [1, p12].",
+                "Mental health conditions, neurodivergence and eating disorders are not contraindications unless they currently impair capacity to consent. If capacity may be impaired (for example acute psychosis or dementia), stabilise first or use a multidisciplinary team, with guardian input if applicable [1, p20].",
+                "AusPATH provides estradiol-based and testosterone-based consent forms in Appendix B [1, pp71-76]."
+            ]
+        },
+        {
+            "h": "What goes into the first assessment?",
+            "list": [
+                "**Gender history:** goals, the changes hoped for and not wanted, and any previous hormones, prescribed or not [1, p19].",
+                "**Medical history:** including relative contraindications (hormone-dependent cancers, uncontrolled liver disease, current pregnancy), medicines, smoking and other lifestyle factors, and family history [1, p19].",
+                "**Mental health history:** including a current risk assessment [1, p19].",
+                "**Sexual health, contraception and fertility:** GAHT is not contraception, and testosterone is a teratogen. Offer fertility preservation counselling before starting; preservation is not mandatory [1, pp20-22].",
+                "**Examination:** blood pressure, pulse, and weight and height if the person is comfortable. A genital examination is neither required nor recommended unless symptoms need it [1, p20].",
+                "**Education:** expected changes and timeline, which are permanent, side effects and limits [1, pp21-24 (Tables 1-2)]. Stopping is safe and does not rule out restarting [1, p21]."
+            ]
+        },
+        {
+            "h": "Which baseline tests?",
+            "body": [
+                "Assess cardiovascular risk in everyone [1, p45].",
+                "Consider [1, p21]:"
+            ],
+            "list": [
+                "full blood count; electrolytes and kidney function; liver function",
+                "estradiol and testosterone; LH and FSH; prolactin",
+                "hCG if indicated or requested; vitamin D if clinically indicated",
+                "lipids, HbA1c, fasting glucose and an ECG if there are cardiovascular risk factors",
+                "sexual health screening and age- and organ-appropriate screening as indicated"
+            ],
+            "note": "Routine coagulopathy screening and karyotyping are not required or recommended [1, p21]."
+        },
+        {
+            "h": "Which product, and what starting dose?",
+            "body": [
+                "No starting approach has been shown to be better. Any dose within the common range appears safe to start; many clinicians start low to mid-range and titrate every 2 to 3 months, by shared decision [1, p25, p29]. Lower-dose goals, including for some non-binary people, are valid, but a low dose is not no dose [1, p25]."
+            ]
+        },
+        {
+            "h": "Which estradiol-based products and doses?",
+            "body": [
+                "Common ranges [1, p29 (Table 3)]:"
+            ],
+            "list": [
+                "Estradiol tablets (Progynova, Zumenon): 2–8 mg daily, single or divided doses",
+                "Patches (Estradot, Estraderm MX): 50–200 micrograms/24 h, changed twice a week",
+                "Gel: Sandrena 1–2 × 1 g sachets daily; Estrogel 1–4 pump actuations (0.75 mg each) daily",
+                "Implants and injections are compounded and not TGA-approved; implants are not recommended for starting therapy [1, pp26-27]",
+                "Prefer transdermal estradiol with VTE risk (thrombophilia, obesity, age over 45, smoking, hyperlipidaemia, diabetes, past VTE), and with migraine with aura or uncontrolled hypertension [1, p26]",
+                "Doses above the standard PBS quantity can be prescribed on a PBS Authority for increased quantities [1, p26, p29]"
+            ]
+        },
+        {
+            "h": "Which anti-androgens?",
+            "body": [
+                "Anti-androgens can start with estradiol or later; there is no evidence for one approach [1, p25]. Common ranges [1, p30 (Table 4)]:"
+            ],
+            "list": [
+                "Spironolactone 50–200 mg daily. Its effect is judged clinically, as testosterone may not fall below 2 nmol/L. Take care with renal impairment and renin–angiotensin inhibitors (hyperkalaemia) [1, p27]. Note the reported upper GI bleeding association, higher at 100 mg and over 55 [1, p28, p53].",
+                "Cyproterone 12.5 mg once a week up to 25 mg daily; 12.5 mg (a quarter of the 50 mg tablet) on alternate days or twice a week is common. High doses are linked with meningioma, so review and reduce the dose where appropriate. Check liver function at baseline and periodically [1, p27, p30].",
+                "Bicalutamide is not first-line and needs regular liver function tests [1, p28].",
+                "Anti-androgen alone beyond 12 to 18 months: use with caution and consider endocrinology input [1, p25]."
+            ]
+        },
+        {
+            "h": "Which testosterone-based products and doses?",
+            "body": [
+                "Common ranges [1, p34 (Table 6)]. For full masculinisation, any preparation can be started at the full dose [1, p32]:"
+            ],
+            "list": [
+                "Testogel 1%: 1–8 pumps (12.5–100 mg) or 1–2 × 50 mg sachets daily; 4 pumps often reaches the target. 1–3 pumps suit slower or partial masculinisation [1, p32, p34].",
+                "Testavan 2%: 1–3 pumps (23–69 mg) daily",
+                "AndroForte 5% cream: 1–4 mL (50–200 mg) daily; 2 mL is often enough",
+                "Testosterone undecanoate (Reandron and other brands) 1,000 mg/4 mL IM: 250–1,000 mg every 10–14 weeks, first two doses 6 weeks apart; intervals range from about 7 to over 20 weeks [1, p34]",
+                "Testosterone enantate (Primoteston) or mixed esters (Sustanon 250): 125–250 mg every 2–4 weeks; not PBS-subsidised [1, pp33-34]"
+            ],
+            "note": "Counsel that changes cannot be picked selectively (voice deepening is permanent) [1, p32], on contraception [1, p22], gel transfer [1, p32] and the rare pulmonary oil microembolism with IM injections [1, p33]. Product details: [medicine pages](#/medicines)."
+        },
+        {
+            "h": "How does the PBS Authority for testosterone work?",
+            "list": [
+                "Every PBS testosterone item needs an Authority prescription. There is no PBS listing for gender affirmation; the items are listed for androgen deficiency [1, p33] ([Costs](#/costs#sec-costs-7)).",
+                "AusPATH: the person needs a second opinion from an endocrinologist, urologist or sexual health physician, face to face or by telehealth, or you can prescribe in consultation with one. **The consultation only needs to happen once**, and that specialist's name can be used on later prescriptions. An Authority can also be given while the person has an appointment booked with one of these specialists [1, p33].",
+                "The [PBS Authority wording card](#/clinician-guide#authority-card) quotes the restriction and gives a checklist; [Costs](#/costs) explains it for patients.",
+                "Estradiol, spironolactone and cyproterone have PBS listings with no restriction on who prescribes them (see [Costs](#/costs))."
+            ]
+        },
+        {
+            "h": "What should follow-up look like in the first year?",
+            "list": [
+                "Review clinical progress and blood tests every 3 to 4 months in the first year, then yearly once stable [1, p25]. Hormone levels are safety guides, not strict targets; clinical response matters most [1, p25].",
+                "**Routine tests:** full blood count; electrolytes and kidney function (important with spironolactone, PrEP or renal impairment); liver function; testosterone; estradiol on estradiol-based GAHT. Add vitamin D, prolactin and metabolic tests by risk [1, p36].",
+                "**Estradiol-based:** trough estradiol where feasible. Keep estradiol above 250 pmol/L; AusPATH sets no upper limit, and notes other guidelines' ranges (250–600 pmol/L in the 2019 position statement [2]; 367–734 pmol/L in Endocrine Society and WPATH guidance). Total testosterone below 2 nmol/L if full suppression is wanted [1, pp30-31]. Timing: before the next tablet or gel dose (gel: blood from the arm it was not applied to); for patches, consider testing before a new patch [1, p32 (Table 5)]. If estradiol is high, check timing, contamination and high-dose biotin first [1, p31].",
+                "**Testosterone-based:** trough about 10–20 nmol/L for undecanoate, 1% gel and cream. Do not test or adjust undecanoate until after the first 3 injections. Testavan is measured 2–4 hours after application: below 17.3 nmol/L add one pump, above 36.4 nmol/L remove one (full-dose therapy). Enantate and mixed esters: midway between injections, or peak and trough, within the male reference range [1, p35 (Table 7)].",
+                "**Haematocrit** should stay below 0.50 L/L. If it stays above, address smoking and sleep apnoea, lengthen the interval, lower the dose or switch to a topical product [1, p35]. Venesection is not recommended for polycythaemia in this setting [1, p55].",
+                "**Reference ranges:** affirmed-gender ranges for haematocrit (after about 3 months on testosterone, 6 on estradiol) and haemoglobin (by about 6 months) [1, p37]; follow eGFR trends, not single results.",
+                "**Preventive care:** blood pressure, smoking, and cancer screening by organs present [1, p38]."
+            ],
+            "note": "Test-by-test detail, with sample timing and source pages, is on [Blood tests and monitoring](#/monitoring); a one-table summary is in the [clinician guide](#/clinician-guide)."
+        },
+        {
+            "h": "When should I seek specialist advice?",
+            "body": [
+                "AusPATH suggests specialist or team input when:"
+            ],
+            "list": [
+                "capacity to consent may be impaired [1, p20]",
+                "the person is under 18, in care or under a guardianship order: consider multidisciplinary care, and follow state law and the children and adolescents guidelines [1, p9] [3] (see [Parents and carers of under-18s](#/parents) for South Australia)",
+                "anti-androgen monotherapy continues beyond 12 to 18 months (endocrinology) [1, p25]",
+                "there is a history of VTE, or VTE on treatment (haematology), or liver disease (hepatology) [1, p38]",
+                "testosterone is to be PBS-subsidised (a one-off specialist consultation) [1, p33]"
+            ],
+            "note": "Prolactin testing is strongly recommended if there is galactorrhoea, new headaches, visual disturbance or pituitary hormone deficiency [1, p54].",
+            "after": [
+                "If haematocrit stays above 0.50 L/L [1, p35, p55] after other causes such as smoking, sleep apnoea, lung or kidney disease are addressed and the dose or interval has been changed, seek advice from the specialist who supports the PBS Authority, or from haematology; seek it sooner if there are symptoms of a clot. AusPATH does not set a referral point for this."
+            ]
+        },
+        {
+            "h": "Local services and training",
+            "list": [
+                "[SHINE SA referral pathways](https://shinesa.org.au/media/2023/09/Referral-Pathways-for-Trans-and-Gender-Diverse-Care.pdf) [4]",
+                "[Trans Health SA directory](https://transhealthsa.com/directory/)",
+                "[ASHM: Advanced Gender Affirming Hormone Therapy](https://ashm.org.au/education/advanced-gender-affirming-hormone-therapy), free prescriber training"
+            ]
+        }
+    ],
+    "references": [
+        {
+            "n": 1,
+            "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). PDF dated 30 April 2026. Page numbers are the printed page numbers. Accessed 8 November 2026.",
+            "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+        },
+        {
+            "n": 2,
+            "text": "Cheung AS, Wynne K, Erasmus J, Murray S, Zajac JD. Position statement on the hormonal management of adult transgender and gender diverse individuals. Med J Aust. 2019;211(3):127-33. Accessed 8 November 2026.",
+            "url": "https://www.mja.com.au/journal/2019/211/3/position-statement-hormonal-management-adult-transgender-and-gender-diverse"
+        },
+        {
+            "n": 3,
+            "text": "Telfer MM, Tollit MA, Pace CC, Pang KC. Australian Standards of Care and Treatment Guidelines for Trans and Gender Diverse Children and Adolescents, version 1.4. Melbourne: The Royal Children's Hospital; 2023. Accessed 8 November 2026.",
+            "url": "https://www.rch.org.au/uploadedFiles/Main/Content/adolescent-medicine/230242%20RCH%20Gender%20Standards%20Booklet%201.4_Nov%202023_WEB.pdf"
+        },
+        {
+            "n": 4,
+            "text": "SHINE SA. Referral pathways for trans and gender diverse care. 2023. Accessed 8 November 2026.",
+            "url": "https://shinesa.org.au/media/2023/09/Referral-Pathways-for-Trans-and-Gender-Diverse-Care.pdf"
+        }
+    ],
+    "kicker": "For health professionals"
+}

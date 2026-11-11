@@ -64,11 +64,11 @@ with sync_playwright() as pw:
     chk(pg.url.endswith("/medicines/spironolactone"), f"old link /#/med/x -> {pg.url}")
     # nav current page marker
     chk(pg.evaluate("document.querySelector('nav#nav a[aria-current=page]').getAttribute('href')")=="/medicines", "nav marks Medicines as current on a medicine page")
-    chk(pg.evaluate("document.querySelector('.ng.cur .ng-btn').textContent")=="Trans & gender diverse", "menu group marked current")
+    chk(pg.evaluate("document.querySelector('.ng.cur .ng-btn').textContent")=="Your medicines", "menu group marked current")
     # section jump from the menu
-    pg.click('nav#nav .ng[data-g=res] .ng-btn'); pg.wait_for_timeout(150)
-    pg.click('nav#nav a[href="/resources#sec-resources-1"]'); pg.wait_for_timeout(500)
-    chk(pg.url.endswith("/resources#sec-resources-1") and pg.evaluate("document.activeElement.id")=="sec-resources-1", f"menu jump link lands on the section ({pg.url})")
+    pg.click('nav#nav .ng[data-g=clin] .ng-btn'); pg.wait_for_timeout(150)
+    pg.click('nav#nav .ng[data-g=clin] a[href="/clinician-guide#monitoring-schedule"]'); pg.wait_for_timeout(800)
+    chk(pg.url.endswith("/clinician-guide#monitoring-schedule") and 0 <= pg.evaluate("document.getElementById('monitoring-schedule').getBoundingClientRect().top") < 400, f"menu jump link lands on the named section ({pg.url})")
     # site search
     pg.goto(B+"/"); pg.wait_for_timeout(400)
     pg.fill("#siteq","safety net"); pg.press("#siteq","Enter"); pg.wait_for_timeout(500)
