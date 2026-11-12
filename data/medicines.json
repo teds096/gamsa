@@ -1,5 +1,5 @@
 {
- "generatedAt": "11 Nov 2026",
+ "generatedAt": "12 Nov 2026",
  "source": "TGA medicine shortage records + manually maintained entries",
  "scrapedCount": 26,
  "medicines": [
@@ -22,7 +22,7 @@
     "Epiduo"
    ],
    "ingredient": "adapalene",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "epiduo-forte",
@@ -43,7 +43,7 @@
     "Epiduo Forte"
    ],
    "ingredient": "adapalene",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "premarin",
@@ -64,7 +64,7 @@
     "Premarin"
    ],
    "ingredient": "conjugated-estrogens",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "androcur",
@@ -85,7 +85,7 @@
     "Androcur"
    ],
    "ingredient": "cyproterone-acetate",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "androcur-100",
@@ -106,7 +106,7 @@
     "Androcur-100"
    ],
    "ingredient": "cyproterone-acetate",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "anterone",
@@ -127,7 +127,7 @@
     "Anterone"
    ],
    "ingredient": "cyproterone-acetate",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "cyprostat",
@@ -169,7 +169,7 @@
     "Cyproterone Sandoz"
    ],
    "ingredient": "cyproterone-acetate",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "apx-doxycycline",
@@ -190,7 +190,7 @@
     "APX-Doxycycline"
    ],
    "ingredient": "doxycycline",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "doryx",
@@ -211,7 +211,7 @@
     "Doryx"
    ],
    "ingredient": "doxycycline",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "doxsig",
@@ -232,7 +232,7 @@
     "Doxsig"
    ],
    "ingredient": "doxycycline",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "doxycycline-sandoz",
@@ -253,7 +253,7 @@
     "Doxycycline Sandoz"
    ],
    "ingredient": "doxycycline",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "estraderm-mx-100",
@@ -274,7 +274,7 @@
     "Estraderm MX"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-11-11",
+   "lastVerified": "2026-11-12",
    "pin": true,
    "pinUntil": "2026-12-31"
   },
@@ -297,7 +297,7 @@
     "Estraderm MX"
    ],
    "ingredient": "estradiol-hemihydrate",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "estraderm-mx-50",
@@ -318,7 +318,7 @@
     "Estraderm MX"
    ],
    "ingredient": "estradiol-hemihydrate",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "estraderm-mx-75",
@@ -339,7 +339,7 @@
     "Estraderm MX"
    ],
    "ingredient": "estradiol-hemihydrate",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "estradot-100",
@@ -359,7 +359,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "estradot-25",
@@ -379,7 +379,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "estradot-50",
@@ -399,7 +399,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "estradot-75",
@@ -419,7 +419,7 @@
    "brands": [
     "Estradot"
    ],
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "estro-pess",
@@ -440,7 +440,7 @@
     "Estro-Pess"
    ],
    "ingredient": "estradiol-hemihydrate",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "estrogel",
@@ -462,7 +462,7 @@
     "Sandrena"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "vagifem-low",
@@ -483,7 +483,7 @@
     "Vagifem Low"
    ],
    "ingredient": "estradiol-hemihydrate",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "zumenon-2",
@@ -504,7 +504,7 @@
     "Zumenon"
    ],
    "ingredient": "estradiol-hemihydrate",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "estalis-50-140",
@@ -525,7 +525,7 @@
     "Estalis Continuous"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "estalis-50-250",
@@ -546,7 +546,7 @@
     "Estalis Continuous"
    ],
    "ingredient": "estradiol",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "angeliq-1-2",
@@ -567,7 +567,7 @@
     "Angeliq 1/2"
    ],
    "ingredient": "drospirenone",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "femoston-1-10",
@@ -588,7 +588,7 @@
     "Femoston 1/10"
    ],
    "ingredient": "dydrogesterone",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "femoston-2-10",
@@ -609,7 +609,7 @@
     "Femoston 2/10"
    ],
    "ingredient": "dydrogesterone",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "femoston-conti",
@@ -630,7 +630,7 @@
     "Femoston-Conti"
    ],
    "ingredient": "dydrogesterone",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "kliogest",
@@ -651,7 +651,7 @@
     "Kliogest"
    ],
    "ingredient": "norethisterone",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "kliovance",
@@ -672,7 +672,7 @@
     "Kliovance"
    ],
    "ingredient": "norethisterone",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "trisequens",
@@ -693,7 +693,7 @@
     "Trisequens"
    ],
    "ingredient": "norethisterone",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "progynova",
@@ -714,7 +714,7 @@
     "Progynova"
    ],
    "ingredient": "estradiol-valerate",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "apo-finasteride-1",
@@ -735,7 +735,7 @@
     "APO-Finasteride 1"
    ],
    "ingredient": "finasteride",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "finapen-1",
@@ -756,7 +756,7 @@
     "Finapen"
    ],
    "ingredient": "finasteride",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "finasteride-gh-1",
@@ -777,7 +777,7 @@
     "Finasteride GH 1"
    ],
    "ingredient": "finasteride",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "propecia",
@@ -798,7 +798,7 @@
     "Propecia"
    ],
    "ingredient": "finasteride",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "zoladex",
@@ -818,7 +818,7 @@
    "brands": [
     "Zoladex"
    ],
-   "lastVerified": "2026-11-11",
+   "lastVerified": "2026-11-12",
    "ingredient": "goserelin",
    "pin": true,
    "pinUntil": "2027-04-30"
@@ -845,7 +845,7 @@
    "tgaMatch": [
     "apo-isotretinoin isotretinoin 10mg"
    ],
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "isotretinoin-apo-20",
@@ -869,7 +869,7 @@
    "tgaMatch": [
     "apo-isotretinoin isotretinoin 20mg"
    ],
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "isotretinoin-gx-10",
@@ -893,7 +893,7 @@
    "tgaMatch": [
     "isotretinoin gx isotretinoin 10mg"
    ],
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "isotretinoin-gx-20",
@@ -917,7 +917,7 @@
    "tgaMatch": [
     "isotretinoin gx isotretinoin 20mg"
    ],
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "isotretinoin-lupin-10",
@@ -941,7 +941,7 @@
    "tgaMatch": [
     "isotretinoin lupin isotretinoin 10 mg"
    ],
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "isotretinoin-lupin-20",
@@ -965,7 +965,7 @@
    "tgaMatch": [
     "isotretinoin lupin isotretinoin 20 mg"
    ],
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "isotretinoin-wgr-10",
@@ -989,7 +989,7 @@
    "tgaMatch": [
     "isotretinoin-wgr isotretinoin 10mg"
    ],
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "isotretinoin-wgr-20",
@@ -1013,7 +1013,7 @@
    "tgaMatch": [
     "isotretinoin-wgr isotretinoin 20mg"
    ],
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "oratane",
@@ -1034,7 +1034,7 @@
     "Oratane"
    ],
    "ingredient": "isotretinoin",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "eligard",
@@ -1055,7 +1055,7 @@
     "Eligard"
    ],
    "ingredient": "leuprorelin",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "lucrin",
@@ -1077,7 +1077,7 @@
     "Eligard"
    ],
    "ingredient": "leuprorelin",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "mirena",
@@ -1098,7 +1098,7 @@
     "Mirena"
    ],
    "ingredient": "levonorgestrel",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "provera",
@@ -1120,7 +1120,7 @@
     "Depo-Provera"
    ],
    "ingredient": "medroxyprogesterone-acetate",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "mens-regaine-extra-strength",
@@ -1141,7 +1141,7 @@
     "Men's Regaine Extra Strength"
    ],
    "ingredient": "minoxidil",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "womens-regaine",
@@ -1162,7 +1162,7 @@
     "Women's Regaine"
    ],
    "ingredient": "minoxidil",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "primolut-n",
@@ -1183,7 +1183,7 @@
     "Primolut N"
    ],
    "ingredient": "norethisterone",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "prometrium",
@@ -1206,7 +1206,7 @@
     "PROGESTERONE-APX"
    ],
    "ingredient": "progesterone",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "utrogestan",
@@ -1227,7 +1227,7 @@
     "Utrogestan"
    ],
    "ingredient": "progesterone",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "spironolactone",
@@ -1250,7 +1250,7 @@
     "Spironolactone Viatris"
    ],
    "ingredient": "spironolactone",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "androfeme-1",
@@ -1271,7 +1271,7 @@
     "AndroFeme 1"
    ],
    "ingredient": "testosterone",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "androforte",
@@ -1292,7 +1292,7 @@
     "AndroForte 5"
    ],
    "ingredient": "testosterone",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "testavan",
@@ -1313,7 +1313,7 @@
     "Testavan"
    ],
    "ingredient": "testosterone",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "testogel",
@@ -1334,7 +1334,7 @@
     "Testogel"
    ],
    "ingredient": "testosterone",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "primoteston-depot",
@@ -1355,7 +1355,7 @@
     "Primoteston Depot"
    ],
    "ingredient": "testosterone",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "sustanon-250",
@@ -1376,7 +1376,7 @@
     "Sustanon 250"
    ],
    "ingredient": "testosterone",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "gonadron",
@@ -1397,7 +1397,7 @@
     "Gonadron"
    ],
    "ingredient": "testosterone-undecanoate",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "reandron",
@@ -1418,7 +1418,7 @@
     "Reandron 1000"
    ],
    "ingredient": "testosterone-undecanoate",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "rejunon-1000",
@@ -1439,7 +1439,7 @@
     "Rejunon 1000"
    ],
    "ingredient": "testosterone-undecanoate",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "testosterone-advz-1000",
@@ -1460,7 +1460,7 @@
     "Testosterone ADVZ 1000"
    ],
    "ingredient": "testosterone-undecanoate",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   },
   {
    "id": "diphereline",
@@ -1481,7 +1481,7 @@
     "Diphereline"
    ],
    "ingredient": "triptorelin",
-   "lastVerified": "2026-11-11"
+   "lastVerified": "2026-11-12"
   }
  ]
 }
