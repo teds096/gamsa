@@ -516,13 +516,40 @@ for _p, _k in CVIEW.items():
         HEAD[_p] = _hd("About this site", H.escape(_a.get("title") or "About GAMSA"), _ct(_in[0] if _in else "", "about"), "".join(f"<p>{_ct(x, 'about')}</p>" for x in _in[1:]))
     elif _k in content:
         _c = content[_k]; _i = _c.get("intro", ""); HEAD[_p] = _hd(_c.get("kicker") or "Overview guide", H.escape(_c.get("title", "")), _ct(" ".join(_i) if isinstance(_i, list) else _i, _p[1:]))
+# v19.7 speed (13 Nov 2026): the first body section's heading and opening paragraphs go in the HTML too ("block pre"), so the
+# largest paragraph paints with the HTML on desktop (was ~2.1 s, after app.js). setView() keeps it by id and patches it in place;
+# under 1100 px the CSS hides it until then (the contents box above it arrives with the script); no-JS readers get the noscript copy.
+def _pre(v, s, key="body", C=None, i=0):   # -> (html, whole section written?)
+    if not isinstance(s, dict) or s.get("premiums") or s.get("pro"): return "", False
+    ps, L = [], s.get(key) or []
+    for b in L:
+        if not isinstance(b, str) or re.match(r"^PBS information \(not GAMSA(’|')s own\):", b): break
+        ps.append(f"<p>{C(b)}</p>")
+    whole = len(ps) == len(L) and set(s) <= {"h", key, "nav"}
+    return ((f'<section class="block pre" id="sec-{v}-{i}" tabindex="-1"><h2>{H.escape(s.get("h", ""))}</h2>' + "".join(ps) + "</section>") if ps else ""), whole and bool(ps)
+for _p, _k in CVIEW.items():
+    if _p not in HEAD or _k not in content: continue
+    _c, _v = content[_k], VIEWID[_p][2:]
+    if _k != "about" and not _c.get("kicker"): HEAD[_p] += '<p class="quick pre"><a href="/medicines">Looking for one medicine? See the A\u2013Z \u2192</a></p>'   # as renderContent()
+    _C = (lambda t: _ct(t, "")) if _k == "about" else (lambda t, v=_v: _ct(t, v))
+    for _i, _s in enumerate((_c.get("sections") or [])[:2]):   # the second section only after a whole first one (nothing above it can still grow)
+        _h, _w = _pre(_v, _s, "paras" if _k == "about" else "body", _C, _i); HEAD[_p] += _h
+        if not _w: break
 HEAD["/easy"] = _hd_easy({"title": content["easyread"].get("title", "Easy Read guides")}, "Short guides in easy to read words, with pictures. Pick the one you need.", act=False)
 for _s in re.findall(r"'(<div class=\"page-head\"><p class=\"kicker\">About this site</p><h1 tabindex=\"-1\">What’s changed</h1>[^']*</div>)'", html): HEAD["/changes"] = _ju(_s)
+# v19.7 speed2 (16 Nov 2026): /alerts head and its first section ("How to subscribe") from renderAlerts' own strings, so the
+# largest paragraph paints with the HTML (was ~2.2 s, after the data). No contents box arrives above it, so it shows on phones too.
+_al = [re.search(r"'(<div class=\"page-head\"><p class=\"kicker\">Clinicians</p><h1 tabindex=\"-1\">Shortage alerts</h1>[^']*</div>)'", html),
+       re.search(r"'(<section class=\"block\" id=\"al-how\"[^']*)'\+\s*'(<p class=\"note\">[^']*</section>)'", html)]
+if not all(_al): raise SystemExit("build.py: renderAlerts head/al-how strings not found (alerts prerender)")
+HEAD["/alerts"] = _ju(_al[0].group(1) + (_al[1].group(1) + _al[1].group(2)).replace('class="block"', 'class="block pre"', 1))
 VIEWGRP = json.loads("{" + re.search(r"var VIEWGRP=\{(.*?)\};", html, re.S).group(1) + "}")   # the view's colour group class, as route() adds it
 def _nj_trim(nj):   # the head carries the h1 and intro; the noscript copy keeps the rest
     return re.sub(r"^<h1>.*?</h1>(?:<p>(?:(?!<p>).)*?</p>)*", "", nj, count=1, flags=re.S)
 
-NOJS = {p: _nj_content(content[k]) for p, k in CVIEW.items() if k in content}
+REVIEW_PAGES = {"/doses", "/monitoring", "/related-care", "/add-on-therapies", "/using", "/pharmacy", "/costs", "/clinician-guide", "/ally-guide", "/parents", "/starting-hormones"}   # v19.7 B4: same foot line as medicine pages
+REVIEW_LINE = f"<p>Written and reviewed by Theodore South, BPharm (Hons), registered pharmacist. Last reviewed {medinfo.get('reviewed', '')}.</p>"
+NOJS = {p: _nj_content(content[k]) + (REVIEW_LINE if p in REVIEW_PAGES else "") for p, k in CVIEW.items() if k in content}
 NOJS.update(_nj_hubs())
 NOJS["/changes"] = _nj_changes(content["changes"])
 NOJS["/easy"] = (f"<h1>{H.escape(content['easyread'].get('title', 'Easy Read guides'))}</h1><ul>" +
@@ -530,15 +557,16 @@ NOJS["/easy"] = (f"<h1>{H.escape(content['easyread'].get('title', 'Easy Read gui
 NOJS["/medicines"] = ("<h1>Medicines A–Z</h1><ul>" + "".join(f'<li><a href="/medicines/{m["id"]}">{H.escape(m["name"])}</a>: {_md(sentence(m.get("summary", "")))}</li>'
                       for m in sorted(medinfo["medicines"], key=lambda m: m["name"].lower())) + "</ul>")
 NOJS["/alerts"] = ("<h1>Shortage alerts</h1><p>Medicines under a current TGA shortage notice, checked " + H.escape(str(meds.get("generatedAt", ""))) +
-                   '. Feed: <a href="/feed.xml">gamsa.au/feed.xml</a>.</p><ul>' + "".join(f'<li>{H.escape(r.get("brand", ""))} {H.escape(r.get("strengthLabel", ""))}: {H.escape(r.get("statusLabel") or str(r.get("status")))}</li>'
+                   '. Feed: <a href="/feed.xml">gamsa.au/feed.xml</a>. With JavaScript turned on, this page can also make a feed for only the medicines you choose.</p><ul>' + "".join(f'<li>{H.escape(r.get("brand", ""))} {H.escape(r.get("strengthLabel", ""))}: {H.escape(r.get("statusLabel") or str(r.get("status")))}</li>'
                    for r in meds["medicines"] if r.get("status") not in (None, "in_supply", "unverified")) + "</ul>")
 
 # v19.5 R5 (7 Nov 2026, layout shift): the "Updated" note under a page's heading is also written into the static page, as
 # chgNote() in template.html draws it, so it is on screen from the first paint instead of pushing the page down when the
 # script runs (/sightings CLS 0.18 on phones). chgNote() still redraws it (same node, same place) and drops it after 3 months.
-def _upd_static(body, view, path):
-    start = body.find(f'<div class="view on" id="{view}">')
-    if start < 0: return body
+def _upd_static(body, view, path, hd=None):
+    _m = re.search(r'<div class="view on[^"]*" id="' + re.escape(view) + '">', body)   # v19.7: the view may carry group classes (acc c-...)
+    if not _m: return body
+    start = _m.start()
     nxt = body.find('<div class="view', start + 10)
     ph = body.find('<div class="page-head">', start)
     if ph < 0 or (nxt > -1 and ph > nxt): ph = body.find('<div class="er-cover">', start)   # CWV r2: Easy Read covers too (chgNote does)
@@ -554,7 +582,8 @@ def _upd_static(body, view, path):
     if not L: return body
     c = L[0]; y, mo, d = c["date"].split("-")
     short = f'{int(d)} {["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][int(mo)-1]} {y}'
-    note = (f'<aside class="upd upd-b" aria-label="Recent change"><span class="upd-tag">Updated</span><p><b>{short}:</b> '
+    _us = " upd-s" if hd and body.startswith('<div class="page-head"', ph) else ""
+    note = (f'<aside class="upd upd-b{_us}" aria-label="Recent change"><span class="upd-tag">Updated</span><p><b>{short}:</b> '
             f'{H.escape(c["text"])} <a href="/changes">What’s changed</a></p></aside>')
     return body[:i] + note + body[i:]
 
@@ -613,6 +642,7 @@ def _ssr(body):
     body = body.replace('<ul class="plain" id="affected" aria-live="polite"></ul>', f'<ul class="plain" id="affected" aria-live="polite">{cards}</ul>', 1)
     return body.replace('id="homeLive" href="/supply" data-link>Medicine supply updates</a>', f'id="homeLive" href="/supply" data-link>{strip}</a>', 1)
 
+_NONE = ""; _NJPRE, _PREMARK = "<style>#main>.view>.pre{display:none}#main>.view>.upd-s{display:flex!important}</style>", "<"   # v19.7 speed: no-JS readers see the noscript copy only
 def write(path, title, desc, view, schema, noindex=False, nojs=None, full=None, hd=None):
     full = full or full_title(title)   # home too: the same title the app sets after in-app navigation (B-28, 23 Oct 2026)
     extra = ld(schema) + ('<meta name="robots" content="noindex">\n' if noindex else "")
@@ -622,8 +652,8 @@ def write(path, title, desc, view, schema, noindex=False, nojs=None, full=None, 
     grp = VIEWGRP.get({"v-med": "/med", "v-easy-guide": "/easy-guide"}.get(view, path)) if hd else None   # only with a built head (static /supply measured a 0.03 shift with it)
     cls = "view on" + (f" acc c-{grp}" if grp else "") + (" hubv" if view in ("v-trans", "v-clinicians", "v-allies") else "")
     body = page.replace("__TITLE__", H.escape(full), 1) \
-               .replace(f'<div class="view" id="{view}">', f'<div class="{cls}" id="{view}">' + (hd or "") + (f"<noscript>{_dl_sizes(_nj_trim(nj) if hd else nj)}</noscript>" if nj else ""), 1)
-    body = _upd_static(body, view, path)
+               .replace(f'<div class="view" id="{view}">', f'<div class="{cls}" id="{view}">' + (hd or "") + (f"<noscript>{_NJPRE if hd and _PREMARK in hd else _NONE}{_dl_sizes((re.sub(r'^<h1>.*?</h1>', '', nj, 1) if path == '/alerts' else _nj_trim(nj)) if hd else nj)}</noscript>" if nj else ""), 1)
+    body = _upd_static(body, view, path, hd)   # v19.7: upd-s = hidden on phones until the script keeps it (the text under it arrives with the script)
     if view in ("v-supply", "v-home"): body = _ssr(body)
     # Cloudflare Pages serves /costs from costs.html (and /costs/ needs a redirect if it were a folder)
     out = D/"index.html" if path == "/" else D/(path.strip("/") + ".html")
@@ -643,6 +673,7 @@ for path, title in TITLES.items():
         schema = {"@context": "https://schema.org", "@type": "MedicalWebPage", "name": title,
                   "url": SITE + path, "description": desc, "inLanguage": "en-AU",
                   "author": AUTHOR, "publisher": ORG}
+        if path in REVIEW_PAGES: schema.update({"reviewedBy": AUTHOR, "lastReviewed": REVIEWED_ISO})   # v19.7 B4
     write(path, title, desc, VIEWID[path], schema, noindex=(path == "/search"), full=SEOT.get(path))
     if path != "/search": urls.append(path)   # /sightings and /feedback indexed too (v18.1.1, Ted 15 Oct); /search stays noindex
 
@@ -672,7 +703,9 @@ for m in medinfo["medicines"]:
     for x in seo.get("faq", []):   # v19.5 R5b: questions people search for, answered from facts already on the page
         faq.append({"@type": "Question", "name": x["q"], "acceptedAnswer": {"@type": "Answer", "text": x["a"]}})
     schema = {"@context": "https://schema.org", "@graph": [page_ld] + ([{"@type": "FAQPage", "mainEntity": faq}] if faq else [])}
-    write(path, title, desc, "v-med", schema, nojs=_nj_med(m), full=seo.get("title"), hd=_hd_med(m))
+    _s0 = (m.get("sections") or [None])[0]
+    _pr = "" if not _s0 or (_s0.get("h") == "What is monitored" and m.get("bloodTests")) else _pre("med", _s0, C=lambda t: _ct(t, "med-" + m["id"]))[0]
+    write(path, title, desc, "v-med", schema, nojs=_nj_med(m), full=seo.get("title"), hd=_hd_med(m) + _pr)
     urls.append(path)
 
 for g in content["easyread"]["guides"]:
@@ -696,6 +729,11 @@ today = datetime.date.today().isoformat()
 (D/"sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n'
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     "".join(f"  <url><loc>{SITE}{u}</loc><lastmod>{today}</lastmod></url>\n" for u in urls) + "</urlset>\n")
+_S2M = {sid: m["id"] for m in medinfo["medicines"] for sid in (m.get("supplyIds") or [])}
+# v19.7: names for the "Make your own feed" titles (functions/feed.js). Names only: the filter itself works on any slug.
+_fns = "// Written by build.py from content/medicines.json (v19.7). Do not edit by hand.\nexport const FEED_NAMES = " + json.dumps({m["id"]: m["name"] for m in medinfo["medicines"]}, indent=1, sort_keys=True, ensure_ascii=False) + ";\n"
+_fnf = R/"functions/_lib/feed_names.js"
+if not _fnf.exists() or _fnf.read_text() != _fns: _fnf.write_text(_fns)
 def _rss():
     import email.utils, datetime
     items = []
@@ -707,7 +745,8 @@ def _rss():
         try: dt = datetime.datetime.fromisoformat(str(d)[:10]).replace(tzinfo=datetime.timezone.utc)
         except Exception: dt = datetime.datetime.now(datetime.timezone.utc)
         link = SITE + "/supply"
-        items.append("<item><title>" + H.escape(f"{st}: {name}") + "</title><link>" + link + "</link><guid isPermaLink=\"false\">" + H.escape(f"gamsa-{r.get('id', name)}-{r.get('status')}") + "</guid><pubDate>" + email.utils.format_datetime(dt) + "</pubDate><description>" + H.escape((r.get("note") or st) + (" Not returning" if "not returning" in str(r.get("expectedReturn", "")).lower() else " Expected return: " + str(r.get("expectedReturn", "—"))) + ". TGA status as checked " + str(meds.get("generatedAt", "")) + ".") + "</description></item>")
+        slug = _S2M.get(r.get("id"), "")   # v19.7: each item names its medicine page, so /feed?m=... (functions/feed.js) can pick items
+        items.append("<item><title>" + H.escape(f"{st}: {name}") + "</title><link>" + link + "</link>" + (f'<category domain="{SITE}/medicines">{slug}</category>' if slug else "") + "<guid isPermaLink=\"false\">" + H.escape(f"gamsa-{r.get('id', name)}-{r.get('status')}") + "</guid><pubDate>" + email.utils.format_datetime(dt) + "</pubDate><description>" + H.escape((r.get("note") or st) + (" Not returning" if "not returning" in str(r.get("expectedReturn", "")).lower() else " Expected return: " + str(r.get("expectedReturn", "—"))) + ". TGA status as checked " + str(meds.get("generatedAt", "")) + ".") + "</description></item>")
     (D/"feed.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>GAMSA shortage alerts</title><link>' + SITE + '/supply</link><description>Gender-affirming medicines in Australia under a current TGA shortage notice. Rebuilt daily.</description><language>en-au</language>' + "".join(items) + "</channel></rss>\n")
 _rss()
 (D/"robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")

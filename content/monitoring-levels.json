@@ -363,7 +363,7 @@
           "id": "e2-psa",
           "test": "PSA (prostate test)",
           "when": "Not a routine hormone test. Hormones and genital surgery leave the prostate in place",
-          "aim": "Read knowing that hormones lower PSA (and finasteride roughly halves it)",
+          "aim": "Read knowing that hormones lower PSA (and finasteride lowers it, by about half in older men)",
           "talkIf": "Anyone orders a PSA test: tell them you take hormones, and finasteride if you do",
           "clinician": "GAHT lowers PSA to levels like androgen deprivation; risk is lower but remains; no consensus PSA thresholds.",
           "sources": [

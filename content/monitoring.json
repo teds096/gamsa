@@ -194,7 +194,7 @@
       "group": "Blood tests for each medicine",
       "body": [],
       "levels": "progesterone",
-      "note": "Sources: AusPATH p55 [19]; Prometrium product information [15]."
+      "note": "Sources: AusPATH pp55–56 [19]; Prometrium product information [15]."
     },
     {
       "h": "Testosterone long-acting injection (undecanoate)",
@@ -255,7 +255,7 @@
           ],
           [
             "Finasteride",
-            "No routine blood test; it lowers PSA results by about half, so tell whoever orders a prostate test [18]"
+            "No routine blood test; it lowers PSA results (by about half in older men, less in younger men), so tell whoever orders a prostate test [18]"
           ],
           [
             "PrEP",
@@ -276,6 +276,7 @@
       "nav": "Timing your blood test",
       "figure": {
         "id": "trough-timing",
+        "look": "b",
         "type": "chart-timeline",
         "form": "curve",
         "title": "Why the timing of the blood test matters",
@@ -329,18 +330,22 @@
               "y": 62.9
             },
             {
-              "x": 93.2,
-              "y": 45.4
+              "x": 92.6,
+              "y": 55.5
             },
             {
-              "x": 95.4,
-              "y": 32.2
+              "x": 94.2,
+              "y": 50.0
             },
             {
-              "x": 97.6,
-              "y": 22.5
+              "x": 95.8,
+              "y": 46.5
             }
           ],
+          "window": {
+            "from": 83,
+            "to": 91
+          },
           "base": 92,
           "guides": [
             {

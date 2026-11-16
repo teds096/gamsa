@@ -1,0 +1,28 @@
+// Written by build.py from content/medicines.json (v19.7). Do not edit by hand.
+export const FEED_NAMES = {
+ "angeliq": "Estradiol and drospirenone tablets (Angeliq)",
+ "cyproterone-acetate": "Cyproterone acetate",
+ "doxycycline": "Doxycycline",
+ "estalis-patches": "Estradiol and norethisterone patches (Estalis and Estalis Sequi)",
+ "estradiol-gel": "Estradiol gel",
+ "estradiol-patches": "Estradiol patches",
+ "estradiol-tablets": "Estradiol tablets",
+ "femoston": "Estradiol and dydrogesterone tablets (Femoston and Femoston-Conti)",
+ "finasteride": "Finasteride",
+ "gnrh-analogues": "GnRH analogues (puberty blockers)",
+ "isotretinoin": "Isotretinoin",
+ "kliogest-kliovance": "Estradiol and norethisterone tablets (Kliogest and Kliovance)",
+ "levonorgestrel-iud": "Levonorgestrel intrauterine device",
+ "medroxyprogesterone-acetate": "Medroxyprogesterone acetate",
+ "micronised-progesterone": "Micronised progesterone",
+ "minoxidil-topical": "Topical minoxidil",
+ "norethisterone": "Norethisterone",
+ "spironolactone": "Spironolactone",
+ "testosterone-cream": "Testosterone cream",
+ "testosterone-esters": "Testosterone enantate and testosterone esters",
+ "testosterone-gel": "Testosterone gel",
+ "testosterone-undecanoate": "Testosterone undecanoate injection",
+ "topical-retinoid-bpo": "Topical retinoid and benzoyl peroxide",
+ "trisequens": "Sequential estradiol and norethisterone tablets (Trisequens)",
+ "vaginal-oestrogen": "Vaginal oestrogen"
+};

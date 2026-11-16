@@ -394,13 +394,13 @@
         "content/costs.json#If cost is a barrier"
       ],
       "synced": {
-        "date": "2026-11-07",
+        "date": "2026-11-16",
         "fp": {
           "content/costs.json#What the PBS is": "a5f99ce59998",
           "content/costs.json#What you pay at the counter": "2d89a8efae04",
-          "content/costs.json#The PBS Safety Net": "ae3d7decd24e",
+          "content/costs.json#The PBS Safety Net": "1580ef5f7da5",
           "content/costs.json#Closing the Gap: lower costs for Aboriginal and Torres Strait Islander people": "5c5550989bb6",
-          "content/costs.json#Brand premiums: being aware of them": "2b8054f682b8",
+          "content/costs.json#Brand premiums: being aware of them": "07b24c6853f8",
           "content/costs.json#If cost is a barrier": "c279bfafda79"
         }
       }
@@ -483,10 +483,10 @@
         "content/administration.json#Applying gel, and keeping it off other people"
       ],
       "synced": {
-        "date": "2026-11-07",
+        "date": "2026-11-15",
         "fp": {
           "content/administration.json#Putting on and changing a patch": "c0ceeafba4ec",
-          "content/administration.json#Applying gel, and keeping it off other people": "046db4a10b21"
+          "content/administration.json#Applying gel, and keeping it off other people": "8b4b905cf767"
         }
       }
     },
@@ -531,6 +531,7 @@
               "icon": "clock",
               "lines": [
                 "The long-acting testosterone injection is given slowly, into the side of your hip.",
+                "You lie on your side or on your back.",
                 "A doctor or nurse gives it.",
                 "In some places, a trained pharmacist can give it.",
                 "You then wait in the clinic for at least 30 minutes.",
@@ -613,14 +614,14 @@
         "content/medicines.json#testosterone-undecanoate"
       ],
       "synced": {
-        "date": "2026-11-09",
+        "date": "2026-11-16",
         "fp": {
-          "content/administration.json#Your long-acting injection: finding the right spot": "a12fa3c4fc6d",
+          "content/administration.json#Your long-acting injection: finding the right spot": "5969fdf5cf28",
           "content/administration.json#What happens at the injection appointment": "177efbccba38",
-          "content/administration.json#Learning to inject testosterone yourself": "11b6b10ca4e3",
+          "content/administration.json#Learning to inject testosterone yourself": "910d787ad70c",
           "content/administration.json#Disposing of needles and leftover medicine": "7426cfa28c7d",
           "content/medicines.json#gnrh-analogues": "a4470ed14a11",
-          "content/medicines.json#testosterone-undecanoate": "6bded9226454"
+          "content/medicines.json#testosterone-undecanoate": "378e060eaedf"
         }
       }
     },
@@ -800,11 +801,11 @@
         "content/administration.json#Dose and symptom logs to print"
       ],
       "synced": {
-        "date": "2026-11-07",
+        "date": "2026-11-16",
         "fp": {
           "content/dosing.json#Start here: the dose is yours, and only your prescriber sets it": "48d8ab243ca1",
           "content/monitoring.json#Blood tests and reviews": "5c2b500cd54e",
-          "content/monitoring.json#Getting the timing of the blood test right": "c18b7660f2e6",
+          "content/monitoring.json#Getting the timing of the blood test right": "c213d6cee46e",
           "content/monitoring.json#Reading your results": "02b8e0681dc4",
           "content/administration.json#Dose and symptom logs to print": "ce683aefdada"
         }
@@ -1172,11 +1173,11 @@
         "content/administration.json#Your long-acting injection: finding the right spot"
       ],
       "synced": {
-        "date": "2026-11-07",
+        "date": "2026-11-15",
         "fp": {
           "content/allies.json#What the medicines are": "7129f29d26f8",
           "content/administration.json#What happens at the injection appointment": "177efbccba38",
-          "content/administration.json#Your long-acting injection: finding the right spot": "a12fa3c4fc6d"
+          "content/administration.json#Your long-acting injection: finding the right spot": "5969fdf5cf28"
         }
       }
     },

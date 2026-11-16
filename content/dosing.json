@@ -156,7 +156,7 @@
       "note": "Testosterone can harm a developing pregnancy and does not reliably stop ovulation. If pregnancy is possible for you, contraception is worth a specific conversation with your prescriber — do not assume testosterone covers it [1].",
       "nav": "Testosterone",
       "figure": {
-        "id": "testosterone-intervals",
+        "id": "testosterone-intervals", "labels": true,
         "type": "chart-timeline",
         "form": "rows",
         "title": "How often each form is given",

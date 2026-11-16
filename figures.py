@@ -114,7 +114,7 @@ def body_path(cx):
 REGION = {
     "chest": lambda cx: f'<rect x="{f(cx - 23)}" y="58" width="46" height="29" rx="9"/>',
     "upper-chest": lambda cx: f'<rect x="{f(cx - 21)}" y="58" width="42" height="24" rx="9"/>',
-    "groin": lambda cx: f'<rect x="{f(cx - 12)}" y="146" width="24" height="21" rx="8"/>',
+    "groin": lambda cx: f'<rect x="{f(cx - 12)}" y="140" width="24" height="14" rx="6"/>',
     "belly": lambda cx: f'<rect x="{f(cx - 21)}" y="96" width="42" height="41" rx="13"/>',
     "shoulders": lambda cx: "".join(
         f'<path d="{smooth([(cx + s * 12, 51.5), (cx + s * 24, 54.5), (cx + s * 36, 60), (cx + s * 42, 70), (cx + s * 44.2, 88), (cx + s * 45.2, 104), (cx + s * 39, 106), (cx + s * 36, 92), (cx + s * 32.5, 79), (cx + s * 25, 67), (cx + s * 14, 58)])}"/>'
@@ -180,8 +180,14 @@ HIP_W, HIP_H = 300, 340
 HIP = {"troch": (148, 212), "asis": (228, 92), "crest": (138, 62)}
 _BACK = [(96, -20), (90, 20), (80, 70), (70, 120), (64, 170), (68, 220), (80, 270), (90, 320), (94, 370)]
 _FRONT = [(204, 370), (212, 300), (222, 240), (232, 180), (238, 130), (232, 80), (220, 30), (214, -20)]
-_ILIUM = [(108, 100), (122, 72), (150, 54), (186, 58), (214, 74), (228, 92), (218, 108), (200, 128),
-          (186, 150), (172, 160), (148, 156), (126, 140), (112, 122)]
+# v19.7 (15 Nov 2026, Ted approved "version A"): shaded hip bone (wing with crest and ASIS, socket, ischium, pubis, obturator
+# foramen) and top of the thigh bone (head, neck, trochanters, shaft), fitted to the landmark points above.
+_HIPBONE = [(232, 93), (226, 74), (210, 59), (188, 51), (163, 50), (140, 56), (118, 66), (101, 81), (91, 99), (90, 113),
+            (98, 126), (110, 146), (111, 166), (104, 178), (108, 194), (112, 222), (120, 240), (134, 247), (152, 244),
+            (176, 248), (198, 246), (210, 238), (213, 226), (207, 214), (204, 202), (210, 170), (222, 140), (219, 122), (222, 108)]
+_OBT = [(158, 231), (170, 219), (190, 217), (201, 226), (196, 238), (178, 241), (163, 240)]
+_FEMUR = [(162, 176), (174, 169), (190, 171), (199, 184), (196, 200), (184, 209), (174, 216), (171, 236), (174, 290), (178, 350),
+          (144, 350), (141, 292), (137, 262), (129, 252), (134, 240), (130, 220), (129, 200), (135, 186), (147, 182)]
 
 
 def hip_art(d, uid, U):
@@ -190,10 +196,11 @@ def hip_art(d, uid, U):
     s = g.get("site", {"x": 171, "y": 122}); s = (s["x"], s["y"])
     o = [f'<circle class="k-soft" cx="160" cy="166" r="140"/>',
          f'<path class="k-body" d="{smooth(_BACK + _FRONT)}"/>',
-         f'<path class="k-bone" d="{smooth(_ILIUM)}"/>',
-         '<path class="k-bone" d="M136 224C140 270 150 320 156 372H186C178 320 170 270 164 226Z"/>',
-         '<path class="k-bone" d="M140 204L170 166A14 14 0 0 1 192 178L162 218Z"/>',
-         f'<circle class="k-bone" cx="{t[0]}" cy="{t[1]}" r="17"/>',
+         f'<path class="k-bonef" fill-rule="evenodd" d="{smooth(_HIPBONE)}{smooth(_OBT)}"/>',
+         '<circle class="k-boneln" cx="180" cy="190" r="25"/>',
+         f'<path class="k-bonef" d="{smooth(_FEMUR)}"/>',
+         '<path class="k-boneln" d="M161 200A21 21 0 1 1 192 207M137 228C150 232 162 230 172 222"/>',
+         '<path class="k-arrow" d="M232 300V250M226 258 232 248 238 258"/>',
          f'<path class="k-zone" d="M{t[0]} {t[1]}L{a[0]} {a[1]}L{c[0]} {c[1]}Z"/>',
          f'<path class="k-v" d="M{a[0]} {a[1]}L{t[0]} {t[1]}L{c[0]} {c[1]}"/>']
     for k in ("troch", "asis", "crest"):
@@ -206,6 +213,7 @@ def hip_art(d, uid, U):
         if m.get("at") in HIP:
             x, y = HIP[m["at"]]; dx, dy = off[m["at"]]
             pins.append(f'<span class="gf-pin" aria-hidden="true" style="{pos(x + dx, y + dy, HIP_W, HIP_H)}">{E(m["n"])}</span>')
+    pins.append(f'<span class="gf-lab" aria-hidden="true" style="{pos(213, 316, HIP_W, HIP_H)}">head</span>')   # direction arrow label (approved 15 Nov)
     return svg(f"0 0 {HIP_W} {HIP_H}", "".join(o), "", d["alt"], f"{U}-d", U), "".join(pins)
 
 
@@ -220,13 +228,14 @@ def layers_art(d, uid, U):
     sc = g["scale"]                 # {"to": mm, "step": mm} (an object: a bare [0, 10, 20] list would read as citations)
     ticks = list(range(0, sc["to"] + 1, sc["step"]))
     y = lambda mm: SURF + MM * mm
-    o = [f'<defs><pattern id="{uid}-fat" width="28" height="20" patternUnits="userSpaceOnUse">'
+    flat = d.get("look") == "b"   # v19.7 look b: flat cream fat and pale pink muscle, no texture
+    o = [] if flat else [f'<defs><pattern id="{uid}-fat" width="28" height="20" patternUnits="userSpaceOnUse">'
          '<circle class="k-tex" cx="7" cy="6" r="2.8"/><circle class="k-tex" cx="21" cy="15" r="2.8"/></pattern>'
          f'<pattern id="{uid}-mus" width="26" height="9" patternUnits="userSpaceOnUse"><path class="k-tex" d="M2 4.5h18"/></pattern></defs>']
     top = 0
     for i, L in enumerate(lay):
-        fill = {"skin": "", "fat": f' fill="url(#{uid}-fat)"', "muscle": f' fill="url(#{uid}-mus)"'}[L["kind"]]
-        cls = "k-skin" if L["kind"] == "skin" else "k-layer"
+        fill = "" if flat else {"skin": "", "fat": f' fill="url(#{uid}-fat)"', "muscle": f' fill="url(#{uid}-mus)"'}[L["kind"]]
+        cls = "k-skin" if L["kind"] == "skin" else "k-layer" + (f" b-{L['kind']}" if flat else "")
         o.append(f'<rect class="{cls}"{fill} x="0" y="{f(y(top))}" width="{LAY_W - 40}" height="{f(MM * (L["to"] - top))}"/>')
         top = L["to"]
     for mm in [0] + [L["to"] for L in lay[:-1]]:
@@ -252,6 +261,9 @@ def layers_art(d, uid, U):
                  f'<path class="k-hub" d="M{f(start[0])} {f(start[1])}L{f(hub[0])} {f(hub[1])}"/>'
                  f'<ellipse class="k-site" cx="{f(tip[0])}" cy="{f(tip[1] + 1)}" rx="6" ry="4.5"/>')
         pins.append(f'<span class="gf-pin" aria-hidden="true" style="{pos(start[0] - 17, start[1] + 6, LAY_W, LAY_H)}">{E(n["n"])}</span>')
+        if flat:   # the depth at the needle tip
+            L90 = ang == 90
+            labels.append(f'<span class="gf-lab b-dep{" b-depl" if L90 else ""}" style="{pos(tip[0] - 12 if L90 else tip[0] + 12, tip[1], LAY_W, LAY_H)}">about {round(n["depth"])} mm</span>')
     top = 0
     for L in lay:
         mid = (top + min(L["to"], ticks[-1])) / 2
@@ -403,7 +415,10 @@ def r_body_map(d, U):
 def r_anatomy(d, U):
     if d["art"] == "hip":
         art, pins = hip_art(d, U, U)
-        steps = "".join(f"<li>{E(s)}</li>" for s in d.get("steps", []))
+        st = d.get("steps", [])   # v19.7: the 90-degree step shows a small needle-at-right-angle picture (approved version A)
+        n90 = ('<svg class="gf-n90" viewBox="0 0 96 64" aria-hidden="true" focusable="false"><path class="k-edge" d="M4 44H92"/>'
+               '<path class="k-ra" d="M48 44V34H58V44"/><path class="k-needle" d="M48 44V8"/><path class="k-hub" d="M48 8V2"/></svg>')
+        steps = "".join(f"<li>{E(s)}{n90 if '90°' in s else ''}</li>" for s in st)
         tx = (key_list(d, U) + (f'<p class="gf-h">{E(d["stepsTitle"])}</p><ol class="gf-steps">{steps}</ol>' if steps else "")
               + notes(d))
         return wrap(d, U, head(d, U) + f'<div class="gf-bd gf-2c"><div class="gf-ac"><div class="gf-art gf-hip">{art}{pins}</div>'
@@ -411,7 +426,7 @@ def r_anatomy(d, U):
     if d["art"] == "skin-layers":
         art, over = layers_art(d, U, U)
         return wrap(d, U, head(d, U) + f'<div class="gf-bd"><div class="gf-art gf-lay">{art}{over}</div>'
-                    + long_p(d, U) + key_list(d, U) + notes(d) + "</div>")
+                    + long_p(d, U) + key_list(d, U) + notes(d) + "</div>", " gfB b-lay" if d.get("look") == "b" else "")
     raise ValueError(f"figure {d['id']}: no art called {d['art']!r}")
 
 
@@ -497,7 +512,7 @@ def grid(ax):
 
 def legend(items):
     """key for the kinds of mark (identity never rests on colour: each swatch has a shape or texture as well)"""
-    sw = {"bar": '<i class="gf-mk gf-bar"></i>', "hatch": '<i class="gf-mk gf-hat"></i>', "acc": '<i class="gf-mk gf-acch"></i>',
+    sw = {"bar": '<i class="gf-mk gf-bar"></i>', "hatch": '<i class="gf-mk gf-hat"></i>', "tint": '<i class="gf-mk gf-tint"></i>', "acc": '<i class="gf-mk gf-acch"></i>',
           "thr": '<i class="gf-mk gf-thr"></i>', "dot": '<i class="gf-mk gf-dot"></i>', "ring": '<i class="gf-mk gf-dot gf-ring"></i>',
           "win": '<i class="gf-mk gf-win"></i>', "daily": '<i class="gf-mk gf-daily"></i>', "cont": '<i class="gf-mk gf-cont"></i>'}
     li = "".join(f'<li><span class="gf-lg" aria-hidden="true">{sw[k["mark"]]}</span><span>{rich(k["text"])}</span></li>' for k in items)
@@ -523,9 +538,43 @@ def fill(d):
     return json.loads(s)
 
 
+def bars_b(d, U):
+    """v19.7 look b (approved 16 Nov 2026): taller bars, the count and total over each threshold, totals at the bar ends,
+    the parts of a split bar named under it"""
+    ax = d["axis"]; hi = ax["to"]; rows = []; sn = any(r.get("thr") for r in d["rows"])
+    for r in d["rows"]:
+        if sn:
+            v = r["segs"][0]["v"]; c = num(v); p = 100 * c / hi
+            side = f"left:{p:.2f}%" if p < 60 else f"right:{100 - p:.2f}%"
+            rows.append(f'<li><p class="gf-rl"><b>{E(r["label"])}</b> <span>{rich(r["text"].replace("{n}", n(c)))}</span>'
+                        + (f' <span class="gf-then">{rich(r["then"])}</span>' if r.get("then") else "") + '</p>'
+                        f'<div class="b-bar" aria-hidden="true"><i class="b-on" style="width:{p:.2f}%"></i><i class="b-off" style="left:{p:.2f}%"></i>'
+                        f'<i class="b-thr" style="left:{p:.2f}%"></i><b class="b-flag{"" if p < 60 else " b-r"}" style="{side}">{n(c)} scripts · {E(v["total"])}</b></div></li>')
+        else:
+            vs = [(s["k"], num(s["v"])) for s in r["segs"]]; tot = sum(v for _, v in vs); x = 0; seg = lab = ""
+            for k, v in vs:
+                at = f"left:{100 * x / hi:.2f}%;width:{100 * v / hi:.2f}%"
+                seg += f'<i class="{"b-on" if k == "bar" else "b-acc"}" style="{at}"></i>'
+                if len(vs) > 1:
+                    lab += f'<span class="b-sl b-sl-{k}" style="{at}">{"co-payment" if k == "bar" else "brand premium"}</span>'
+                x += v
+            rows.append(f'<li><p class="gf-rl"><b>{E(r["label"])}</b> <span>{rich(r["text"].replace("{total}", money(tot)))}</span></p>'
+                        f'<div class="b-bar b-br" aria-hidden="true">{seg}<b class="b-tot" style="left:calc({100 * tot / hi:.2f}% + 10px)">{money(tot)}</b></div>'
+                        + (f'<div class="b-sls" aria-hidden="true">{lab}</div>' if lab else "") + '</li>')
+    unit = "" if sn else "$"
+    ticks = "".join(f'<span>{unit}{t}</span>' for t in range(ax.get("from", 0), hi + 1, ax["step"]))
+    inner = (f'<div class="gf-bd"><ul class="b-rows" role="list" aria-label="{A(d["alt"])}">{"".join(rows)}</ul>'
+             f'<div class="b-ax" aria-hidden="true">{ticks}</div>'
+             + (f'<p class="gf-axl b-axl" aria-hidden="true">{E(ax["label"])}</p>' if ax.get("label") else "")
+             + long_p(d, U) + legend(d.get("legend", [])) + notes(d) + '</div>')
+    return wrap(d, U, head(d, U) + inner, f' gfB b-{"sn" if sn else "bp"}')
+
+
 def r_chart_bar(d, U):
     """horizontal bars on one proportional axis. rows: [{"label", "text" ({n} = first value), "segs": [{"k": bar|acc|rest,
     "v": number, money or {"total","per"}}], "thr": true (accent threshold at the end of the first segment), "then"}]"""
+    if d.get("look") == "b":
+        return bars_b(d, U)
     ax = d["axis"]; lo, hi = ax.get("from", 0), ax["to"]
     rows = []
     for r in d["rows"]:
@@ -561,19 +610,26 @@ def r_chart_timeline(d, U):
     lo, hi = ax.get("from", 0), ax.get("to", 1)
     if d["form"] == "rows":
         rows = []
+        lab = d.get("labels")   # v19.7: legend words written under each injection row ("A dose" line, then the window line), no key
+        lg = {k["mark"]: k["text"] for k in d.get("legend", [])}
         for r in d["rows"]:
-            m = [grid(ax)]
+            m, t = [grid(ax)], []
             for e in r["marks"]:
                 if e["k"] == "daily":
                     m.append('<i class="gf-mk gf-daily"></i>')
                 elif e["k"] == "win":
                     m.append(f'<i class="gf-mk gf-win" style="left:{pct(e["from"], lo, hi)};width:{pct(e["to"] - e["from"] + lo, lo, hi)}"></i>')
+                    t.append(f'<span class="b-tw" style="{"text-align:right" if e["to"] >= hi else "padding-left:" + pct(e["from"], lo, hi)}">{E(lg["win"])}</span>')
                 else:
                     m.append(f'<i class="gf-mk gf-dot" style="left:{pct(e["at"], lo, hi)}"></i>')
+                    t.insert(0, f'<span>{E(lg["dot"])}</span>')
+            t = f'<p class="b-tl" aria-hidden="true">{"".join(t)}</p>' if lab and t else ""
             rows.append(f'<li><p class="gf-rl"><b>{E(r["label"])}</b> <span>{rich(r["text"])}</span></p>'
-                        f'<div class="gf-tr gf-tt" aria-hidden="true">{"".join(m)}</div></li>')
+                        f'<div class="gf-tr gf-tt" aria-hidden="true">{"".join(m)}</div>{t}</li>')
         chart = f'<div class="gf-chart"><ul class="gf-rows" role="list" aria-label="{A(d["alt"])}">{"".join(rows)}</ul>{axis(ax)}</div>'
-        body = chart + long_p(d, U) + legend(d.get("legend", [])) + notes(d)
+        body = chart + long_p(d, U) + ("" if lab else legend(d.get("legend", []))) + notes(d)
+        if lab:
+            return wrap(d, U, head(d, U) + f'<div class="gf-bd">{body}</div>').replace('class="gf ', 'class="gf b-ti ', 1)
     elif d["form"] == "milestones":
         span = ax["to"] - lo
         end = 100 * span / (span + ax.get("more", 0))          # the carry-on part sits after the last tick
@@ -595,6 +651,10 @@ def r_chart_timeline(d, U):
         path = smooth(pts, close=False)
         base = c.get("base", 92) * H / 100
         o = [f'<path class="k-axis" d="M6 4V{n(base)}H{W - 4}"/>', f'<path class="k-line" d="{path}"/>']
+        if d.get("look") == "b":   # v19.7 look b: pale fill under the curve, pale pink band where the sample is taken
+            w = c.get("window")
+            o[1:1] = ([f'<rect class="b-win" x="{n(w["from"] * W / 100)}" y="8" width="{n((w["to"] - w["from"]) * W / 100)}" height="{n(base - 8)}"/>'] if w else []) + [
+                f'<path class="b-area" d="{path}L{n(pts[-1][0])} {n(base)}L{n(pts[0][0])} {n(base)}Z"/>']
         for g in c.get("guides", []):
             o.append(f'<path class="k-guide" d="M{n(g["x"] * W / 100)} 8V{n(base)}"/>')
         art = svg(f"0 0 {W} {H}", "".join(o), "", d["alt"], f"{U}-d", U).replace("<svg ", '<svg preserveAspectRatio="none" ', 1)
@@ -630,9 +690,17 @@ def r_comparison(d, U):
 
 def r_table(d, U):
     t = d["table"]
-    th = "".join(f'<th scope="col">{E(h)}</th>' for h in t["head"])
-    tr = "".join("<tr>" + "".join((f'<th scope="row">{rich(c)}</th>' if j == 0 else f"<td>{rich(c)}</td>") for j, c in enumerate(r)) + "</tr>"
-                 for r in t["rows"])
+    row = lambda r: "<tr>" + "".join((f'<th scope="row">{rich(c)}</th>' if j == 0 else f"<td>{rich(c)}</td>") for j, c in enumerate(r)) + "</tr>"
+    gb = t.get("groupBy")   # v19.7: rows grouped under heading rows by this column (the column itself is then left out)
+    if gb is not None:
+        cols = [h for j, h in enumerate(t["head"]) if j != gb]; g = {}
+        for r in t["rows"]:
+            g.setdefault(r[gb], []).append([c for j, c in enumerate(r) if j != gb])
+        th = "".join(f'<th scope="col">{E(h)}</th>' for h in cols)
+        tr = "".join(f'<tr class="gf-grp"><th scope="colgroup" colspan="{len(cols)}">{E(k)}</th></tr>' + "".join(row(r) for r in v) for k, v in g.items())
+    else:
+        th = "".join(f'<th scope="col">{E(h)}</th>' for h in t["head"])
+        tr = "".join(row(r) for r in t["rows"])
     body = (f'<div class="gf-tw"><table class="gf-tb" aria-label="{A(d["alt"])}"><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div>'
             + notes(d))
     return wrap(d, U, head(d, U, d["long"]).replace('class="gf-s"', f'class="gf-s" id="{U}-d"') + f'<div class="gf-bd">{body}</div>')

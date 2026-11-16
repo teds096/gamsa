@@ -13,6 +13,8 @@ Prints one line per check: "PASS name — detail", "FAIL name — detail" or "SK
   pills          a download pill ends its paragraph or list item: no text after it (content, template, no-JS pages, every built page in the browser; self-test)
   wording        content/*.json has no leftover phrases (this session, our clinic, lorem, TODO) or US spellings
   weight         gzip size of every built page vs tools/weights.json; flags >10% growth (--update-weights resets)
+  own feed       /alerts "Make your own feed": every medicine listed, every feed item has a medicine slug, and the real
+                 functions/_lib/feed.js filter (run in Chromium) keeps the right items and gives valid RSS
   search         key searches return the right page first
   keyboard       Tab reaches skip link, menu, accessibility, quick exit, search; focus always visible;
                  Enter opens a menu group, Escape closes it
@@ -219,7 +221,7 @@ FIG_MODES = {"light": {"theme": "light"}, "dark": {"theme": "dark"}, "high contr
 FIG_JS = """() => { const out=[]; const lum=c=>{const m=c.match(/[\\d.]+/g);if(!m)return null;const [r,g,b]=m.slice(0,3).map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return {L:.2126*r+.7152*g+.0722*b,a:m.length>3?+m[3]:1}};
   const ratio=(a,b)=>{const x=lum(a),y=lum(b);if(!x||!y)return 99;return (Math.max(x.L,y.L)+.05)/(Math.min(x.L,y.L)+.05)};
   for(const f of document.querySelectorAll('.view.on figure.gf')){ const bg=getComputedStyle(f).backgroundColor;
-    for(const e of f.querySelectorAll('svg :is(.k-body,.k-body *,.k-bone,.k-v,.k-mark,.k-site,.k-not rect,.k-x,.k-band,.k-edge,.k-edge2,.k-needle,.k-hub,.k-axis,.k-line,.k-p,.k-pl,.k-pa,.k-za,.k-pf,.k-pm,.k-arrow,.gf-sw .k-spot,.k-zb,.gf-bod .k-zone *,.k-pn rect)')){
+    for(const e of f.querySelectorAll('svg :is(.k-body,.k-body *,.k-bone,.k-bonef,.k-boneln,.k-ra,.k-v,.k-mark,.k-site,.k-not rect,.k-x,.k-band,.k-edge,.k-edge2,.k-needle,.k-hub,.k-axis,.k-line,.k-p,.k-pl,.k-pa,.k-za,.k-pf,.k-pm,.k-arrow,.gf-sw .k-spot,.k-zb,.gf-bod .k-zone *,.k-pn rect)')){
       const s=getComputedStyle(e); if(s.display==='none'||!e.getBoundingClientRect().width) continue;
       const paint=(s.stroke&&s.stroke!=='none'&&parseFloat(s.strokeWidth)>0&&!e.matches('.k-site'))?s.stroke:s.fill;
       if(!paint||paint==='none'||/url/.test(paint)) continue;
@@ -332,7 +334,8 @@ def browser_checks():
         ctx = b.new_context(viewport={"width": 1280, "height": 900}); ctx.route("**/*", lambda r: r.abort() if "127.0.0.1" not in r.request.url else r.continue_())
         pg = ctx.new_page()
         # search quality
-        cases = {"patches": "patch", "Reandron": "testosterone undecanoate", "safety net": "safety net", "injection": "inject", "Closing the Gap": "closing the gap", "Estradot": "estradiol"}
+        cases = {"patches": "patch", "Reandron": "testosterone undecanoate", "safety net": "safety net", "injection": "inject", "Closing the Gap": "closing the gap", "Estradot": "estradiol",
+                 "how much does testosterone cost": "cost", "cant find my medicine": "supply"}   # v19.7: plain questions
         bad = []
         for q, want in cases.items():
             pg.goto(f"{B}/search?q={q}"); pg.wait_for_timeout(300)
@@ -521,6 +524,63 @@ def layout_shift():
     out(not bad, "layout shift", "; ".join(bad[:6]) or f'{len(res)} loads, worst CLS {worst["cls"]} ({worst["vp"]} {worst["route"]})'
         + (f'; slow LCP: {"; ".join(slow[:4])}' if slow else f'; LCP max {max(x["lcp"] or 0 for x in res)} s'))
 
+def feed_builder():
+    """v19.7: "Make your own feed" (/alerts, functions/feed.js). Runs the real functions/_lib/feed.js in Chromium (no node here)."""
+    import xml.dom.minidom as MD, socket
+    ids = [m["id"] for m in json.loads((ROOT/"content/medicines.json").read_text())["medicines"]]
+    s2m = {sid: m["id"] for m in json.loads((ROOT/"content/medicines.json").read_text())["medicines"] for sid in m.get("supplyIds") or []}
+    bad = []
+    rows = json.loads((ROOT/"data/medicines.json").read_text())["medicines"]
+    bad += [f"shortage row {r['id']} has no medicine page" for r in rows if r.get("status") not in (None, "in_supply", "unverified") and r["id"] not in s2m]
+    xml = (D/"feed.xml").read_text(); doc = MD.parseString(xml.encode())
+    items = doc.getElementsByTagName("item"); slugs = []
+    for it in items:
+        c = it.getElementsByTagName("category")
+        sl = c[0].firstChild.data if c and c[0].firstChild else ""
+        if sl not in ids: bad.append(f"feed item without a known medicine slug: {sl or '(none)'}")
+        slugs.append(sl)
+    from playwright.sync_api import sync_playwright
+    js = re.sub(r"^export ", "", (ROOT/"functions/_lib/feed.js").read_text(), flags=re.M)
+    names = {i: i for i in ids}
+    have = sorted(set(slugs)); none = next((i for i in ids if i not in slugs), None)
+    with sync_playwright() as p:
+        b = p.chromium.launch(**({"executable_path": CHROME} if CHROME else {})); pg = b.new_page()
+        pg.goto("about:blank")
+        r = pg.evaluate("""([js, xml, names, have, none]) => { const F = new Function(js + "; return {parseSlugs, filterFeed};")();
+            return { same: F.filterFeed(xml, [], names) === xml, one: have.length ? F.filterFeed(xml, [have[0]], names) : "",
+                     zero: none ? F.filterFeed(xml, [none], names) : "", all: F.filterFeed(xml, have, names),
+                     okp: F.parseSlugs("estradiol-gel, spironolactone,estradiol-gel"), empty: F.parseSlugs(""),
+                     bads: ["../x", "<a>", "Estradiol", Array.from({length: 70}, (_, i) => "m" + i).join(","), "a--b"].map(q => F.parseSlugs(q).ok) }; }""",
+            [js, xml, names, have, none])
+        if not r["same"]: bad.append("no selection changed the feed")
+        for k, want in (("one", [have[0]] if have else None), ("zero", [] if none else None), ("all", have)):
+            if want is None: continue
+            try:
+                d = MD.parseString(r[k].encode()); got = [it.getElementsByTagName("category")[0].firstChild.data for it in d.getElementsByTagName("item")]
+                if sorted(set(got)) != sorted(want) or (k == "all" and len(got) != len(items)): bad.append(f"filter {k}: got {sorted(set(got))}")
+                if "GAMSA shortage alerts: " not in d.getElementsByTagName("title")[0].firstChild.data: bad.append(f"filter {k}: title not renamed")
+            except Exception as e: bad.append(f"filter {k}: not valid XML ({str(e)[:60]})")
+        if r["okp"] != {"ok": True, "slugs": ["estradiol-gel", "spironolactone"]} or r["empty"] != {"ok": True, "slugs": []}: bad.append("parseSlugs wrong")
+        if any(r["bads"]): bad.append(f"parseSlugs let bad input through: {r['bads']}")
+        page_part = "page not checked (no local server)"
+        if socket.socket().connect_ex(("127.0.0.1", 8767)) == 0:
+            c = b.new_context(viewport={"width": 1280, "height": 900}); c.route("**/*", lambda q: q.abort() if "127.0.0.1" not in q.request.url else q.continue_())
+            pg = c.new_page(); pg.goto(B + "/alerts"); pg.wait_for_selector('#al-make input[name="fbm"]', timeout=15000)
+            vals = pg.eval_on_selector_all('#al-make input[name="fbm"]', "e => e.map(x => x.value)")
+            if sorted(vals) != sorted(ids): bad.append(f"builder lists {len(vals)} of {len(ids)} medicines")
+            unl = pg.eval_on_selector_all('#al-make input[name="fbm"]', "e => e.filter(x => !x.closest('label') || !x.closest('fieldset').querySelector('legend')).length")
+            if unl: bad.append(f"{unl} tick boxes without a label or group")
+            pg.check(f'#al-make input[value="{ids[0]}"]'); pg.check(f'#al-make input[value="{ids[1]}"]')
+            u = pg.text_content("#feedUrl")
+            if not u.endswith(f"/feed?m={ids[0]},{ids[1]}"): bad.append(f"address after two ticks: {u}")
+            pg.uncheck(f'#al-make input[value="{ids[0]}"]'); pg.uncheck(f'#al-make input[value="{ids[1]}"]')
+            if not pg.text_content("#feedUrl").endswith("/feed.xml"): bad.append("address with no ticks is not /feed.xml")
+            if pg.get_attribute("#feedSay", "role") != "status": bad.append("no live region for Copied")
+            page_part = f"page lists all {len(vals)} medicines, address follows the ticks"; c.close()
+        b.close()
+    out(not bad, "own feed", "; ".join(bad[:6]) if bad else
+        f"{len(items)} feed items all carry a medicine slug; real filter: none = unchanged, one, none-in-shortage = 0 items, all; {page_part}")
+
 def hc_sweep(routes=None, limit=None):
     """Round 5e (Ted, 8 Nov 2026, "Text in high contrast needs checking"): high contrast, light and dark, at 1280 and 390 px.
     axe color-contrast on every built route, then on the home page with a header menu (1280) or the Menu (390) open and with
@@ -574,6 +634,7 @@ def hc_sweep(routes=None, limit=None):
 
 if __name__ == "__main__":
     if "--engines-only" in sys.argv: engines(); sys.exit(0)
+    if "--feed-only" in sys.argv: feed_builder(); sys.exit(0)
     if "--figures-only" in sys.argv: figures(); sys.exit(0)
     if "--pbs-only" in sys.argv: pbs(); sys.exit(0)
     if "--cls-only" in sys.argv: layout_shift(); sys.exit(0)
@@ -589,6 +650,8 @@ if __name__ == "__main__":
     seo(); downloads(); downloads_page(); assets(); review_date(); pdfs(); pdf_locks(); pbs(); wording(); pill_punct(); pill_selftest(); figures(); weight("--update-weights" in sys.argv)
     try: browser_checks()
     except Exception as e: out(False, "browser checks", str(e)[:200])
+    try: feed_builder()
+    except Exception as e: out(False, "own feed", str(e)[:200])
     try: hc_sweep()
     except Exception as e: out(False, "high contrast sweep", str(e)[:200])
     try: layout_shift()

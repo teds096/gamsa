@@ -123,11 +123,12 @@
       "nav": "The Safety Net",
       "figure": {
         "id": "safety-net",
+        "look": "b",
         "type": "chart-bar",
         "title": "How the Safety Net builds up",
         "sub": "Every PBS script you fill counts. The total starts again on 1 January.",
         "alt": "Bar chart: how many scripts it takes to reach the concession and the general Safety Net thresholds",
-        "long": "Two bars on one scale of PBS scripts filled in a calendar year, from 0 to 80. The concession bar reaches its threshold at about {r1} scripts, the general bar at about {r2}. The hatched part after each threshold stands for every further script that year, at the lower price.",
+        "long": "Two bars on one scale of PBS scripts filled in a calendar year, from 0 to 80. The concession bar reaches its threshold at about {r1} scripts, the general bar at about {r2}. The pale part after each threshold stands for every further script that year, at the lower price.",
         "axis": {
           "to": 80,
           "step": 20,
@@ -181,7 +182,7 @@
             "text": "The threshold"
           },
           {
-            "mark": "hatch",
+            "mark": "tint",
             "text": "After the threshold: every further script that year, at the lower price"
           }
         ],
@@ -382,6 +383,7 @@
       "nav": "Brand premiums",
       "figure": {
         "id": "brand-premium",
+        "look": "b",
         "type": "chart-bar",
         "title": "What a brand premium adds",
         "sub": "Example only: one script of spironolactone 25 mg, with a concession card (PBS list of 17 October 2026)",
@@ -642,6 +644,6 @@
     "conc_copay": "7.70",
     "sn_general": "1,748.20",
     "sn_conc": "277.20",
-    "checkedAt": "11 Nov 2026"
+    "checkedAt": "8 Nov 2026"
   }
 }

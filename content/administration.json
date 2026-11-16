@@ -206,7 +206,7 @@
         "easy": [
           {
             "pic": "front:gel",
-            "text": "Put testosterone gel on your shoulders and upper arms, or on your belly."
+            "text": "Testogel goes on your shoulders and upper arms, or on your belly. Testavan goes on your shoulders and upper arms only."
           },
           {
             "pic": "front:not-gel",
@@ -236,7 +236,7 @@
         "If you have had this injection into the buttock before and a clinic now gives it on the side of your hip, that is a deliberate change in practice, not a mistake."
       ],
       "list": [
-        "Given by a doctor, nurse or trained pharmacist, into the side of the hip, not the buttock",
+        "Given by a doctor, nurse or trained pharmacist, into the side of the hip, not the back of the buttock",
         "You lie on your side with the upper hip uncovered, or on your back with the hip slightly bent",
         "The spot is found from the bony points of your hip, every time",
         "The needle goes in at ninety degrees and the 4 mL is injected very slowly",
@@ -250,7 +250,7 @@
         "title": "Where the long-acting injection goes",
         "sub": "The side of the hip (ventrogluteal site), seen from the side",
         "alt": "Side of the hip: three bony landmarks, and the injection site in the V between them",
-        "long": "The right hip seen from the side, with the back of the body on the left. Dotted lines show the hip bone and the top of the thigh bone under the skin. Lines from the bony knob of the thigh bone to the front point of the hip bone and to its top ridge make a V, and the injection site is in the middle of the V.",
+        "long": "The right hip seen from the side, with the back of the body on the left. Shaded shapes show the hip bone and the top of the thigh bone under the skin. Lines from the bony knob of the thigh bone to the front point of the hip bone and to its top ridge make a V, and the injection site is in the middle of the V.",
         "geom": {
           "site": {
             "x": 171,
@@ -284,12 +284,12 @@
         ],
         "stepsTitle": "How the spot is found",
         "steps": [
-          "Heel of the hand on the bony knob (1), fingers pointing towards the head.",
-          "Index finger on the front point of the hip bone (2).",
+          "Palm flat, with the heel of the hand on the bony knob (1), fingers pointing towards the head.",
+          "Index finger pointing towards the front point of the hip bone (2).",
           "Middle finger spread back along the top ridge (3).",
           "The needle goes into the middle of the V, straight in at 90°."
         ],
-        "note": "The clinician uses the hand opposite your hip: right hand on your left hip.",
+        "note": "The clinician uses the hand opposite your hip: right hand on your left hip. At the clinic you will lie on your side or back.",
         "easyTitle": "Where the injection goes",
         "easy": [
           {
@@ -405,12 +405,13 @@
       "nav": "Learning to self-inject",
       "figure": {
         "id": "sc-vs-im",
+        "look": "b",
         "type": "anatomy",
         "art": "skin-layers",
         "title": "Under the skin, or into the muscle",
-        "sub": "A slice through the skin, drawn to scale",
-        "alt": "Skin, fat and muscle layers to scale: needle A stops in the fat, needle B reaches the muscle",
-        "long": "Three layers from the surface down: skin, then fat, then muscle, with a depth scale from 0 to 30 mm. Needle A goes in at 45° and its tip stops in the fat, about 10 mm down. Needle B goes straight in at 90° and its tip reaches the muscle, about 24 mm down.",
+        "sub": "A slice through the skin. Depths are an example; yours will differ",
+        "alt": "Skin, fat and muscle layers with example depths: needle A stops in fat, needle B reaches muscle",
+        "long": "Three layers from the surface down: skin, then fat, then muscle, with an example depth scale from 0 to 30 mm; real depths vary from person to person. Needle A goes in at 45° and its tip stops in the fat, about 10 mm down. Needle B goes straight in at 90° and its tip reaches the muscle, about 24 mm down.",
         "geom": {
           "layers": [
             {
@@ -482,7 +483,7 @@
             "text": "The person who teaches you picks your needle."
           }
         ],
-        "caption": "Under the skin versus into the muscle, drawn to a millimetre scale. Based on the Fenway Health transgender health injection guide [16]."
+        "caption": "Under the skin versus into the muscle, with example depths in millimetres; yours will differ. Based on the Fenway Health transgender health injection guide [16]."
       }
     },
     {
@@ -513,9 +514,9 @@
         "id": "injection-rotation",
         "type": "body-map",
         "title": "Rotate your sites",
-        "sub": "Front of the body. Use the sites the person who trains you shows you.",
-        "alt": "Front body map: six numbered injection sites, four around the belly and one on each thigh",
-        "long": "Spots 1 to 4 are around the belly, clear of the belly button. Spots 5 and 6 are on the front of each thigh, in the middle third between the hip and the knee.",
+        "sub": "Front of the body. The belly spots are for injections under the skin only. Use the sites the person who trains you shows you.",
+        "alt": "Front body map: six numbered injection sites, four around the belly and one on each outer thigh",
+        "long": "Spots 1 to 4 are around the belly, clear of the belly button. Spots 5 and 6 are on the outer front of each thigh, in the middle third between the hip and the knee.",
         "views": [
           {
             "side": "front",
@@ -546,12 +547,12 @@
             },
             {
               "n": "5",
-              "x": -18,
+              "x": -19.5,
               "y": 184
             },
             {
               "n": "6",
-              "x": 18,
+              "x": 19.5,
               "y": 184
             }
           ]
@@ -559,7 +560,7 @@
         "key": [
           {
             "sym": "spot",
-            "text": "An injection site: around the belly, clear of the belly button, or the middle third of each thigh."
+            "text": "An injection site: the belly spots (clear of the belly button) for under-the-skin injections, or the middle third of the outer thigh."
           },
           {
             "sym": "next",
@@ -582,11 +583,11 @@
         "easy": [
           {
             "pic": "front:belly",
-            "text": "You can inject into your belly. Stay away from your belly button."
+            "text": "If you inject under the skin, you can use your belly. Stay away from your belly button."
           },
           {
             "pic": "front:thigh",
-            "text": "Or into the front of your thigh."
+            "text": "Or into the outer part of your thigh."
           },
           {
             "pic": "cycle",
@@ -597,7 +598,7 @@
             "text": "Only use the spots your nurse or doctor shows you."
           }
         ],
-        "caption": "Rotating injection sites around the belly and thighs. Based on the Fenway Health transgender health injection guide [16]."
+        "caption": "Rotating injection sites: the belly for injections under the skin, the outer thigh for injections into the muscle. Based on the Fenway Health transgender health injection guide [16]."
       }
     },
     {
@@ -753,7 +754,7 @@
     },
     {
       "n": 11,
-      "text": "South T. Testosterone undecanoate IM injection: standard operating procedure and training guide, version 2.6. GAMSA — Gender-Affirming Medicines South Australia; 5 October 2025, revised 7 November 2026. Accessed 7 November 2026.",
+      "text": "South T. Testosterone undecanoate IM injection: standard operating procedure and training guide, version 2.7. GAMSA — Gender-Affirming Medicines South Australia; 5 October 2025, revised 15 November 2026. Accessed 7 November 2026.",
       "url": "/clinicians/testosterone-undecanoate-im-sop-and-training-guide.pdf"
     },
     {

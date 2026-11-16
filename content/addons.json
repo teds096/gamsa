@@ -16,6 +16,7 @@
         "long": "These treat effects of hormone therapy. They are not hormone therapy themselves, and none is automatic.",
         "alt": "Seven effects of hormone therapy, who they mostly affect, and what may be offered for each",
         "table": {
+          "groupBy": 1,
           "head": [
             "The effect",
             "Who it mostly affects",
@@ -146,13 +147,13 @@
       "body": [
         "Scalp hair loss of the male-pattern type is driven by dihydrotestosterone (DHT), which testosterone is converted into by the enzyme 5-alpha reductase [6][2]. Lowering testosterone with oestrogen and an androgen blocker removes much of that drive, so further loss often slows or stops, and Australian guidance notes that spironolactone and cyproterone have been shown to improve it [17][16].",
         "Topical minoxidil is a non-hormonal option; Australian product information says exactly how it works is not known, though it appears to prolong the hair growth phase [7]. It can cause unwanted facial hair if it spreads from the scalp, so wash your hands well after applying it [7].",
-        "Finasteride and dutasteride block 5-alpha reductase. They are not general androgen blockers; they are commonly added for scalp hair loss, although Australian guidance notes it is unclear whether they add benefit [17]. Finasteride lowers PSA results by about half, so anyone who has prostate testing should tell the person ordering it [6]. The product information also lists depression, and loss of libido that can continue after stopping, among effects reported after marketing [6]."
+        "Finasteride and dutasteride block 5-alpha reductase. They are not general androgen blockers; they are commonly added for scalp hair loss, although Australian guidance notes it is unclear whether they add benefit [17]. Finasteride lowers PSA results (by about half in older men, less in younger men), so anyone who has prostate testing should tell the person ordering it [6]. The product information also lists depression, and loss of libido that can continue after stopping, among effects reported after marketing [6]."
       ],
       "list": [
         "Feminising therapy itself often slows or stops scalp hair loss [17][16]",
         "Minoxidil: non-hormonal; wash hands after use to avoid unwanted facial hair [7]",
         "Finasteride or dutasteride: unclear added benefit on top of feminising therapy [17]",
-        "Finasteride halves PSA results; tell whoever orders a prostate test [6]"
+        "Finasteride lowers PSA results (by about half in older men, less in younger men); tell whoever orders a prostate test [6]"
       ],
       "note": "Each of these medicines has its own page in the Medicines A–Z with doses, side effects and cost.",
       "nav": "Scalp hair (oestrogen)"
