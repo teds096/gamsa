@@ -17,7 +17,7 @@ export async function onRequestGet() {
   return new Response(PAGE.split("{{nonce}}").join(nonce), {
     headers: {
       "Content-Type": "text/html; charset=utf-8",
-      "Cache-Control": "no-store",
+      "Cache-Control": "no-store, no-transform",
       "Content-Security-Policy": csp,
       ...SECURITY_HEADERS,
       "Cross-Origin-Opener-Policy": "same-origin",

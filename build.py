@@ -237,7 +237,7 @@ if "about" not in content: html = re.sub(r'\s*<li class="ft-about">.*?</li>', ""
 # dist/: the hosted site. One real HTML page per route (so search engines can
 # index each page), sharing one cached script, plus sitemap, robots and headers.
 # ---------------------------------------------------------------------------
-import re, hashlib, html as H, shutil, datetime
+import re, hashlib, html as H, shutil, datetime, base64
 
 SITE = "https://gamsa.au"
 BASE_DESC = ("Independent, referenced information on gender-affirming medicines in South Australia: "
@@ -272,6 +272,8 @@ def shell(top, body_html):
 
 # 1. single-file preview (hash routes, inline script) -----------------------
 _prev = re.sub(r'@font-face\{[^}]*\}', '', re.sub(r'<link rel="preload"[^>]*woff2[^>]*>\n?', '', html))  # file:// cannot load /fonts/; system fonts are fine locally
+# v19.8: file:// cannot load /flags/ either; the preview carries the Torres Strait Islander flag inline (same image, unaltered)
+_prev = _prev.replace('src="/flags/torres-strait-islander-flag.webp"', 'src="data:image/webp;base64,' + base64.b64encode((R/"static/flags/torres-strait-islander-flag.webp").read_bytes()).decode() + '"')
 (R/"preview.html").write_text(shell(head("Gender-Affirming Medicines South Australia", BASE_DESC, "/").replace("__ROUTING__", ""), _prev))
 
 # 2. hosted site ------------------------------------------------------------

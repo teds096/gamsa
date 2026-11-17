@@ -831,10 +831,11 @@
   /* ---- footer ---- */
   .foot-row{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px;margin-top:28px;padding-top:24px;border-top:1px solid var(--line);}
   @media (max-width:760px){.foot-row{grid-template-columns:1fr;}}
-  .ack{display:flex;gap:16px;align-items:flex-start;}
-  .ack .flags{display:flex;flex-direction:column;gap:8px;flex:none;padding-top:2px;}
-  @media (max-width:560px){.ack .flags{flex-direction:row;}}
-  .ack .flags svg{width:60px;height:38px;border-radius:3px;box-shadow:0 0 0 1px var(--line);}
+  .ack{display:flex;flex-direction:column;gap:12px;align-items:flex-start;}
+  .ack .flags{display:flex;flex-direction:row;flex-wrap:wrap;gap:10px;flex:none;}
+  .ack .flags svg{width:60px;height:38px;box-shadow:0 0 0 1px var(--line);}
+  .ack .flags img{width:57px;height:38px;display:block;}
+  .ack p.flag-credit{font-size:12.5px;margin-top:-4px;}
   .ack p{margin:0;font-size:14px;color:var(--ink-2);}
   .foot-row{grid-template-columns:1.1fr 1fr;} .foot-row>*{min-width:0;}
   @media (max-width:760px){.foot-row{grid-template-columns:minmax(0,1fr);}}
@@ -1214,7 +1215,7 @@
   html:not(.hc) footer .foot-row{border-top:1px solid var(--x-ft-line)!important;}
   html:not(.hc) footer .help-now{background:rgba(255,255,255,.08)!important;border:1px solid var(--x-ft-line)!important;color:var(--x-ft-ink)!important;border-radius:14px;}
   html:not(.hc) footer .help-now strong{color:var(--x-ft-ink)!important;}
-  .ack .flags svg{box-shadow:none!important;border-radius:4px;}
+  .ack .flags svg{box-shadow:none!important;}
   .flagbar{z-index:59!important;}
   @media print{.x-help,.x-helpp,.x-menu,.x-pager,.x-crumb,.x-hero-a{display:none!important;}}
   /* ===== v18.1.1 home graphic V-final "Arch, cross centred" (picked 15 Oct) + animation "Settle, then shimmer" =====
@@ -2367,12 +2368,14 @@ html.dark:not(.hc) .x-task[href="#/supply"]{--pc:var(--sup-a);}
     </div>
     <div class="foot-row">
       <div class="ack">
+        <p>GAMSA acknowledges the Kaurna People, the Traditional Owners of the Adelaide Plains where this site is made, and all Aboriginal and Torres Strait Islander Peoples as the Traditional Owners of the lands and waters across South Australia and all of Australia. We pay our respects to Elders past, present and emerging, and recognise that sovereignty was never ceded. GAMSA welcomes everyone, and stands with trans and gender diverse people of every background.</p>
         <div class="flags" aria-hidden="true">
           <svg viewBox="0 0 48 30"><rect width="48" height="15" fill="#000"/><rect y="15" width="48" height="15" fill="#CC0000"/><circle cx="24" cy="15" r="8" fill="#FFCC00"/></svg>
+          <img src="/flags/torres-strait-islander-flag.webp" width="57" height="38" alt="" decoding="async" loading="lazy">
           <svg viewBox="0 0 48 30"><rect width="48" height="30" fill="#5BCEFA"/><rect y="6" width="48" height="18" fill="#F5A9B8"/><rect y="12" width="48" height="6" fill="#fff"/></svg>
           <svg viewBox="0 0 48 30"><rect width="48" height="5" fill="#E40303"/><rect y="5" width="48" height="5" fill="#FF8C00"/><rect y="10" width="48" height="5" fill="#FFED00"/><rect y="15" width="48" height="5" fill="#008026"/><rect y="20" width="48" height="5" fill="#24408E"/><rect y="25" width="48" height="5" fill="#732982"/><path d="M0 0h8l15 15-15 15H0z" fill="#000"/><path d="M0 0h6l15 15-15 15H0z" fill="#613915"/><path d="M0 0h4l15 15-15 15H0z" fill="#5BCEFA"/><path d="M0 0h2l15 15-15 15H0z" fill="#F5A9B8"/><path d="M0 0l15 15L0 30z" fill="#fff"/><path d="M0 4l11 11L0 26z" fill="#FFD800"/><circle cx="3.2" cy="15" r="2.3" fill="none" stroke="#7902AA" stroke-width="1.1"/></svg>
         </div>
-        <p>GAMSA acknowledges the Kaurna People, the Traditional Owners of the Adelaide Plains where this site is made, and all Aboriginal and Torres Strait Islander Peoples as the Traditional Owners of the lands and waters across South Australia and all of Australia. We pay our respects to Elders past, present and emerging, and recognise that sovereignty was never ceded. GAMSA welcomes everyone, and stands with trans and gender diverse people of every background.</p>
+        <p class="flag-credit">The Torres Strait Islander flag was designed by the late Mr Bernard Namok and is used with the permission of the Torres Strait Island Regional Council.</p>
       </div>
       <div class="foot-about">
         <p class="help-now"><strong>Need help now?</strong> Emergency <a href="tel:000">000</a> &middot; SA Mental Health Triage <a href="tel:131465">13 14 65</a> (24 hours) &middot; Lifeline <a href="tel:131114">13 11 14</a> &middot; QLife <a href="tel:1800184527">1800 184 527</a> (3pm to 9pm, every day) &middot; 13YARN <a href="tel:139276">13 92 76</a> (for Aboriginal and Torres Strait Islander people) &middot; <a href="https://www.accesshub.gov.au/about-the-nrs/how-to-make-an-emergency-call-using-the-nrs" target="_blank" rel="noopener">National Relay Service: call 000 by chat, SMS, voice relay or TTY</a></p>
