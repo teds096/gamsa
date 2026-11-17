@@ -77,6 +77,18 @@ jobs:
           python scraper/pi_check.py | tee /tmp/pi.log
           grep -q PI_CHANGED /tmp/pi.log && echo "changed=true" >> "$GITHUB_OUTPUT" || true
 
+      # v19.8 (Ted, 17 Nov 2026): weekly watch of guideline, TGA, PBS and policy pages for new items
+      # (Sunday 19:00 UTC = Monday morning in Adelaide). Lists only; a person decides what changes.
+      - name: Clinical and policy updates (weekly)
+        if: (github.event.schedule == '0 19 * * *' && github.event_name == 'schedule') || github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        timeout-minutes: 8
+        id: watch
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(date -u +%u)" != "7" ]; then echo "Not Sunday (UTC): skipped."; exit 0; fi
+          python scraper/watch.py | tee /tmp/watch.log
+          grep -q WATCH_NEW /tmp/watch.log && echo "new=true" >> "$GITHUB_OUTPUT" || true
+
       - name: Commit if anything changed
         id: commit
         run: |
@@ -159,6 +171,16 @@ jobs:
             const {data: open} = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "pi"});
             if (open.length) { await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: open[0].number, body}); return; }
             await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo, title: "Product information revised - re-check medicine pages", labels: ["pi"], body});
+
+      - name: Report clinical and policy updates
+        if: steps.watch.outputs.new == 'true'
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const body = require("fs").readFileSync("/tmp/watch.md", "utf8");
+            const {data: open} = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "watch"});
+            if (open.length) { await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: open[0].number, body}); return; }
+            await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo, title: "Clinical and policy updates to read", labels: ["watch"], body});
 
       - name: Tell Ted about new feedback or registrations
         if: steps.inbox.outputs.new == 'true'
