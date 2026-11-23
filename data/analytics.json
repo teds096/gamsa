@@ -2,25 +2,35 @@
   "about": "Weekly totals from Cloudflare Web Analytics for gamsa.au, newest week first. Estimates (Cloudflare samples). Totals only: no IP addresses or visitor-level data; entries under 3 page views are folded into (other). Written by tools/analytics.py.",
   "site": "gamsa.au and www.gamsa.au",
   "weekStarts": "Monday 00:00 Adelaide time",
-  "updated": "2026-11-16T10:10:52Z",
+  "updated": "2026-11-23T11:16:24Z",
   "weeks": [
     {
-      "week": "2026-11-09",
-      "from": "2026-11-08T13:30:00Z",
-      "to": "2026-11-15T13:30:00Z",
-      "pageViews": 95,
-      "visits": 73,
+      "week": "2026-11-16",
+      "from": "2026-11-15T13:30:00Z",
+      "to": "2026-11-22T13:30:00Z",
+      "pageViews": 108,
+      "visits": 65,
       "botsExcluded": true,
       "topPages": [
         {
           "path": "/",
           "views": 37,
-          "visits": 34
+          "visits": 31
+        },
+        {
+          "path": "/admin",
+          "views": 11,
+          "visits": 5
         },
         {
           "path": "/medicines/testosterone-undecanoate",
-          "views": 12,
-          "visits": 6
+          "views": 6,
+          "visits": 3
+        },
+        {
+          "path": "/medicines",
+          "views": 5,
+          "visits": 0
         },
         {
           "path": "/medicines/estradiol-patches",
@@ -28,78 +38,172 @@
           "visits": 5
         },
         {
-          "path": "/medicines/minoxidil-topical",
-          "views": 4,
+          "path": "/starting-hormones",
+          "views": 5,
           "visits": 4
         },
         {
-          "path": "/supply",
+          "path": "/costs",
           "views": 4,
-          "visits": 0
-        },
-        {
-          "path": "/medicines/cyproterone-acetate",
-          "views": 3,
           "visits": 3
         },
         {
+          "path": "/supply",
+          "views": 3,
+          "visits": 0
+        },
+        {
+          "path": "/medicines/estradiol-gel",
+          "views": 3,
+          "visits": 2
+        },
+        {
+          "path": "/about",
+          "views": 3,
+          "visits": 2
+        },
+        {
           "path": "(other)",
-          "views": 30,
-          "visits": 21
+          "views": 26,
+          "visits": 10
         }
       ],
       "topReferrers": [
         {
           "host": "(none or direct)",
-          "views": 58,
-          "visits": 58
+          "views": 47,
+          "visits": 47
         },
         {
           "host": "(inside gamsa.au)",
-          "views": 22,
+          "views": 43,
           "visits": 0
         },
         {
           "host": "www.bing.com",
-          "views": 7,
-          "visits": 7
+          "views": 4,
+          "visits": 4
         },
         {
-          "host": "www.google.com",
+          "host": "duckduckgo.com",
           "views": 4,
           "visits": 4
         },
         {
           "host": "(other)",
-          "views": 4,
-          "visits": 4
+          "views": 10,
+          "visits": 10
         }
       ],
       "topCountries": [
         {
           "country": "AU",
-          "views": 61,
-          "visits": 40
+          "views": 89,
+          "visits": 46
         },
         {
           "country": "US",
           "views": 19,
-          "visits": 18
+          "visits": 19
+        }
+      ]
+    },
+    {
+      "week": "2026-11-09",
+      "from": "2026-11-08T13:30:00Z",
+      "to": "2026-11-15T13:30:00Z",
+      "pageViews": 160,
+      "visits": 130,
+      "botsExcluded": true,
+      "topPages": [
+        {
+          "path": "/",
+          "views": 60,
+          "visits": 50
         },
         {
-          "country": "EC",
-          "views": 3,
-          "visits": 3
+          "path": "/medicines/minoxidil-topical",
+          "views": 30,
+          "visits": 30
         },
         {
-          "country": "CO",
-          "views": 3,
-          "visits": 3
+          "path": "/supply",
+          "views": 20,
+          "visits": 0
         },
         {
-          "country": "(other)",
-          "views": 9,
-          "visits": 9
+          "path": "/doses",
+          "views": 10,
+          "visits": 10
+        },
+        {
+          "path": "/medicines/trisequens",
+          "views": 10,
+          "visits": 10
+        },
+        {
+          "path": "/alerts",
+          "views": 10,
+          "visits": 10
+        },
+        {
+          "path": "/parents",
+          "views": 10,
+          "visits": 10
+        },
+        {
+          "path": "/medicines/norethisterone",
+          "views": 10,
+          "visits": 10
+        }
+      ],
+      "topReferrers": [
+        {
+          "host": "(none or direct)",
+          "views": 120,
+          "visits": 120
+        },
+        {
+          "host": "(inside gamsa.au)",
+          "views": 30,
+          "visits": 0
+        },
+        {
+          "host": "www.bing.com",
+          "views": 10,
+          "visits": 10
+        }
+      ],
+      "topCountries": [
+        {
+          "country": "AU",
+          "views": 90,
+          "visits": 70
+        },
+        {
+          "country": "US",
+          "views": 30,
+          "visits": 20
+        },
+        {
+          "country": "TW",
+          "views": 10,
+          "visits": 10
+        },
+        {
+          "country": "BO",
+          "views": 10,
+          "visits": 10
+        },
+        {
+          "country": "PK",
+          "views": 10,
+          "visits": 10
+        },
+        {
+          "country": "FI",
+          "views": 10,
+          "visits": 10
         }
       ]
     },
