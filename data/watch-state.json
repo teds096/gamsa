@@ -1,6 +1,6 @@
 {
  "https://auspath.org.au/standards-of-care/": {
-  "checked": "2026-11-17",
+  "checked": "2026-11-25",
   "name": "AusPATH standards of care",
   "seen": [
    "125695aa6309ee92",
@@ -37,17 +37,17 @@
   ]
  },
  "https://statements.qld.gov.au/": {
-  "checked": "2026-11-17",
+  "checked": "2026-11-25",
   "name": "Queensland Government statements",
   "seen": []
  },
  "https://www.hra.nhs.uk/about-us/news-updates/": {
-  "checked": "2026-11-17",
+  "checked": "2026-11-25",
   "name": "UK PATHWAYS trial updates",
   "seen": []
  },
  "https://www.pbs.gov.au/info/news": {
-  "checked": "2026-11-17",
+  "checked": "2026-11-25",
   "name": "PBS news",
   "seen": [
    "027401683c2f9d6a",
@@ -75,7 +75,7 @@
   ]
  },
  "https://www.rch.org.au/adolescent-medicine/gender-service/": {
-  "checked": "2026-11-17",
+  "checked": "2026-11-25",
   "name": "RCH gender service",
   "seen": [
    "0465b3815239d769",

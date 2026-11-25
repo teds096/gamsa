@@ -11,6 +11,45 @@
       "CMI prepared": null,
       "Published": null
     },
-    "checked": "2026-11-17"
+    "checked": "2026-11-25"
+  },
+  "https://www.ebs.tga.gov.au/ebs/picmi/picmirepository.nsf/PICMI?OpenForm&t=&q=prometrium": {
+    "title": "Prometrium (progesterone) capsules",
+    "medicines": [
+      "micronised-progesterone"
+    ],
+    "dates": {
+      "PI revised": null,
+      "MIMS revised": null,
+      "CMI prepared": null,
+      "Published": null
+    },
+    "checked": "2026-11-25"
+  },
+  "https://www.ebs.tga.gov.au/ebs/picmi/picmirepository.nsf/PICMI?OpenForm&t=&q=sustanon": {
+    "title": "Sustanon 250 (testosterone esters 250 mg/1 mL) injection",
+    "medicines": [
+      "testosterone-esters"
+    ],
+    "dates": {
+      "PI revised": null,
+      "MIMS revised": null,
+      "CMI prepared": null,
+      "Published": null
+    },
+    "checked": "2026-11-25"
+  },
+  "https://www.ebs.tga.gov.au/ebs/picmi/picmirepository.nsf/PICMI?OpenForm&t=&q=lucrin": {
+    "title": "Lucrin Depot and Lucrin Depot Paediatric (leuprorelin acetate) powder for inject",
+    "medicines": [
+      "gnrh-analogues"
+    ],
+    "dates": {
+      "PI revised": null,
+      "MIMS revised": null,
+      "CMI prepared": null,
+      "Published": null
+    },
+    "checked": "2026-11-25"
   }
 }
