@@ -3,7 +3,7 @@
  "medicines": {
   "estradiol-patches": {
    "title": "Estradiol patches (Estradot): doses, PBS, supply · GAMSA",
-   "description": "How estradiol patches are used in feminising hormone therapy in Australia: usual doses (50 to 200 micrograms a day), side effects, blood tests and PBS cost.",
+   "description": "How estradiol patches are used in gender-affirming care in Australia: usual doses (50 to 200 micrograms a day), side effects, blood tests and PBS cost.",
    "faq": [
     {
      "q": "What is a usual estradiol patch dose?",
@@ -17,7 +17,7 @@
   },
   "estradiol-tablets": {
    "title": "Estradiol tablets (Progynova): doses, PBS, supply · GAMSA",
-   "description": "How estradiol tablets are used in feminising hormone therapy in Australia: usual doses (2 to 8 mg daily), side effects, clot risk, blood tests and PBS cost.",
+   "description": "How estradiol tablets are used in gender-affirming care in Australia: usual doses (2 to 8 mg daily), side effects, clot risk, blood tests and PBS cost.",
    "faq": [
     {
      "q": "What is a usual estradiol tablet dose?",
@@ -27,7 +27,7 @@
   },
   "estradiol-gel": {
    "title": "Estradiol gel (Sandrena): doses, side effects, PBS · GAMSA",
-   "description": "How estradiol gel (Sandrena and Estrogel) is used in feminising hormone therapy in Australia: usual daily doses, side effects, blood test timing and PBS cost.",
+   "description": "How estradiol gel (Sandrena and Estrogel) is used in gender-affirming care in Australia: usual daily doses, side effects, blood test timing and PBS cost.",
    "faq": [
     {
      "q": "How many pumps of Estrogel are used a day?",
@@ -51,7 +51,7 @@
   },
   "cyproterone-acetate": {
    "title": "Cyproterone acetate (Androcur): doses, side effects · GAMSA",
-   "description": "How cyproterone acetate is used in feminising therapy in Australia: usual doses (12.5 mg weekly up to 25 mg daily), side effects, liver tests and PBS cost.",
+   "description": "How cyproterone acetate is used in estradiol-based therapy in Australia: usual doses (12.5 mg weekly up to 25 mg daily), side effects, liver tests and PBS cost.",
    "faq": [
     {
      "q": "What is a usual cyproterone acetate dose?",
@@ -61,7 +61,7 @@
   },
   "spironolactone": {
    "title": "Spironolactone (Aldactone): doses, side effects, PBS · GAMSA",
-   "description": "How spironolactone is used in feminising hormone therapy in Australia: usual doses (50 to 200 mg daily), side effects, potassium and kidney tests, and PBS cost.",
+   "description": "How spironolactone is used in estradiol-based therapy in Australia: usual doses (50 to 200 mg daily), side effects, potassium and kidney tests, and PBS cost.",
    "faq": [
     {
      "q": "Is 100 mg of spironolactone a usual dose?",
@@ -103,7 +103,7 @@
   },
   "testosterone-gel": {
    "title": "Testosterone gel (Testogel): doses, blood tests, PBS · GAMSA",
-   "description": "How testosterone gel (Testogel and Testavan) is used in masculinising therapy in Australia: usual daily doses, side effects, blood test timing and the PBS.",
+   "description": "How testosterone gel (Testogel and Testavan) is used in gender-affirming care in Australia: usual daily doses, side effects, blood test timing and the PBS.",
    "faq": [
     {
      "q": "What is a usual testosterone gel dose?",
@@ -117,11 +117,11 @@
   },
   "testosterone-cream": {
    "title": "Testosterone cream (AndroForte 5): doses, PBS · GAMSA",
-   "description": "How testosterone cream (AndroForte 5) is used in masculinising therapy in Australia: usual doses (1 to 4 mL of 5% cream daily), side effects and PBS cost.",
+   "description": "How testosterone cream (AndroForte 5) is used in gender-affirming care in Australia: usual doses (1 to 4 mL of 5% cream daily), side effects and PBS cost.",
    "faq": [
     {
      "q": "How much AndroForte 5 cream is used a day?",
-     "a": "Australian standards give 1 to 4 mL of 5% cream (50 to 200 mg) daily, and note that 2 mL is often enough to reach the target range for full masculinisation. Scrotal skin absorbs far more, so the leaflet's scrotal starting dose is 0.5 mL a day."
+     "a": "Australian standards give 1 to 4 mL of 5% cream (50 to 200 mg) daily, and note that 2 mL is often enough to reach the target range for the full effects of testosterone. Scrotal skin absorbs far more, so the leaflet's scrotal starting dose is 0.5 mL a day."
     }
    ]
   },

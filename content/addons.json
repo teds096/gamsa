@@ -1,11 +1,11 @@
 {
   "title": "Add-on therapies",
-  "intro": "Medicines and treatments sometimes used alongside gender-affirming hormone therapy to manage some of its effects. On testosterone: acne, scalp hair loss, periods that continue, and vaginal dryness. On oestrogen or androgen blockers: facial and body hair that remains, scalp hair, and changes in sexual function. None is hormone therapy in a different form, and none is automatic. It is background reading, not a prescription.",
+  "intro": "Some medicines and treatments are used with gender-affirming hormone therapy to manage some of its effects. On testosterone, these effects are acne, scalp hair loss, periods that continue, and vaginal dryness. On oestrogen or androgen blockers, they are facial and body hair that stays, scalp hair, and changes in sex drive and erections. None of these is hormone therapy in another form. None is automatic. It is background reading, not a prescription.",
   "sections": [
     {
       "h": "What add-on therapies are",
       "body": [
-        "Hormone therapy changes more than the things someone is aiming for. Some effects come up often enough to have their own treatments. Each is possible rather than certain, and the medicines used for them are ordinary prescriptions, not hormone therapy in a different form [1][2].",
+        "Hormone therapy changes more than the things you are aiming for. Some effects come up often enough to have their own treatments. Each effect may or may not happen. The medicines used for them are ordinary prescriptions, not hormone therapy in another form [1][2].",
         "Each medicine named here has its own page in the Medicines A–Z with doses, side effects and cost."
       ],
       "nav": "Overview",
@@ -26,37 +26,37 @@
             [
               "Acne",
               "On testosterone",
-              "A topical retinoid with benzoyl peroxide first; then doxycycline; isotretinoin for severe or scarring acne"
+              "First, a retinoid with benzoyl peroxide on the skin. Then doxycycline. Isotretinoin for severe or scarring acne"
             ],
             [
               "Scalp hair loss",
               "On testosterone",
-              "Topical minoxidil; finasteride in some cases"
+              "Minoxidil on the scalp. Finasteride in some cases"
             ],
             [
               "Periods still coming",
               "On testosterone",
-              "Norethisterone or medroxyprogesterone tablets; the three-monthly medroxyprogesterone injection; a levonorgestrel IUD"
+              "Norethisterone or medroxyprogesterone tablets. A medroxyprogesterone injection every three months. A levonorgestrel IUD"
             ],
             [
               "Vaginal dryness",
               "On testosterone",
-              "Low-dose vaginal oestrogen; vaginal moisturisers, which need no prescription"
+              "Low-dose vaginal oestrogen. Vaginal moisturisers, which need no prescription"
             ],
             [
               "Facial and body hair that remains",
               "On oestrogen or blockers",
-              "Hair removal such as laser or electrolysis, which is not a medicine; the androgen blocker itself also slows hair growth"
+              "Hair removal such as laser or electrolysis, which is not a medicine. The androgen blocker itself also slows hair growth"
             ],
             [
               "Scalp hair",
               "On oestrogen or blockers",
-              "Topical minoxidil; in some cases finasteride or dutasteride"
+              "Minoxidil on the scalp. In some cases, finasteride or dutasteride"
             ],
             [
               "Changes in sexual function",
               "On oestrogen or blockers",
-              "A lower blocker or oestrogen dose; sildenafil or tadalafil; low-dose testosterone in some situations"
+              "A lower blocker or oestrogen dose. Sildenafil or tadalafil. Low-dose testosterone in some situations"
             ]
           ]
         },
@@ -73,22 +73,22 @@
           },
           {
             "pic": "pills",
-            "text": "On oestrogen, some people want help with face hair, head hair or sex."
+            "text": "On oestrogen, some people want help with face hair, head hair, or changes in sex drive or erections."
           },
           {
             "pic": "speak",
             "text": "Ask your doctor which, if any, is right for you."
           }
         ],
-        "caption": "The effects of hormone therapy that are commonly treated, and what Australian guidance and product information name for each. Based on the Australian position statement, Australia's 2026 standards of care, the AJGP hormone therapy article and Australian product information [3][2][4][12][13]."
+        "caption": "The effects of hormone therapy that are often treated, and what Australian guidance and product information name for each. Based on the Australian position statement, Australia's 2026 standards of care, the AJGP hormone therapy article and Australian product information [3][2][4][12][13]."
       }
     },
     {
       "h": "Acne",
       "body": [
         "These four sections are for people taking testosterone.",
-        "Acne on testosterone comes from the same mechanism as acne generally: androgens increase the size and output of the skin's oil (sebaceous) glands, and more oil means more breakouts on the face and body [5]. It tends to start within the first few weeks of treatment and is most active in the first one to two years, often settling after that even without treatment [4].",
-        "Australian guidance follows the usual escalation: a topical retinoid combined with benzoyl peroxide first, an oral tetracycline such as doxycycline if that is not enough, and isotretinoin — a stronger oral retinoid, usually managed with a dermatologist — for acne that is severe or scarring [4]. The three act at different points: the topical combination clears pores and reduces surface bacteria, doxycycline settles the inflammation that follows, and isotretinoin reduces the oil glands themselves, which is why it is kept for acne the other options have not controlled."
+        "Acne on testosterone happens the same way as other acne. Androgens (hormones such as testosterone) make the skin's oil (sebaceous) glands bigger, and they make more oil [5]. More oil means more pimples on the face and body [5]. Acne tends to start in the first few weeks of treatment. It is most active in the first one to two years. After that it often settles, even without treatment [4].",
+        "Australian guidance uses the usual steps [4]. The first step is a retinoid and benzoyl peroxide, used together on the skin [4]. If that is not enough, the next step is a tetracycline taken by mouth, such as doxycycline [4]. For severe or scarring acne, the next step is isotretinoin [4]. This is a stronger retinoid taken by mouth. It is usually managed with a dermatologist (skin specialist) [4]. The three work in different ways. The skin treatment clears pores and reduces bacteria on the skin. Doxycycline calms the inflammation (redness and swelling) that follows. Isotretinoin shrinks the oil glands themselves. That is why it is kept for acne the other options have not controlled."
       ],
       "nav": "Acne",
       "group": "On testosterone"
@@ -96,11 +96,11 @@
     {
       "h": "Scalp hair loss",
       "body": [
-        "Testosterone is converted into dihydrotestosterone (DHT) by the enzyme 5-alpha reductase [6]. DHT drives most masculinising change, but its effect on hair follicles depends on where they sit: follicles on the beard, underarm and pubic area enlarge, while follicles at the temples, crown and front of the scalp tend to miniaturise — the same process behind male-pattern baldness [2]. It is slower to show than acne, typically taking over twelve months to become noticeable, and can continue for as long as testosterone does [2].",
-        "Topical minoxidil is a non-hormonal option; Australian product information is candid that exactly how it works is not known, though it appears to prolong the hair growth phase [7]. Finasteride instead blocks the enzyme that produces DHT in the scalp [6]. A small case review in trans men taking low-dose finasteride found modest improvement, without the sexual side effects reported in cisgender men on the same drug, though the evidence base remains limited [2]. It is contraindicated during pregnancy, relevant if a partner could become pregnant, and because it acts on the same pathway that drives masculinisation, some prescribers treat it as a trade-off to discuss rather than a routine add-on [2]. Hair loss can also take over a year to appear, so waiting before deciding on treatment is a reasonable choice [2]."
+        "The body turns testosterone into dihydrotestosterone (DHT), using an enzyme called 5-alpha reductase [6]. DHT drives most of the body changes from testosterone. But its effect on hair roots (follicles) depends on where they are [2]. Follicles on the beard, underarms and pubic area grow larger. Follicles at the temples, crown and front of the scalp tend to shrink. This is the same process behind male-pattern baldness [2]. It is slower to show than acne. It usually takes over twelve months to notice, and it can go on for as long as testosterone does [2].",
+        "Minoxidil, used on the scalp, is an option that is not a hormone. Australian product information says it is not known exactly how it works [7]. It seems to make the hair growth phase last longer [7]. Finasteride works in a different way. It blocks the enzyme that makes DHT in the scalp [6]. A small review of trans men taking low-dose finasteride found some improvement [2]. They did not have the sexual side effects reported in cisgender men on the same drug. But the evidence is still limited [2]. Finasteride must not be used during pregnancy. This matters if a partner could become pregnant [2]. It also acts on the same pathway that drives the changes from testosterone. So some prescribers treat it as a trade-off to talk through, not a routine add-on [2]. Hair loss can also take over a year to appear. So it is reasonable to wait before you decide on treatment [2]."
       ],
       "list": [
-        "Finasteride and dutasteride are not general blockers; they are commonly added for scalp hair loss, although Australian guidance notes it is unclear whether they add benefit [2]"
+        "Finasteride and dutasteride are not general blockers. They are often added for scalp hair loss. Australian guidance says it is unclear if they add benefit [2]"
       ],
       "nav": "Scalp hair loss",
       "group": "On testosterone"
@@ -108,8 +108,8 @@
     {
       "h": "Periods that continue on testosterone",
       "body": [
-        "Testosterone at gender-affirming doses does not reliably switch off ovulation, so periods can continue, especially in the first months of treatment [5]. On full-dose testosterone, periods are generally expected to stop within about six months, though this varies and not everyone reaches that point on testosterone alone; testosterone is not contraception regardless of whether periods have stopped [2].",
-        "If periods continue and cause distress, the options are reviewing whether the testosterone dose has reached target, an oral progestogen such as norethisterone or medroxyprogesterone acetate, or a levonorgestrel intrauterine device (IUD) [3]. Norethisterone is taken as tablets [8]; medroxyprogesterone acetate comes as tablets or as an injection given every three months [9]; the IUD is fitted once and can remain in place for several years [10]. The IUD and the three-monthly medroxyprogesterone injection also work as contraception; norethisterone and medroxyprogesterone tablets do not [2][8][9]."
+        "Testosterone at gender-affirming doses does not reliably stop ovulation (the release of an egg). So periods can continue, especially in the first months of treatment [5]. On full-dose testosterone, periods usually stop within about six months [2]. This varies, and not everyone gets there on testosterone alone [2]. Testosterone is not contraception, even if your periods have stopped [2].",
+        "If periods continue and cause distress, there are three options [3]. One is to check whether the testosterone dose has reached its target. Another is a progestogen taken by mouth, such as norethisterone or medroxyprogesterone acetate. The third is a levonorgestrel intrauterine device (IUD) [3]. Norethisterone is taken as tablets [8]. Medroxyprogesterone acetate comes as tablets, or as an injection given every three months [9]. The IUD is put in once and can stay in place for several years [10]. The IUD and the three-monthly medroxyprogesterone injection also work as contraception. Norethisterone and medroxyprogesterone tablets do not [2][8][9]."
       ],
       "nav": "Periods",
       "group": "On testosterone"
@@ -117,8 +117,8 @@
     {
       "h": "Vaginal dryness",
       "body": [
-        "Testosterone suppresses the ovaries' own oestrogen production, and the vaginal lining depends on oestrogen to stay thick and lubricated. As that exposure drops, the tissue can thin and dry in a way similar to menopause, sometimes causing irritation, dryness or pain with penetration [5]. This tends to build up gradually over time on testosterone rather than appearing suddenly.",
-        "Low-dose vaginal oestrogen treats the tissue directly: daily for the first two weeks, then twice weekly, with product information describing systemic absorption as low enough that blood oestradiol stays within the usual postmenopausal range [11]. It acts locally and does not work against testosterone's effects elsewhere in the body [5]. Vaginal moisturisers, available without a prescription, are a non-hormonal alternative some people try first [2]."
+        "Testosterone lowers the oestrogen your ovaries make. The lining of the vagina needs oestrogen to stay thick and moist. With less oestrogen, the tissue can get thinner and drier, as in menopause. This can cause irritation, dryness or pain with penetration [5]. It tends to build up slowly over time on testosterone, rather than appear suddenly.",
+        "Low-dose vaginal oestrogen treats the tissue directly. It is used daily for the first two weeks, then twice a week [11]. Product information says very little gets into the blood, so blood oestradiol stays within the usual range after menopause [11]. It acts only where it is used. It does not work against the effects of testosterone in the rest of the body [5]. Vaginal moisturisers do not need a prescription. Some people try them first, as an option that is not a hormone [2]."
       ],
       "nav": "Vaginal dryness",
       "group": "On testosterone"
@@ -127,33 +127,33 @@
       "h": "Facial and body hair",
       "group": "On oestrogen or blockers",
       "body": [
-        "These three sections are for people taking oestrogen, an androgen blocker, or both. Micronised progesterone is part of feminising hormone therapy rather than an add-on; it is covered in the [doses guide](#/doses#sec-doses-3).",
-        "Oestrogen and androgen blockers lower the effect of testosterone on hair follicles, so facial and body hair usually grows more slowly. The change is gradual, with the largest effect after one to two years [16]. Hormones work on body hair more than on facial hair, and they cannot remove hair that has already grown, so many people also use hair removal [17][16].",
-        "Two androgen blockers used in Australia are also registered for unwanted hair growth (hirsutism) in women: spironolactone [12] and cyproterone acetate [13]. For someone already taking one as part of feminising therapy, it is already working on hair growth; it is not usually added a second time for hair.",
-        "Shaving, waxing and hair-removal creams are temporary. Laser hair removal and electrolysis give longer-lasting results but need several sessions [17]. They are procedures, not medicines, so they are not on the PBS, and Medicare has no item for hair removal; they are paid for privately, and Australian guidance describes them as costly [17][18]. If you take isotretinoin for acne, the product information advises avoiding waxing, dermabrasion and laser treatment during the course and for five to six months afterwards [14]."
+        "These three sections are for people taking oestrogen, an androgen blocker, or both. Micronised progesterone is part of estradiol-based hormone therapy, not an add-on. It is covered in the [doses guide](#/doses#sec-doses-3).",
+        "Oestrogen and androgen blockers lower the effect of testosterone on hair roots (follicles). So facial and body hair usually grows more slowly. The change is gradual, and is largest after one to two years [16]. Hormones work on body hair more than on facial hair. They cannot remove hair that has already grown, so many people also use hair removal [17][16].",
+        "Two androgen blockers used in Australia are also approved for unwanted hair growth (hirsutism) in women. They are spironolactone [12] and cyproterone acetate [13]. If you already take one as part of estradiol-based therapy, it is already working on hair growth. It is not usually added a second time for hair.",
+        "Shaving, waxing and hair-removal creams are temporary. Laser hair removal and electrolysis give longer-lasting results, but need several sessions [17]. They are procedures, not medicines, so they are not on the PBS [17][18]. Medicare has no item for hair removal [17][18]. You pay for them yourself, and Australian guidance says they are costly [17][18]. If you take isotretinoin for acne, the product information says to avoid waxing, dermabrasion and laser treatment [14]. This applies during the course and for five to six months after it [14]."
       ],
       "list": [
-        "Body hair usually slows more than facial hair; the largest change is after one to two years [16][17]",
-        "Spironolactone and cyproterone are registered for unwanted hair growth in women, and are already part of many feminising regimens [12][13]",
-        "Laser and electrolysis: procedures, not prescriptions; no Medicare or PBS cover, so paid privately [17][18]",
+        "Body hair usually slows more than facial hair. The largest change is after one to two years [16][17]",
+        "Spironolactone and cyproterone are approved for unwanted hair growth in women. They are already part of many estradiol-based treatment plans [12][13]",
+        "Laser and electrolysis are procedures, not prescriptions. There is no Medicare or PBS cover, so you pay for them yourself [17][18]",
         "On isotretinoin, wait five to six months after the course before laser or waxing [14]"
       ],
-      "note": "Hormones keep slowing hair growth for one to two years, so ask your prescriber when it makes sense to start or plan hair removal [16].",
+      "note": "Hormones keep slowing hair growth for one to two years. Ask your prescriber when it makes sense to start or plan hair removal [16].",
       "nav": "Facial and body hair"
     },
     {
       "h": "Scalp hair",
       "group": "On oestrogen or blockers",
       "body": [
-        "Scalp hair loss of the male-pattern type is driven by dihydrotestosterone (DHT), which testosterone is converted into by the enzyme 5-alpha reductase [6][2]. Lowering testosterone with oestrogen and an androgen blocker removes much of that drive, so further loss often slows or stops, and Australian guidance notes that spironolactone and cyproterone have been shown to improve it [17][16].",
-        "Topical minoxidil is a non-hormonal option; Australian product information says exactly how it works is not known, though it appears to prolong the hair growth phase [7]. It can cause unwanted facial hair if it spreads from the scalp, so wash your hands well after applying it [7].",
-        "Finasteride and dutasteride block 5-alpha reductase. They are not general androgen blockers; they are commonly added for scalp hair loss, although Australian guidance notes it is unclear whether they add benefit [17]. Finasteride lowers PSA results (by about half in older men, less in younger men), so anyone who has prostate testing should tell the person ordering it [6]. The product information also lists depression, and loss of libido that can continue after stopping, among effects reported after marketing [6]."
+        "Male-pattern scalp hair loss is driven by DHT (dihydrotestosterone). The body makes DHT from testosterone, using an enzyme called 5-alpha reductase [6][2]. Oestrogen and an androgen blocker lower testosterone, which removes much of that drive. So further hair loss often slows or stops [17][16]. Australian guidance says spironolactone and cyproterone have been shown to improve it [17][16].",
+        "Minoxidil, used on the scalp, is an option that is not a hormone. Australian product information says it is not known exactly how it works [7]. It seems to make the hair growth phase last longer [7]. If it spreads from the scalp, it can cause unwanted hair on other parts of the body, such as the face. So wash your hands well after you put it on [7].",
+        "Finasteride and dutasteride block 5-alpha reductase. They are not general androgen blockers. They are often added for scalp hair loss. But Australian guidance says it is unclear if they add benefit [17]. Finasteride lowers the results of a prostate blood test called PSA (prostate-specific antigen) [6]. In studies of older men it lowered PSA by about half, and by less in younger men [6]. If you have prostate testing, tell the person who orders it [6]. This applies to anyone with a prostate. The product information also lists depression among effects reported after the medicine went on sale [6]. It also lists loss of libido (sex drive) that can continue after stopping [6]."
       ],
       "list": [
-        "Feminising therapy itself often slows or stops scalp hair loss [17][16]",
-        "Minoxidil: non-hormonal; wash hands after use to avoid unwanted facial hair [7]",
-        "Finasteride or dutasteride: unclear added benefit on top of feminising therapy [17]",
-        "Finasteride lowers PSA results (by about half in older men, less in younger men); tell whoever orders a prostate test [6]"
+        "Estradiol-based therapy itself often slows or stops scalp hair loss [17][16]",
+        "Minoxidil is not a hormone. Wash your hands after use to avoid unwanted facial hair [7]",
+        "Finasteride or dutasteride: it is unclear if they add benefit on top of estradiol-based therapy [17]",
+        "Finasteride lowers PSA results, by about half in studies of older men and less in younger men. Tell whoever orders a prostate test [6]"
       ],
       "note": "Each of these medicines has its own page in the Medicines A–Z with doses, side effects and cost.",
       "nav": "Scalp hair (oestrogen)"
@@ -162,13 +162,13 @@
       "h": "Sexual function",
       "group": "On oestrogen or blockers",
       "body": [
-        "Reduced libido, fewer spontaneous erections and reduced erectile function are recognised effects of oestrogen and androgen blockers. Some people welcome these changes; for others they cause distress [15].",
-        "Australia's 2026 standards of care describe options such as lowering the dose of oestrogen or of the blocker, sildenafil or tadalafil (which help erections but not libido), and low-dose testosterone in some situations, each considered with your prescriber in light of your own goals [15]. The full list is on the [Fertility, PrEP and surgery](#/related-care#sec-related-care-1) page, in the section on sexual function."
+        "Oestrogen and androgen blockers can lower libido, or sex drive. They can also mean fewer erections that happen on their own. Erections can be harder to get or keep. Some people welcome these changes. For others, they cause distress [15].",
+        "Australia's 2026 standards of care describe several options. These include a lower dose of oestrogen or of the blocker. They also include sildenafil or tadalafil, which help erections but not sex drive. Low-dose testosterone may be used in some situations. You and your prescriber weigh each one against your own goals [15]. The full list is on the [Fertility, PrEP and surgery](#/related-care#sec-related-care-1) page, in the section on sexual function."
       ],
       "list": [
-        "Lower dose of the blocker or oestrogen; may bring back some masculinising effects [15]",
-        "Sildenafil or tadalafil: help erections, not libido [15]",
-        "Low-dose testosterone after orchidectomy or with full suppression, guided by blood tests; low-dose genital testosterone cream for penile pain, based on clinical experience [15]"
+        "A lower dose of the blocker or oestrogen. This may bring back some effects of testosterone [15]",
+        "Sildenafil or tadalafil: these help erections, not sex drive [15]",
+        "Low-dose testosterone after orchidectomy or with full suppression, guided by blood tests. Low-dose testosterone cream on the genitals for penile pain, based on clinical experience [15]"
       ],
       "nav": "Sexual function"
     }
@@ -202,47 +202,47 @@
     {
       "n": 6,
       "text": "Finasteride GH 1 (finasteride 1 mg) tablets, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/finasteride-gh-1-tablets"
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/finasteride-gh-1?cid=f38ef489-8d61-46bd-9500-a7ac00f279bb"
     },
     {
       "n": 7,
-      "text": "Men's Regaine Extra Strength Foam (minoxidil 5% w/w), Australian Consumer Medicine Information. ACSQHC Medicine Finder. Accessed September 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/mens-regaine-extra-strength-foam"
+      "text": "Regaine (minoxidil) solutions and foams, including Men's Regaine Extra Strength Foam (minoxidil 5%): Australian Product Information and Consumer Medicine Information (MIMS revision 1 January 2026). ACSQHC Medicine Finder. Accessed 20 November 2026.",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/regaine?bid=65b07d7b-2116-4a13-b2aa-a53300fd7655"
     },
     {
       "n": 8,
       "text": "Primolut N (norethisterone) 5 mg tablets, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/primolut-n"
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/primolut-n?cid=9024c6e7-a061-4676-8d2d-a53300fefeb3"
     },
     {
       "n": 9,
       "text": "Depo-Provera (medroxyprogesterone acetate 150 mg/mL) injection, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/depo-provera"
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/depo-provera?cid=0f1b730f-3def-47f5-ad17-a53300fec5e2"
     },
     {
       "n": 10,
       "text": "Mirena (levonorgestrel 52 mg) intrauterine device, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/mirena-intrauterine-device"
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/mirena?cid=0932af54-cd1d-4842-beae-a53300ff37ab"
     },
     {
       "n": 11,
       "text": "Vagifem Low (estradiol 10 microgram) modified release vaginal pessary, Australian Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed September 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/vagifem-low"
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/vagifem-low?cid=dcef087c-5d3d-4e3f-9c1a-a53300fee18e"
     },
     {
       "n": 12,
       "text": "Spironolactone (Aldactone, Spiractin, Spironolactone Viatris) Australian Product Information, section 4.1 Therapeutic indications (female hirsutism) and 4.2 (date of revision Aldactone 18 June 2025). ACSQHC Medicine Finder. Accessed 17 October 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/aldactone"
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/aldactone?bid=823cb014-8838-4adc-81d7-a53300fd61f9"
     },
     {
       "n": 13,
       "text": "Cyproterone acetate (Androcur) Australian Product Information, section 4.1 Therapeutic indications (androgenisation in women: hirsutism, alopecia, acne) (date of revision 25 November 2024). ACSQHC Medicine Finder. Accessed 17 October 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/androcur-tablets"
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/androcur?bid=382f617c-ba3b-4c71-b611-a53300fd619f"
     },
     {
       "n": 14,
       "text": "Oratane (isotretinoin) capsules, Australian Product Information, section 4.4 (wax epilation, dermabrasion and laser treatment) (date of revision 26 March 2025), and Consumer Medicine Information (avoid during treatment and for 5–6 months after). ACSQHC Medicine Finder. Accessed 17 October 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/oratane"
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/oratane?bid=3ba70e57-e214-4509-856a-a53300fd9674"
     },
     {
       "n": 15,

@@ -37,7 +37,7 @@
     },
     "PI-REA": {
       "name": "Reandron 1000 PI",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/reandron-1000",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/reandron-1000?bid=80d2b4e9-5872-4a5d-b5c1-a53300fdc619",
       "match": [
         "4.4"
       ],
@@ -45,7 +45,7 @@
     },
     "PI-TGL": {
       "name": "Testogel PI",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/testogel",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/testogel?bid=ee0c37ef-7a10-4790-b0ab-a53300fdc3f6",
       "match": [
         "4.2"
       ],
@@ -53,7 +53,7 @@
     },
     "PI-TVN": {
       "name": "Testavan PI",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/testavan",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/testavan?bid=eeba0ac7-9376-40f0-a860-a9c3010423d0",
       "match": [
         "4.2"
       ],
@@ -61,7 +61,7 @@
     },
     "PI-AF5": {
       "name": "AndroForte 5 PI",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/andro-forte-5-transdermal-cream",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/androforte-5?bid=3a64feae-324a-44ca-aa2a-a53300fdf6f5",
       "match": [
         "4.2"
       ],
@@ -69,7 +69,7 @@
     },
     "PI-PRI": {
       "name": "Primoteston Depot and Sustanon 250 PI",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/primoteston-depot",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/primoteston-depot?bid=d1afb949-f488-450b-9d6d-a53300fd5fc5",
       "match": [
         "4.2"
       ],
@@ -77,7 +77,7 @@
     },
     "PI-CPA": {
       "name": "Androcur PI",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/androcur-tablets",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/androcur?bid=382f617c-ba3b-4c71-b611-a53300fd619f",
       "match": [
         "4.4",
         "meningioma"
@@ -86,7 +86,7 @@
     },
     "PI-SPI": {
       "name": "Spiractin CMI and Aldactone PI",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/spiractin-tablets",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/spiractin?bid=47aa9731-067d-4ec6-ac50-a53300fd7d3a",
       "match": [
         "hyperkalaemia"
       ],
@@ -107,7 +107,7 @@
     },
     "PI-E2": {
       "name": "Oestradiol PI",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/estradot-transdermal-patch",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/estradot?bid=f58a3ab8-d387-4773-941e-a53300fdc01f",
       "match": [
         "4.4"
       ],
@@ -115,15 +115,15 @@
     },
     "PI-PRO": {
       "name": "Prometrium PI",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/prometrium",
+      "url": "https://www.ebs.tga.gov.au/ebs/picmi/picmirepository.nsf/PICMI?OpenForm&t=&q=prometrium",
       "match": [
         "4.4"
       ],
-      "text": "Prometrium (progesterone) capsules, Australian Product Information, sections 4.4 and 4.5. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 7 November 2026."
+      "text": "Prometrium (progesterone) capsules, Australian Product Information, sections 4.4 and 4.5. Therapeutic Goods Administration Product Information and Consumer Medicine Information search (prometrium). Accessed 7 November 2026; listing checked 20 November 2026."
     },
     "FIN": {
       "name": "Finasteride PI",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/finasteride-gh-1-tablets",
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/finasteride-gh-1?bid=74117bca-9ca3-464f-91b1-a6590080d748",
       "text": "Finasteride GH 1 (finasteride 1 mg) tablets, Australian Consumer Medicine Information and Product Information (PSA lowered by about 50%). ACSQHC Medicine Finder. Accessed 7 November 2026."
     }
   },
@@ -251,10 +251,10 @@
             "injections"
           ],
           "test": "Oestradiol level (injections)",
-          "when": "At each review, midway between injections, or as a pair of tests (just after and just before an injection) if your prescriber asks. Oestradiol injections are rarely used in Australia.",
+          "when": "At each review, midway between injections, or as a pair of tests (just after and just before an injection) if your prescriber asks. Estradiol injections are rarely used in Australia.",
           "aim": "Above about 250 pmol/L",
           "talkIf": "It is much higher or lower than expected",
-          "clinician": "No data to guide testing; consider peak and trough, or mid-interval. Clot risk similar to oral oestradiol.",
+          "clinician": "No data to guide testing; consider peak and trough, or mid-interval. Clot risk similar to oral estradiol.",
           "sources": [
             {
               "id": "AUS26",
@@ -281,7 +281,7 @@
             }
           ],
           "printable": true,
-          "short": "Testosterone (on oestradiol): at each review; below 2 nmol/L if full suppression is wanted"
+          "short": "Testosterone (on estradiol): at each review; below 2 nmol/L if full suppression is wanted"
         },
         {
           "id": "e2-bloods",
@@ -289,7 +289,7 @@
           "when": "Before starting, then at each review",
           "aim": "Within the range that fits your body on hormones (see Reading your results)",
           "talkIf": "Your prescriber flags a result. Kidney checks matter more if you take spironolactone or PrEP",
-          "clinician": "Use affirmed-gender ranges for Hb/Hct (haematocrit aligns after about 6 months on oestradiol); eGFR uses the recorded sex, so read the trend. Liver: oestradiol is poorly metabolised in liver impairment.",
+          "clinician": "Use affirmed-gender ranges for Hb/Hct (haematocrit aligns after about 6 months on estradiol); eGFR uses the recorded sex, so read the trend. Liver: estradiol is poorly metabolised in liver impairment.",
           "sources": [
             {
               "id": "AUS26",
@@ -361,9 +361,9 @@
         },
         {
           "id": "e2-psa",
-          "test": "PSA (prostate test)",
+          "test": "Prostate-specific antigen (PSA), a prostate test",
           "when": "Not a routine hormone test. Hormones and genital surgery leave the prostate in place",
-          "aim": "Read knowing that hormones lower PSA (and finasteride lowers it, by about half in older men)",
+          "aim": "Read knowing that hormones lower PSA (and finasteride lowers it, by about half in studies of older men; less in younger men)",
           "talkIf": "Anyone orders a PSA test: tell them you take hormones, and finasteride if you do",
           "clinician": "GAHT lowers PSA to levels like androgen deprivation; risk is lower but remains; no consensus PSA thresholds.",
           "sources": [
@@ -450,7 +450,7 @@
           "when": "Before starting, regularly during treatment, and at once if you have signs of liver trouble",
           "aim": "Within the lab's range",
           "talkIf": "You have yellow skin or eyes, or dark urine: get checked straight away",
-          "clinician": "Fatal hepatotoxicity reported at 100 mg a day and above (dose related); stop if liver injury is confirmed. Australian feminising doses: 12.5 mg once a week up to 25 mg a day.",
+          "clinician": "Fatal hepatotoxicity reported at 100 mg a day and above (dose related); stop if liver injury is confirmed. Australian doses in estradiol-based therapy: 12.5 mg once a week up to 25 mg a day.",
           "sources": [
             {
               "id": "AUS26",
@@ -910,7 +910,7 @@
   "sheets": [
     {
       "id": "oestradiol-tablets",
-      "h": "Oestradiol tablets",
+      "h": "Estradiol tablets",
       "group": "oestradiol",
       "forms": [
         "tablets"
@@ -924,7 +924,7 @@
       ],
       "key": "Take the blood sample just before your next tablet. Aim: oestradiol above about 250 pmol/L. Testosterone below 2 nmol/L if you want full suppression.",
       "file": "/guides/blood-test-guide-oestradiol-tablets.pdf",
-      "t": "Oestradiol tablets",
+      "t": "Estradiol tablets",
       "reading": [
         "range",
         "flag",
@@ -938,7 +938,7 @@
     },
     {
       "id": "oestradiol-patches",
-      "h": "Oestradiol patches",
+      "h": "Estradiol patches",
       "group": "oestradiol",
       "forms": [
         "patches"
@@ -949,7 +949,7 @@
       ],
       "key": "Take the blood sample just before you put on a new patch. Aim: oestradiol above about 250 pmol/L. Testosterone below 2 nmol/L if you want full suppression.",
       "file": "/guides/blood-test-guide-oestradiol-patches.pdf",
-      "t": "Oestradiol patches",
+      "t": "Estradiol patches",
       "reading": [
         "range",
         "flag",
@@ -962,7 +962,7 @@
     },
     {
       "id": "oestradiol-gel",
-      "h": "Oestradiol gel",
+      "h": "Estradiol gel",
       "group": "oestradiol",
       "forms": [
         "gel"
@@ -972,7 +972,7 @@
       ],
       "key": "Take the blood sample before that day's gel, from the arm you did not put gel on. Aim: oestradiol above about 250 pmol/L.",
       "file": "/guides/blood-test-guide-oestradiol-gel.pdf",
-      "t": "Oestradiol gel",
+      "t": "Estradiol gel",
       "reading": [
         "range",
         "flag",
@@ -986,7 +986,7 @@
     },
     {
       "id": "oestradiol-implants",
-      "h": "Oestradiol implants",
+      "h": "Estradiol implants",
       "group": "oestradiol",
       "forms": [
         "implants"
@@ -994,7 +994,7 @@
       "pages": [],
       "key": "Oestradiol is usually checked every 3 months in the first year. The level guides when the next implant is due. Aim: above about 250 pmol/L.",
       "file": "/guides/blood-test-guide-oestradiol-implants.pdf",
-      "t": "Oestradiol implants",
+      "t": "Estradiol implants",
       "reading": [
         "range",
         "flag",
@@ -1007,7 +1007,7 @@
     },
     {
       "id": "oestradiol-injections",
-      "h": "Oestradiol injections",
+      "h": "Estradiol injections",
       "group": "oestradiol",
       "forms": [
         "injections"
@@ -1015,7 +1015,7 @@
       "pages": [],
       "key": "Rarely used in Australia. Oestradiol is checked midway between injections, or before and after one. Aim: above about 250 pmol/L.",
       "file": "/guides/blood-test-guide-oestradiol-injections.pdf",
-      "t": "Oestradiol injections",
+      "t": "Estradiol injections",
       "reading": [
         "range",
         "flag",
@@ -1216,7 +1216,7 @@
     "flag": "A single flagged result",
     "units": "Units:",
     "timing": "A sample taken at a different time",
-    "gelarm": "Oestradiol gel on the skin",
+    "gelarm": "Estradiol gel on the skin",
     "biotin": "High-dose biotin",
     "split": "Splitting the dose",
     "hct": "Haemoglobin and haematocrit",

@@ -1,13 +1,13 @@
 {
   "title": "Working with your pharmacy",
-  "intro": "Practical guidance for getting the most out of your pharmacy: what to bring to an appointment, what to do if you run out without a prescription, how to talk with your pharmacist, getting your medicine if you live outside Adelaide, and making sure it is labelled with the name you use.",
+  "intro": "Practical tips for getting the most out of your pharmacy. This page covers what to bring to an appointment, and what to do if you run out and have no script. It also covers how to talk with your pharmacist, getting your medicine outside Adelaide, and having the name you use on the label. If you are just starting hormones, the first steps are on [Where to start with hormones](#/where-to-start).",
   "sections": [
     {
       "h": "Guides you can print or take to an appointment",
       "body": [
-        "GAMSA printables and Australian or manufacturer sources you can read or take to an appointment. They are general information, not instructions for your dose.",
-        "Every product you are dispensed also comes with a Consumer Medicine Information leaflet. If yours went missing, your pharmacist can print another one.",
-        "If you have the long-acting testosterone injection, there is also a [training package for the clinicians who give it](/medicines/testosterone-undecanoate#sec-med-9) — a procedure, a competency checklist and an adverse event form — that you can pass on to your clinic."
+        "These are GAMSA printables, and leaflets from Australian sources or the makers. You can read them or take them to an appointment. They are general information, not instructions for your dose.",
+        "Every medicine the pharmacy gives you also comes with a Consumer Medicine Information leaflet. If yours went missing, your pharmacist can print another one.",
+        "If you have the long-acting testosterone injection, there is also a [training package for the clinicians who give it](/medicines/testosterone-undecanoate#sec-med-9). It has a procedure, a skills checklist and a form for reporting side effects (an adverse event form). You can pass it on to your clinic."
       ],
       "downloads": [
         {
@@ -35,14 +35,14 @@
       ],
       "listh": "Other leaflets and guides",
       "list": [
-        "Royal Children's Hospital Melbourne — illustrated oestrogen patch information sheet [1]",
-        "Besins Healthcare Australia — Testogel patient information booklet [2]",
+        "Royal Children's Hospital Melbourne: illustrated oestrogen patch information sheet [1]",
+        "Besins Healthcare Australia: Testogel patient information booklet [2]",
         "Reandron 1000 consumer medicine information, and the product's Australian registration details [3][4]",
-        "SA Health — Long Acting Intramuscular Injections brochure, on the side-of-hip site [5]",
+        "SA Health: Long Acting Intramuscular Injections brochure, on the side-of-hip site [5]",
         "Estradot consumer medicine information, via the Australian Commission on Safety and Quality in Health Care medicine finder [6]",
         "Testogel consumer medicine information, same source [7]",
-        "TransHub (ACON) — Hormones: Masculinising, and Hormones: Feminising [8][9]",
-        "Fenway Health — transgender health injection guide, the one TransHub links to [10]",
+        "TransHub (ACON): Hormones: Masculinising, and Hormones: Feminising [8][9]",
+        "Fenway Health: transgender health injection guide, the one TransHub links to [10]",
         "NSW Health community sharps management, and Diabetes Australia's safe sharps pages [11][12]",
         "Return Unwanted Medicines (returnmed.com.au) [13]"
       ],
@@ -51,14 +51,14 @@
     {
       "h": "If you run out and have no script",
       "body": [
-        "The PBS Continued Dispensing rules let a pharmacist supply one PBS quantity, once in 12 months, for medicines on a defined list. Spironolactone and norethisterone are on that list; estradiol, cyproterone and testosterone are not [14].",
-        "South Australia has its own provision instead. If you are being treated with a prescription medicine and there is a good reason you cannot produce a script, a pharmacist here can supply a small emergency quantity: no more than 3 days' worth, or the smallest pack of a cream, ointment or liquid [15]. It is at the pharmacist's discretion, it is not free, and it is a bridge to a script rather than a substitute for one.",
-        "Take the empty box or a dispensing label if you have one, and your prescriber's name. Ring ahead rather than arriving at closing time, and go to the pharmacy that usually dispenses for you, because your history is already there."
+        "The PBS Continued Dispensing rules let a pharmacist supply one PBS quantity, once in 12 months, for medicines on a set list. Spironolactone and norethisterone are on that list. Estradiol, cyproterone and testosterone are not [14].",
+        "South Australia has its own rule instead. You may be on a prescription medicine and have a good reason you cannot show a script. If so, a pharmacist here can supply a small emergency amount. That is no more than 3 days' worth, or the smallest pack of a cream, ointment or liquid [15]. It is up to the pharmacist, and it is not free. It is a bridge until you get a script, not a replacement for one.",
+        "Take the empty box or a dispensing label if you have one, and your prescriber's name. Ring ahead rather than arriving at closing time. Go to the pharmacy that usually fills your scripts, because your history is already there."
       ],
       "list": [
-        "Keep the dispensing label or box — it is the fastest proof of what you take",
+        "Keep the dispensing label or box: it is the fastest proof of what you take",
         "Ask for a repeat before the last one, not after",
-        "Injectables held in a clinic fridge are worth checking on early, since they are ordered in"
+        "Check early on injections kept in a clinic fridge, because they are ordered in"
       ],
       "nav": "Run out, no script"
     },
@@ -66,44 +66,44 @@
       "h": "What to tell the pharmacist, and what to avoid",
       "body": [
         "Tell any pharmacist what hormones you take, including ones bought privately, before you buy anything over the counter.",
-        "Spironolactone raises potassium. Anti-inflammatories such as ibuprofen and naproxen, potassium-based salt substitutes, potassium supplements, and some antibiotics can push it higher again. Ask before you buy any of these.",
-        "Cyproterone affects the liver and can raise prolactin, so liver tests are part of routine monitoring.",
-        "Testosterone is not a contraceptive. Pregnancy remains possible even when periods have stopped, and testosterone must not be taken in pregnancy.",
-        "Needles and syringes are available from participating South Australian pharmacies, which also take back full sharps containers [16].",
-        "If English is not your first language, you can ask for an interpreter at no cost: the Translating and Interpreting Service (TIS National) is available to pharmacies and doctors on 131 450, 24 hours a day, and you can ring it yourself and ask to be connected to your pharmacy. The [Easy Read guides](#/easy) on this site are also written in plain language for people who find reading hard."
+        "Spironolactone raises potassium. Some products can push it higher again. These include anti-inflammatories such as ibuprofen and naproxen, salt substitutes made with potassium, potassium supplements, and some antibiotics. Ask before you buy any of these.",
+        "Cyproterone affects the liver and can raise prolactin (a hormone). So liver tests are part of routine monitoring.",
+        "Testosterone is not a contraceptive. Pregnancy is still possible even when periods have stopped. Testosterone must not be taken in pregnancy.",
+        "You can get needles and syringes from participating South Australian pharmacies. They also take back full sharps containers [16].",
+        "If English is not your first language, you can ask for a free interpreter. The Translating and Interpreting Service (TIS National) is on 131 450, 24 hours a day. Pharmacies and doctors can use it. You can also ring it yourself and ask to be put through to your pharmacy. The [Easy Read guides](#/easy) on this site also use plain language for people who find reading hard."
       ],
-      "note": "Bring a list, or a photo of your labels, to any new pharmacy — it is the fastest way for them to see everything you take. It is not a prescription, so you will still need a valid script for anything they dispense.",
+      "note": "Bring a list, or a photo of your labels, to any new pharmacy. It is the fastest way for them to see everything you take. It is not a prescription, so you will still need a valid script for anything they dispense.",
       "nav": "What to tell the pharmacist"
     },
     {
       "h": "If you live outside Adelaide",
       "body": [
-        "Order early. Regional and rural pharmacies usually keep less stock, and a medicine ordered in from a wholesaler can take a few extra days to arrive — longer for less common products, and longer again during a shortage.",
-        "Electronic prescriptions help. An e-script, or an Active Script List held by a pharmacy you choose, lets you send your prescription to any pharmacy in Australia, including one that posts medicines to you. [How electronic prescriptions work](https://www.digitalhealth.gov.au/initiatives-and-programs/electronic-prescriptions) [18].",
-        "Some products must stay cold until they are dispensed. Eligard, for example, is kept refrigerated at the pharmacy, so a regional pharmacy may need extra time to have it delivered with the cold chain intact.",
-        "Many prescribers of gender-affirming hormone therapy consult by telehealth, which can save a long trip, and the prescription can be sent to you electronically.",
-        "Help with travel. If you live more than 100 km from the nearest relevant specialist, South Australia's Patient Assistance Transport Scheme can subsidise your travel and accommodation for specialist appointments — from 1 July 2026, 34.4 cents a kilometre by private car and $110 a night for accommodation ($154 with an approved escort). It covers specialist appointments, not visits to a GP or a pharmacy. [PATS: how to apply](https://www.pats.sa.gov.au/) [19]."
+        "Order early. Regional and rural pharmacies usually keep less stock. A medicine ordered in from a wholesaler can take a few extra days to arrive. Less common products can take longer, and longer again during a shortage.",
+        "Electronic prescriptions help. You can use an e-script, or an Active Script List held by a pharmacy you choose. Either lets you send your prescription to any pharmacy in Australia, including one that posts medicines to you. [How electronic prescriptions work](https://www.digitalhealth.gov.au/initiatives-and-programs/electronic-prescriptions) [18].",
+        "Some products must stay cold until they are dispensed. For example, Eligard is kept in the fridge at the pharmacy. So a regional pharmacy may need extra time to have it delivered and kept cold the whole way.",
+        "Many prescribers of gender-affirming hormone therapy see people by telehealth. This can save a long trip, and the prescription can be sent to you electronically.",
+        "Help with travel. You may live more than 100 km from the nearest relevant specialist. If so, South Australia's Patient Assistance Transport Scheme can help pay for travel and accommodation for specialist appointments. From 1 July 2026, it pays 34.4 cents a kilometre by private car. It pays $110 a night for accommodation ($154 with an approved escort). It covers specialist appointments, not visits to a GP or a pharmacy. [PATS: how to apply](https://www.pats.sa.gov.au/) [19]."
       ],
       "nav": "Outside Adelaide"
     },
     {
       "h": "For Aboriginal and Torres Strait Islander people",
       "body": [
-        "Aboriginal and Torres Strait Islander peoples are many nations, each with its own language and culture, and gender diversity has been part of those cultures since long before colonisation. Some Aboriginal and Torres Strait Islander trans and gender diverse people use the words Sistergirl and Brotherboy. These are community identities with their own cultural meaning, not simply translations of trans woman or trans man, and not everyone uses them. The right word is always the one a person uses for themselves, and it is fine to ask respectfully.",
-        "Aboriginal Community Controlled Health Services are run by and for community, and offer GP care in a culturally safe setting. In Adelaide, [Nunkuwarrin Yunti](https://nunku.org.au/our-services/physical/general-clinic/) runs a general clinic [20], and the [Aboriginal Health Council of South Australia](https://ahcsa.org.au/) lists member services across the state [21]. You can also take a mainstream prescription to any pharmacy; nothing about where a script comes from changes how it is dispensed.",
-        "If cost is a barrier, ask about the Closing the Gap PBS Co-payment Program. A GP at an Aboriginal health service, or any PBS prescriber, can register you, and it lowers or removes the co-payment on PBS medicines. The costs guide explains [how Closing the Gap works](#/costs#sec-costs-3).",
-        "Information written by and for Aboriginal and Torres Strait Islander people about gender-affirming medicines is still limited. [TransHub's Trans Mob page](https://www.transhub.org.au/social/trans-mob/) connects to Sistergirl and Brotherboy community networks [22], and [Indigenous HealthInfoNet](https://healthinfonet.ecu.edu.au/learn/population-groups/lgbtqisb/) gathers research and resources for LGBTQIA+SB Aboriginal and Torres Strait Islander people [23].",
-        "This section is short because reliable, community-authored information is still scarce, not because it matters less. If you know of a resource that should be here, please send it through the [feedback page](#/feedback), which is preferred, or email gamsaenquiries@gmail.com."
+        "Aboriginal and Torres Strait Islander peoples are many nations, each with its own language and culture. Gender diversity has been part of those cultures since long before colonisation. Some Aboriginal and Torres Strait Islander trans and gender diverse people use the words Sistergirl and Brotherboy. These are community identities with their own cultural meaning, not simply translations of trans woman or trans man, and not everyone uses them. The right word is always the one a person uses for themselves. It is fine to ask respectfully.",
+        "Aboriginal Community Controlled Health Services are run by and for community. They offer GP care in a culturally safe setting. In Adelaide, [Nunkuwarrin Yunti](https://nunku.org.au/our-services/physical/general-clinic/) runs a general clinic [20]. The [Aboriginal Health Council of South Australia](https://ahcsa.org.au/) lists member services across the state [21]. You can also take a mainstream prescription to any pharmacy. Where a script comes from does not change how it is dispensed.",
+        "If cost is a barrier, ask about the Closing the Gap PBS Co-payment Program. A GP at an Aboriginal health service, or any PBS prescriber, can register you. It lowers or removes the co-payment (the amount you pay) on PBS medicines. The costs guide explains [how Closing the Gap works](#/costs#sec-costs-3).",
+        "There is still little information about gender-affirming medicines written by and for Aboriginal and Torres Strait Islander people. [TransHub's Trans Mob page](https://www.transhub.org.au/social/trans-mob/) connects to Sistergirl and Brotherboy community networks [22], and [Indigenous HealthInfoNet](https://healthinfonet.ecu.edu.au/learn/population-groups/lgbtqisb/) gathers research and resources for LGBTQIA+SB Aboriginal and Torres Strait Islander people [23].",
+        "This section is short because reliable information written by community is still scarce. It is not because it matters less. If you know of a resource that should be here, please send it through the [feedback page](#/feedback), which is preferred. Or email gamsaenquiries@gmail.com."
       ],
       "nav": "Aboriginal and Torres Strait Islander people"
     },
     {
       "h": "Getting your name right on the label",
       "body": [
-        "The name printed on a dispensing label comes from the pharmacy's own software, not from the prescription. That means a pharmacy can record the name you use, even when it differs from the one on your Medicare card or your script.",
-        "Ask at the counter when you hand the prescription in: say which name you want on the label, and that your legal name may still appear on the script itself. Most dispensing systems have a field for a preferred or known-as name, and once it is set it carries across to future labels.",
-        "If you want the name on your Medicare record changed as well, that is a separate process through Services Australia [17].",
-        "Not every pharmacist knows where that field sits in their particular software, and the answer differs between systems. A pharmacist who is willing to ring their software support to find out is worth keeping. Using the same pharmacy each time means you only have to have this conversation once."
+        "The name printed on a dispensing label comes from the pharmacy's own software, not from the prescription. So a pharmacy can record the name you use. This works even when it is different from the name on your Medicare card or your script.",
+        "Ask at the counter when you hand the prescription in. Say which name you want on the label. Explain that your legal name may still appear on the script itself. Most dispensing systems have a field for the name a person uses (often labelled \"preferred\" or \"known as\"). Once it is set, it carries across to future labels.",
+        "If you want the name on your Medicare record changed too, that is a separate process through Services Australia [17].",
+        "Not every pharmacist knows where that field is in their software, and each system is different. A pharmacist who will ring their software support to find out is worth keeping. If you use the same pharmacy each time, you only have to have this talk once."
       ],
       "list": [
         "Ask when you hand in the script, not after the label is printed",
@@ -111,7 +111,7 @@
         "If the pharmacist is unsure how, ask whether they can check with their software support",
         "Once it is set, it stays set for that pharmacy"
       ],
-      "note": "A pharmacy can put your name on the label. A prescription still has to carry the name held by Medicare for PBS claiming, so the two may not match, and that is normal.",
+      "note": "A pharmacy can put your name on the label. A prescription still has to carry the name held by Medicare for PBS claims. So the two may not match, and that is normal.",
       "nav": "Your name on the label"
     }
   ],
@@ -129,7 +129,7 @@
     {
       "n": 3,
       "text": "Reandron 1000 (testosterone undecanoate 1000 mg/4 mL) injection, Australian Product Information and Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/reandron-1000"
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/reandron-1000?bid=80d2b4e9-5872-4a5d-b5c1-a53300fdc619"
     },
     {
       "n": 4,
@@ -144,12 +144,12 @@
     {
       "n": 6,
       "text": "Estradot (estradiol) transdermal patch, Australian Product Information and Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/estradot-transdermal-patch"
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/estradot?bid=f58a3ab8-d387-4773-941e-a53300fdc01f"
     },
     {
       "n": 7,
       "text": "Testogel (testosterone 1%) gel, Australian Product Information and Consumer Medicine Information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/testogel"
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/testogel?bid=ee0c37ef-7a10-4790-b0ab-a53300fdc3f6"
     },
     {
       "n": 8,

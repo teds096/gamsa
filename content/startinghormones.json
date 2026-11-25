@@ -1,6 +1,6 @@
 {
     "title": "Starting hormones: a GP guide",
-    "intro": "A short guide for GPs starting gender-affirming hormone therapy (GAHT) for adults (18 and over), covering estradiol-based (feminising) and testosterone-based (masculinising) care. It follows the AusPATH Australian Standards of Care for Informed Consent GAHT, version 2 (2026) [1], with page numbers. It is a prompt, not a protocol: check the current standards and each product's Product Information, and adjust for the individual.",
+    "intro": "A short guide for GPs starting gender-affirming hormone therapy (GAHT) for adults (18 and over), covering estradiol-based and testosterone-based care. It follows the AusPATH Australian Standards of Care for Informed Consent GAHT, version 2 (2026) [1], with page numbers. It is a prompt, not a protocol: check the current standards and each product's Product Information, and adjust for the individual. A plain-language version of the same first steps, suitable to share with patients, is [Where to start with hormones](#/where-to-start). An Easy Read version is also available: [Starting hormones](#/easy/where-to-start).",
     "sections": [
         {
             "h": "What does the informed consent model mean?",
@@ -72,10 +72,10 @@
         {
             "h": "Which testosterone-based products and doses?",
             "body": [
-                "Common ranges [1, p34 (Table 6)]. For full masculinisation, any preparation can be started at the full dose [1, p32]:"
+                "Common ranges [1, p34 (Table 6)]. For the full effects of testosterone, any preparation can be started at the full dose [1, p32]:"
             ],
             "list": [
-                "Testogel 1%: 1–8 pumps (12.5–100 mg) or 1–2 × 50 mg sachets daily; 4 pumps often reaches the target. 1–3 pumps suit slower or partial masculinisation [1, p32, p34].",
+                "Testogel 1%: 1–8 pumps (12.5–100 mg) or 1–2 × 50 mg sachets daily; 4 pumps often reaches the target. 1–3 pumps suit slower or partial changes [1, p32, p34].",
                 "Testavan 2%: 1–3 pumps (23–69 mg) daily",
                 "AndroForte 5% cream: 1–4 mL (50–200 mg) daily; 2 mL is often enough",
                 "Testosterone undecanoate (Reandron and other brands) 1,000 mg/4 mL IM: 250–1,000 mg every 10–14 weeks, first two doses 6 weeks apart; intervals range from about 7 to over 20 weeks [1, p34]",

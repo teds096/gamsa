@@ -54,6 +54,15 @@
           "h": "About this website",
           "blocks": [
             {
+              "icon": "person",
+              "lines": [
+                "A pharmacist in Adelaide made this website.",
+                "The pharmacist saw gaps in information, and medicines kept running short.",
+                "So the pharmacist set out to fix both.",
+                "It is made for the community, by a member of the community."
+              ]
+            },
+            {
               "icon": "pills",
               "lines": [
                 "Some trans and gender diverse people take **hormone medicines**.",
@@ -88,6 +97,19 @@
           ]
         },
         {
+          "h": "How we keep the website up to date",
+          "blocks": [
+            {
+              "icon": "web",
+              "lines": [
+                "We check the website often.",
+                "A pharmacist checks new health advice before we change the website."
+              ]
+            }
+          ],
+          "figure": "stays-current"
+        },
+        {
           "h": "The guides",
           "blocks": [
             {
@@ -104,14 +126,417 @@
         }
       ],
       "audience": "you",
-      "updated": "2026-11-07",
+      "updated": "2026-11-22",
       "sources": [
-        "content/about.json#Who runs this site"
+        "content/about.json#Who made this site and why",
+        "content/about.json#How GAMSA stays current"
       ],
       "synced": {
-        "date": "2026-11-17",
+        "date": "2026-11-22",
         "fp": {
-          "content/about.json#Who runs this site": "2e9b09efc8b1"
+          "content/about.json#Who made this site and why": "1b0b141894f3",
+          "content/about.json#How GAMSA stays current": "3c549e5635fe"
+        }
+      }
+    },
+    {
+      "id": "where-to-start",
+      "title": "Starting hormones",
+      "subtitle": "First steps for adults, and how estradiol and testosterone differ",
+      "audience": "you",
+      "updated": "2026-11-24",
+      "sources": [
+        "content/wheretostart.json#The steps at a glance",
+        "content/wheretostart.json#Do I need a letter from a psychiatrist?",
+        "content/wheretostart.json#Two main paths, and lower doses",
+        "content/wheretostart.json#Where does the path differ by medicine?",
+        "content/wheretostart.json#1. Find a GP or another prescriber",
+        "content/wheretostart.json#If a GP says no, or is not sure",
+        "content/wheretostart.json#Telehealth and living outside Adelaide",
+        "content/wheretostart.json#2. Book a long appointment",
+        "content/wheretostart.json#What to bring to your first appointment",
+        "content/wheretostart.json#Questions you can ask your GP",
+        "content/wheretostart.json#3. Your first visit",
+        "content/wheretostart.json#4. Blood tests before you start",
+        "content/wheretostart.json#5. Talk through the changes and give consent",
+        "content/wheretostart.json#6. Fertility and contraception",
+        "content/wheretostart.json#7a. Your first script for estradiol-based hormone therapy",
+        "content/wheretostart.json#7b. Your first script for testosterone-based hormone therapy",
+        "content/wheretostart.json#8. Your pharmacy",
+        "content/wheretostart.json#9. Check-ups and blood tests in the first year",
+        "content/wheretostart.json#If your medicine is in short supply",
+        "content/wheretostart.json#What it costs",
+        "content/wheretostart.json#If you already take hormones",
+        "content/wheretostart.json#What changes to expect, and when",
+        "content/wheretostart.json#If you are under 18",
+        "content/wheretostart.json#What else is useful to know?",
+        "content/wheretostart.json#Support while you start"
+      ],
+      "sections": [
+        {
+          "h": "Before you start",
+          "blocks": [
+            {
+              "icon": "person",
+              "lines": [
+                "This guide is for adults, 18 and over.",
+                "If you are under 18, the steps are different."
+              ]
+            },
+            {
+              "icon": "pills",
+              "lines": [
+                "**Gender-affirming hormone therapy** is medicine that changes your body to match your gender."
+              ]
+            },
+            {
+              "icon": "question",
+              "lines": [
+                "Most adults do not need a letter from a psychiatrist.",
+                "You decide, after your doctor explains the good and bad parts."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "The steps",
+          "blocks": [
+            {
+              "icon": "doc",
+              "lines": [
+                "1. Find a GP, or another doctor who can start hormones.",
+                "2. Book a long appointment.",
+                "3. Go to your first visit.",
+                "4. Have **blood tests**, if your GP asks.",
+                "5. Talk about the changes, and say yes if you want to start."
+              ]
+            },
+            {
+              "icon": "doc",
+              "lines": [
+                "6. Think about having children later.",
+                "7. Get your first **prescription**.",
+                "8. Get your medicine from a pharmacy.",
+                "9. Have check-ups."
+              ]
+            },
+            {
+              "icon": "question",
+              "lines": [
+                "Every path is different.",
+                "Your steps may come in a different order.",
+                "Some steps may happen together, or not at all.",
+                "Your doctor may not talk about everything here.",
+                "Use this guide as a list.",
+                "Ask about anything that was left out."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Seeing a GP",
+          "blocks": [
+            {
+              "icon": "help",
+              "lines": [
+                "Find a GP who knows about trans health.",
+                "Trans Health SA has a list of doctors."
+              ]
+            },
+            {
+              "icon": "people",
+              "lines": [
+                "Most people start with a GP.",
+                "You do not have to.",
+                "A sexual health doctor or a hormone specialist can start hormones too.",
+                "Ask for a **referral** first.",
+                "Medicare pays more if you have a referral."
+              ]
+            },
+            {
+              "icon": "help",
+              "lines": [
+                "Some GPs do not start hormones.",
+                "You can see another GP.",
+                "You can ask your GP to send you to a doctor who does.",
+                "You can show your GP our guide for doctors."
+              ]
+            },
+            {
+              "icon": "calendar",
+              "lines": [
+                "Ask for a long appointment."
+              ]
+            },
+            {
+              "icon": "phone",
+              "lines": [
+                "You can see some doctors by **telehealth**.",
+                "Your first visit can be by telehealth too."
+              ]
+            },
+            {
+              "icon": "doc",
+              "lines": [
+                "Bring your **Medicare card**.",
+                "Bring a list of your medicines.",
+                "Tell your GP about any hormones you already take.",
+                "This includes hormones without a **prescription**.",
+                "Our guide Hormones without a prescription can help you stay safer.",
+                "Write down your questions."
+              ]
+            },
+            {
+              "icon": "people",
+              "lines": [
+                "You can bring a support person."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Your first visit",
+          "blocks": [
+            {
+              "icon": "question",
+              "lines": [
+                "Your GP asks about your goals and your health.",
+                "You do not have to talk about everything at once."
+              ]
+            },
+            {
+              "icon": "shield",
+              "lines": [
+                "Your GP checks your blood pressure.",
+                "They ask before each check.",
+                "You can say no to any check."
+              ]
+            },
+            {
+              "icon": "calendar",
+              "lines": [
+                "You may have **blood tests** before you start.",
+                "Some GPs ask for them at your first visit.",
+                "Others ask for them later."
+              ]
+            },
+            {
+              "icon": "speak",
+              "lines": [
+                "You talk about the changes hormones make.",
+                "Some changes stay forever.",
+                "You may sign a form to say yes."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Having children later",
+          "blocks": [
+            {
+              "icon": "warn",
+              "lines": [
+                "Hormones can make it harder to have children.",
+                "This may not change back."
+              ]
+            },
+            {
+              "icon": "question",
+              "lines": [
+                "If you might want children one day, ask about storing eggs or sperm before you start.",
+                "You do not have to."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Estradiol",
+          "blocks": [
+            {
+              "icon": "pills",
+              "lines": [
+                "Estradiol comes as tablets, patches or gel.",
+                "Many people also take a medicine that **blocks** testosterone."
+              ]
+            },
+            {
+              "icon": "card",
+              "lines": [
+                "Your GP or another doctor can write the script.",
+                "You do not need to see a specialist.",
+                "It is on the **PBS**."
+              ]
+            },
+            {
+              "icon": "warn",
+              "lines": [
+                "Do you smoke, or are you over 45?",
+                "Ask about patches or gel.",
+                "They may be better if you have a higher risk of blood clots."
+              ]
+            },
+            {
+              "icon": "patch",
+              "lines": [
+                "Some estradiol patches are hard to get.",
+                "This is a **shortage**.",
+                "Your pharmacist can help."
+              ]
+            },
+            {
+              "icon": "warn",
+              "lines": [
+                "Some changes stay forever, like breast growth."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Testosterone",
+          "blocks": [
+            {
+              "icon": "pills",
+              "lines": [
+                "**Testosterone** comes as **gel**, cream or an **injection**."
+              ]
+            },
+            {
+              "icon": "doc",
+              "lines": [
+                "Testosterone on the **PBS** needs a specialist.",
+                "If a specialist gives you your hormones, they can write the script.",
+                "If your GP gives you your hormones, you see a specialist one time.",
+                "Your GP can write the script once that visit is booked."
+              ]
+            },
+            {
+              "icon": "phone",
+              "lines": [
+                "Ask your GP for a **referral** to the specialist.",
+                "A referral is a letter from your GP.",
+                "You can see the specialist in person or by **telehealth**.",
+                "Ask the clinic what you will pay."
+              ]
+            },
+            {
+              "icon": "warn",
+              "lines": [
+                "Testosterone is not contraception.",
+                "It can harm a baby if you get pregnant.",
+                "Use contraception if you could get pregnant."
+              ]
+            },
+            {
+              "icon": "speak",
+              "lines": [
+                "Some changes stay forever, like a deeper voice."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Your dose",
+          "blocks": [
+            {
+              "icon": "question",
+              "lines": [
+                "Some people want a lower **dose**.",
+                "That is OK.",
+                "A low dose still causes changes.",
+                "You cannot choose which changes happen."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "After you start",
+          "blocks": [
+            {
+              "icon": "clock",
+              "lines": [
+                "Some changes start in the first few months.",
+                "Other changes keep coming for about 2 years."
+              ]
+            },
+            {
+              "icon": "calendar",
+              "lines": [
+                "You will have **blood tests** every 3 to 4 months in the first year.",
+                "Then once a year."
+              ]
+            },
+            {
+              "icon": "pharmacy",
+              "lines": [
+                "Your pharmacy can put the **name you use** on the label."
+              ]
+            },
+            {
+              "icon": "pharmacy",
+              "lines": [
+                "Is your medicine hard to get?",
+                "Ask your pharmacist.",
+                "Talk to your pharmacist or GP before you change it."
+              ]
+            },
+            {
+              "icon": "money",
+              "lines": [
+                "The **Safety Net** can make PBS medicines cheaper.",
+                "**Closing the Gap** makes them cheaper for Aboriginal and Torres Strait Islander people."
+              ]
+            },
+            {
+              "icon": "shield",
+              "lines": [
+                "You can stop hormones and start again later.",
+                "Talk to your GP before you stop."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Getting help",
+          "blocks": [
+            {
+              "icon": "phone",
+              "lines": [
+                "QLife: **1800 184 527**, 3pm to 9pm every day.",
+                "13YARN: **13 92 76**, for Aboriginal and Torres Strait Islander people.",
+                "In an emergency, call **000**."
+              ]
+            }
+          ]
+        }
+      ],
+      "synced": {
+        "date": "2026-11-25",
+        "fp": {
+          "content/wheretostart.json#The steps at a glance": "9ad14785130b",
+          "content/wheretostart.json#Do I need a letter from a psychiatrist?": "526a496fbf14",
+          "content/wheretostart.json#Two main paths, and lower doses": "6ed7d3ebd64c",
+          "content/wheretostart.json#Where does the path differ by medicine?": "b5a742575491",
+          "content/wheretostart.json#1. Find a GP or another prescriber": "2f4ceac3da9b",
+          "content/wheretostart.json#If a GP says no, or is not sure": "53657dbf98cb",
+          "content/wheretostart.json#Telehealth and living outside Adelaide": "49b6200fb2b1",
+          "content/wheretostart.json#2. Book a long appointment": "249c3d115f91",
+          "content/wheretostart.json#What to bring to your first appointment": "66f714234e57",
+          "content/wheretostart.json#Questions you can ask your GP": "696d76eb4f5c",
+          "content/wheretostart.json#3. Your first visit": "ba1446f54467",
+          "content/wheretostart.json#4. Blood tests before you start": "77b6c30d152a",
+          "content/wheretostart.json#5. Talk through the changes and give consent": "c15ff63404c4",
+          "content/wheretostart.json#6. Fertility and contraception": "a6c3851d1960",
+          "content/wheretostart.json#7a. Your first script for estradiol-based hormone therapy": "6f6824366c54",
+          "content/wheretostart.json#7b. Your first script for testosterone-based hormone therapy": "7920655d93b6",
+          "content/wheretostart.json#8. Your pharmacy": "49f8b5fdef9c",
+          "content/wheretostart.json#9. Check-ups and blood tests in the first year": "adb570b58137",
+          "content/wheretostart.json#If your medicine is in short supply": "31bc88918f2b",
+          "content/wheretostart.json#What it costs": "26276ebc7d10",
+          "content/wheretostart.json#If you already take hormones": "832e0cfaf880",
+          "content/wheretostart.json#What changes to expect, and when": "a95ce84ff193",
+          "content/wheretostart.json#If you are under 18": "4a9089134d54",
+          "content/wheretostart.json#What else is useful to know?": "ae0b5d22a8b5",
+          "content/wheretostart.json#Support while you start": "ac060a0d604e"
         }
       }
     },
@@ -128,7 +553,8 @@
               "lines": [
                 "First you see a doctor or a nurse who can prescribe.",
                 "If they agree the medicine is right for you, they write a **prescription**.",
-                "A prescription is a note that lets you get the medicine."
+                "A prescription is a note that lets you get the medicine.",
+                "Our guide called Starting hormones shows the first steps."
               ]
             },
             {
@@ -155,14 +581,14 @@
               "icon": "nametag",
               "lines": [
                 "Your medicine label might show a name you do not use.",
-                "This is because the pharmacy computer uses your Medicare name."
+                "The pharmacy can change this."
               ]
             },
             {
               "icon": "speak",
               "lines": [
-                "You can ask the pharmacy to put your **preferred name** on the label.",
-                "Your preferred name is the name you want people to use."
+                "You can ask the pharmacy to put the **name you use** on the label.",
+                "This is the name you want people to call you."
               ]
             },
             {
@@ -181,7 +607,7 @@
             {
               "icon": "calendar",
               "lines": [
-                "Country pharmacies keep less medicine on the shelf.",
+                "Pharmacies outside Adelaide keep less medicine on the shelf.",
                 "Ask for your medicine a week before you run out."
               ]
             },
@@ -219,11 +645,11 @@
         "content/pharmacy.json#What to tell the pharmacist, and what to avoid"
       ],
       "synced": {
-        "date": "2026-11-07",
+        "date": "2026-11-23",
         "fp": {
-          "content/pharmacy.json#If you live outside Adelaide": "d206a54448d6",
-          "content/pharmacy.json#Getting your name right on the label": "a1088a6c05c2",
-          "content/pharmacy.json#What to tell the pharmacist, and what to avoid": "e1396a120972"
+          "content/pharmacy.json#If you live outside Adelaide": "b8fcee6717bd",
+          "content/pharmacy.json#Getting your name right on the label": "83b34102b9d9",
+          "content/pharmacy.json#What to tell the pharmacist, and what to avoid": "3db0d1359448"
         }
       }
     },
@@ -275,7 +701,30 @@
               "lines": [
                 "Your pharmacist may be able to give you a different **brand**.",
                 "A different brand is the same medicine in a different box.",
-                "This is safe and normal."
+                "This is safe and normal.",
+                "Ask how to use the new brand."
+              ]
+            },
+            {
+              "icon": "phone",
+              "lines": [
+                "Ring other pharmacies before you travel.",
+                "Stock seen by other people is not checked.",
+                "So call first."
+              ]
+            },
+            {
+              "icon": "speak",
+              "lines": [
+                "If there is no other brand, talk to your prescriber.",
+                "Do not stop your medicine or change your dose without asking first."
+              ]
+            },
+            {
+              "icon": "web",
+              "lines": [
+                "You can sign up on our website for **shortage** alerts.",
+                "You add them to a news feed app or to Outlook. Nothing is emailed."
               ]
             }
           ]
@@ -289,10 +738,10 @@
         "template.html#renderMeds"
       ],
       "synced": {
-        "date": "2026-11-10",
+        "date": "2026-11-23",
         "fp": {
-          "content/dosing.json#If your medicine is hard to get": "cc9713f356ec",
-          "content/pharmacy.json#If you run out and have no script": "01935db5b95b",
+          "content/dosing.json#If your medicine is hard to get": "188c6fe742ff",
+          "content/pharmacy.json#If you run out and have no script": "1d12160c4886",
           "template.html#renderMeds": "60724375e9f2"
         }
       }
@@ -394,14 +843,14 @@
         "content/costs.json#If cost is a barrier"
       ],
       "synced": {
-        "date": "2026-11-16",
+        "date": "2026-11-23",
         "fp": {
-          "content/costs.json#What the PBS is": "a5f99ce59998",
-          "content/costs.json#What you pay at the counter": "2d89a8efae04",
-          "content/costs.json#The PBS Safety Net": "1580ef5f7da5",
-          "content/costs.json#Closing the Gap: lower costs for Aboriginal and Torres Strait Islander people": "5c5550989bb6",
-          "content/costs.json#Brand premiums: being aware of them": "07b24c6853f8",
-          "content/costs.json#If cost is a barrier": "c279bfafda79"
+          "content/costs.json#What the PBS is": "7653c096838b",
+          "content/costs.json#What you pay at the counter": "369e69633241",
+          "content/costs.json#The PBS Safety Net": "0093a943e456",
+          "content/costs.json#Closing the Gap: lower costs for Aboriginal and Torres Strait Islander people": "da4250a39469",
+          "content/costs.json#Brand premiums: being aware of them": "6b5555020feb",
+          "content/costs.json#If cost is a barrier": "d5db442f1e78"
         }
       }
     },
@@ -447,6 +896,7 @@
               "icon": "patch",
               "lines": [
                 "**Gel** is medicine you rub on your skin, usually once a day.",
+                "Cream is used the same way.",
                 "Put it where the box says.",
                 "Let it dry before you get dressed."
               ]
@@ -483,10 +933,10 @@
         "content/administration.json#Applying gel, and keeping it off other people"
       ],
       "synced": {
-        "date": "2026-11-15",
+        "date": "2026-11-23",
         "fp": {
-          "content/administration.json#Putting on and changing a patch": "c0ceeafba4ec",
-          "content/administration.json#Applying gel, and keeping it off other people": "8b4b905cf767"
+          "content/administration.json#Putting on and changing a patch": "99492306c919",
+          "content/administration.json#Applying gel, and keeping it off other people": "92aa9de1fcc4"
         }
       }
     },
@@ -510,7 +960,8 @@
               "icon": "speak",
               "lines": [
                 "Tell the person giving the injection if you feel unwell.",
-                "Also tell them if an injection has made you sick before."
+                "Also tell them if an injection has made you sick before.",
+                "Also tell them if you take a medicine that thins your blood, or if you bleed easily."
               ]
             },
             {
@@ -520,6 +971,14 @@
                 "Testosterone can make your blood thicker.",
                 "Some medicines for diabetes, the heart or the kidneys can do this too.",
                 "If you take one of them, you may need more blood tests."
+              ]
+            },
+            {
+              "icon": "speak",
+              "lines": [
+                "If you could become pregnant, the clinic may offer you a pregnancy test before the injection.",
+                "They should tell you why.",
+                "You can say no."
               ]
             }
           ]
@@ -531,7 +990,7 @@
               "icon": "clock",
               "lines": [
                 "The long-acting testosterone injection is given slowly, into the side of your hip.",
-                "You lie on your side or on your back.",
+                "You lie on your side.",
                 "A doctor or nurse gives it.",
                 "In some places, a trained pharmacist can give it.",
                 "You then wait in the clinic for at least 30 minutes.",
@@ -596,7 +1055,9 @@
               "lines": [
                 "Never share needles.",
                 "Put used needles in a sharps bin, not in the rubbish.",
-                "Your pharmacy can tell you where to get a sharps bin."
+                "Your pharmacy can tell you where to get a sharps bin.",
+                "If your used needle pricks someone else, they should let it bleed and wash it with soap and water.",
+                "Then they should see a doctor straight away."
               ]
             }
           ],
@@ -614,14 +1075,14 @@
         "content/medicines.json#testosterone-undecanoate"
       ],
       "synced": {
-        "date": "2026-11-16",
+        "date": "2026-11-23",
         "fp": {
-          "content/administration.json#Your long-acting injection: finding the right spot": "5969fdf5cf28",
-          "content/administration.json#What happens at the injection appointment": "177efbccba38",
-          "content/administration.json#Learning to inject testosterone yourself": "910d787ad70c",
-          "content/administration.json#Disposing of needles and leftover medicine": "7426cfa28c7d",
-          "content/medicines.json#gnrh-analogues": "a4470ed14a11",
-          "content/medicines.json#testosterone-undecanoate": "378e060eaedf"
+          "content/administration.json#Your long-acting injection: finding the right spot": "da693f991200",
+          "content/administration.json#What happens at the injection appointment": "6e0531e0d613",
+          "content/administration.json#Learning to inject testosterone yourself": "57151cf74d1f",
+          "content/administration.json#Disposing of needles and leftover medicine": "8eeb91ad447f",
+          "content/medicines.json#gnrh-analogues": "a2be7e95abaa",
+          "content/medicines.json#testosterone-undecanoate": "da88c15c0ed4"
         }
       }
     },
@@ -673,11 +1134,11 @@
         "content/administration.json#Storing your medicine safely at home"
       ],
       "synced": {
-        "date": "2026-11-07",
+        "date": "2026-11-23",
         "fp": {
-          "content/administration.json#Taking tablets and capsules": "49bf7394c2c4",
-          "content/administration.json#When you miss a dose": "44cd0ee61315",
-          "content/administration.json#Storing your medicine safely at home": "e2c961fda73a"
+          "content/administration.json#Taking tablets and capsules": "0eacc06f925d",
+          "content/administration.json#When you miss a dose": "8a8e55104bdd",
+          "content/administration.json#Storing your medicine safely at home": "7bf34b2e55ce"
         }
       }
     },
@@ -760,6 +1221,7 @@
                 "The lab may mark a result as high or low.",
                 "It uses the sex on your Medicare or lab record.",
                 "On hormones, this may not fit your body.",
+                "Your prescriber will tell you which range fits your hormones.",
                 "Talk to your doctor about the result.",
                 "Do not change your dose on your own."
               ]
@@ -801,13 +1263,13 @@
         "content/administration.json#Dose and symptom logs to print"
       ],
       "synced": {
-        "date": "2026-11-16",
+        "date": "2026-11-23",
         "fp": {
-          "content/dosing.json#Start here: the dose is yours, and only your prescriber sets it": "48d8ab243ca1",
-          "content/monitoring.json#Blood tests and reviews": "5c2b500cd54e",
-          "content/monitoring.json#Getting the timing of the blood test right": "c213d6cee46e",
-          "content/monitoring.json#Reading your results": "02b8e0681dc4",
-          "content/administration.json#Dose and symptom logs to print": "ce683aefdada"
+          "content/dosing.json#Start here: the dose is yours, and only your prescriber sets it": "b985fea6438e",
+          "content/monitoring.json#Blood tests and reviews": "e005baa6dcd3",
+          "content/monitoring.json#Getting the timing of the blood test right": "35398ef53c49",
+          "content/monitoring.json#Reading your results": "04fa6eb32a9b",
+          "content/administration.json#Dose and symptom logs to print": "342f20ce3253"
         }
       }
     },
@@ -924,6 +1386,344 @@
         "fp": {
           "content/resources.json#Care and support in South Australia": "059d6fd56ca0",
           "content/resources.json#National information": "0f0dd6050ba4"
+        }
+      }
+    },
+    {
+      "id": "diy-hormones",
+      "title": "Hormones without a prescription",
+      "subtitle": "Staying safer, clean needles, and getting help",
+      "audience": "you",
+      "updated": "2026-11-24",
+      "sources": [
+        "content/diyhormones.json"
+      ],
+      "sections": [
+        {
+          "h": "About this guide",
+          "blocks": [
+            {
+              "icon": "person",
+              "lines": [
+                "This guide is for adults who take hormones without a **prescription**.",
+                "We do not judge you.",
+                "This guide can help you stay safer."
+              ]
+            },
+            {
+              "icon": "question",
+              "lines": [
+                "Many people find it hard to get hormones.",
+                "It can cost a lot.",
+                "It can take a long time."
+              ]
+            },
+            {
+              "icon": "people",
+              "lines": [
+                "You can start hormones with a GP.",
+                "Most people do not need a letter from a psychiatrist.",
+                "Our guide Starting hormones has the steps."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Medicine from the internet",
+          "blocks": [
+            {
+              "icon": "warn",
+              "lines": [
+                "Medicine from the internet may not be safe.",
+                "It may be fake.",
+                "It may have the wrong amount of hormone.",
+                "It may have no hormone at all."
+              ]
+            },
+            {
+              "icon": "doc",
+              "lines": [
+                "Keep the box, or take a photo of the label.",
+                "Show it to your doctor or pharmacist."
+              ]
+            },
+            {
+              "icon": "warn",
+              "lines": [
+                "Do not use it if the seal is broken.",
+                "Do not use oil that looks cloudy or has bits in it."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "More is not safer",
+          "blocks": [
+            {
+              "icon": "pills",
+              "lines": [
+                "Taking more hormone does not always work better.",
+                "It can make some risks higher."
+              ]
+            },
+            {
+              "icon": "warn",
+              "lines": [
+                "Estradiol tablets can cause blood clots.",
+                "Testosterone can make your blood thick."
+              ]
+            },
+            {
+              "icon": "warn",
+              "lines": [
+                "Testosterone is not contraception.",
+                "It can harm a baby if you get pregnant.",
+                "Use contraception if you could get pregnant."
+              ]
+            },
+            {
+              "icon": "calendar",
+              "lines": [
+                "**Blood tests** can check how your body is going.",
+                "A GP can do these tests.",
+                "You can ask, even without a prescription."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Injecting safely",
+          "blocks": [
+            {
+              "icon": "warn",
+              "lines": [
+                "Use a new needle and syringe every time.",
+                "Never share needles or syringes."
+              ]
+            },
+            {
+              "icon": "person",
+              "lines": [
+                "Ask a doctor or nurse to show you how to inject."
+              ]
+            },
+            {
+              "icon": "help",
+              "lines": [
+                "You can get clean needles at a **Needle and Syringe Program** site.",
+                "There are sites in Adelaide and in the country."
+              ]
+            },
+            {
+              "icon": "clock",
+              "lines": [
+                "Some sites have a machine you can use at any time."
+              ]
+            },
+            {
+              "icon": "pharmacy",
+              "lines": [
+                "Some pharmacies sell needles too."
+              ]
+            },
+            {
+              "icon": "phone",
+              "lines": [
+                "Call 1300 131 340 to find your nearest site."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Used needles",
+          "blocks": [
+            {
+              "icon": "warn",
+              "lines": [
+                "Put used needles in a **sharps container**.",
+                "Never put them in the rubbish bin."
+              ]
+            },
+            {
+              "icon": "pharmacy",
+              "lines": [
+                "When it is full, take it to a needle site or a pharmacy."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Getting help",
+          "blocks": [
+            {
+              "icon": "phone",
+              "lines": [
+                "Call 000 if you have chest pain or it is hard to breathe.",
+                "Call 000 if your face droops or your speech is slurred."
+              ]
+            },
+            {
+              "icon": "warn",
+              "lines": [
+                "Is your leg sore, red and swollen?",
+                "See a doctor straight away.",
+                "It can be a blood clot."
+              ]
+            },
+            {
+              "icon": "phone",
+              "lines": [
+                "Call 13 11 26 if you took too much medicine."
+              ]
+            },
+            {
+              "icon": "speak",
+              "lines": [
+                "It is OK to tell your doctor what you take.",
+                "The law protects your health information.",
+                "Your doctor can only share it at certain times."
+              ]
+            },
+            {
+              "icon": "shield",
+              "lines": [
+                "You can change to medicine from a doctor at any time."
+              ]
+            }
+          ]
+        }
+      ],
+      "synced": {
+        "date": "2026-11-25",
+        "fp": {
+          "content/diyhormones.json": "fa2eefda0fe6"
+        }
+      }
+    },
+    {
+      "id": "words",
+      "title": "Words and terms",
+      "subtitle": "Words about gender and trans people",
+      "audience": "you",
+      "updated": "2026-11-22",
+      "sources": [
+        "content/terminology.json#Where should I start?",
+        "content/terminology.json#Are sex, gender and sexual orientation the same thing?",
+        "content/terminology.json#Words about gender",
+        "content/terminology.json#Pronouns, names and titles",
+        "content/terminology.json#Do all cultures use the same words?",
+        "content/terminology.json#How have the words changed?"
+      ],
+      "sections": [
+        {
+          "h": "Using the right words",
+          "blocks": [
+            {
+              "icon": "nametag",
+              "lines": [
+                "Use the name a person tells you.",
+                "Use the pronoun they tell you, like she, he or they."
+              ]
+            },
+            {
+              "icon": "question",
+              "lines": [
+                "You cannot tell a person's gender by looking.",
+                "If you are not sure, ask."
+              ]
+            },
+            {
+              "icon": "speak",
+              "lines": [
+                "Say your own pronoun first.",
+                "Then ask: \"What pronouns do you use?\""
+              ]
+            },
+            {
+              "icon": "swap",
+              "lines": [
+                "If you get it wrong, fix it and keep going."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Four different things",
+          "blocks": [
+            {
+              "icon": "person",
+              "lines": [
+                "Sex characteristics are about the body."
+              ]
+            },
+            {
+              "icon": "people",
+              "lines": [
+                "Gender identity is who you know you are.",
+                "Gender expression is how you show it, like clothes and hair."
+              ]
+            },
+            {
+              "icon": "help",
+              "lines": [
+                "Sexual orientation is about who you are attracted to.",
+                "These are 4 different things."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Some words",
+          "blocks": [
+            {
+              "icon": "person",
+              "lines": [
+                "Trans: your gender is different from the one people thought when you were born.",
+                "Cis: your gender is the same as the one people thought when you were born."
+              ]
+            },
+            {
+              "icon": "people",
+              "lines": [
+                "Non-binary: your gender is not only man or woman."
+              ]
+            },
+            {
+              "icon": "people",
+              "lines": [
+                "Different cultures and languages have their own words about gender.",
+                "Use the word the person uses."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Words can change",
+          "blocks": [
+            {
+              "icon": "calendar",
+              "lines": [
+                "The words people use change over time."
+              ]
+            },
+            {
+              "icon": "speak",
+              "lines": [
+                "You can ask your doctor or pharmacy for an interpreter."
+              ]
+            }
+          ]
+        }
+      ],
+      "synced": {
+        "date": "2026-11-22",
+        "fp": {
+          "content/terminology.json#Where should I start?": "243aa0cbea44",
+          "content/terminology.json#Are sex, gender and sexual orientation the same thing?": "d15d1c31f3f7",
+          "content/terminology.json#Words about gender": "1213cd6bf8d8",
+          "content/terminology.json#Pronouns, names and titles": "016b6314d465",
+          "content/terminology.json#Do all cultures use the same words?": "854ba72524b9",
+          "content/terminology.json#How have the words changed?": "cf64cbd3ba88"
         }
       }
     },
@@ -1075,10 +1875,10 @@
         "template.html#renderMeds"
       ],
       "synced": {
-        "date": "2026-11-10",
+        "date": "2026-11-23",
         "fp": {
-          "content/allies.json#How to help with their medicines": "5e75fac9f027",
-          "content/allies.json#Pharmacy visit checklist": "96ca6f5d4b71",
+          "content/allies.json#How to help with their medicines": "e143123bde9b",
+          "content/allies.json#Pharmacy visit checklist": "bb98e423b64d",
           "template.html#renderMeds": "60724375e9f2"
         }
       }
@@ -1173,11 +1973,11 @@
         "content/administration.json#Your long-acting injection: finding the right spot"
       ],
       "synced": {
-        "date": "2026-11-15",
+        "date": "2026-11-23",
         "fp": {
-          "content/allies.json#What the medicines are": "7129f29d26f8",
-          "content/administration.json#What happens at the injection appointment": "177efbccba38",
-          "content/administration.json#Your long-acting injection: finding the right spot": "5969fdf5cf28"
+          "content/allies.json#What the medicines are": "165a1ab52078",
+          "content/administration.json#What happens at the injection appointment": "6e0531e0d613",
+          "content/administration.json#Your long-acting injection: finding the right spot": "da693f991200"
         }
       }
     },
@@ -1270,10 +2070,10 @@
         "content/monitoring.json#Blood tests and reviews"
       ],
       "synced": {
-        "date": "2026-11-07",
+        "date": "2026-11-23",
         "fp": {
-          "content/allies.json#What actually goes wrong": "2c3f3ea5f747",
-          "content/monitoring.json#Blood tests and reviews": "5c2b500cd54e"
+          "content/allies.json#What actually goes wrong": "952ede01a97c",
+          "content/monitoring.json#Blood tests and reviews": "e005baa6dcd3"
         }
       }
     },
@@ -1361,9 +2161,9 @@
         "content/allies.json#Local services"
       ],
       "synced": {
-        "date": "2026-11-07",
+        "date": "2026-11-23",
         "fp": {
-          "content/allies.json#Being an ally more broadly": "e902e0e06705",
+          "content/allies.json#Being an ally more broadly": "9ea0c2edb3d4",
           "content/allies.json#Local services": "0068e9e00931"
         }
       }
@@ -1393,7 +2193,7 @@
             {
               "icon": "nametag",
               "lines": [
-                "If they ask, use the name and pronouns they want.",
+                "Use the name and pronouns they ask for.",
                 "It is OK if you make a mistake. Say sorry and keep going."
               ]
             },
@@ -1412,7 +2212,8 @@
             {
               "icon": "pharmacy",
               "lines": [
-                "In South Australia, the Women's and Children's Hospital has a team for young people up to 17."
+                "In South Australia, the Women's and Children's Hospital has a team for young people up to 17.",
+                "At 18, our guide called Starting hormones shows the first steps for adults."
               ]
             },
             {
@@ -1431,6 +2232,14 @@
               "icon": "shield",
               "lines": [
                 "If your child is under 16, a parent or legal guardian goes to the appointments and must agree before any medicine starts."
+              ]
+            },
+            {
+              "icon": "doc",
+              "lines": [
+                "The Australian government is asking for comments on new advice about puberty blockers.",
+                "You can read it on the NHMRC website.",
+                "Comments close on 18 January 2027."
               ]
             },
             {
@@ -1459,9 +2268,9 @@
         "content/parents.json"
       ],
       "synced": {
-        "date": "2026-11-17",
+        "date": "2026-11-24",
         "fp": {
-          "content/parents.json": "d3f8cb570c92"
+          "content/parents.json": "fe06414728b2"
         }
       }
     }
@@ -1552,6 +2361,14 @@
       "d": "Checking how a medicine is working, and keeping you safe, with blood tests and check-ups."
     },
     {
+      "w": "Name you use",
+      "d": "The name you want people to call you."
+    },
+    {
+      "w": "Needle and Syringe Program",
+      "d": "A service that gives out clean needles and syringes, and takes back used ones."
+    },
+    {
       "w": "Oestrogen",
       "d": "A hormone. Some people take it as a medicine."
     },
@@ -1568,10 +2385,6 @@
       "d": "The Pharmaceutical Benefits Scheme. The government pays part of the cost of many medicines."
     },
     {
-      "w": "Preferred name",
-      "d": "The name you want people to use for you."
-    },
-    {
       "w": "Prescription",
       "d": "A note from your doctor that lets you get a medicine."
     },
@@ -1582,6 +2395,10 @@
     {
       "w": "Safety Net",
       "d": "Once you spend enough on medicines in one year, they cost less."
+    },
+    {
+      "w": "Sharps container",
+      "d": "A hard box with a lid for used needles. It keeps other people safe."
     },
     {
       "w": "Shortage",

@@ -1,0 +1,466 @@
+{
+ "title": "Where to start with hormones",
+ "kicker": "For trans and gender diverse people",
+ "intro": "Thinking about starting gender-affirming hormone therapy (some people call it HRT)? This page sets out the usual first steps for adults (18 and over) in Australia. It shows where the path differs for estradiol-based and testosterone-based hormone therapy, and links to the rest of this site. If you are under 18, the steps are different: see [Parents and carers of under-18s](#/parents).",
+ "sections": [
+  {
+   "h": "The steps at a glance",
+   "body": [
+    "Most adults go through these steps. Each one links to more detail further down this page.",
+    "Every path is different. Your steps may happen in a different order, some may be done together, and some may be skipped. Not every doctor will talk through everything on this page, so use it as a checklist and ask about anything that was not covered.",
+    "Most people start with a GP, so this page says \"your GP\". You do not have to start there. A sexual health physician, an endocrinologist (a hormone specialist) or a nurse practitioner can also start hormones [1, p9] [4]. If one of them looks after your hormones, read \"your GP\" as them."
+   ],
+   "list": [
+    "**Step 1.** [Find a GP or another prescriber](#/where-to-start#sec-where-to-start-4) who is affirming and has experience with hormones.",
+    "**Step 2.** [Book a long appointment](#/where-to-start#sec-where-to-start-7), in person or by telehealth.",
+    "**Step 3.** [Go to your first visit](#/where-to-start#sec-where-to-start-10). Your GP asks about your goals and your health.",
+    "**Step 4.** [Have blood tests before you start](#/where-to-start#sec-where-to-start-11), if your GP asks for them. Some GPs ask at your first visit, and others at a later one.",
+    "**Step 5.** [Talk through the changes and give consent](#/where-to-start#sec-where-to-start-12).",
+    "**Step 6.** [Think about fertility and contraception](#/where-to-start#sec-where-to-start-13) before you start.",
+    "**Step 7.** Get your first script: [estradiol-based](#/where-to-start#sec-where-to-start-14) or [testosterone-based](#/where-to-start#sec-where-to-start-15).",
+    "**Step 8.** [Fill your script at a pharmacy](#/where-to-start#sec-where-to-start-16).",
+    "**Step 9.** [Have check-ups and blood tests](#/where-to-start#sec-where-to-start-18) every 3 to 4 months in the first year."
+   ],
+   "after": [
+    "How long it takes is different for everyone. In the first year, you see your GP about every 3 to 4 months. Once things are stable, you go once a year [1, p25]. Changes keep building for about 2 years [1, p22].",
+    "The steps follow Australia's standards of care [1]. You can read them on the [AusPATH standards of care page](https://auspath.org.au/standards-of-care/)."
+   ]
+  },
+  {
+   "h": "Do I need a letter from a psychiatrist?",
+   "body": [
+    "No, not usually. In Australia, adults can start hormones with a GP under the informed consent model. This means you make the decision, once your doctor has explained the benefits, risks and side effects [1, p12].",
+    "A mental health professional is only involved if you ask for one, or if a mental health concern needs care first [1, p12]. Mental health conditions and neurodivergence, such as autism or ADHD, do not stop you starting hormones, unless they affect your ability to make the decision right now [1, p20]."
+   ]
+  },
+  {
+   "h": "Two main paths, and lower doses",
+   "body": [
+    "**Estradiol-based hormone therapy** uses estradiol. Many people also take an anti-androgen (testosterone blocker), such as spironolactone or cyproterone [1, p25, p30]. **Testosterone-based hormone therapy** uses testosterone [1, p32].",
+    "Some people, including some non-binary people, want fewer or slower changes, so they choose a lower dose. That is a valid goal. But a low dose is not no dose, and you cannot pick which changes happen [1, p25]. On testosterone, for example, you cannot have some changes without a deeper voice, and a deeper voice is permanent [1, p32].",
+    "[Doses](#/doses) shows the usual dose ranges.",
+    "[TransHub's Hormones 101](https://www.transhub.org.au/medical/hormones-101/) explains hormone therapy in plain language."
+   ]
+  },
+  {
+   "h": "Where does the path differ by medicine?",
+   "body": [
+    "Most steps are the same for everyone. This table shows where they differ."
+   ],
+   "table": {
+    "stack": true,
+    "head": [
+     "Step",
+     "Estradiol-based",
+     "Testosterone-based"
+    ],
+    "rows": [
+     [
+      "Medicines",
+      "Estradiol tablets, patches or gel, often with spironolactone or cyproterone [1, p25, p30]",
+      "Testosterone gel, cream or injection [1, p34]"
+     ],
+     [
+      "First PBS script",
+      "Your GP or another doctor can write it. No specialist is needed [2]",
+      "A sexual health physician, endocrinologist or urologist can write it. So can your GP, once you have seen, or booked to see, one of them one time [1, p33] [13]"
+     ],
+     [
+      "What you pay",
+      "The usual PBS price ([Costs](#/costs))",
+      "The usual PBS price with an Authority script. Short-acting injections are private, so you pay the full price [1, p33]"
+     ],
+     [
+      "Main safety point",
+      "If your risk of blood clots is higher, for example if you smoke or are over 45, patches or gel may be preferred [1, p26]",
+      "Testosterone is not contraception, and it can harm a pregnancy [1, p22]"
+     ],
+     [
+      "Injections",
+      "Not usually. Injections and implants are made by compounding pharmacies and are not TGA-approved [1, pp26-27]",
+      "A long-acting injection at a clinic, or short-acting injections at home after training [1, pp33-34]"
+     ],
+     [
+      "Changes that can be permanent",
+      "Breast growth, smaller genitals and loss of fertility [1, p23]",
+      "A deeper voice, facial and body hair, genital growth, and hair loss on the head for some people [1, p24]"
+     ],
+     [
+      "Main blood tests",
+      "Oestradiol and testosterone levels. Kidney tests and potassium if you take spironolactone, and liver tests if you take cyproterone [1, p27, p36]",
+      "Testosterone level and haematocrit (how thick the blood is) [1, pp35-36]"
+     ],
+     [
+      "Supply now",
+      "Some estradiol patches are hard to get [3]",
+      "Check [Supply and shortages](#/supply)"
+     ]
+    ]
+   }
+  },
+  {
+   "h": "1. Find a GP or another prescriber",
+   "body": [
+    "A prescriber is the doctor or nurse practitioner who writes your scripts. Most people start with a GP. This usually costs less and has a shorter wait than seeing a specialist [1, p12].",
+    "Look for a GP who is affirming and has experience with hormones. These lists can help:"
+   ],
+   "list": [
+    "[Trans Health SA directory](https://transhealthsa.com/directory/): practitioners across South Australia, including some who offer telehealth",
+    "[TransHub directory](https://www.transhub.org.au/doctor/): affirming health professionals across Australia; its Treatment filter finds telehealth services, and its Speciality filter finds GPs, endocrinologists and sexual health doctors",
+    "[AusPATH provider directory](https://auspath.org.au/providers/): health professionals who are AusPATH members, listed by state",
+    "[SHINE SA referral pathways](https://shinesa.org.au/media/2023/09/Referral-Pathways-for-Trans-and-Gender-Diverse-Care.pdf): where to go for trans and gender diverse care in South Australia [4]",
+    "Aboriginal and Torres Strait Islander people can also go to an Aboriginal community controlled health service, such as the [Nunkuwarrin Yunti general clinic](https://nunku.org.au/our-services/physical/general-clinic/) in Adelaide. The [Aboriginal Health Council of South Australia](https://ahcsa.org.au/) lists others. Outside South Australia, see the [NACCHO list of Aboriginal community controlled health services](https://www.naccho.org.au/locations/) in each state and territory. [Closing the Gap](#/costs#sec-costs-3) can lower what you pay for PBS medicines."
+   ],
+   "after": [
+    "**A GP is not the only way in.** A sexual health physician (a specialist doctor in sexual health) or an endocrinologist (a hormone specialist) can also start hormones [4]. Australia's standards of care also apply to nurse practitioners, sexual health clinics and Aboriginal Community Controlled Health Services [1, p9].",
+    "**Do I need a referral to see a specialist?** Ask a GP or nurse practitioner for one first. With a referral, Medicare pays part of the specialist's fee. Without one, Medicare pays a lower rate, so you pay more [12]. When you call the clinic, ask if it needs a referral before it will book you.",
+    "**In Adelaide.** SHINE SA's Hyde Street Practice has GPs and a sexual health physician service that lists trans health care for adults [14]. SHINE SA says GP visits are bulk billed if you have a Medicare card, but visits with the sexual health physician are not [15]. Its books may be closed. The [Trans Health SA directory](https://transhealthsa.com/directory/) shows which doctors are taking new patients. Ask the practice, and ask if you need a referral.",
+    "The Adelaide Sexual Health Centre is a free public clinic. SA Health lists its services as advice, and tests and treatment for infections. Hormone therapy is not on that list, so ask the clinic before you count on it for hormones [16]."
+   ]
+  },
+  {
+   "h": "If a GP says no, or is not sure",
+   "body": [
+    "Some GPs are not confident to start hormones themselves [1, p16]. That does not mean you cannot get care. You can:"
+   ],
+   "list": [
+    "See another GP. The [lists in step 1](#/where-to-start#sec-where-to-start-4) show affirming doctors, including some who offer telehealth.",
+    "Ask your GP to refer you to a doctor who does start hormones, such as a sexual health physician or an endocrinologist [4].",
+    "Show your GP [Starting hormones: a GP guide](#/starting-hormones). It follows Australia's standards of care, which are written for GPs [1, p9].",
+    "Point your GP to [free prescriber training from ASHM](https://ashm.org.au/education/advanced-gender-affirming-hormone-therapy).",
+    "Use the [SHINE SA referral pathways](https://shinesa.org.au/media/2023/09/Referral-Pathways-for-Trans-and-Gender-Diverse-Care.pdf) to find other services in South Australia [4]."
+   ],
+   "after": [
+    "If you are told you need a letter from a psychiatrist first, you can show them [the answer near the top of this page](#/where-to-start#sec-where-to-start-1). Adults do not usually need one [1, p12].",
+    "A GP who does not start hormones may still be able to look after you once your hormones are stable [1, p16]."
+   ]
+  },
+  {
+   "h": "Telehealth and living outside Adelaide",
+   "body": [
+    "You can do many steps by telehealth, by phone or video.",
+    "Some Medicare telehealth items are for sexual and reproductive health, and they can be used even if you have not seen that GP before [6]. Australia's 2026 standards of care say visits about gender-affirming hormones can use them [1, p51].",
+    "This means your first visit does not have to be face to face [1, p16]. The one-time specialist visit for testosterone can also be by telehealth [1, p33].",
+    "If you live outside Adelaide, e-scripts let you send your script to any pharmacy. Order your medicine early. [If you live outside Adelaide](#/pharmacy#sec-pharmacy-3) has more tips.",
+    "If you live more than 100 km from the nearest relevant specialist, the Patient Assistance Transport Scheme (PATS) may help pay for travel to a specialist visit [8]."
+   ]
+  },
+  {
+   "h": "2. Book a long appointment",
+   "body": [
+    "When you book, say the visit is about starting hormones and ask for a long appointment. A GP visit at the clinic that lasts 60 minutes or more can be billed to Medicare as a long consultation (MBS item 123) [5]. Ask the clinic what you will pay.",
+    "You can bring a support person. If you are autistic or have ADHD, you can ask for changes that help, such as written notes or printed scripts [1, pp51-52].",
+    "You can also book by telehealth. See [Telehealth and living outside Adelaide](#/where-to-start#sec-where-to-start-6)."
+   ]
+  },
+  {
+   "h": "What to bring to your first appointment",
+   "list": [
+    "your Medicare card",
+    "a list of your medicines",
+    "any hormones you have taken, prescribed or not, or a photo of the labels [1, p19]",
+    "what you know about your health: past illnesses, surgery, allergies, and illnesses in your family [1, p19]",
+    "the dates of your last screening tests, such as a cervical screening test, if you know them [1, p19]",
+    "your questions, written down (see the next section)",
+    "a support person, if you want one [1, p52]"
+   ]
+  },
+  {
+   "h": "Questions you can ask your GP",
+   "body": [
+    "Write your questions down before you go. You could ask:"
+   ],
+   "list": [
+    "Which form suits me: tablets, patches, gel, cream or an injection?",
+    "What changes can I expect, and when? Which ones are permanent?",
+    "What side effects should I look out for?",
+    "Should I think about storing eggs or sperm first?",
+    "Do I need contraception?",
+    "Which blood tests do I need, and how often?",
+    "What will it cost, and is my medicine on the PBS?",
+    "Is my medicine in short supply right now?",
+    "For testosterone: which specialist will I see for the one-time visit?",
+    "What should I do if I want to stop, or take a break?"
+   ],
+   "after": [
+    "[healthdirect's questions to ask your doctor](https://www.healthdirect.gov.au/healthcare-and-services/general-health/questions-to-ask-your-doctor) has more tips for getting ready."
+   ]
+  },
+  {
+   "h": "3. Your first visit",
+   "body": [
+    "At your first visit, your GP or other prescriber gets to know you and your goals. They will ask about:"
+   ],
+   "list": [
+    "your goals: the changes you hope for, the changes you do not want, and any hormones you have taken before, prescribed or not [1, p19]",
+    "your health, your medicines, smoking, and your family's health [1, p19]",
+    "how you are feeling, including your mental health [1, p19]",
+    "sex, contraception and fertility [1, pp20-22]"
+   ],
+   "after": [
+    "Your GP will check your blood pressure and pulse, and your weight and height if you are comfortable with that. A genital examination is not needed unless you have symptoms [1, p20].",
+    "Your GP should explain each check and ask first. You can say no to any examination until you feel comfortable [1, p18].",
+    "You do not have to cover everything at once. For topics such as sex and fertility, you can write down your answers, or leave them for a later visit [1, p20].",
+    "Some GPs order your first blood tests at this visit. See [4. Blood tests before you start](#/where-to-start#sec-where-to-start-11)."
+   ]
+  },
+  {
+   "h": "4. Blood tests before you start",
+   "body": [
+    "Your GP may order blood tests before you start [1, p21]. Some GPs ask for them at your first visit, and others at a later one. The tests give a starting point to compare later results with. They may include:"
+   ],
+   "list": [
+    "a full blood count",
+    "kidney tests, and blood salts such as potassium",
+    "liver tests",
+    "hormone levels, such as oestradiol and testosterone",
+    "a pregnancy test, if it is needed or you ask for one",
+    "vitamin D, if your GP thinks it is needed",
+    "blood fats, blood sugar and a heart tracing (ECG), if you have a higher risk of heart disease",
+    "sexual health and other screening tests, if they suit you"
+   ],
+   "note": "These come from Australia's standards of care [1, p21]. A routine blood clotting test is not needed [1, p21].",
+   "after": [
+    "[healthdirect's guide to blood testing](https://www.healthdirect.gov.au/procedures/diagnostic-tests-and-scans/blood-tests/blood-testing) explains what happens when you have a blood test."
+   ]
+  },
+  {
+   "h": "5. Talk through the changes and give consent",
+   "body": [
+    "You will talk about the changes to expect and when, which changes are permanent, and the side effects. Stopping hormones is safe unless your ovaries or testes have been removed, and you can start again later [1, p21, p38]. Tell your GP if you want to stop, so they can support you [1, pp46-47].",
+    "Hormones mean regular visits and blood tests, and they can cost money over time [1, p21].",
+    "Take your time. You can read more on [TransHub](https://www.transhub.org.au/) before you decide [1, p21].",
+    "Your GP may ask you to sign a consent form [1, pp71-75]."
+   ]
+  },
+  {
+   "h": "6. Fertility and contraception",
+   "body": [
+    "Before you start, talk to your GP about fertility and contraception.",
+    "Hormones can affect your ability to have children. If you might want children one day, ask about storing eggs or sperm before you start. It is your choice, and you do not have to do it [1, pp20-22].",
+    "Hormones are not contraception. Testosterone can harm an unborn baby, so talk to your GP about contraception if a pregnancy is possible [1, pp20-22].",
+    "[TransHub's fertility page](https://www.transhub.org.au/our-health/fertility/) and [TransHub's contraception page](https://www.transhub.org.au/our-health/contraception/) have more for trans people. [Fertility, PrEP and surgery](#/related-care) has more on this site."
+   ]
+  },
+  {
+   "h": "7a. Your first script for estradiol-based hormone therapy",
+   "body": [
+    "Ask your GP or other doctor which form of estradiol suits you. They can then write the script.",
+    "Estradiol comes as tablets, patches or gel. Some people start an anti-androgen at the same time, and some add it later [1, p25].",
+    "Some GPs start with a lower dose and raise it every 2 to 3 months. Others start higher. Neither way has been shown to be better, so you decide together [1, p25].",
+    "Estradiol, spironolactone and cyproterone do not need a PBS Authority. Your GP or another doctor can write the script with no specialist visit, and you pay the usual PBS price [2]. [Costs and the PBS](#/costs) explains what you pay.",
+    "If your risk of blood clots is higher, patches or gel may be preferred over tablets. This includes people who smoke, people over 45, and people with obesity, diabetes, high blood fats, a clotting disorder or a past clot. This advice comes from studies in cisgender women [1, p26].",
+    "Some Estradot patch strengths are in short supply [3]. Your pharmacist may be able to give you another brand or strength without a new script [7]. [Supply and shortages](#/supply) shows the latest."
+   ]
+  },
+  {
+   "h": "7b. Your first script for testosterone-based hormone therapy",
+   "body": [
+    "Every testosterone product on the PBS needs an Authority script [1, p33]. The PBS rule names the specialists who can do this. For adults, they are an endocrinologist, a urologist and a sexual health physician [13]. What you do next depends on who prescribes for you.",
+    "**If one of these specialists prescribes for you,** they can write the PBS script themselves. You do not need to see a second specialist [13].",
+    "**If your GP prescribes for you,** you see one of these specialists once, in person or by telehealth, or your GP prescribes in consultation with one. Ask your GP about this one-time visit. They can help you book it, and they can write the PBS script once the appointment is booked. After that, the specialist's name is used on later scripts [1, p33]. [How the PBS Authority works](#/costs#sec-costs-6).",
+    "**Getting a referral.** Ask your GP for a referral to an endocrinologist, urologist or sexual health physician [1, p33]. A nurse practitioner can also refer you [12]. Your GP or the [Trans Health SA directory](https://transhealthsa.com/directory/) can help you find one who sees trans and gender diverse people [4].",
+    "**Fees and Medicare.** With a referral, Medicare pays part of the specialist's fee. Without one, Medicare pays a lower rate, so you pay more [12]. A GP referral usually lasts 12 months from your first visit with the specialist [12]. Ask the clinic what you will pay before you book.",
+    "If you live more than 100 km from the nearest relevant specialist, the Patient Assistance Transport Scheme (PATS) may help pay to travel to that visit [8].",
+    "You can choose:"
+   ],
+   "list": [
+    "**Gel or cream** on your skin each day: Testogel, Testavan or AndroForte 5 [1, p34]. Gel can pass to other people by skin contact, so keep the area covered [1, p32].",
+    "**A long-acting injection** (Reandron 1000 and other brands) [9], given at a clinic by a trained health professional [10]. The second dose is about 6 weeks after the first, then one every 10 to 14 weeks [1, p34]. See [The injection at the clinic](#/using/clinic-injection).",
+    "**Short-acting injections at home**: Primoteston Depot or Sustanon 250. They are not on the PBS, so you pay the full private price [1, p33]. You can inject them yourself once someone trained has taught you in person [1, p33] [11]. Sustanon 250 is made with peanut oil, so tell your GP about any peanut allergy [1, p33]. See [Injecting at home](#/using/injecting-at-home)."
+   ],
+   "after": [
+    "Testosterone is not contraception, and it can harm a pregnancy. If a pregnancy is possible, use contraception before, during and for a time after testosterone [1, p22]."
+   ]
+  },
+  {
+   "h": "8. Your pharmacy",
+   "body": [
+    "Take your script to a pharmacy. You can use the same one each time, so your history is in one place.",
+    "[Working with your pharmacy](#/pharmacy) covers what to bring, getting your name right on the label, and what to do if you run out.",
+    "[healthdirect's service finder](https://www.healthdirect.gov.au/australian-health-services) can find a pharmacy near you. The [Department of Health page on electronic prescriptions (e-scripts)](https://www.health.gov.au/our-work/electronic-prescribing) explains how they work."
+   ]
+  },
+  {
+   "h": "If your medicine is in short supply",
+   "body": [
+    "Some hormone medicines are sometimes hard to get. If your pharmacy cannot get yours, ask your pharmacist first.",
+    "For some estradiol patches, your pharmacist may be able to give you another brand or strength without a new script [7].",
+    "Talk to your pharmacist or GP before you change or stop your medicine. They can help you do it safely [1, p47].",
+    "[Supply and shortages](#/supply) shows which medicines are hard to get right now. If you run out and have no script, see [If you run out](#/pharmacy#sec-pharmacy-1).",
+    "The [TGA medicine shortages database](https://apps.tga.gov.au/prod/msi/search) lists every shortage reported in Australia."
+   ]
+  },
+  {
+   "h": "9. Check-ups and blood tests in the first year",
+   "body": [
+    "Book a check-up with your GP about every 3 to 4 months in the first year. Once things are stable, this becomes once a year [1, p25].",
+    "At each check-up, your GP may look at:"
+   ],
+   "list": [
+    "how you feel, and whether the changes match your goals [1, p38]",
+    "side effects, such as acne or changes to your hair [1, p38]",
+    "your blood pressure, smoking, and the cancer screening you need for the body parts you have [1, p38]",
+    "blood tests: a full blood count, kidney tests, liver tests and hormone levels [1, p36]. Kidney tests are important if you take spironolactone or PrEP [1, p36].",
+    "on testosterone, haematocrit (how thick the blood is). It should stay below 0.50 L/L [1, p35]."
+   ],
+   "after": [
+    "Blood levels are a safety guide, not a strict target. How your body is changing matters most [1, p25].",
+    "On the long-acting testosterone injection, your level is usually not tested until after the first 3 injections [1, p35].",
+    "When you have the blood test matters. [Getting the timing of the blood test right](#/monitoring#sec-monitoring-17) explains it, and [Blood tests and monitoring](#/monitoring) explains each test.",
+    "If you have a cervix, see the Department of Health guide to cervical screening: [Cervical screening for trans and gender diverse people](https://www.health.gov.au/sites/default/files/2025-06/cervical-screening-for-trans-and-gender-diverse-people.pdf)"
+   ]
+  },
+  {
+   "h": "What it costs",
+   "body": [
+    "Here is a short summary. [Costs and the PBS](#/costs) has the full detail."
+   ],
+   "list": [
+    "**GP visits:** ask the clinic what you will pay. A visit of 60 minutes or more can be billed to Medicare as a long consultation (MBS item 123) [5].",
+    "**Estradiol, spironolactone and cyproterone:** the usual PBS price, with no Authority needed [2].",
+    "**Testosterone gel, cream and the long-acting injection:** the usual PBS price, with an Authority script [1, p33].",
+    "**Short-acting testosterone injections:** not on the PBS, so you pay the full private price [1, p33].",
+    "**Specialist visits:** this means the one-time visit for testosterone, or a specialist who prescribes for you. Medicare pays part of the fee if you have a referral, and a lower rate if you do not [12]. Ask the clinic what you will pay.",
+    "**Lower PBS costs:** the Safety Net, concession cards, and Closing the Gap for Aboriginal and Torres Strait Islander people. See [Costs and the PBS](#/costs)."
+   ],
+   "after": [
+    "If cost is stopping you, see [If cost is a barrier](#/costs#sec-costs-11). Your pharmacist can help too.",
+    "The [PBS page on current patient fees and charges](https://www.pbs.gov.au/about/what-is-the-pbs/what-are-the-current-patient-fees-and-charges) shows what you pay. The [Services Australia page on concession and health care cards](https://www.servicesaustralia.gov.au/concession-and-health-care-cards) explains the cards."
+   ]
+  },
+  {
+   "h": "If you already take hormones",
+   "body": [
+    "Some people start hormones before they see a doctor, for example with medicine from overseas or interstate, or without a prescription. If that is you, tell your GP what you take and how much, and bring the boxes or a photo of the labels.",
+    "It is OK to tell them. GPs are expected to ask about hormones you have taken before, prescribed or not [1, p19], and knowing helps them care for you safely. If you run out, [Working with your pharmacy](#/pharmacy#sec-pharmacy-1) explains what to do.",
+    "If you get hormones without a prescription, [Using hormones without a prescription](#/diy-hormones) has ways to lower the risks, and where to get clean needles."
+   ]
+  },
+  {
+   "h": "What changes to expect, and when",
+   "body": [
+    "Everyone is different, and blood levels do not tell you how fast changes will come [1, p21]. Australia's standards of care give this rough timeline [1, p22]:"
+   ],
+   "list": [
+    "**Estradiol-based:** softer skin, lower sex drive, fewer erections and a change in body odour often start in the first few months. Breast growth, smaller muscles and fat moving to new places follow. Facial and body hair grow more slowly later on. Changes keep building for about 2 years [1, p22].",
+    "**Testosterone-based:** oilier skin, a higher sex drive, more hunger, genital growth, and periods slowing then stopping often start in the first few months. The voice starts to deepen soon after. Facial and body hair, more muscle and fat moving to new places follow, and keep building for about 2 years [1, p22]."
+   ],
+   "after": [
+    "Hormones do not change your height, your bone structure, or the size of your hands and feet. Estradiol does not raise the voice, but speech therapy can help with how you speak [1, pp23-24].",
+    "[TransHub's page on estradiol-based hormones](https://www.transhub.org.au/medical/hormones-feminising/) and [TransHub's page on testosterone-based hormones](https://www.transhub.org.au/medical/hormones-masculinising/) have more on what to expect."
+   ]
+  },
+  {
+   "h": "If you are under 18",
+   "body": [
+    "This page is for adults. Australia's standards of care for starting hormones are for people 18 and over [1, p9]. For people under 18, the rules differ by state and are changing [1, p9].",
+    "[How care for under-18s works in South Australia](#/parents#sec-parents-2) explains the steps. [Parents and carers of under-18s](#/parents) has more for families."
+   ]
+  },
+  {
+   "h": "What else is useful to know?",
+   "list": [
+    "**Your name and gender:** [Getting your name right on the label](#/pharmacy#sec-pharmacy-5), and [updating your name or gender with Medicare](https://www.servicesaustralia.gov.au/how-you-update-your-name-date-birth-or-gender-for-medicare). Your GP can write a letter to support a change to the gender on your Medicare card [1, p38].",
+    "**Sexual health, PrEP and fertility:** PrEP to prevent HIV can be taken with hormones [1, p58]. See [Fertility, PrEP and surgery](#/related-care).",
+    "**Aboriginal and Torres Strait Islander people:** [community controlled health services and other resources](#/pharmacy#sec-pharmacy-4). [TransHub's Trans Mob page](https://www.transhub.org.au/social/trans-mob/) connects to Sistergirl and Brotherboy community networks.",
+    "**Using your medicine:** patches, gel, injections and tablets: [How to use your medicine](#/using).",
+    "**Each medicine:** [Medicines A–Z](#/medicines)."
+   ]
+  },
+  {
+   "h": "Support while you start",
+   "list": [
+    "[Trans Health SA](https://transhealthsa.com/): support groups, crisis supports, and medical and legal information",
+    "[QLife, 1800 184 527, 3pm to 9pm every day](https://qlife.org.au/)",
+    "[13YARN](https://www.13yarn.org.au/), 13 92 76: crisis support for Aboriginal and Torres Strait Islander people, any time",
+    "In an emergency, call 000",
+    "[Words and terms](#/terminology): plain-language words about gender, for you or the people around you",
+    "[Starting hormones in Easy Read](#/easy/where-to-start): this page in short, simple sentences",
+    "If your GP is new to gender-affirming care, show them [Starting hormones: a GP guide](#/starting-hormones)."
+   ]
+  }
+ ],
+ "references": [
+  {
+   "n": 1,
+   "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, version 2 (2026; the document's footer reads \"AusPATH SOC 2025\"). PDF dated 30 April 2026. Page numbers are the printed page numbers. Accessed 8 November 2026.",
+   "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+  },
+  {
+   "n": 2,
+   "text": "Department of Health. PBS listing change documents for testosterone, July 2024 (FOI 25-0097). Accessed 24 October 2026.",
+   "url": "https://www.health.gov.au/sites/default/files/2025-02/foi-25-0097-ld-documents-for-pbs-listing-change.pdf"
+  },
+  {
+   "n": 3,
+   "text": "Therapeutic Goods Administration. About the shortage of transdermal HRT patches (last updated 11 November 2026). Canberra: TGA. Accessed 20 November 2026.",
+   "url": "https://www.tga.gov.au/safety/shortages-and-supply-disruptions/medicine-shortages/major-or-ongoing-medicine-shortages/about-shortage-transdermal-hrt-patches"
+  },
+  {
+   "n": 4,
+   "text": "SHINE SA. Referral pathways for trans and gender diverse care. 2023. Accessed 8 November 2026.",
+   "url": "https://shinesa.org.au/media/2023/09/Referral-Pathways-for-Trans-and-Gender-Diverse-Care.pdf"
+  },
+  {
+   "n": 5,
+   "text": "Medicare Benefits Schedule. Item 123: professional attendance by a general practitioner at consulting rooms lasting at least 60 minutes (item start date 1 November 2023; schedule fee updated 1 July 2026). MBS Online, Department of Health, Disability and Ageing. Accessed 24 October 2026.",
+   "url": "https://www9.health.gov.au/mbs/fullDisplay.cfm?type=item&q=123&qt=item"
+  },
+  {
+   "n": 6,
+   "text": "Medicare Benefits Schedule. Note AN.40.5: MBS items for blood borne virus, sexual and reproductive health services (video items 92715–92726, phone items 92731–92742; no established clinical relationship required). MBS Online, Department of Health, Disability and Ageing. Accessed 24 October 2026.",
+   "url": "https://www9.health.gov.au/mbs/fullDisplay.cfm?type=note&q=AN.40.5&qt=noteID"
+  },
+  {
+   "n": 7,
+   "text": "Therapeutic Goods Administration. Substitution approval extended for HRT patch shortages (Serious Scarcity Substitution Instrument, in force to 28 February 2027). Canberra: TGA. Accessed 24 September 2026.",
+   "url": "https://www.tga.gov.au/safety/shortages-and-supply-disruptions/medicine-shortages/medicine-shortage-alerts/substitution-approval-extended-hrt-patch-shortages"
+  },
+  {
+   "n": 8,
+   "text": "SA Health. Patient Assistance Transport Scheme (PATS) — about the scheme. Accessed 15 October 2026.",
+   "url": "https://www.pats.sa.gov.au/about/"
+  },
+  {
+   "n": 9,
+   "text": "Pharmaceutical Benefits Scheme. Testosterone undecanoate 1 g/4 mL modified release injection, PBS item 10205D, General Schedule, Authority Required; brands Gonadron, Rejunon 1000, Reandron 1000 and Testosterone ADVZ 1000. Accessed 24 October 2026.",
+   "url": "https://www.pbs.gov.au/medicine/item/10205D"
+  },
+  {
+   "n": 10,
+   "text": "Cundill P. Hormone therapy for trans and gender diverse patients in the general practice setting. Aust J Gen Pract. 2020;49(7):385-90. Accessed 17 October 2026.",
+   "url": "https://www1.racgp.org.au/getattachment/d0c29d2a-ee67-4ef0-a125-65c2694f3cb2/Hormone-therapy-for-trans-and-gender-diverse-patie.aspx"
+  },
+  {
+   "n": 11,
+   "text": "TransHub (ACON). Hormones — Masculinising. Sydney: ACON. Accessed 24 September 2026.",
+   "url": "https://www.transhub.org.au/medical/hormones-masculinising/"
+  },
+  {
+   "n": 12,
+   "text": "Medicare Benefits Schedule. Note GN.6.16: Referral of patients to specialists or consultant physicians. MBS Online, Department of Health, Disability and Ageing. Accessed 23 November 2026.",
+   "url": "https://www9.health.gov.au/mbs/fullDisplay.cfm?type=note&q=GN.6.16&qt=noteID"
+  },
+  {
+   "n": 13,
+   "text": "Pharmaceutical Benefits Scheme. Testosterone undecanoate 1 g/4 mL injection, PBS item 10205D, Authority Required restrictions for androgen deficiency. The treatment criteria name the specialists who may treat (for adults: a specialist urologist, a specialist endocrinologist or a Fellow of the Australasian Chapter of Sexual Health Medicine). A prescriber may also act in consultation with one of them, or the patient may have an appointment to be assessed by one. Open \"Restrictions\" on the item page. Canberra: Department of Health, Disability and Ageing. Accessed 24 November 2026.",
+   "url": "https://www.pbs.gov.au/medicine/item/10205D"
+  },
+  {
+   "n": 14,
+   "text": "SHINE SA. Hyde Street Practice: general practice and sexual health physician services, 57 Hyde Street, Adelaide. Accessed 24 November 2026.",
+   "url": "https://shinesa.org.au/hyde-street-practice/"
+  },
+  {
+   "n": 15,
+   "text": "SHINE SA. Clinic fees. Accessed 24 November 2026.",
+   "url": "https://shinesa.org.au/clinic-fees/"
+  },
+  {
+   "n": 16,
+   "text": "SA Health. Sexual and reproductive health services for LGBTIQA+ people (lists the Adelaide Sexual Health Centre and its services). Accessed 24 November 2026.",
+   "url": "https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/lgbtiqa+health+services/sexual+and+reproductive+health+services+for+lgbtiqa+people"
+  }
+ ]
+}

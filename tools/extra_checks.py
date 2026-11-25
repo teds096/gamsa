@@ -22,6 +22,7 @@ Prints one line per check: "PASS name — detail", "FAIL name — detail" or "SK
   figures        figures built by figures.py: alt <= 100 characters, visible long description, words in HTML (no SVG
                  text), each view <= 8 KB, no fixed colours or plates; lines and marks >= 3:1 in light, dark, high
                  contrast, HC + dark, colour-blind and CB + dark (browser part needs the local server)
+  reading level  NOTE only: textstat grade and reading ease of key pages (never fails)
   engines        Safari (WebKit) and Firefox: home, a hub, costs and an Easy Read page render without errors
                  or overflow at phone and desktop width (SKIP if the engines are not installed:
                  python3 -m playwright install webkit firefox)
@@ -105,7 +106,7 @@ def pdfs():
         p = subprocess.run(["pdfinfo", str(f)], capture_output=True, text=True)
         n = int((re.search(r"Pages:\s+(\d+)", p.stdout) or [0, 0])[1])
         if n == 0: bad.append(f"unreadable {f.name}"); continue
-        limit = 9 if "sop" in f.name else 2  # SOP v2.6 is 9 pages (quiz and answer key)
+        limit = 9 if "sop" in f.name else 3 if f.name == "inclusive-environment.pdf" else 2  # SOP is 9 pages (quiz and answer key); inclusive printable is 3 (v19.9)
         if n > limit: bad.append(f"{f.name} {n} pages")
         info.append(n)
         if "gamsa-brand-5b" not in p.stdout and "gamsa-logo-5b" not in p.stdout: bad.append(f"no logo/stripe on {f.name} - run python3 tools/brand.py")
@@ -293,7 +294,7 @@ def figures():
         import socket; s_ = socket.socket(); up = s_.connect_ex(("127.0.0.1", 8767)) == 0; s_.close()
         if not up: raise RuntimeError("local server not running")
         from playwright.sync_api import sync_playwright
-        routes = sorted({"/using", "/costs", "/doses", "/monitoring"} | {"/easy/" + g["id"] for g in c["easyread"]["guides"] for s in g["sections"] if s.get("figure")}
+        routes = sorted({"/using", "/using/clinic-injection", "/using/patches", "/costs", "/doses", "/monitoring", "/terminology", "/where-to-start", "/diy-hormones"} | {"/easy/" + g["id"] for g in c["easyread"]["guides"] for s in g["sections"] if s.get("figure")}
                         | {"/medicines/estradiol-patches", "/medicines/estradiol-tablets", "/medicines/cyproterone-acetate"})
         with sync_playwright() as p:
             b = p.chromium.launch(**({"executable_path": CHROME} if CHROME else {}))
@@ -335,7 +336,10 @@ def browser_checks():
         pg = ctx.new_page()
         # search quality
         cases = {"patches": "patch", "Reandron": "testosterone undecanoate", "safety net": "safety net", "injection": "inject", "Closing the Gap": "closing the gap", "Estradot": "estradiol",
-                 "how much does testosterone cost": "cost", "cant find my medicine": "supply"}   # v19.7: plain questions
+                 "how much does testosterone cost": "cost", "cant find my medicine": "supply",   # v19.7: plain questions
+                 "start hormones": "where to start with hormones", "starting hormones": "where to start with hormones", "HRT": "where to start with hormones",
+                 "first appointment": "where to start with hormones", "informed consent": "where to start with hormones",   # v20.0: patient page before the GP guide
+                 "terminology": "words and terms", "pronouns": "words and terms", "injection at home": "injecting testosterone at home"}
         bad = []
         for q, want in cases.items():
             pg.goto(f"{B}/search?q={q}"); pg.wait_for_timeout(300)
@@ -632,7 +636,47 @@ def hc_sweep(routes=None, limit=None):
     out(not bad, "high contrast sweep", "; ".join(bad[:8]) + (f" (+{len(bad)-8} more)" if len(bad) > 8 else "") if bad else
         f"{n} page loads (HC light and dark, 1280 and 390 px), menus and Accessibility panel open: no contrast failures")
 
+KEY_PAGES = ("/", "/about", "/costs", "/doses", "/using", "/using/clinic-injection", "/pharmacy", "/supply", "/parents", "/starting-hormones", "/terminology", "/where-to-start", "/diy-hormones", "/easy/getting", "/easy/shortage")
+READ_PATIENT = {"wheretostart": "/where-to-start", "diyhormones": "/diy-hormones", "terminology": "/terminology", "parents": "/parents", "costs": "/costs", "dosing": "/doses",
+                "pharmacy": "/pharmacy", "monitoring": "/monitoring", "related": "/related-care", "addons": "/add-on-therapies", "administration": "/using (all six pages)", "allies": "/ally-guide"}
+READ_CLIN = {"startinghormones": "/starting-hormones", "clinicians": "/clinician-guide"}
+def _rtext(x):
+    """All reader-facing strings in a content block (headings, paragraphs, lists, notes, table cells, Easy Read lines), without citations or link targets."""
+    out_ = []
+    def walk(v, k=""):
+        if k in ("references", "url", "id", "icon", "sources", "synced", "updated", "audience", "idx", "pages", "h_id", "img", "src", "alt_src"): return
+        if isinstance(v, str): out_.append(v)
+        elif isinstance(v, list): [walk(i) for i in v]
+        elif isinstance(v, dict): [walk(vv, kk) for kk, vv in v.items()]
+    walk(x)
+    t = " ".join(out_)
+    t = re.sub(r"\[(\d[^\]]*)\]", "", t); t = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", t); t = re.sub(r"[*_#`]", "", t)
+    return re.sub(r"\s+", " ", t).strip()
+def reading_level():
+    """v20.0 NOTE only (never FAIL): Flesch-Kincaid grade of the words people read on each page, taken from content/*.json
+    (headings, text, lists, notes, tables; not menus, footers, forms, citations or reference lists). Targets: patient pages grade 9 or lower
+    (Australian Government style guide and health literacy guidance aim for about grade 8), Easy Read guides grade 6 or lower; clinician pages are shown for information only."""
+    try: import textstat
+    except Exception: out(None, "reading level", "textstat not installed (pip install textstat)"); return
+    def g(t): return textstat.flesch_kincaid_grade(t) if len(t.split()) >= 80 else None
+    pat, er, cl = [], [], []
+    for k, r in {**READ_PATIENT, **READ_CLIN}.items():
+        fp = ROOT / "content" / f"{k}.json"
+        if not fp.exists(): continue
+        d = json.loads(fp.read_text()); gr = g(_rtext({kk: d.get(kk) for kk in ("title", "intro", "sections")}))
+        if gr is not None: (cl if k in READ_CLIN else pat).append((r, gr))
+    for gd in json.loads((ROOT / "content/easyread.json").read_text()).get("guides", []):
+        gr = g(_rtext({"t": gd.get("title"), "s": gd.get("sections")}))
+        if gr is not None: er.append(("/easy/" + gd["id"], gr))
+    fmt = lambda rows: ", ".join(f"{r} {x:.1f}" for r, x in sorted(rows, key=lambda z: -z[1]))
+    hp = [(r, x) for r, x in pat if x > 9]; he = [(r, x) for r, x in er if x > 6]
+    msg = (f"patient pages {len(pat)} (target 9 or lower)" + (f"; above: {fmt(hp)}" if hp else ": all on target")
+           + f" | Easy Read {len(er)} (target 6 or lower)" + (f"; above: {fmt(he)}" if he else ": all on target")
+           + f" | clinician pages (information only): {fmt(cl)}")
+    out(True, "reading level (NOTE)", msg)
+
 if __name__ == "__main__":
+    if "--reading-only" in sys.argv: reading_level(); sys.exit(0)
     if "--engines-only" in sys.argv: engines(); sys.exit(0)
     if "--feed-only" in sys.argv: feed_builder(); sys.exit(0)
     if "--figures-only" in sys.argv: figures(); sys.exit(0)
@@ -647,7 +691,7 @@ if __name__ == "__main__":
             b = p.chromium.launch(**({"executable_path": CHROME} if CHROME else {})); c = b.new_context(viewport={"width": 1280, "height": 900})
             c.route("**/*", lambda r: r.abort() if "127.0.0.1" not in r.request.url else r.continue_()); pill_punct_rendered(c.new_page()); b.close()
         sys.exit(0)
-    seo(); downloads(); downloads_page(); assets(); review_date(); pdfs(); pdf_locks(); pbs(); wording(); pill_punct(); pill_selftest(); figures(); weight("--update-weights" in sys.argv)
+    seo(); downloads(); downloads_page(); assets(); review_date(); pdfs(); pdf_locks(); pbs(); wording(); pill_punct(); pill_selftest(); figures(); weight("--update-weights" in sys.argv); reading_level()
     try: browser_checks()
     except Exception as e: out(False, "browser checks", str(e)[:200])
     try: feed_builder()

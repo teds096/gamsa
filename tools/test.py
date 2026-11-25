@@ -7,7 +7,7 @@ import pathlib, json
 url="file://"+str(pathlib.Path("preview.html").resolve())
 B=CHROME
 ROUTES=["#/","#/supply","#/medicines","#/med/spironolactone","#/med/testosterone-undecanoate",
-        "#/doses","#/using","#/pharmacy","#/costs","#/easy","#/easy/doses","#/feedback","#/pharmacy-reports","#/sightings"]
+        "#/doses","#/using","#/using/patches","#/using/gel","#/using/clinic-injection","#/using/injecting-at-home","#/using/tablets-and-implants","#/pharmacy","#/costs","#/easy","#/easy/doses","#/feedback","#/pharmacy-reports","#/sightings"]
 fails=[]; notes=[]
 WHOLE_FIG = r"""()=>{ const lb=document.getElementById('figZoom'), c=document.querySelector('#lbInner figure.gf'), f=[...document.querySelectorAll('.view.on figure.gf')].find(x=>x.querySelector('.gf-t').textContent===document.getElementById('lbTitle').textContent);
   if(!c||!f) return 'no window copy';

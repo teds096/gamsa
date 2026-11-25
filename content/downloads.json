@@ -27,7 +27,7 @@
        "u": "/guides/log-testosterone-undecanoate.pdf"
       },
       {
-       "t": "Oestradiol patches",
+       "t": "Estradiol patches",
        "u": "/guides/log-oestradiol-patch.pdf"
       },
       {
@@ -57,23 +57,23 @@
      "d": "One page for each medicine and form:",
      "items": [
       {
-       "t": "Oestradiol tablets",
+       "t": "Estradiol tablets",
        "u": "/guides/blood-test-guide-oestradiol-tablets.pdf"
       },
       {
-       "t": "Oestradiol patches",
+       "t": "Estradiol patches",
        "u": "/guides/blood-test-guide-oestradiol-patches.pdf"
       },
       {
-       "t": "Oestradiol gel",
+       "t": "Estradiol gel",
        "u": "/guides/blood-test-guide-oestradiol-gel.pdf"
       },
       {
-       "t": "Oestradiol implants",
+       "t": "Estradiol implants",
        "u": "/guides/blood-test-guide-oestradiol-implants.pdf"
       },
       {
-       "t": "Oestradiol injections",
+       "t": "Estradiol injections",
        "u": "/guides/blood-test-guide-oestradiol-injections.pdf"
       },
       {
@@ -123,7 +123,7 @@
    ],
    "downloads": [
     {
-     "t": "Inclusive environment checklist",
+     "t": "Making an inclusive environment",
      "u": "/guides/inclusive-environment.pdf",
      "d": "Practical checks for clinics and pharmacies that want to be welcoming."
     },

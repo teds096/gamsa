@@ -11,7 +11,7 @@ DEV=[("Android small",360,780,True),("iPhone SE",375,667,True),("iPhone 15",393,
      ("Phone 320",320,640,True),("Phone 430",430,932,True),("Small tablet 600",600,960,True),("Laptop 1440",1440,900,True),("Desktop 1920",1920,1080,True),("Big monitor 2560",2560,1440,True),
      # v19.7 screens (14 Nov 2026): very small phone, ultrawide monitor and a short desktop window (phone landscape is already above)
      ("Tiny phone 280",280,653,True),("Ultrawide 3440",3440,1440,True),("Short desktop 1280x600",1280,600,True)]
-R=["/","/trans","/clinicians","/allies","/resources","/supply","/costs","/medicines","/medicines/testosterone-undecanoate","/using","/easy/helping","/clinician-guide","/accessibility","/search?q=patches","/feedback"]
+R=["/","/trans","/clinicians","/allies","/resources","/supply","/costs","/medicines","/medicines/testosterone-undecanoate","/using","/using/clinic-injection","/easy/helping","/clinician-guide","/accessibility","/search?q=patches","/feedback"]
 TAP="""(()=>{const bad=[];document.querySelectorAll('header a,header button,.view.on button,.view.on .tile,.view.on .chip,.view.on .x-path a,.view.on .x-task,.x-help,footer a').forEach(e=>{const r=e.getBoundingClientRect();if(r.width&&r.height&&getComputedStyle(e).visibility!=='hidden'&&(r.width<24||r.height<24))bad.push((e.id||e.className||e.tagName)+' '+Math.round(r.width)+'x'+Math.round(r.height));});return [...new Set(bad)].slice(0,4)})()"""
 # text blocks drawn on top of each other (e.g. the v17.9 phone footer)
 OVERLAP="""(()=>{const sel='.view.on h1,.view.on h2,.view.on h3,.view.on p,.view.on li,.view.on .sr,footer p,footer h2,footer li,footer .flags';

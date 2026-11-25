@@ -1,43 +1,44 @@
 {
   "title": "Fertility, PrEP and surgery",
-  "intro": "Care that sits alongside gender-affirming hormone therapy: fertility before you start, sexual function, PrEP, and hormones around surgery. It is background reading, not a prescription. Blood tests and reviews are on the [Blood tests and monitoring](#/monitoring) page.",
+  "intro": "This page is about care that goes with gender-affirming hormone therapy. It covers fertility before you start, sex drive and erections, PrEP, and hormones around surgery. It is background reading, not a prescription. Blood tests and reviews are on the [Blood tests and monitoring](#/monitoring) page.",
   "sections": [
     {
       "h": "Fertility: what to know before you start",
       "body": [
-        "Hormones can lower fertility, and the loss may be permanent, although there is not enough evidence to say how often. Stopping hormones may bring fertility back, but this is not guaranteed and varies from person to person [1].",
-        "Hormones are not contraception. If a pregnancy is possible, contraception is still needed [1]."
+        "Hormones can lower fertility. The loss may be permanent. There is not enough evidence to say how often this happens. Stopping hormones may bring fertility back. This is not certain, and it differs from person to person [1].",
+        "Hormones are not contraception. If a pregnancy could happen, you still need contraception [1].",
+        "If you are getting ready to start hormones, the first steps are on [Where to start with hormones](#/where-to-start)."
       ],
       "list": [
-        "Storing sperm or eggs before starting hormones is an option to talk through with your prescriber [1]",
-        "It is not required: you can start hormones without storing sperm or eggs [1]",
-        "If you choose to store them, starting hormones may need to wait [1]",
-        "Storing eggs and storing sperm differ in cost and in how invasive they are [1]",
-        "Adoption is possible in Australia, but it is complex and can take careful planning [1]"
+        "You can store sperm or eggs before you start hormones. Talk this through with your prescriber [1]",
+        "You do not have to. You can start hormones without storing sperm or eggs [1]",
+        "If you store them, you may need to wait before you start hormones [1]",
+        "Storing eggs and storing sperm differ in cost. They also differ in how invasive they are [1]",
+        "Adoption is possible in Australia. It is complex and can take careful planning [1]"
       ],
-      "note": "The [Trans Health SA directory](https://transhealthsa.com/directory/) lists South Australian practitioners, and its listings show which ones offer fertility services.",
+      "note": "The [Trans Health SA directory](https://transhealthsa.com/directory/) lists South Australian practitioners. Its listings show which ones offer fertility services.",
       "nav": "Fertility"
     },
     {
       "h": "Sexual function on oestrogen and blockers",
       "body": [
-        "Reduced libido, fewer spontaneous erections and reduced erectile function are recognised effects of oestrogen and androgen blockers. Some people welcome these changes; for others they cause distress [2].",
-        "Australia's 2026 standards of care describe the following options, each considered with your prescriber in light of your own goals [2]."
+        "Oestrogen can lower libido, or sex drive, and so can androgen blockers (testosterone blockers). They can also mean fewer erections that happen on their own. Erections can be harder to get or keep. Some people welcome these changes. For others, they cause distress [2].",
+        "Australia's 2026 standards of care list the options below. You and your prescriber weigh each one against your own goals [2]."
       ],
       "list": [
-        "Reducing the dose of oestrogen or of the androgen blocker, allowing testosterone to rise slightly; this may also bring back some masculinising effects [2]",
-        "Sildenafil or tadalafil, which improve erectile function but do not affect libido [2]",
-        "Low-dose testosterone after an orchidectomy or when testosterone is fully suppressed, with the dose guided by blood tests [2]",
-        "Low-dose testosterone cream applied to the genitals for penile pain associated with oestrogen; the standards note that this is based on clinical experience rather than research [2]",
-        "Support from a mental health professional experienced in gender-affirming care, addressing body image and the emotional aspects of sexual function [2]"
+        "A lower dose of oestrogen or of the androgen blocker. This lets testosterone rise a little. It may also bring back some effects of testosterone [2]",
+        "Sildenafil or tadalafil. These help erections but do not change sex drive [2]",
+        "Low-dose testosterone after an orchidectomy (removal of the testes), or when testosterone is fully suppressed. Blood tests guide the dose [2]",
+        "Low-dose testosterone cream on the genitals, for penile pain linked to oestrogen. The standards say this is based on clinical experience, not research [2]",
+        "Support from a mental health professional who knows gender-affirming care. They can help with body image and the emotional side of sex [2]"
       ],
       "nav": "Sexual function"
     },
     {
       "h": "PrEP and hormones",
       "body": [
-        "PrEP (pre-exposure prophylaxis) is a medicine that prevents HIV. It does not interact with feminising or masculinising hormones, so the two can be taken together [3].",
-        "Australian guidelines suggest that anyone on hormones (including those with a vagina) should take PrEP every day, not only around the time of sex (\"on-demand\") [3].",
+        "PrEP (pre-exposure prophylaxis) is a medicine that prevents HIV. It does not interact with estradiol-based or testosterone-based hormone therapy. You can take them together [3].",
+        "Australian guidelines suggest that anyone on hormones who takes PrEP should take it every day, not only around the time of sex (\"on-demand\"). This includes people who have a vagina [3].",
         "PrEP needs regular kidney tests, HIV tests and STI checks. The kidney test matters even more if you also take spironolactone [3]."
       ],
       "nav": "PrEP"
@@ -45,14 +46,14 @@
     {
       "h": "Hormones around surgery",
       "body": [
-        "People often ask whether to stop oestrogen or testosterone before an operation, how long before, and when to restart. The question applies to any surgery, not only gender-affirming surgery: any major operation raises the risk of blood clots (venous thromboembolism) [4].",
-        "Australia's 2026 standards of care say there is not enough evidence to stop oestradiol-based therapy routinely around surgery, and that withholding gender-affirming hormones can have significant negative effects. Continuing hormones is particularly important during and after removal of the testes or ovaries (gonadectomy) [4].",
-        "Instead, the plan is individual. It weighs your risk of bleeding and of clots against the effects of going without hormones, and it is made with the surgical team. People at intermediate to high clot risk are recommended clot-prevention medicine, and whether to pause hormones is a shared decision based on your own goals [4].",
-        "Older Australian guidance differs: the 2019 position statement says oestradiol is typically stopped around the time of surgery to avoid clots, and that a blocker is not needed after an orchidectomy [5].",
-        "**Where to read more.** TransHub (ACON) has plain-language pages on each [gender-affirming surgery](https://www.transhub.org.au/trans-folk/#surgeries): facial surgery, orchidectomy, genital reconfiguration surgery, top surgery, breast implants, hysterectomy and vocal surgery. Its [genital reconfiguration surgery page](https://www.transhub.org.au/medical/grs/) notes that some surgeons ask for oestrogen to be reduced for a period before vaginoplasty, and that people with oestradiol implants may time surgery for when blood levels are low. The [Trans Health SA directory](https://transhealthsa.com/directory/) lists South Australian practitioners, including surgeons; it has no surgery information pages."
+        "People often ask if they should stop oestrogen or testosterone before an operation. They also ask how long before, and when to restart. This applies to any surgery, not only gender-affirming surgery. Any major operation raises the risk of blood clots (venous thromboembolism) [4].",
+        "Australia's 2026 standards of care say there is not enough evidence to stop estradiol-based therapy as a routine around surgery. They also say that going without gender-affirming hormones can have significant negative effects. Staying on hormones is especially important during and after removal of the testes or ovaries (gonadectomy) [4].",
+        "Instead, the plan is made for you. It weighs your risk of bleeding and of clots against the effects of going without hormones. It is made with the surgical team. People at medium to high clot risk are advised to have medicine to prevent clots. Whether to pause hormones is a shared decision, based on your own goals [4].",
+        "Older Australian guidance is different. The 2019 position statement says estradiol is usually stopped around the time of surgery to avoid clots. It also says a blocker is not needed after an orchidectomy [5].",
+        "**Where to read more.** TransHub (ACON) has plain-language pages on each [gender-affirming surgery](https://www.transhub.org.au/trans-folk/#surgeries). They cover facial surgery, orchidectomy, genital reconfiguration surgery, top surgery, breast implants, hysterectomy and vocal surgery. Its [genital reconfiguration surgery page](https://www.transhub.org.au/medical/grs/) says some surgeons ask for oestrogen to be lowered for a time before vaginoplasty. It also says people with estradiol implants may time surgery for when blood levels are low. The [Trans Health SA directory](https://transhealthsa.com/directory/) lists South Australian practitioners, including surgeons. It has no pages of surgery information."
       ],
       "list": [
-        "Tell your surgeon and your prescriber about every medicine you take, including any blocker, progesterone, testosterone injection or implant, and PrEP",
+        "Tell your surgeon and your prescriber about every medicine you take. This includes any blocker, progesterone, testosterone injection or implant, and PrEP",
         "For blockers, progesterone or implants, ask your surgeon and prescriber what to do around your operation",
         "If you are told to stop a hormone, ask why, for how long, and when you can restart",
         "Do not stop any other medicine unless your surgeon or prescriber asks you to"

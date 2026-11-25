@@ -1,0 +1,399 @@
+{
+  "title": "Words and terms",
+  "kicker": "For everyone",
+  "intro": "A plain-language guide to words about gender and trans people, for anyone who is new to them: family, friends, workmates, and people starting to explore their own gender. Language keeps changing, and people have the right to identify their gender and sexuality as they choose [4], so the best guide is always the word a person uses about themselves. Where Australian sources use different words for the same thing, this page says so.",
+  "sections": [
+    {
+      "h": "Where should I start?",
+      "nav": "Start here",
+      "list": [
+        "Use the name and pronouns a person gives you, and ask rather than assume [1, p18].",
+        "You cannot tell someone's gender or pronouns by looking at them, so do not assume from how they look [11] [18].",
+        "Before asking something personal, ask yourself: would I ask a cisgender (not trans) person this? [5]",
+        "Umbrella words such as \"trans\" help with clarity, but not everyone uses them, and some people find short forms such as TGD clinical or imposed [1, p10] [6].",
+        "Everyone gets a word wrong now and then. What matters is correcting yourself and carrying on [11].",
+        "More help for family and friends is on [Family and carers](#/allies) and [Parents and carers of under-18s](#/parents)."
+      ]
+    },
+    {
+      "h": "Are sex, gender and sexual orientation the same thing?",
+      "nav": "Four different things",
+      "body": [
+        "No. Four ideas are often mixed up, but each is different: knowing one does not tell you the others [4] [7]. The table and the list below take them in the same order."
+      ],
+      "figure": {
+        "id": "four-things",
+        "type": "table",
+        "title": "Four different things",
+        "long": "A person's body does not tell you their gender, and their gender does not tell you who they are attracted to.",
+        "alt": "Table: sex characteristics, gender identity, gender expression and sexual orientation compared",
+        "table": {
+          "head": [
+            "Idea",
+            "What it is about",
+            "For example"
+          ],
+          "rows": [
+            [
+              "Sex characteristics",
+              "The body: chromosomes, hormones and reproductive organs",
+              "Sex recorded at birth, from the baby's body"
+            ],
+            [
+              "Gender identity",
+              "Who a person knows themselves to be",
+              "Woman, man, non-binary, agender"
+            ],
+            [
+              "Gender expression",
+              "How a person shows their gender",
+              "Clothes, hair, make-up, voice, body language"
+            ],
+            [
+              "Sexual orientation",
+              "Who a person is attracted to, and how they describe it",
+              "Straight, gay, lesbian, bisexual, asexual"
+            ]
+          ]
+        },
+        "note": "These are not points on one scale. Each one can be different for each person.",
+        "easyTitle": "Four different things",
+        "easy": [
+          {
+            "pic": "front:plain",
+            "text": "Sex characteristics are about the body."
+          },
+          {
+            "pic": "people",
+            "text": "Gender identity is who you know you are."
+          },
+          {
+            "pic": "shirt",
+            "text": "Gender expression is how you show your gender, like clothes and hair."
+          },
+          {
+            "pic": "speak",
+            "text": "Sexual orientation is about who you are attracted to."
+          }
+        ],
+        "caption": "Sex characteristics, gender identity, gender expression and sexual orientation are different things. From the Australian Government Style Manual, the ABS 2020 standard and the Australian Institute of Family Studies glossary [4][8][7]."
+      },
+      "list": [
+        "**Sex characteristics:** the body, such as chromosomes, hormones and reproductive organs [8]. The **sex recorded at birth** is what was written down when a baby was born, based on their body [8]. AusPATH calls it \"birth-registered sex\" [1, p13]; the ABS standard and the Victorian Government say \"sex recorded at birth\" [8] [6]; TransHub prefers \"presumed at birth\" to \"assigned at birth\" [2], NSW Health also says \"presumed for them at birth\" [15], and this page follows that wording in everyday sentences. You may also see AFAB and AMAB: assigned or presumed female or male at birth [7].",
+        "**Intersex:** people born with variations in sex characteristics that do not fit medical norms for female or male bodies [4]. Intersex is not the same as trans: intersex people can have any gender identity [6], and most are cisgender [7].",
+        "**Gender identity:** who a person knows themselves to be, such as a woman, a man or non-binary [4] [7]. It may be different from the sex recorded at birth and from what is on legal documents [8].",
+        "**Gender expression:** how a person shows their gender, for example through clothes, hair, voice or body language [4] [7].",
+        "**Sexual orientation:** who a person is attracted to, how they describe their sexuality and their behaviour. It can change over a lifetime [8]. Being trans is about gender, not orientation, so a trans person can be straight, gay, lesbian, bisexual, asexual or something else [7]."
+      ]
+    },
+    {
+      "h": "Words about gender",
+      "nav": "Gender words",
+      "list": [
+        "**Trans and gender diverse (TGD):** umbrella terms for people whose gender is different from the one presumed for them at birth [1, p10] [2].",
+        "**Trans:** short for transgender. It describes a person (a trans woman, a trans man, a trans person); it is not a noun, so not \"a trans\" or \"the transgender\" [5]. Not everyone who is trans uses the word [6].",
+        "**Non-binary:** a gender that is not only man or woman. A non-binary person may describe a blend of genders, a different gender or no gender, and this can change over time [1, p13]. Some people say genderqueer [4].",
+        "**Agender:** not having a gender, or feeling neutral about gender [7]. **Gender-fluid:** not having a fixed gender [4].",
+        "**Cisgender (cis):** a person whose gender matches the one presumed for them at birth. \"Cis\" is Latin for \"on the same side\" [2].",
+        "**Gender affirmation:** the social, medical or legal steps a person chooses so they can live as their gender, such as a new name, clothes, hormones or changing documents [7]. Someone who has not taken medical or legal steps is no less their gender [2, 5].",
+        "**Gender incongruence and gender dysphoria:** incongruence is a mismatch between gender identity and birth-registered sex; dysphoria is the distress that can come with it. A person can have incongruence without dysphoria [1, p13], and being trans is not a mental illness [2, 12]."
+      ]
+    },
+    {
+      "h": "Pronouns, names and titles",
+      "nav": "Pronouns and names",
+      "figure": {
+        "id": "ask-pronouns",
+        "type": "steps",
+        "title": "Asking about pronouns, step by step",
+        "alt": "Four steps for asking someone's pronouns and using them, in order",
+        "long": "It can feel strange at first, but it soon becomes something you do without thinking.",
+        "steps": [
+          {
+            "pic": "speak",
+            "text": "Offer your own first: \"Hi, I'm Kendra, and I use she/her. What pronouns do you use?\""
+          },
+          {
+            "pic": "people",
+            "text": "Do not guess from how someone looks or sounds: you cannot tell by looking."
+          },
+          {
+            "pic": "shield",
+            "text": "Use the pronoun they give you, and keep using it. Check before you use it around other people, as some people are not out to everyone."
+          },
+          {
+            "pic": "cycle",
+            "text": "If you slip up, correct yourself and carry on. There is no need to make a big deal of it."
+          }
+        ],
+        "easyTitle": "Asking about pronouns",
+        "easy": [
+          {
+            "pic": "speak",
+            "text": "Say your own pronoun first."
+          },
+          {
+            "pic": "people",
+            "text": "Ask: what pronouns do you use?"
+          },
+          {
+            "pic": "shield",
+            "text": "Use their pronoun every time."
+          },
+          {
+            "pic": "cycle",
+            "text": "If you get it wrong, fix it and keep going."
+          }
+        ],
+        "caption": "How to ask about pronouns and use them, from TransHub, Minus18 and the Victorian Government [9][11][18]."
+      },
+      "list": [
+        "**Pronouns:** words used instead of a name, such as she, he or they. Some people use more than one set, and some change them over time [9].",
+        "**They for one person:** correct and gender-neutral [4], and used in English for centuries [9].",
+        "**Neopronouns:** newer pronouns such as xe/xem/xyr or ze/hir [9] [1, p13].",
+        "**\"Preferred pronoun\":** just say \"pronoun\". A pronoun is simply the one a person uses [9] [5].",
+        "**Mx:** a title (like Ms or Mr) for non-binary people and anyone who does not want a gendered title. Use it when a person asks for it [4].",
+        "**Names:** use the name a person uses now, even when talking about the past: \"When Hannah was a toddler...\" [9]. Avoid asking for someone's \"real name\" [5].",
+        "**Deadname:** a term some trans people use for a name they no longer use. Using it can hurt [2] [7].",
+        "**Misgendering:** using words that do not match a person's gender, such as the wrong pronoun or a family title like \"dad\" or \"sister\" [7] [2]."
+      ]
+    },
+    {
+      "h": "Do all cultures use the same words?",
+      "nav": "Cultures and languages",
+      "body": [
+        "No. Ideas about gender, and what it means to live outside the gender presumed at birth, have differed across times and cultures [10]. So the English words on this page may not fit everyone. Words and meanings can differ by culture, community and place [10] [16] [17]."
+      ],
+      "list": [
+        "**Do not assume:** do not assume a person uses English or Western words for their gender, or that one culture's words fit another [3] [10] [1, p10]. Each culture has its own values and beliefs [17].",
+        "**Use the word the person uses:** ask respectfully how they would like to be described, and be led by how they talk about themselves, their family and their relationships [16] [18]. Ask them who it is safe to share this with [18].",
+        "**Many parts of who someone is:** culture, language, religion, migration and gender all shape a person's life and how they talk about it [18] [15] [1, p14].",
+        "**Aboriginal and Torres Strait Islander peoples:** there are hundreds of First Nations languages, and many nations and cultures. So the right words depend on what each community finds respectful [16]. TransHub's Trans Mob page says First Nations cultures have always recognised many ways of understanding gender, and that the words some communities use differ from place to place [3]. Rather than learning these words from a list, learn from community-led sources such as [TransHub's Trans Mob page](https://www.transhub.org.au/social/trans-mob/) and [BlaQ](https://blaq.org.au/), a peak organisation for First Nations LGBTQSB+ people (BlaQ's own term) [3] [22].",
+        "**Aboriginal Community Controlled Health Organisations (ACCHOs):** health services led by local communities, in cities, regional towns and remote areas. Their care looks after social, emotional, physical and cultural wellbeing. NACCHO lists [ACCHO locations](https://www.naccho.org.au/locations/) [21].",
+        "**Interpreters:** GPs and community pharmacies can get a free interpreter for people with limited English who are eligible for Medicare. This is TIS National's Free Interpreting Service, so you can ask for one [19]. Most TIS National interpreting is free for people who do not speak English, as the service being contacted usually pays. TIS National's phone line, 131 450, is open 24 hours a day [20].",
+        "**Multicultural and multifaith communities:** [AGMC](https://agmc.org.au/) is a community group for LGBTIQ people who are multicultural or multifaith. It works on how race, culture, religion and LGBTIQ identities meet [23]."
+      ]
+    },
+    {
+      "h": "Words about health care",
+      "nav": "Health care words",
+      "list": [
+        "**GAHT (gender-affirming hormone therapy):** taking hormones, and sometimes blocking existing ones, to affirm a person's gender [2]. AusPATH uses GAHT [1]; many people call it HRT, hormone replacement therapy [2].",
+        "**Informed consent model:** an adult decides about starting hormones with their GP, after clear information about benefits, risks and side effects. They do not need a specialist or a mental health assessment unless there is a clinical reason. It does not mean \"hormones on demand\" [1, p12].",
+        "**Estradiol-based and testosterone-based care:** the words AusPATH now uses. Estradiol-based care uses estradiol, often with a testosterone blocker; testosterone-based care uses testosterone [1, p25] [1, p32]. They replace the older words \"feminising\" (now estradiol-based) and \"masculinising\" (now testosterone-based), to better reflect each person's own goals and to use affirming language [1, p10]. You will still see the older words. They refer to the same hormone care [1, p10].",
+        "More about the medicines is on [Your medicines: start here](#/trans).",
+        "Thinking about starting hormones? The first steps are on [Where to start with hormones](#/where-to-start)."
+      ]
+    },
+    {
+      "h": "How have the words changed?",
+      "nav": "How words change",
+      "body": [
+        "The people are not new, but many of the words are. People who lived outside the gender presumed for them at birth are found in almost every culture, from before records were written; the word \"trans\" is less than a century old [10]. Words for bodies, gender and sexuality keep changing [15] [2]."
+      ],
+      "figure": {
+        "id": "words-change",
+        "type": "chart-timeline",
+        "form": "milestones",
+        "title": "Official words keep changing",
+        "sub": "Some Australian and world changes, drawn to scale",
+        "alt": "Timeline: official words about sex and gender changed in 2013, 2019, 2021 and 2026, and still change",
+        "long": "Drawn to scale from 2013 to 2026: a dot for each change, and a dotted line after 2026 because the words keep changing.",
+        "axis": {
+          "from": 2013,
+          "to": 2026,
+          "more": 2,
+          "label": "Year",
+          "moreLabel": "and still changing"
+        },
+        "events": [
+          {
+            "at": 2013,
+            "tick": "2013"
+          },
+          {
+            "at": 2019,
+            "tick": "2019"
+          },
+          {
+            "at": 2021,
+            "tick": "2021"
+          },
+          {
+            "at": 2026,
+            "tick": "2026"
+          }
+        ],
+        "items": [
+          {
+            "lead": "2013:",
+            "text": "Australian Government guidelines start, so government records can show a person's sex and gender correctly."
+          },
+          {
+            "lead": "2019:",
+            "text": "the World Health Organization adopts ICD-11, which uses \"gender incongruence\" instead of \"transsexualism\" and no longer lists it as a mental disorder (in use from 2022)."
+          },
+          {
+            "lead": "2021:",
+            "text": "the Australian Bureau of Statistics standard uses \"sex recorded at birth\" and asks about gender separately."
+          },
+          {
+            "lead": "2026:",
+            "text": "AusPATH's new standards (version 2, first published in December 2025 and updated in April 2026) say \"estradiol-based\" and \"testosterone-based\" instead of \"feminising\" and \"masculinising\", and the Census asks about gender."
+          }
+        ],
+        "legend": [
+          {
+            "mark": "dot",
+            "text": "A change in the official words"
+          },
+          {
+            "mark": "cont",
+            "text": "The words keep changing"
+          }
+        ],
+        "easyTitle": "Words change over time",
+        "easy": [
+          {
+            "pic": "people",
+            "text": "Trans people have always been here. Some of the words are new."
+          },
+          {
+            "pic": "doc",
+            "text": "Governments and health groups change the words they use."
+          },
+          {
+            "pic": "calendar",
+            "text": "This happened in 2013, 2019, 2021 and 2026."
+          },
+          {
+            "pic": "cycle",
+            "text": "Words will keep changing. Ask people what words they use."
+          }
+        ],
+        "caption": "Some changes to the official words, from the Attorney-General's Department, the World Health Organization, the Australian Bureau of Statistics and AusPATH [14][12][13][8][1]."
+      },
+      "list": [
+        "The newest word is not always the one a person uses. Some people still use older words such as \"transsexual\" about themselves, so follow their lead [2]."
+      ],
+      "note": "Language keeps changing. This guide follows Australian sources current in November 2026."
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "text": "AusPATH (Australian Professional Association for Trans Health). Australian Standards of Care for Informed Consent Gender-Affirming Hormone Therapy, Version 2 (2025), also called AusPATH SOC 2025. PDF released 30 April 2026. Page numbers are the printed page numbers. Accessed 20 and 22 November 2026.",
+      "url": "https://auspath.org.au/wp-content/uploads/2026/05/Standards_of_Care_Digital_Final_30_April_2026.pdf"
+    },
+    {
+      "n": 2,
+      "text": "TransHub (ACON). Language. Sydney: ACON. Accessed 22 November 2026.",
+      "url": "https://www.transhub.org.au/language/"
+    },
+    {
+      "n": 3,
+      "text": "TransHub (ACON). Trans Mob. Sydney: ACON. Accessed 22 November 2026.",
+      "url": "https://www.transhub.org.au/social/trans-mob/"
+    },
+    {
+      "n": 4,
+      "text": "Australian Government Style Manual. Gender and sexual diversity. Canberra: Commonwealth of Australia. Accessed 22 November 2026.",
+      "url": "https://www.stylemanual.gov.au/accessible-and-inclusive-content/inclusive-language/gender-and-sexual-diversity"
+    },
+    {
+      "n": 5,
+      "text": "ACON. A language guide: trans and gender diverse inclusion. Sydney: ACON, 18 December 2017. Accessed 20 November 2026.",
+      "url": "https://www.acon.org.au/wp-content/uploads/2018/01/External_Language-Guide-17396_print_V13.pdf"
+    },
+    {
+      "n": 6,
+      "text": "Victorian Government. Key terms used in the LGBTIQA+ inclusive language guide. Updated 3 October 2024. Accessed 22 November 2026.",
+      "url": "https://www.vic.gov.au/inclusive-language-guide/key-terms-used-in-lgbtiqa-inclusive-language-guide"
+    },
+    {
+      "n": 7,
+      "text": "Australian Institute of Family Studies. LGBTIQA+ glossary of common terms. Melbourne: AIFS, 6 May 2026. Accessed 22 November 2026.",
+      "url": "https://aifs.gov.au/resources/resource-sheets/lgbtiqa-glossary-common-terms"
+    },
+    {
+      "n": 8,
+      "text": "Australian Bureau of Statistics. Standard for Sex, Gender, Variations of Sex Characteristics and Sexual Orientation Variables, 2020. Canberra: ABS, released 14 January 2021. Accessed 22 November 2026.",
+      "url": "https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release"
+    },
+    {
+      "n": 9,
+      "text": "TransHub (ACON). What are pronouns? Sydney: ACON. Accessed 22 November 2026.",
+      "url": "https://www.transhub.org.au/101/pronouns-2/"
+    },
+    {
+      "n": 10,
+      "text": "TransHub (ACON). Is being trans a new thing? Sydney: ACON. Accessed 22 November 2026.",
+      "url": "https://www.transhub.org.au/101/is-trans-new/"
+    },
+    {
+      "n": 11,
+      "text": "Minus18. What are pronouns and why are they important? Melbourne: Minus18, 15 September 2022. Accessed 22 November 2026.",
+      "url": "https://www.minus18.org.au/articles/what-are-pronouns-and-why-are-they-important"
+    },
+    {
+      "n": 12,
+      "text": "World Health Organization. Gender incongruence and transgender health in the ICD. Geneva: WHO. Accessed 22 November 2026.",
+      "url": "https://www.who.int/standards/classifications/frequently-asked-questions/gender-incongruence-and-transgender-health-in-the-icd"
+    },
+    {
+      "n": 13,
+      "text": "World Health Organization. ICD-11 implementation: frequently asked questions. Geneva: WHO. Accessed 22 November 2026.",
+      "url": "https://www.who.int/standards/classifications/frequently-asked-questions/icd-11-implementation"
+    },
+    {
+      "n": 14,
+      "text": "Attorney-General's Department. Australian Government Guidelines on the Recognition of Sex and Gender. Canberra: Commonwealth of Australia, commenced 1 July 2013. Accessed 22 November 2026.",
+      "url": "https://www.ag.gov.au/rights-and-protections/publications/australian-government-guidelines-recognition-sex-and-gender"
+    },
+    {
+      "n": 15,
+      "text": "NSW Health. LGBTIQ+ language and terminology. Sydney: NSW Government. Accessed 22 November 2026.",
+      "url": "https://www.health.nsw.gov.au/lgbtiq-health/Pages/language-and-terminology.aspx"
+    },
+    {
+      "n": 16,
+      "text": "Australian Government Style Manual. Aboriginal and Torres Strait Islander peoples. Canberra: Commonwealth of Australia. Accessed 22 November 2026.",
+      "url": "https://www.stylemanual.gov.au/accessible-and-inclusive-content/inclusive-language/aboriginal-and-torres-strait-islander-peoples"
+    },
+    {
+      "n": 17,
+      "text": "Australian Government Style Manual. Cultural and linguistic diversity. Canberra: Commonwealth of Australia. Accessed 22 November 2026.",
+      "url": "https://www.stylemanual.gov.au/accessible-and-inclusive-content/inclusive-language/cultural-and-linguistic-diversity"
+    },
+    {
+      "n": 18,
+      "text": "Victorian Government. Top five principles, LGBTIQA+ inclusive language guide. Melbourne: Victorian Government. Accessed 22 November 2026.",
+      "url": "https://www.vic.gov.au/inclusive-language-guide/top-five-principles"
+    },
+    {
+      "n": 19,
+      "text": "TIS National (Translating and Interpreting Service), Department of Home Affairs. About the Free Interpreting Service. Canberra: Australian Government. Accessed 22 November 2026.",
+      "url": "https://www.tisnational.gov.au/Free-Interpreting-Service"
+    },
+    {
+      "n": 20,
+      "text": "TIS National (Translating and Interpreting Service), Department of Home Affairs. Interpreting services (for non-English speakers). Canberra: Australian Government. Accessed 22 November 2026.",
+      "url": "https://www.tisnational.gov.au/Non-English-speakers/Interpreting-services"
+    },
+    {
+      "n": 21,
+      "text": "NACCHO (National Aboriginal Community Controlled Health Organisation). About NACCHO. Canberra: NACCHO. Accessed 22 November 2026.",
+      "url": "https://www.naccho.org.au/about/"
+    },
+    {
+      "n": 22,
+      "text": "BlaQ Aboriginal Corporation. Home page. Sydney: BlaQ. Accessed 22 November 2026.",
+      "url": "https://blaq.org.au/"
+    },
+    {
+      "n": 23,
+      "text": "AGMC Inc. Home page (multicultural and multifaith LGBTIQ community). Melbourne: AGMC. Accessed 22 November 2026.",
+      "url": "https://agmc.org.au/"
+    }
+  ]
+}

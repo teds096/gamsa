@@ -1,26 +1,26 @@
 {
   "title": "Blood tests and monitoring",
-  "intro": "The blood tests and reviews that go with gender-affirming hormone therapy: what is checked for each medicine, when the sample is taken, what it usually aims for, and how to read your results. It is background reading, not a prescription. Fertility, sexual function, PrEP and surgery are on the [Fertility, PrEP and surgery](#/related-care) page. The forms each medicine comes in and the dose ranges are on the [Medicines, doses and formulations](#/doses) page.",
+  "intro": "This page is about the blood tests and reviews that go with gender-affirming hormone therapy. It covers what is checked for each medicine, when the sample is taken, and what it usually aims for. It also explains how to read your results. It is background reading, not a prescription. Fertility, sexual function, PrEP and surgery are on the [Fertility, PrEP and surgery](#/related-care) page. The forms each medicine comes in and the dose ranges are on the [Medicines, doses and formulations](#/doses) page. If you are about to start hormones, the first steps, including the first blood tests, are on [Where to start with hormones](#/where-to-start).",
   "sections": [
     {
       "h": "Blood tests and reviews",
       "body": [
         "Blood tests are not something you pass or fail. They tell your prescriber whether the dose is doing what you both want, and whether anything needs watching.",
-        "For feminising therapy, Australia's 2026 standards of care recommend keeping trough oestradiol above about 250 pmol/L, without a fixed upper limit, and total testosterone below 2 nmol/L for people who want full suppression [1]. The 2019 position statement suggested 250–600 pmol/L [2].",
-        "For masculinising therapy, the usual target is a trough total testosterone of about 10–20 nmol/L, for the long-acting injection, Testogel and cream [1]. Testavan and the short-acting injections are tested at a different time and read against different numbers: see the testosterone sections below [1]. Other guidance: the 2019 position statement and the 2020 Australian GP guides suggest 10–15 nmol/L [2][3][4]; Australia's 2026 standards of care, which this site follows, give about 10–20 [1]. Testosterone also thickens the blood, so haematocrit is checked; at 0.50 L/L (50%) or above, the dose or the interval is usually reviewed [2][3]. The product information for several testosterone injections now also warns about SGLT-2 inhibitors, medicines for diabetes, heart failure or kidney disease such as empagliflozin or dapagliflozin. Taken with testosterone, they have been linked to too many red blood cells, so the blood count is checked more closely [5]. This warning is not yet in every product information, so tell your prescriber if you take one, whatever form of testosterone you use [6].",
-        "Reviews cover more than levels: blood pressure, weight, smoking, and how you are going in yourself — mood, energy, sleep, and whether the changes match what you hoped for [2][7].",
-        "Screening follows the organs you have, not your gender and not your hormones [2][7]. If you have a cervix, screening is still due every five years, and collecting your own swab is an option that many people find far easier than a speculum examination [8]. The same logic applies to breast or chest tissue, and to prostate tissue, which genital surgery does not remove [7]."
+        "For estradiol-based therapy, Australia's 2026 standards of care recommend a trough oestradiol above about 250 pmol/L [1]. The trough is the lowest level, just before the next dose. There is no fixed upper limit [1]. For people who want full suppression, they recommend total testosterone below 2 nmol/L [1]. The 2019 position statement suggested 250–600 pmol/L [2].",
+        "For testosterone-based therapy, the usual target is a trough total testosterone of about 10–20 nmol/L [1]. This is for the long-acting injection, Testogel and cream [1]. Testavan and the short-acting injections are tested at a different time and read against different numbers. See the testosterone sections below [1]. Other guidance differs. The 2019 position statement and the 2020 Australian GP guides suggest 10–15 nmol/L [2][3][4]. Australia's 2026 standards of care, which this site follows, give about 10–20 [1]. Testosterone also thickens the blood, so haematocrit (the share of the blood that is red cells) is checked [2][3]. If it is 0.50 L/L (50%) or above, the dose or the time between doses is usually reviewed [2][3]. The product information for several testosterone injections now also warns about SGLT-2 inhibitors [5]. These are medicines for diabetes, heart failure or kidney disease, such as empagliflozin or dapagliflozin. Taken with testosterone, they have been linked to too many red blood cells. So the blood count is checked more closely [5]. This warning is not yet in every product information [6]. So tell your prescriber if you take one, whatever form of testosterone you use [6].",
+        "Reviews cover more than levels. They also cover blood pressure, weight and smoking [2][7]. And they cover how you are going in yourself: your mood, energy and sleep, and whether the changes match what you hoped for [2][7].",
+        "Screening follows the organs you have, not your gender and not your hormones [2][7]. If you have a cervix, screening is still due every five years [8]. You can collect your own swab. Many people find this far easier than a speculum examination [8]. The same applies to breast or chest tissue [7]. It also applies to prostate tissue, which genital surgery does not remove [7]."
       ],
       "list": [
-        "Feminising — oestradiol and total testosterone; electrolytes and kidney function if you take spironolactone; liver function if you take cyproterone [2][3]",
-        "Masculinising — total testosterone, and a full blood count for haematocrit; liver function and lipids as your prescriber decides [2][3]",
-        "Either therapy — blood pressure and weight at each review; glucose or HbA1c and lipids periodically, particularly if you have other risk factors [2][7]",
-        "Puberty blockers — bone health is monitored, because blockers pause the bone strengthening that puberty normally provides [2][7]",
-        "Before starting — baseline bloods (with a pregnancy test if a pregnancy is possible; a routine blood-clotting test is not needed) [19], and a conversation about fertility and about contraception if pregnancy is possible, since neither testosterone nor oestrogen is reliable contraception [2][7]",
-        "Sexual health — STI and blood-borne virus testing as relevant to you, the same as for anyone [7]",
-        "Timing — Australia's 2026 standards of care suggest a review every three to four months through the first year, then yearly once things are stable [1]. Other guidance: the 2019 position statement suggests three-monthly in the first year, then every six to twelve months [2]. After a change to oestrogen, levels are rechecked six to eight weeks later rather than straight away; after a change to the long-acting testosterone injection, the Equinox guide waits two more injections [3]"
+        "Estradiol-based: oestradiol and total testosterone. Electrolytes (blood salts such as potassium) and kidney function if you take spironolactone. Liver function if you take cyproterone [2][3]",
+        "Testosterone-based: total testosterone, and a full blood count for haematocrit. Liver function and lipids (blood fats) as your prescriber decides [2][3]",
+        "Either therapy: blood pressure and weight at each review. Glucose or HbA1c (blood sugar tests) and lipids from time to time, especially if you have other risk factors [2][7]",
+        "Puberty blockers: bone health is checked. This is because blockers pause the bone strengthening that puberty normally brings [2][7]",
+        "Before starting: baseline blood tests, with a pregnancy test if a pregnancy is possible. A routine blood-clotting test is not needed [19]. You also talk about fertility, and about contraception if pregnancy is possible. Neither testosterone nor oestrogen is reliable contraception [2][7]",
+        "Sexual health: STI and blood-borne virus testing as relevant to you, the same as for anyone [7]",
+        "Timing: Australia's 2026 standards of care suggest a review every three to four months in the first year. After that, they suggest a yearly review once things are stable [1]. Other guidance: the 2019 position statement suggests every three months in the first year, then every six to twelve months [2]. After a change to oestrogen, levels are rechecked six to eight weeks later, not straight away [3]. After a change to the long-acting testosterone injection, the Equinox guide waits two more injections [3]"
       ],
-      "note": "Screening and monitoring are easy to lose track of when you move between services. Ask your GP to keep a written list of what is due and when, and ask for a copy yourself.",
+      "note": "Screening and monitoring are easy to lose track of when you move between services. Ask your GP to keep a written list of what is due and when. Ask for a copy for yourself.",
       "nav": "Blood tests and reviews",
       "figure": {
         "id": "review-rhythm",
@@ -29,7 +29,7 @@
         "title": "The usual rhythm of reviews",
         "sub": "Months after starting, drawn to scale",
         "alt": "Timeline: blood tests before starting, reviews at 3, 6, 9 and 12 months, then about yearly",
-        "long": "Drawn to scale from the start to 12 months: a ring at the start for baseline blood tests, a dot at each review, and a dotted line after 12 months for the reviews that carry on.",
+        "long": "Drawn to scale from the start to 12 months. A ring at the start shows baseline blood tests. A dot shows each review. A dotted line after 12 months shows the reviews that carry on.",
         "axis": {
           "to": 12,
           "more": 3,
@@ -110,7 +110,7 @@
             "text": "If your dose changes, you have a blood test some weeks later. Your doctor tells you when."
           }
         ],
-        "caption": "The usual schedule of reviews and blood tests, from Australia's 2026 standards of care, with the Australian position statement, WPATH Standards of Care version 8 and the Equinox prescribing guide for comparison [1][2][7][3].",
+        "caption": "The usual schedule of reviews and blood tests, from Australia's 2026 standards of care. The Australian position statement, WPATH Standards of Care version 8 and the Equinox prescribing guide are shown for comparison [1][2][7][3].",
         "note": "Other guidance: the 2019 position statement suggests a review every 6 to 12 months once things are stable."
       }
     },
@@ -119,47 +119,47 @@
       "nav": "Tests for each medicine",
       "group": "Blood tests for each medicine",
       "body": [
-        "Each medicine below has its own table: the tests usually done before starting, in the first year, and after that. They are a guide to what to expect, not a schedule to follow on your own. Your prescriber sets the actual timing, and it can change with your health, other medicines and how you are going [1][2].",
-        "In the first year, reviews are usually every three to four months [1] (three-monthly in the 2019 position statement [2]). Once things are stable, Australia's 2026 standards of care suggest a yearly review [1]; the position statement suggests every six to twelve months [2]. Each table shows the test, when it is done, what it usually aims for, and when to talk to your prescriber. Under each table, \"For clinicians\" gives more detail and the page numbers of the sources.",
+        "Each medicine below has its own table. It shows the tests usually done before starting, in the first year, and after that. The tables are a guide to what to expect, not a schedule to follow on your own. Your prescriber sets the actual timing. It can change with your health, other medicines and how you are going [1][2].",
+        "In the first year, reviews are usually every three to four months [1]. The 2019 position statement says every three months [2]. Once things are stable, Australia's 2026 standards of care suggest a yearly review [1]. The position statement suggests every six to twelve months [2]. Each table shows the test, when it is done, what it usually aims for, and when to talk to your prescriber. Under each table, \"For clinicians\" gives more detail and the page numbers of the sources.",
         "Every review, whatever the medicine, also covers blood pressure, weight, mood and how the changes are going for you [2][7]."
       ],
-      "note": "Each medicine has a blood test guide to print, under its heading. Bring it to your appointment and ask your prescriber to mark which tests apply to you. To keep track of your own results, use the blood test record: [Blood test record](/guides/log-blood-tests.pdf)"
+      "note": "Each medicine has a blood test guide to print, under its heading. Bring it to your appointment. Ask your prescriber to mark which tests apply to you. To keep track of your own results, use the blood test record: [Blood test record](/guides/log-blood-tests.pdf)"
     },
     {
-      "h": "Oestradiol tablets",
-      "nav": "Oestradiol tablets",
+      "h": "Estradiol tablets",
+      "nav": "Estradiol tablets",
       "group": "Blood tests for each medicine",
       "body": [],
       "levels": "oestradiol-tablets",
       "note": "Some things can make an oestradiol result look wrong, such as high-dose biotin: see [Reading your results](#/monitoring#sec-monitoring-18)."
     },
     {
-      "h": "Oestradiol patches",
-      "nav": "Oestradiol patches",
+      "h": "Estradiol patches",
+      "nav": "Estradiol patches",
       "group": "Blood tests for each medicine",
       "body": [],
       "levels": "oestradiol-patches",
       "note": "Some things can make an oestradiol result look wrong, such as high-dose biotin: see [Reading your results](#/monitoring#sec-monitoring-18)."
     },
     {
-      "h": "Oestradiol gel",
-      "nav": "Oestradiol gel",
+      "h": "Estradiol gel",
+      "nav": "Estradiol gel",
       "group": "Blood tests for each medicine",
       "body": [],
       "levels": "oestradiol-gel",
       "note": "Gel on the skin where the blood is taken can make the result look far too high: see [Reading your results](#/monitoring#sec-monitoring-18)."
     },
     {
-      "h": "Oestradiol implants",
-      "nav": "Oestradiol implants",
+      "h": "Estradiol implants",
+      "nav": "Estradiol implants",
       "group": "Blood tests for each medicine",
       "body": [],
       "levels": "oestradiol-implants",
       "note": "Implants are covered in more detail in AusPATH [10]."
     },
     {
-      "h": "Oestradiol injections",
-      "nav": "Oestradiol injections",
+      "h": "Estradiol injections",
+      "nav": "Estradiol injections",
       "group": "Blood tests for each medicine",
       "body": [],
       "levels": "oestradiol-injections"
@@ -178,7 +178,7 @@
       "group": "Blood tests for each medicine",
       "body": [],
       "levels": "cyproterone",
-      "note": "Liver deaths have been reported at doses of 100 mg a day and above, mostly in men treated for prostate cancer; Australian guidance for feminising therapy gives 12.5 mg once a week up to 25 mg a day [12][19]."
+      "note": "Liver deaths have been reported at doses of 100 mg a day and above, mostly in men treated for prostate cancer [12]. Australian guidance for estradiol-based therapy gives 12.5 mg once a week up to 25 mg a day [19]."
     },
     {
       "h": "Bicalutamide (not first-line)",
@@ -217,7 +217,7 @@
       "nav": "Testosterone gel",
       "group": "Blood tests for each medicine",
       "body": [
-        "When the sample is taken, and the number it is read against, differ between the two gels [1]. A result taken at a different time from the one in the table can look too high or too low when nothing is wrong."
+        "The two gels differ in when the sample is taken and in the number it is read against [1]. A result taken at a different time from the one in the table can look too high or too low, even when nothing is wrong."
       ],
       "levels": "testosterone-gel",
       "note": "If you take an SGLT-2 inhibitor (such as empagliflozin or dapagliflozin), the blood count is checked more closely [5][6]."
@@ -236,7 +236,7 @@
       "group": "Blood tests for each medicine",
       "body": [],
       "levels": "gnrh",
-      "note": "Young people follow the Royal Children's Hospital standards {{SRC:RCH23}}; adults follow AusPATH [19]. Bone [2][7]. Mood is discussed at each review, because mood changes are reported with GnRH agonists [16]."
+      "note": "Young people follow the Royal Children's Hospital standards {{SRC:RCH23}}. Adults follow AusPATH [19]. Bone [2][7]. Mood is discussed at each review, because mood changes are reported with GnRH agonists [16]."
     },
     {
       "h": "Tests for medicines used alongside",
@@ -251,15 +251,15 @@
         "rows": [
           [
             "Isotretinoin",
-            "Liver function and lipids before starting, monthly, and at the end of the course; mood watched throughout [17]"
+            "Liver function and lipids before starting, monthly, and at the end of the course. Mood is watched throughout [17]"
           ],
           [
             "Finasteride",
-            "No routine blood test; it lowers PSA results (by about half in older men, less in younger men), so tell whoever orders a prostate test [18]"
+            "No routine blood test. It lowers PSA results, by about half in studies of older men and less in younger men. Tell whoever orders a prostate test [18]"
           ],
           [
             "PrEP",
-            "Kidney function, HIV and STI tests regularly; kidney tests matter more with spironolactone [1][9]"
+            "Kidney function, HIV and STI tests regularly. Kidney tests matter more with spironolactone [1][9]"
           ]
         ]
       },
@@ -268,11 +268,11 @@
     {
       "h": "Getting the timing of the blood test right",
       "body": [
-        "When the sample is taken matters as much as what is measured. Most targets in the guidelines are trough levels — the lowest point, just before the next dose is due [2][3].",
-        "A sample drawn at the wrong point can look far too high or too low when nothing is wrong, and lead to a dose change you did not need.",
-        "For Testogel or testosterone cream, your prescriber will usually want the sample in the morning before you apply that day's dose [3][1]. For Testavan, it is taken 2 to 4 hours after applying [1]. For the long-acting injection, the test is booked just before the next injection is due rather than soon after one. For the short-acting injections, the sample is usually taken midway between injections [1]. Oestradiol implants are usually tested every 3 months in the first year [10]."
+        "When the sample is taken matters as much as what is measured. Most targets in the guidelines are trough levels [2][3]. A trough is the lowest point, just before the next dose is due [2][3].",
+        "A sample taken at the wrong time can look far too high or too low, even when nothing is wrong. This can lead to a dose change you did not need.",
+        "For Testogel or testosterone cream, your prescriber will usually want the sample in the morning, before you put on that day's dose [3][1]. For Testavan, it is taken 2 to 4 hours after you put it on [1]. For the long-acting injection, the test is booked just before the next injection is due, not soon after one. For the short-acting injections, the sample is usually taken halfway between injections [1]. Estradiol implants are usually tested every 3 months in the first year [10]."
       ],
-      "note": "Ask for the required timing to be written on your pathology form, and tell the collection centre when your last dose was. It takes ten seconds and it saves repeat tests.",
+      "note": "Ask for the right timing to be written on your pathology form. Tell the collection centre when your last dose was. It takes ten seconds, and it saves repeat tests.",
       "nav": "Timing your blood test",
       "figure": {
         "id": "trough-timing",
@@ -421,17 +421,17 @@
       "body": [
         "Lab reports mark results as high or low using the sex on your Medicare or lab record. On hormones, that range may not fit your body. In the first year your prescriber may ask the lab for both the male and the female ranges [1].",
         "A single flagged result is a reason to talk with your prescriber, not to change a dose on your own.",
-        "Units: Australian labs report oestradiol in pmol/L, testosterone in nmol/L, and haematocrit as a fraction (0.50 L/L is the same as 50%). Some overseas guidelines and apps use pg/mL and ng/dL instead: 250 pmol/L of oestradiol is about 68 pg/mL, and 10 to 20 nmol/L of testosterone is about 290 to 580 ng/dL. If a number looks very different from the ones on this page, check the unit first (oestradiol pg/mL × 3.671 = pmol/L; testosterone ng/dL × 0.0347 = nmol/L)."
+        "Units: Australian labs report oestradiol in pmol/L, testosterone in nmol/L, and haematocrit as a fraction (0.50 L/L is the same as 50%). Some overseas guidelines and apps use pg/mL and ng/dL instead. For example, 250 pmol/L of oestradiol is about 68 pg/mL. And 10 to 20 nmol/L of testosterone is about 290 to 580 ng/dL. If a number looks very different from the ones on this page, check the unit first. To convert: oestradiol pg/mL × 3.671 = pmol/L, and testosterone ng/dL × 0.0347 = nmol/L."
       ],
       "listh": "Things that can make a result look wrong",
       "list": [
         "A sample taken at a different time after the dose from the one your prescriber asked for [1]",
-        "Oestradiol gel on the skin where the blood is taken: ask for the sample from the arm you did not put gel on [1]. Doing the same with testosterone gel or cream is a sensible precaution, though the guidelines do not say it",
-        "High-dose biotin (in some hair, skin and nail supplements), which can make some oestradiol tests read falsely high: tell the collection centre if you take it [1]",
-        "Splitting the dose, or letting tablets dissolve under the tongue, which changes when the level peaks [1]",
-        "Haemoglobin and haematocrit: read against the range for your affirmed gender once hormones have had time to work (about 3 months on testosterone, about 6 months on oestradiol). On testosterone, the male range is used [1]",
-        "Kidney function (eGFR) is worked out from your creatinine, age and recorded sex, so the change over time tells more than one result [1]",
-        "Iron studies: the range for your affirmed gender, unless you are pregnant or have periods (then the female range is used) [1]"
+        "Estradiol gel on the skin where the blood is taken. Ask for the sample from the arm you did not put gel on [1]. It is sensible to do the same with testosterone gel or cream, though the guidelines do not say so",
+        "High-dose biotin, found in some hair, skin and nail supplements. It can make some oestradiol tests read falsely high. Tell the collection centre if you take it [1]",
+        "Splitting the dose, or letting tablets dissolve under the tongue. This changes when the level peaks [1]",
+        "Haemoglobin and haematocrit: these are read against the range for your affirmed gender once hormones have had time to work. That is about 3 months on testosterone, and about 6 months on estradiol. Your prescriber will tell you which range fits your hormones. On testosterone, the male range is used [1]",
+        "Kidney function (eGFR) is worked out from your creatinine, age and recorded sex. So the change over time tells you more than one result [1]",
+        "Iron studies: the range for your affirmed gender is used, unless you are pregnant or have periods. Then the female range is used. Your prescriber will tell you which range fits your hormones [1]"
       ]
     }
   ],
@@ -459,12 +459,12 @@
     {
       "n": 5,
       "text": "Reandron 1000 (testosterone undecanoate) injection, Australian Product Information, section 4.5 Interactions (date of revision 11 December 2025); the same wording is in the Gonadron (25 February 2026), Rejunon 1000 (17 March 2026) and Sustanon 250 (23 February 2026) product information. Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/reandron-1000"
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/reandron-1000?bid=80d2b4e9-5872-4a5d-b5c1-a53300fdc619"
     },
     {
       "n": 6,
       "text": "Testosterone product information without the SGLT-2 inhibitor warning in section 4.5 Interactions (checked 17 October 2026): Testosterone ADVZ 1000 (first approved 13 December 2023, not revised since), Primoteston Depot (date of revision 13 January 2026), Testogel (7 October 2025), Testavan (22 April 2026), AndroForte 5 (10 August 2023) and AndroFeme 1 (19 August 2026). Australian Commission on Safety and Quality in Health Care Medicine Finder. Accessed 17 October 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/testosterone-advz-1000"
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/testosterone-advz-1000?bid=8fb1594b-bee0-4b11-aa77-b16500c6e951"
     },
     {
       "n": 7,
@@ -489,12 +489,12 @@
     {
       "n": 11,
       "text": "Spiractin (spironolactone) tablets, Australian Consumer Medicine Information (blood tests: weekly at the start, monthly for 3 months, every 3 months for a year, then every 6 months) (July 2025); Aldactone CMI (June 2025). ACSQHC Medicine Finder. Accessed 17 October 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/spiractin-tablets"
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/spiractin?cid=63ff1ef9-9fd8-478d-bc4f-a53300feddb2"
     },
     {
       "n": 12,
       "text": "Androcur (cyproterone acetate) Australian Product Information, section 4.4 (liver function, adrenocortical function and red cells; liver deaths at 100 mg and above) (date of revision 25 November 2024). ACSQHC Medicine Finder. Accessed 17 October 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/androcur-tablets"
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/androcur?bid=382f617c-ba3b-4c71-b611-a53300fd619f"
     },
     {
       "n": 13,
@@ -508,8 +508,8 @@
     },
     {
       "n": 15,
-      "text": "Prometrium (progesterone) capsules, Australian Product Information, sections 4.4 and 4.5. ACSQHC Medicine Finder. Accessed 17 October 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/prometrium"
+      "text": "Prometrium (progesterone) capsules, Australian Product Information, sections 4.4 and 4.5. Therapeutic Goods Administration Product Information and Consumer Medicine Information search (prometrium). Accessed 17 October 2026; listing checked 20 November 2026.",
+      "url": "https://www.ebs.tga.gov.au/ebs/picmi/picmirepository.nsf/PICMI?OpenForm&t=&q=prometrium"
     },
     {
       "n": 16,
@@ -519,12 +519,12 @@
     {
       "n": 17,
       "text": "Oratane (isotretinoin) capsules, Australian Product Information, section 4.4 (liver function and lipids before, monthly and at the end; depression) (date of revision 26 March 2025). ACSQHC Medicine Finder. Accessed 17 October 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/oratane"
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/oratane?bid=3ba70e57-e214-4509-856a-a53300fd9674"
     },
     {
       "n": 18,
       "text": "Finasteride GH 1 (finasteride 1 mg) tablets, Australian Consumer Medicine Information and Product Information (PSA lowered by about 50%). ACSQHC Medicine Finder. Accessed September 2026.",
-      "url": "https://www.safetyandquality.gov.au/medicine-finder/finasteride-gh-1-tablets"
+      "url": "https://www.safetyandquality.gov.au/medicine-finder/finasteride-gh-1?bid=74117bca-9ca3-464f-91b1-a6590080d748"
     },
     {
       "n": 19,

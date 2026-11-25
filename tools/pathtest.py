@@ -22,7 +22,7 @@ with sync_playwright() as pw:
     pg.on("response",lambda r: errs.append("HTTP %s %s"%(r.status,r.url)) if r.status>=400 else None)
     pg.on("console",lambda c: errs.append(c.text+" @ "+str(c.location.get("url"))) if (c.type=="error" and "TUNNEL" not in c.text and "fonts" not in c.text) else None)
     # direct load of deep pages
-    for path,want in [("/","v-home"),("/costs","v-costs"),("/medicines/spironolactone","v-med"),("/pharmacy","v-pharmacy"),("/easy","v-easy"),("/easy/doses","v-easy-guide")]:
+    for path,want in [("/","v-home"),("/costs","v-costs"),("/medicines/spironolactone","v-med"),("/pharmacy","v-pharmacy"),("/easy","v-easy"),("/using","v-using"),("/using/clinic-injection","v-using-clinic-injection"),("/easy/doses","v-easy-guide")]:
         pg.goto(B+path); pg.wait_for_timeout(600)
         on=pg.evaluate("(document.querySelector('#main .view.on')||{}).id")
         n=pg.evaluate("document.querySelector('#main .view.on').innerText.length")
@@ -79,11 +79,11 @@ with sync_playwright() as pw:
     pg.goto(B+"/search?q=patches"); pg.wait_for_timeout(600)
     chk(pg.evaluate("document.querySelectorAll('#srOut .sr').length")>3, "search URL loads directly with results")
     # dark mode persists
-    pg.click("#themeBtn button[data-theme=dark]"); pg.wait_for_timeout(100)
+    pg.click("#a11yBtn"); pg.click("#themeSeg2 button[data-theme=dark]"); pg.wait_for_timeout(100)
     chk(pg.evaluate("document.documentElement.classList.contains('dark')"), "dark mode switches on")
     pg.goto(B+"/costs"); pg.wait_for_timeout(400)
-    chk(pg.evaluate("document.documentElement.classList.contains('dark') && document.querySelector('#themeBtn button[data-theme=dark]').getAttribute('aria-pressed')==='true'"), "dark mode remembered on next page")
-    pg.click("#themeBtn button[data-theme=light]"); pg.wait_for_timeout(100)
+    chk(pg.evaluate("document.documentElement.classList.contains('dark') && document.querySelector('#themeSeg2 button[data-theme=dark]').getAttribute('aria-pressed')==='true'"), "dark mode remembered on next page")
+    pg.click("#a11yBtn") if not pg.is_visible("#themeSeg2") else None; pg.click("#themeSeg2 button[data-theme=light]"); pg.wait_for_timeout(100)
     chk(pg.evaluate("!document.documentElement.classList.contains('dark')"), "light mode switches back")
     for r in ("/privacy","/accessibility","/disclaimer"):
         pg.goto(B+r); pg.wait_for_timeout(400)

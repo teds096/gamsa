@@ -28,7 +28,7 @@
       "nav": "Forms",
       "list": [
         "**Feedback**: your message, the page and topic, and an email address only if you want a reply.",
-        "**Patient sightings**: the medicine, suburb or postcode, the pharmacy name (optional), what happened and an optional note. No name is asked for.",
+        "**Community sightings**: the medicine, suburb or postcode, the pharmacy name (optional), what happened and an optional note. No name is asked for.",
         "**Pharmacist stock register**: your name, AHPRA registration number, pharmacy, suburb or postcode, the report, and a work email only if you give one. The registration number is checked once against the public AHPRA register and never shown. Once approved you receive a private report key, of which the site keeps only a scrambled copy.",
         "All three forms use Cloudflare Turnstile to detect bots. It checks your browser, not your entries; for feedback and pharmacist reports it also passes your IP address to Cloudflare, which does not store it. Submissions are kept in a Cloudflare database that only the author can view through this site, although Cloudflare stores and processes them as the provider. Sightings and stock reports appear without names, emails or registration numbers and are removed from view after 14 days. The author's daily alert gives only the number of new messages, sightings and registrations, never their content or personal details. Deletion requests through the feedback page are honoured without question."
       ]
@@ -38,7 +38,7 @@
       "nav": "Storage",
       "list": [
         "**Where**: Cloudflare, a US company, runs the database in its Oceania region; it offers no setting that keeps data inside Australia only ([Cloudflare: D1 data location](https://developers.cloudflare.com/d1/configuration/data-location/)).",
-        "**How long**: feedback, patient sightings, pharmacists' stock reports and pharmacist registrations are kept for up to 12 months. A registration counts as inactive when the pharmacist has posted no report for 12 months. A clean-up on the first of each month deletes anything older than that. If a number is blocked, only the registration number is kept, so the block keeps working. You can ask for anything you sent to be deleted sooner through the [feedback page](#/feedback).",
+        "**How long**: feedback, community sightings, pharmacists' stock reports and pharmacist registrations are kept for up to 12 months. A registration counts as inactive when the pharmacist has posted no report for 12 months. A clean-up on the first of each month deletes anything older than that. If a number is blocked, only the registration number is kept, so the block keeps working. You can ask for anything you sent to be deleted sooner through the [feedback page](#/feedback).",
         "**Access and correction**: ask through the [feedback page](#/feedback) to see, correct or delete what you sent.",
         "**Backup**: a monthly backup is being set up but has not started. It will be encrypted, kept for 90 days on GitHub (a US company) so the database can be restored, and only the author will be able to unlock it. This page will say when it starts."
       ]

@@ -20,6 +20,61 @@ NEWP = ("/parents", "/starting-hormones")
 content = {k: json.loads((R/f"content/{k}.json").read_text()) for k in ("dosing","administration","costs","easyread","pharmacy","clinicians","allies","resources","privacy","accessibility","disclaimer","addons","monitoring","related","downloads")}
 if NEW_PAGES: content.update({k: json.loads((R/f"content/{k}.json").read_text()) for k in ("parents","startinghormones")})
 else: content["easyread"]["guides"] = [g for g in content["easyread"]["guides"] if g["id"] != "parents"]; content["easyread"]["wordlist"] = [w for w in content["easyread"]["wordlist"] if w["w"] != "Referral"]   # v19.6: the /easy/parents guide (and its word) ship with /parents
+content["terminology"] = json.loads((R/"content/terminology.json").read_text())   # v19.9: /terminology (Words and terms)
+content["wheretostart"] = json.loads((R/"content/wheretostart.json").read_text())   # v19.9 (Ted, 23 Nov): /where-to-start for people starting hormones
+content["diyhormones"] = json.loads((R/"content/diyhormones.json").read_text())   # v20.0 (Ted, 24 Nov): /diy-hormones harm-reduction page
+# v19.9 (22 Nov 2026): /using is a short hub with choice cards; each form of medicine has its own page (/using/<slug>).
+# The sections are moved out of content/administration.json in memory (the file is unchanged, so Easy Read sources still match); references are renumbered per page.
+USPLIT = [("patches", "Estradiol patches", [1], "Estradot, Estraderm MX and other estradiol patches: putting on and changing a patch.", "Using estradiol patches",
+           "How to use an estradiol patch in Australia: choosing your change days, where to stick it, rotating sites, showering and disposal."),
+          ("gel", "Hormone gel and cream", [2], "Estrogel, Sandrena, Testogel, Testavan and AndroForte cream: applying gel or cream, and keeping it off other people.", "Using hormone gel and cream",
+           "How to apply hormone gel or cream in Australia: when to use it, letting it dry, and keeping it off partners, children and pets."),
+          ("clinic-injection", "Long-acting testosterone injection (at the clinic)", [3, 4], "Testosterone undecanoate (Reandron): finding the right spot, and what happens at the appointment.", "Long-acting testosterone injection",
+           "What to expect with a long-acting testosterone injection in Australia: the hip injection site, the appointment, the wait afterwards and your next doses."),
+          ("injecting-at-home", "Injecting testosterone at home", [5, 6], "Testosterone you inject yourself: learning to inject, doing the injection, and what to watch for.", "Injecting testosterone at home",
+           "How to inject testosterone at home in Australia: step by step, choosing sites, rotating them, and what soreness or lumps to expect."),
+          ("tablets-and-implants", "Tablets, capsules and implants", [7, 8], "Estradiol, progesterone and spironolactone tablets and capsules, and estradiol or testosterone implants.", "Tablets, capsules and implants",
+           "How to take hormone tablets and capsules, and what to expect when an implant is put in, for gender-affirming care in Australia.")]
+_KORD = {"h": 0, "body": 1, "downloads": 2, "listh": 3, "list": 4, "after": 5, "table": 6, "read": 7, "clin": 8, "figure": 9, "note": 10}
+def _renum(secs, refs):
+    order = []
+    def walk(x):
+        if isinstance(x, str):
+            for n in re.findall(r"\[(\d+)\]", x):
+                if int(n) not in order: order.append(int(n))
+        elif isinstance(x, dict):
+            for k in sorted(x, key=lambda k: _KORD.get(k, 50)): walk(x[k])
+        elif isinstance(x, list):
+            for y in x: walk(y)
+    walk(secs)
+    byn = {r["n"]: r for r in refs}
+    missing = [n for n in order if n not in byn]
+    if missing: raise SystemExit(f"FAIL: using split cites missing references {missing}")
+    m = {o: i + 1 for i, o in enumerate(order)}
+    def sub(x):
+        if isinstance(x, str): return re.sub(r"\[(\d+)\]", lambda g: f"[{m[int(g.group(1))]}]", x)
+        if isinstance(x, dict): return {k: sub(v) for k, v in x.items()}
+        if isinstance(x, list): return [sub(v) for v in x]
+        return x
+    return sub(secs), [dict(byn[o], n=m[o]) for o in order]
+_ADM = content["administration"]; _AS = _ADM["sections"]
+_LEDE = "Part of [How to use your medicine](#/using). Your prescriber’s and pharmacist’s instructions, and your product leaflet, always come first."
+_MORE = {"h": "More on using your medicine", "nav": "More on using your medicine",
+         "list": ["[Back to How to use your medicine](#/using)",
+                  "[Before anything else: your own instructions win](#/using#sec-using-0)",
+                  "[When you miss a dose](#/using#sec-using-9)",
+                  "[Storing your medicine safely at home](#/using#sec-using-10)",
+                  "[Disposing of needles and leftover medicine](#/using#sec-using-11)",
+                  "[Dose and symptom logs to print](#/using#sec-using-12)"]}
+for _slug, _t, _ix, _d, _pt, _md in USPLIT:
+    _ss, _rr = _renum([_AS[i] for i in _ix], _ADM["references"])
+    content["using_" + _slug.replace("-", "_")] = {"kicker": "How to use your medicine", "title": _pt, "intro": _LEDE, "sections": _ss + [_MORE], "references": _rr}
+_hub = [dict(_AS[0], idx=0),
+        {"h": "Choose your medicine", "nav": "Choose your medicine", "idx": "forms",
+         "tiles": [{"t": _t, "h": "#/using/" + _slug, "d": _d} for _slug, _t, _ix, _d, _pt, _md in USPLIT]}] + \
+       [dict(_AS[i], idx=i) for i in (9, 10, 11, 12)]
+_hs, _hr = _renum(_hub, _ADM["references"])
+content["administration"] = dict(_ADM, title="How to use your medicine", sections=_hs, references=_hr)   # one page name everywhere (Ted, 22 Nov 2026)
 medinfo = json.loads((R/"content/medicines.json").read_text())
 # v19.5 R5b (7 Nov 2026): search titles, descriptions and extra FAQ questions per medicine page live in content/seo.json
 # (so medicines.json and the Easy Read sources stay as they are). seoTitle is copied in so the app keeps the same title.
@@ -326,7 +381,7 @@ VIEWDESC = {
  "/downloads": "Every free GAMSA guide, checklist, log and form to download and print: blood test guides, pharmacy checklists and clinic injection documents.",
  "/": BASE_DESC,
  "/costs": "What gender-affirming hormones cost at the pharmacy in South Australia: PBS co-payments, private prices, the Safety Net and PBS Authority scripts.",
- "/doses": "Gender-affirming hormone doses compared: oestradiol patches, gel and tablets, testosterone gel and injections, and blockers, as used in South Australia.",
+ "/doses": "Gender-affirming hormone doses compared: estradiol patches, gel and tablets, testosterone gel and injections, and blockers, as used in South Australia.",
  "/supply": "Which gender-affirming hormone medicines are in short supply in Australia right now, checked daily against TGA records, and what to do about it.",
  "/medicines": "Every medicine used in gender-affirming hormone therapy in Australia, with a page for each: how it is used, cost, monitoring and current supply.",
  "/sightings": "Reports from the public of gender-affirming medicines seen in stock at South Australian pharmacies.",
@@ -344,12 +399,13 @@ if NEW_PAGES: VIEWDESC.update({"/parents": "Gender-affirming care for under-18s 
     "/starting-hormones": "A GP guide to starting gender-affirming hormones for adults in Australia: assessment, baseline tests, doses, PBS Authority and monitoring."})
 CVIEW = {"/downloads": "downloads", "/doses": "dosing", "/using": "administration", "/costs": "costs", "/pharmacy": "pharmacy", "/clinician-guide": "clinicians", "/ally-guide": "allies", "/resources": "resources", "/add-on-therapies": "addons", "/monitoring": "monitoring", "/related-care": "related", "/privacy": "privacy", "/accessibility": "accessibility", "/disclaimer": "disclaimer", "/about": "about"}
 TITLES = {"/": "Gender-Affirming Medicines South Australia", "/supply": "Supply & shortages",
-          "/medicines": "Medicines A–Z", "/sightings": "Stock seen by patients", "/easy": "Easy Read guides",
+          "/medicines": "Medicines A–Z", "/sightings": "Stock seen by the community", "/easy": "Easy Read guides",
           "/doses": "Doses and formulations", "/monitoring": "Blood tests and monitoring", "/related-care": "Fertility, PrEP and surgery", "/add-on-therapies": "Add-on therapies", "/using": "How to use your medicine",
-          "/pharmacy": "Working with your pharmacy", "/costs": "Costs and the PBS", "/feedback": "Send feedback", "/pharmacy-reports": "Pharmacy stock reports",
-          "/trans": "Your medicines: start here", "/clinicians": "Clinicians", "/allies": "Family & carers: start here",
+          "/pharmacy": "Working with your pharmacy", "/costs": "Costs and the PBS", "/feedback": "Contact and feedback", "/pharmacy-reports": "Pharmacy stock reports",
+          "/trans": "Your medicines: start here", "/clinicians": "Clinicians: start here", "/allies": "Family & carers: start here",
           "/clinician-guide": "Clinician reference", "/ally-guide": "Helping an adult with their medicines", "/resources": "Other services and links", "/downloads": "Guides to print", "/alerts": "Shortage alerts", "/changes": "What’s changed", "/privacy": "Privacy", "/accessibility": "Accessibility", "/disclaimer": "Disclaimer", "/search": "Search"}
 if NEW_PAGES: CVIEW.update({"/parents": "parents", "/starting-hormones": "startinghormones"})
+CVIEW["/terminology"] = "terminology"; TITLES["/terminology"] = "Words and terms"; VIEWDESC["/terminology"] = "Plain-language Australian guide to words about gender and trans people, for family, friends and anyone new to them."
 if NEW_PAGES: TITLES.update({"/parents": "Parents and carers of under-18s", "/starting-hormones": "Starting hormones: a GP guide"})
 if "about" in content: TITLES["/about"] = content["about"].get("title") or "About GAMSA"   # B-09: only with content/about.json
 # v19.6: search titles for /costs and /doses (how Australians search); template.html SEOT is identical. Both within 60 characters.
@@ -359,6 +415,13 @@ VIEWID = {"/": "v-home", "/supply": "v-supply", "/medicines": "v-medicines", "/s
           "/costs": "v-costs", "/feedback": "v-feedback", "/pharmacy-reports": "v-pharmacy-reports",
           "/trans": "v-trans", "/clinicians": "v-clinicians", "/allies": "v-allies", "/clinician-guide": "v-clinician-guide", "/ally-guide": "v-ally-guide", "/resources": "v-resources", "/downloads": "v-downloads", "/alerts": "v-alerts", "/changes": "v-changes", "/about": "v-about", "/privacy": "v-privacy", "/accessibility": "v-accessibility", "/disclaimer": "v-disclaimer", "/search": "v-search"}
 if NEW_PAGES: VIEWID.update({"/parents": "v-parents", "/starting-hormones": "v-starting-hormones"})
+VIEWID["/terminology"] = "v-terminology"
+CVIEW["/where-to-start"] = "wheretostart"; TITLES["/where-to-start"] = "Where to start with hormones"; VIEWID["/where-to-start"] = "v-where-to-start"
+VIEWDESC["/where-to-start"] = "First steps for adults starting gender-affirming hormones in Australia: finding a GP, the first visit, fertility, scripts and check-ups."
+CVIEW["/diy-hormones"] = "diyhormones"; TITLES["/diy-hormones"] = "Using hormones without a prescription"; VIEWID["/diy-hormones"] = "v-diy-hormones"
+VIEWDESC["/diy-hormones"] = "Harm reduction for trans people using hormones without a prescription in South Australia: risks, blood tests, clean needles, sharps disposal and support."
+for _slug, _t, _ix, _d, _pt, _md in USPLIT:   # v19.9 using split
+    _pp = "/using/" + _slug; CVIEW[_pp] = "using_" + _slug.replace("-", "_"); TITLES[_pp] = _pt; VIEWID[_pp] = "v-using-" + _slug; VIEWDESC[_pp] = _md
 
 def ld(obj):
     return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False).replace("</", "<\\/") + "</script>\n"
@@ -399,6 +462,7 @@ def _nj_secs(secs):
             elif x.get("items"):
                 o += f'<p>{H.escape(x["t"])} (PDF):</p><ul>' + "".join(f'<li><a href="{H.escape(y["u"])}">{H.escape(y["t"])}</a></li>' for y in x["items"]) + "</ul>"  # r5c: a pill ends its block
             elif x.get("link"): o += f'<p><a href="{H.escape(_hp(x["link"]))}">{H.escape(x["t"])}</a></p>'
+        if s.get("tiles"): o += "<ul>" + "".join(f'<li><a href="{H.escape(_hp(t["h"]))}">{H.escape(t["t"])}</a>: {H.escape(t["d"])}</li>' for t in s["tiles"]) + "</ul>"   # v19.9: the /using choice cards as plain links
         li = s.get("list") or s.get("bullets") or []
         if li: o += "<ul>" + "".join(f"<li>{_md(x)}</li>" for x in li if isinstance(x, str)) + "</ul>"
         o += "".join(_nj_p(b) for b in (s.get("after") or []) if isinstance(b, str))   # v19.6: paragraphs shown after the list
@@ -550,6 +614,7 @@ def _nj_trim(nj):   # the head carries the h1 and intro; the noscript copy keeps
     return re.sub(r"^<h1>.*?</h1>(?:<p>(?:(?!<p>).)*?</p>)*", "", nj, count=1, flags=re.S)
 
 REVIEW_PAGES = {"/doses", "/monitoring", "/related-care", "/add-on-therapies", "/using", "/pharmacy", "/costs", "/clinician-guide", "/ally-guide", "/parents", "/starting-hormones"}   # v19.7 B4: same foot line as medicine pages
+REVIEW_PAGES |= {"/using/" + _x[0] for _x in USPLIT}   # v19.9 using split
 REVIEW_LINE = f"<p>Written and reviewed by Theodore South, BPharm (Hons), registered pharmacist. Last reviewed {medinfo.get('reviewed', '')}.</p>"
 NOJS = {p: _nj_content(content[k]) + (REVIEW_LINE if p in REVIEW_PAGES else "") for p, k in CVIEW.items() if k in content}
 NOJS.update(_nj_hubs())
@@ -699,8 +764,11 @@ for m in medinfo["medicines"]:
     faq = []
     for q, h in qa:
         sec = next((x for x in m["sections"] if x.get("h") == h), None)
-        txt = " ".join(b for b in (sec or {}).get("body", []) if isinstance(b, str))[:900]
+        txt = " ".join(b for b in (sec or {}).get("body", []) if isinstance(b, str))
         txt = re.sub(r"\s*\[\d+(?:[,\s]*\d+)*\]", "", re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", txt)).strip()
+        if len(txt) > 900:   # v19.9: cut at the last full sentence (it used to cut mid-word at 900 characters, before the links were removed)
+            txt = txt[:900]; _e = max(txt.rfind(". "), txt.rfind("? "), txt.rfind("! "))
+            txt = txt[:_e + 1] if _e > 300 else txt.rsplit(" ", 1)[0] + "\u2026"
         if txt: faq.append({"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": txt}})
     for x in seo.get("faq", []):   # v19.5 R5b: questions people search for, answered from facts already on the page
         faq.append({"@type": "Question", "name": x["q"], "acceptedAnswer": {"@type": "Answer", "text": x["a"]}})
