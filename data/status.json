@@ -1,8 +1,8 @@
 {
-  "finishedAt": "2026-11-25T13:53:48Z",
+  "finishedAt": "2026-11-26T02:08:36Z",
   "ok": true,
   "failedSteps": [],
   "issue": null,
-  "monthlyCostsRun": true,
-  "linksBroken": true
+  "monthlyCostsRun": false,
+  "linksBroken": false
 }
